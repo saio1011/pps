@@ -143,5 +143,9 @@ public class MainUI extends javax.swing.JFrame {
         ResourceBundle i18n = Utils.getResourceBundle(lang, country);
         
         jMenuFile.setText(i18n.getString("File"));
+        jMenuSettings.setText(i18n.getString("Settings"));
+        jMenuLanguage.setText(i18n.getString("Language"));
+        jCheckBoxMenuItemDeutsch.setText(i18n.getString("Deutsch"));
+        jCheckBoxMenuItemEnglish.setText(i18n.getString("English"));
     }
 }
