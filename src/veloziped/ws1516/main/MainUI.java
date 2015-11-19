@@ -30,17 +30,76 @@ public class MainUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jTabbedPane1 = new javax.swing.JTabbedPane();
+        jPanelProductionPlanning = new javax.swing.JPanel();
+        jLabelFairyCyclePF = new javax.swing.JLabel();
+        jLabelLadiesCyclePF = new javax.swing.JLabel();
+        jLabelMenCyclePF = new javax.swing.JLabel();
+        jLabelPeriodNPF = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuFile = new javax.swing.JMenu();
+        jMenuItemImportFile = new javax.swing.JMenuItem();
+        jMenuItemExportFile = new javax.swing.JMenuItem();
         jMenuSettings = new javax.swing.JMenu();
         jMenuLanguage = new javax.swing.JMenu();
         jCheckBoxMenuItemDeutsch = new javax.swing.JCheckBoxMenuItem();
         jCheckBoxMenuItemEnglish = new javax.swing.JCheckBoxMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
         java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("veloziped/ws1516/i18n/i18n"); // NOI18N
+        setTitle(bundle.getString("pps")); // NOI18N
+
+        jPanelProductionPlanning.setAutoscrolls(true);
+
+        jLabelFairyCyclePF.setText(bundle.getString("fairyCycle")); // NOI18N
+
+        jLabelLadiesCyclePF.setText(bundle.getString("LadiesCycle")); // NOI18N
+
+        jLabelMenCyclePF.setText(bundle.getString("MenCycle")); // NOI18N
+
+        jLabelPeriodNPF.setText(bundle.getString("PeriondN")); // NOI18N
+
+        javax.swing.GroupLayout jPanelProductionPlanningLayout = new javax.swing.GroupLayout(jPanelProductionPlanning);
+        jPanelProductionPlanning.setLayout(jPanelProductionPlanningLayout);
+        jPanelProductionPlanningLayout.setHorizontalGroup(
+            jPanelProductionPlanningLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelProductionPlanningLayout.createSequentialGroup()
+                .addGroup(jPanelProductionPlanningLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelProductionPlanningLayout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addGroup(jPanelProductionPlanningLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabelMenCyclePF, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelLadiesCyclePF, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelFairyCyclePF, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanelProductionPlanningLayout.createSequentialGroup()
+                        .addGap(244, 244, 244)
+                        .addComponent(jLabelPeriodNPF, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)))
+                .addContainerGap(609, Short.MAX_VALUE))
+        );
+        jPanelProductionPlanningLayout.setVerticalGroup(
+            jPanelProductionPlanningLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelProductionPlanningLayout.createSequentialGroup()
+                .addGap(41, 41, 41)
+                .addComponent(jLabelPeriodNPF, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
+                .addGap(27, 27, 27)
+                .addComponent(jLabelFairyCyclePF, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabelLadiesCyclePF, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabelMenCyclePF, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(344, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab(bundle.getString("tabProductionForecast"), jPanelProductionPlanning); // NOI18N
+
         jMenuFile.setText(bundle.getString("File")); // NOI18N
+
+        jMenuItemImportFile.setText(bundle.getString("ImportFile")); // NOI18N
+        jMenuFile.add(jMenuItemImportFile);
+
+        jMenuItemExportFile.setText(bundle.getString("ExportFile")); // NOI18N
+        jMenuFile.add(jMenuItemExportFile);
+
         jMenuBar1.add(jMenuFile);
 
         jMenuSettings.setText(bundle.getString("Settings")); // NOI18N
@@ -74,11 +133,17 @@ public class MainUI extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1111, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTabbedPane1)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 624, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 557, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(40, Short.MAX_VALUE))
         );
 
         pack();
@@ -132,10 +197,18 @@ public class MainUI extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItemDeutsch;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItemEnglish;
+    private javax.swing.JLabel jLabelFairyCyclePF;
+    private javax.swing.JLabel jLabelLadiesCyclePF;
+    private javax.swing.JLabel jLabelMenCyclePF;
+    private javax.swing.JLabel jLabelPeriodNPF;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu jMenuFile;
+    private javax.swing.JMenuItem jMenuItemExportFile;
+    private javax.swing.JMenuItem jMenuItemImportFile;
     private javax.swing.JMenu jMenuLanguage;
     private javax.swing.JMenu jMenuSettings;
+    private javax.swing.JPanel jPanelProductionPlanning;
+    private javax.swing.JTabbedPane jTabbedPane1;
     // End of variables declaration//GEN-END:variables
 
     //util methods
@@ -147,5 +220,7 @@ public class MainUI extends javax.swing.JFrame {
         jMenuLanguage.setText(i18n.getString("Language"));
         jCheckBoxMenuItemDeutsch.setText(i18n.getString("Deutsch"));
         jCheckBoxMenuItemEnglish.setText(i18n.getString("English"));
+        jMenuItemExportFile.setText(i18n.getString("ExportFile"));
+        jMenuItemImportFile.setText(i18n.getString("ImportFile"));
     }
 }
