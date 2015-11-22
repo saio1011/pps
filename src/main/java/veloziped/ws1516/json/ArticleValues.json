@@ -1,0 +1,946 @@
+[
+    {
+        "id": 1,
+        "defaults":
+                {
+                    "type": "P",
+                    "usage": "",
+                    "deliverTime": 0,
+                    "deviation": 0,
+                    "deliverCosts": 0,
+                    "usageProductOne": 0,
+                    "usageProductTwo": 0,
+                    "usageProductThree": 0,
+                    "discountQuantity": 0,
+                    "name": "Kinderfahrrad"
+                }
+    },
+    {
+        "id": 2,
+        "defaults":
+                {
+                    "type": "P",
+                    "usage": "",
+                    "deliverTime": 0,
+                    "deviation": 0,
+                    "deliverCosts": 0,
+                    "usageProductOne": 0,
+                    "usageProductTwo": 0,
+                    "usageProductThree": 0,
+                    "discountQuantity": 0,
+                    "name": "Damenfahrrad"
+                }
+    },
+    {
+        "id": 3,
+        "defaults":
+                {
+                    "type": "P",
+                    "usage": "",
+                    "deliverTime": 0,
+                    "deviation": 0,
+                    "deliverCosts": 0,
+                    "usageProductOne": 0,
+                    "usageProductTwo": 0,
+                    "usageProductThree": 0,
+                    "discountQuantity": 0,
+                    "name": "Herrenfahrrad"
+                }
+    },
+    {
+        "id": 4,
+        "defaults":
+                {
+                    "type": "E",
+                    "usage": "K",
+                    "deliverTime": 0,
+                    "deviation": 0,
+                    "deliverCosts": 0,
+                    "usageProductOne": 0,
+                    "usageProductTwo": 0,
+                    "usageProductThree": 0,
+                    "discountQuantity": 0,
+                    "name": "Hinterradgruppe"
+                }
+    },
+    {
+        "id": 5,
+        "defaults":
+                {
+                    "type": "E",
+                    "usage": "D",
+                    "deliverTime": 0,
+                    "deviation": 0,
+                    "deliverCosts": 0,
+                    "usageProductOne": 0,
+                    "usageProductTwo": 0,
+                    "usageProductThree": 0,
+                    "discountQuantity": 0,
+                    "name": "Hinterradgruppe"
+                }
+    },
+    {
+        "id": 6,
+        "defaults":
+                {
+                    "type": "E",
+                    "usage": "H",
+                    "deliverTime": 0,
+                    "deviation": 0,
+                    "deliverCosts": 0,
+                    "usageProductOne": 0,
+                    "usageProductTwo": 0,
+                    "usageProductThree": 0,
+                    "discountQuantity": 0,
+                    "name": "Hinterradgruppe"
+                }
+    },
+    {
+        "id": 7,
+        "defaults":
+                {
+                    "type": "E",
+                    "usage": "K",
+                    "deliverTime": 0,
+                    "deviation": 0,
+                    "deliverCosts": 0,
+                    "usageProductOne": 0,
+                    "usageProductTwo": 0,
+                    "usageProductThree": 0,
+                    "discountQuantity": 0,
+                    "name": "Vorderradgruppe"
+                }
+    },
+    {
+        "id": 8,
+        "defaults":
+                {
+                    "type": "E",
+                    "usage": "D",
+                    "deliverTime": 0,
+                    "deviation": 0,
+                    "deliverCosts": 0,
+                    "usageProductOne": 0,
+                    "usageProductTwo": 0,
+                    "usageProductThree": 0,
+                    "discountQuantity": 0,
+                    "name": "Vorderradgruppe"
+                }
+    },
+    {
+        "id": 9,
+        "defaults":
+                {
+                    "type": "E",
+                    "usage": "H",
+                    "deliverTime": 0,
+                    "deviation": 0,
+                    "deliverCosts": 0,
+                    "usageProductOne": 0,
+                    "usageProductTwo": 0,
+                    "usageProductThree": 0,
+                    "discountQuantity": 0,
+                    "name": "Vorderradgruppe"
+                }
+    },
+    {
+        "id": 10,
+        "defaults":
+                {
+                    "type": "E",
+                    "usage": "K",
+                    "deliverTime": 0,
+                    "deviation": 0,
+                    "deliverCosts": 0,
+                    "usageProductOne": 0,
+                    "usageProductTwo": 0,
+                    "usageProductThree": 0,
+                    "discountQuantity": 0,
+                    "name": "Schutzblech h."
+                }
+    },
+    {
+        "id": 11,
+        "defaults":
+                {
+                    "type": "E",
+                    "usage": "D",
+                    "deliverTime": 0,
+                    "deviation": 0,
+                    "deliverCosts": 0,
+                    "usageProductOne": 0,
+                    "usageProductTwo": 0,
+                    "usageProductThree": 0,
+                    "discountQuantity": 0,
+                    "name": "Schutzblech h."
+                }
+    },
+    {
+        "id": 12,
+        "defaults":
+                {
+                    "type": "E",
+                    "usage": "H",
+                    "deliverTime": 0,
+                    "deviation": 0,
+                    "deliverCosts": 0,
+                    "usageProductOne": 0,
+                    "usageProductTwo": 0,
+                    "usageProductThree": 0,
+                    "discountQuantity": 0,
+                    "name": "Schutzblech h."
+                }
+    },
+    {
+        "id": 13,
+        "defaults":
+                {
+                    "type": "E",
+                    "usage": "K",
+                    "deliverTime": 0,
+                    "deviation": 0,
+                    "deliverCosts": 0,
+                    "usageProductOne": 0,
+                    "usageProductTwo": 0,
+                    "usageProductThree": 0,
+                    "discountQuantity": 0,
+                    "name": "Schutzblech v."
+                }
+    },
+    {
+        "id": 14,
+        "defaults":
+                {
+                    "type": "E",
+                    "usage": "D",
+                    "deliverTime": 0,
+                    "deviation": 0,
+                    "deliverCosts": 0,
+                    "usageProductOne": 0,
+                    "usageProductTwo": 0,
+                    "usageProductThree": 0,
+                    "discountQuantity": 0,
+                    "name": "Schutzblech v."
+                }
+    },
+    {
+        "id": 15,
+        "defaults":
+                {
+                    "type": "E",
+                    "usage": "H",
+                    "deliverTime": 0,
+                    "deviation": 0,
+                    "deliverCosts": 0,
+                    "usageProductOne": 0,
+                    "usageProductTwo": 0,
+                    "usageProductThree": 0,
+                    "discountQuantity": 0,
+                    "name": "Schutzblech v."
+                }
+    },
+    {
+        "id": 16,
+        "defaults":
+                {
+                    "type": "E",
+                    "usage": "A",
+                    "deliverTime": 0,
+                    "deviation": 0,
+                    "deliverCosts": 0,
+                    "usageProductOne": 0,
+                    "usageProductTwo": 0,
+                    "usageProductThree": 0,
+                    "discountQuantity": 0,
+                    "name": "lenker cpl."
+                }
+    },
+    {
+        "id": 17,
+        "defaults":
+                {
+                    "type": "E",
+                    "usage": "A",
+                    "deliverTime": 0,
+                    "deviation": 0,
+                    "deliverCosts": 0,
+                    "usageProductOne": 0,
+                    "usageProductTwo": 0,
+                    "usageProductThree": 0,
+                    "discountQuantity": 0,
+                    "name": "Sattel cpl."
+                }
+    },
+    {
+        "id": 18,
+        "defaults":
+                {
+                    "type": "E",
+                    "usage": "K",
+                    "deliverTime": 0,
+                    "deviation": 0,
+                    "deliverCosts": 0,
+                    "usageProductOne": 0,
+                    "usageProductTwo": 0,
+                    "usageProductThree": 0,
+                    "discountQuantity": 0,
+                    "name": "Rahmen"
+                }
+    },
+    {
+        "id": 19,
+        "defaults":
+                {
+                    "type": "E",
+                    "usage": "D",
+                    "deliverTime": 0,
+                    "deviation": 0,
+                    "deliverCosts": 0,
+                    "usageProductOne": 0,
+                    "usageProductTwo": 0,
+                    "usageProductThree": 0,
+                    "discountQuantity": 0,
+                    "name": "Rahmen"
+                }
+    },
+    {
+        "id": 20,
+        "defaults":
+                {
+                    "type": "E",
+                    "usage": "H",
+                    "deliverTime": 0,
+                    "deviation": 0,
+                    "deliverCosts": 0,
+                    "usageProductOne": 0,
+                    "usageProductTwo": 0,
+                    "usageProductThree": 0,
+                    "discountQuantity": 0,
+                    "name": "Rahmen"
+                }
+    },
+    {
+        "id": 21,
+        "defaults":
+                {
+                    "type": "K",
+                    "usage": "K",
+                    "deliverTime": 1.8,
+                    "deviation": 0.4,
+                    "deliverCosts": 50,
+                    "usageProductOne": 1,
+                    "usageProductTwo": 0,
+                    "usageProductThree": 0,
+                    "discountQuantity": 300,
+                    "name": "Kette"
+                }
+    },
+    {
+        "id": 22,
+        "defaults":
+                {
+                    "type": "K",
+                    "usage": "D",
+                    "deliverTime": 1.7,
+                    "deviation": 0.4,
+                    "deliverCosts": 50,
+                    "usageProductOne": 0,
+                    "usageProductTwo": 1,
+                    "usageProductThree": 0,
+                    "discountQuantity": 300,
+                    "name": "Kette"
+                }
+    },
+    {
+        "id": 23,
+        "defaults":
+                {
+                    "type": "K",
+                    "usage": "H",
+                    "deliverTime": 1.2,
+                    "deviation": 0.2,
+                    "deliverCosts": 50,
+                    "usageProductOne": 0,
+                    "usageProductTwo": 0,
+                    "usageProductThree": 1,
+                    "discountQuantity": 300,
+                    "name": "Kette"
+                }
+    },
+    {
+        "id": 24,
+        "defaults":
+                {
+                    "type": "K",
+                    "usage": "A",
+                    "deliverTime": 3.2,
+                    "deviation": 0.3,
+                    "deliverCosts": 100,
+                    "usageProductOne": 7,
+                    "usageProductTwo": 7,
+                    "usageProductThree": 7,
+                    "discountQuantity": 6100,
+                    "name": "Mutter 3/8“"
+                }
+    },
+    {
+        "id": 25,
+        "defaults":
+                {
+                    "type": "K",
+                    "usage": "A",
+                    "deliverTime": 0.9,
+                    "deviation": 0.2,
+                    "deliverCosts": 50,
+                    "usageProductOne": 4,
+                    "usageProductTwo": 4,
+                    "usageProductThree": 4,
+                    "discountQuantity": 3600,
+                    "name": "Scheibe 3/8“"
+                }
+    },
+    {
+        "id": 26,
+        "defaults":
+                {
+                    "type": "E",
+                    "usage": "A",
+                    "deliverTime": 0,
+                    "deviation": 0,
+                    "deliverCosts": 0,
+                    "usageProductOne": 0,
+                    "usageProductTwo": 0,
+                    "usageProductThree": 0,
+                    "discountQuantity": 0,
+                    "name": "Pedal cpl."
+                }
+    },
+    {
+        "id": 27,
+        "defaults":
+                {
+                    "type": "K",
+                    "usage": "A",
+                    "deliverTime": 0.9,
+                    "deviation": 0.2,
+                    "deliverCosts": 75,
+                    "usageProductOne": 2,
+                    "usageProductTwo": 2,
+                    "usageProductThree": 2,
+                    "discountQuantity": 1800,
+                    "name": "Schraube 3/8“"
+                }
+    },
+    {
+        "id": 28,
+        "defaults":
+                {
+                    "type": "K",
+                    "usage": "A",
+                    "deliverTime": 1.7,
+                    "deviation": 0.4,
+                    "deliverCosts": 50,
+                    "usageProductOne": 4,
+                    "usageProductTwo": 5,
+                    "usageProductThree": 6,
+                    "discountQuantity": 4500,
+                    "name": "Rohr 3/4“"
+                }
+    },
+    {
+        "id": 29,
+        "defaults":
+                {
+                    "type": "E",
+                    "usage": "H",
+                    "deliverTime": 0,
+                    "deviation": 0,
+                    "deliverCosts": 0,
+                    "usageProductOne": 0,
+                    "usageProductTwo": 0,
+                    "usageProductThree": 0,
+                    "discountQuantity": 0,
+                    "name": "Vorderrad mont."
+                }
+    },
+    {
+        "id": 30,
+        "defaults":
+                {
+                    "type": "E",
+                    "usage": "H",
+                    "deliverTime": 0,
+                    "deviation": 0,
+                    "deliverCosts": 0,
+                    "usageProductOne": 0,
+                    "usageProductTwo": 0,
+                    "usageProductThree": 0,
+                    "discountQuantity": 0,
+                    "name": "Rahmen u. Räder"
+                }
+    },
+    {
+        "id": 31,
+        "defaults":
+                {
+                    "type": "E",
+                    "usage": "H",
+                    "deliverTime": 0,
+                    "deviation": 0,
+                    "deliverCosts": 0,
+                    "usageProductOne": 0,
+                    "usageProductTwo": 0,
+                    "usageProductThree": 0,
+                    "discountQuantity": 0,
+                    "name": "Fahrrad o. Ped."
+                }
+    },
+    {
+        "id": 32,
+        "defaults":
+                {
+                    "type": "K",
+                    "usage": "A",
+                    "deliverTime": 2.1,
+                    "deviation": 0.5,
+                    "deliverCosts": 50,
+                    "usageProductOne": 3,
+                    "usageProductTwo": 3,
+                    "usageProductThree": 3,
+                    "discountQuantity": 2700,
+                    "name": "Farbe"
+                }
+    },
+    {
+        "id": 33,
+        "defaults":
+                {
+                    "type": "K",
+                    "usage": "H",
+                    "deliverTime": 1.9,
+                    "deviation": 0.5,
+                    "deliverCosts": 75,
+                    "usageProductOne": 0,
+                    "usageProductTwo": 0,
+                    "usageProductThree": 2,
+                    "discountQuantity": 900,
+                    "name": "Felge cpl."
+                }
+    },
+    {
+        "id": 34,
+        "defaults":
+                {
+                    "type": "K",
+                    "usage": "H",
+                    "deliverTime": 1.6,
+                    "deviation": 0.3,
+                    "deliverCosts": 50,
+                    "usageProductOne": 0,
+                    "usageProductTwo": 0,
+                    "usageProductThree": 72,
+                    "discountQuantity": 22000,
+                    "name": "Speiche"
+                }
+    },
+    {
+        "id": 35,
+        "defaults":
+                {
+                    "type": "K",
+                    "usage": "A",
+                    "deliverTime": 2.2,
+                    "deviation": 0.4,
+                    "deliverCosts": 75,
+                    "usageProductOne": 4,
+                    "usageProductTwo": 4,
+                    "usageProductThree": 4,
+                    "discountQuantity": 3600,
+                    "name": "Konus"
+                }
+    },
+    {
+        "id": 36,
+        "defaults":
+                {
+                    "type": "K",
+                    "usage": "A",
+                    "deliverTime": 1.2,
+                    "deviation": 0.1,
+                    "deliverCosts": 100,
+                    "usageProductOne": 1,
+                    "usageProductTwo": 1,
+                    "usageProductThree": 1,
+                    "discountQuantity": 900,
+                    "name": "Freilauf"
+                }
+    },
+    {
+        "id": 37,
+        "defaults":
+                {
+                    "type": "K",
+                    "usage": "A",
+                    "deliverTime": 1.5,
+                    "deviation": 0.3,
+                    "deliverCosts": 50,
+                    "usageProductOne": 1,
+                    "usageProductTwo": 1,
+                    "usageProductThree": 1,
+                    "discountQuantity": 900,
+                    "name": "Gabel"
+                }
+    },
+    {
+        "id": 38,
+        "defaults":
+                {
+                    "type": "K",
+                    "usage": "A",
+                    "deliverTime": 1.7,
+                    "deviation": 0.4,
+                    "deliverCosts": 50,
+                    "usageProductOne": 1,
+                    "usageProductTwo": 1,
+                    "usageProductThree": 1,
+                    "discountQuantity": 300,
+                    "name": "Welle"
+                }
+    },
+    {
+        "id": 39,
+        "defaults":
+                {
+                    "type": "K",
+                    "usage": "A",
+                    "deliverTime": 1.5,
+                    "deviation": 0.3,
+                    "deliverCosts": 75,
+                    "usageProductOne": 2,
+                    "usageProductTwo": 2,
+                    "usageProductThree": 2,
+                    "discountQuantity": 1800,
+                    "name": "Blech"
+                }
+    },
+    {
+        "id": 40,
+        "defaults":
+                {
+                    "type": "K",
+                    "usage": "A",
+                    "deliverTime": 1.7,
+                    "deviation": 0.2,
+                    "deliverCosts": 50,
+                    "usageProductOne": 1,
+                    "usageProductTwo": 1,
+                    "usageProductThree": 1,
+                    "discountQuantity": 900,
+                    "name": "Lenker"
+                }
+    },
+    {
+        "id": 41,
+        "defaults":
+                {
+                    "type": "K",
+                    "usage": "A",
+                    "deliverTime": 0.9,
+                    "deviation": 0.2,
+                    "deliverCosts": 50,
+                    "usageProductOne": 1,
+                    "usageProductTwo": 1,
+                    "usageProductThree": 1,
+                    "discountQuantity": 900,
+                    "name": "Mutter 3/4“"
+                }
+    },
+    {
+        "id": 42,
+        "defaults":
+                {
+                    "type": "K",
+                    "usage": "A",
+                    "deliverTime": 1.2,
+                    "deviation": 0.3,
+                    "deliverCosts": 50,
+                    "usageProductOne": 2,
+                    "usageProductTwo": 2,
+                    "usageProductThree": 2,
+                    "discountQuantity": 1800,
+                    "name": "Griff"
+                }
+    },
+    {
+        "id": 43,
+        "defaults":
+                {
+                    "type": "K",
+                    "usage": "A",
+                    "deliverTime": 2,
+                    "deviation": 0.5,
+                    "deliverCosts": 75,
+                    "usageProductOne": 1,
+                    "usageProductTwo": 1,
+                    "usageProductThree": 1,
+                    "discountQuantity": 2700,
+                    "name": "Sattel"
+                }
+    },
+    {
+        "id": 44,
+        "defaults":
+                {
+                    "type": "K",
+                    "usage": "A",
+                    "deliverTime": 1,
+                    "deviation": 0.2,
+                    "deliverCosts": 50,
+                    "usageProductOne": 3,
+                    "usageProductTwo": 3,
+                    "usageProductThree": 3,
+                    "discountQuantity": 900,
+                    "name": "Stange 1/2“"
+                }
+    },
+    {
+        "id": 45,
+        "defaults":
+                {
+                    "type": "K",
+                    "usage": "A",
+                    "deliverTime": 1.7,
+                    "deviation": 0.3,
+                    "deliverCosts": 50,
+                    "usageProductOne": 1,
+                    "usageProductTwo": 1,
+                    "usageProductThree": 1,
+                    "discountQuantity": 900,
+                    "name": "Mutter 1/4“"
+                }
+    },
+    {
+        "id": 46,
+        "defaults":
+                {
+                    "type": "K",
+                    "usage": "A",
+                    "deliverTime": 0.9,
+                    "deviation": 0.3,
+                    "deliverCosts": 50,
+                    "usageProductOne": 1,
+                    "usageProductTwo": 1,
+                    "usageProductThree": 1,
+                    "discountQuantity": 900,
+                    "name": "Schraube 1/4“"
+                }
+    },
+    {
+        "id": 47,
+        "defaults":
+                {
+                    "type": "K",
+                    "usage": "A",
+                    "deliverTime": 1.1,
+                    "deviation": 0.1,
+                    "deliverCosts": 50,
+                    "usageProductOne": 1,
+                    "usageProductTwo": 1,
+                    "usageProductThree": 1,
+                    "discountQuantity": 900,
+                    "name": "Zahnkranz"
+                }
+    },
+    {
+        "id": 48,
+        "defaults":
+                {
+                    "type": "K",
+                    "usage": "A",
+                    "deliverTime": 1,
+                    "deviation": 0.2,
+                    "deliverCosts": 75,
+                    "usageProductOne": 2,
+                    "usageProductTwo": 2,
+                    "usageProductThree": 2,
+                    "discountQuantity": 1800,
+                    "name": "Pedal"
+                }
+    },
+    {
+        "id": 49,
+        "defaults":
+                {
+                    "type": "E",
+                    "usage": "K",
+                    "deliverTime": 0,
+                    "deviation": 0,
+                    "deliverCosts": 0,
+                    "usageProductOne": 0,
+                    "usageProductTwo": 0,
+                    "usageProductThree": 0,
+                    "discountQuantity": 0,
+                    "name": "Vorderrad cpl."
+                }
+    },
+    {
+        "id": 50,
+        "defaults":
+                {
+                    "type": "E",
+                    "usage": "K",
+                    "deliverTime": 0,
+                    "deviation": 0,
+                    "deliverCosts": 0,
+                    "usageProductOne": 0,
+                    "usageProductTwo": 0,
+                    "usageProductThree": 0,
+                    "discountQuantity": 0,
+                    "name": "Rahmen u. Räder"
+                }
+    },
+    {
+        "id": 51,
+        "defaults":
+                {
+                    "type": "E",
+                    "usage": "K",
+                    "deliverTime": 0,
+                    "deviation": 0,
+                    "deliverCosts": 0,
+                    "usageProductOne": 0,
+                    "usageProductTwo": 0,
+                    "usageProductThree": 0,
+                    "discountQuantity": 0,
+                    "name": "Fahrrad o. Pedal"
+                }
+    },
+    {
+        "id": 52,
+        "defaults":
+                {
+                    "type": "K",
+                    "usage": "K",
+                    "deliverTime": 1.6,
+                    "deviation": 0.4,
+                    "deliverCosts": 50,
+                    "usageProductOne": 2,
+                    "usageProductTwo": 0,
+                    "usageProductThree": 0,
+                    "discountQuantity": 600,
+                    "name": "Felge cpl."
+                }
+    },
+    {
+        "id": 53,
+        "defaults":
+                {
+                    "type": "K",
+                    "usage": "K",
+                    "deliverTime": 1.6,
+                    "deviation": 0.2,
+                    "deliverCosts": 50,
+                    "usageProductOne": 72,
+                    "usageProductTwo": 0,
+                    "usageProductThree": 0,
+                    "discountQuantity": 22000,
+                    "name": "Speiche"
+                }
+    },
+    {
+        "id": 54,
+        "defaults":
+                {
+                    "type": "E",
+                    "usage": "D",
+                    "deliverTime": 0,
+                    "deviation": 0,
+                    "deliverCosts": 0,
+                    "usageProductOne": 0,
+                    "usageProductTwo": 0,
+                    "usageProductThree": 0,
+                    "discountQuantity": 0,
+                    "name": "Vorderrad cpl."
+                }
+    },
+    {
+        "id": 55,
+        "defaults":
+                {
+                    "type": "E",
+                    "usage": "D",
+                    "deliverTime": 0,
+                    "deviation": 0,
+                    "deliverCosts": 0,
+                    "usageProductOne": 0,
+                    "usageProductTwo": 0,
+                    "usageProductThree": 0,
+                    "discountQuantity": 0,
+                    "name": "Rahmen u. Räder"
+                }
+    },
+    {
+        "id": 56,
+        "defaults":
+                {
+                    "type": "E",
+                    "usage": "D",
+                    "deliverTime": 0,
+                    "deviation": 0,
+                    "deliverCosts": 0,
+                    "usageProductOne": 0,
+                    "usageProductTwo": 0,
+                    "usageProductThree": 0,
+                    "discountQuantity": 0,
+                    "name": "Fahrrad o. Pedal"
+                }
+    },
+    {
+        "id": 57,
+        "defaults":
+                {
+                    "type": "K",
+                    "usage": "D",
+                    "deliverTime": 1.7,
+                    "deviation": 0.3,
+                    "deliverCosts": 50,
+                    "usageProductOne": 0,
+                    "usageProductTwo": 2,
+                    "usageProductThree": 0,
+                    "discountQuantity": 600,
+                    "name": "Felge cpl."
+                }
+    },
+    {
+        "id": 58,
+        "defaults":
+                {
+                    "type": "K",
+                    "usage": "D",
+                    "deliverTime": 1.6,
+                    "deviation": 0.5,
+                    "deliverCosts": 50,
+                    "usageProductOne": 0,
+                    "usageProductTwo": 72,
+                    "usageProductThree": 0,
+                    "discountQuantity": 22000,
+                    "name": "Speiche"
+                }
+    },
+    {
+        "id": 59,
+        "defaults":
+                {
+                    "type": "K",
+                    "usage": "A",
+                    "deliverTime": 0.7,
+                    "deviation": 0.2,
+                    "deliverCosts": 50,
+                    "usageProductOne": 2,
+                    "usageProductTwo": 2,
+                    "usageProductThree": 2,
+                    "discountQuantity": 1800,
+                    "name": "Schweißdraht"
+                }
+    }
+]
