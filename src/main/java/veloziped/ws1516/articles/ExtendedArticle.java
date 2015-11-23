@@ -9,7 +9,7 @@ import java.util.Locale;
 import java.util.Objects;
 import org.json.simple.JSONObject;
 import veloziped.ws1516.generated.Results.Warehousestock.Article;
-import veloziped.ws1516.util.SharedInstance;
+import veloziped.ws1516.main.SharedInstance;
 import veloziped.ws1516.util.Utils;
 
 /**
@@ -20,27 +20,27 @@ public class ExtendedArticle extends Article {
 
     private ArticleType type;
     private ArticleUsage usage;
-    private float deliverTime;
-    private float deviation;
-    private float deliverCosts;
-    private int usageProductOne;
-    private int usageProductTwo;
-    private int usageProductThree;
-    private int discountQuantity;
+    private double deliverTime;
+    private double deviation;
+    private long deliverCosts;
+    private long usageProductOne;
+    private long usageProductTwo;
+    private long usageProductThree;
+    private long discountQuantity;
     private String name;
 
     public void setValues() {
-        JSONObject values = SharedInstance.getInstance().getArticleValueForId(this.getIdAsInt());
+        JSONObject values = SharedInstance.getInstance().getArticleValueForId(super.id);
         
         String aType = (String) values.get("type");
         String aUsage = (String) values.get("usage");
-        float aDeliverTime = (float) values.get("deliverTime");
-        float aDeviation = (float) values.get("deviation");
-        float aDeliverCosts = (float) values.get("deliverCosts");
-        int aUsagePOne = (int) values.get("usageProductOne");
-        int aUsagePTwo = (int) values.get("usageProductTwo");
-        int aUsagePThree = (int) values.get("usageProductThree");
-        int aDiscountQuantity = (int) values.get("discountQuantity");
+        double aDeliverTime = (double) values.get("deliverTime");
+        double aDeviation = (double) values.get("deviation");
+        long aDeliverCosts = (long) values.get("deliverCosts");
+        long aUsagePOne = (long) values.get("usageProductOne");
+        long aUsagePTwo = (long) values.get("usageProductTwo");
+        long aUsagePThree = (long) values.get("usageProductThree");
+        long aDiscountQuantity = (long) values.get("discountQuantity");
         String aName = (String) values.get("name");
         
         this.type = ArticleType.valueOf(aType);
@@ -76,10 +76,6 @@ public class ExtendedArticle extends Article {
         return number.floatValue();
     }
 
-    public int getIdAsInt() {
-        return super.getId().intValue(); //To change body of generated methods, choose Tools | Templates.
-    }
-
     public boolean equals(Object obj) {
         boolean result = false;
         
@@ -99,31 +95,31 @@ public class ExtendedArticle extends Article {
         return name;
     }
     
-    public float getDeliverCosts() {
+    public long getDeliverCosts() {
         return deliverCosts;
     }
     
-    public int getDiscountQuantity() {
+    public long getDiscountQuantity() {
         return discountQuantity;
     }
 
-    public int getUsageProductThree() {
+    public long getUsageProductThree() {
         return usageProductThree;
     }
 
-    public int getUsageProductTwo() {
+    public long getUsageProductTwo() {
         return usageProductTwo;
     }
 
-    public int getUsageForProductOne() {
+    public long getUsageForProductOne() {
         return usageProductOne;
     }
 
-    public float getDeviation() {
+    public double getDeviation() {
         return deviation;
     }
 
-    public float getDeliverTime() {
+    public double getDeliverTime() {
         return deliverTime;
     }
 

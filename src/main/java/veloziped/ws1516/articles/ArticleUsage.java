@@ -10,5 +10,5 @@ package veloziped.ws1516.articles;
  * @author Martin
  */
 public enum ArticleUsage {
-    K, H, D, A
+    K, H, D, A, NONE
 }

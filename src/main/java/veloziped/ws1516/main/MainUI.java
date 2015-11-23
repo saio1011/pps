@@ -22,6 +22,8 @@ public class MainUI extends javax.swing.JFrame {
      * Creates new form MainUI
      */
     public MainUI() {
+        SharedInstance.getInstance().readWorkplaceJson();
+        SharedInstance.getInstance().readArticleJson();
         initComponents();
     }
 
