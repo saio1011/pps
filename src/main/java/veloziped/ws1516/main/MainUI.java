@@ -23,6 +23,7 @@ public class MainUI extends javax.swing.JFrame {
      */
     public MainUI() {
         SharedInstance.getInstance().readWorkplaceJson();
+        SharedInstance.getInstance().readArticleJson();
         initComponents();
     }
 

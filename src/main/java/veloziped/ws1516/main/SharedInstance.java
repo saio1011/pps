@@ -44,7 +44,7 @@ public class SharedInstance {
             //this ist in util package
             //file ist in json package
             //TODO: get json file
-            FileReader reader = new FileReader("ArticleValues.json");
+            FileReader reader = new FileReader("src/main/java/veloziped/ws1516/json/ArticleValues.json");
 
             JSONArray a = (JSONArray) parser.parse(reader);
 
