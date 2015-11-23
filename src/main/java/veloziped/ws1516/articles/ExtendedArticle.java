@@ -9,7 +9,7 @@ import java.util.Locale;
 import java.util.Objects;
 import org.json.simple.JSONObject;
 import veloziped.ws1516.generated.Results.Warehousestock.Article;
-import veloziped.ws1516.util.SharedInstance;
+import veloziped.ws1516.main.SharedInstance;
 import veloziped.ws1516.util.Utils;
 
 /**
