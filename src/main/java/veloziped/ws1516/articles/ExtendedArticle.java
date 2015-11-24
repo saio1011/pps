@@ -9,7 +9,7 @@ import java.util.Locale;
 import java.util.Objects;
 import org.json.simple.JSONObject;
 import veloziped.ws1516.generated.Article;
-import veloziped.ws1516.main.SharedInstance;
+import veloziped.ws1516.main.SetupInstance;
 import veloziped.ws1516.util.Utils;
 
 /**
@@ -30,7 +30,7 @@ public class ExtendedArticle extends Article {
     private String name;
 
     public void setValues() {
-        JSONObject values = SharedInstance.getInstance().getArticleValueForId(super.id);
+        JSONObject values = SetupInstance.getInstance().getArticleValueForId(super.id);
         
         String aType = (String) values.get("type");
         String aUsage = (String) values.get("usage");
