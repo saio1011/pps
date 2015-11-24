@@ -8,7 +8,6 @@ package veloziped.ws1516.workload;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import veloziped.ws1516.main.SharedInstance;
 import veloziped.ws1516.workplace.ExtendedWorkplace;
 import veloziped.ws1516.workplace.ProcessTime;
 
@@ -17,34 +16,39 @@ import veloziped.ws1516.workplace.ProcessTime;
  * @author Martin
  */
 public class WorkloadPlanning {
-
-    private final long limitShift1;
-    private final long limitShift2;
-    private final long limitShift3;
-    private final long limitOvertime;
-    private Map<String, WorkloadResults> workloadResults;
-
-    public WorkloadPlanning() {
-        this.limitShift3 = 7200;
-        this.limitShift2 = 4800;
-        this.limitShift1 = 2400;
-        this.limitOvertime = 1200;
-
-        this.reloadWorkloadResults();
+    public static final long LIMITPERSHIFT = 2400;
+    public static final long LIMITOVERTIME = 1200;
+    private Map<String, WorkloadResult> workloadResults;
+    private WorkloadPlanning() {}
+    
+    public static WorkloadPlanning getInstance() {
+        return SharedInstanceHolder.INSTANCE;
     }
+    
+    private static class SharedInstanceHolder {
 
-    private void reloadWorkloadResults() {
+        private static final WorkloadPlanning INSTANCE = new WorkloadPlanning();
+    }
+    
+    private Map<String, WorkloadResult> calculateWorkload(Map<String, ExtendedWorkplace> workplaces) {
         workloadResults = new HashMap<>();
-        
-        Map<String, ExtendedWorkplace> workplaces = SharedInstance.getInstance().getWorkplaces();
 
         for (Map.Entry<String, ExtendedWorkplace> entry : workplaces.entrySet()) {
             ExtendedWorkplace place = entry.getValue();
-            
+
             List<ProcessTime> pT = place.getProcessTimes();
-            
-            WorkloadResults results = new WorkloadResults(place.getId(), pT);
-            workloadResults.put(entry.getKey(), results);
+
+            if (pT.size() > 0) {
+                WorkloadResult results = new WorkloadResult(place);
+                results.reCalculateResults();
+                workloadResults.put(entry.getKey(), results);
+            }
         }
+        
+        return workloadResults;
+    }
+    
+    public Map<String, WorkloadResult> getWorkloadResults() {
+        return workloadResults;
     }
 }
