@@ -5,6 +5,7 @@
  */
 package veloziped.ws1516.main;
 
+import java.util.Locale;
 import java.util.ResourceBundle;
 import javax.swing.JTextField;
 import veloziped.ws1516.util.IntegerField;
@@ -24,7 +25,31 @@ public class MainUI extends javax.swing.JFrame {
     public MainUI() {
         SharedInstance.getInstance().readWorkplaceJson();
         SharedInstance.getInstance().readArticleJson();
+        
+        
         initComponents();
+        
+        //set Language selected
+        Locale locale = Locale.getDefault();
+        switch(locale.getLanguage()){
+            case "en":
+                jCheckBoxMenuItemEnglish.setSelected(true);
+                break;
+            case "de":
+                jCheckBoxMenuItemDeutsch.setSelected(true);
+                break;
+            case "ro":
+                jCheckBoxMenuItemRomanien.setSelected(true);
+                break;
+            case "bg":
+                jCheckBoxMenuItemBulgarian.setSelected(true);
+                break;
+             case "fr":
+                jCheckBoxMenuItemFrench.setSelected(true);
+                break;
+            default:
+                jCheckBoxMenuItemEnglish.setSelected(true);
+        }
     }
 
     /**
@@ -36,7 +61,7 @@ public class MainUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTabbedPane1 = new javax.swing.JTabbedPane();
+        jTabbedPan = new javax.swing.JTabbedPane();
         jPanelProductionPlanning = new javax.swing.JPanel();
         jLabelFairyCyclePF = new javax.swing.JLabel();
         jLabelLadiesCyclePF = new javax.swing.JLabel();
@@ -57,7 +82,7 @@ public class MainUI extends javax.swing.JFrame {
         jTextField14 = new IntegerField();
         jTextField15 = new IntegerField();
         jTextField16 = new IntegerField();
-        jPanel = new javax.swing.JPanel();
+        jPanelInHouseProduction = new javax.swing.JPanel();
         jTabbedPane2 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -110,8 +135,11 @@ public class MainUI extends javax.swing.JFrame {
         jMenuItemExportFile = new javax.swing.JMenuItem();
         jMenuSettings = new javax.swing.JMenu();
         jMenuLanguage = new javax.swing.JMenu();
+        jCheckBoxMenuItemBulgarian = new javax.swing.JCheckBoxMenuItem();
         jCheckBoxMenuItemDeutsch = new javax.swing.JCheckBoxMenuItem();
         jCheckBoxMenuItemEnglish = new javax.swing.JCheckBoxMenuItem();
+        jCheckBoxMenuItemFrench = new javax.swing.JCheckBoxMenuItem();
+        jCheckBoxMenuItemRomanien = new javax.swing.JCheckBoxMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("veloziped/ws1516/i18n/i18n"); // NOI18N
@@ -138,88 +166,28 @@ public class MainUI extends javax.swing.JFrame {
         jLabelPeriodN3PF.setText(bundle.getString("PeriondN3")); // NOI18N
 
         jTextField5.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
-            }
-        });
 
         jTextField6.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
-            }
-        });
 
         jTextField7.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField7ActionPerformed(evt);
-            }
-        });
 
         jTextField8.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField8ActionPerformed(evt);
-            }
-        });
 
         jTextField9.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField9ActionPerformed(evt);
-            }
-        });
 
         jTextField10.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField10ActionPerformed(evt);
-            }
-        });
 
         jTextField11.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField11ActionPerformed(evt);
-            }
-        });
 
         jTextField12.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField12.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField12ActionPerformed(evt);
-            }
-        });
 
         jTextField13.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField13.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField13ActionPerformed(evt);
-            }
-        });
 
         jTextField14.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField14.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField14ActionPerformed(evt);
-            }
-        });
 
         jTextField15.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField15.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField15ActionPerformed(evt);
-            }
-        });
 
         jTextField16.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField16.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField16ActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanelProductionPlanningLayout = new javax.swing.GroupLayout(jPanelProductionPlanning);
         jPanelProductionPlanning.setLayout(jPanelProductionPlanningLayout);
@@ -290,7 +258,7 @@ public class MainUI extends javax.swing.JFrame {
                 .addContainerGap(306, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab(bundle.getString("tabProductionForecast"), jPanelProductionPlanning); // NOI18N
+        jTabbedPan.addTab(bundle.getString("tabProductionForecast"), jPanelProductionPlanning); // NOI18N
 
         jLabel1.setText("jLabel1");
 
@@ -359,13 +327,13 @@ public class MainUI extends javax.swing.JFrame {
         jLabel18.setText("+");
 
         jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel19.setText("--");
+        jLabel19.setText("-");
 
         jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel20.setText("--");
+        jLabel20.setText("-");
 
         jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel21.setText("--");
+        jLabel21.setText("-");
 
         jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel22.setText("=");
@@ -383,17 +351,17 @@ public class MainUI extends javax.swing.JFrame {
         jTextField22.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
         jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel25.setText("--");
+        jLabel25.setText("-");
 
         jTextField23.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
         jLabel26.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel26.setText("--");
+        jLabel26.setText("-");
 
         jTextField24.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
         jLabel27.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel27.setText("--");
+        jLabel27.setText("-");
 
         jTextField25.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
@@ -431,7 +399,7 @@ public class MainUI extends javax.swing.JFrame {
                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel17)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jTextField21, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -483,7 +451,7 @@ public class MainUI extends javax.swing.JFrame {
                         .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                         .addComponent(jLabel21)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -592,23 +560,23 @@ public class MainUI extends javax.swing.JFrame {
 
         jTabbedPane2.addTab("tab3", jPanel3);
 
-        javax.swing.GroupLayout jPanelLayout = new javax.swing.GroupLayout(jPanel);
-        jPanel.setLayout(jPanelLayout);
-        jPanelLayout.setHorizontalGroup(
-            jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelLayout.createSequentialGroup()
+        javax.swing.GroupLayout jPanelInHouseProductionLayout = new javax.swing.GroupLayout(jPanelInHouseProduction);
+        jPanelInHouseProduction.setLayout(jPanelInHouseProductionLayout);
+        jPanelInHouseProductionLayout.setHorizontalGroup(
+            jPanelInHouseProductionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelInHouseProductionLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jTabbedPane2))
         );
-        jPanelLayout.setVerticalGroup(
-            jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelLayout.createSequentialGroup()
+        jPanelInHouseProductionLayout.setVerticalGroup(
+            jPanelInHouseProductionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelInHouseProductionLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jTabbedPane2)
                 .addContainerGap())
         );
 
-        jTabbedPane1.addTab("tab2", jPanel);
+        jTabbedPan.addTab(bundle.getString("InHauseProduction"), jPanelInHouseProduction); // NOI18N
 
         jMenuFile.setText(bundle.getString("File")); // NOI18N
 
@@ -624,6 +592,14 @@ public class MainUI extends javax.swing.JFrame {
 
         jMenuLanguage.setText(bundle.getString("Language")); // NOI18N
 
+        jCheckBoxMenuItemBulgarian.setText(bundle.getString("Bulgarian")); // NOI18N
+        jCheckBoxMenuItemBulgarian.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxMenuItemBulgarianActionPerformed(evt);
+            }
+        });
+        jMenuLanguage.add(jCheckBoxMenuItemBulgarian);
+
         jCheckBoxMenuItemDeutsch.setText(bundle.getString("Deutsch")); // NOI18N
         jCheckBoxMenuItemDeutsch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -632,7 +608,6 @@ public class MainUI extends javax.swing.JFrame {
         });
         jMenuLanguage.add(jCheckBoxMenuItemDeutsch);
 
-        jCheckBoxMenuItemEnglish.setSelected(true);
         jCheckBoxMenuItemEnglish.setText(bundle.getString("English")); // NOI18N
         jCheckBoxMenuItemEnglish.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -640,6 +615,22 @@ public class MainUI extends javax.swing.JFrame {
             }
         });
         jMenuLanguage.add(jCheckBoxMenuItemEnglish);
+
+        jCheckBoxMenuItemFrench.setText(bundle.getString("French")); // NOI18N
+        jCheckBoxMenuItemFrench.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxMenuItemFrenchActionPerformed(evt);
+            }
+        });
+        jMenuLanguage.add(jCheckBoxMenuItemFrench);
+
+        jCheckBoxMenuItemRomanien.setText(bundle.getString("Romanien")); // NOI18N
+        jCheckBoxMenuItemRomanien.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxMenuItemRomanienActionPerformed(evt);
+            }
+        });
+        jMenuLanguage.add(jCheckBoxMenuItemRomanien);
 
         jMenuSettings.add(jMenuLanguage);
 
@@ -653,14 +644,14 @@ public class MainUI extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane1)
+                .addComponent(jTabbedPan)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(27, 27, 27)
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 557, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTabbedPan, javax.swing.GroupLayout.PREFERRED_SIZE, 557, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -670,60 +661,43 @@ public class MainUI extends javax.swing.JFrame {
     private void jCheckBoxMenuItemEnglishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItemEnglishActionPerformed
         this.changeLanguage("en", "US");
         jCheckBoxMenuItemDeutsch.setSelected(false);
+        jCheckBoxMenuItemBulgarian.setSelected(false);
+        jCheckBoxMenuItemFrench.setSelected(false);
+        jCheckBoxMenuItemRomanien.setSelected(false);
+        
     }//GEN-LAST:event_jCheckBoxMenuItemEnglishActionPerformed
 
     private void jCheckBoxMenuItemDeutschActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItemDeutschActionPerformed
         this.changeLanguage("de", "DE");
         jCheckBoxMenuItemEnglish.setSelected(false);
+        jCheckBoxMenuItemBulgarian.setSelected(false);
+        jCheckBoxMenuItemFrench.setSelected(false);
+        jCheckBoxMenuItemRomanien.setSelected(false);
     }//GEN-LAST:event_jCheckBoxMenuItemDeutschActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    private void jCheckBoxMenuItemBulgarianActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItemBulgarianActionPerformed
+        this.changeLanguage("bg", "BG");
+        jCheckBoxMenuItemEnglish.setSelected(false);
+        jCheckBoxMenuItemDeutsch.setSelected(false);
+        jCheckBoxMenuItemFrench.setSelected(false);
+        jCheckBoxMenuItemRomanien.setSelected(false);
+    }//GEN-LAST:event_jCheckBoxMenuItemBulgarianActionPerformed
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
+    private void jCheckBoxMenuItemFrenchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItemFrenchActionPerformed
+        this.changeLanguage("fr", "FR");
+        jCheckBoxMenuItemEnglish.setSelected(false);
+        jCheckBoxMenuItemDeutsch.setSelected(false);
+        jCheckBoxMenuItemBulgarian.setSelected(false);
+        jCheckBoxMenuItemRomanien.setSelected(false); 
+    }//GEN-LAST:event_jCheckBoxMenuItemFrenchActionPerformed
 
-    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField7ActionPerformed
-
-    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField8ActionPerformed
-
-    private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField9ActionPerformed
-
-    private void jTextField10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField10ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField10ActionPerformed
-
-    private void jTextField11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField11ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField11ActionPerformed
-
-    private void jTextField12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField12ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField12ActionPerformed
-
-    private void jTextField13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField13ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField13ActionPerformed
-
-    private void jTextField14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField14ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField14ActionPerformed
-
-    private void jTextField15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField15ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField15ActionPerformed
-
-    private void jTextField16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField16ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField16ActionPerformed
+    private void jCheckBoxMenuItemRomanienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItemRomanienActionPerformed
+        this.changeLanguage("ro", "RO");
+        jCheckBoxMenuItemEnglish.setSelected(false);
+        jCheckBoxMenuItemDeutsch.setSelected(false);
+        jCheckBoxMenuItemFrench.setSelected(false);
+        jCheckBoxMenuItemBulgarian.setSelected(false);
+    }//GEN-LAST:event_jCheckBoxMenuItemRomanienActionPerformed
 
     /**
      * @param args the command line arguments
@@ -761,8 +735,11 @@ public class MainUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItemBulgarian;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItemDeutsch;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItemEnglish;
+    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItemFrench;
+    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItemRomanien;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -804,12 +781,12 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItemImportFile;
     private javax.swing.JMenu jMenuLanguage;
     private javax.swing.JMenu jMenuSettings;
-    private javax.swing.JPanel jPanel;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanelInHouseProduction;
     private javax.swing.JPanel jPanelProductionPlanning;
-    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTabbedPane jTabbedPan;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
