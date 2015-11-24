@@ -50,7 +50,7 @@ public class SetupInstance {
 
                 this.articleValues.put(id, values);
             }
-
+           
         } catch (Exception e) {
             e.printStackTrace();
         }
