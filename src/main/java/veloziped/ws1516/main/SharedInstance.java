@@ -13,6 +13,7 @@ import java.util.Map;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+import production.Forecast;
 import veloziped.ws1516.workplace.ProcessTime;
 import veloziped.ws1516.workplace.WorkplaceValues;
 
@@ -27,6 +28,7 @@ public class SharedInstance {
     private JSONParser parser = new JSONParser();
     private Map<String, JSONObject> articleValues;
     private List<WorkplaceValues> workplaceValues;
+    private Forecast forecast = new Forecast();
 
     public static SharedInstance getInstance() {
         return SharedInstanceHolder.INSTANCE;
@@ -41,9 +43,6 @@ public class SharedInstance {
         articleValues = new HashMap<>();
 
         try {
-            //this ist in util package
-            //file ist in json package
-            //TODO: get json file
             FileReader reader = new FileReader("src/main/java/veloziped/ws1516/json/ArticleValues.json");
 
             JSONArray a = (JSONArray) parser.parse(reader);
@@ -119,5 +118,13 @@ public class SharedInstance {
 
     public List<WorkplaceValues> getWorkplaceValues() {
         return workplaceValues;
+    }
+    
+    public Forecast getForecast() {
+        return forecast;
+    }
+
+    public void setForecast(Forecast forecast) {
+        this.forecast = forecast;
     }
 }
