@@ -6,7 +6,7 @@
 //
 
 
-package generated;
+package veloziped.ws1516.generated;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
