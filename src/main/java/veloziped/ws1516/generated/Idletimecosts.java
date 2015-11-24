@@ -6,7 +6,7 @@
 //
 
 
-package generated;
+package veloziped.ws1516.generated;
 
 import java.util.ArrayList;
 import java.util.List;
