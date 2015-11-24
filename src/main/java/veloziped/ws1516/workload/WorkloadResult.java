@@ -126,7 +126,8 @@ public class WorkloadResult {
 
     private void calcCapacityNeeded() {
         for (ProcessTime process : this.workplace.getProcessTimes()) {
-            Long orderQuantity = SharedInstance.getInstance().getOrderQuantityForArticleId(process.getArticleId());
+            Long orderQuantity = SharedInstance.getInstance()
+                    .getOrderQuantityForArticleId(process.getArticleId());
 
             if (orderQuantity != null) {
                 this.capacityNeeded += orderQuantity * process.getRunTime();
@@ -136,7 +137,8 @@ public class WorkloadResult {
 
     private void calcSetupTime() {
         for (ProcessTime process : this.workplace.getProcessTimes()) {
-            Long orderQuantity = SharedInstance.getInstance().getOrderQuantityForArticleId(process.getArticleId());
+            Long orderQuantity = SharedInstance.getInstance()
+                    .getOrderQuantityForArticleId(process.getArticleId());
 
             if (orderQuantity != null && orderQuantity > 0) {
                 this.setupTime += process.getSetupTime();
@@ -148,7 +150,8 @@ public class WorkloadResult {
         int size = this.workplace.getProcessTimes().size();
 
         if (size > 0) {
-            this.setupFactor = this.lastSetupCycles / this.workplace.getProcessTimes().size();
+            this.setupFactor = this.lastSetupCycles
+                    / this.workplace.getProcessTimes().size();
         }
 
         this.additionalSetupTime = (long) ceil(this.setupTime * this.setupFactor);
@@ -161,12 +164,42 @@ public class WorkloadResult {
     }
 
     private void calcNumberOfShifts() {
-        //TODO 
+        //enough capacity for first shift
+        if (this.totalCapacityNeeded < WorkloadPlanning.LIMITPERSHIFT) {
+            this.numberOfShifts = 1;
+
+            //limit of over time not reached (first shift)
+        } else if ((this.totalCapacityNeeded - WorkloadPlanning.LIMITPERSHIFT)
+                <= WorkloadPlanning.LIMITOVERTIME
+                && //and costs of over time is lower than costs of second shift
+                ((this.totalCapacityNeeded - WorkloadPlanning.LIMITPERSHIFT)
+                * this.workplace.getOvertimeWage())
+                < (WorkloadPlanning.LIMITPERSHIFT * this.workplace.getSecondShiftWage())) {
+            this.numberOfShifts = 1;
+
+            //enough capacity for second shift
+        } else if (this.totalCapacityNeeded < (WorkloadPlanning.LIMITPERSHIFT * 2)) {
+            this.numberOfShifts = 2;
+
+            //limit of over time not reached (second shift)
+        } else if ((this.totalCapacityNeeded - (WorkloadPlanning.LIMITPERSHIFT * 2))
+                <= WorkloadPlanning.LIMITOVERTIME
+                && //and costs of over time is lower than costs of third shift
+                ((this.totalCapacityNeeded - (WorkloadPlanning.LIMITPERSHIFT * 2))
+                * this.workplace.getOvertimeWage())
+                < ((WorkloadPlanning.LIMITPERSHIFT * 2) * this.workplace.getThirdShiftWage())) {
+            this.numberOfShifts = 2;
+
+            //work in three shifts
+        } else {
+            this.numberOfShifts = 3;
+        }
     }
 
     private void calcOverTime() {
         if (this.totalCapacityNeeded > (this.numberOfShifts * WorkloadPlanning.LIMITPERSHIFT)) {
-            this.overTimePeriod = this.totalCapacityNeeded - (this.numberOfShifts * WorkloadPlanning.LIMITPERSHIFT);
+            this.overTimePeriod = this.totalCapacityNeeded
+                    - (this.numberOfShifts * WorkloadPlanning.LIMITPERSHIFT);
         } else {
             this.overTimePeriod = 0;
         }
@@ -176,7 +209,8 @@ public class WorkloadResult {
 
     private void calcFreeCapacity() {
         if (this.totalCapacityNeeded < (this.numberOfShifts * WorkloadPlanning.LIMITPERSHIFT)) {
-            this.freeCapacity = (this.numberOfShifts * WorkloadPlanning.LIMITPERSHIFT) - this.totalCapacityNeeded;
+            this.freeCapacity = (this.numberOfShifts * WorkloadPlanning.LIMITPERSHIFT)
+                    - this.totalCapacityNeeded;
         } else {
             this.freeCapacity = 0;
         }
