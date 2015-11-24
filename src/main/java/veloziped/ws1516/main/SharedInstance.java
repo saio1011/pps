@@ -13,7 +13,7 @@ import java.util.Map;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-import production.Forecast;
+import veloziped.ws1516.production.Forecast;
 import veloziped.ws1516.workplace.ProcessTime;
 import veloziped.ws1516.workplace.WorkplaceValues;
 
@@ -108,7 +108,7 @@ public class SharedInstance {
         return articleValues;
     }
 
-    public JSONObject getArticleValueForId(int id) {
+    public JSONObject getArticleValueForId(long id) {
         if (articleValues == null) {
             return null;
         } else {

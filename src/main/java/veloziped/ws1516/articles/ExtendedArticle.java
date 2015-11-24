@@ -8,7 +8,7 @@ package veloziped.ws1516.articles;
 import java.util.Locale;
 import java.util.Objects;
 import org.json.simple.JSONObject;
-import veloziped.ws1516.generated.Results.Warehousestock.Article;
+import veloziped.ws1516.generated.Article;
 import veloziped.ws1516.main.SharedInstance;
 import veloziped.ws1516.util.Utils;
 
@@ -55,27 +55,6 @@ public class ExtendedArticle extends Article {
         this.name = aName;
     }
     
-    public double getStockvalueAsDouble() {
-        String value = super.getStockvalue(); //To change body of generated methods, choose Tools | Templates.
-        Number number = Utils.getNumberFromString(value, Locale.GERMANY);
-
-        return number.doubleValue();
-    }
-
-    public float getPriceAsFloat() {
-        String value = super.getPrice(); //To change body of generated methods, choose Tools | Templates.
-        Number number = Utils.getNumberFromString(value, Locale.GERMANY);
-
-        return number.floatValue();
-    }
-
-    public float getPctAsFloat() {
-        String value = super.getPct(); //To change body of generated methods, choose Tools | Templates.
-        Number number = Utils.getNumberFromString(value, Locale.GERMANY);
-
-        return number.floatValue();
-    }
-
     public boolean equals(Object obj) {
         boolean result = false;
         
