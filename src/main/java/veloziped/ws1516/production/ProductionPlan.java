@@ -9,7 +9,7 @@ package veloziped.ws1516.production;
  *
  * @author Martin
  */
-public class Forecast {
+public class ProductionPlan {
     
     private PeriodDetail periodN1;
     private PeriodDetail periodN2;
@@ -47,5 +47,4 @@ public class Forecast {
     public void setPeriodN0(PeriodDetail periodN0) {
         this.periodN1 = periodN0;
     }
-
 }

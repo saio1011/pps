@@ -9,14 +9,14 @@ package veloziped.ws1516.production;
  *
  * @author Martin
  */
-public class ForecastDetail {
+public class PeriodDetail {
     
     private long product1;
     private long product2;
     private long product3;
     private long sum;
 
-    public ForecastDetail(long product1, long product2, long product3) {
+    public PeriodDetail(long product1, long product2, long product3) {
         this.product1 = product1;
         this.product2 = product2;
         this.product3 = product3;
