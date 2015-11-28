@@ -15,7 +15,7 @@ import veloziped.ws1516.generated.Order;
 import veloziped.ws1516.generated.Results;
 import veloziped.ws1516.production.Forecast;
 import veloziped.ws1516.production.ProductionPlan;
-import veloziped.ws1516.production.OrderMode;
+import veloziped.ws1516.production.CalculationMode;
 import veloziped.ws1516.workplace.ExtendedWorkplace;
 
 /**
@@ -34,14 +34,35 @@ public class SharedInstance {
     private Map<String, Order> incomingOrdersThisPeriod;
     private ProductionPlan productionPlan;
     private Results results;
-    private OrderMode orderMode;
+    private CalculationMode calculationMode;
+    // 1 == 100%
+    private double discountFactor;
+    private double bufferFactor;
 
-    public OrderMode getOrderMode() {
-        return orderMode;
+    public double getBufferFactor() {
+        return bufferFactor;
     }
 
-    public void setOrderMode(OrderMode orderMode) {
-        this.orderMode = orderMode;
+    public void setBufferFactor(double bufferFactor) {
+        this.bufferFactor = bufferFactor;
+    }
+
+
+    public double getDiscountFactor() {
+        return discountFactor;
+    }
+
+    public void setDiscountFactor(double discountFactor) {
+        this.discountFactor = discountFactor;
+    }
+
+
+    public CalculationMode getCalculationMode() {
+        return calculationMode;
+    }
+
+    public void setCalculationMode(CalculationMode calculationMode) {
+        this.calculationMode = calculationMode;
     }
 
     public static SharedInstance getInstance() {
@@ -121,7 +142,7 @@ public class SharedInstance {
         return result;
     }
     
-    public Order geIncomingOrderForArticleId(Long id) {
+    public Order getIncomingOrderForArticleId(Long id) {
         Order result = null;
 
         if (id != null) {
@@ -147,7 +168,7 @@ public class SharedInstance {
         this.forecast = forecast;
     }
 
-    public void incomingOrdersThisPeriod(List<Order> incoming) {
+    public void calcIncomingOrdersThisPeriod(List<Order> incoming) {
         incomingOrdersThisPeriod = new HashMap<>();
         long currentPeriod = this.results.getPeriod() + 1;
 
@@ -164,10 +185,10 @@ public class SharedInstance {
     private long getEstimatedDeliverPeriod(ExtendedArticle article, Order order) {
         long estimatedPeriod = 0;
 
-        switch (this.orderMode) {
+        switch (this.calculationMode) {
             case OPTIMISTIC:
                 if (order.getMode() == 5) {
-                    estimatedPeriod = DoubleMath.roundToLong(article.getDeliveryTimeNormalAsPeriods(this.orderMode) + order.getOrderperiod(), RoundingMode.DOWN);
+                    estimatedPeriod = DoubleMath.roundToLong(article.getDeliveryTimeNormalAsPeriods(this.calculationMode) + order.getOrderperiod(), RoundingMode.DOWN);
                 } else if (order.getMode() == 4) {
                     estimatedPeriod = DoubleMath.roundToLong(article.getDeliveryTimeFastAsPeriod() + order.getOrderperiod(), RoundingMode.DOWN);
                 } else {
@@ -176,7 +197,7 @@ public class SharedInstance {
                 break;
             case PESSIMISTIC:
                 if (order.getMode() == 5) {
-                    estimatedPeriod = DoubleMath.roundToLong(article.getDeliveryTimeNormalAsPeriods(this.orderMode) + order.getOrderperiod(), RoundingMode.CEILING);
+                    estimatedPeriod = DoubleMath.roundToLong(article.getDeliveryTimeNormalAsPeriods(this.calculationMode) + order.getOrderperiod(), RoundingMode.CEILING);
                 } else if (order.getMode() == 4) {
                     estimatedPeriod = DoubleMath.roundToLong(article.getDeliveryTimeFastAsPeriod() + order.getOrderperiod(), RoundingMode.CEILING);
                 } else {

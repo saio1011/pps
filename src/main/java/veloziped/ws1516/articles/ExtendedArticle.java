@@ -11,7 +11,7 @@ import java.util.Objects;
 import org.json.simple.JSONObject;
 import veloziped.ws1516.generated.Article;
 import veloziped.ws1516.main.SetupInstance;
-import veloziped.ws1516.production.OrderMode;
+import veloziped.ws1516.production.CalculationMode;
 
 /**
  *
@@ -71,7 +71,7 @@ public class ExtendedArticle extends Article {
         return result;
     }
 
-    public long getDeliveryTimeFastInDays(OrderMode mode) {
+    public long getDeliveryTimeFastInDays(CalculationMode mode) {
         if (null == mode) {
             return 0;
         }
@@ -96,7 +96,7 @@ public class ExtendedArticle extends Article {
         return (deliverFast + 1) / 5;
     }
 
-    public long getDeliveryTimeNormalInDays(OrderMode mode) {
+    public long getDeliveryTimeNormalInDays(CalculationMode mode) {
         if (null == mode) {
             return 0;
         }
@@ -118,7 +118,7 @@ public class ExtendedArticle extends Article {
         }
     }
 
-    public double getDeliveryTimeNormalAsPeriods(OrderMode mode) {
+    public double getDeliveryTimeNormalAsPeriods(CalculationMode mode) {
         //5 days
         double deliverNormal;
         

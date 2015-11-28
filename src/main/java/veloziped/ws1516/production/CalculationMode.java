@@ -9,6 +9,6 @@ package veloziped.ws1516.production;
  *
  * @author Martin
  */
-public enum OrderMode {
+public enum CalculationMode {
     OPTIMISTIC, PESSIMISTIC
 }
