@@ -20,6 +20,10 @@ public class IntegerField extends JTextField {
     public IntegerField(int cols) {
         super(cols);
     }
+    
+    public IntegerField(String value) {
+        super(value);
+    }
 
     @Override
     protected Document createDefaultModel() {

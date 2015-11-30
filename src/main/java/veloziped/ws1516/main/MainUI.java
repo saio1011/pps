@@ -11,6 +11,9 @@ import java.util.ResourceBundle;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
+import javax.swing.text.JTextComponent;
 import veloziped.ws1516.util.IntegerField;
 import veloziped.ws1516.util.Utils;
 
@@ -33,6 +36,10 @@ public class MainUI extends javax.swing.JFrame {
         
         //set Language selected
         this.setSelectedLanguage(Locale.getDefault().getLanguage());
+        
+        this.addInputFieldsListener();
+        
+        
     }
 
     /**
@@ -53,7 +60,7 @@ public class MainUI extends javax.swing.JFrame {
         jLabelPeriodN1PF = new javax.swing.JLabel();
         jLabelPeriodN2PF = new javax.swing.JLabel();
         jLabelPeriodN3PF = new javax.swing.JLabel();
-        jTextField5 = new IntegerField();
+        jTextFieldPFPeriodNKF = new IntegerField();
         jTextField6 = new IntegerField();
         jTextField7 = new IntegerField();
         jTextField8 = new IntegerField();
@@ -67,132 +74,27 @@ public class MainUI extends javax.swing.JFrame {
         jTextField16 = new IntegerField();
         jPanelInHouseProduction = new javax.swing.JPanel();
         jTabbedPane2 = new javax.swing.JTabbedPane();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel29 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jTextField2 = new IntegerField();
-        jTextField3 = new IntegerField();
-        jTextField4 = new IntegerField();
-        jTextField17 = new IntegerField();
-        jTextField18 = new IntegerField();
-        jTextField19 = new IntegerField();
-        jTextField20 = new IntegerField();
-        jTextField21 = new IntegerField();
-        jTextField22 = new IntegerField();
-        jTextField23 = new IntegerField();
-        jTextField24 = new IntegerField();
-        jTextField51 = new IntegerField();
-        jTextField52 = new IntegerField();
-        jTextField53 = new IntegerField();
-        jTextField54 = new IntegerField();
-        jTextField55 = new IntegerField();
-        jTextField56 = new IntegerField();
-        jTextField57 = new IntegerField();
-        jTextField58 = new IntegerField();
-        jTextField59 = new IntegerField();
-        jTextField60 = new IntegerField();
-        jTextField61 = new IntegerField();
-        jTextField62 = new IntegerField();
-        jTextField63 = new IntegerField();
-        jTextField64 = new IntegerField();
-        jTextField65 = new IntegerField();
-        jTextField66 = new IntegerField();
-        jTextField67 = new IntegerField();
-        jTextField68 = new IntegerField();
-        jTextField69 = new IntegerField();
-        jTextField70 = new IntegerField();
-        jTextField71 = new IntegerField();
-        jTextField72 = new IntegerField();
-        jTextField73 = new IntegerField();
-        jTextField74 = new IntegerField();
-        jTextField75 = new IntegerField();
-        jTextField76 = new IntegerField();
-        jTextField77 = new IntegerField();
-        jTextField78 = new IntegerField();
-        jTextField79 = new IntegerField();
-        jTextField80 = new IntegerField();
-        jTextField81 = new IntegerField();
-        jTextField82 = new IntegerField();
-        jTextField83 = new IntegerField();
-        jTextField84 = new IntegerField();
-        jTextField85 = new IntegerField();
-        jTextField86 = new IntegerField();
-        jTextField87 = new IntegerField();
-        jTextField88 = new IntegerField();
-        jTextField89 = new IntegerField();
-        jTextField90 = new IntegerField();
-        jTextField91 = new IntegerField();
-        jTextField92 = new IntegerField();
-        jTextField93 = new IntegerField();
-        jTextField94 = new IntegerField();
-        jTextField95 = new IntegerField();
-        jTextField96 = new IntegerField();
-        jTextField97 = new IntegerField();
-        jTextField98 = new IntegerField();
-        jTextField99 = new IntegerField();
-        jTextField100 = new IntegerField();
-        jTextField101 = new IntegerField();
-        jTextField102 = new IntegerField();
-        jTextField103 = new IntegerField();
-        jTextField104 = new IntegerField();
-        jTextField105 = new IntegerField();
-        jTextField106 = new IntegerField();
-        jTextField107 = new IntegerField();
-        jTextField108 = new IntegerField();
-        jTextField109 = new IntegerField();
-        jTextField110 = new IntegerField();
-        jLabel47 = new javax.swing.JLabel();
-        jLabel48 = new javax.swing.JLabel();
-        jLabel49 = new javax.swing.JLabel();
-        jLabel50 = new javax.swing.JLabel();
-        jLabel51 = new javax.swing.JLabel();
-        jLabel52 = new javax.swing.JLabel();
-        jLabel53 = new javax.swing.JLabel();
-        jLabel54 = new javax.swing.JLabel();
-        jLabel55 = new javax.swing.JLabel();
-        jLabel59 = new javax.swing.JLabel();
-        jLabel60 = new javax.swing.JLabel();
-        jLabel56 = new javax.swing.JLabel();
-        jLabel57 = new javax.swing.JLabel();
-        jLabel58 = new javax.swing.JLabel();
-        jLabel61 = new javax.swing.JLabel();
-        jLabel62 = new javax.swing.JLabel();
-        jLabel63 = new javax.swing.JLabel();
-        jLabel64 = new javax.swing.JLabel();
-        jLabel65 = new javax.swing.JLabel();
-        jLabel66 = new javax.swing.JLabel();
-        jLabel67 = new javax.swing.JLabel();
-        jLabel68 = new javax.swing.JLabel();
-        jLabel69 = new javax.swing.JLabel();
-        jTextField25 = new IntegerField();
-        jPanel2 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
+        jPanelKF = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
-        jLabel30 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        jLabelKFKinderfahrrad = new javax.swing.JLabel();
+        jLabelKFSalesOrders = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jTextField26 = new IntegerField();
-        jTextField27 = new IntegerField();
-        jTextField28 = new IntegerField();
-        jTextField30 = new IntegerField();
-        jTextField31 = new IntegerField();
-        jTextField32 = new IntegerField();
-        jTextField33 = new IntegerField();
-        jTextField34 = new IntegerField();
-        jTextField35 = new IntegerField();
-        jTextField36 = new IntegerField();
-        jTextField111 = new IntegerField();
-        jTextField112 = new IntegerField();
+        jLabelKFStockEndOfPeriod = new javax.swing.JLabel();
+        jLabelKFOrdersInQueque = new javax.swing.JLabel();
+        jLabelKFWorkInProgress = new javax.swing.JLabel();
+        jLabelKFProductionOrders = new javax.swing.JLabel();
+        jTextFieldKFP1SalesOrders = new IntegerField("0");
+        jTextFieldKFE51SalesOrders = new IntegerField();
+        jTextFieldKFEE16SalesOrders = new IntegerField();
+        jTextFieldKFE50SalesOrders = new IntegerField();
+        jTextFieldKFE4SalesOrders = new IntegerField();
+        jTextFieldKFE10SalesOrders = new IntegerField();
+        jTextFieldKFE49SalesOrders = new IntegerField();
+        jTextFieldKFE7SalesOrders = new IntegerField();
+        jTextFieldKFE13SalesOrders = new IntegerField();
+        jTextFieldKFE18SalesOrders = new IntegerField();
+        jTextFieldKFE26StockEndOfPeriod = new IntegerField();
+        jTextFieldKFP1StockEndOfPeriod = new IntegerField();
         jTextField113 = new IntegerField();
         jTextField114 = new IntegerField();
         jTextField115 = new IntegerField();
@@ -203,8 +105,8 @@ public class MainUI extends javax.swing.JFrame {
         jTextField120 = new IntegerField();
         jTextField121 = new IntegerField();
         jTextField122 = new IntegerField();
-        jTextField123 = new IntegerField();
-        jTextField124 = new IntegerField();
+        jTextFieldKFE26OrdersInQueque = new IntegerField();
+        jTextFieldKFP1OrdersInQueque = new IntegerField();
         jTextField125 = new IntegerField();
         jTextField126 = new IntegerField();
         jTextField127 = new IntegerField();
@@ -215,8 +117,8 @@ public class MainUI extends javax.swing.JFrame {
         jTextField132 = new IntegerField();
         jTextField133 = new IntegerField();
         jTextField134 = new IntegerField();
-        jTextField135 = new IntegerField();
-        jTextField136 = new IntegerField();
+        jTextFieldKFE26WorkInProgress = new IntegerField();
+        jTextFieldKFP1WorkInProgress = new IntegerField();
         jTextField137 = new IntegerField();
         jTextField138 = new IntegerField();
         jTextField139 = new IntegerField();
@@ -227,9 +129,9 @@ public class MainUI extends javax.swing.JFrame {
         jTextField144 = new IntegerField();
         jTextField145 = new IntegerField();
         jTextField146 = new IntegerField();
-        jTextField147 = new IntegerField();
+        jTextFieldKFE26ProductionOrders = new IntegerField();
         jTextField148 = new IntegerField();
-        jTextField149 = new IntegerField();
+        jTextFieldKFP1ProductionOrders = new IntegerField();
         jTextField150 = new IntegerField();
         jTextField151 = new IntegerField();
         jTextField152 = new IntegerField();
@@ -239,29 +141,29 @@ public class MainUI extends javax.swing.JFrame {
         jTextField156 = new IntegerField();
         jTextField157 = new IntegerField();
         jTextField158 = new IntegerField();
-        jTextField159 = new IntegerField();
-        jTextField160 = new IntegerField();
-        jTextField161 = new IntegerField();
-        jTextField162 = new IntegerField();
-        jTextField163 = new IntegerField();
-        jTextField164 = new IntegerField();
-        jTextField165 = new IntegerField();
-        jTextField166 = new IntegerField();
-        jTextField167 = new IntegerField();
-        jTextField168 = new IntegerField();
-        jTextField169 = new IntegerField();
-        jTextField170 = new IntegerField();
-        jLabel70 = new javax.swing.JLabel();
-        jLabel71 = new javax.swing.JLabel();
-        jLabel72 = new javax.swing.JLabel();
-        jLabel73 = new javax.swing.JLabel();
-        jLabel74 = new javax.swing.JLabel();
-        jLabel75 = new javax.swing.JLabel();
-        jLabel76 = new javax.swing.JLabel();
-        jLabel77 = new javax.swing.JLabel();
-        jLabel78 = new javax.swing.JLabel();
-        jLabel79 = new javax.swing.JLabel();
-        jLabel80 = new javax.swing.JLabel();
+        jTextFieldKFP1PlannedStock = new IntegerField();
+        jTextFieldKFE26PlannedStock = new IntegerField();
+        jTextFieldKFE51PlannedStock = new IntegerField();
+        jTextFieldKFE16PlannedStock = new IntegerField();
+        jTextFieldKFE17PlannedStock = new IntegerField();
+        jTextFieldKFE50PlannedStock = new IntegerField();
+        jTextFieldKFE4PlannedStock = new IntegerField();
+        jTextFieldKFE10PlannedStock = new IntegerField();
+        jTextFieldKFE49PlannedStock = new IntegerField();
+        jTextFieldKFE7PlannedStock = new IntegerField();
+        jTextFieldKFE13PlannedStock = new IntegerField();
+        jTextFieldKFE18PlannedStock = new IntegerField();
+        jLabelKFPedalCpl = new javax.swing.JLabel();
+        jLabelKFFahrradOPedal = new javax.swing.JLabel();
+        jLabelKFLenkerCpl = new javax.swing.JLabel();
+        jLabelSattelCpl = new javax.swing.JLabel();
+        jLabelKFRahmenURaeder = new javax.swing.JLabel();
+        jLabelKFHinterradgruppe = new javax.swing.JLabel();
+        jLabelKFASchutzblechH = new javax.swing.JLabel();
+        jLabelKFVorderradCpl = new javax.swing.JLabel();
+        jLabelKFVorderradgruppe = new javax.swing.JLabel();
+        jLabelKFSchutzblechV = new javax.swing.JLabel();
+        jLabelKFRahmen = new javax.swing.JLabel();
         jLabel81 = new javax.swing.JLabel();
         jLabel82 = new javax.swing.JLabel();
         jLabel83 = new javax.swing.JLabel();
@@ -274,12 +176,24 @@ public class MainUI extends javax.swing.JFrame {
         jLabel90 = new javax.swing.JLabel();
         jLabel91 = new javax.swing.JLabel();
         jLabel92 = new javax.swing.JLabel();
-        jTextField37 = new IntegerField();
+        jTextFieldKFE26SalesOrders = new IntegerField();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
         jSeparator4 = new javax.swing.JSeparator();
-        jTextField171 = new IntegerField();
+        jTextFieldKFE17SalesOrders = new IntegerField();
+        jLabelKFPlannedStock = new javax.swing.JLabel();
+        jLabelKFE26OrdersInQueque = new javax.swing.JLabel();
+        jLabelKFE51OrdersInQueque = new javax.swing.JLabel();
+        jLabel95 = new javax.swing.JLabel();
+        jLabel96 = new javax.swing.JLabel();
+        jLabel97 = new javax.swing.JLabel();
+        jLabel98 = new javax.swing.JLabel();
+        jLabel99 = new javax.swing.JLabel();
+        jLabel100 = new javax.swing.JLabel();
+        jLabel101 = new javax.swing.JLabel();
+        jLabel102 = new javax.swing.JLabel();
+        jLabel103 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuFile = new javax.swing.JMenu();
         jMenuItemImportFile = new javax.swing.JMenuItem();
@@ -316,7 +230,7 @@ public class MainUI extends javax.swing.JFrame {
         jLabelPeriodN3PF.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelPeriodN3PF.setText(bundle.getString("PeriondN3")); // NOI18N
 
-        jTextField5.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldPFPeriodNKF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
         jTextField6.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
@@ -354,7 +268,7 @@ public class MainUI extends javax.swing.JFrame {
                 .addGroup(jPanelProductionPlanningLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jTextField9)
                     .addComponent(jLabelPeriodNPF, javax.swing.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE)
-                    .addComponent(jTextField5)
+                    .addComponent(jTextFieldPFPeriodNKF)
                     .addComponent(jTextField13))
                 .addGap(18, 18, 18)
                 .addGroup(jPanelProductionPlanningLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -388,7 +302,7 @@ public class MainUI extends javax.swing.JFrame {
                 .addGap(32, 32, 32)
                 .addGroup(jPanelProductionPlanningLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelKinderfahrradPF, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldPFPeriodNKF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -406,677 +320,70 @@ public class MainUI extends javax.swing.JFrame {
                     .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(352, Short.MAX_VALUE))
+                .addContainerGap(425, Short.MAX_VALUE))
         );
 
         jTabbedPan.addTab(bundle.getString("tabProductionForecast"), jPanelProductionPlanning); // NOI18N
 
-        jPanel1.setMaximumSize(new java.awt.Dimension(16, 28));
-        jPanel1.setPreferredSize(new java.awt.Dimension(16, 28));
-
-        jLabel11.setMaximumSize(new java.awt.Dimension(30, 14));
-        jLabel11.setMinimumSize(new java.awt.Dimension(30, 14));
-
-        jLabel29.setText("jLabel1");
-        jLabel29.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabel29.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabel29.setPreferredSize(new java.awt.Dimension(60, 16));
-
-        jLabel1.setText("jLabel1");
-
-        jLabel2.setText("jLabel1");
-
-        jLabel6.setText("jLabel1");
-
-        jLabel7.setText("jLabel1");
-
-        jLabel8.setText("jLabel1");
-
-        jLabel13.setText("jLabel1");
-
-        jTextField2.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField3.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField4.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField17.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField18.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField19.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField20.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField21.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField22.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField23.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField24.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField51.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField52.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField53.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField54.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField55.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField56.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField57.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField58.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField59.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField60.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField61.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField62.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField63.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField64.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField65.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField66.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField67.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField68.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField69.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField70.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField71.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField72.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField73.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField74.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField75.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField76.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField77.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField78.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField79.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField80.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField81.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField82.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField83.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField84.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField85.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField86.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField87.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField88.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField89.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField90.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField91.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField92.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField93.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField94.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField95.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField96.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField97.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField98.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField99.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField100.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField101.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField102.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField103.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField104.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField105.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField106.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField107.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField108.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField109.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField110.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jLabel47.setText("jLabel1");
-        jLabel47.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabel47.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabel47.setPreferredSize(new java.awt.Dimension(60, 16));
-
-        jLabel48.setText("jLabel1");
-        jLabel48.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabel48.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabel48.setPreferredSize(new java.awt.Dimension(60, 16));
-
-        jLabel49.setText("jLabel1");
-        jLabel49.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabel49.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabel49.setPreferredSize(new java.awt.Dimension(60, 16));
-
-        jLabel50.setText("jLabel1");
-        jLabel50.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabel50.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabel50.setPreferredSize(new java.awt.Dimension(60, 16));
-
-        jLabel51.setText("jLabel1");
-        jLabel51.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabel51.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabel51.setPreferredSize(new java.awt.Dimension(60, 16));
-
-        jLabel52.setText("jLabel1");
-        jLabel52.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabel52.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabel52.setPreferredSize(new java.awt.Dimension(60, 16));
-
-        jLabel53.setText("jLabel1");
-        jLabel53.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabel53.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabel53.setPreferredSize(new java.awt.Dimension(60, 16));
-
-        jLabel54.setText("jLabel1");
-        jLabel54.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabel54.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabel54.setPreferredSize(new java.awt.Dimension(60, 16));
-
-        jLabel55.setText("jLabel1");
-        jLabel55.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabel55.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabel55.setPreferredSize(new java.awt.Dimension(60, 16));
-
-        jLabel59.setText("jLabel1");
-        jLabel59.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabel59.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabel59.setPreferredSize(new java.awt.Dimension(60, 16));
-
-        jLabel60.setText("jLabel1");
-        jLabel60.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabel60.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabel60.setPreferredSize(new java.awt.Dimension(60, 16));
-
-        jLabel56.setText("jLabel1");
-        jLabel56.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabel56.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabel56.setPreferredSize(new java.awt.Dimension(60, 16));
-
-        jLabel57.setText("jLabel1");
-        jLabel57.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabel57.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabel57.setPreferredSize(new java.awt.Dimension(60, 16));
-
-        jLabel58.setText("jLabel1");
-        jLabel58.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabel58.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabel58.setPreferredSize(new java.awt.Dimension(60, 16));
-
-        jLabel61.setText("jLabel1");
-        jLabel61.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabel61.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabel61.setPreferredSize(new java.awt.Dimension(60, 16));
-
-        jLabel62.setText("jLabel1");
-        jLabel62.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabel62.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabel62.setPreferredSize(new java.awt.Dimension(60, 16));
-
-        jLabel63.setText("jLabel1");
-        jLabel63.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabel63.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabel63.setPreferredSize(new java.awt.Dimension(60, 16));
-
-        jLabel64.setText("jLabel1");
-        jLabel64.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabel64.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabel64.setPreferredSize(new java.awt.Dimension(60, 16));
-
-        jLabel65.setText("jLabel1");
-        jLabel65.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabel65.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabel65.setPreferredSize(new java.awt.Dimension(60, 16));
-
-        jLabel66.setText("jLabel1");
-        jLabel66.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabel66.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabel66.setPreferredSize(new java.awt.Dimension(60, 16));
-
-        jLabel67.setText("jLabel1");
-        jLabel67.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabel67.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabel67.setPreferredSize(new java.awt.Dimension(60, 16));
-
-        jLabel68.setText("jLabel1");
-        jLabel68.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabel68.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabel68.setPreferredSize(new java.awt.Dimension(60, 16));
-
-        jLabel69.setText("jLabel1");
-        jLabel69.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabel69.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabel69.setPreferredSize(new java.awt.Dimension(60, 16));
-
-        jTextField25.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel57, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel48, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel58, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel49, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel61, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel50, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel62, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel54, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel66, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel51, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel63, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel52, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel64, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel53, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel65, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel55, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel67, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel59, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel68, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel60, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel69, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel56, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addGap(87, 87, 87)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jTextField3)
-                        .addComponent(jTextField4)
-                        .addComponent(jTextField17)
-                        .addComponent(jTextField18)
-                        .addComponent(jTextField19)
-                        .addComponent(jTextField20)
-                        .addComponent(jTextField21)
-                        .addComponent(jTextField22)
-                        .addComponent(jTextField23)
-                        .addComponent(jTextField24)
-                        .addComponent(jTextField25))
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 123, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField109, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField108, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField107, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField106, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField105, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField104, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField103, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField102, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField101, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField100, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField99, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextField110))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 111, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextField51)
-                    .addComponent(jTextField53)
-                    .addComponent(jTextField54, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField55, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField56)
-                    .addComponent(jTextField57)
-                    .addComponent(jTextField58, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField59)
-                    .addComponent(jTextField60)
-                    .addComponent(jTextField61, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField62)
-                    .addComponent(jTextField52, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 109, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextField63)
-                    .addComponent(jTextField64, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField65)
-                    .addComponent(jTextField66)
-                    .addComponent(jTextField67)
-                    .addComponent(jTextField68)
-                    .addComponent(jTextField69)
-                    .addComponent(jTextField70)
-                    .addComponent(jTextField71)
-                    .addComponent(jTextField72)
-                    .addComponent(jTextField73)
-                    .addComponent(jTextField74))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 112, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField75)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextField76, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField77)
-                    .addComponent(jTextField78)
-                    .addComponent(jTextField79)
-                    .addComponent(jTextField80)
-                    .addComponent(jTextField81)
-                    .addComponent(jTextField82)
-                    .addComponent(jTextField83)
-                    .addComponent(jTextField84)
-                    .addComponent(jTextField85)
-                    .addComponent(jTextField86))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 111, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextField87)
-                    .addComponent(jTextField88)
-                    .addComponent(jTextField89)
-                    .addComponent(jTextField90)
-                    .addComponent(jTextField91, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField92)
-                    .addComponent(jTextField93)
-                    .addComponent(jTextField94)
-                    .addComponent(jTextField95)
-                    .addComponent(jTextField96, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField97)
-                    .addComponent(jTextField98))
-                .addGap(20, 20, 20))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel1)
-                        .addComponent(jLabel2)
-                        .addComponent(jLabel6)
-                        .addComponent(jLabel7)
-                        .addComponent(jLabel8)
-                        .addComponent(jLabel13)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                                                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                                                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                                                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                                                                .addComponent(jLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                                .addComponent(jLabel56, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                                                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                                                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                                                                    .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                                    .addComponent(jLabel57, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                                                                .addGap(48, 48, 48)))
-                                                                                        .addGap(34, 34, 34))
-                                                                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                                                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                                                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                                                                .addComponent(jTextField52, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                                .addComponent(jTextField64, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                                .addComponent(jTextField76, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                                .addComponent(jTextField89, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                                .addComponent(jTextField99, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
-                                                                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                                                            .addComponent(jTextField51, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                            .addComponent(jTextField63, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                            .addComponent(jTextField75, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                            .addComponent(jTextField87, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                            .addComponent(jTextField100, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                            .addComponent(jTextField25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                                                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                            .addComponent(jTextField53, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                            .addComponent(jTextField65, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                            .addComponent(jTextField77, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                            .addComponent(jTextField88, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                            .addComponent(jTextField101, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                            .addComponent(jLabel58, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                            .addComponent(jLabel48, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                                                                        .addGap(18, 18, 18)
-                                                                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                                                            .addComponent(jTextField55, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                            .addComponent(jTextField66, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                            .addComponent(jTextField78, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                            .addComponent(jTextField90, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                                                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                                                        .addComponent(jLabel61, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                                        .addComponent(jLabel49, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                                                    .addComponent(jTextField102, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                                                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                                        .addComponent(jTextField103, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                                        .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                        .addComponent(jTextField54, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                        .addComponent(jTextField67, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                        .addComponent(jTextField79, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                        .addComponent(jTextField91, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                        .addComponent(jLabel50, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                        .addComponent(jLabel62, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                                                .addGap(34, 34, 34))
-                                                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                                .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                .addComponent(jTextField56, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                .addComponent(jTextField68, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                .addComponent(jTextField80, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                .addComponent(jTextField92, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                .addComponent(jTextField104, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                .addComponent(jLabel63, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                .addComponent(jLabel51, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                                        .addGap(18, 18, 18)
-                                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                                .addComponent(jTextField58, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                .addComponent(jTextField69, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                .addComponent(jTextField81, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                .addComponent(jTextField93, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                            .addComponent(jTextField105, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                        .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(jLabel52, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(jLabel64, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(jTextField106, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                        .addComponent(jLabel65, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(jLabel53, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                .addComponent(jTextField20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(jTextField57, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(jTextField70, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(jTextField82, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(jTextField94, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                        .addGap(34, 34, 34))
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(jTextField21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jTextField59, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jTextField71, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jTextField83, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jTextField95, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jTextField107, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel54, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel66, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(18, 18, 18)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                            .addComponent(jTextField61, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jTextField72, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jTextField84, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jTextField96, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jTextField108, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addComponent(jTextField22, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel55, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel67, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField109, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextField23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField60, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField73, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField85, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField97, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel59, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel68, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField62, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField74, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField86, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField98, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField110, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel60, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel69, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        jTabbedPane2.addTab("tab1", jPanel1);
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        jTabbedPane2.addTab("tab2", jPanel2);
-
-        jPanel3.setMaximumSize(new java.awt.Dimension(16, 28));
-        jPanel3.setPreferredSize(new java.awt.Dimension(16, 28));
+        jPanelKF.setMaximumSize(new java.awt.Dimension(16, 28));
+        jPanelKF.setPreferredSize(new java.awt.Dimension(16, 28));
 
         jLabel12.setMaximumSize(new java.awt.Dimension(30, 14));
         jLabel12.setMinimumSize(new java.awt.Dimension(30, 14));
 
-        jLabel30.setText("jLabel1");
-        jLabel30.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabel30.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabel30.setPreferredSize(new java.awt.Dimension(60, 16));
+        jLabelKFKinderfahrrad.setText(bundle.getString("Kinderhafrrad")); // NOI18N
+        jLabelKFKinderfahrrad.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabelKFKinderfahrrad.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelKFKinderfahrrad.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabel3.setText("jLabel1");
+        jLabelKFSalesOrders.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelKFSalesOrders.setText(bundle.getString("SalesOrders")); // NOI18N
 
-        jLabel4.setText("jLabel1");
+        jLabelKFStockEndOfPeriod.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelKFStockEndOfPeriod.setText(bundle.getString("StockEndOfPeriod")); // NOI18N
 
-        jLabel9.setText("jLabel1");
+        jLabelKFOrdersInQueque.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelKFOrdersInQueque.setText(bundle.getString("OrdersInQueque")); // NOI18N
 
-        jLabel10.setText("jLabel1");
+        jLabelKFWorkInProgress.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelKFWorkInProgress.setText(bundle.getString("WorkInProgress")); // NOI18N
 
-        jLabel14.setText("jLabel1");
+        jLabelKFProductionOrders.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelKFProductionOrders.setText(bundle.getString("ProductionOrders")); // NOI18N
 
-        jLabel15.setText("jLabel1");
+        jTextFieldKFP1SalesOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFP1SalesOrders.setEnabled(false);
 
-        jTextField26.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFE51SalesOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFE51SalesOrders.setEnabled(false);
 
-        jTextField27.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFEE16SalesOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFEE16SalesOrders.setEnabled(false);
 
-        jTextField28.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFE50SalesOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFE50SalesOrders.setEnabled(false);
 
-        jTextField30.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFE4SalesOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFE4SalesOrders.setEnabled(false);
 
-        jTextField31.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFE10SalesOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFE10SalesOrders.setEnabled(false);
 
-        jTextField32.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFE49SalesOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFE49SalesOrders.setEnabled(false);
 
-        jTextField33.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFE7SalesOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFE7SalesOrders.setEnabled(false);
 
-        jTextField34.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFE13SalesOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFE13SalesOrders.setEnabled(false);
 
-        jTextField35.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFE18SalesOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFE18SalesOrders.setEnabled(false);
 
-        jTextField36.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFE26StockEndOfPeriod.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextField111.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextField112.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFP1StockEndOfPeriod.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
         jTextField113.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
@@ -1098,9 +405,9 @@ public class MainUI extends javax.swing.JFrame {
 
         jTextField122.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextField123.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFE26OrdersInQueque.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextField124.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFP1OrdersInQueque.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
         jTextField125.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
@@ -1122,9 +429,9 @@ public class MainUI extends javax.swing.JFrame {
 
         jTextField134.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextField135.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFE26WorkInProgress.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextField136.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFP1WorkInProgress.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
         jTextField137.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
@@ -1146,11 +453,13 @@ public class MainUI extends javax.swing.JFrame {
 
         jTextField146.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextField147.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFE26ProductionOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFE26ProductionOrders.setEnabled(false);
 
         jTextField148.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextField149.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFP1ProductionOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFP1ProductionOrders.setEnabled(false);
 
         jTextField150.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
@@ -1170,478 +479,602 @@ public class MainUI extends javax.swing.JFrame {
 
         jTextField158.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextField159.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFP1PlannedStock.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextField160.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFE26PlannedStock.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextField161.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFE51PlannedStock.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFE51PlannedStock.setEnabled(false);
 
-        jTextField162.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFE16PlannedStock.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFE16PlannedStock.setEnabled(false);
 
-        jTextField163.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFE17PlannedStock.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFE17PlannedStock.setEnabled(false);
 
-        jTextField164.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFE50PlannedStock.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFE50PlannedStock.setEnabled(false);
 
-        jTextField165.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFE4PlannedStock.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFE4PlannedStock.setEnabled(false);
 
-        jTextField166.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFE10PlannedStock.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFE10PlannedStock.setEnabled(false);
 
-        jTextField167.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFE49PlannedStock.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFE49PlannedStock.setEnabled(false);
 
-        jTextField168.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFE7PlannedStock.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFE7PlannedStock.setEnabled(false);
 
-        jTextField169.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFE13PlannedStock.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFE13PlannedStock.setEnabled(false);
 
-        jTextField170.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFE18PlannedStock.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFE18PlannedStock.setEnabled(false);
 
-        jLabel70.setText("jLabel1");
-        jLabel70.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabel70.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabel70.setPreferredSize(new java.awt.Dimension(60, 16));
+        jLabelKFPedalCpl.setText(bundle.getString("PedalCpl")); // NOI18N
+        jLabelKFPedalCpl.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabelKFPedalCpl.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelKFPedalCpl.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabel71.setText("jLabel1");
-        jLabel71.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabel71.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabel71.setPreferredSize(new java.awt.Dimension(60, 16));
+        jLabelKFFahrradOPedal.setText(bundle.getString("KFFahrradOPedal")); // NOI18N
+        jLabelKFFahrradOPedal.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabelKFFahrradOPedal.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelKFFahrradOPedal.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabel72.setText("jLabel1");
-        jLabel72.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabel72.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabel72.setPreferredSize(new java.awt.Dimension(60, 16));
+        jLabelKFLenkerCpl.setText(bundle.getString("LenkerCpl")); // NOI18N
+        jLabelKFLenkerCpl.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabelKFLenkerCpl.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelKFLenkerCpl.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabel73.setText("jLabel1");
-        jLabel73.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabel73.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabel73.setPreferredSize(new java.awt.Dimension(60, 16));
+        jLabelSattelCpl.setText(bundle.getString("SattelCpl")); // NOI18N
+        jLabelSattelCpl.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabelSattelCpl.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelSattelCpl.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabel74.setText("jLabel1");
-        jLabel74.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabel74.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabel74.setPreferredSize(new java.awt.Dimension(60, 16));
+        jLabelKFRahmenURaeder.setText(bundle.getString("KFRahmenUndRaeder")); // NOI18N
+        jLabelKFRahmenURaeder.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabelKFRahmenURaeder.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelKFRahmenURaeder.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabel75.setText("jLabel1");
-        jLabel75.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabel75.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabel75.setPreferredSize(new java.awt.Dimension(60, 16));
+        jLabelKFHinterradgruppe.setText(bundle.getString("KFHinterradgruppe")); // NOI18N
+        jLabelKFHinterradgruppe.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabelKFHinterradgruppe.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelKFHinterradgruppe.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabel76.setText("jLabel1");
-        jLabel76.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabel76.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabel76.setPreferredSize(new java.awt.Dimension(60, 16));
+        jLabelKFASchutzblechH.setText(bundle.getString("KFSchutzblechH")); // NOI18N
+        jLabelKFASchutzblechH.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabelKFASchutzblechH.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelKFASchutzblechH.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabel77.setText("jLabel1");
-        jLabel77.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabel77.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabel77.setPreferredSize(new java.awt.Dimension(60, 16));
+        jLabelKFVorderradCpl.setText(bundle.getString("KFCVorderradCpl")); // NOI18N
+        jLabelKFVorderradCpl.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabelKFVorderradCpl.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelKFVorderradCpl.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabel78.setText("jLabel1");
-        jLabel78.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabel78.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabel78.setPreferredSize(new java.awt.Dimension(60, 16));
+        jLabelKFVorderradgruppe.setText(bundle.getString("KFVorderradgruppe")); // NOI18N
+        jLabelKFVorderradgruppe.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabelKFVorderradgruppe.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelKFVorderradgruppe.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabel79.setText("jLabel1");
-        jLabel79.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabel79.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabel79.setPreferredSize(new java.awt.Dimension(60, 16));
+        jLabelKFSchutzblechV.setText(bundle.getString("KFSchutzblechV")); // NOI18N
+        jLabelKFSchutzblechV.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabelKFSchutzblechV.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelKFSchutzblechV.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabel80.setText("jLabel1");
-        jLabel80.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabel80.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabel80.setPreferredSize(new java.awt.Dimension(60, 16));
+        jLabelKFRahmen.setText(bundle.getString("KFRahmen")); // NOI18N
+        jLabelKFRahmen.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabelKFRahmen.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelKFRahmen.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabel81.setText("jLabel1");
+        jLabel81.setText("E26");
         jLabel81.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabel81.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabel81.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabel82.setText("jLabel1");
+        jLabel82.setText("P1");
         jLabel82.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabel82.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabel82.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabel83.setText("jLabel1");
+        jLabel83.setText("E51");
         jLabel83.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabel83.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabel83.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabel84.setText("jLabel1");
+        jLabel84.setText("E16");
         jLabel84.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabel84.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabel84.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabel85.setText("jLabel1");
+        jLabel85.setText("E17");
         jLabel85.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabel85.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabel85.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabel86.setText("jLabel1");
+        jLabel86.setText("E50");
         jLabel86.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabel86.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabel86.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabel87.setText("jLabel1");
+        jLabel87.setText("E4");
         jLabel87.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabel87.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabel87.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabel88.setText("jLabel1");
+        jLabel88.setText("E10");
         jLabel88.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabel88.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabel88.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabel89.setText("jLabel1");
+        jLabel89.setText("E49");
         jLabel89.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabel89.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabel89.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabel90.setText("jLabel1");
+        jLabel90.setText("E7");
         jLabel90.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabel90.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabel90.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabel91.setText("jLabel1");
+        jLabel91.setText("E13");
         jLabel91.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabel91.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabel91.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabel92.setText("jLabel1");
+        jLabel92.setText("E18");
         jLabel92.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabel92.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabel92.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jTextField37.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFE26SalesOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFE26SalesOrders.setEnabled(false);
 
-        jTextField171.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFE17SalesOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFE17SalesOrders.setEnabled(false);
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        jLabelKFPlannedStock.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelKFPlannedStock.setText(bundle.getString("PlannedStock")); // NOI18N
+
+        jLabelKFE26OrdersInQueque.setText("0");
+        jLabelKFE26OrdersInQueque.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabelKFE26OrdersInQueque.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelKFE26OrdersInQueque.setPreferredSize(new java.awt.Dimension(60, 16));
+
+        jLabelKFE51OrdersInQueque.setText("0");
+        jLabelKFE51OrdersInQueque.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabelKFE51OrdersInQueque.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelKFE51OrdersInQueque.setPreferredSize(new java.awt.Dimension(60, 16));
+
+        jLabel95.setText("0");
+        jLabel95.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabel95.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabel95.setPreferredSize(new java.awt.Dimension(60, 16));
+
+        jLabel96.setText("0");
+        jLabel96.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabel96.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabel96.setPreferredSize(new java.awt.Dimension(60, 16));
+
+        jLabel97.setText("0");
+        jLabel97.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabel97.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabel97.setPreferredSize(new java.awt.Dimension(60, 16));
+
+        jLabel98.setText("0");
+        jLabel98.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabel98.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabel98.setPreferredSize(new java.awt.Dimension(60, 16));
+
+        jLabel99.setText("0");
+        jLabel99.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabel99.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabel99.setPreferredSize(new java.awt.Dimension(60, 16));
+
+        jLabel100.setText("0");
+        jLabel100.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabel100.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabel100.setPreferredSize(new java.awt.Dimension(60, 16));
+
+        jLabel101.setText("0");
+        jLabel101.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabel101.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabel101.setPreferredSize(new java.awt.Dimension(60, 16));
+
+        jLabel102.setText("0");
+        jLabel102.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabel102.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabel102.setPreferredSize(new java.awt.Dimension(60, 16));
+
+        jLabel103.setText("0");
+        jLabel103.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabel103.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabel103.setPreferredSize(new java.awt.Dimension(60, 16));
+
+        javax.swing.GroupLayout jPanelKFLayout = new javax.swing.GroupLayout(jPanelKF);
+        jPanelKF.setLayout(jPanelKFLayout);
+        jPanelKFLayout.setHorizontalGroup(
+            jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jSeparator1)
             .addComponent(jSeparator2)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(jPanel3Layout.createSequentialGroup()
-                            .addContainerGap()
-                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(jPanel3Layout.createSequentialGroup()
-                                    .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(jLabel82, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(jPanel3Layout.createSequentialGroup()
-                                    .addComponent(jLabel71, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(jLabel83, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(jPanel3Layout.createSequentialGroup()
-                                    .addComponent(jLabel72, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(jLabel84, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(jPanel3Layout.createSequentialGroup()
-                                    .addGap(78, 78, 78)
-                                    .addComponent(jLabel86, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(jPanel3Layout.createSequentialGroup()
-                                    .addComponent(jLabel75, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(jLabel87, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(jPanel3Layout.createSequentialGroup()
-                                    .addComponent(jLabel78, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(jLabel90, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(jPanel3Layout.createSequentialGroup()
-                                    .addComponent(jLabel79, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(jLabel91, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(jPanel3Layout.createSequentialGroup()
-                                    .addComponent(jLabel80, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(jLabel92, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(jPanel3Layout.createSequentialGroup()
-                                    .addComponent(jLabel70, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(jLabel81, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(jPanel3Layout.createSequentialGroup()
-                                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel76, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel77, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGap(18, 18, 18)
-                                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel89, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel88, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel73, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel85, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(105, 105, 105)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jTextField171, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextField27, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField28, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField30, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField31, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField32, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField33, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField34, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField35, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField36, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField37, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField26))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 117, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField169, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField168, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField167, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField166, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField165, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField164, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField163, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField162, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField161, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField160, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField159, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextField170))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 108, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextField111)
-                    .addComponent(jTextField113)
-                    .addComponent(jTextField114, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField115, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField116)
-                    .addComponent(jTextField117)
-                    .addComponent(jTextField118, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField119)
-                    .addComponent(jTextField120)
-                    .addComponent(jTextField121, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField122)
-                    .addComponent(jTextField112, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextField123)
-                    .addComponent(jTextField124, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField125)
-                    .addComponent(jTextField126)
-                    .addComponent(jTextField127)
-                    .addComponent(jTextField128)
-                    .addComponent(jTextField129)
-                    .addComponent(jTextField130)
-                    .addComponent(jTextField131)
-                    .addComponent(jTextField132)
-                    .addComponent(jTextField133)
-                    .addComponent(jTextField134))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 109, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField135)
-                    .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextField136, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField137)
-                    .addComponent(jTextField138)
-                    .addComponent(jTextField139)
-                    .addComponent(jTextField140)
-                    .addComponent(jTextField141)
-                    .addComponent(jTextField142)
-                    .addComponent(jTextField143)
-                    .addComponent(jTextField144)
-                    .addComponent(jTextField145)
-                    .addComponent(jTextField146))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 108, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextField147)
-                    .addComponent(jTextField148)
-                    .addComponent(jTextField149)
-                    .addComponent(jTextField150)
-                    .addComponent(jTextField151, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField152)
-                    .addComponent(jTextField153)
-                    .addComponent(jTextField154)
-                    .addComponent(jTextField155)
-                    .addComponent(jTextField156, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField157)
-                    .addComponent(jTextField158))
+            .addGroup(jPanelKFLayout.createSequentialGroup()
+                .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelKFLayout.createSequentialGroup()
+                        .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanelKFLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanelKFLayout.createSequentialGroup()
+                                        .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addGroup(jPanelKFLayout.createSequentialGroup()
+                                                .addComponent(jLabelKFKinderfahrrad, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jLabel82, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelKFLayout.createSequentialGroup()
+                                                .addComponent(jLabelKFVorderradCpl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jLabel89, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(jPanelKFLayout.createSequentialGroup()
+                                                .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                    .addComponent(jLabelKFPedalCpl, javax.swing.GroupLayout.DEFAULT_SIZE, 85, Short.MAX_VALUE)
+                                                    .addComponent(jLabelKFFahrradOPedal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                                .addGap(18, 18, 18)
+                                                .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(jLabel83, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(jLabel81, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                            .addGroup(jPanelKFLayout.createSequentialGroup()
+                                                .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                    .addComponent(jLabelKFLenkerCpl, javax.swing.GroupLayout.DEFAULT_SIZE, 85, Short.MAX_VALUE)
+                                                    .addComponent(jLabelSattelCpl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                    .addComponent(jLabelKFRahmenURaeder, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                                .addGap(18, 18, 18)
+                                                .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(jLabel86, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                        .addComponent(jLabel85, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
+                                                        .addComponent(jLabel84, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                            .addGroup(jPanelKFLayout.createSequentialGroup()
+                                                .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                    .addComponent(jLabelKFVorderradgruppe, javax.swing.GroupLayout.DEFAULT_SIZE, 85, Short.MAX_VALUE)
+                                                    .addComponent(jLabelKFSchutzblechV, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                    .addComponent(jLabelKFRahmen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                                .addGap(18, 18, 18)
+                                                .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(jLabel92, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(jLabel91, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(jLabel90, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                        .addGap(0, 0, Short.MAX_VALUE))
+                                    .addGroup(jPanelKFLayout.createSequentialGroup()
+                                        .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                            .addComponent(jLabelKFASchutzblechH, javax.swing.GroupLayout.DEFAULT_SIZE, 85, Short.MAX_VALUE)
+                                            .addComponent(jLabelKFHinterradgruppe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel87, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel88, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE))))))
+                        .addGap(45, 45, 45)
+                        .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel98, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel96, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel97, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel95, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelKFE26OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelKFE51OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel99, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel100, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel101, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel102, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel103, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(52, 52, 52)
+                        .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jTextFieldKFP1SalesOrders, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jTextFieldKFE51SalesOrders, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                                .addComponent(jTextFieldKFE26SalesOrders, javax.swing.GroupLayout.Alignment.LEADING))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jTextFieldKFE50SalesOrders, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                                .addComponent(jTextFieldKFE17SalesOrders, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jTextFieldKFEE16SalesOrders, javax.swing.GroupLayout.Alignment.LEADING))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jTextFieldKFE49SalesOrders, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                                .addComponent(jTextFieldKFE10SalesOrders, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jTextFieldKFE4SalesOrders, javax.swing.GroupLayout.Alignment.LEADING))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jTextFieldKFE18SalesOrders, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                                .addComponent(jTextFieldKFE13SalesOrders, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jTextFieldKFE7SalesOrders, javax.swing.GroupLayout.Alignment.LEADING))))
+                    .addGroup(jPanelKFLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jLabelKFSalesOrders, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
+                .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelKFLayout.createSequentialGroup()
+                        .addComponent(jLabelKFPlannedStock, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel4))
+                    .addComponent(jTextFieldKFP1PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jTextFieldKFE51PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                        .addComponent(jTextFieldKFE26PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jTextFieldKFE50PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                        .addComponent(jTextFieldKFE17PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jTextFieldKFE16PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jTextFieldKFE49PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                        .addComponent(jTextFieldKFE10PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jTextFieldKFE4PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jTextFieldKFE18PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                        .addComponent(jTextFieldKFE13PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jTextFieldKFE7PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
+                .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextFieldKFP1StockEndOfPeriod, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jTextField113, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                        .addComponent(jTextFieldKFE26StockEndOfPeriod, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jTextField116, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jTextField114, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                            .addComponent(jTextField115, javax.swing.GroupLayout.Alignment.TRAILING)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jTextField119, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                        .addComponent(jTextField117, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jTextField118, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jTextField122, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                        .addComponent(jTextField120, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jTextField121, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addComponent(jLabelKFStockEndOfPeriod, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextFieldKFP1OrdersInQueque, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jTextField125, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
+                        .addComponent(jTextFieldKFE26OrdersInQueque, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jTextField128, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jTextField127, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
+                            .addComponent(jTextField126, javax.swing.GroupLayout.Alignment.TRAILING)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jTextField131, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
+                        .addComponent(jTextField130, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jTextField129, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jTextField134, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
+                        .addComponent(jTextField133, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jTextField132, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addComponent(jLabelKFOrdersInQueque, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
+                .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanelKFLayout.createSequentialGroup()
+                            .addGap(6, 6, 6)
+                            .addComponent(jTextFieldKFP1WorkInProgress, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jTextFieldKFE26WorkInProgress, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)
+                            .addComponent(jTextField137, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextField140, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jTextField139, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)
+                                .addComponent(jTextField138, javax.swing.GroupLayout.Alignment.TRAILING)))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jTextField143, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)
+                            .addComponent(jTextField142, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jTextField141, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jTextField146, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)
+                            .addComponent(jTextField145, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jTextField144, javax.swing.GroupLayout.Alignment.TRAILING)))
+                    .addComponent(jLabelKFWorkInProgress, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
+                .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabelKFProductionOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldKFP1ProductionOrders, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jTextField148, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                        .addComponent(jTextFieldKFE26ProductionOrders, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jTextField152, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jTextField151, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                            .addComponent(jTextField150, javax.swing.GroupLayout.Alignment.TRAILING)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jTextField155, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                        .addComponent(jTextField154, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jTextField153, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jTextField158, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                        .addComponent(jTextField157, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jTextField156, javax.swing.GroupLayout.Alignment.TRAILING)))
                 .addGap(20, 20, 20))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel74, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(jSeparator3)
             .addComponent(jSeparator4)
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        jPanelKFLayout.setVerticalGroup(
+            jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelKFLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel3)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel4)
-                        .addComponent(jLabel9)
-                        .addComponent(jLabel10)
-                        .addComponent(jLabel14)
-                        .addComponent(jLabel15)))
+                        .addComponent(jLabelKFOrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabelKFWorkInProgress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabelKFProductionOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabelKFSalesOrders)
+                        .addComponent(jLabelKFPlannedStock, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabelKFStockEndOfPeriod, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField112, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField124, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField136, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField149, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField159, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelKFLayout.createSequentialGroup()
+                        .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextFieldKFP1StockEndOfPeriod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldKFP1OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldKFP1WorkInProgress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldKFP1ProductionOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldKFP1PlannedStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldKFP1SalesOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(12, 12, 12))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelKFLayout.createSequentialGroup()
+                        .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabelKFKinderfahrrad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel82, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)))
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField111, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField123, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField135, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField147, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField160, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextFieldKFE26StockEndOfPeriod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldKFE26OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldKFE26WorkInProgress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldKFE26ProductionOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldKFE26PlannedStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldKFE26SalesOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel81, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel70, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelKFPedalCpl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKFE26OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextFieldKFE51SalesOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField113, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField125, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField137, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField148, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField161, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldKFE51PlannedStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel83, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel71, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelKFFahrradOPedal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKFE51OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelKFLayout.createSequentialGroup()
                         .addGap(2, 2, 2)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jTextField115, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField126, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField138, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField150, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel84, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel72, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jTextField162, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField28, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jLabelKFLenkerCpl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel95, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jTextFieldKFE16PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextFieldKFEE16SalesOrders, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelKFLayout.createSequentialGroup()
                         .addComponent(jTextField151, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextFieldKFE50SalesOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField116, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField128, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField140, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField152, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField164, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel86, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(jLabel73, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldKFE50PlannedStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanelKFLayout.createSequentialGroup()
+                        .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelKFLayout.createSequentialGroup()
+                                .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jLabelSattelCpl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(jLabel85, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jTextField163, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextFieldKFE17PlannedStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jTextField114, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jTextField127, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jTextField139, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                                .addComponent(jTextField171, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelKFLayout.createSequentialGroup()
+                                .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jTextFieldKFE17SalesOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel96, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(22, 22, 22)))
-                        .addComponent(jLabel74, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabelKFRahmenURaeder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel86, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel97, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addGap(2, 2, 2)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jTextField118, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jTextField129, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jTextField141, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jTextField153, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jTextField165, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jTextField31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel75, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel87, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(8, 8, 8)
+                .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jTextField118, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextField129, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextField141, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextField153, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jTextFieldKFE4PlannedStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextFieldKFE4SalesOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel98, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel87, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabelKFHinterradgruppe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel76, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelKFASchutzblechH, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel88, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField166, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldKFE10SalesOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldKFE10PlannedStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField117, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField130, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField142, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField154, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField154, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel99, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel77, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel89, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextField33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField167, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField119, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField131, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField143, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField155, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextFieldKFE49SalesOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldKFE49PlannedStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField119, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField131, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField143, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField155, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel100, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel89, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKFVorderradCpl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel78, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelKFVorderradgruppe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel90, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField168, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldKFE7SalesOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldKFE7PlannedStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField121, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField132, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField144, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField156, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField156, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel101, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel79, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelKFSchutzblechV, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel91, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField169, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldKFE13SalesOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldKFE13PlannedStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField120, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField133, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField145, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField157, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField157, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel102, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel80, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelKFRahmen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel92, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField36, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField170, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldKFE18SalesOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldKFE18PlannedStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField122, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField134, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField146, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField158, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(23, Short.MAX_VALUE))
+                    .addComponent(jTextField158, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel103, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
 
-        jTabbedPane2.addTab("tab1", jPanel3);
+        jTabbedPane2.addTab(bundle.getString("Kinderfahrrad"), jPanelKF); // NOI18N
 
         javax.swing.GroupLayout jPanelInHouseProductionLayout = new javax.swing.GroupLayout(jPanelInHouseProduction);
         jPanelInHouseProduction.setLayout(jPanelInHouseProductionLayout);
@@ -1802,7 +1235,7 @@ public class MainUI extends javax.swing.JFrame {
            JOptionPane.showMessageDialog(this, i18n.getString("OnlyXML"), null, JOptionPane.ERROR_MESSAGE);
        }
     }//GEN-LAST:event_jMenuItemImportFileActionPerformed
-
+        
     /**
      * @param args the command line arguments
      */
@@ -1844,55 +1277,12 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItemEnglish;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItemFrench;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItemRomanien;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel100;
+    private javax.swing.JLabel jLabel101;
+    private javax.swing.JLabel jLabel102;
+    private javax.swing.JLabel jLabel103;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel47;
-    private javax.swing.JLabel jLabel48;
-    private javax.swing.JLabel jLabel49;
-    private javax.swing.JLabel jLabel50;
-    private javax.swing.JLabel jLabel51;
-    private javax.swing.JLabel jLabel52;
-    private javax.swing.JLabel jLabel53;
-    private javax.swing.JLabel jLabel54;
-    private javax.swing.JLabel jLabel55;
-    private javax.swing.JLabel jLabel56;
-    private javax.swing.JLabel jLabel57;
-    private javax.swing.JLabel jLabel58;
-    private javax.swing.JLabel jLabel59;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel60;
-    private javax.swing.JLabel jLabel61;
-    private javax.swing.JLabel jLabel62;
-    private javax.swing.JLabel jLabel63;
-    private javax.swing.JLabel jLabel64;
-    private javax.swing.JLabel jLabel65;
-    private javax.swing.JLabel jLabel66;
-    private javax.swing.JLabel jLabel67;
-    private javax.swing.JLabel jLabel68;
-    private javax.swing.JLabel jLabel69;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel70;
-    private javax.swing.JLabel jLabel71;
-    private javax.swing.JLabel jLabel72;
-    private javax.swing.JLabel jLabel73;
-    private javax.swing.JLabel jLabel74;
-    private javax.swing.JLabel jLabel75;
-    private javax.swing.JLabel jLabel76;
-    private javax.swing.JLabel jLabel77;
-    private javax.swing.JLabel jLabel78;
-    private javax.swing.JLabel jLabel79;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel80;
     private javax.swing.JLabel jLabel81;
     private javax.swing.JLabel jLabel82;
     private javax.swing.JLabel jLabel83;
@@ -1902,27 +1292,49 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel87;
     private javax.swing.JLabel jLabel88;
     private javax.swing.JLabel jLabel89;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabel90;
     private javax.swing.JLabel jLabel91;
     private javax.swing.JLabel jLabel92;
+    private javax.swing.JLabel jLabel95;
+    private javax.swing.JLabel jLabel96;
+    private javax.swing.JLabel jLabel97;
+    private javax.swing.JLabel jLabel98;
+    private javax.swing.JLabel jLabel99;
     private javax.swing.JLabel jLabelDamenfahrradPF;
+    private javax.swing.JLabel jLabelKFASchutzblechH;
+    private javax.swing.JLabel jLabelKFE26OrdersInQueque;
+    private javax.swing.JLabel jLabelKFE51OrdersInQueque;
+    private javax.swing.JLabel jLabelKFFahrradOPedal;
+    private javax.swing.JLabel jLabelKFHinterradgruppe;
+    private javax.swing.JLabel jLabelKFKinderfahrrad;
+    private javax.swing.JLabel jLabelKFLenkerCpl;
+    private javax.swing.JLabel jLabelKFOrdersInQueque;
+    private javax.swing.JLabel jLabelKFPedalCpl;
+    private javax.swing.JLabel jLabelKFPlannedStock;
+    private javax.swing.JLabel jLabelKFProductionOrders;
+    private javax.swing.JLabel jLabelKFRahmen;
+    private javax.swing.JLabel jLabelKFRahmenURaeder;
+    private javax.swing.JLabel jLabelKFSalesOrders;
+    private javax.swing.JLabel jLabelKFSchutzblechV;
+    private javax.swing.JLabel jLabelKFStockEndOfPeriod;
+    private javax.swing.JLabel jLabelKFVorderradCpl;
+    private javax.swing.JLabel jLabelKFVorderradgruppe;
+    private javax.swing.JLabel jLabelKFWorkInProgress;
     private javax.swing.JLabel jLabelKinderfahrradPF;
     private javax.swing.JLabel jLabelMenCyclePF;
     private javax.swing.JLabel jLabelPeriodN1PF;
     private javax.swing.JLabel jLabelPeriodN2PF;
     private javax.swing.JLabel jLabelPeriodN3PF;
     private javax.swing.JLabel jLabelPeriodNPF;
+    private javax.swing.JLabel jLabelSattelCpl;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu jMenuFile;
     private javax.swing.JMenuItem jMenuItemExportFile;
     private javax.swing.JMenuItem jMenuItemImportFile;
     private javax.swing.JMenu jMenuLanguage;
     private javax.swing.JMenu jMenuSettings;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanelInHouseProduction;
+    private javax.swing.JPanel jPanelKF;
     private javax.swing.JPanel jPanelProductionPlanning;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
@@ -1931,20 +1343,7 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPan;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField100;
-    private javax.swing.JTextField jTextField101;
-    private javax.swing.JTextField jTextField102;
-    private javax.swing.JTextField jTextField103;
-    private javax.swing.JTextField jTextField104;
-    private javax.swing.JTextField jTextField105;
-    private javax.swing.JTextField jTextField106;
-    private javax.swing.JTextField jTextField107;
-    private javax.swing.JTextField jTextField108;
-    private javax.swing.JTextField jTextField109;
     private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField110;
-    private javax.swing.JTextField jTextField111;
-    private javax.swing.JTextField jTextField112;
     private javax.swing.JTextField jTextField113;
     private javax.swing.JTextField jTextField114;
     private javax.swing.JTextField jTextField115;
@@ -1956,8 +1355,6 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField120;
     private javax.swing.JTextField jTextField121;
     private javax.swing.JTextField jTextField122;
-    private javax.swing.JTextField jTextField123;
-    private javax.swing.JTextField jTextField124;
     private javax.swing.JTextField jTextField125;
     private javax.swing.JTextField jTextField126;
     private javax.swing.JTextField jTextField127;
@@ -1969,8 +1366,6 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField132;
     private javax.swing.JTextField jTextField133;
     private javax.swing.JTextField jTextField134;
-    private javax.swing.JTextField jTextField135;
-    private javax.swing.JTextField jTextField136;
     private javax.swing.JTextField jTextField137;
     private javax.swing.JTextField jTextField138;
     private javax.swing.JTextField jTextField139;
@@ -1982,9 +1377,7 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField144;
     private javax.swing.JTextField jTextField145;
     private javax.swing.JTextField jTextField146;
-    private javax.swing.JTextField jTextField147;
     private javax.swing.JTextField jTextField148;
-    private javax.swing.JTextField jTextField149;
     private javax.swing.JTextField jTextField15;
     private javax.swing.JTextField jTextField150;
     private javax.swing.JTextField jTextField151;
@@ -1995,97 +1388,44 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField156;
     private javax.swing.JTextField jTextField157;
     private javax.swing.JTextField jTextField158;
-    private javax.swing.JTextField jTextField159;
     private javax.swing.JTextField jTextField16;
-    private javax.swing.JTextField jTextField160;
-    private javax.swing.JTextField jTextField161;
-    private javax.swing.JTextField jTextField162;
-    private javax.swing.JTextField jTextField163;
-    private javax.swing.JTextField jTextField164;
-    private javax.swing.JTextField jTextField165;
-    private javax.swing.JTextField jTextField166;
-    private javax.swing.JTextField jTextField167;
-    private javax.swing.JTextField jTextField168;
-    private javax.swing.JTextField jTextField169;
-    private javax.swing.JTextField jTextField17;
-    private javax.swing.JTextField jTextField170;
-    private javax.swing.JTextField jTextField171;
-    private javax.swing.JTextField jTextField18;
-    private javax.swing.JTextField jTextField19;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField20;
-    private javax.swing.JTextField jTextField21;
-    private javax.swing.JTextField jTextField22;
-    private javax.swing.JTextField jTextField23;
-    private javax.swing.JTextField jTextField24;
-    private javax.swing.JTextField jTextField25;
-    private javax.swing.JTextField jTextField26;
-    private javax.swing.JTextField jTextField27;
-    private javax.swing.JTextField jTextField28;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField30;
-    private javax.swing.JTextField jTextField31;
-    private javax.swing.JTextField jTextField32;
-    private javax.swing.JTextField jTextField33;
-    private javax.swing.JTextField jTextField34;
-    private javax.swing.JTextField jTextField35;
-    private javax.swing.JTextField jTextField36;
-    private javax.swing.JTextField jTextField37;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField51;
-    private javax.swing.JTextField jTextField52;
-    private javax.swing.JTextField jTextField53;
-    private javax.swing.JTextField jTextField54;
-    private javax.swing.JTextField jTextField55;
-    private javax.swing.JTextField jTextField56;
-    private javax.swing.JTextField jTextField57;
-    private javax.swing.JTextField jTextField58;
-    private javax.swing.JTextField jTextField59;
     private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField60;
-    private javax.swing.JTextField jTextField61;
-    private javax.swing.JTextField jTextField62;
-    private javax.swing.JTextField jTextField63;
-    private javax.swing.JTextField jTextField64;
-    private javax.swing.JTextField jTextField65;
-    private javax.swing.JTextField jTextField66;
-    private javax.swing.JTextField jTextField67;
-    private javax.swing.JTextField jTextField68;
-    private javax.swing.JTextField jTextField69;
     private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField70;
-    private javax.swing.JTextField jTextField71;
-    private javax.swing.JTextField jTextField72;
-    private javax.swing.JTextField jTextField73;
-    private javax.swing.JTextField jTextField74;
-    private javax.swing.JTextField jTextField75;
-    private javax.swing.JTextField jTextField76;
-    private javax.swing.JTextField jTextField77;
-    private javax.swing.JTextField jTextField78;
-    private javax.swing.JTextField jTextField79;
     private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField80;
-    private javax.swing.JTextField jTextField81;
-    private javax.swing.JTextField jTextField82;
-    private javax.swing.JTextField jTextField83;
-    private javax.swing.JTextField jTextField84;
-    private javax.swing.JTextField jTextField85;
-    private javax.swing.JTextField jTextField86;
-    private javax.swing.JTextField jTextField87;
-    private javax.swing.JTextField jTextField88;
-    private javax.swing.JTextField jTextField89;
     private javax.swing.JTextField jTextField9;
-    private javax.swing.JTextField jTextField90;
-    private javax.swing.JTextField jTextField91;
-    private javax.swing.JTextField jTextField92;
-    private javax.swing.JTextField jTextField93;
-    private javax.swing.JTextField jTextField94;
-    private javax.swing.JTextField jTextField95;
-    private javax.swing.JTextField jTextField96;
-    private javax.swing.JTextField jTextField97;
-    private javax.swing.JTextField jTextField98;
-    private javax.swing.JTextField jTextField99;
+    private javax.swing.JTextField jTextFieldKFE10PlannedStock;
+    private javax.swing.JTextField jTextFieldKFE10SalesOrders;
+    private javax.swing.JTextField jTextFieldKFE13PlannedStock;
+    private javax.swing.JTextField jTextFieldKFE13SalesOrders;
+    private javax.swing.JTextField jTextFieldKFE16PlannedStock;
+    private javax.swing.JTextField jTextFieldKFE17PlannedStock;
+    private javax.swing.JTextField jTextFieldKFE17SalesOrders;
+    private javax.swing.JTextField jTextFieldKFE18PlannedStock;
+    private javax.swing.JTextField jTextFieldKFE18SalesOrders;
+    private javax.swing.JTextField jTextFieldKFE26OrdersInQueque;
+    private javax.swing.JTextField jTextFieldKFE26PlannedStock;
+    private javax.swing.JTextField jTextFieldKFE26ProductionOrders;
+    private javax.swing.JTextField jTextFieldKFE26SalesOrders;
+    private javax.swing.JTextField jTextFieldKFE26StockEndOfPeriod;
+    private javax.swing.JTextField jTextFieldKFE26WorkInProgress;
+    private javax.swing.JTextField jTextFieldKFE49PlannedStock;
+    private javax.swing.JTextField jTextFieldKFE49SalesOrders;
+    private javax.swing.JTextField jTextFieldKFE4PlannedStock;
+    private javax.swing.JTextField jTextFieldKFE4SalesOrders;
+    private javax.swing.JTextField jTextFieldKFE50PlannedStock;
+    private javax.swing.JTextField jTextFieldKFE50SalesOrders;
+    private javax.swing.JTextField jTextFieldKFE51PlannedStock;
+    private javax.swing.JTextField jTextFieldKFE51SalesOrders;
+    private javax.swing.JTextField jTextFieldKFE7PlannedStock;
+    private javax.swing.JTextField jTextFieldKFE7SalesOrders;
+    private javax.swing.JTextField jTextFieldKFEE16SalesOrders;
+    private javax.swing.JTextField jTextFieldKFP1OrdersInQueque;
+    private javax.swing.JTextField jTextFieldKFP1PlannedStock;
+    private javax.swing.JTextField jTextFieldKFP1ProductionOrders;
+    private javax.swing.JTextField jTextFieldKFP1SalesOrders;
+    private javax.swing.JTextField jTextFieldKFP1StockEndOfPeriod;
+    private javax.swing.JTextField jTextFieldKFP1WorkInProgress;
+    private javax.swing.JTextField jTextFieldPFPeriodNKF;
     // End of variables declaration//GEN-END:variables
 
     //util methods
@@ -2101,7 +1441,7 @@ public class MainUI extends javax.swing.JFrame {
         jMenuItemImportFile.setText(i18n.getString("ImportFile"));
     }
     
-    public void setSelectedLanguage(String language){
+    public final void setSelectedLanguage(String language){
         switch(language){
             case "en":
                 jCheckBoxMenuItemEnglish.setSelected(true);
@@ -2122,4 +1462,215 @@ public class MainUI extends javax.swing.JFrame {
                 jCheckBoxMenuItemEnglish.setSelected(true);
         }
     }
+    
+    final void addInputFieldsListener(){
+        //Production Forecast
+        //SalesOrders KF
+        jTextFieldPFPeriodNKF.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                jTextFieldKFP1SalesOrders.setText(jTextFieldPFPeriodNKF.getText());
+            }
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                jTextFieldKFP1SalesOrders.setText(jTextFieldPFPeriodNKF.getText());
+            }
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                jTextFieldKFP1SalesOrders.setText(jTextFieldPFPeriodNKF.getText());
+            }
+        });
+        
+        //InHouseProduction
+        //PlannedWarehouseStock
+        //P1
+        jTextFieldKFP1PlannedStock.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                jTextFieldKFP1ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFP1SalesOrders.getText().equals("")? "0":jTextFieldKFP1SalesOrders.getText())), 0, Integer.parseInt((jTextFieldKFP1PlannedStock.getText().equals("")? "0":jTextFieldKFP1PlannedStock.getText())), Integer.parseInt(jTextFieldKFP1StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFP1StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFP1OrdersInQueque.getText().equals("")?"0":jTextFieldKFP1OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFP1WorkInProgress.getText().equals("")?"0":jTextFieldKFP1WorkInProgress.getText())));
+            }
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                jTextFieldKFP1ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFP1SalesOrders.getText().equals("")? "0":jTextFieldKFP1SalesOrders.getText())), 0, Integer.parseInt((jTextFieldKFP1PlannedStock.getText().equals("")? "0":jTextFieldKFP1PlannedStock.getText())), Integer.parseInt(jTextFieldKFP1StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFP1StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFP1OrdersInQueque.getText().equals("")?"0":jTextFieldKFP1OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFP1WorkInProgress.getText().equals("")?"0":jTextFieldKFP1WorkInProgress.getText())));
+            }
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+               jTextFieldKFP1ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFP1SalesOrders.getText().equals("")? "0":jTextFieldKFP1SalesOrders.getText())), 0, Integer.parseInt((jTextFieldKFP1PlannedStock.getText().equals("")? "0":jTextFieldKFP1PlannedStock.getText())), Integer.parseInt(jTextFieldKFP1StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFP1StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFP1OrdersInQueque.getText().equals("")?"0":jTextFieldKFP1OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFP1WorkInProgress.getText().equals("")?"0":jTextFieldKFP1WorkInProgress.getText())));
+            }
+        });
+        //E26
+        jTextFieldKFE26PlannedStock.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                jTextFieldKFE26ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE26SalesOrders.getText().equals("")? "0":jTextFieldKFE26SalesOrders.getText())), 0, Integer.parseInt((jTextFieldKFE26PlannedStock.getText().equals("")? "0":jTextFieldKFE26PlannedStock.getText())), Integer.parseInt(jTextFieldKFE26StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFE26StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE26OrdersInQueque.getText().equals("")?"0":jTextFieldKFE26OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE26WorkInProgress.getText().equals("")?"0":jTextFieldKFE26WorkInProgress.getText())));
+                jTextFieldKFE51PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+                jTextFieldKFE16PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+                jTextFieldKFE17PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+                jTextFieldKFE50PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+                jTextFieldKFE4PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+                jTextFieldKFE10PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+                jTextFieldKFE49PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+                jTextFieldKFE7PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+                jTextFieldKFE13PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+                jTextFieldKFE18PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+            }
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                jTextFieldKFE26ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE26SalesOrders.getText().equals("")? "0":jTextFieldKFE26SalesOrders.getText())), 0, Integer.parseInt((jTextFieldKFE26PlannedStock.getText().equals("")? "0":jTextFieldKFE26PlannedStock.getText())), Integer.parseInt(jTextFieldKFE26StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFE26StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE26OrdersInQueque.getText().equals("")?"0":jTextFieldKFE26OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE26WorkInProgress.getText().equals("")?"0":jTextFieldKFE26WorkInProgress.getText())));
+                jTextFieldKFE51PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+                jTextFieldKFE16PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+                jTextFieldKFE17PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+                jTextFieldKFE50PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+                jTextFieldKFE4PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+                jTextFieldKFE10PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+                jTextFieldKFE49PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+                jTextFieldKFE7PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+                jTextFieldKFE13PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+                jTextFieldKFE18PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+            }
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+               jTextFieldKFE26ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE26SalesOrders.getText().equals("")? "0":jTextFieldKFE26SalesOrders.getText())), 0, Integer.parseInt((jTextFieldKFE26PlannedStock.getText().equals("")? "0":jTextFieldKFE26PlannedStock.getText())), Integer.parseInt(jTextFieldKFE26StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFE26StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE26OrdersInQueque.getText().equals("")?"0":jTextFieldKFE26OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE26WorkInProgress.getText().equals("")?"0":jTextFieldKFE26WorkInProgress.getText())));
+                jTextFieldKFE51PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+                jTextFieldKFE16PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+                jTextFieldKFE17PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+                jTextFieldKFE50PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+                jTextFieldKFE4PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+                jTextFieldKFE10PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+                jTextFieldKFE49PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+                jTextFieldKFE7PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+                jTextFieldKFE13PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+                jTextFieldKFE18PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+            }
+        });
+        
+        //StockEndOfPeriod
+        //P1
+        jTextFieldKFP1StockEndOfPeriod.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                jTextFieldKFP1ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFP1SalesOrders.getText().equals("")? "0":jTextFieldKFP1SalesOrders.getText())), 0, Integer.parseInt((jTextFieldKFP1PlannedStock.getText().equals("")? "0":jTextFieldKFP1PlannedStock.getText())), Integer.parseInt(jTextFieldKFP1StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFP1StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFP1OrdersInQueque.getText().equals("")?"0":jTextFieldKFP1OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFP1WorkInProgress.getText().equals("")?"0":jTextFieldKFP1WorkInProgress.getText())));
+            }
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+               jTextFieldKFP1ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFP1SalesOrders.getText().equals("")? "0":jTextFieldKFP1SalesOrders.getText())), 0, Integer.parseInt((jTextFieldKFP1PlannedStock.getText().equals("")? "0":jTextFieldKFP1PlannedStock.getText())), Integer.parseInt(jTextFieldKFP1StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFP1StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFP1OrdersInQueque.getText().equals("")?"0":jTextFieldKFP1OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFP1WorkInProgress.getText().equals("")?"0":jTextFieldKFP1WorkInProgress.getText())));
+            }
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                jTextFieldKFP1ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFP1SalesOrders.getText().equals("")? "0":jTextFieldKFP1SalesOrders.getText())), 0, Integer.parseInt((jTextFieldKFP1PlannedStock.getText().equals("")? "0":jTextFieldKFP1PlannedStock.getText())), Integer.parseInt(jTextFieldKFP1StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFP1StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFP1OrdersInQueque.getText().equals("")?"0":jTextFieldKFP1OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFP1WorkInProgress.getText().equals("")?"0":jTextFieldKFP1WorkInProgress.getText())));
+            }
+        });
+        //E26
+        jTextFieldKFE26StockEndOfPeriod.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                jTextFieldKFE26ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE26SalesOrders.getText().equals("")? "0":jTextFieldKFE26SalesOrders.getText())), 0, Integer.parseInt((jTextFieldKFE26PlannedStock.getText().equals("")? "0":jTextFieldKFE26PlannedStock.getText())), Integer.parseInt(jTextFieldKFE26StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFE26StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE26OrdersInQueque.getText().equals("")?"0":jTextFieldKFE26OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE26WorkInProgress.getText().equals("")?"0":jTextFieldKFE26WorkInProgress.getText())));
+            }
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                jTextFieldKFE26ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE26SalesOrders.getText().equals("")? "0":jTextFieldKFE26SalesOrders.getText())), 0, Integer.parseInt((jTextFieldKFE26PlannedStock.getText().equals("")? "0":jTextFieldKFE26PlannedStock.getText())), Integer.parseInt(jTextFieldKFE26StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFE26StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE26OrdersInQueque.getText().equals("")?"0":jTextFieldKFE26OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE26WorkInProgress.getText().equals("")?"0":jTextFieldKFE26WorkInProgress.getText())));
+            }
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+               jTextFieldKFE26ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE26SalesOrders.getText().equals("")? "0":jTextFieldKFE26SalesOrders.getText())), 0, Integer.parseInt((jTextFieldKFE26PlannedStock.getText().equals("")? "0":jTextFieldKFE26PlannedStock.getText())), Integer.parseInt(jTextFieldKFE26StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFE26StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE26OrdersInQueque.getText().equals("")?"0":jTextFieldKFE26OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE26WorkInProgress.getText().equals("")?"0":jTextFieldKFE26WorkInProgress.getText())));
+            }
+        });
+        
+        
+        //OrdersInQueque
+        //P1
+        jTextFieldKFP1OrdersInQueque.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                jTextFieldKFP1ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFP1SalesOrders.getText().equals("")? "0":jTextFieldKFP1SalesOrders.getText())), 0, Integer.parseInt((jTextFieldKFP1PlannedStock.getText().equals("")? "0":jTextFieldKFP1PlannedStock.getText())), Integer.parseInt(jTextFieldKFP1StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFP1StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFP1OrdersInQueque.getText().equals("")?"0":jTextFieldKFP1OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFP1WorkInProgress.getText().equals("")?"0":jTextFieldKFP1WorkInProgress.getText())));
+                jLabelKFE26OrdersInQueque.setText(jTextFieldKFP1OrdersInQueque.getText());
+                jLabelKFE51OrdersInQueque.setText(jTextFieldKFP1OrdersInQueque.getText());
+            }
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+               jTextFieldKFP1ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFP1SalesOrders.getText().equals("")? "0":jTextFieldKFP1SalesOrders.getText())), 0, Integer.parseInt((jTextFieldKFP1PlannedStock.getText().equals("")? "0":jTextFieldKFP1PlannedStock.getText())), Integer.parseInt(jTextFieldKFP1StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFP1StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFP1OrdersInQueque.getText().equals("")?"0":jTextFieldKFP1OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFP1WorkInProgress.getText().equals("")?"0":jTextFieldKFP1WorkInProgress.getText())));
+               jLabelKFE26OrdersInQueque.setText(jTextFieldKFP1OrdersInQueque.getText());
+               jLabelKFE51OrdersInQueque.setText(jTextFieldKFP1OrdersInQueque.getText());
+            }
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+               jTextFieldKFP1ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFP1SalesOrders.getText().equals("")? "0":jTextFieldKFP1SalesOrders.getText())), 0, Integer.parseInt((jTextFieldKFP1PlannedStock.getText().equals("")? "0":jTextFieldKFP1PlannedStock.getText())), Integer.parseInt(jTextFieldKFP1StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFP1StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFP1OrdersInQueque.getText().equals("")?"0":jTextFieldKFP1OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFP1WorkInProgress.getText().equals("")?"0":jTextFieldKFP1WorkInProgress.getText())));
+               jLabelKFE26OrdersInQueque.setText(jTextFieldKFP1OrdersInQueque.getText());
+               jLabelKFE51OrdersInQueque.setText(jTextFieldKFP1OrdersInQueque.getText());
+            }
+        });
+        //E26
+        jTextFieldKFE26OrdersInQueque.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                jTextFieldKFE26ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE26SalesOrders.getText().equals("")? "0":jTextFieldKFE26SalesOrders.getText())), 0, Integer.parseInt((jTextFieldKFE26PlannedStock.getText().equals("")? "0":jTextFieldKFE26PlannedStock.getText())), Integer.parseInt(jTextFieldKFE26StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFE26StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE26OrdersInQueque.getText().equals("")?"0":jTextFieldKFE26OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE26WorkInProgress.getText().equals("")?"0":jTextFieldKFE26WorkInProgress.getText())));
+            }
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                jTextFieldKFE26ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE26SalesOrders.getText().equals("")? "0":jTextFieldKFE26SalesOrders.getText())), 0, Integer.parseInt((jTextFieldKFE26PlannedStock.getText().equals("")? "0":jTextFieldKFE26PlannedStock.getText())), Integer.parseInt(jTextFieldKFE26StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFE26StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE26OrdersInQueque.getText().equals("")?"0":jTextFieldKFE26OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE26WorkInProgress.getText().equals("")?"0":jTextFieldKFE26WorkInProgress.getText())));
+            }
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+               jTextFieldKFE26ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE26SalesOrders.getText().equals("")? "0":jTextFieldKFE26SalesOrders.getText())), 0, Integer.parseInt((jTextFieldKFE26PlannedStock.getText().equals("")? "0":jTextFieldKFE26PlannedStock.getText())), Integer.parseInt(jTextFieldKFE26StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFE26StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE26OrdersInQueque.getText().equals("")?"0":jTextFieldKFE26OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE26WorkInProgress.getText().equals("")?"0":jTextFieldKFE26WorkInProgress.getText())));
+            }
+        });
+        
+        //WorkInProgress
+        //P1
+        jTextFieldKFP1WorkInProgress.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+               jTextFieldKFP1ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFP1SalesOrders.getText().equals("")? "0":jTextFieldKFP1SalesOrders.getText())), 0, Integer.parseInt((jTextFieldKFP1PlannedStock.getText().equals("")? "0":jTextFieldKFP1PlannedStock.getText())), Integer.parseInt(jTextFieldKFP1StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFP1StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFP1OrdersInQueque.getText().equals("")?"0":jTextFieldKFP1OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFP1WorkInProgress.getText().equals("")?"0":jTextFieldKFP1WorkInProgress.getText())));
+            }
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                jTextFieldKFP1ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFP1SalesOrders.getText().equals("")? "0":jTextFieldKFP1SalesOrders.getText())), 0, Integer.parseInt((jTextFieldKFP1PlannedStock.getText().equals("")? "0":jTextFieldKFP1PlannedStock.getText())), Integer.parseInt(jTextFieldKFP1StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFP1StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFP1OrdersInQueque.getText().equals("")?"0":jTextFieldKFP1OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFP1WorkInProgress.getText().equals("")?"0":jTextFieldKFP1WorkInProgress.getText())));
+            }
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+               jTextFieldKFP1ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFP1SalesOrders.getText().equals("")? "0":jTextFieldKFP1SalesOrders.getText())), 0, Integer.parseInt((jTextFieldKFP1PlannedStock.getText().equals("")? "0":jTextFieldKFP1PlannedStock.getText())), Integer.parseInt(jTextFieldKFP1StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFP1StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFP1OrdersInQueque.getText().equals("")?"0":jTextFieldKFP1OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFP1WorkInProgress.getText().equals("")?"0":jTextFieldKFP1WorkInProgress.getText())));
+            }
+        });
+        //E26
+        jTextFieldKFE26WorkInProgress.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                jTextFieldKFE26ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE26SalesOrders.getText().equals("")? "0":jTextFieldKFE26SalesOrders.getText())), 0, Integer.parseInt((jTextFieldKFE26PlannedStock.getText().equals("")? "0":jTextFieldKFE26PlannedStock.getText())), Integer.parseInt(jTextFieldKFE26StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFE26StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE26OrdersInQueque.getText().equals("")?"0":jTextFieldKFE26OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE26WorkInProgress.getText().equals("")?"0":jTextFieldKFE26WorkInProgress.getText())));
+            }
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                jTextFieldKFE26ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE26SalesOrders.getText().equals("")? "0":jTextFieldKFE26SalesOrders.getText())), 0, Integer.parseInt((jTextFieldKFE26PlannedStock.getText().equals("")? "0":jTextFieldKFE26PlannedStock.getText())), Integer.parseInt(jTextFieldKFE26StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFE26StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE26OrdersInQueque.getText().equals("")?"0":jTextFieldKFE26OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE26WorkInProgress.getText().equals("")?"0":jTextFieldKFE26WorkInProgress.getText())));
+            }
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+               jTextFieldKFE26ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE26SalesOrders.getText().equals("")? "0":jTextFieldKFE26SalesOrders.getText())), 0, Integer.parseInt((jTextFieldKFE26PlannedStock.getText().equals("")? "0":jTextFieldKFE26PlannedStock.getText())), Integer.parseInt(jTextFieldKFE26StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFE26StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE26OrdersInQueque.getText().equals("")?"0":jTextFieldKFE26OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE26WorkInProgress.getText().equals("")?"0":jTextFieldKFE26WorkInProgress.getText())));
+            }
+        });
+        
+        //Production Orders
+        jTextFieldKFP1ProductionOrders.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+               jTextFieldKFE26SalesOrders.setText(jTextFieldKFP1ProductionOrders.getText());
+               jTextFieldKFE51SalesOrders.setText(jTextFieldKFP1ProductionOrders.getText());
+            }
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                jTextFieldKFE26SalesOrders.setText(jTextFieldKFP1ProductionOrders.getText());
+                jTextFieldKFE51SalesOrders.setText(jTextFieldKFP1ProductionOrders.getText());
+            }
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+               jTextFieldKFE26SalesOrders.setText(jTextFieldKFP1ProductionOrders.getText());
+               jTextFieldKFE51SalesOrders.setText(jTextFieldKFP1ProductionOrders.getText());
+            }
+        });
+    
+    }
+    
+    String calculateProductionOrders(int salesOrder,int secondCollumn, int plannedStock, int stockEndOfPeriod, int ordersInQueQue, int workInProgress){
+        int result = salesOrder+secondCollumn+plannedStock-stockEndOfPeriod-ordersInQueQue-workInProgress;
+        return String.valueOf(result);
+    }
+
 }
