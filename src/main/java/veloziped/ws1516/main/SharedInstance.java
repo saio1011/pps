@@ -6,10 +6,14 @@
 package veloziped.ws1516.main;
 
 import com.google.common.math.DoubleMath;
+import java.io.File;
 import java.math.RoundingMode;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Unmarshaller;
 import veloziped.ws1516.articles.ExtendedArticle;
 import veloziped.ws1516.generated.Order;
 import veloziped.ws1516.generated.Results;
@@ -207,5 +211,12 @@ public class SharedInstance {
 
         }
         return estimatedPeriod;
+    }
+    
+    public static Results loadResults() throws JAXBException{
+        JAXBContext jaxbContext = JAXBContext.newInstance(Results.class);
+        Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
+        Results results = (Results) jaxbUnmarshaller.unmarshal(new File("C:\\programms\\results.xml"));
+        return results;
     }
 }
