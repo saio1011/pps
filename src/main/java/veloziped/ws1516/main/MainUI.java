@@ -1453,7 +1453,7 @@ public class MainUI extends javax.swing.JFrame {
         jLabel93.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabel93.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabel94.setText("P1");
+        jLabel94.setText("P2");
         jLabel94.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabel94.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabel94.setPreferredSize(new java.awt.Dimension(60, 16));
@@ -2455,7 +2455,6 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldKFP1StockEndOfPeriod1;
     private javax.swing.JTextField jTextFieldKFP1WorkInProgress;
     private javax.swing.JTextField jTextFieldKFP1WorkInProgress1;
-    private javax.swing.JTextField jTextFieldPFPeriodNKF;
     private javax.swing.JTextField jTextFieldPFPeriodN1DF;
     private javax.swing.JTextField jTextFieldPFPeriodN1HF;
     private javax.swing.JTextField jTextFieldPFPeriodN1KF;
