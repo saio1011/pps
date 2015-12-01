@@ -47,9 +47,8 @@ public class ExtendedWorkplace extends Workplace {
         return processTimes;
     }
 
-    public void setValues() {
-        JSONObject workplace = SetupInstance.getInstance().getWorkplaceValuesForId(super.id);
-
+    public void setValues(JSONObject workplace) {
+        
         double firstShiftWage = (double) workplace.get("firstShiftWage");
         double secondShiftWage = (double) workplace.get("secondShiftWage");
         double thirdShiftWage = (double) workplace.get("thirdShiftWage");

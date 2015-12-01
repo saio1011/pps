@@ -10,7 +10,6 @@ import java.math.RoundingMode;
 import java.util.Objects;
 import org.json.simple.JSONObject;
 import veloziped.ws1516.generated.Article;
-import veloziped.ws1516.main.SetupInstance;
 import veloziped.ws1516.production.CalculationMode;
 
 /**
@@ -30,9 +29,7 @@ public class ExtendedArticle extends Article {
     private long discountQuantity;
     private String name;
 
-    public void setValues() {
-        JSONObject values = SetupInstance.getInstance().getArticleValueForId(super.id);
-
+    public void setValues(JSONObject values) {
         String aType = (String) values.get("type");
         String aUsage = (String) values.get("usage");
         double aDeliverTime = (double) values.get("deliverTime");
@@ -54,6 +51,15 @@ public class ExtendedArticle extends Article {
         this.usageProductThree = aUsagePThree;
         this.discountQuantity = aDiscountQuantity;
         this.name = aName;
+    }
+
+    public ExtendedArticle(Article article) {
+        super.amount = article.getAmount();
+        super.id = article.getId();
+        super.pct = article.getPct();
+        super.price = article.getPrice();
+        super.startamount = article.getStartamount();
+        super.stockvalue = article.getStockvalue();
     }
 
     public boolean equals(Object obj) {
