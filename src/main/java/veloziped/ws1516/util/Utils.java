@@ -17,23 +17,46 @@ import java.util.logging.Logger;
  * @author Mihai Sava
  */
 public class Utils {
-    public static ResourceBundle getResourceBundle(String lang, String country){
+
+    public static ResourceBundle getResourceBundle(String lang, String country) {
         Locale l = new Locale(lang, country);
-        ResourceBundle r = ResourceBundle.getBundle("veloziped.ws1516.i18n.i18n",l);
+        ResourceBundle r = ResourceBundle.getBundle("veloziped.ws1516.i18n.i18n", l);
         return r;
     }
-    
+
     public static Number getNumberFromString(String text, Locale locale) {
         NumberFormat format = NumberFormat.getInstance(Locale.GERMANY);
 
         Number number;
-        try {
-            number = format.parse(text);
-        } catch (ParseException ex) {
-            Logger.getLogger(Utils.class.getName()).log(Level.SEVERE, null, ex);
+        if (text.length() == 0) {
             number = 0;
+        } else {
+            try {
+                number = format.parse(text);
+            } catch (ParseException ex) {
+                Logger.getLogger(Utils.class.getName()).log(Level.SEVERE, null, ex);
+                number = 0;
+            }
         }
-        
+
+        return number;
+    }
+    
+    public static Number getNumberFromString(String text) {
+        NumberFormat format = NumberFormat.getInstance();
+
+        Number number;
+        if (text.length() == 0) {
+            number = 0;
+        } else {
+            try {
+                number = format.parse(text);
+            } catch (ParseException ex) {
+                Logger.getLogger(Utils.class.getName()).log(Level.SEVERE, null, ex);
+                number = 0;
+            }
+        }
+
         return number;
     }
 }

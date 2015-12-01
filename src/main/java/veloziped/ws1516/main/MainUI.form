@@ -176,31 +176,31 @@
                       </Group>
                       <EmptySpace min="-2" pref="108" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jTextField9" max="32767" attributes="0"/>
+                          <Component id="jTextFieldPFPeriodN1DF" max="32767" attributes="0"/>
                           <Component id="jLabelPeriodNPF" pref="143" max="32767" attributes="0"/>
-                          <Component id="jTextFieldPFPeriodNKF" max="32767" attributes="0"/>
-                          <Component id="jTextField13" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jTextFieldPFPeriodN1KF" max="32767" attributes="0"/>
+                          <Component id="jTextFieldPFPeriodN1HF" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jTextField10" max="32767" attributes="0"/>
+                          <Component id="jTextFieldPFPeriodN2DF" max="32767" attributes="0"/>
                           <Component id="jLabelPeriodN1PF" pref="142" max="32767" attributes="0"/>
-                          <Component id="jTextField6" max="32767" attributes="0"/>
-                          <Component id="jTextField14" max="32767" attributes="0"/>
+                          <Component id="jTextFieldPFPeriodN2KF" max="32767" attributes="0"/>
+                          <Component id="jTextFieldPFPeriodN2HF" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jTextField11" max="32767" attributes="0"/>
+                          <Component id="jTextFieldPFPeriodN3DF" max="32767" attributes="0"/>
                           <Component id="jLabelPeriodN2PF" pref="142" max="32767" attributes="0"/>
-                          <Component id="jTextField7" max="32767" attributes="0"/>
-                          <Component id="jTextField15" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jTextFieldPFPeriodN3KF" max="32767" attributes="0"/>
+                          <Component id="jTextFieldPFPeriodN3HF" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabelPeriodN3PF" pref="143" max="32767" attributes="0"/>
-                          <Component id="jTextField8" max="32767" attributes="0"/>
-                          <Component id="jTextField12" max="32767" attributes="0"/>
-                          <Component id="jTextField16" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jTextFieldPFPeriodN4KF" max="32767" attributes="0"/>
+                          <Component id="jTextFieldPFPeriodN4DF" max="32767" attributes="0"/>
+                          <Component id="jTextFieldPFPeriodN4HF" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="142" max="-2" attributes="0"/>
                   </Group>
@@ -219,28 +219,28 @@
                       <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabelKinderfahrradPF" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
-                          <Component id="jTextFieldPFPeriodNKF" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField6" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField7" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField8" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextFieldPFPeriodN1KF" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextFieldPFPeriodN2KF" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextFieldPFPeriodN3KF" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextFieldPFPeriodN4KF" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabelDamenfahrradPF" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
-                          <Component id="jTextField9" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField10" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField11" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField12" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextFieldPFPeriodN1DF" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextFieldPFPeriodN2DF" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextFieldPFPeriodN3DF" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextFieldPFPeriodN4DF" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabelMenCyclePF" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
-                          <Component id="jTextField13" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField14" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField15" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField16" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextFieldPFPeriodN1HF" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextFieldPFPeriodN2HF" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextFieldPFPeriodN3HF" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextFieldPFPeriodN4HF" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="425" max="32767" attributes="0"/>
+                      <EmptySpace pref="424" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -299,7 +299,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextFieldPFPeriodNKF">
+            <Component class="javax.swing.JTextField" name="jTextFieldPFPeriodN1KF">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="4"/>
               </Properties>
@@ -307,7 +307,7 @@
                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField6">
+            <Component class="javax.swing.JTextField" name="jTextFieldPFPeriodN2KF">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="4"/>
               </Properties>
@@ -315,7 +315,7 @@
                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField7">
+            <Component class="javax.swing.JTextField" name="jTextFieldPFPeriodN3KF">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="4"/>
               </Properties>
@@ -323,7 +323,7 @@
                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField8">
+            <Component class="javax.swing.JTextField" name="jTextFieldPFPeriodN4KF">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="4"/>
               </Properties>
@@ -331,7 +331,7 @@
                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField9">
+            <Component class="javax.swing.JTextField" name="jTextFieldPFPeriodN1DF">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="4"/>
               </Properties>
@@ -339,7 +339,7 @@
                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField10">
+            <Component class="javax.swing.JTextField" name="jTextFieldPFPeriodN2DF">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="4"/>
               </Properties>
@@ -347,7 +347,7 @@
                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField11">
+            <Component class="javax.swing.JTextField" name="jTextFieldPFPeriodN3DF">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="4"/>
               </Properties>
@@ -355,7 +355,7 @@
                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField12">
+            <Component class="javax.swing.JTextField" name="jTextFieldPFPeriodN4DF">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="4"/>
               </Properties>
@@ -363,7 +363,7 @@
                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField13">
+            <Component class="javax.swing.JTextField" name="jTextFieldPFPeriodN1HF">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="4"/>
               </Properties>
@@ -371,7 +371,7 @@
                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField14">
+            <Component class="javax.swing.JTextField" name="jTextFieldPFPeriodN2HF">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="4"/>
               </Properties>
@@ -379,7 +379,7 @@
                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField15">
+            <Component class="javax.swing.JTextField" name="jTextFieldPFPeriodN3HF">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="4"/>
               </Properties>
@@ -387,7 +387,7 @@
                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField16">
+            <Component class="javax.swing.JTextField" name="jTextFieldPFPeriodN4HF">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="4"/>
               </Properties>
