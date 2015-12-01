@@ -534,17 +534,17 @@
                                       </Group>
                                       <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jLabel98" alignment="0" min="-2" pref="35" max="-2" attributes="0"/>
-                                          <Component id="jLabel96" min="-2" pref="35" max="-2" attributes="0"/>
-                                          <Component id="jLabel97" min="-2" pref="35" max="-2" attributes="0"/>
-                                          <Component id="jLabel95" alignment="0" min="-2" pref="35" max="-2" attributes="0"/>
+                                          <Component id="jLabelKFE4OrdersInQueque" alignment="0" min="-2" pref="35" max="-2" attributes="0"/>
+                                          <Component id="jLabelKFE17OrdersInQueque" min="-2" pref="35" max="-2" attributes="0"/>
+                                          <Component id="jLabelKFE50OrdersInQueque" min="-2" pref="35" max="-2" attributes="0"/>
+                                          <Component id="jLabelKFE16OrdersInQueque" alignment="0" min="-2" pref="35" max="-2" attributes="0"/>
                                           <Component id="jLabelKFE26OrdersInQueque" min="-2" pref="35" max="-2" attributes="0"/>
                                           <Component id="jLabelKFE51OrdersInQueque" min="-2" pref="35" max="-2" attributes="0"/>
-                                          <Component id="jLabel99" min="-2" pref="35" max="-2" attributes="0"/>
-                                          <Component id="jLabel100" min="-2" pref="35" max="-2" attributes="0"/>
-                                          <Component id="jLabel101" alignment="0" min="-2" pref="35" max="-2" attributes="0"/>
-                                          <Component id="jLabel102" min="-2" pref="35" max="-2" attributes="0"/>
-                                          <Component id="jLabel103" min="-2" pref="35" max="-2" attributes="0"/>
+                                          <Component id="jLabelKFE10OrdersInQueque" min="-2" pref="35" max="-2" attributes="0"/>
+                                          <Component id="jLabelKFE49OrdersInQueque" min="-2" pref="35" max="-2" attributes="0"/>
+                                          <Component id="jLabelKFE7OrdersInQueque" alignment="0" min="-2" pref="35" max="-2" attributes="0"/>
+                                          <Component id="jLabelKFE13OrdersInQueque" min="-2" pref="35" max="-2" attributes="0"/>
+                                          <Component id="jLabelKFE18OrdersInQueque" min="-2" pref="35" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="1" attributes="0">
@@ -556,7 +556,7 @@
                                           <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
                                               <Component id="jTextFieldKFE50SalesOrders" alignment="0" pref="50" max="32767" attributes="0"/>
                                               <Component id="jTextFieldKFE17SalesOrders" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="jTextFieldKFEE16SalesOrders" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="jTextFieldKFE16SalesOrders" alignment="0" max="32767" attributes="0"/>
                                           </Group>
                                           <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
                                               <Component id="jTextFieldKFE49SalesOrders" alignment="0" pref="50" max="32767" attributes="0"/>
@@ -795,10 +795,10 @@
                                       <Group type="103" alignment="1" groupAlignment="3" attributes="0">
                                           <Component id="jLabel84" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabelKFLenkerCpl" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel95" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabelKFE16OrdersInQueque" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Component id="jTextFieldKFE16PlannedStock" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextFieldKFEE16SalesOrders" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextFieldKFE16SalesOrders" alignment="1" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -833,7 +833,7 @@
                                           <Group type="102" alignment="1" attributes="0">
                                               <Group type="103" groupAlignment="3" attributes="0">
                                                   <Component id="jTextFieldKFE17SalesOrders" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jLabel96" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabelKFE17OrdersInQueque" alignment="3" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                                           </Group>
@@ -841,7 +841,7 @@
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jLabelKFRahmenURaeder" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel86" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel97" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabelKFE50OrdersInQueque" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -858,7 +858,7 @@
                                   <Group type="103" alignment="1" groupAlignment="3" attributes="0">
                                       <Component id="jTextFieldKFE4PlannedStock" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jTextFieldKFE4SalesOrders" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel98" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabelKFE4OrdersInQueque" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel87" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabelKFHinterradgruppe" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
@@ -873,7 +873,7 @@
                                   <Component id="jTextFieldKFE10OrdersInQueque" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jTextFieldKFE10WorkInProgress" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jTextFieldKFE10ProductionOrders" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel99" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabelKFE10OrdersInQueque" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
@@ -883,7 +883,7 @@
                                   <Component id="jTextFieldKFE49OrdersInQueque" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jTextFieldKFE49WorkInProgress" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jTextFieldKFE49ProductionOrders" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel100" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabelKFE49OrdersInQueque" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel89" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabelKFVorderradCpl" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
@@ -899,7 +899,7 @@
                                   <Component id="jTextFieldKFE7OrdersInQueque" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jTextFieldKFE7WorkInProgress" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jTextFieldKFE7ProductionOrders" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel101" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabelKFE7OrdersInQueque" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
@@ -911,7 +911,7 @@
                                   <Component id="jTextFieldKFE13OrdersInQueque" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jTextFieldKFE13WorkInProgress" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jTextFieldKFE13ProductionOrders" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel102" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabelKFE13OrdersInQueque" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
@@ -923,7 +923,7 @@
                                   <Component id="jTextFieldKFE18OrdersInQueque" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jTextFieldKFE18WorkInProgress" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jTextFieldKFE18ProductionOrders" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel103" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabelKFE18OrdersInQueque" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
@@ -1017,7 +1017,7 @@
                         <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
                       </AuxValues>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextFieldKFEE16SalesOrders">
+                    <Component class="javax.swing.JTextField" name="jTextFieldKFE16SalesOrders">
                       <Properties>
                         <Property name="horizontalAlignment" type="int" value="4"/>
                         <Property name="enabled" type="boolean" value="false"/>
@@ -1505,7 +1505,6 @@
                     <Component class="javax.swing.JTextField" name="jTextFieldKFE51PlannedStock">
                       <Properties>
                         <Property name="horizontalAlignment" type="int" value="4"/>
-                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1514,7 +1513,6 @@
                     <Component class="javax.swing.JTextField" name="jTextFieldKFE16PlannedStock">
                       <Properties>
                         <Property name="horizontalAlignment" type="int" value="4"/>
-                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1523,7 +1521,6 @@
                     <Component class="javax.swing.JTextField" name="jTextFieldKFE17PlannedStock">
                       <Properties>
                         <Property name="horizontalAlignment" type="int" value="4"/>
-                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1532,7 +1529,6 @@
                     <Component class="javax.swing.JTextField" name="jTextFieldKFE50PlannedStock">
                       <Properties>
                         <Property name="horizontalAlignment" type="int" value="4"/>
-                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1541,7 +1537,6 @@
                     <Component class="javax.swing.JTextField" name="jTextFieldKFE4PlannedStock">
                       <Properties>
                         <Property name="horizontalAlignment" type="int" value="4"/>
-                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1550,7 +1545,6 @@
                     <Component class="javax.swing.JTextField" name="jTextFieldKFE10PlannedStock">
                       <Properties>
                         <Property name="horizontalAlignment" type="int" value="4"/>
-                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1559,7 +1553,6 @@
                     <Component class="javax.swing.JTextField" name="jTextFieldKFE49PlannedStock">
                       <Properties>
                         <Property name="horizontalAlignment" type="int" value="4"/>
-                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1568,7 +1561,6 @@
                     <Component class="javax.swing.JTextField" name="jTextFieldKFE7PlannedStock">
                       <Properties>
                         <Property name="horizontalAlignment" type="int" value="4"/>
-                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1577,7 +1569,6 @@
                     <Component class="javax.swing.JTextField" name="jTextFieldKFE13PlannedStock">
                       <Properties>
                         <Property name="horizontalAlignment" type="int" value="4"/>
-                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1586,7 +1577,6 @@
                     <Component class="javax.swing.JTextField" name="jTextFieldKFE18PlannedStock">
                       <Properties>
                         <Property name="horizontalAlignment" type="int" value="4"/>
-                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1989,7 +1979,7 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabel95">
+                    <Component class="javax.swing.JLabel" name="jLabelKFE16OrdersInQueque">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="0"/>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -2003,7 +1993,7 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabel96">
+                    <Component class="javax.swing.JLabel" name="jLabelKFE17OrdersInQueque">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="0"/>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -2017,7 +2007,7 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabel97">
+                    <Component class="javax.swing.JLabel" name="jLabelKFE50OrdersInQueque">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="0"/>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -2031,7 +2021,7 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabel98">
+                    <Component class="javax.swing.JLabel" name="jLabelKFE4OrdersInQueque">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="0"/>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -2045,7 +2035,7 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabel99">
+                    <Component class="javax.swing.JLabel" name="jLabelKFE10OrdersInQueque">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="0"/>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -2059,7 +2049,7 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabel100">
+                    <Component class="javax.swing.JLabel" name="jLabelKFE49OrdersInQueque">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="0"/>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -2073,7 +2063,7 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabel101">
+                    <Component class="javax.swing.JLabel" name="jLabelKFE7OrdersInQueque">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="0"/>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -2087,7 +2077,7 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabel102">
+                    <Component class="javax.swing.JLabel" name="jLabelKFE13OrdersInQueque">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="0"/>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -2101,7 +2091,7 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabel103">
+                    <Component class="javax.swing.JLabel" name="jLabelKFE18OrdersInQueque">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="0"/>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">

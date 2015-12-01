@@ -85,7 +85,7 @@ public class MainUI extends javax.swing.JFrame {
         jLabelKFProductionOrders = new javax.swing.JLabel();
         jTextFieldKFP1SalesOrders = new IntegerField("0");
         jTextFieldKFE51SalesOrders = new IntegerField();
-        jTextFieldKFEE16SalesOrders = new IntegerField();
+        jTextFieldKFE16SalesOrders = new IntegerField();
         jTextFieldKFE50SalesOrders = new IntegerField();
         jTextFieldKFE4SalesOrders = new IntegerField();
         jTextFieldKFE10SalesOrders = new IntegerField();
@@ -185,15 +185,15 @@ public class MainUI extends javax.swing.JFrame {
         jLabelKFPlannedStock = new javax.swing.JLabel();
         jLabelKFE26OrdersInQueque = new javax.swing.JLabel();
         jLabelKFE51OrdersInQueque = new javax.swing.JLabel();
-        jLabel95 = new javax.swing.JLabel();
-        jLabel96 = new javax.swing.JLabel();
-        jLabel97 = new javax.swing.JLabel();
-        jLabel98 = new javax.swing.JLabel();
-        jLabel99 = new javax.swing.JLabel();
-        jLabel100 = new javax.swing.JLabel();
-        jLabel101 = new javax.swing.JLabel();
-        jLabel102 = new javax.swing.JLabel();
-        jLabel103 = new javax.swing.JLabel();
+        jLabelKFE16OrdersInQueque = new javax.swing.JLabel();
+        jLabelKFE17OrdersInQueque = new javax.swing.JLabel();
+        jLabelKFE50OrdersInQueque = new javax.swing.JLabel();
+        jLabelKFE4OrdersInQueque = new javax.swing.JLabel();
+        jLabelKFE10OrdersInQueque = new javax.swing.JLabel();
+        jLabelKFE49OrdersInQueque = new javax.swing.JLabel();
+        jLabelKFE7OrdersInQueque = new javax.swing.JLabel();
+        jLabelKFE13OrdersInQueque = new javax.swing.JLabel();
+        jLabelKFE18OrdersInQueque = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuFile = new javax.swing.JMenu();
         jMenuItemImportFile = new javax.swing.JMenuItem();
@@ -357,8 +357,8 @@ public class MainUI extends javax.swing.JFrame {
         jTextFieldKFE51SalesOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextFieldKFE51SalesOrders.setEnabled(false);
 
-        jTextFieldKFEE16SalesOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextFieldKFEE16SalesOrders.setEnabled(false);
+        jTextFieldKFE16SalesOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKFE16SalesOrders.setEnabled(false);
 
         jTextFieldKFE50SalesOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextFieldKFE50SalesOrders.setEnabled(false);
@@ -494,34 +494,24 @@ public class MainUI extends javax.swing.JFrame {
         jTextFieldKFE26PlannedStock.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
         jTextFieldKFE51PlannedStock.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextFieldKFE51PlannedStock.setEnabled(false);
 
         jTextFieldKFE16PlannedStock.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextFieldKFE16PlannedStock.setEnabled(false);
 
         jTextFieldKFE17PlannedStock.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextFieldKFE17PlannedStock.setEnabled(false);
 
         jTextFieldKFE50PlannedStock.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextFieldKFE50PlannedStock.setEnabled(false);
 
         jTextFieldKFE4PlannedStock.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextFieldKFE4PlannedStock.setEnabled(false);
 
         jTextFieldKFE10PlannedStock.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextFieldKFE10PlannedStock.setEnabled(false);
 
         jTextFieldKFE49PlannedStock.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextFieldKFE49PlannedStock.setEnabled(false);
 
         jTextFieldKFE7PlannedStock.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextFieldKFE7PlannedStock.setEnabled(false);
 
         jTextFieldKFE13PlannedStock.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextFieldKFE13PlannedStock.setEnabled(false);
 
         jTextFieldKFE18PlannedStock.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextFieldKFE18PlannedStock.setEnabled(false);
 
         jLabelKFPedalCpl.setText(bundle.getString("PedalCpl")); // NOI18N
 
@@ -654,50 +644,50 @@ public class MainUI extends javax.swing.JFrame {
         jLabelKFE51OrdersInQueque.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabelKFE51OrdersInQueque.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabel95.setText("0");
-        jLabel95.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabel95.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabel95.setPreferredSize(new java.awt.Dimension(60, 16));
+        jLabelKFE16OrdersInQueque.setText("0");
+        jLabelKFE16OrdersInQueque.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabelKFE16OrdersInQueque.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelKFE16OrdersInQueque.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabel96.setText("0");
-        jLabel96.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabel96.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabel96.setPreferredSize(new java.awt.Dimension(60, 16));
+        jLabelKFE17OrdersInQueque.setText("0");
+        jLabelKFE17OrdersInQueque.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabelKFE17OrdersInQueque.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelKFE17OrdersInQueque.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabel97.setText("0");
-        jLabel97.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabel97.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabel97.setPreferredSize(new java.awt.Dimension(60, 16));
+        jLabelKFE50OrdersInQueque.setText("0");
+        jLabelKFE50OrdersInQueque.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabelKFE50OrdersInQueque.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelKFE50OrdersInQueque.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabel98.setText("0");
-        jLabel98.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabel98.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabel98.setPreferredSize(new java.awt.Dimension(60, 16));
+        jLabelKFE4OrdersInQueque.setText("0");
+        jLabelKFE4OrdersInQueque.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabelKFE4OrdersInQueque.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelKFE4OrdersInQueque.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabel99.setText("0");
-        jLabel99.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabel99.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabel99.setPreferredSize(new java.awt.Dimension(60, 16));
+        jLabelKFE10OrdersInQueque.setText("0");
+        jLabelKFE10OrdersInQueque.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabelKFE10OrdersInQueque.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelKFE10OrdersInQueque.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabel100.setText("0");
-        jLabel100.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabel100.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabel100.setPreferredSize(new java.awt.Dimension(60, 16));
+        jLabelKFE49OrdersInQueque.setText("0");
+        jLabelKFE49OrdersInQueque.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabelKFE49OrdersInQueque.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelKFE49OrdersInQueque.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabel101.setText("0");
-        jLabel101.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabel101.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabel101.setPreferredSize(new java.awt.Dimension(60, 16));
+        jLabelKFE7OrdersInQueque.setText("0");
+        jLabelKFE7OrdersInQueque.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabelKFE7OrdersInQueque.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelKFE7OrdersInQueque.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabel102.setText("0");
-        jLabel102.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabel102.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabel102.setPreferredSize(new java.awt.Dimension(60, 16));
+        jLabelKFE13OrdersInQueque.setText("0");
+        jLabelKFE13OrdersInQueque.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabelKFE13OrdersInQueque.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelKFE13OrdersInQueque.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabel103.setText("0");
-        jLabel103.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabel103.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabel103.setPreferredSize(new java.awt.Dimension(60, 16));
+        jLabelKFE18OrdersInQueque.setText("0");
+        jLabelKFE18OrdersInQueque.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabelKFE18OrdersInQueque.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelKFE18OrdersInQueque.setPreferredSize(new java.awt.Dimension(60, 16));
 
         javax.swing.GroupLayout jPanelKFLayout = new javax.swing.GroupLayout(jPanelKF);
         jPanelKF.setLayout(jPanelKFLayout);
@@ -763,17 +753,17 @@ public class MainUI extends javax.swing.JFrame {
                                             .addComponent(jLabel88, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE))))))
                         .addGap(45, 45, 45)
                         .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel98, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel96, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel97, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel95, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelKFE4OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelKFE17OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelKFE50OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelKFE16OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabelKFE26OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabelKFE51OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel99, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel100, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel101, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel102, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel103, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabelKFE10OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelKFE49OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelKFE7OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelKFE13OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelKFE18OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(52, 52, 52)
                         .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jTextFieldKFP1SalesOrders, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -783,7 +773,7 @@ public class MainUI extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addComponent(jTextFieldKFE50SalesOrders, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
                                 .addComponent(jTextFieldKFE17SalesOrders, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jTextFieldKFEE16SalesOrders, javax.swing.GroupLayout.Alignment.LEADING))
+                                .addComponent(jTextFieldKFE16SalesOrders, javax.swing.GroupLayout.Alignment.LEADING))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addComponent(jTextFieldKFE49SalesOrders, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
                                 .addComponent(jTextFieldKFE10SalesOrders, javax.swing.GroupLayout.Alignment.LEADING)
@@ -970,9 +960,9 @@ public class MainUI extends javax.swing.JFrame {
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel84, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabelKFLenkerCpl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel95, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabelKFE16OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addComponent(jTextFieldKFE16PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextFieldKFEE16SalesOrders, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jTextFieldKFE16SalesOrders, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelKFLayout.createSequentialGroup()
@@ -1000,12 +990,12 @@ public class MainUI extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelKFLayout.createSequentialGroup()
                                 .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jTextFieldKFE17SalesOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel96, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jLabelKFE17OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(22, 22, 22)))
                         .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabelKFRahmenURaeder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel86, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel97, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jLabelKFE50OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(8, 8, 8)
@@ -1018,7 +1008,7 @@ public class MainUI extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jTextFieldKFE4PlannedStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jTextFieldKFE4SalesOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel98, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabelKFE4OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel87, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabelKFHinterradgruppe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
@@ -1031,7 +1021,7 @@ public class MainUI extends javax.swing.JFrame {
                     .addComponent(jTextFieldKFE10OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldKFE10WorkInProgress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldKFE10ProductionOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel99, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelKFE10OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextFieldKFE49SalesOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1040,7 +1030,7 @@ public class MainUI extends javax.swing.JFrame {
                     .addComponent(jTextFieldKFE49OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldKFE49WorkInProgress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldKFE49ProductionOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel100, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKFE49OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel89, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelKFVorderradCpl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1055,7 +1045,7 @@ public class MainUI extends javax.swing.JFrame {
                     .addComponent(jTextFieldKFE7OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldKFE7WorkInProgress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldKFE7ProductionOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel101, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelKFE7OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelKFSchutzblechV, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1066,7 +1056,7 @@ public class MainUI extends javax.swing.JFrame {
                     .addComponent(jTextFieldKFE13OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldKFE13WorkInProgress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldKFE13ProductionOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel102, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelKFE13OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelKFRahmen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1077,7 +1067,7 @@ public class MainUI extends javax.swing.JFrame {
                     .addComponent(jTextFieldKFE18OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldKFE18WorkInProgress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldKFE18ProductionOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel103, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelKFE18OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
@@ -1326,10 +1316,6 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItemEnglish;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItemFrench;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItemRomanien;
-    private javax.swing.JLabel jLabel100;
-    private javax.swing.JLabel jLabel101;
-    private javax.swing.JLabel jLabel102;
-    private javax.swing.JLabel jLabel103;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel81;
@@ -1344,15 +1330,19 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel90;
     private javax.swing.JLabel jLabel91;
     private javax.swing.JLabel jLabel92;
-    private javax.swing.JLabel jLabel95;
-    private javax.swing.JLabel jLabel96;
-    private javax.swing.JLabel jLabel97;
-    private javax.swing.JLabel jLabel98;
-    private javax.swing.JLabel jLabel99;
     private javax.swing.JLabel jLabelDamenfahrradPF;
     private javax.swing.JLabel jLabelKFASchutzblechH;
+    private javax.swing.JLabel jLabelKFE10OrdersInQueque;
+    private javax.swing.JLabel jLabelKFE13OrdersInQueque;
+    private javax.swing.JLabel jLabelKFE16OrdersInQueque;
+    private javax.swing.JLabel jLabelKFE17OrdersInQueque;
+    private javax.swing.JLabel jLabelKFE18OrdersInQueque;
     private javax.swing.JLabel jLabelKFE26OrdersInQueque;
+    private javax.swing.JLabel jLabelKFE49OrdersInQueque;
+    private javax.swing.JLabel jLabelKFE4OrdersInQueque;
+    private javax.swing.JLabel jLabelKFE50OrdersInQueque;
     private javax.swing.JLabel jLabelKFE51OrdersInQueque;
+    private javax.swing.JLabel jLabelKFE7OrdersInQueque;
     private javax.swing.JLabel jLabelKFFahrradOPedal;
     private javax.swing.JLabel jLabelKFHinterradgruppe;
     private javax.swing.JLabel jLabelKFKinderfahrrad;
@@ -1417,6 +1407,7 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldKFE16OrdersInQueque;
     private javax.swing.JTextField jTextFieldKFE16PlannedStock;
     private javax.swing.JTextField jTextFieldKFE16ProductionOrders;
+    private javax.swing.JTextField jTextFieldKFE16SalesOrders;
     private javax.swing.JTextField jTextFieldKFE16StockEndOfPeriod;
     private javax.swing.JTextField jTextFieldKFE16WorkInProgress;
     private javax.swing.JTextField jTextFieldKFE17OrdersInQueque;
@@ -1467,7 +1458,6 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldKFE7SalesOrders;
     private javax.swing.JTextField jTextFieldKFE7StockEndOfPeriod;
     private javax.swing.JTextField jTextFieldKFE7WorkInProgress;
-    private javax.swing.JTextField jTextFieldKFEE16SalesOrders;
     private javax.swing.JTextField jTextFieldKFP1OrdersInQueque;
     private javax.swing.JTextField jTextFieldKFP1PlannedStock;
     private javax.swing.JTextField jTextFieldKFP1ProductionOrders;
@@ -1643,6 +1633,141 @@ public class MainUI extends javax.swing.JFrame {
                 jTextFieldKFE51ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE51SalesOrders.getText().equals("")? "0":jTextFieldKFE51SalesOrders.getText())), Integer.parseInt((jLabelKFE51OrdersInQueque.getText().equals("")? "0":jLabelKFE51OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE51PlannedStock.getText().equals("")? "0":jTextFieldKFE51PlannedStock.getText())), Integer.parseInt(jTextFieldKFE51StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFE51StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE51OrdersInQueque.getText().equals("")?"0":jTextFieldKFE51OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE51WorkInProgress.getText().equals("")?"0":jTextFieldKFE51WorkInProgress.getText())));
             }
         });
+        //E16
+        jTextFieldKFE16PlannedStock.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                jTextFieldKFE16ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE16SalesOrders.getText().equals("")? "0":jTextFieldKFE16SalesOrders.getText())), Integer.parseInt((jLabelKFE16OrdersInQueque.getText().equals("")? "0":jLabelKFE16OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE16PlannedStock.getText().equals("")? "0":jTextFieldKFE16PlannedStock.getText())), Integer.parseInt(jTextFieldKFE16StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFE16StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE16OrdersInQueque.getText().equals("")?"0":jTextFieldKFE16OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE16WorkInProgress.getText().equals("")?"0":jTextFieldKFE16WorkInProgress.getText())));
+            }
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                jTextFieldKFE16ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE16SalesOrders.getText().equals("")? "0":jTextFieldKFE16SalesOrders.getText())), Integer.parseInt((jLabelKFE16OrdersInQueque.getText().equals("")? "0":jLabelKFE16OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE16PlannedStock.getText().equals("")? "0":jTextFieldKFE16PlannedStock.getText())), Integer.parseInt(jTextFieldKFE16StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFE16StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE16OrdersInQueque.getText().equals("")?"0":jTextFieldKFE16OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE16WorkInProgress.getText().equals("")?"0":jTextFieldKFE16WorkInProgress.getText())));
+            }
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                jTextFieldKFE16ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE16SalesOrders.getText().equals("")? "0":jTextFieldKFE16SalesOrders.getText())), Integer.parseInt((jLabelKFE16OrdersInQueque.getText().equals("")? "0":jLabelKFE16OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE16PlannedStock.getText().equals("")? "0":jTextFieldKFE16PlannedStock.getText())), Integer.parseInt(jTextFieldKFE16StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFE16StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE16OrdersInQueque.getText().equals("")?"0":jTextFieldKFE16OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE16WorkInProgress.getText().equals("")?"0":jTextFieldKFE16WorkInProgress.getText())));
+            }
+        });
+        //E17
+        jTextFieldKFE17PlannedStock.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                jTextFieldKFE17ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE17SalesOrders.getText().equals("")? "0":jTextFieldKFE17SalesOrders.getText())), Integer.parseInt((jLabelKFE17OrdersInQueque.getText().equals("")? "0":jLabelKFE17OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE17PlannedStock.getText().equals("")? "0":jTextFieldKFE17PlannedStock.getText())), Integer.parseInt(jTextFieldKFE17StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFE17StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE17OrdersInQueque.getText().equals("")?"0":jTextFieldKFE17OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE17WorkInProgress.getText().equals("")?"0":jTextFieldKFE17WorkInProgress.getText())));
+            }
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                jTextFieldKFE17ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE17SalesOrders.getText().equals("")? "0":jTextFieldKFE17SalesOrders.getText())), Integer.parseInt((jLabelKFE17OrdersInQueque.getText().equals("")? "0":jLabelKFE17OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE17PlannedStock.getText().equals("")? "0":jTextFieldKFE17PlannedStock.getText())), Integer.parseInt(jTextFieldKFE17StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFE17StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE17OrdersInQueque.getText().equals("")?"0":jTextFieldKFE17OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE17WorkInProgress.getText().equals("")?"0":jTextFieldKFE17WorkInProgress.getText())));
+            }
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                jTextFieldKFE17ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE17SalesOrders.getText().equals("")? "0":jTextFieldKFE17SalesOrders.getText())), Integer.parseInt((jLabelKFE17OrdersInQueque.getText().equals("")? "0":jLabelKFE17OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE17PlannedStock.getText().equals("")? "0":jTextFieldKFE17PlannedStock.getText())), Integer.parseInt(jTextFieldKFE17StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFE17StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE17OrdersInQueque.getText().equals("")?"0":jTextFieldKFE17OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE17WorkInProgress.getText().equals("")?"0":jTextFieldKFE17WorkInProgress.getText())));
+            }
+        });
+        //E50
+        jTextFieldKFE50PlannedStock.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                jTextFieldKFE50ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE50SalesOrders.getText().equals("")? "0":jTextFieldKFE50SalesOrders.getText())), Integer.parseInt((jLabelKFE50OrdersInQueque.getText().equals("")? "0":jLabelKFE50OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE50PlannedStock.getText().equals("")? "0":jTextFieldKFE50PlannedStock.getText())), Integer.parseInt(jTextFieldKFE50StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFE50StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE50OrdersInQueque.getText().equals("")?"0":jTextFieldKFE50OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE50WorkInProgress.getText().equals("")?"0":jTextFieldKFE50WorkInProgress.getText())));
+            }
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                jTextFieldKFE50ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE50SalesOrders.getText().equals("")? "0":jTextFieldKFE50SalesOrders.getText())), Integer.parseInt((jLabelKFE50OrdersInQueque.getText().equals("")? "0":jLabelKFE50OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE50PlannedStock.getText().equals("")? "0":jTextFieldKFE50PlannedStock.getText())), Integer.parseInt(jTextFieldKFE50StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFE50StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE50OrdersInQueque.getText().equals("")?"0":jTextFieldKFE50OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE50WorkInProgress.getText().equals("")?"0":jTextFieldKFE50WorkInProgress.getText())));
+            }
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                jTextFieldKFE50ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE50SalesOrders.getText().equals("")? "0":jTextFieldKFE50SalesOrders.getText())), Integer.parseInt((jLabelKFE50OrdersInQueque.getText().equals("")? "0":jLabelKFE50OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE50PlannedStock.getText().equals("")? "0":jTextFieldKFE50PlannedStock.getText())), Integer.parseInt(jTextFieldKFE50StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFE50StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE50OrdersInQueque.getText().equals("")?"0":jTextFieldKFE50OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE50WorkInProgress.getText().equals("")?"0":jTextFieldKFE50WorkInProgress.getText())));
+            }
+        });
+        //E4
+        jTextFieldKFE4PlannedStock.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                jTextFieldKFE4ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE4SalesOrders.getText().equals("")? "0":jTextFieldKFE4SalesOrders.getText())), Integer.parseInt((jLabelKFE4OrdersInQueque.getText().equals("")? "0":jLabelKFE4OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE4PlannedStock.getText().equals("")? "0":jTextFieldKFE4PlannedStock.getText())), Integer.parseInt(jTextFieldKFE4StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFE4StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE4OrdersInQueque.getText().equals("")?"0":jTextFieldKFE4OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE4WorkInProgress.getText().equals("")?"0":jTextFieldKFE4WorkInProgress.getText())));
+            }
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                jTextFieldKFE4ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE4SalesOrders.getText().equals("")? "0":jTextFieldKFE4SalesOrders.getText())), Integer.parseInt((jLabelKFE4OrdersInQueque.getText().equals("")? "0":jLabelKFE4OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE4PlannedStock.getText().equals("")? "0":jTextFieldKFE4PlannedStock.getText())), Integer.parseInt(jTextFieldKFE4StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFE4StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE4OrdersInQueque.getText().equals("")?"0":jTextFieldKFE4OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE4WorkInProgress.getText().equals("")?"0":jTextFieldKFE4WorkInProgress.getText())));
+            }
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                jTextFieldKFE4ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE4SalesOrders.getText().equals("")? "0":jTextFieldKFE4SalesOrders.getText())), Integer.parseInt((jLabelKFE4OrdersInQueque.getText().equals("")? "0":jLabelKFE4OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE4PlannedStock.getText().equals("")? "0":jTextFieldKFE4PlannedStock.getText())), Integer.parseInt(jTextFieldKFE4StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFE4StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE4OrdersInQueque.getText().equals("")?"0":jTextFieldKFE4OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE4WorkInProgress.getText().equals("")?"0":jTextFieldKFE4WorkInProgress.getText())));
+            }
+        });
+        //E10
+        jTextFieldKFE10PlannedStock.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                jTextFieldKFE10ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE10SalesOrders.getText().equals("")? "0":jTextFieldKFE10SalesOrders.getText())), Integer.parseInt((jLabelKFE10OrdersInQueque.getText().equals("")? "0":jLabelKFE10OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE10PlannedStock.getText().equals("")? "0":jTextFieldKFE10PlannedStock.getText())), Integer.parseInt(jTextFieldKFE10StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFE10StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE10OrdersInQueque.getText().equals("")?"0":jTextFieldKFE10OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE10WorkInProgress.getText().equals("")?"0":jTextFieldKFE10WorkInProgress.getText())));
+            }
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                jTextFieldKFE10ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE10SalesOrders.getText().equals("")? "0":jTextFieldKFE10SalesOrders.getText())), Integer.parseInt((jLabelKFE10OrdersInQueque.getText().equals("")? "0":jLabelKFE10OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE10PlannedStock.getText().equals("")? "0":jTextFieldKFE10PlannedStock.getText())), Integer.parseInt(jTextFieldKFE10StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFE10StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE10OrdersInQueque.getText().equals("")?"0":jTextFieldKFE10OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE10WorkInProgress.getText().equals("")?"0":jTextFieldKFE10WorkInProgress.getText())));
+            }
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                jTextFieldKFE10ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE10SalesOrders.getText().equals("")? "0":jTextFieldKFE10SalesOrders.getText())), Integer.parseInt((jLabelKFE10OrdersInQueque.getText().equals("")? "0":jLabelKFE10OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE10PlannedStock.getText().equals("")? "0":jTextFieldKFE10PlannedStock.getText())), Integer.parseInt(jTextFieldKFE10StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFE10StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE10OrdersInQueque.getText().equals("")?"0":jTextFieldKFE10OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE10WorkInProgress.getText().equals("")?"0":jTextFieldKFE10WorkInProgress.getText())));
+            }
+        });
+        //E49
+        jTextFieldKFE49PlannedStock.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                jTextFieldKFE49ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE49SalesOrders.getText().equals("")? "0":jTextFieldKFE49SalesOrders.getText())), Integer.parseInt((jLabelKFE49OrdersInQueque.getText().equals("")? "0":jLabelKFE49OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE49PlannedStock.getText().equals("")? "0":jTextFieldKFE49PlannedStock.getText())), Integer.parseInt(jTextFieldKFE49StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFE49StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE49OrdersInQueque.getText().equals("")?"0":jTextFieldKFE49OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE49WorkInProgress.getText().equals("")?"0":jTextFieldKFE49WorkInProgress.getText())));
+            }
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                jTextFieldKFE49ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE49SalesOrders.getText().equals("")? "0":jTextFieldKFE49SalesOrders.getText())), Integer.parseInt((jLabelKFE49OrdersInQueque.getText().equals("")? "0":jLabelKFE49OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE49PlannedStock.getText().equals("")? "0":jTextFieldKFE49PlannedStock.getText())), Integer.parseInt(jTextFieldKFE49StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFE49StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE49OrdersInQueque.getText().equals("")?"0":jTextFieldKFE49OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE49WorkInProgress.getText().equals("")?"0":jTextFieldKFE49WorkInProgress.getText())));
+            }
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                jTextFieldKFE49ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE49SalesOrders.getText().equals("")? "0":jTextFieldKFE49SalesOrders.getText())), Integer.parseInt((jLabelKFE49OrdersInQueque.getText().equals("")? "0":jLabelKFE49OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE49PlannedStock.getText().equals("")? "0":jTextFieldKFE49PlannedStock.getText())), Integer.parseInt(jTextFieldKFE49StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFE49StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE49OrdersInQueque.getText().equals("")?"0":jTextFieldKFE49OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE49WorkInProgress.getText().equals("")?"0":jTextFieldKFE49WorkInProgress.getText())));
+            }
+        });
+        //E7
+        jTextFieldKFE7PlannedStock.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                jTextFieldKFE7ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE7SalesOrders.getText().equals("")? "0":jTextFieldKFE7SalesOrders.getText())), Integer.parseInt((jLabelKFE7OrdersInQueque.getText().equals("")? "0":jLabelKFE7OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE7PlannedStock.getText().equals("")? "0":jTextFieldKFE7PlannedStock.getText())), Integer.parseInt(jTextFieldKFE7StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFE7StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE7OrdersInQueque.getText().equals("")?"0":jTextFieldKFE7OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE7WorkInProgress.getText().equals("")?"0":jTextFieldKFE7WorkInProgress.getText())));
+            }
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                jTextFieldKFE7ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE7SalesOrders.getText().equals("")? "0":jTextFieldKFE7SalesOrders.getText())), Integer.parseInt((jLabelKFE7OrdersInQueque.getText().equals("")? "0":jLabelKFE7OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE7PlannedStock.getText().equals("")? "0":jTextFieldKFE7PlannedStock.getText())), Integer.parseInt(jTextFieldKFE7StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFE7StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE7OrdersInQueque.getText().equals("")?"0":jTextFieldKFE7OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE7WorkInProgress.getText().equals("")?"0":jTextFieldKFE7WorkInProgress.getText())));
+            }
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                jTextFieldKFE7ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE7SalesOrders.getText().equals("")? "0":jTextFieldKFE7SalesOrders.getText())), Integer.parseInt((jLabelKFE7OrdersInQueque.getText().equals("")? "0":jLabelKFE7OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE7PlannedStock.getText().equals("")? "0":jTextFieldKFE7PlannedStock.getText())), Integer.parseInt(jTextFieldKFE7StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFE7StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE7OrdersInQueque.getText().equals("")?"0":jTextFieldKFE7OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE7WorkInProgress.getText().equals("")?"0":jTextFieldKFE7WorkInProgress.getText())));
+            }
+        });
+        //E13
+        jTextFieldKFE13PlannedStock.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                jTextFieldKFE13ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE13SalesOrders.getText().equals("")? "0":jTextFieldKFE13SalesOrders.getText())), Integer.parseInt((jLabelKFE13OrdersInQueque.getText().equals("")? "0":jLabelKFE13OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE13PlannedStock.getText().equals("")? "0":jTextFieldKFE13PlannedStock.getText())), Integer.parseInt(jTextFieldKFE13StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFE13StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE13OrdersInQueque.getText().equals("")?"0":jTextFieldKFE13OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE13WorkInProgress.getText().equals("")?"0":jTextFieldKFE13WorkInProgress.getText())));
+            }
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                jTextFieldKFE13ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE13SalesOrders.getText().equals("")? "0":jTextFieldKFE13SalesOrders.getText())), Integer.parseInt((jLabelKFE13OrdersInQueque.getText().equals("")? "0":jLabelKFE13OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE13PlannedStock.getText().equals("")? "0":jTextFieldKFE13PlannedStock.getText())), Integer.parseInt(jTextFieldKFE13StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFE13StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE13OrdersInQueque.getText().equals("")?"0":jTextFieldKFE13OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE13WorkInProgress.getText().equals("")?"0":jTextFieldKFE13WorkInProgress.getText())));
+            }
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                jTextFieldKFE13ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE13SalesOrders.getText().equals("")? "0":jTextFieldKFE13SalesOrders.getText())), Integer.parseInt((jLabelKFE13OrdersInQueque.getText().equals("")? "0":jLabelKFE13OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE13PlannedStock.getText().equals("")? "0":jTextFieldKFE13PlannedStock.getText())), Integer.parseInt(jTextFieldKFE13StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFE13StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE13OrdersInQueque.getText().equals("")?"0":jTextFieldKFE13OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE13WorkInProgress.getText().equals("")?"0":jTextFieldKFE13WorkInProgress.getText())));
+            }
+        });
+        //E18
+        jTextFieldKFE18PlannedStock.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                jTextFieldKFE18ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE18SalesOrders.getText().equals("")? "0":jTextFieldKFE18SalesOrders.getText())), Integer.parseInt((jLabelKFE18OrdersInQueque.getText().equals("")? "0":jLabelKFE18OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE18PlannedStock.getText().equals("")? "0":jTextFieldKFE18PlannedStock.getText())), Integer.parseInt(jTextFieldKFE18StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFE18StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE18OrdersInQueque.getText().equals("")?"0":jTextFieldKFE18OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE18WorkInProgress.getText().equals("")?"0":jTextFieldKFE18WorkInProgress.getText())));
+            }
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                jTextFieldKFE18ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE18SalesOrders.getText().equals("")? "0":jTextFieldKFE18SalesOrders.getText())), Integer.parseInt((jLabelKFE18OrdersInQueque.getText().equals("")? "0":jLabelKFE18OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE18PlannedStock.getText().equals("")? "0":jTextFieldKFE18PlannedStock.getText())), Integer.parseInt(jTextFieldKFE18StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFE18StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE18OrdersInQueque.getText().equals("")?"0":jTextFieldKFE18OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE18WorkInProgress.getText().equals("")?"0":jTextFieldKFE18WorkInProgress.getText())));
+            }
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                jTextFieldKFE18ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE18SalesOrders.getText().equals("")? "0":jTextFieldKFE18SalesOrders.getText())), Integer.parseInt((jLabelKFE18OrdersInQueque.getText().equals("")? "0":jLabelKFE18OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE18PlannedStock.getText().equals("")? "0":jTextFieldKFE18PlannedStock.getText())), Integer.parseInt(jTextFieldKFE18StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFE18StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE18OrdersInQueque.getText().equals("")?"0":jTextFieldKFE18OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE18WorkInProgress.getText().equals("")?"0":jTextFieldKFE18WorkInProgress.getText())));
+            }
+        });
         
         //StockEndOfPeriod
         //P1
@@ -1714,6 +1839,69 @@ public class MainUI extends javax.swing.JFrame {
                jTextFieldKFE26ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE26SalesOrders.getText().equals("")? "0":jTextFieldKFE26SalesOrders.getText())), Integer.parseInt((jLabelKFE26OrdersInQueque.getText().equals("")? "0":jLabelKFE26OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE26PlannedStock.getText().equals("")? "0":jTextFieldKFE26PlannedStock.getText())), Integer.parseInt(jTextFieldKFE26StockEndOfPeriod.getText().equals("")?"0":jTextFieldKFE26StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE26OrdersInQueque.getText().equals("")?"0":jTextFieldKFE26OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE26WorkInProgress.getText().equals("")?"0":jTextFieldKFE26WorkInProgress.getText())));
             }
         });
+        //E51
+        jTextFieldKFE51OrdersInQueque.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                jLabelKFE16OrdersInQueque.setText(jTextFieldKFE51OrdersInQueque.getText());
+                jLabelKFE17OrdersInQueque.setText(jTextFieldKFE51OrdersInQueque.getText());
+                jLabelKFE50OrdersInQueque.setText(jTextFieldKFE51OrdersInQueque.getText());
+            }
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+               jLabelKFE16OrdersInQueque.setText(jTextFieldKFE51OrdersInQueque.getText());
+                jLabelKFE17OrdersInQueque.setText(jTextFieldKFE51OrdersInQueque.getText());
+                jLabelKFE50OrdersInQueque.setText(jTextFieldKFE51OrdersInQueque.getText());
+            }
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+               jLabelKFE16OrdersInQueque.setText(jTextFieldKFE51OrdersInQueque.getText());
+                jLabelKFE17OrdersInQueque.setText(jTextFieldKFE51OrdersInQueque.getText());
+                jLabelKFE50OrdersInQueque.setText(jTextFieldKFE51OrdersInQueque.getText());
+            }
+        });
+        //E50
+        jTextFieldKFE50OrdersInQueque.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                jLabelKFE4OrdersInQueque.setText(jTextFieldKFE50OrdersInQueque.getText());
+                jLabelKFE10OrdersInQueque.setText(jTextFieldKFE50OrdersInQueque.getText());
+                jLabelKFE49OrdersInQueque.setText(jTextFieldKFE50OrdersInQueque.getText());
+            }
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                jLabelKFE4OrdersInQueque.setText(jTextFieldKFE50OrdersInQueque.getText());
+                jLabelKFE10OrdersInQueque.setText(jTextFieldKFE50OrdersInQueque.getText());
+                jLabelKFE49OrdersInQueque.setText(jTextFieldKFE50OrdersInQueque.getText());
+            }
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                jLabelKFE4OrdersInQueque.setText(jTextFieldKFE50OrdersInQueque.getText());
+                jLabelKFE10OrdersInQueque.setText(jTextFieldKFE50OrdersInQueque.getText());
+                jLabelKFE49OrdersInQueque.setText(jTextFieldKFE50OrdersInQueque.getText());
+            }
+        });
+        //E49
+        jTextFieldKFE49OrdersInQueque.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                jLabelKFE7OrdersInQueque.setText(jTextFieldKFE49OrdersInQueque.getText());
+                jLabelKFE13OrdersInQueque.setText(jTextFieldKFE49OrdersInQueque.getText());
+                jLabelKFE18OrdersInQueque.setText(jTextFieldKFE49OrdersInQueque.getText());
+            }
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                jLabelKFE7OrdersInQueque.setText(jTextFieldKFE49OrdersInQueque.getText());
+                jLabelKFE13OrdersInQueque.setText(jTextFieldKFE49OrdersInQueque.getText());
+                jLabelKFE18OrdersInQueque.setText(jTextFieldKFE49OrdersInQueque.getText());
+            }
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                jLabelKFE7OrdersInQueque.setText(jTextFieldKFE49OrdersInQueque.getText());
+                jLabelKFE13OrdersInQueque.setText(jTextFieldKFE49OrdersInQueque.getText());
+                jLabelKFE18OrdersInQueque.setText(jTextFieldKFE49OrdersInQueque.getText());
+            }
+        });
         
         //WorkInProgress
         //P1
@@ -1748,6 +1936,7 @@ public class MainUI extends javax.swing.JFrame {
         });
         
         //Production Orders
+        //P1
         jTextFieldKFP1ProductionOrders.getDocument().addDocumentListener(new DocumentListener() {
             @Override
             public void insertUpdate(DocumentEvent e) {
@@ -1765,7 +1954,69 @@ public class MainUI extends javax.swing.JFrame {
                jTextFieldKFE51SalesOrders.setText(jTextFieldKFP1ProductionOrders.getText());
             }
         });
-    
+        //E51
+        jTextFieldKFE51ProductionOrders.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+               jTextFieldKFE16SalesOrders.setText(jTextFieldKFE51ProductionOrders.getText());
+               jTextFieldKFE17SalesOrders.setText(jTextFieldKFE51ProductionOrders.getText());
+               jTextFieldKFE50SalesOrders.setText(jTextFieldKFE51ProductionOrders.getText());
+            }
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+               jTextFieldKFE16SalesOrders.setText(jTextFieldKFE51ProductionOrders.getText());
+               jTextFieldKFE17SalesOrders.setText(jTextFieldKFE51ProductionOrders.getText());
+               jTextFieldKFE50SalesOrders.setText(jTextFieldKFE51ProductionOrders.getText());
+            }
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+               jTextFieldKFE16SalesOrders.setText(jTextFieldKFE51ProductionOrders.getText());
+               jTextFieldKFE17SalesOrders.setText(jTextFieldKFE51ProductionOrders.getText());
+               jTextFieldKFE50SalesOrders.setText(jTextFieldKFE51ProductionOrders.getText());
+            }
+        });
+        //E50
+        jTextFieldKFE50ProductionOrders.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+               jTextFieldKFE4SalesOrders.setText(jTextFieldKFE50ProductionOrders.getText());
+               jTextFieldKFE10SalesOrders.setText(jTextFieldKFE50ProductionOrders.getText());
+               jTextFieldKFE49SalesOrders.setText(jTextFieldKFE50ProductionOrders.getText());
+            }
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+               jTextFieldKFE4SalesOrders.setText(jTextFieldKFE50ProductionOrders.getText());
+               jTextFieldKFE10SalesOrders.setText(jTextFieldKFE50ProductionOrders.getText());
+               jTextFieldKFE49SalesOrders.setText(jTextFieldKFE50ProductionOrders.getText());
+            }
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+               jTextFieldKFE4SalesOrders.setText(jTextFieldKFE50ProductionOrders.getText());
+               jTextFieldKFE10SalesOrders.setText(jTextFieldKFE50ProductionOrders.getText());
+               jTextFieldKFE49SalesOrders.setText(jTextFieldKFE50ProductionOrders.getText());
+            }
+        });
+        //E49
+        jTextFieldKFE49ProductionOrders.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+               jTextFieldKFE7SalesOrders.setText(jTextFieldKFE49ProductionOrders.getText());
+               jTextFieldKFE13SalesOrders.setText(jTextFieldKFE49ProductionOrders.getText());
+               jTextFieldKFE18SalesOrders.setText(jTextFieldKFE49ProductionOrders.getText());
+            }
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+               jTextFieldKFE7SalesOrders.setText(jTextFieldKFE49ProductionOrders.getText());
+               jTextFieldKFE13SalesOrders.setText(jTextFieldKFE49ProductionOrders.getText());
+               jTextFieldKFE18SalesOrders.setText(jTextFieldKFE49ProductionOrders.getText());
+            }
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+               jTextFieldKFE7SalesOrders.setText(jTextFieldKFE49ProductionOrders.getText());
+               jTextFieldKFE13SalesOrders.setText(jTextFieldKFE49ProductionOrders.getText());
+               jTextFieldKFE18SalesOrders.setText(jTextFieldKFE49ProductionOrders.getText());
+            }
+        });
     }
     
     String calculateProductionOrders(int salesOrder,int secondCollumn, int plannedStock, int stockEndOfPeriod, int ordersInQueQue, int workInProgress){
