@@ -11,7 +11,6 @@ import java.util.List;
 import java.util.Objects;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
-import veloziped.ws1516.main.SetupInstance;
 
 /**
  *
@@ -48,7 +47,6 @@ public class ExtendedWorkplace extends Workplace {
     }
 
     public void setValues(JSONObject workplace) {
-        
         double firstShiftWage = (double) workplace.get("firstShiftWage");
         double secondShiftWage = (double) workplace.get("secondShiftWage");
         double thirdShiftWage = (double) workplace.get("thirdShiftWage");
@@ -68,6 +66,24 @@ public class ExtendedWorkplace extends Workplace {
             ProcessTime processTime = new ProcessTime(articleId, runTime, setupTime);
             processTimes.add(processTime);
         }
+        
+        this.firstShiftWage = firstShiftWage;
+        this.secondShiftWage = secondShiftWage;
+        this.thirdShiftWage = thirdShiftWage;
+        this.overtimeWage = overtimeWage;
+        this.variableMachineCosts = variableMachineCosts;
+        this.fixMachineCosts = fixMachineCosts;
+        this.processTimes = processTimes;
+    }
+
+    public ExtendedWorkplace(Workplace workplace) {
+        super.id = workplace.getId();
+        super.idletime = workplace.getIdletime();
+        super.machineidletimecosts = workplace.getMachineidletimecosts();
+        super.setupevents = workplace.getSetupevents();
+        super.timeneed = workplace.getTimeneed();
+        super.wagecosts = workplace.getWagecosts();
+        super.wageidletimecosts = workplace.getWageidletimecosts();
     }
 
     public double getFixMachineCosts() {

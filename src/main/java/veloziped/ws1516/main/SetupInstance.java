@@ -14,17 +14,6 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import veloziped.ws1516.articles.ExtendedArticle;
 import veloziped.ws1516.generated.Article;
-import veloziped.ws1516.generated.Completedorders;
-import veloziped.ws1516.generated.Cycletimes;
-import veloziped.ws1516.generated.Futureinwardstockmovement;
-import veloziped.ws1516.generated.Idletimecosts;
-import veloziped.ws1516.generated.Inwardstockmovement;
-import veloziped.ws1516.generated.Ordersinwork;
-import veloziped.ws1516.generated.Result;
-import veloziped.ws1516.generated.Results;
-import veloziped.ws1516.generated.Waitingliststock;
-import veloziped.ws1516.generated.Waitinglistworkstations;
-import veloziped.ws1516.generated.Warehousestock;
 import veloziped.ws1516.generated.Workplace;
 import veloziped.ws1516.workplace.ExtendedWorkplace;
 
@@ -150,4 +139,5 @@ public class SetupInstance {
 
         return extWorkplaces;
     }
+    
 }
