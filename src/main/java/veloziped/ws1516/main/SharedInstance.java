@@ -213,10 +213,10 @@ public class SharedInstance {
         return estimatedPeriod;
     }
     
-    public static Results loadResults() throws JAXBException{
+    public static Results parseXmlInput() throws JAXBException{
         JAXBContext jaxbContext = JAXBContext.newInstance(Results.class);
         Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
-        Results results = (Results) jaxbUnmarshaller.unmarshal(new File("C:\\programms\\results.xml"));
+        Results results = (Results) jaxbUnmarshaller.unmarshal(new File("/Users/Martin/Desktop/output_7.xml"));
         return results;
     }
 }

@@ -6,11 +6,9 @@
 package veloziped.ws1516.workload;
 
 import static java.lang.Math.ceil;
-import static java.lang.Math.round;
 import java.text.DecimalFormat;
 import veloziped.ws1516.main.SharedInstance;
 import veloziped.ws1516.workplace.*;
-import static java.lang.Math.round;
 import static java.lang.Math.round;
 
 /**
