@@ -15,8 +15,18 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 import veloziped.ws1516.articles.ExtendedArticle;
+import veloziped.ws1516.generated.Completedorders;
+import veloziped.ws1516.generated.Cycletimes;
+import veloziped.ws1516.generated.Futureinwardstockmovement;
+import veloziped.ws1516.generated.Idletimecosts;
+import veloziped.ws1516.generated.Inwardstockmovement;
 import veloziped.ws1516.generated.Order;
+import veloziped.ws1516.generated.Ordersinwork;
+import veloziped.ws1516.generated.Result;
 import veloziped.ws1516.generated.Results;
+import veloziped.ws1516.generated.Waitingliststock;
+import veloziped.ws1516.generated.Waitinglistworkstations;
+import veloziped.ws1516.generated.Warehousestock;
 import veloziped.ws1516.production.Forecast;
 import veloziped.ws1516.production.ProductionPlan;
 import veloziped.ws1516.production.CalculationMode;
@@ -33,7 +43,7 @@ public class SharedInstance {
 
     private Forecast forecast = new Forecast();
     private Map<String, Long> orderQuantities;
-    private Map<String, ExtendedWorkplace> workplaces;
+    private Map<String, ExtendedWorkplace> extendedWorkplaces;
     private Map<String, ExtendedArticle> extendedArticles;
     private Map<String, Order> incomingOrdersThisPeriod;
     private ProductionPlan productionPlan;
@@ -42,6 +52,18 @@ public class SharedInstance {
     // 1 == 100%
     private double discountFactor;
     private double bufferFactor;
+    
+    
+    private Result result;
+    private Inwardstockmovement inwardStockMovement;
+    private Cycletimes cycleTimes;
+    private Waitinglistworkstations waitinglistWorkstations;
+    private Idletimecosts idleTimeCosts;
+    private Waitingliststock waitinglistStock;
+    private Ordersinwork ordersInWork;
+    private Completedorders completeOrder;
+    private Futureinwardstockmovement futureInwardStockMovement;
+    private Warehousestock warehouseStock;
 
     public double getBufferFactor() {
         return bufferFactor;
@@ -51,6 +73,49 @@ public class SharedInstance {
         this.bufferFactor = bufferFactor;
     }
 
+    public Results getResults() {
+        return results;
+    }
+
+    public Result getResult() {
+        return result;
+    }
+
+    public Inwardstockmovement getInwardStockMovement() {
+        return inwardStockMovement;
+    }
+
+    public Cycletimes getCycleTimes() {
+        return cycleTimes;
+    }
+
+    public Waitinglistworkstations getWaitinglistWorkstations() {
+        return waitinglistWorkstations;
+    }
+
+    public Idletimecosts getIdleTimeCosts() {
+        return idleTimeCosts;
+    }
+
+    public Waitingliststock getWaitinglistStock() {
+        return waitinglistStock;
+    }
+
+    public Ordersinwork getOrdersInWork() {
+        return ordersInWork;
+    }
+
+    public Completedorders getCompleteOrder() {
+        return completeOrder;
+    }
+
+    public Futureinwardstockmovement getFutureInwardStockMovement() {
+        return futureInwardStockMovement;
+    }
+
+    public Warehousestock getWarehouseStock() {
+        return warehouseStock;
+    }
 
     public double getDiscountFactor() {
         return discountFactor;
@@ -82,7 +147,7 @@ public class SharedInstance {
         ExtendedWorkplace result = null;
 
         if (id != null) {
-            result = workplaces.get(String.valueOf(id));
+            result = extendedWorkplaces.get(String.valueOf(id));
         }
 
         return result;
@@ -118,11 +183,15 @@ public class SharedInstance {
     }
 
     public Map<String, ExtendedWorkplace> getWorkplaces() {
-        return workplaces;
+        return extendedWorkplaces;
     }
 
-    public void setWorkplaces(Map<String, ExtendedWorkplace> workplaces) {
-        this.workplaces = workplaces;
+    public void setExtendedWorkplaces(Map<String, ExtendedWorkplace> workplaces) {
+        this.extendedWorkplaces = workplaces;
+    }
+    
+    public void setExtendedArticles(Map<String, ExtendedArticle> articles) {
+        this.extendedArticles = articles;
     }
 
     public boolean setOrderQuantityForArticleId(Long id, Long quantity) {
@@ -218,5 +287,38 @@ public class SharedInstance {
         Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
         Results results = (Results) jaxbUnmarshaller.unmarshal(new File("/Users/Martin/Desktop/output_7.xml"));
         return results;
+    }
+    
+    
+    public void readResults(Results results) {
+        if(results == null) {
+            return;
+        }
+        
+        this.results = results;
+
+        for (Object object : results.getContent()) {
+            if (object.getClass().equals(Warehousestock.class)) {
+                warehouseStock = (Warehousestock) object;
+            } else if (object.getClass().equals(Result.class)) {
+                result = (Result) object;
+            } else if (object.getClass().equals(Inwardstockmovement.class)) {
+                inwardStockMovement = (Inwardstockmovement) object;
+            } else if (object.getClass().equals(Cycletimes.class)) {
+                cycleTimes = (Cycletimes) object;
+            } else if (object.getClass().equals(Waitinglistworkstations.class)) {
+                waitinglistWorkstations = (Waitinglistworkstations) object;
+            } else if (object.getClass().equals(Idletimecosts.class)) {
+                idleTimeCosts = (Idletimecosts) object;
+            } else if (object.getClass().equals(Waitingliststock.class)) {
+                waitinglistStock = (Waitingliststock) object;
+            } else if (object.getClass().equals(Ordersinwork.class)) {
+                ordersInWork = (Ordersinwork) object;
+            } else if (object.getClass().equals(Completedorders.class)) {
+                completeOrder = (Completedorders) object;
+            } else if (object.getClass().equals(Futureinwardstockmovement.class)) {
+                futureInwardStockMovement = (Futureinwardstockmovement) object;
+            }
+        }
     }
 }

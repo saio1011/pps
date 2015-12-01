@@ -20,7 +20,22 @@ public class PeriodDetail {
         this.product1 = product1;
         this.product2 = product2;
         this.product3 = product3;
-        this.sum = product1 + product2 + product3;
+        this.calcCum();
+    }
+
+    public void setProduct1(long product1) {
+        this.product1 = product1;
+        this.calcCum();
+    }
+
+    public void setProduct2(long product2) {
+        this.product2 = product2;
+        this.calcCum();
+    }
+
+    public void setProduct3(long product3) {
+        this.product3 = product3;
+        this.calcCum();
     }
 
     public long getSum() {
@@ -37,6 +52,10 @@ public class PeriodDetail {
 
     public long getProduct1() {
         return product1;
+    }
+    
+    private void calcCum() {
+        this.sum = product1 + product2 + product3;
     }
 
 }

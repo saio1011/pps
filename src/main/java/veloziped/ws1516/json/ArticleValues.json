@@ -677,7 +677,7 @@
                 {
                     "type": "K",
                     "usage": "A",
-                    "deliverTime": 2,
+                    "deliverTime": 2.0,
                     "deviation": 0.5,
                     "deliverCosts": 75,
                     "usageProductOne": 1,
@@ -693,7 +693,7 @@
                 {
                     "type": "K",
                     "usage": "A",
-                    "deliverTime": 1,
+                    "deliverTime": 1.0,
                     "deviation": 0.2,
                     "deliverCosts": 50,
                     "usageProductOne": 3,
@@ -757,7 +757,7 @@
                 {
                     "type": "K",
                     "usage": "A",
-                    "deliverTime": 1,
+                    "deliverTime": 1.0,
                     "deviation": 0.2,
                     "deliverCosts": 75,
                     "usageProductOne": 2,

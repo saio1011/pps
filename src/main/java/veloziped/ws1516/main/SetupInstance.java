@@ -7,10 +7,15 @@ package veloziped.ws1516.main;
 
 import java.io.FileReader;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+import veloziped.ws1516.articles.ExtendedArticle;
+import veloziped.ws1516.generated.Article;
+import veloziped.ws1516.generated.Workplace;
+import veloziped.ws1516.workplace.ExtendedWorkplace;
 
 /**
  *
@@ -49,7 +54,7 @@ public class SetupInstance {
 
                 this.articleValues.put(id, values);
             }
-           
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -71,7 +76,7 @@ public class SetupInstance {
 
                 this.workplaceValues.put(id, values);
             }
-                
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -88,7 +93,7 @@ public class SetupInstance {
             return articleValues.get(String.valueOf(id));
         }
     }
-    
+
     public JSONObject getWorkplaceValuesForId(long id) {
         if (workplaceValues == null) {
             return null;
@@ -100,4 +105,39 @@ public class SetupInstance {
     public Map<String, JSONObject> getWorkplaceValues() {
         return workplaceValues;
     }
+
+    public Map<String, ExtendedArticle> generateExtendedArticles(List<Article> articles) {
+        Map<String, ExtendedArticle> extArticles = new HashMap<>();
+
+        for (Article article : articles) {
+            JSONObject values = this.getArticleValueForId(article.getId());
+
+            if (values != null) {
+                ExtendedArticle extArt = new ExtendedArticle(article);
+                extArt.setValues(values);
+
+                extArticles.put(String.valueOf(extArt.getId()), extArt);
+            }
+        }
+
+        return extArticles;
+    }
+
+    public Map<String, ExtendedWorkplace> generateExtendedWorkplaces(List<Workplace> workplaces) {
+        Map<String, ExtendedWorkplace> extWorkplaces = new HashMap<>();
+
+        for (Workplace workplace : workplaces) {
+            JSONObject values = this.getWorkplaceValuesForId(workplace.getId());
+
+            if (values != null) {
+                ExtendedWorkplace extWork = (ExtendedWorkplace) workplace;
+                extWork.setValues(values);
+
+                extWorkplaces.put(String.valueOf(extWork.getId()), extWork);
+            }
+        }
+
+        return extWorkplaces;
+    }
+    
 }
