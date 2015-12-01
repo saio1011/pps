@@ -2223,20 +2223,20 @@
                                       </Group>
                                       <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="jTextFieldKFP1SalesOrders1" alignment="0" min="-2" pref="50" max="-2" attributes="0"/>
+                                          <Component id="jTextFieldDFP1SalesOrders" alignment="0" min="-2" pref="50" max="-2" attributes="0"/>
                                           <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                              <Component id="jTextFieldKFE51SalesOrders1" alignment="0" pref="50" max="32767" attributes="0"/>
-                                              <Component id="jTextFieldKFE26SalesOrders1" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="jTextFieldDFE51SalesOrders" alignment="0" pref="50" max="32767" attributes="0"/>
+                                              <Component id="jTextFieldDFE26SalesOrders" alignment="0" max="32767" attributes="0"/>
                                           </Group>
                                           <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                              <Component id="jTextFieldKFE50SalesOrders1" alignment="0" pref="50" max="32767" attributes="0"/>
-                                              <Component id="jTextFieldKFE17SalesOrders1" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="jTextFieldKFE16SalesOrders1" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="jTextFieldDFE50SalesOrders" alignment="0" pref="50" max="32767" attributes="0"/>
+                                              <Component id="jTextFieldDFE17SalesOrders" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="jTextFieldDFE16SalesOrders" alignment="0" max="32767" attributes="0"/>
                                           </Group>
                                           <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
                                               <Component id="jTextFieldKFE49SalesOrders1" alignment="0" pref="50" max="32767" attributes="0"/>
                                               <Component id="jTextFieldKFE10SalesOrders1" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="jTextFieldKFE4SalesOrders1" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="jTextFieldDFE4SalesOrders" alignment="0" max="32767" attributes="0"/>
                                           </Group>
                                           <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
                                               <Component id="jTextFieldKFE18SalesOrders1" alignment="0" pref="50" max="32767" attributes="0"/>
@@ -2418,7 +2418,7 @@
                                           <Component id="jTextFieldKFP1WorkInProgress1" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jTextFieldKFP1ProductionOrders1" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jTextFieldKFP1PlannedStock1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jTextFieldKFP1SalesOrders1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jTextFieldDFP1SalesOrders" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                                   </Group>
@@ -2438,14 +2438,14 @@
                                   <Component id="jTextFieldKFE26WorkInProgress1" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jTextFieldKFE26ProductionOrders1" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jTextFieldKFE26PlannedStock1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextFieldKFE26SalesOrders1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextFieldDFE26SalesOrders" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel93" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabelDFPedalCpl" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabelKFE26OrdersInQueque1" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jTextFieldKFE51SalesOrders1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextFieldDFE51SalesOrders" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jTextFieldKFE51StockEndOfPeriod1" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jTextFieldKFE51OrdersInQueque1" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jTextFieldKFE51WorkInProgress1" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -2473,7 +2473,7 @@
                                           <Component id="jLabelKFE16OrdersInQueque1" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Component id="jTextFieldKFE16PlannedStock1" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextFieldKFE16SalesOrders1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextFieldDFE16SalesOrders" alignment="1" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -2482,7 +2482,7 @@
                                       <Component id="jTextFieldKFE17ProductionOrders1" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="jTextFieldKFE50SalesOrders1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jTextFieldDFE50SalesOrders" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jTextFieldKFE50StockEndOfPeriod1" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jTextFieldKFE50OrdersInQueque1" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jTextFieldKFE50WorkInProgress1" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -2507,7 +2507,7 @@
                                           </Group>
                                           <Group type="102" alignment="1" attributes="0">
                                               <Group type="103" groupAlignment="3" attributes="0">
-                                                  <Component id="jTextFieldKFE17SalesOrders1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jTextFieldDFE17SalesOrders" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   <Component id="jLabelKFE17OrdersInQueque1" alignment="3" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
@@ -2532,7 +2532,7 @@
                                   </Group>
                                   <Group type="103" alignment="1" groupAlignment="3" attributes="0">
                                       <Component id="jTextFieldKFE4PlannedStock1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextFieldKFE4SalesOrders1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextFieldDFE4SalesOrders" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabelKFE4OrdersInQueque1" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel99" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabelDFHinterradgruppe" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -2674,7 +2674,7 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextFieldKFP1SalesOrders1">
+                    <Component class="javax.swing.JTextField" name="jTextFieldDFP1SalesOrders">
                       <Properties>
                         <Property name="horizontalAlignment" type="int" value="4"/>
                         <Property name="enabled" type="boolean" value="false"/>
@@ -2683,7 +2683,7 @@
                         <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField(&quot;0&quot;)"/>
                       </AuxValues>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextFieldKFE51SalesOrders1">
+                    <Component class="javax.swing.JTextField" name="jTextFieldDFE51SalesOrders">
                       <Properties>
                         <Property name="horizontalAlignment" type="int" value="4"/>
                         <Property name="enabled" type="boolean" value="false"/>
@@ -2692,7 +2692,7 @@
                         <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
                       </AuxValues>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextFieldKFE16SalesOrders1">
+                    <Component class="javax.swing.JTextField" name="jTextFieldDFE16SalesOrders">
                       <Properties>
                         <Property name="horizontalAlignment" type="int" value="4"/>
                         <Property name="enabled" type="boolean" value="false"/>
@@ -2701,7 +2701,7 @@
                         <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
                       </AuxValues>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextFieldKFE50SalesOrders1">
+                    <Component class="javax.swing.JTextField" name="jTextFieldDFE50SalesOrders">
                       <Properties>
                         <Property name="horizontalAlignment" type="int" value="4"/>
                         <Property name="enabled" type="boolean" value="false"/>
@@ -2711,7 +2711,7 @@
                         <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="MainUI_jTextFieldKFE50SalesOrders"/>
                       </AuxValues>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextFieldKFE4SalesOrders1">
+                    <Component class="javax.swing.JTextField" name="jTextFieldDFE4SalesOrders">
                       <Properties>
                         <Property name="horizontalAlignment" type="int" value="4"/>
                         <Property name="enabled" type="boolean" value="false"/>
@@ -3592,7 +3592,7 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextFieldKFE26SalesOrders1">
+                    <Component class="javax.swing.JTextField" name="jTextFieldDFE26SalesOrders">
                       <Properties>
                         <Property name="horizontalAlignment" type="int" value="4"/>
                         <Property name="enabled" type="boolean" value="false"/>
@@ -3609,7 +3609,7 @@
                     </Component>
                     <Component class="javax.swing.JSeparator" name="jSeparator8">
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextFieldKFE17SalesOrders1">
+                    <Component class="javax.swing.JTextField" name="jTextFieldDFE17SalesOrders">
                       <Properties>
                         <Property name="horizontalAlignment" type="int" value="4"/>
                         <Property name="enabled" type="boolean" value="false"/>
