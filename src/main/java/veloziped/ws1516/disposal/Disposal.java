@@ -7,7 +7,10 @@ package veloziped.ws1516.disposal;
 
 import java.io.Console;
 import org.junit.experimental.results.PrintableResult;
+import veloziped.ws1516.articles.ArticleType;
+import veloziped.ws1516.articles.ExtendedArticle;
 import veloziped.ws1516.production.Forecast;
+import veloziped.ws1516.production.PeriodDetail;
 
 /**
  *
@@ -20,6 +23,8 @@ public class Disposal {
     private Forecast forecast;
     // Prod. Auftraege
     private long prodOrder;
+    // Period
+    private PeriodDetail period;
     // Produkte 1,2,3
     private long productAmount;
     // Verbindliche Aufträge
@@ -41,7 +46,8 @@ public class Disposal {
             long securityProvision,
             long storeLastPeriod,
             long waitingArticle,
-            long processingArticle) {
+            long processingArticle,
+            PeriodDetail period) {
         this.forecast = forecast;
         this.prodOrder = prodOrder;
         this.productAmount = productAmount;
@@ -50,6 +56,7 @@ public class Disposal {
         this.storeLastPeriod = storeLastPeriod;
         this.waitingArticle = waitingArticle;
         this.processingArticle = processingArticle;
+        //this.period = forecast.getPeriodN0();
     }
 
     long CalculateProdOrders(
@@ -63,63 +70,19 @@ public class Disposal {
         return param > 0 ? param : 0;
     }
 
-    public Forecast getForecast() {
-        return forecast;
-    }
+    /*void CalculateProdOrders(
+            ExtendedArticle article) {
+        if (article.getType().equals(ArticleType.P)) {
+            // TODO in Article property for ProdMenge
+            // TODO 
+            long pa = order + securityProvision - storeLastPeriod - waitingArticle - processingArticle;
+            article.setProdAmount(article.getProdAmount() > 0 ? article.getProdAmount() : 0);
+        } else {
+            PeriodDetail per = forecast.getPeriodN0();
+            this.prodOrder = article.getParentArticle().getProdAmount() > 0 ? article.getParentArticle().getProdAmount() : 0;
+            //if (parentArticle.) {
 
-    public long getProdOrder() {
-        return prodOrder;
-    }
-
-    public void setProdOrder(long prodOrder) {
-        this.prodOrder = prodOrder;
-    }
-
-    public long getProductAmount() {
-        return productAmount;
-    }
-
-    public void setProductAmount(long productAmount) {
-        this.productAmount = productAmount;
-    }
-
-    public long getOrder() {
-        return order;
-    }
-
-    public void setOrder(long order) {
-        this.order = order;
-    }
-
-    public long getSecurityProvision() {
-        return securityProvision;
-    }
-
-    public void setSecurityProvision(long securityProvision) {
-        this.securityProvision = securityProvision;
-    }
-
-    public long getStoreLastPeriod() {
-        return storeLastPeriod;
-    }
-
-    public void setStoreLastPeriod(long storeLastPeriod) {
-        this.storeLastPeriod = storeLastPeriod;
-    }
-
-    public long getWaitingArticle() {
-        return waitingArticle;
-    }
-
-    public void setWaitingArticle(long waitingArticle) {
-        this.waitingArticle = waitingArticle;
-    }
-
-    public long getProcessingArticle() {
-        return processingArticle;
-    }
-
-    public void setProcessingArticle(long processingArticle) {
-        this.processingArticle = processingArticle;
-    }
+            //}
+        }
+    }*/
 }
