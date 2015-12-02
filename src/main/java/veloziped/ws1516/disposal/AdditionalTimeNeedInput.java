@@ -18,7 +18,7 @@ import veloziped.ws1516.workplace.ExtendedWorkplace;
  */
 public class AdditionalTimeNeedInput {
 
-    Hashtable<String, String> WorkplacesHashTable;
+    static Hashtable<String, String> WorkplacesHashTable;
     private ExtendedWorkplace workplace;
     private ExtendedArticle article;
     private ArrayList<ExtendedWorkplace> workplacesList;
@@ -79,13 +79,13 @@ public class AdditionalTimeNeedInput {
         Keys in Form PX.WP.EX
         Values String dotseparated
      */
-    public int[] GetChildWorkplaces(int workplaceId, int articleId) {
+    public long[] GetChildWorkplaces(long workplaceId, long articleId) {
 
         String[] res = WorkplacesHashTable.get(workplaceId + "," + articleId).split(",");
 
-        int[] numbers = new int[res.length];
+        long[] numbers = new long[res.length];
         for (int i = 0; i < res.length; i++) {
-            numbers[i] = Integer.parseInt(res[i]);
+            numbers[i] = Long.parseLong(res[i]);
         }
         return numbers;
     }
