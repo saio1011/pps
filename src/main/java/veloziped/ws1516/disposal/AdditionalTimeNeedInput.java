@@ -18,7 +18,7 @@ import veloziped.ws1516.workplace.ExtendedWorkplace;
  */
 public class AdditionalTimeNeedInput {
 
-    Hashtable<String, String> WorkplacesHashTable = new Hashtable<>();
+    Hashtable<String, String> WorkplacesHashTable;
     private ExtendedWorkplace workplace;
     private ExtendedArticle article;
     private ArrayList<ExtendedWorkplace> workplacesList;
@@ -26,66 +26,70 @@ public class AdditionalTimeNeedInput {
     private long timeNeeded;
     private ArticleDelayTyp articleDelayTyp;
 
-    public AdditionalTimeNeedInput() {    }
+    public AdditionalTimeNeedInput() {
+        WorkplacesHashTable = new Hashtable<>();
+        WorkplacesHashTable.put("13,13", "12,8,7,9");
+        WorkplacesHashTable.put("12,13", "8,7,9");
+        WorkplacesHashTable.put("8,13", "7,9");
+        WorkplacesHashTable.put("7,13", "9");
+        WorkplacesHashTable.put("6,18", "8,7,9");
+        WorkplacesHashTable.put("8,18", "7,9");
+        WorkplacesHashTable.put("7,18", "9");
+        WorkplacesHashTable.put("10,7", "11");
+        WorkplacesHashTable.put("6,16", "14");
+        WorkplacesHashTable.put("10,4", "11");
+        WorkplacesHashTable.put("7,26", "15");
+        WorkplacesHashTable.put("13,10", "12,8,7,9");
+        WorkplacesHashTable.put("12,10", "8,7,9");
+        WorkplacesHashTable.put("8,10", "7,9");
+        WorkplacesHashTable.put("7,10", "9");
+        WorkplacesHashTable.put("10,8", "11");
+        WorkplacesHashTable.put("6,16", "14");
+        WorkplacesHashTable.put("10,5", "11");
+        WorkplacesHashTable.put("7,26", "15");
+        WorkplacesHashTable.put("13,11", "12,8,7,9");
+        WorkplacesHashTable.put("12,11", "8,7,9");
+        WorkplacesHashTable.put("8,11", "7,9");
+        WorkplacesHashTable.put("7,11", "9");
+        WorkplacesHashTable.put("6,19", "8,7,9");
+        WorkplacesHashTable.put("8,19", "7,9");
+        WorkplacesHashTable.put("7,19", "9");
+        WorkplacesHashTable.put("13,15", "12,8,7,9");
+        WorkplacesHashTable.put("12,15", "8,7,9");
+        WorkplacesHashTable.put("8,15", "7,9");
+        WorkplacesHashTable.put("7,15", "9");
+        WorkplacesHashTable.put("6,20", "8,7,9");
+        WorkplacesHashTable.put("8,20", "7,9");
+        WorkplacesHashTable.put("7,20", "9");
+        WorkplacesHashTable.put("10,9", "11");
+        WorkplacesHashTable.put("10,6", "11");
+        WorkplacesHashTable.put("6,16", "14");
+        WorkplacesHashTable.put("7,26", "15");
+        WorkplacesHashTable.put("13,12", "12,8,7,9");
+        WorkplacesHashTable.put("12,12", "8,7,9");
+        WorkplacesHashTable.put("8,12", "7,9");
+        WorkplacesHashTable.put("7,12", "9");
+        WorkplacesHashTable.put("13,14", "12,8,7,9");
+        WorkplacesHashTable.put("12,14", "8,7,9");
+        WorkplacesHashTable.put("8,14", "7,9");
+        WorkplacesHashTable.put("7,14", "9");
+    }
 
     /* The WPs in Line P1
         Keys in Form PX.WP.EX
         Values String dotseparated
      */
-    public String GetChildWorkplaces(String produktId, String workplaceId, String articleId) {
+    public int[] GetChildWorkplaces(int workplaceId, int articleId) {
 
-        WorkplacesHashTable.put("1.9.13", "13.12.8.7");
-        WorkplacesHashTable.put("1.7.13", "13.12.8");
-        WorkplacesHashTable.put("1.8.13", "13.12");
-        WorkplacesHashTable.put("1.12.13", "13");
-        WorkplacesHashTable.put("1.9.18", "6.8.7");
-        WorkplacesHashTable.put("1.7.18", "6.8");
-        WorkplacesHashTable.put("1.8.18", "6");
-        WorkplacesHashTable.put("1.14.16", "6");
-        WorkplacesHashTable.put("1.11.7", "10");
-        WorkplacesHashTable.put("1.11.4", "10");
-        WorkplacesHashTable.put("1.15.26", "7");
-        WorkplacesHashTable.put("1.9.10", "13.12.8.7");
-        WorkplacesHashTable.put("1.7.10", "13.12.8");
-        WorkplacesHashTable.put("1.8.10", "13.12");
-        WorkplacesHashTable.put("1.12.10", "13");
-        WorkplacesHashTable.put("2.9.14", "13.12.8.7");
-        WorkplacesHashTable.put("2.7.14", "13.12.8");
-        WorkplacesHashTable.put("2.8.14", "13.12");
-        WorkplacesHashTable.put("2.12.14", "13");
-        WorkplacesHashTable.put("2.14.16", "6");
-        WorkplacesHashTable.put("2.9.19", "6.8.7");
-        WorkplacesHashTable.put("2.7.19", "6.8");
-        WorkplacesHashTable.put("2.8.19", "6");
-        WorkplacesHashTable.put("2.11.8", "10");
-        WorkplacesHashTable.put("2.15.26", "7");
-        WorkplacesHashTable.put("2.11.5", "10");
-        WorkplacesHashTable.put("2.9.11", "13.12.8.7");
-        WorkplacesHashTable.put("2.7.11", "13.12.8");
-        WorkplacesHashTable.put("2.8.11", "13.12");
-        WorkplacesHashTable.put("2.12.11", "13");
-        WorkplacesHashTable.put("3.9.15", "13.12.8.7");
-        WorkplacesHashTable.put("3.7.15", "13.12.8");
-        WorkplacesHashTable.put("3.8.15", "13.12");
-        WorkplacesHashTable.put("3.12.15", "13");
-        WorkplacesHashTable.put("3.14.16", "6");
-        WorkplacesHashTable.put("3.9.20", "6.8.7");
-        WorkplacesHashTable.put("3.7.20", "6.8");
-        WorkplacesHashTable.put("3.8.20", "6");
-        WorkplacesHashTable.put("3.11.9", "10");
-        WorkplacesHashTable.put("3.14.16", "6");
-        WorkplacesHashTable.put("3.11.6", "10");
-        WorkplacesHashTable.put("3.15.26", "7");
-        WorkplacesHashTable.put("3.9.12", "13.12.8.7");
-        WorkplacesHashTable.put("3.7.12", "13.12.8");
-        WorkplacesHashTable.put("3.8.12", "13.12");
-        WorkplacesHashTable.put("3.12.12", "13");
+        String[] res = WorkplacesHashTable.get(workplaceId + "," + articleId).split(",");
 
-        return WorkplacesHashTable.get( produktId + "." + workplaceId + "." + articleId);
-    };
+        int[] numbers = new int[res.length];
+        for (int i = 0; i < res.length; i++) {
+            numbers[i] = Integer.parseInt(res[i]);
+        }
+        return numbers;
+    }
 
-    
-   
     public ExtendedWorkplace getWorkplace() {
         return workplace;
     }
