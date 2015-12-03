@@ -218,76 +218,76 @@ public class MainUI extends javax.swing.JFrame {
         jLabelKFOrdersInQueque1 = new javax.swing.JLabel();
         jLabelKFWorkInProgress1 = new javax.swing.JLabel();
         jLabelKFProductionOrders1 = new javax.swing.JLabel();
-        jTextFieldDFP1SalesOrders = new IntegerField("0");
-        jTextFieldDFE51SalesOrders = new IntegerField();
+        jTextFieldDFP2SalesOrders = new IntegerField("0");
+        jTextFieldDFE56SalesOrders = new IntegerField();
         jTextFieldDFE16SalesOrders = new IntegerField();
-        jTextFieldDFE50SalesOrders = new IntegerField();
-        jTextFieldDFE4SalesOrders = new IntegerField();
-        jTextFieldKFE10SalesOrders1 = new IntegerField();
-        jTextFieldKFE49SalesOrders1 = new IntegerField();
-        jTextFieldKFE7SalesOrders1 = new IntegerField();
-        jTextFieldKFE13SalesOrders1 = new IntegerField();
-        jTextFieldKFE18SalesOrders1 = new IntegerField();
-        jTextFieldKFE26StockEndOfPeriod1 = new IntegerField();
-        jTextFieldKFP1StockEndOfPeriod1 = new IntegerField();
-        jTextFieldKFE51StockEndOfPeriod1 = new IntegerField();
-        jTextFieldKFE17StockEndOfPeriod1 = new IntegerField();
-        jTextFieldKFE16StockEndOfPeriod1 = new IntegerField();
-        jTextFieldKFE50StockEndOfPeriod1 = new IntegerField();
-        jTextFieldKFE10StockEndOfPeriod1 = new IntegerField();
-        jTextFieldKFE4StockEndOfPeriod1 = new IntegerField();
-        jTextFieldKFE49StockEndOfPeriod1 = new IntegerField();
-        jTextFieldKFE13StockEndOfPeriod1 = new IntegerField();
-        jTextFieldKFE7StockEndOfPeriod1 = new IntegerField();
-        jTextFieldKFE18StockEndOfPeriod1 = new IntegerField();
-        jTextFieldKFE26OrdersInQueque1 = new IntegerField();
-        jTextFieldKFP1OrdersInQueque1 = new IntegerField();
-        jTextFieldKFE51OrdersInQueque1 = new IntegerField();
-        jTextFieldKFE16OrdersInQueque1 = new IntegerField();
-        jTextFieldKFE17OrdersInQueque1 = new IntegerField();
-        jTextFieldKFE50OrdersInQueque1 = new IntegerField();
-        jTextFieldKFE4OrdersInQueque1 = new IntegerField();
-        jTextFieldKFE10OrdersInQueque1 = new IntegerField();
-        jTextFieldKFE49OrdersInQueque1 = new IntegerField();
-        jTextFieldKFE7OrdersInQueque1 = new IntegerField();
-        jTextFieldKFE13OrdersInQueque1 = new IntegerField();
-        jTextFieldKFE18OrdersInQueque1 = new IntegerField();
-        jTextFieldKFE26WorkInProgress1 = new IntegerField();
-        jTextFieldKFP1WorkInProgress1 = new IntegerField();
-        jTextFieldKFE51WorkInProgress1 = new IntegerField();
-        jTextFieldKFE16WorkInProgress1 = new IntegerField();
-        jTextFieldKFE17WorkInProgress1 = new IntegerField();
-        jTextFieldKFE50WorkInProgress1 = new IntegerField();
-        jTextFieldKFE4WorkInProgress1 = new IntegerField();
-        jTextFieldKFE10WorkInProgress1 = new IntegerField();
-        jTextFieldKFE49WorkInProgress1 = new IntegerField();
-        jTextFieldKFE7WorkInProgress1 = new IntegerField();
-        jTextFieldKFE13WorkInProgress1 = new IntegerField();
-        jTextFieldKFE18WorkInProgress1 = new IntegerField();
-        jTextFieldKFE26ProductionOrders1 = new IntegerField();
-        jTextFieldKFE51ProductionOrders1 = new IntegerField();
-        jTextFieldKFP1ProductionOrders1 = new IntegerField();
-        jTextFieldKFE16ProductionOrders1 = new IntegerField();
-        jTextFieldKFE17ProductionOrders1 = new IntegerField();
-        jTextFieldKFE50ProductionOrders1 = new IntegerField();
-        jTextFieldKFE4ProductionOrders1 = new IntegerField();
-        jTextFieldKFE10ProductionOrders1 = new IntegerField();
-        jTextFieldKFE49ProductionOrders1 = new IntegerField();
-        jTextFieldKFE7ProductionOrders1 = new IntegerField();
-        jTextFieldKFE13ProductionOrders1 = new IntegerField();
-        jTextFieldKFE18ProductionOrders1 = new IntegerField();
-        jTextFieldKFP1PlannedStock1 = new IntegerField();
-        jTextFieldKFE26PlannedStock1 = new IntegerField();
-        jTextFieldKFE51PlannedStock1 = new IntegerField();
-        jTextFieldKFE16PlannedStock1 = new IntegerField();
-        jTextFieldKFE17PlannedStock1 = new IntegerField();
-        jTextFieldKFE50PlannedStock1 = new IntegerField();
-        jTextFieldKFE4PlannedStock1 = new IntegerField();
-        jTextFieldKFE10PlannedStock1 = new IntegerField();
-        jTextFieldKFE49PlannedStock1 = new IntegerField();
-        jTextFieldKFE7PlannedStock1 = new IntegerField();
-        jTextFieldKFE13PlannedStock1 = new IntegerField();
-        jTextFieldKFE18PlannedStock1 = new IntegerField();
+        jTextFieldDFE55SalesOrders = new IntegerField();
+        jTextFieldDFE5SalesOrders = new IntegerField();
+        jTextFieldDFE11SalesOrders = new IntegerField();
+        jTextFieldDFE54SalesOrders = new IntegerField();
+        jTextFieldDFE8SalesOrders = new IntegerField();
+        jTextFieldDFE14SalesOrders = new IntegerField();
+        jTextFieldDFE19SalesOrders = new IntegerField();
+        jTextFieldDFE26StockEndOfPeriod = new IntegerField();
+        jTextFieldDFP2StockEndOfPeriod = new IntegerField();
+        jTextFieldDFE56StockEndOfPeriod = new IntegerField();
+        jTextFieldDFE17StockEndOfPeriod = new IntegerField();
+        jTextFieldDFE16StockEndOfPeriod = new IntegerField();
+        jTextFieldDFE55StockEndOfPeriod = new IntegerField();
+        jTextFieldDFE11StockEndOfPeriod = new IntegerField();
+        jTextFieldDFE5StockEndOfPeriod = new IntegerField();
+        jTextFieldDFE54StockEndOfPeriod = new IntegerField();
+        jTextFieldDFE14StockEndOfPeriod = new IntegerField();
+        jTextFieldDFE8StockEndOfPeriod = new IntegerField();
+        jTextFieldDFE19StockEndOfPeriod = new IntegerField();
+        jTextFieldDFE26OrdersInQueque = new IntegerField();
+        jTextFieldDFP2OrdersInQueque = new IntegerField();
+        jTextFieldDFE56OrdersInQueque = new IntegerField();
+        jTextFieldDFE16OrdersInQueque = new IntegerField();
+        jTextFieldDFE17OrdersInQueque = new IntegerField();
+        jTextFieldDFE55OrdersInQueque = new IntegerField();
+        jTextFieldDFE5OrdersInQueque = new IntegerField();
+        jTextFieldDFE11OrdersInQueque = new IntegerField();
+        jTextFieldDFE54OrdersInQueque = new IntegerField();
+        jTextFieldDFE8OrdersInQueque = new IntegerField();
+        jTextFieldDFE14OrdersInQueque = new IntegerField();
+        jTextFieldDFE19OrdersInQueque = new IntegerField();
+        jTextFieldDFE26WorkInProgress = new IntegerField();
+        jTextFieldDFP2WorkInProgress = new IntegerField();
+        jTextFieldDFE56WorkInProgress = new IntegerField();
+        jTextFieldDFE16WorkInProgress = new IntegerField();
+        jTextFieldDFE17WorkInProgress = new IntegerField();
+        jTextFieldDFE55WorkInProgress = new IntegerField();
+        jTextFieldDFE5WorkInProgress = new IntegerField();
+        jTextFieldDFE11WorkInProgress = new IntegerField();
+        jTextFieldDFE54WorkInProgress = new IntegerField();
+        jTextFieldDFE8WorkInProgress = new IntegerField();
+        jTextFieldDFE14WorkInProgress = new IntegerField();
+        jTextFieldDFE19WorkInProgress = new IntegerField();
+        jTextFieldDFE26ProductionOrders = new IntegerField();
+        jTextFieldDFE56ProductionOrders = new IntegerField();
+        jTextFieldDFP2ProductionOrders = new IntegerField();
+        jTextFieldDFE16ProductionOrders = new IntegerField();
+        jTextFieldDFE17ProductionOrders = new IntegerField();
+        jTextFieldDFE55ProductionOrders = new IntegerField();
+        jTextFieldDFE5ProductionOrders = new IntegerField();
+        jTextFieldDFE11ProductionOrders = new IntegerField();
+        jTextFieldDFE54ProductionOrders = new IntegerField();
+        jTextFieldDFE8ProductionOrders = new IntegerField();
+        jTextFieldDFE14ProductionOrders = new IntegerField();
+        jTextFieldDFE19ProductionOrders = new IntegerField();
+        jTextFieldDFP2PlannedStock = new IntegerField();
+        jTextFieldDFE26PlannedStock = new IntegerField();
+        jTextFieldDFE56PlannedStock = new IntegerField();
+        jTextFieldKDFE16PlannedStock = new IntegerField();
+        jTextFieldDFE17PlannedStock = new IntegerField();
+        jTextFieldDFE55PlannedStock = new IntegerField();
+        jTextFieldDFE5PlannedStock = new IntegerField();
+        jTextFieldDFE11PlannedStock = new IntegerField();
+        jTextFieldDFE54PlannedStock = new IntegerField();
+        jTextFieldDFE8PlannedStock = new IntegerField();
+        jTextFieldDFE14PlannedStock = new IntegerField();
+        jTextFieldKDFE19PlannedStock = new IntegerField();
         jLabelDFPedalCpl = new javax.swing.JLabel();
         jLabelDFFahrradOPedal = new javax.swing.JLabel();
         jLabelDFLenkerCpl = new javax.swing.JLabel();
@@ -318,17 +318,17 @@ public class MainUI extends javax.swing.JFrame {
         jSeparator8 = new javax.swing.JSeparator();
         jTextFieldDFE17SalesOrders = new IntegerField();
         jLabelKFPlannedStock1 = new javax.swing.JLabel();
-        jLabelKFE26OrdersInQueque1 = new javax.swing.JLabel();
-        jLabelKFE51OrdersInQueque1 = new javax.swing.JLabel();
-        jLabelKFE16OrdersInQueque1 = new javax.swing.JLabel();
-        jLabelKFE17OrdersInQueque1 = new javax.swing.JLabel();
-        jLabelKFE50OrdersInQueque1 = new javax.swing.JLabel();
-        jLabelKFE4OrdersInQueque1 = new javax.swing.JLabel();
-        jLabelKFE10OrdersInQueque1 = new javax.swing.JLabel();
-        jLabelKFE49OrdersInQueque1 = new javax.swing.JLabel();
-        jLabelKFE7OrdersInQueque1 = new javax.swing.JLabel();
-        jLabelKFE13OrdersInQueque1 = new javax.swing.JLabel();
-        jLabelKFE18OrdersInQueque1 = new javax.swing.JLabel();
+        jLabelDFE26OrdersInQueque = new javax.swing.JLabel();
+        jLabelKDE56OrdersInQueque = new javax.swing.JLabel();
+        jLabelKDE16OrdersInQueque = new javax.swing.JLabel();
+        jLabelDFE17OrdersInQueque = new javax.swing.JLabel();
+        jLabelDFE55OrdersInQueque = new javax.swing.JLabel();
+        jLabelDFE5OrdersInQueque = new javax.swing.JLabel();
+        jLabelDFE11OrdersInQueque = new javax.swing.JLabel();
+        jLabelDFE54OrdersInQueque = new javax.swing.JLabel();
+        jLabelDFE8OrdersInQueque = new javax.swing.JLabel();
+        jLabelDFE14OrdersInQueque = new javax.swing.JLabel();
+        jLabelDFE19OrdersInQueque = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuFile = new javax.swing.JMenu();
         jMenuItemImportFile = new javax.swing.JMenuItem();
@@ -1234,167 +1234,167 @@ public class MainUI extends javax.swing.JFrame {
         jLabelKFProductionOrders1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelKFProductionOrders1.setText(bundle.getString("ProductionOrders")); // NOI18N
 
-        jTextFieldDFP1SalesOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextFieldDFP1SalesOrders.setEnabled(false);
+        jTextFieldDFP2SalesOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFP2SalesOrders.setEnabled(false);
 
-        jTextFieldDFE51SalesOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextFieldDFE51SalesOrders.setEnabled(false);
+        jTextFieldDFE56SalesOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE56SalesOrders.setEnabled(false);
 
         jTextFieldDFE16SalesOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextFieldDFE16SalesOrders.setEnabled(false);
 
-        jTextFieldDFE50SalesOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextFieldDFE50SalesOrders.setEnabled(false);
+        jTextFieldDFE55SalesOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE55SalesOrders.setEnabled(false);
 
-        jTextFieldDFE4SalesOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextFieldDFE4SalesOrders.setEnabled(false);
+        jTextFieldDFE5SalesOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE5SalesOrders.setEnabled(false);
 
-        jTextFieldKFE10SalesOrders1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextFieldKFE10SalesOrders1.setEnabled(false);
+        jTextFieldDFE11SalesOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE11SalesOrders.setEnabled(false);
 
-        jTextFieldKFE49SalesOrders1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextFieldKFE49SalesOrders1.setEnabled(false);
+        jTextFieldDFE54SalesOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE54SalesOrders.setEnabled(false);
 
-        jTextFieldKFE7SalesOrders1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextFieldKFE7SalesOrders1.setEnabled(false);
+        jTextFieldDFE8SalesOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE8SalesOrders.setEnabled(false);
 
-        jTextFieldKFE13SalesOrders1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextFieldKFE13SalesOrders1.setEnabled(false);
+        jTextFieldDFE14SalesOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE14SalesOrders.setEnabled(false);
 
-        jTextFieldKFE18SalesOrders1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextFieldKFE18SalesOrders1.setEnabled(false);
+        jTextFieldDFE19SalesOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE19SalesOrders.setEnabled(false);
 
-        jTextFieldKFE26StockEndOfPeriod1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE26StockEndOfPeriod.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextFieldKFP1StockEndOfPeriod1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFP2StockEndOfPeriod.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextFieldKFE51StockEndOfPeriod1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE56StockEndOfPeriod.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextFieldKFE17StockEndOfPeriod1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE17StockEndOfPeriod.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextFieldKFE16StockEndOfPeriod1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE16StockEndOfPeriod.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextFieldKFE50StockEndOfPeriod1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE55StockEndOfPeriod.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextFieldKFE10StockEndOfPeriod1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE11StockEndOfPeriod.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextFieldKFE4StockEndOfPeriod1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE5StockEndOfPeriod.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextFieldKFE49StockEndOfPeriod1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE54StockEndOfPeriod.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextFieldKFE13StockEndOfPeriod1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE14StockEndOfPeriod.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextFieldKFE7StockEndOfPeriod1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE8StockEndOfPeriod.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextFieldKFE18StockEndOfPeriod1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE19StockEndOfPeriod.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextFieldKFE26OrdersInQueque1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE26OrdersInQueque.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextFieldKFP1OrdersInQueque1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFP2OrdersInQueque.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextFieldKFE51OrdersInQueque1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE56OrdersInQueque.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextFieldKFE16OrdersInQueque1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE16OrdersInQueque.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextFieldKFE17OrdersInQueque1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE17OrdersInQueque.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextFieldKFE50OrdersInQueque1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE55OrdersInQueque.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextFieldKFE4OrdersInQueque1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE5OrdersInQueque.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextFieldKFE10OrdersInQueque1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE11OrdersInQueque.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextFieldKFE49OrdersInQueque1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE54OrdersInQueque.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextFieldKFE7OrdersInQueque1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE8OrdersInQueque.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextFieldKFE13OrdersInQueque1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE14OrdersInQueque.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextFieldKFE18OrdersInQueque1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE19OrdersInQueque.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextFieldKFE26WorkInProgress1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE26WorkInProgress.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextFieldKFP1WorkInProgress1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFP2WorkInProgress.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextFieldKFE51WorkInProgress1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE56WorkInProgress.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextFieldKFE16WorkInProgress1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE16WorkInProgress.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextFieldKFE17WorkInProgress1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE17WorkInProgress.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextFieldKFE50WorkInProgress1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE55WorkInProgress.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextFieldKFE4WorkInProgress1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE5WorkInProgress.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextFieldKFE10WorkInProgress1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE11WorkInProgress.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextFieldKFE49WorkInProgress1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE54WorkInProgress.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextFieldKFE7WorkInProgress1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE8WorkInProgress.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextFieldKFE13WorkInProgress1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE14WorkInProgress.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextFieldKFE18WorkInProgress1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE19WorkInProgress.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextFieldKFE26ProductionOrders1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextFieldKFE26ProductionOrders1.setEnabled(false);
+        jTextFieldDFE26ProductionOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE26ProductionOrders.setEnabled(false);
 
-        jTextFieldKFE51ProductionOrders1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextFieldKFE51ProductionOrders1.setEnabled(false);
+        jTextFieldDFE56ProductionOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE56ProductionOrders.setEnabled(false);
 
-        jTextFieldKFP1ProductionOrders1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextFieldKFP1ProductionOrders1.setEnabled(false);
+        jTextFieldDFP2ProductionOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFP2ProductionOrders.setEnabled(false);
 
-        jTextFieldKFE16ProductionOrders1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextFieldKFE16ProductionOrders1.setEnabled(false);
+        jTextFieldDFE16ProductionOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE16ProductionOrders.setEnabled(false);
 
-        jTextFieldKFE17ProductionOrders1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextFieldKFE17ProductionOrders1.setEnabled(false);
+        jTextFieldDFE17ProductionOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE17ProductionOrders.setEnabled(false);
 
-        jTextFieldKFE50ProductionOrders1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextFieldKFE50ProductionOrders1.setEnabled(false);
+        jTextFieldDFE55ProductionOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE55ProductionOrders.setEnabled(false);
 
-        jTextFieldKFE4ProductionOrders1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextFieldKFE4ProductionOrders1.setEnabled(false);
+        jTextFieldDFE5ProductionOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE5ProductionOrders.setEnabled(false);
 
-        jTextFieldKFE10ProductionOrders1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextFieldKFE10ProductionOrders1.setEnabled(false);
+        jTextFieldDFE11ProductionOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE11ProductionOrders.setEnabled(false);
 
-        jTextFieldKFE49ProductionOrders1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextFieldKFE49ProductionOrders1.setEnabled(false);
+        jTextFieldDFE54ProductionOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE54ProductionOrders.setEnabled(false);
 
-        jTextFieldKFE7ProductionOrders1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextFieldKFE7ProductionOrders1.setEnabled(false);
+        jTextFieldDFE8ProductionOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE8ProductionOrders.setEnabled(false);
 
-        jTextFieldKFE13ProductionOrders1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextFieldKFE13ProductionOrders1.setEnabled(false);
+        jTextFieldDFE14ProductionOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE14ProductionOrders.setEnabled(false);
 
-        jTextFieldKFE18ProductionOrders1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextFieldKFE18ProductionOrders1.setEnabled(false);
+        jTextFieldDFE19ProductionOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE19ProductionOrders.setEnabled(false);
 
-        jTextFieldKFP1PlannedStock1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFP2PlannedStock.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextFieldKFE26PlannedStock1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE26PlannedStock.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextFieldKFE51PlannedStock1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE56PlannedStock.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextFieldKFE16PlannedStock1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKDFE16PlannedStock.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextFieldKFE17PlannedStock1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE17PlannedStock.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextFieldKFE50PlannedStock1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE55PlannedStock.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextFieldKFE4PlannedStock1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE5PlannedStock.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextFieldKFE10PlannedStock1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE11PlannedStock.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextFieldKFE49PlannedStock1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE54PlannedStock.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextFieldKFE7PlannedStock1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE8PlannedStock.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextFieldKFE13PlannedStock1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE14PlannedStock.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jTextFieldKFE18PlannedStock1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldKDFE19PlannedStock.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
         jLabelDFPedalCpl.setText(bundle.getString("PedalCpl")); // NOI18N
 
@@ -1458,7 +1458,7 @@ public class MainUI extends javax.swing.JFrame {
         jLabel94.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabel94.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabel95.setText("E51");
+        jLabel95.setText("E56");
         jLabel95.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabel95.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabel95.setPreferredSize(new java.awt.Dimension(60, 16));
@@ -1473,37 +1473,37 @@ public class MainUI extends javax.swing.JFrame {
         jLabel97.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabel97.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabel98.setText("E50");
+        jLabel98.setText("E55");
         jLabel98.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabel98.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabel98.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabel99.setText("E4");
+        jLabel99.setText("E5");
         jLabel99.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabel99.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabel99.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabel100.setText("E10");
+        jLabel100.setText("E11");
         jLabel100.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabel100.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabel100.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabel101.setText("E49");
+        jLabel101.setText("E54");
         jLabel101.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabel101.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabel101.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabel102.setText("E7");
+        jLabel102.setText("E8");
         jLabel102.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabel102.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabel102.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabel103.setText("E13");
+        jLabel103.setText("E14");
         jLabel103.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabel103.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabel103.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabel104.setText("E18");
+        jLabel104.setText("E19");
         jLabel104.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabel104.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabel104.setPreferredSize(new java.awt.Dimension(60, 16));
@@ -1517,60 +1517,60 @@ public class MainUI extends javax.swing.JFrame {
         jLabelKFPlannedStock1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelKFPlannedStock1.setText(bundle.getString("PlannedStock")); // NOI18N
 
-        jLabelKFE26OrdersInQueque1.setText("0");
-        jLabelKFE26OrdersInQueque1.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabelKFE26OrdersInQueque1.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabelKFE26OrdersInQueque1.setPreferredSize(new java.awt.Dimension(60, 16));
+        jLabelDFE26OrdersInQueque.setText("0");
+        jLabelDFE26OrdersInQueque.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabelDFE26OrdersInQueque.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelDFE26OrdersInQueque.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabelKFE51OrdersInQueque1.setText("0");
-        jLabelKFE51OrdersInQueque1.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabelKFE51OrdersInQueque1.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabelKFE51OrdersInQueque1.setPreferredSize(new java.awt.Dimension(60, 16));
+        jLabelKDE56OrdersInQueque.setText("0");
+        jLabelKDE56OrdersInQueque.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabelKDE56OrdersInQueque.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelKDE56OrdersInQueque.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabelKFE16OrdersInQueque1.setText("0");
-        jLabelKFE16OrdersInQueque1.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabelKFE16OrdersInQueque1.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabelKFE16OrdersInQueque1.setPreferredSize(new java.awt.Dimension(60, 16));
+        jLabelKDE16OrdersInQueque.setText("0");
+        jLabelKDE16OrdersInQueque.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabelKDE16OrdersInQueque.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelKDE16OrdersInQueque.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabelKFE17OrdersInQueque1.setText("0");
-        jLabelKFE17OrdersInQueque1.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabelKFE17OrdersInQueque1.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabelKFE17OrdersInQueque1.setPreferredSize(new java.awt.Dimension(60, 16));
+        jLabelDFE17OrdersInQueque.setText("0");
+        jLabelDFE17OrdersInQueque.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabelDFE17OrdersInQueque.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelDFE17OrdersInQueque.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabelKFE50OrdersInQueque1.setText("0");
-        jLabelKFE50OrdersInQueque1.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabelKFE50OrdersInQueque1.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabelKFE50OrdersInQueque1.setPreferredSize(new java.awt.Dimension(60, 16));
+        jLabelDFE55OrdersInQueque.setText("0");
+        jLabelDFE55OrdersInQueque.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabelDFE55OrdersInQueque.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelDFE55OrdersInQueque.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabelKFE4OrdersInQueque1.setText("0");
-        jLabelKFE4OrdersInQueque1.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabelKFE4OrdersInQueque1.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabelKFE4OrdersInQueque1.setPreferredSize(new java.awt.Dimension(60, 16));
+        jLabelDFE5OrdersInQueque.setText("0");
+        jLabelDFE5OrdersInQueque.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabelDFE5OrdersInQueque.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelDFE5OrdersInQueque.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabelKFE10OrdersInQueque1.setText("0");
-        jLabelKFE10OrdersInQueque1.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabelKFE10OrdersInQueque1.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabelKFE10OrdersInQueque1.setPreferredSize(new java.awt.Dimension(60, 16));
+        jLabelDFE11OrdersInQueque.setText("0");
+        jLabelDFE11OrdersInQueque.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabelDFE11OrdersInQueque.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelDFE11OrdersInQueque.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabelKFE49OrdersInQueque1.setText("0");
-        jLabelKFE49OrdersInQueque1.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabelKFE49OrdersInQueque1.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabelKFE49OrdersInQueque1.setPreferredSize(new java.awt.Dimension(60, 16));
+        jLabelDFE54OrdersInQueque.setText("0");
+        jLabelDFE54OrdersInQueque.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabelDFE54OrdersInQueque.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelDFE54OrdersInQueque.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabelKFE7OrdersInQueque1.setText("0");
-        jLabelKFE7OrdersInQueque1.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabelKFE7OrdersInQueque1.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabelKFE7OrdersInQueque1.setPreferredSize(new java.awt.Dimension(60, 16));
+        jLabelDFE8OrdersInQueque.setText("0");
+        jLabelDFE8OrdersInQueque.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabelDFE8OrdersInQueque.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelDFE8OrdersInQueque.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabelKFE13OrdersInQueque1.setText("0");
-        jLabelKFE13OrdersInQueque1.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabelKFE13OrdersInQueque1.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabelKFE13OrdersInQueque1.setPreferredSize(new java.awt.Dimension(60, 16));
+        jLabelDFE14OrdersInQueque.setText("0");
+        jLabelDFE14OrdersInQueque.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabelDFE14OrdersInQueque.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelDFE14OrdersInQueque.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabelKFE18OrdersInQueque1.setText("0");
-        jLabelKFE18OrdersInQueque1.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabelKFE18OrdersInQueque1.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabelKFE18OrdersInQueque1.setPreferredSize(new java.awt.Dimension(60, 16));
+        jLabelDFE19OrdersInQueque.setText("0");
+        jLabelDFE19OrdersInQueque.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabelDFE19OrdersInQueque.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelDFE19OrdersInQueque.setPreferredSize(new java.awt.Dimension(60, 16));
 
         javax.swing.GroupLayout jPanelDFLayout = new javax.swing.GroupLayout(jPanelDF);
         jPanelDF.setLayout(jPanelDFLayout);
@@ -1636,35 +1636,35 @@ public class MainUI extends javax.swing.JFrame {
                                             .addComponent(jLabel100, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE))))))
                         .addGap(45, 45, 45)
                         .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabelKFE4OrdersInQueque1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelKFE17OrdersInQueque1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelKFE50OrdersInQueque1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelKFE16OrdersInQueque1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelKFE26OrdersInQueque1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelKFE51OrdersInQueque1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelKFE10OrdersInQueque1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelKFE49OrdersInQueque1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelKFE7OrdersInQueque1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelKFE13OrdersInQueque1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelKFE18OrdersInQueque1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabelDFE5OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelDFE17OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelDFE55OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelKDE16OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelDFE26OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelKDE56OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelDFE11OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelDFE54OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelDFE8OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelDFE14OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelDFE19OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(52, 52, 52)
                         .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jTextFieldDFP1SalesOrders, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldDFP2SalesOrders, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jTextFieldDFE51SalesOrders, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                                .addComponent(jTextFieldDFE56SalesOrders, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
                                 .addComponent(jTextFieldDFE26SalesOrders, javax.swing.GroupLayout.Alignment.LEADING))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jTextFieldDFE50SalesOrders, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                                .addComponent(jTextFieldDFE55SalesOrders, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
                                 .addComponent(jTextFieldDFE17SalesOrders, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jTextFieldDFE16SalesOrders, javax.swing.GroupLayout.Alignment.LEADING))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jTextFieldKFE49SalesOrders1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-                                .addComponent(jTextFieldKFE10SalesOrders1, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jTextFieldDFE4SalesOrders, javax.swing.GroupLayout.Alignment.LEADING))
+                                .addComponent(jTextFieldDFE54SalesOrders, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                                .addComponent(jTextFieldDFE11SalesOrders, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jTextFieldDFE5SalesOrders, javax.swing.GroupLayout.Alignment.LEADING))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jTextFieldKFE18SalesOrders1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-                                .addComponent(jTextFieldKFE13SalesOrders1, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jTextFieldKFE7SalesOrders1, javax.swing.GroupLayout.Alignment.LEADING))))
+                                .addComponent(jTextFieldDFE19SalesOrders, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                                .addComponent(jTextFieldDFE14SalesOrders, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jTextFieldDFE8SalesOrders, javax.swing.GroupLayout.Alignment.LEADING))))
                     .addGroup(jPanelDFLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jLabelKFSalesOrders1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -1674,105 +1674,105 @@ public class MainUI extends javax.swing.JFrame {
                         .addComponent(jLabelKFPlannedStock1, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel5))
-                    .addComponent(jTextFieldKFP1PlannedStock1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldDFP2PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jTextFieldKFE51PlannedStock1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-                        .addComponent(jTextFieldKFE26PlannedStock1, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addComponent(jTextFieldDFE56PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                        .addComponent(jTextFieldDFE26PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jTextFieldKFE50PlannedStock1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-                        .addComponent(jTextFieldKFE17PlannedStock1, javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jTextFieldKFE16PlannedStock1, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addComponent(jTextFieldDFE55PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                        .addComponent(jTextFieldDFE17PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jTextFieldKDFE16PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jTextFieldKFE49PlannedStock1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-                        .addComponent(jTextFieldKFE10PlannedStock1, javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jTextFieldKFE4PlannedStock1, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addComponent(jTextFieldDFE54PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                        .addComponent(jTextFieldDFE11PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jTextFieldDFE5PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jTextFieldKFE18PlannedStock1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-                        .addComponent(jTextFieldKFE13PlannedStock1, javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jTextFieldKFE7PlannedStock1, javax.swing.GroupLayout.Alignment.TRAILING)))
+                        .addComponent(jTextFieldKDFE19PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                        .addComponent(jTextFieldDFE14PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jTextFieldDFE8PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
                 .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextFieldKFP1StockEndOfPeriod1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldDFP2StockEndOfPeriod, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jTextFieldKFE51StockEndOfPeriod1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-                        .addComponent(jTextFieldKFE26StockEndOfPeriod1, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addComponent(jTextFieldDFE56StockEndOfPeriod, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                        .addComponent(jTextFieldDFE26StockEndOfPeriod, javax.swing.GroupLayout.Alignment.TRAILING))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jTextFieldKFE50StockEndOfPeriod1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextFieldDFE55StockEndOfPeriod, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextFieldKFE17StockEndOfPeriod1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-                            .addComponent(jTextFieldKFE16StockEndOfPeriod1, javax.swing.GroupLayout.Alignment.TRAILING)))
+                            .addComponent(jTextFieldDFE17StockEndOfPeriod, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                            .addComponent(jTextFieldDFE16StockEndOfPeriod, javax.swing.GroupLayout.Alignment.TRAILING)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jTextFieldKFE49StockEndOfPeriod1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-                        .addComponent(jTextFieldKFE10StockEndOfPeriod1, javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jTextFieldKFE4StockEndOfPeriod1, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addComponent(jTextFieldDFE54StockEndOfPeriod, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                        .addComponent(jTextFieldDFE11StockEndOfPeriod, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jTextFieldDFE5StockEndOfPeriod, javax.swing.GroupLayout.Alignment.TRAILING))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jTextFieldKFE18StockEndOfPeriod1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-                        .addComponent(jTextFieldKFE13StockEndOfPeriod1, javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jTextFieldKFE7StockEndOfPeriod1, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addComponent(jTextFieldDFE19StockEndOfPeriod, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                        .addComponent(jTextFieldDFE14StockEndOfPeriod, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jTextFieldDFE8StockEndOfPeriod, javax.swing.GroupLayout.Alignment.TRAILING))
                     .addComponent(jLabelKFStockEndOfPeriod1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextFieldKFP1OrdersInQueque1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldDFP2OrdersInQueque, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jTextFieldKFE51OrdersInQueque1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
-                        .addComponent(jTextFieldKFE26OrdersInQueque1, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addComponent(jTextFieldDFE56OrdersInQueque, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
+                        .addComponent(jTextFieldDFE26OrdersInQueque, javax.swing.GroupLayout.Alignment.TRAILING))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jTextFieldKFE50OrdersInQueque1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextFieldDFE55OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextFieldKFE17OrdersInQueque1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
-                            .addComponent(jTextFieldKFE16OrdersInQueque1, javax.swing.GroupLayout.Alignment.TRAILING)))
+                            .addComponent(jTextFieldDFE17OrdersInQueque, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
+                            .addComponent(jTextFieldDFE16OrdersInQueque, javax.swing.GroupLayout.Alignment.TRAILING)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jTextFieldKFE49OrdersInQueque1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
-                        .addComponent(jTextFieldKFE10OrdersInQueque1, javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jTextFieldKFE4OrdersInQueque1, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addComponent(jTextFieldDFE54OrdersInQueque, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
+                        .addComponent(jTextFieldDFE11OrdersInQueque, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jTextFieldDFE5OrdersInQueque, javax.swing.GroupLayout.Alignment.TRAILING))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jTextFieldKFE18OrdersInQueque1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
-                        .addComponent(jTextFieldKFE13OrdersInQueque1, javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jTextFieldKFE7OrdersInQueque1, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addComponent(jTextFieldDFE19OrdersInQueque, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
+                        .addComponent(jTextFieldDFE14OrdersInQueque, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jTextFieldDFE8OrdersInQueque, javax.swing.GroupLayout.Alignment.TRAILING))
                     .addComponent(jLabelKFOrdersInQueque1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
                 .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanelDFLayout.createSequentialGroup()
                             .addGap(6, 6, 6)
-                            .addComponent(jTextFieldKFP1WorkInProgress1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTextFieldDFP2WorkInProgress, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextFieldKFE26WorkInProgress1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)
-                            .addComponent(jTextFieldKFE51WorkInProgress1, javax.swing.GroupLayout.Alignment.TRAILING))
+                            .addComponent(jTextFieldDFE26WorkInProgress, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)
+                            .addComponent(jTextFieldDFE56WorkInProgress, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextFieldKFE50WorkInProgress1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldDFE55WorkInProgress, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jTextFieldKFE17WorkInProgress1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)
-                                .addComponent(jTextFieldKFE16WorkInProgress1, javax.swing.GroupLayout.Alignment.TRAILING)))
+                                .addComponent(jTextFieldDFE17WorkInProgress, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)
+                                .addComponent(jTextFieldDFE16WorkInProgress, javax.swing.GroupLayout.Alignment.TRAILING)))
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextFieldKFE49WorkInProgress1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)
-                            .addComponent(jTextFieldKFE10WorkInProgress1, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jTextFieldKFE4WorkInProgress1, javax.swing.GroupLayout.Alignment.TRAILING))
+                            .addComponent(jTextFieldDFE54WorkInProgress, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)
+                            .addComponent(jTextFieldDFE11WorkInProgress, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jTextFieldDFE5WorkInProgress, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextFieldKFE18WorkInProgress1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)
-                            .addComponent(jTextFieldKFE13WorkInProgress1, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jTextFieldKFE7WorkInProgress1, javax.swing.GroupLayout.Alignment.TRAILING)))
+                            .addComponent(jTextFieldDFE19WorkInProgress, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)
+                            .addComponent(jTextFieldDFE14WorkInProgress, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jTextFieldDFE8WorkInProgress, javax.swing.GroupLayout.Alignment.TRAILING)))
                     .addComponent(jLabelKFWorkInProgress1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
                 .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabelKFProductionOrders1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldKFP1ProductionOrders1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldDFP2ProductionOrders, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jTextFieldKFE51ProductionOrders1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-                        .addComponent(jTextFieldKFE26ProductionOrders1, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addComponent(jTextFieldDFE56ProductionOrders, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                        .addComponent(jTextFieldDFE26ProductionOrders, javax.swing.GroupLayout.Alignment.TRAILING))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jTextFieldKFE50ProductionOrders1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextFieldDFE55ProductionOrders, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextFieldKFE17ProductionOrders1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-                            .addComponent(jTextFieldKFE16ProductionOrders1, javax.swing.GroupLayout.Alignment.TRAILING)))
+                            .addComponent(jTextFieldDFE17ProductionOrders, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                            .addComponent(jTextFieldDFE16ProductionOrders, javax.swing.GroupLayout.Alignment.TRAILING)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jTextFieldKFE49ProductionOrders1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-                        .addComponent(jTextFieldKFE10ProductionOrders1, javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jTextFieldKFE4ProductionOrders1, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addComponent(jTextFieldDFE54ProductionOrders, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                        .addComponent(jTextFieldDFE11ProductionOrders, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jTextFieldDFE5ProductionOrders, javax.swing.GroupLayout.Alignment.TRAILING))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jTextFieldKFE18ProductionOrders1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-                        .addComponent(jTextFieldKFE13ProductionOrders1, javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jTextFieldKFE7ProductionOrders1, javax.swing.GroupLayout.Alignment.TRAILING)))
+                        .addComponent(jTextFieldDFE19ProductionOrders, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                        .addComponent(jTextFieldDFE14ProductionOrders, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jTextFieldDFE8ProductionOrders, javax.swing.GroupLayout.Alignment.TRAILING)))
                 .addGap(20, 20, 20))
             .addComponent(jSeparator7)
             .addComponent(jSeparator8)
@@ -1795,12 +1795,12 @@ public class MainUI extends javax.swing.JFrame {
                 .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelDFLayout.createSequentialGroup()
                         .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextFieldKFP1StockEndOfPeriod1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextFieldKFP1OrdersInQueque1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextFieldKFP1WorkInProgress1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextFieldKFP1ProductionOrders1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextFieldKFP1PlannedStock1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextFieldDFP1SalesOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTextFieldDFP2StockEndOfPeriod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldDFP2OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldDFP2WorkInProgress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldDFP2ProductionOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldDFP2PlannedStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldDFP2SalesOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(12, 12, 12))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDFLayout.createSequentialGroup()
                         .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1810,54 +1810,54 @@ public class MainUI extends javax.swing.JFrame {
                 .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextFieldKFE26StockEndOfPeriod1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldKFE26OrdersInQueque1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldKFE26WorkInProgress1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldKFE26ProductionOrders1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldKFE26PlannedStock1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldDFE26StockEndOfPeriod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldDFE26OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldDFE26WorkInProgress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldDFE26ProductionOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldDFE26PlannedStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldDFE26SalesOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel93, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelDFPedalCpl)
-                    .addComponent(jLabelKFE26OrdersInQueque1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelDFE26OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextFieldDFE51SalesOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldKFE51StockEndOfPeriod1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldKFE51OrdersInQueque1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldKFE51WorkInProgress1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldKFE51ProductionOrders1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldKFE51PlannedStock1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldDFE56SalesOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldDFE56StockEndOfPeriod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldDFE56OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldDFE56WorkInProgress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldDFE56ProductionOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldDFE56PlannedStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel95, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelDFFahrradOPedal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelKFE51OrdersInQueque1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelKDE56OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelDFLayout.createSequentialGroup()
                         .addGap(2, 2, 2)
                         .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextFieldKFE16StockEndOfPeriod1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextFieldKFE16OrdersInQueque1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextFieldKFE16WorkInProgress1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextFieldKFE16ProductionOrders1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jTextFieldDFE16StockEndOfPeriod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldDFE16OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldDFE16WorkInProgress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldDFE16ProductionOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel96, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabelDFLenkerCpl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelKFE16OrdersInQueque1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jTextFieldKFE16PlannedStock1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelKDE16OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jTextFieldKDFE16PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jTextFieldDFE16SalesOrders, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDFLayout.createSequentialGroup()
-                        .addComponent(jTextFieldKFE17ProductionOrders1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextFieldDFE17ProductionOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextFieldDFE50SalesOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextFieldKFE50StockEndOfPeriod1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextFieldKFE50OrdersInQueque1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextFieldKFE50WorkInProgress1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextFieldKFE50ProductionOrders1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextFieldKFE50PlannedStock1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jTextFieldDFE55SalesOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldDFE55StockEndOfPeriod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldDFE55OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldDFE55WorkInProgress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldDFE55ProductionOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldDFE55PlannedStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanelDFLayout.createSequentialGroup()
                         .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanelDFLayout.createSequentialGroup()
@@ -1865,55 +1865,55 @@ public class MainUI extends javax.swing.JFrame {
                                     .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(jLabelDFSattelCpl1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(jLabel97, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jTextFieldKFE17PlannedStock1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextFieldKFE17StockEndOfPeriod1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextFieldKFE17OrdersInQueque1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextFieldKFE17WorkInProgress1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jTextFieldDFE17PlannedStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextFieldDFE17StockEndOfPeriod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextFieldDFE17OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextFieldDFE17WorkInProgress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDFLayout.createSequentialGroup()
                                 .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jTextFieldDFE17SalesOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabelKFE17OrdersInQueque1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jLabelDFE17OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(22, 22, 22)))
                         .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabelDFRahmenURaeder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel98, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelKFE50OrdersInQueque1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jLabelDFE55OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator7, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(8, 8, 8)
                 .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextFieldKFE4StockEndOfPeriod1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextFieldKFE4OrdersInQueque1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextFieldKFE4WorkInProgress1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextFieldKFE4ProductionOrders1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jTextFieldDFE5StockEndOfPeriod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextFieldDFE5OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextFieldDFE5WorkInProgress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextFieldDFE5ProductionOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextFieldKFE4PlannedStock1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextFieldDFE4SalesOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabelKFE4OrdersInQueque1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextFieldDFE5PlannedStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextFieldDFE5SalesOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabelDFE5OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel99, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabelDFHinterradgruppe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelDFASchutzblechH, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel100, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldKFE10SalesOrders1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldKFE10PlannedStock1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldKFE10StockEndOfPeriod1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldKFE10OrdersInQueque1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldKFE10WorkInProgress1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldKFE10ProductionOrders1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelKFE10OrdersInQueque1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldDFE11SalesOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldDFE11PlannedStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldDFE11StockEndOfPeriod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldDFE11OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldDFE11WorkInProgress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldDFE11ProductionOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelDFE11OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextFieldKFE49SalesOrders1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldKFE49PlannedStock1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldKFE49StockEndOfPeriod1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldKFE49OrdersInQueque1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldKFE49WorkInProgress1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldKFE49ProductionOrders1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelKFE49OrdersInQueque1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldDFE54SalesOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldDFE54PlannedStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldDFE54StockEndOfPeriod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldDFE54OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldDFE54WorkInProgress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldDFE54ProductionOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelDFE54OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel101, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelDFVorderradCpl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1922,35 +1922,35 @@ public class MainUI extends javax.swing.JFrame {
                 .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelDFVorderradgruppe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel102, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldKFE7SalesOrders1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldKFE7PlannedStock1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldKFE7StockEndOfPeriod1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldKFE7OrdersInQueque1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldKFE7WorkInProgress1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldKFE7ProductionOrders1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelKFE7OrdersInQueque1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldDFE8SalesOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldDFE8PlannedStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldDFE8StockEndOfPeriod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldDFE8OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldDFE8WorkInProgress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldDFE8ProductionOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelDFE8OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelDFSchutzblechV, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel103, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldKFE13SalesOrders1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldKFE13PlannedStock1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldKFE13StockEndOfPeriod1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldKFE13OrdersInQueque1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldKFE13WorkInProgress1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldKFE13ProductionOrders1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelKFE13OrdersInQueque1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldDFE14SalesOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldDFE14PlannedStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldDFE14StockEndOfPeriod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldDFE14OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldDFE14WorkInProgress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldDFE14ProductionOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelDFE14OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelDFRahmen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel104, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldKFE18SalesOrders1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldKFE18PlannedStock1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldKFE18StockEndOfPeriod1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldKFE18OrdersInQueque1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldKFE18WorkInProgress1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldKFE18ProductionOrders1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelKFE18OrdersInQueque1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldDFE19SalesOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldKDFE19PlannedStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldDFE19StockEndOfPeriod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldDFE19OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldDFE19WorkInProgress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldDFE19ProductionOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelDFE19OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
@@ -2150,6 +2150,46 @@ public class MainUI extends javax.swing.JFrame {
             jTextFieldKFE7WorkInProgress.setText("20");
             jTextFieldKFE13WorkInProgress.setText("20");
             jTextFieldKFE18WorkInProgress.setText("20");
+            
+            //damenfahrrad
+            jTextFieldDFP2StockEndOfPeriod.setText("200");
+            jTextFieldDFE26StockEndOfPeriod.setText("200");
+            jTextFieldDFE56StockEndOfPeriod.setText("200");
+            jTextFieldDFE16StockEndOfPeriod.setText("200");
+            jTextFieldDFE17StockEndOfPeriod.setText("200");
+            jTextFieldDFE55StockEndOfPeriod.setText("200");
+            jTextFieldDFE5StockEndOfPeriod.setText("200");
+            jTextFieldDFE11StockEndOfPeriod.setText("200");
+            jTextFieldDFE54StockEndOfPeriod.setText("200");
+            jTextFieldDFE8StockEndOfPeriod.setText("200");
+            jTextFieldDFE14StockEndOfPeriod.setText("200");
+            jTextFieldDFE19StockEndOfPeriod.setText("200");
+            
+            jTextFieldDFP2OrdersInQueque.setText("160");
+            jTextFieldDFE26OrdersInQueque.setText("160");
+            jTextFieldDFE56OrdersInQueque.setText("160");
+            jTextFieldDFE16OrdersInQueque.setText("160");
+            jTextFieldDFE17OrdersInQueque.setText("160");
+            jTextFieldDFE55OrdersInQueque.setText("160");
+            jTextFieldDFE5OrdersInQueque.setText("160");
+            jTextFieldDFE11OrdersInQueque.setText("160");
+            jTextFieldDFE54OrdersInQueque.setText("160");
+            jTextFieldDFE8OrdersInQueque.setText("160");
+            jTextFieldDFE14OrdersInQueque.setText("160");
+            jTextFieldDFE19OrdersInQueque.setText("160");
+            
+            jTextFieldDFP2WorkInProgress.setText("40");
+            jTextFieldDFE26WorkInProgress.setText("40");
+            jTextFieldDFE56WorkInProgress.setText("40");
+            jTextFieldDFE16WorkInProgress.setText("40");
+            jTextFieldDFE17WorkInProgress.setText("40");
+            jTextFieldDFE55WorkInProgress.setText("40");
+            jTextFieldDFE5WorkInProgress.setText("40");
+            jTextFieldDFE11WorkInProgress.setText("40");
+            jTextFieldDFE54WorkInProgress.setText("40");
+            jTextFieldDFE8WorkInProgress.setText("40");
+            jTextFieldDFE14WorkInProgress.setText("40");
+            jTextFieldDFE19WorkInProgress.setText("40");
 
         } else {
             ResourceBundle i18n = Utils.getResourceBundle(locale.getLanguage(), locale.getCountry());
@@ -2227,6 +2267,15 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel98;
     private javax.swing.JLabel jLabel99;
     private javax.swing.JLabel jLabelDFASchutzblechH;
+    private javax.swing.JLabel jLabelDFE11OrdersInQueque;
+    private javax.swing.JLabel jLabelDFE14OrdersInQueque;
+    private javax.swing.JLabel jLabelDFE17OrdersInQueque;
+    private javax.swing.JLabel jLabelDFE19OrdersInQueque;
+    private javax.swing.JLabel jLabelDFE26OrdersInQueque;
+    private javax.swing.JLabel jLabelDFE54OrdersInQueque;
+    private javax.swing.JLabel jLabelDFE55OrdersInQueque;
+    private javax.swing.JLabel jLabelDFE5OrdersInQueque;
+    private javax.swing.JLabel jLabelDFE8OrdersInQueque;
     private javax.swing.JLabel jLabelDFFahrradOPedal;
     private javax.swing.JLabel jLabelDFHinterradgruppe;
     private javax.swing.JLabel jLabelDFLadiesCycle;
@@ -2239,29 +2288,20 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelDFVorderradCpl;
     private javax.swing.JLabel jLabelDFVorderradgruppe;
     private javax.swing.JLabel jLabelDamenfahrradPF;
+    private javax.swing.JLabel jLabelKDE16OrdersInQueque;
+    private javax.swing.JLabel jLabelKDE56OrdersInQueque;
     private javax.swing.JLabel jLabelKFASchutzblechH;
     private javax.swing.JLabel jLabelKFE10OrdersInQueque;
-    private javax.swing.JLabel jLabelKFE10OrdersInQueque1;
     private javax.swing.JLabel jLabelKFE13OrdersInQueque;
-    private javax.swing.JLabel jLabelKFE13OrdersInQueque1;
     private javax.swing.JLabel jLabelKFE16OrdersInQueque;
-    private javax.swing.JLabel jLabelKFE16OrdersInQueque1;
     private javax.swing.JLabel jLabelKFE17OrdersInQueque;
-    private javax.swing.JLabel jLabelKFE17OrdersInQueque1;
     private javax.swing.JLabel jLabelKFE18OrdersInQueque;
-    private javax.swing.JLabel jLabelKFE18OrdersInQueque1;
     private javax.swing.JLabel jLabelKFE26OrdersInQueque;
-    private javax.swing.JLabel jLabelKFE26OrdersInQueque1;
     private javax.swing.JLabel jLabelKFE49OrdersInQueque;
-    private javax.swing.JLabel jLabelKFE49OrdersInQueque1;
     private javax.swing.JLabel jLabelKFE4OrdersInQueque;
-    private javax.swing.JLabel jLabelKFE4OrdersInQueque1;
     private javax.swing.JLabel jLabelKFE50OrdersInQueque;
-    private javax.swing.JLabel jLabelKFE50OrdersInQueque1;
     private javax.swing.JLabel jLabelKFE51OrdersInQueque;
-    private javax.swing.JLabel jLabelKFE51OrdersInQueque1;
     private javax.swing.JLabel jLabelKFE7OrdersInQueque;
-    private javax.swing.JLabel jLabelKFE7OrdersInQueque1;
     private javax.swing.JLabel jLabelKFFahrradOPedal;
     private javax.swing.JLabel jLabelKFHinterradgruppe;
     private javax.swing.JLabel jLabelKFKinderfahrrad;
@@ -2311,150 +2351,150 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator8;
     private javax.swing.JTabbedPane jTabbedPan;
     private javax.swing.JTabbedPane jTabbedPane2;
+    private javax.swing.JTextField jTextFieldDFE11OrdersInQueque;
+    private javax.swing.JTextField jTextFieldDFE11PlannedStock;
+    private javax.swing.JTextField jTextFieldDFE11ProductionOrders;
+    private javax.swing.JTextField jTextFieldDFE11SalesOrders;
+    private javax.swing.JTextField jTextFieldDFE11StockEndOfPeriod;
+    private javax.swing.JTextField jTextFieldDFE11WorkInProgress;
+    private javax.swing.JTextField jTextFieldDFE14OrdersInQueque;
+    private javax.swing.JTextField jTextFieldDFE14PlannedStock;
+    private javax.swing.JTextField jTextFieldDFE14ProductionOrders;
+    private javax.swing.JTextField jTextFieldDFE14SalesOrders;
+    private javax.swing.JTextField jTextFieldDFE14StockEndOfPeriod;
+    private javax.swing.JTextField jTextFieldDFE14WorkInProgress;
+    private javax.swing.JTextField jTextFieldDFE16OrdersInQueque;
+    private javax.swing.JTextField jTextFieldDFE16ProductionOrders;
     private javax.swing.JTextField jTextFieldDFE16SalesOrders;
+    private javax.swing.JTextField jTextFieldDFE16StockEndOfPeriod;
+    private javax.swing.JTextField jTextFieldDFE16WorkInProgress;
+    private javax.swing.JTextField jTextFieldDFE17OrdersInQueque;
+    private javax.swing.JTextField jTextFieldDFE17PlannedStock;
+    private javax.swing.JTextField jTextFieldDFE17ProductionOrders;
     private javax.swing.JTextField jTextFieldDFE17SalesOrders;
+    private javax.swing.JTextField jTextFieldDFE17StockEndOfPeriod;
+    private javax.swing.JTextField jTextFieldDFE17WorkInProgress;
+    private javax.swing.JTextField jTextFieldDFE19OrdersInQueque;
+    private javax.swing.JTextField jTextFieldDFE19ProductionOrders;
+    private javax.swing.JTextField jTextFieldDFE19SalesOrders;
+    private javax.swing.JTextField jTextFieldDFE19StockEndOfPeriod;
+    private javax.swing.JTextField jTextFieldDFE19WorkInProgress;
+    private javax.swing.JTextField jTextFieldDFE26OrdersInQueque;
+    private javax.swing.JTextField jTextFieldDFE26PlannedStock;
+    private javax.swing.JTextField jTextFieldDFE26ProductionOrders;
     private javax.swing.JTextField jTextFieldDFE26SalesOrders;
-    private javax.swing.JTextField jTextFieldDFE4SalesOrders;
-    private javax.swing.JTextField jTextFieldDFE50SalesOrders;
-    private javax.swing.JTextField jTextFieldDFE51SalesOrders;
-    private javax.swing.JTextField jTextFieldDFP1SalesOrders;
+    private javax.swing.JTextField jTextFieldDFE26StockEndOfPeriod;
+    private javax.swing.JTextField jTextFieldDFE26WorkInProgress;
+    private javax.swing.JTextField jTextFieldDFE54OrdersInQueque;
+    private javax.swing.JTextField jTextFieldDFE54PlannedStock;
+    private javax.swing.JTextField jTextFieldDFE54ProductionOrders;
+    private javax.swing.JTextField jTextFieldDFE54SalesOrders;
+    private javax.swing.JTextField jTextFieldDFE54StockEndOfPeriod;
+    private javax.swing.JTextField jTextFieldDFE54WorkInProgress;
+    private javax.swing.JTextField jTextFieldDFE55OrdersInQueque;
+    private javax.swing.JTextField jTextFieldDFE55PlannedStock;
+    private javax.swing.JTextField jTextFieldDFE55ProductionOrders;
+    private javax.swing.JTextField jTextFieldDFE55SalesOrders;
+    private javax.swing.JTextField jTextFieldDFE55StockEndOfPeriod;
+    private javax.swing.JTextField jTextFieldDFE55WorkInProgress;
+    private javax.swing.JTextField jTextFieldDFE56OrdersInQueque;
+    private javax.swing.JTextField jTextFieldDFE56PlannedStock;
+    private javax.swing.JTextField jTextFieldDFE56ProductionOrders;
+    private javax.swing.JTextField jTextFieldDFE56SalesOrders;
+    private javax.swing.JTextField jTextFieldDFE56StockEndOfPeriod;
+    private javax.swing.JTextField jTextFieldDFE56WorkInProgress;
+    private javax.swing.JTextField jTextFieldDFE5OrdersInQueque;
+    private javax.swing.JTextField jTextFieldDFE5PlannedStock;
+    private javax.swing.JTextField jTextFieldDFE5ProductionOrders;
+    private javax.swing.JTextField jTextFieldDFE5SalesOrders;
+    private javax.swing.JTextField jTextFieldDFE5StockEndOfPeriod;
+    private javax.swing.JTextField jTextFieldDFE5WorkInProgress;
+    private javax.swing.JTextField jTextFieldDFE8OrdersInQueque;
+    private javax.swing.JTextField jTextFieldDFE8PlannedStock;
+    private javax.swing.JTextField jTextFieldDFE8ProductionOrders;
+    private javax.swing.JTextField jTextFieldDFE8SalesOrders;
+    private javax.swing.JTextField jTextFieldDFE8StockEndOfPeriod;
+    private javax.swing.JTextField jTextFieldDFE8WorkInProgress;
+    private javax.swing.JTextField jTextFieldDFP2OrdersInQueque;
+    private javax.swing.JTextField jTextFieldDFP2PlannedStock;
+    private javax.swing.JTextField jTextFieldDFP2ProductionOrders;
+    private javax.swing.JTextField jTextFieldDFP2SalesOrders;
+    private javax.swing.JTextField jTextFieldDFP2StockEndOfPeriod;
+    private javax.swing.JTextField jTextFieldDFP2WorkInProgress;
+    private javax.swing.JTextField jTextFieldKDFE16PlannedStock;
+    private javax.swing.JTextField jTextFieldKDFE19PlannedStock;
     private javax.swing.JTextField jTextFieldKFE10OrdersInQueque;
-    private javax.swing.JTextField jTextFieldKFE10OrdersInQueque1;
     private javax.swing.JTextField jTextFieldKFE10PlannedStock;
-    private javax.swing.JTextField jTextFieldKFE10PlannedStock1;
     private javax.swing.JTextField jTextFieldKFE10ProductionOrders;
-    private javax.swing.JTextField jTextFieldKFE10ProductionOrders1;
     private javax.swing.JTextField jTextFieldKFE10SalesOrders;
-    private javax.swing.JTextField jTextFieldKFE10SalesOrders1;
     private javax.swing.JTextField jTextFieldKFE10StockEndOfPeriod;
-    private javax.swing.JTextField jTextFieldKFE10StockEndOfPeriod1;
     private javax.swing.JTextField jTextFieldKFE10WorkInProgress;
-    private javax.swing.JTextField jTextFieldKFE10WorkInProgress1;
     private javax.swing.JTextField jTextFieldKFE13OrdersInQueque;
-    private javax.swing.JTextField jTextFieldKFE13OrdersInQueque1;
     private javax.swing.JTextField jTextFieldKFE13PlannedStock;
-    private javax.swing.JTextField jTextFieldKFE13PlannedStock1;
     private javax.swing.JTextField jTextFieldKFE13ProductionOrders;
-    private javax.swing.JTextField jTextFieldKFE13ProductionOrders1;
     private javax.swing.JTextField jTextFieldKFE13SalesOrders;
-    private javax.swing.JTextField jTextFieldKFE13SalesOrders1;
     private javax.swing.JTextField jTextFieldKFE13StockEndOfPeriod;
-    private javax.swing.JTextField jTextFieldKFE13StockEndOfPeriod1;
     private javax.swing.JTextField jTextFieldKFE13WorkInProgress;
-    private javax.swing.JTextField jTextFieldKFE13WorkInProgress1;
     private javax.swing.JTextField jTextFieldKFE16OrdersInQueque;
-    private javax.swing.JTextField jTextFieldKFE16OrdersInQueque1;
     private javax.swing.JTextField jTextFieldKFE16PlannedStock;
-    private javax.swing.JTextField jTextFieldKFE16PlannedStock1;
     private javax.swing.JTextField jTextFieldKFE16ProductionOrders;
-    private javax.swing.JTextField jTextFieldKFE16ProductionOrders1;
     private javax.swing.JTextField jTextFieldKFE16SalesOrders;
     private javax.swing.JTextField jTextFieldKFE16StockEndOfPeriod;
-    private javax.swing.JTextField jTextFieldKFE16StockEndOfPeriod1;
     private javax.swing.JTextField jTextFieldKFE16WorkInProgress;
-    private javax.swing.JTextField jTextFieldKFE16WorkInProgress1;
     private javax.swing.JTextField jTextFieldKFE17OrdersInQueque;
-    private javax.swing.JTextField jTextFieldKFE17OrdersInQueque1;
     private javax.swing.JTextField jTextFieldKFE17PlannedStock;
-    private javax.swing.JTextField jTextFieldKFE17PlannedStock1;
     private javax.swing.JTextField jTextFieldKFE17ProductionOrders;
-    private javax.swing.JTextField jTextFieldKFE17ProductionOrders1;
     private javax.swing.JTextField jTextFieldKFE17SalesOrders;
     private javax.swing.JTextField jTextFieldKFE17StockEndOfPeriod;
-    private javax.swing.JTextField jTextFieldKFE17StockEndOfPeriod1;
     private javax.swing.JTextField jTextFieldKFE17WorkInProgress;
-    private javax.swing.JTextField jTextFieldKFE17WorkInProgress1;
     private javax.swing.JTextField jTextFieldKFE18OrdersInQueque;
-    private javax.swing.JTextField jTextFieldKFE18OrdersInQueque1;
     private javax.swing.JTextField jTextFieldKFE18PlannedStock;
-    private javax.swing.JTextField jTextFieldKFE18PlannedStock1;
     private javax.swing.JTextField jTextFieldKFE18ProductionOrders;
-    private javax.swing.JTextField jTextFieldKFE18ProductionOrders1;
     private javax.swing.JTextField jTextFieldKFE18SalesOrders;
-    private javax.swing.JTextField jTextFieldKFE18SalesOrders1;
     private javax.swing.JTextField jTextFieldKFE18StockEndOfPeriod;
-    private javax.swing.JTextField jTextFieldKFE18StockEndOfPeriod1;
     private javax.swing.JTextField jTextFieldKFE18WorkInProgress;
-    private javax.swing.JTextField jTextFieldKFE18WorkInProgress1;
     private javax.swing.JTextField jTextFieldKFE26OrdersInQueque;
-    private javax.swing.JTextField jTextFieldKFE26OrdersInQueque1;
     private javax.swing.JTextField jTextFieldKFE26PlannedStock;
-    private javax.swing.JTextField jTextFieldKFE26PlannedStock1;
     private javax.swing.JTextField jTextFieldKFE26ProductionOrders;
-    private javax.swing.JTextField jTextFieldKFE26ProductionOrders1;
     private javax.swing.JTextField jTextFieldKFE26SalesOrders;
     private javax.swing.JTextField jTextFieldKFE26StockEndOfPeriod;
-    private javax.swing.JTextField jTextFieldKFE26StockEndOfPeriod1;
     private javax.swing.JTextField jTextFieldKFE26WorkInProgress;
-    private javax.swing.JTextField jTextFieldKFE26WorkInProgress1;
     private javax.swing.JTextField jTextFieldKFE49OrdersInQueque;
-    private javax.swing.JTextField jTextFieldKFE49OrdersInQueque1;
     private javax.swing.JTextField jTextFieldKFE49PlannedStock;
-    private javax.swing.JTextField jTextFieldKFE49PlannedStock1;
     private javax.swing.JTextField jTextFieldKFE49ProductionOrders;
-    private javax.swing.JTextField jTextFieldKFE49ProductionOrders1;
     private javax.swing.JTextField jTextFieldKFE49SalesOrders;
-    private javax.swing.JTextField jTextFieldKFE49SalesOrders1;
     private javax.swing.JTextField jTextFieldKFE49StockEndOfPeriod;
-    private javax.swing.JTextField jTextFieldKFE49StockEndOfPeriod1;
     private javax.swing.JTextField jTextFieldKFE49WorkInProgress;
-    private javax.swing.JTextField jTextFieldKFE49WorkInProgress1;
     private javax.swing.JTextField jTextFieldKFE4OrdersInQueque;
-    private javax.swing.JTextField jTextFieldKFE4OrdersInQueque1;
     private javax.swing.JTextField jTextFieldKFE4PlannedStock;
-    private javax.swing.JTextField jTextFieldKFE4PlannedStock1;
     private javax.swing.JTextField jTextFieldKFE4ProductionOrders;
-    private javax.swing.JTextField jTextFieldKFE4ProductionOrders1;
     private javax.swing.JTextField jTextFieldKFE4SalesOrders;
     private javax.swing.JTextField jTextFieldKFE4StockEndOfPeriod;
-    private javax.swing.JTextField jTextFieldKFE4StockEndOfPeriod1;
     private javax.swing.JTextField jTextFieldKFE4WorkInProgress;
-    private javax.swing.JTextField jTextFieldKFE4WorkInProgress1;
     private javax.swing.JTextField jTextFieldKFE50OrdersInQueque;
-    private javax.swing.JTextField jTextFieldKFE50OrdersInQueque1;
     private javax.swing.JTextField jTextFieldKFE50PlannedStock;
-    private javax.swing.JTextField jTextFieldKFE50PlannedStock1;
     private javax.swing.JTextField jTextFieldKFE50ProductionOrders;
-    private javax.swing.JTextField jTextFieldKFE50ProductionOrders1;
     private javax.swing.JTextField jTextFieldKFE50SalesOrders;
     private javax.swing.JTextField jTextFieldKFE50StockEndOfPeriod;
-    private javax.swing.JTextField jTextFieldKFE50StockEndOfPeriod1;
     private javax.swing.JTextField jTextFieldKFE50WorkInProgress;
-    private javax.swing.JTextField jTextFieldKFE50WorkInProgress1;
     private javax.swing.JTextField jTextFieldKFE51OrdersInQueque;
-    private javax.swing.JTextField jTextFieldKFE51OrdersInQueque1;
     private javax.swing.JTextField jTextFieldKFE51PlannedStock;
-    private javax.swing.JTextField jTextFieldKFE51PlannedStock1;
     private javax.swing.JTextField jTextFieldKFE51ProductionOrders;
-    private javax.swing.JTextField jTextFieldKFE51ProductionOrders1;
     private javax.swing.JTextField jTextFieldKFE51SalesOrders;
     private javax.swing.JTextField jTextFieldKFE51StockEndOfPeriod;
-    private javax.swing.JTextField jTextFieldKFE51StockEndOfPeriod1;
     private javax.swing.JTextField jTextFieldKFE51WorkInProgress;
-    private javax.swing.JTextField jTextFieldKFE51WorkInProgress1;
     private javax.swing.JTextField jTextFieldKFE7OrdersInQueque;
-    private javax.swing.JTextField jTextFieldKFE7OrdersInQueque1;
     private javax.swing.JTextField jTextFieldKFE7PlannedStock;
-    private javax.swing.JTextField jTextFieldKFE7PlannedStock1;
     private javax.swing.JTextField jTextFieldKFE7ProductionOrders;
-    private javax.swing.JTextField jTextFieldKFE7ProductionOrders1;
     private javax.swing.JTextField jTextFieldKFE7SalesOrders;
-    private javax.swing.JTextField jTextFieldKFE7SalesOrders1;
     private javax.swing.JTextField jTextFieldKFE7StockEndOfPeriod;
-    private javax.swing.JTextField jTextFieldKFE7StockEndOfPeriod1;
     private javax.swing.JTextField jTextFieldKFE7WorkInProgress;
-    private javax.swing.JTextField jTextFieldKFE7WorkInProgress1;
     private javax.swing.JTextField jTextFieldKFP1OrdersInQueque;
-    private javax.swing.JTextField jTextFieldKFP1OrdersInQueque1;
     private javax.swing.JTextField jTextFieldKFP1PlannedStock;
-    private javax.swing.JTextField jTextFieldKFP1PlannedStock1;
     private javax.swing.JTextField jTextFieldKFP1ProductionOrders;
-    private javax.swing.JTextField jTextFieldKFP1ProductionOrders1;
     private javax.swing.JTextField jTextFieldKFP1SalesOrders;
     private javax.swing.JTextField jTextFieldKFP1StockEndOfPeriod;
-    private javax.swing.JTextField jTextFieldKFP1StockEndOfPeriod1;
     private javax.swing.JTextField jTextFieldKFP1WorkInProgress;
-    private javax.swing.JTextField jTextFieldKFP1WorkInProgress1;
     private javax.swing.JTextField jTextFieldPFPeriodN1DF;
     private javax.swing.JTextField jTextFieldPFPeriodN1HF;
     private javax.swing.JTextField jTextFieldPFPeriodN1KF;
@@ -2513,6 +2553,8 @@ public class MainUI extends javax.swing.JFrame {
     }
 
     private void jTextFieldPFPeriodN1DFChanged() {
+        jTextFieldDFP2SalesOrders.setText(jTextFieldPFPeriodN1DF.getText());
+        
         periodDetailN1.setProduct2(Utils.getNumberFromString(jTextFieldPFPeriodN1DF.getText()).longValue());
         reSetForecast();
 
