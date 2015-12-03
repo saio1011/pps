@@ -52,13 +52,16 @@ public class PurchasingDisposal {
                 if (this.isOrderNeeded(article, consumInDays)) {
                     OrderMode mode = this.calcOrderMode(article, consumInDays);
                     long consumInDeliverTime = this.calcConsumInDeliverTime(article, plan);
-                    long missing = 0;
+                    //updated version, maybe change later
+                    long missing = plan.getN1() - stock;
 
+                    /*
                     if (mode == OrderMode.FAST) {
                         //TODO: maybe do not use incoming amount
                         //could be not avaiilable on first day
                         missing = consumInDeliverTime - stock;
                     }
+                    */
 
                     long neededConsumption = this.calcNeededConsumption(consumInDeliverTime, missing);
                     long missingUntilDicount = 0;
@@ -137,12 +140,11 @@ public class PurchasingDisposal {
 
     private OrderMode calcOrderMode(ExtendedArticle article, long consumInDays) {
         OrderMode mode;
-        //TODO: think to add +1 on deliver time, is already added on calculation 
-        //would result in +2 days
-        boolean normalDeliveryIsOk = (consumInDays < article
+        
+        boolean normalDeliveryIsOk = (consumInDays <= article
                 .getDeliveryTimeNormalInDays(SharedInstance.getInstance()
                         .getCalculationMode()));
-        boolean fastDeliveryOk = (consumInDays < article.
+        boolean fastDeliveryOk = (consumInDays <= article.
                 getDeliveryTimeFastInDays(SharedInstance.getInstance()
                         .getCalculationMode()));
 
@@ -159,9 +161,7 @@ public class PurchasingDisposal {
     }
 
     private boolean isOrderNeeded(ExtendedArticle article, long consumInDays) {
-        //-1 day to get the order warning before nothing left
-        //-2 days to rpevent multiple fast delivers
-        if ((consumInDays - 3) < article.getDeliveryTimeNormalInDays(SharedInstance
+        if ((consumInDays - 5) < article.getDeliveryTimeNormalInDays(SharedInstance
                 .getInstance().getCalculationMode())) {
             return true;
         } else {
