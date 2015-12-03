@@ -330,28 +330,28 @@
             "fixMachineCosts": 0.1,
             "processTimes": [{
                     "articleId": 4,
-                    "runTime": 3,
+                    "runTime": 4,
                     "setupTime": 10
                 }, {
                     "articleId": 5,
-                    "runTime": 3,
+                    "runTime": 4,
                     "setupTime": 10
                 }, {
                     "articleId": 6,
-                    "runTime": 3,
-                    "setupTime": 10
+                    "runTime": 4,
+                    "setupTime": 20
                 }, {
                     "articleId": 7,
-                    "runTime": 3,
-                    "setupTime": 10
+                    "runTime": 4,
+                    "setupTime": 20
                 }, {
                     "articleId": 8,
-                    "runTime": 3,
-                    "setupTime": 10
+                    "runTime": 4,
+                    "setupTime": 20
                 }, {
                     "articleId": 9,
-                    "runTime": 3,
-                    "setupTime": 10
+                    "runTime": 4,
+                    "setupTime": 20
                 }]
         }
     },

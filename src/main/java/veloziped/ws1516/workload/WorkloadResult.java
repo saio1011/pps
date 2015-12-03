@@ -151,7 +151,7 @@ public class WorkloadResult {
         int size = this.workplace.getProcessTimes().size();
 
         if (size > 0) {
-            this.setupFactor = this.lastSetupCycles
+            this.setupFactor = Double.valueOf(this.lastSetupCycles)
                     / this.workplace.getProcessTimes().size();
         }
 
@@ -222,6 +222,6 @@ public class WorkloadResult {
     private void calcWorkloadPercentage() {
         double perct = Double.valueOf(this.totalCapacityNeeded) / (this.numberOfShifts * WorkloadPlanning.LIMITPERSHIFT);
         
-        this.workloadPercentage = perct;
+        this.workloadPercentage = perct * 100;
     }
 }

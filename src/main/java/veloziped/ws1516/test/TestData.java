@@ -31,7 +31,7 @@ public class TestData {
         
         values.put("13", Long.valueOf("170"));
         values.put("14", Long.valueOf("70"));
-        values.put("15", Long.valueOf("130"));
+        values.put("15", Long.valueOf("30"));
         
         values.put("16", Long.valueOf("190"));
         values.put("17", Long.valueOf("390"));
@@ -46,7 +46,7 @@ public class TestData {
         values.put("54", Long.valueOf("70"));
         values.put("29", Long.valueOf("0"));
         
-        values.put("50", Long.valueOf("170"));
+        values.put("50", Long.valueOf("140"));
         values.put("55", Long.valueOf("90"));
         values.put("30", Long.valueOf("0"));
         

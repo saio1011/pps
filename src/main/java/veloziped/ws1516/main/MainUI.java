@@ -54,6 +54,7 @@ public class MainUI extends javax.swing.JFrame {
         //set Language selected
         this.setSelectedLanguage(Locale.getDefault().getLanguage());
         this.setCalculationMode(CalculationMode.PESSIMISTIC);
+        this.jButtonCalculate.setEnabled(false);
 
         this.addInputFieldsListener();
 
@@ -343,6 +344,7 @@ public class MainUI extends javax.swing.JFrame {
         jLabelDFE19OrdersInQueque = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jButtonCalculate = new javax.swing.JButton();
+        jButtonImportXml = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuFile = new javax.swing.JMenu();
         jMenuItemImportFile = new javax.swing.JMenuItem();
@@ -1998,17 +2000,28 @@ public class MainUI extends javax.swing.JFrame {
             }
         });
 
+        jButtonImportXml.setText("Import XML");
+        jButtonImportXml.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonImportXmlActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 968, Short.MAX_VALUE)
-                .addComponent(jButtonCalculate))
+                .addGap(771, 771, 771)
+                .addComponent(jButtonImportXml, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)
+                .addGap(49, 49, 49)
+                .addComponent(jButtonCalculate)
+                .addGap(21, 21, 21))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jButtonCalculate, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+            .addComponent(jButtonCalculate, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jButtonImportXml, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jMenuFile.setText(bundle.getString("File")); // NOI18N
@@ -2115,12 +2128,12 @@ public class MainUI extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(40, 40, 40)
                 .addComponent(jTabbedPan)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(12, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(691, Short.MAX_VALUE)))
+                    .addContainerGap(686, Short.MAX_VALUE)))
         );
 
         pack();
@@ -2171,7 +2184,7 @@ public class MainUI extends javax.swing.JFrame {
         jCheckBoxMenuItemBulgarian.setSelected(false);
     }//GEN-LAST:event_jCheckBoxMenuItemRomanienActionPerformed
 
-    private void jMenuItemImportFileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemImportFileActionPerformed
+    private void importXml() {
         JFileChooser chooser = new JFileChooser();
         chooser.showOpenDialog(null);
         File file = chooser.getSelectedFile();
@@ -2181,17 +2194,16 @@ public class MainUI extends javax.swing.JFrame {
             try {
                 res = SharedInstance.parseXmlInput(file);
                 SharedInstance.getInstance().parseResults(res);
-                
+
                 Map<String, ExtendedWorkplace> extWork = SetupInstance.getInstance()
                         .generateExtendedWorkplaces(SharedInstance.getInstance().getIdleTimeCosts().getWorkplace());
                 SharedInstance.getInstance().setExtendedWorkplaces(extWork);
-                
+
                 Map<String, ExtendedArticle> extArt = SetupInstance.getInstance()
                         .generateExtendedArticles(SharedInstance.getInstance().getWarehouseStock().getArticle());
                 SharedInstance.getInstance().setExtendedArticles(extArt);
-                
-                
-                
+
+                this.jButtonCalculate.setEnabled(true);
             } catch (JAXBException ex) {
                 Logger.getLogger(MainUI.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -2235,7 +2247,7 @@ public class MainUI extends javax.swing.JFrame {
             jTextFieldKFE7WorkInProgress.setText("20");
             jTextFieldKFE13WorkInProgress.setText("20");
             jTextFieldKFE18WorkInProgress.setText("20");
-            
+
             //damenfahrrad
             jTextFieldDFP2StockEndOfPeriod.setText("200");
             jTextFieldDFE26StockEndOfPeriod.setText("200");
@@ -2249,7 +2261,7 @@ public class MainUI extends javax.swing.JFrame {
             jTextFieldDFE8StockEndOfPeriod.setText("200");
             jTextFieldDFE14StockEndOfPeriod.setText("200");
             jTextFieldDFE19StockEndOfPeriod.setText("200");
-            
+
             jTextFieldDFP2OrdersInQueque.setText("160");
             jTextFieldDFE26OrdersInQueque.setText("160");
             jTextFieldDFE56OrdersInQueque.setText("160");
@@ -2262,7 +2274,7 @@ public class MainUI extends javax.swing.JFrame {
             jTextFieldDFE8OrdersInQueque.setText("160");
             jTextFieldDFE14OrdersInQueque.setText("160");
             jTextFieldDFE19OrdersInQueque.setText("160");
-            
+
             jTextFieldDFP2WorkInProgress.setText("40");
             jTextFieldDFE26WorkInProgress.setText("40");
             jTextFieldDFE56WorkInProgress.setText("40");
@@ -2280,13 +2292,15 @@ public class MainUI extends javax.swing.JFrame {
             ResourceBundle i18n = Utils.getResourceBundle(locale.getLanguage(), locale.getCountry());
             JOptionPane.showMessageDialog(this, i18n.getString("OnlyXML"), null, JOptionPane.ERROR_MESSAGE);
         }
+    }
+    private void jMenuItemImportFileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemImportFileActionPerformed
+        this.importXml();
     }//GEN-LAST:event_jMenuItemImportFileActionPerformed
 
     private void jButtonCalculateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCalculateActionPerformed
         // TODO add your handling code here:
         SharedInstance.getInstance().setOrderQuantities(TestData.getOrderQuantities());
-        
-        
+
         Map<String, WorkloadResult> result = WorkloadPlanning.getInstance()
                 .calculateWorkload(SharedInstance.getInstance().getExtendedWorkplaces());
     }//GEN-LAST:event_jButtonCalculateActionPerformed
@@ -2296,8 +2310,12 @@ public class MainUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jCheckBoxMenuItemCalculationModePessimisticActionPerformed
 
     private void jCheckBoxMenuItemCalculationModeOptimisticActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItemCalculationModeOptimisticActionPerformed
-       this.setCalculationMode(CalculationMode.OPTIMISTIC);
+        this.setCalculationMode(CalculationMode.OPTIMISTIC);
     }//GEN-LAST:event_jCheckBoxMenuItemCalculationModeOptimisticActionPerformed
+
+    private void jButtonImportXmlActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonImportXmlActionPerformed
+        this.importXml();
+    }//GEN-LAST:event_jButtonImportXmlActionPerformed
 
     /**
      * @param args the command line arguments
@@ -2336,6 +2354,7 @@ public class MainUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonCalculate;
+    private javax.swing.JButton jButtonImportXml;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItemBulgarian;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItemCalculationModeOptimistic;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItemCalculationModePessimistic;
@@ -2650,7 +2669,7 @@ public class MainUI extends javax.swing.JFrame {
                 jCheckBoxMenuItemEnglish.setSelected(true);
         }
     }
-    
+
     public final void setCalculationMode(CalculationMode mode) {
         switch (mode) {
             case PESSIMISTIC:
@@ -2667,7 +2686,7 @@ public class MainUI extends javax.swing.JFrame {
                 break;
 
         }
-        
+
         SharedInstance.getInstance().setCalculationMode(mode);
     }
 
@@ -2681,7 +2700,7 @@ public class MainUI extends javax.swing.JFrame {
 
     private void jTextFieldPFPeriodN1DFChanged() {
         jTextFieldDFP2SalesOrders.setText(jTextFieldPFPeriodN1DF.getText());
-        
+
         periodDetailN1.setProduct2(Utils.getNumberFromString(jTextFieldPFPeriodN1DF.getText()).longValue());
         reSetForecast();
 
@@ -2851,7 +2870,7 @@ public class MainUI extends javax.swing.JFrame {
                 jTextFieldPFPeriodN2HFChanged();
             }
         });
-        
+
         //Period N3
         jTextFieldPFPeriodN3KF.getDocument().addDocumentListener(new DocumentListener() {
             @Override
@@ -2903,7 +2922,7 @@ public class MainUI extends javax.swing.JFrame {
                 jTextFieldPFPeriodN3HFChanged();
             }
         });
-        
+
         //Period N4
         jTextFieldPFPeriodN4KF.getDocument().addDocumentListener(new DocumentListener() {
             @Override
@@ -2955,8 +2974,6 @@ public class MainUI extends javax.swing.JFrame {
                 jTextFieldPFPeriodN4HFChanged();
             }
         });
-        
-        
 
         //InHouseProduction
         //SalesOrders
