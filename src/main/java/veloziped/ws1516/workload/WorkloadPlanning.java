@@ -33,7 +33,7 @@ public class WorkloadPlanning {
         private static final WorkloadPlanning INSTANCE = new WorkloadPlanning();
     }
 
-    private Map<String, WorkloadResult> calculateWorkload(Map<String, ExtendedWorkplace> workplaces) {
+    public Map<String, WorkloadResult> calculateWorkload(Map<String, ExtendedWorkplace> workplaces) {
         workloadResults = new HashMap<>();
 
         for (Map.Entry<String, ExtendedWorkplace> entry : workplaces.entrySet()) {

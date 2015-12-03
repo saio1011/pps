@@ -7,17 +7,28 @@ package veloziped.ws1516.main;
 
 import java.io.File;
 import java.util.Locale;
+import java.util.Map;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import javax.swing.text.JTextComponent;
+import javax.xml.bind.JAXBException;
+import veloziped.ws1516.articles.ExtendedArticle;
+import veloziped.ws1516.generated.Results;
+import veloziped.ws1516.production.CalculationMode;
 import veloziped.ws1516.production.Forecast;
 import veloziped.ws1516.production.PeriodDetail;
+import veloziped.ws1516.test.TestData;
 import veloziped.ws1516.util.IntegerField;
 import veloziped.ws1516.util.Utils;
+import veloziped.ws1516.workload.WorkloadPlanning;
+import veloziped.ws1516.workload.WorkloadResult;
+import veloziped.ws1516.workplace.ExtendedWorkplace;
 
 /**
  *
@@ -42,6 +53,7 @@ public class MainUI extends javax.swing.JFrame {
 
         //set Language selected
         this.setSelectedLanguage(Locale.getDefault().getLanguage());
+        this.setCalculationMode(CalculationMode.PESSIMISTIC);
 
         this.addInputFieldsListener();
 
@@ -329,6 +341,8 @@ public class MainUI extends javax.swing.JFrame {
         jLabelDFE8OrdersInQueque = new javax.swing.JLabel();
         jLabelDFE14OrdersInQueque = new javax.swing.JLabel();
         jLabelDFE19OrdersInQueque = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jButtonCalculate = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuFile = new javax.swing.JMenu();
         jMenuItemImportFile = new javax.swing.JMenuItem();
@@ -340,6 +354,9 @@ public class MainUI extends javax.swing.JFrame {
         jCheckBoxMenuItemEnglish = new javax.swing.JCheckBoxMenuItem();
         jCheckBoxMenuItemFrench = new javax.swing.JCheckBoxMenuItem();
         jCheckBoxMenuItemRomanien = new javax.swing.JCheckBoxMenuItem();
+        jMenuCalculationMode = new javax.swing.JMenu();
+        jCheckBoxMenuItemCalculationModePessimistic = new javax.swing.JCheckBoxMenuItem();
+        jCheckBoxMenuItemCalculationModeOptimistic = new javax.swing.JCheckBoxMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("veloziped/ws1516/i18n/i18n"); // NOI18N
@@ -455,7 +472,7 @@ public class MainUI extends javax.swing.JFrame {
                     .addComponent(jTextFieldPFPeriodN2HF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldPFPeriodN3HF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldPFPeriodN4HF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(424, Short.MAX_VALUE))
+                .addContainerGap(433, Short.MAX_VALUE))
         );
 
         jTabbedPan.addTab(bundle.getString("tabProductionForecast"), jPanelProductionPlanning); // NOI18N
@@ -920,7 +937,7 @@ public class MainUI extends javax.swing.JFrame {
                     .addGroup(jPanelKFLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jLabelKFSalesOrders, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
                 .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelKFLayout.createSequentialGroup()
                         .addComponent(jLabelKFPlannedStock, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -942,7 +959,7 @@ public class MainUI extends javax.swing.JFrame {
                         .addComponent(jTextFieldKFE18PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
                         .addComponent(jTextFieldKFE13PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(jTextFieldKFE7PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
                 .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jTextFieldKFP1StockEndOfPeriod, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -962,7 +979,7 @@ public class MainUI extends javax.swing.JFrame {
                         .addComponent(jTextFieldKFE13StockEndOfPeriod, javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(jTextFieldKFE7StockEndOfPeriod, javax.swing.GroupLayout.Alignment.TRAILING))
                     .addComponent(jLabelKFStockEndOfPeriod, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
                 .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jTextFieldKFP1OrdersInQueque, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -982,7 +999,7 @@ public class MainUI extends javax.swing.JFrame {
                         .addComponent(jTextFieldKFE13OrdersInQueque, javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(jTextFieldKFE7OrdersInQueque, javax.swing.GroupLayout.Alignment.TRAILING))
                     .addComponent(jLabelKFOrdersInQueque, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
                 .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanelKFLayout.createSequentialGroup()
@@ -1005,7 +1022,7 @@ public class MainUI extends javax.swing.JFrame {
                             .addComponent(jTextFieldKFE13WorkInProgress, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jTextFieldKFE7WorkInProgress, javax.swing.GroupLayout.Alignment.TRAILING)))
                     .addComponent(jLabelKFWorkInProgress, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
                 .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabelKFProductionOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldKFP1ProductionOrders, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1668,7 +1685,7 @@ public class MainUI extends javax.swing.JFrame {
                     .addGroup(jPanelDFLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jLabelKFSalesOrders1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
                 .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelDFLayout.createSequentialGroup()
                         .addComponent(jLabelKFPlannedStock1, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1690,7 +1707,7 @@ public class MainUI extends javax.swing.JFrame {
                         .addComponent(jTextFieldKDFE19PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
                         .addComponent(jTextFieldDFE14PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(jTextFieldDFE8PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
                 .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jTextFieldDFP2StockEndOfPeriod, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -1710,7 +1727,7 @@ public class MainUI extends javax.swing.JFrame {
                         .addComponent(jTextFieldDFE14StockEndOfPeriod, javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(jTextFieldDFE8StockEndOfPeriod, javax.swing.GroupLayout.Alignment.TRAILING))
                     .addComponent(jLabelKFStockEndOfPeriod1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
                 .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jTextFieldDFP2OrdersInQueque, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -1730,7 +1747,7 @@ public class MainUI extends javax.swing.JFrame {
                         .addComponent(jTextFieldDFE14OrdersInQueque, javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(jTextFieldDFE8OrdersInQueque, javax.swing.GroupLayout.Alignment.TRAILING))
                     .addComponent(jLabelKFOrdersInQueque1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
                 .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanelDFLayout.createSequentialGroup()
@@ -1753,7 +1770,7 @@ public class MainUI extends javax.swing.JFrame {
                             .addComponent(jTextFieldDFE14WorkInProgress, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jTextFieldDFE8WorkInProgress, javax.swing.GroupLayout.Alignment.TRAILING)))
                     .addComponent(jLabelKFWorkInProgress1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
                 .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabelKFProductionOrders1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldDFP2ProductionOrders, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1974,6 +1991,26 @@ public class MainUI extends javax.swing.JFrame {
 
         jTabbedPan.addTab(bundle.getString("InHauseProduction"), jPanelInHouseProduction); // NOI18N
 
+        jButtonCalculate.setText("Calculate");
+        jButtonCalculate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCalculateActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 968, Short.MAX_VALUE)
+                .addComponent(jButtonCalculate))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jButtonCalculate, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+        );
+
         jMenuFile.setText(bundle.getString("File")); // NOI18N
 
         jMenuItemImportFile.setText(bundle.getString("ImportFile")); // NOI18N
@@ -2035,6 +2072,26 @@ public class MainUI extends javax.swing.JFrame {
 
         jMenuSettings.add(jMenuLanguage);
 
+        jMenuCalculationMode.setText("Calculation Mode");
+
+        jCheckBoxMenuItemCalculationModePessimistic.setText("Pessimistic");
+        jCheckBoxMenuItemCalculationModePessimistic.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxMenuItemCalculationModePessimisticActionPerformed(evt);
+            }
+        });
+        jMenuCalculationMode.add(jCheckBoxMenuItemCalculationModePessimistic);
+
+        jCheckBoxMenuItemCalculationModeOptimistic.setText("Optimistic");
+        jCheckBoxMenuItemCalculationModeOptimistic.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxMenuItemCalculationModeOptimisticActionPerformed(evt);
+            }
+        });
+        jMenuCalculationMode.add(jCheckBoxMenuItemCalculationModeOptimistic);
+
+        jMenuSettings.add(jMenuCalculationMode);
+
         jMenuBar1.add(jMenuSettings);
 
         setJMenuBar(jMenuBar1);
@@ -2047,13 +2104,23 @@ public class MainUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jTabbedPan)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(27, 27, 27)
+                .addGap(40, 40, 40)
                 .addComponent(jTabbedPan)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(691, Short.MAX_VALUE)))
         );
 
         pack();
@@ -2110,6 +2177,24 @@ public class MainUI extends javax.swing.JFrame {
         File file = chooser.getSelectedFile();
         if (file.getAbsolutePath().endsWith(".xml")) {
 
+            Results res;
+            try {
+                res = SharedInstance.parseXmlInput(file);
+                SharedInstance.getInstance().parseResults(res);
+                
+                Map<String, ExtendedWorkplace> extWork = SetupInstance.getInstance()
+                        .generateExtendedWorkplaces(SharedInstance.getInstance().getIdleTimeCosts().getWorkplace());
+                SharedInstance.getInstance().setExtendedWorkplaces(extWork);
+                
+                Map<String, ExtendedArticle> extArt = SetupInstance.getInstance()
+                        .generateExtendedArticles(SharedInstance.getInstance().getWarehouseStock().getArticle());
+                SharedInstance.getInstance().setExtendedArticles(extArt);
+                
+                
+                
+            } catch (JAXBException ex) {
+                Logger.getLogger(MainUI.class.getName()).log(Level.SEVERE, null, ex);
+            }
             //vorbelegung der Felder 
             // KF
             jTextFieldKFP1StockEndOfPeriod.setText("100");
@@ -2197,6 +2282,23 @@ public class MainUI extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jMenuItemImportFileActionPerformed
 
+    private void jButtonCalculateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCalculateActionPerformed
+        // TODO add your handling code here:
+        SharedInstance.getInstance().setOrderQuantities(TestData.getOrderQuantities());
+        
+        
+        Map<String, WorkloadResult> result = WorkloadPlanning.getInstance()
+                .calculateWorkload(SharedInstance.getInstance().getExtendedWorkplaces());
+    }//GEN-LAST:event_jButtonCalculateActionPerformed
+
+    private void jCheckBoxMenuItemCalculationModePessimisticActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItemCalculationModePessimisticActionPerformed
+        this.setCalculationMode(CalculationMode.PESSIMISTIC);
+    }//GEN-LAST:event_jCheckBoxMenuItemCalculationModePessimisticActionPerformed
+
+    private void jCheckBoxMenuItemCalculationModeOptimisticActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItemCalculationModeOptimisticActionPerformed
+       this.setCalculationMode(CalculationMode.OPTIMISTIC);
+    }//GEN-LAST:event_jCheckBoxMenuItemCalculationModeOptimisticActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -2233,7 +2335,10 @@ public class MainUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonCalculate;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItemBulgarian;
+    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItemCalculationModeOptimistic;
+    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItemCalculationModePessimistic;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItemDeutsch;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItemEnglish;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItemFrench;
@@ -2332,11 +2437,13 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelPeriodNPF;
     private javax.swing.JLabel jLabelSattelCpl;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenu jMenuCalculationMode;
     private javax.swing.JMenu jMenuFile;
     private javax.swing.JMenuItem jMenuItemExportFile;
     private javax.swing.JMenuItem jMenuItemImportFile;
     private javax.swing.JMenu jMenuLanguage;
     private javax.swing.JMenu jMenuSettings;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanelDF;
     private javax.swing.JPanel jPanelInHouseProduction;
     private javax.swing.JPanel jPanelKF;
@@ -2542,6 +2649,26 @@ public class MainUI extends javax.swing.JFrame {
             default:
                 jCheckBoxMenuItemEnglish.setSelected(true);
         }
+    }
+    
+    public final void setCalculationMode(CalculationMode mode) {
+        switch (mode) {
+            case PESSIMISTIC:
+                jCheckBoxMenuItemCalculationModePessimistic.setSelected(true);
+                jCheckBoxMenuItemCalculationModeOptimistic.setSelected(false);
+                break;
+            case OPTIMISTIC:
+                jCheckBoxMenuItemCalculationModeOptimistic.setSelected(true);
+                jCheckBoxMenuItemCalculationModePessimistic.setSelected(false);
+                break;
+            default:
+                jCheckBoxMenuItemCalculationModePessimistic.setSelected(true);
+                jCheckBoxMenuItemCalculationModeOptimistic.setSelected(false);
+                break;
+
+        }
+        
+        SharedInstance.getInstance().setCalculationMode(mode);
     }
 
     private void jTextFieldPFPeriodN1KFChanged() {

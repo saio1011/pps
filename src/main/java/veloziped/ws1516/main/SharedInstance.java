@@ -152,6 +152,23 @@ public class SharedInstance {
 
         return result;
     }
+
+    public Map<String, ExtendedWorkplace> getExtendedWorkplaces() {
+        return extendedWorkplaces;
+    }
+
+    public Map<String, ExtendedArticle> getExtendedArticles() {
+        return extendedArticles;
+    }
+
+    public Map<String, Order> getIncomingOrdersThisPeriod() {
+        return incomingOrdersThisPeriod;
+    }
+
+    public ProductionPlan getProductionPlan() {
+        return productionPlan;
+    }
+    
     
     public ExtendedArticle getArticleForId(Long id) {
         ExtendedArticle result = null;
@@ -282,15 +299,15 @@ public class SharedInstance {
         return estimatedPeriod;
     }
     
-    public static Results parseXmlInput() throws JAXBException{
+    public static Results parseXmlInput(File file) throws JAXBException{
         JAXBContext jaxbContext = JAXBContext.newInstance(Results.class);
         Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
-        Results results = (Results) jaxbUnmarshaller.unmarshal(new File("/Users/Martin/Desktop/output_7.xml"));
+        Results results = (Results) jaxbUnmarshaller.unmarshal(file);
         return results;
     }
     
     
-    public void readResults(Results results) {
+    public void parseResults(Results results) {
         if(results == null) {
             return;
         }
