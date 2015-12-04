@@ -130,7 +130,7 @@ public class SetupInstance {
             JSONObject values = this.getWorkplaceValuesForId(workplace.getId());
 
             if (values != null) {
-                ExtendedWorkplace extWork = (ExtendedWorkplace) workplace;
+                ExtendedWorkplace extWork = new ExtendedWorkplace(workplace);
                 extWork.setValues(values);
 
                 extWorkplaces.put(String.valueOf(extWork.getId()), extWork);

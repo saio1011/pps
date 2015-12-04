@@ -10,6 +10,7 @@ import java.text.DecimalFormat;
 import veloziped.ws1516.main.SharedInstance;
 import veloziped.ws1516.workplace.*;
 import static java.lang.Math.round;
+import static java.lang.Math.round;
 
 /**
  *
@@ -150,7 +151,7 @@ public class WorkloadResult {
         int size = this.workplace.getProcessTimes().size();
 
         if (size > 0) {
-            this.setupFactor = this.lastSetupCycles
+            this.setupFactor = Double.valueOf(this.lastSetupCycles)
                     / this.workplace.getProcessTimes().size();
         }
 
@@ -158,8 +159,10 @@ public class WorkloadResult {
     }
 
     private void calcTotalCapacityNeeded() {
-        this.totalCapacityNeeded = this.capacityNeeded + this.setupTime
-                + this.additionalSetupTime + this.backlogCapacityLastPeriod
+        this.totalCapacityNeeded = this.capacityNeeded 
+                //+ this.setupTime
+                + this.additionalSetupTime 
+                + this.backlogCapacityLastPeriod
                 + this.backlogSetupTimeLastPeriod;
     }
 
@@ -217,8 +220,8 @@ public class WorkloadResult {
     }
 
     private void calcWorkloadPercentage() {
-        double perct = this.totalCapacityNeeded / (this.numberOfShifts * WorkloadPlanning.LIMITPERSHIFT);
-        DecimalFormat df = new DecimalFormat("#.##");
-        this.workloadPercentage = Double.valueOf(df.format(perct));
+        double perct = Double.valueOf(this.totalCapacityNeeded) / (this.numberOfShifts * WorkloadPlanning.LIMITPERSHIFT);
+        
+        this.workloadPercentage = perct * 100;
     }
 }
