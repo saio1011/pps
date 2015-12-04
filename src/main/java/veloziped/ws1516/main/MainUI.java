@@ -6,14 +6,17 @@
 package veloziped.ws1516.main;
 
 import java.io.File;
+import java.util.AbstractList;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 import java.util.ResourceBundle;
 import javax.swing.JFileChooser;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
-import javax.swing.text.JTextComponent;
 import veloziped.ws1516.production.Forecast;
 import veloziped.ws1516.production.PeriodDetail;
 import veloziped.ws1516.util.IntegerField;
@@ -279,7 +282,7 @@ public class MainUI extends javax.swing.JFrame {
         jTextFieldDFP2PlannedStock = new IntegerField();
         jTextFieldDFE26PlannedStock = new IntegerField();
         jTextFieldDFE56PlannedStock = new IntegerField();
-        jTextFieldKDFE16PlannedStock = new IntegerField();
+        jTextFieldDFE16PlannedStock = new IntegerField();
         jTextFieldDFE17PlannedStock = new IntegerField();
         jTextFieldDFE55PlannedStock = new IntegerField();
         jTextFieldDFE5PlannedStock = new IntegerField();
@@ -287,7 +290,7 @@ public class MainUI extends javax.swing.JFrame {
         jTextFieldDFE54PlannedStock = new IntegerField();
         jTextFieldDFE8PlannedStock = new IntegerField();
         jTextFieldDFE14PlannedStock = new IntegerField();
-        jTextFieldKDFE19PlannedStock = new IntegerField();
+        jTextFieldDFE19PlannedStock = new IntegerField();
         jLabelDFPedalCpl = new javax.swing.JLabel();
         jLabelDFFahrradOPedal = new javax.swing.JLabel();
         jLabelDFLenkerCpl = new javax.swing.JLabel();
@@ -319,8 +322,8 @@ public class MainUI extends javax.swing.JFrame {
         jTextFieldDFE17SalesOrders = new IntegerField();
         jLabelKFPlannedStock1 = new javax.swing.JLabel();
         jLabelDFE26OrdersInQueque = new javax.swing.JLabel();
-        jLabelKDE56OrdersInQueque = new javax.swing.JLabel();
-        jLabelKDE16OrdersInQueque = new javax.swing.JLabel();
+        jLabelDFE56OrdersInQueque = new javax.swing.JLabel();
+        jLabelDFE16OrdersInQueque = new javax.swing.JLabel();
         jLabelDFE17OrdersInQueque = new javax.swing.JLabel();
         jLabelDFE55OrdersInQueque = new javax.swing.JLabel();
         jLabelDFE5OrdersInQueque = new javax.swing.JLabel();
@@ -1236,165 +1239,235 @@ public class MainUI extends javax.swing.JFrame {
 
         jTextFieldDFP2SalesOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextFieldDFP2SalesOrders.setEnabled(false);
+        jTextFieldDFP2SalesOrders.setName("jTextFieldDFP2SalesOrders"); // NOI18N
 
         jTextFieldDFE56SalesOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextFieldDFE56SalesOrders.setEnabled(false);
+        jTextFieldDFE56SalesOrders.setName("jTextFieldDFE56SalesOrders"); // NOI18N
 
         jTextFieldDFE16SalesOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextFieldDFE16SalesOrders.setEnabled(false);
+        jTextFieldDFE16SalesOrders.setName("jTextFieldDFE16SalesOrders"); // NOI18N
 
         jTextFieldDFE55SalesOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextFieldDFE55SalesOrders.setEnabled(false);
+        jTextFieldDFE55SalesOrders.setName("jTextFieldDFE55SalesOrders"); // NOI18N
 
         jTextFieldDFE5SalesOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextFieldDFE5SalesOrders.setEnabled(false);
+        jTextFieldDFE5SalesOrders.setName("jTextFieldDFE5*SalesOrders"); // NOI18N
 
         jTextFieldDFE11SalesOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextFieldDFE11SalesOrders.setEnabled(false);
+        jTextFieldDFE11SalesOrders.setName("jTextFieldDFE11SalesOrders"); // NOI18N
 
         jTextFieldDFE54SalesOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextFieldDFE54SalesOrders.setEnabled(false);
+        jTextFieldDFE54SalesOrders.setName("jTextFieldDFE54SalesOrders"); // NOI18N
 
         jTextFieldDFE8SalesOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextFieldDFE8SalesOrders.setEnabled(false);
+        jTextFieldDFE8SalesOrders.setName("jTextFieldDFE8SalesOrders"); // NOI18N
 
         jTextFieldDFE14SalesOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextFieldDFE14SalesOrders.setEnabled(false);
+        jTextFieldDFE14SalesOrders.setName("jTextFieldDFE14SalesOrders"); // NOI18N
 
         jTextFieldDFE19SalesOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextFieldDFE19SalesOrders.setEnabled(false);
+        jTextFieldDFE19SalesOrders.setName("jTextFieldDFE19SalesOrders"); // NOI18N
 
         jTextFieldDFE26StockEndOfPeriod.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE26StockEndOfPeriod.setName("jTextFieldDFE26StockEndOfPeriod"); // NOI18N
 
         jTextFieldDFP2StockEndOfPeriod.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFP2StockEndOfPeriod.setName("jTextFieldDFP2StockEndOfPeriod"); // NOI18N
 
         jTextFieldDFE56StockEndOfPeriod.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE56StockEndOfPeriod.setName("jTextFieldDFE56StockEndOfPeriod"); // NOI18N
 
         jTextFieldDFE17StockEndOfPeriod.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE17StockEndOfPeriod.setName("jTextFieldDFE17StockEndOfPeriod"); // NOI18N
 
         jTextFieldDFE16StockEndOfPeriod.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE16StockEndOfPeriod.setName("jTextFieldDFE16StockEndOfPeriod"); // NOI18N
 
         jTextFieldDFE55StockEndOfPeriod.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE55StockEndOfPeriod.setName("jTextFieldDFE55StockEndOfPeriod"); // NOI18N
 
         jTextFieldDFE11StockEndOfPeriod.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE11StockEndOfPeriod.setName("jTextFieldDFE11StockEndOfPeriod"); // NOI18N
 
         jTextFieldDFE5StockEndOfPeriod.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE5StockEndOfPeriod.setName("jTextFieldDFE5*StockEndOfPeriod"); // NOI18N
 
         jTextFieldDFE54StockEndOfPeriod.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE54StockEndOfPeriod.setName("jTextFieldDFE54StockEndOfPeriod"); // NOI18N
 
         jTextFieldDFE14StockEndOfPeriod.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE14StockEndOfPeriod.setName("jTextFieldDFE14StockEndOfPeriod"); // NOI18N
 
         jTextFieldDFE8StockEndOfPeriod.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE8StockEndOfPeriod.setName("jTextFieldDFE8StockEndOfPeriod"); // NOI18N
 
         jTextFieldDFE19StockEndOfPeriod.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE19StockEndOfPeriod.setName("jTextFieldDFE19StockEndOfPeriod"); // NOI18N
 
         jTextFieldDFE26OrdersInQueque.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE26OrdersInQueque.setName("jTextFieldDFE26OrdersInQueque"); // NOI18N
 
         jTextFieldDFP2OrdersInQueque.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFP2OrdersInQueque.setName("jTextFieldDFP2OrdersInQueque"); // NOI18N
 
         jTextFieldDFE56OrdersInQueque.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE56OrdersInQueque.setName("jTextFieldDFE56OrdersInQueque"); // NOI18N
 
         jTextFieldDFE16OrdersInQueque.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE16OrdersInQueque.setName("jTextFieldDFE16OrdersInQueque"); // NOI18N
 
         jTextFieldDFE17OrdersInQueque.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE17OrdersInQueque.setName("jTextFieldDFE17OrdersInQueque"); // NOI18N
 
         jTextFieldDFE55OrdersInQueque.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE55OrdersInQueque.setName("jTextFieldDFE55OrdersInQueque"); // NOI18N
 
         jTextFieldDFE5OrdersInQueque.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE5OrdersInQueque.setName("jTextFieldDFE5*OrdersInQueque"); // NOI18N
 
         jTextFieldDFE11OrdersInQueque.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE11OrdersInQueque.setName("jTextFieldDFE11OrdersInQueque"); // NOI18N
 
         jTextFieldDFE54OrdersInQueque.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE54OrdersInQueque.setName("jTextFieldDFE54OrdersInQueque"); // NOI18N
 
         jTextFieldDFE8OrdersInQueque.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE8OrdersInQueque.setName("jTextFieldDFE8OrdersInQueque"); // NOI18N
 
         jTextFieldDFE14OrdersInQueque.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE14OrdersInQueque.setName("jTextFieldDFE14OrdersInQueque"); // NOI18N
 
         jTextFieldDFE19OrdersInQueque.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE19OrdersInQueque.setName("jTextFieldDFE19OrdersInQueque"); // NOI18N
 
         jTextFieldDFE26WorkInProgress.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE26WorkInProgress.setName("jTextFieldDFE26WorkInProgress"); // NOI18N
 
         jTextFieldDFP2WorkInProgress.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFP2WorkInProgress.setName("jTextFieldDFP2WorkInProgress"); // NOI18N
 
         jTextFieldDFE56WorkInProgress.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE56WorkInProgress.setName("jTextFieldDFE56WorkInProgress"); // NOI18N
 
         jTextFieldDFE16WorkInProgress.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE16WorkInProgress.setName("jTextFieldDFE16WorkInProgress"); // NOI18N
 
         jTextFieldDFE17WorkInProgress.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE17WorkInProgress.setName("jTextFieldDFE17WorkInProgress"); // NOI18N
 
         jTextFieldDFE55WorkInProgress.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE55WorkInProgress.setName("jTextFieldDFE55WorkInProgress"); // NOI18N
 
         jTextFieldDFE5WorkInProgress.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE5WorkInProgress.setName("jTextFieldDFE5*WorkInProgress"); // NOI18N
 
         jTextFieldDFE11WorkInProgress.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE11WorkInProgress.setName("jTextFieldDFE11WorkInProgress"); // NOI18N
 
         jTextFieldDFE54WorkInProgress.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE54WorkInProgress.setName("jTextFieldDFE54WorkInProgress"); // NOI18N
 
         jTextFieldDFE8WorkInProgress.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE8WorkInProgress.setName("jTextFieldDFE8WorkInProgress"); // NOI18N
 
         jTextFieldDFE14WorkInProgress.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE14WorkInProgress.setName("jTextFieldDFE14WorkInProgress"); // NOI18N
 
         jTextFieldDFE19WorkInProgress.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE19WorkInProgress.setName("jTextFieldDFE19WorkInProgress"); // NOI18N
 
         jTextFieldDFE26ProductionOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextFieldDFE26ProductionOrders.setEnabled(false);
+        jTextFieldDFE26ProductionOrders.setName("jTextFieldDFE26ProductionOrders"); // NOI18N
 
         jTextFieldDFE56ProductionOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextFieldDFE56ProductionOrders.setEnabled(false);
+        jTextFieldDFE56ProductionOrders.setName("jTextFieldDFE56ProductionOrders"); // NOI18N
 
         jTextFieldDFP2ProductionOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextFieldDFP2ProductionOrders.setEnabled(false);
+        jTextFieldDFP2ProductionOrders.setName("jTextFieldDFP2ProductionOrders"); // NOI18N
 
         jTextFieldDFE16ProductionOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextFieldDFE16ProductionOrders.setEnabled(false);
+        jTextFieldDFE16ProductionOrders.setName("jTextFieldDFE16ProductionOrders"); // NOI18N
 
         jTextFieldDFE17ProductionOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextFieldDFE17ProductionOrders.setEnabled(false);
+        jTextFieldDFE17ProductionOrders.setName("jTextFieldDFE17ProductionOrders"); // NOI18N
 
         jTextFieldDFE55ProductionOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextFieldDFE55ProductionOrders.setEnabled(false);
+        jTextFieldDFE55ProductionOrders.setName("jTextFieldDFE55ProductionOrders"); // NOI18N
 
         jTextFieldDFE5ProductionOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextFieldDFE5ProductionOrders.setEnabled(false);
+        jTextFieldDFE5ProductionOrders.setName("jTextFieldDFE5*ProductionOrders"); // NOI18N
 
         jTextFieldDFE11ProductionOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextFieldDFE11ProductionOrders.setEnabled(false);
+        jTextFieldDFE11ProductionOrders.setName("jTextFieldDFE11ProductionOrders"); // NOI18N
 
         jTextFieldDFE54ProductionOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextFieldDFE54ProductionOrders.setEnabled(false);
+        jTextFieldDFE54ProductionOrders.setName("jTextFieldDFE54ProductionOrders"); // NOI18N
 
         jTextFieldDFE8ProductionOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextFieldDFE8ProductionOrders.setEnabled(false);
+        jTextFieldDFE8ProductionOrders.setName("jTextFieldDFE8ProductionOrders"); // NOI18N
 
         jTextFieldDFE14ProductionOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextFieldDFE14ProductionOrders.setEnabled(false);
+        jTextFieldDFE14ProductionOrders.setName("jTextFieldDFE14ProductionOrders"); // NOI18N
 
         jTextFieldDFE19ProductionOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextFieldDFE19ProductionOrders.setEnabled(false);
+        jTextFieldDFE19ProductionOrders.setName("jTextFieldDFE19ProductionOrders"); // NOI18N
 
         jTextFieldDFP2PlannedStock.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFP2PlannedStock.setName("jTextFieldDFP2PlannedStock"); // NOI18N
 
         jTextFieldDFE26PlannedStock.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE26PlannedStock.setName("jTextFieldDFE26PlannedStock"); // NOI18N
 
         jTextFieldDFE56PlannedStock.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE56PlannedStock.setName("jTextFieldDFE56PlannedStock"); // NOI18N
 
-        jTextFieldKDFE16PlannedStock.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE16PlannedStock.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE16PlannedStock.setName("jTextFieldDFE16PlannedStock"); // NOI18N
 
         jTextFieldDFE17PlannedStock.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE17PlannedStock.setName("jTextFieldDFE17PlannedStock"); // NOI18N
 
         jTextFieldDFE55PlannedStock.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE55PlannedStock.setName("jTextFieldDFE55PlannedStock"); // NOI18N
 
         jTextFieldDFE5PlannedStock.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE5PlannedStock.setName("jTextFieldDFE5*PlannedStock"); // NOI18N
 
         jTextFieldDFE11PlannedStock.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE11PlannedStock.setName("jTextFieldDFE11PlannedStock"); // NOI18N
 
         jTextFieldDFE54PlannedStock.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE54PlannedStock.setName("jTextFieldDFE54PlannedStock"); // NOI18N
 
         jTextFieldDFE8PlannedStock.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE8PlannedStock.setName("jTextFieldDFE8PlannedStock"); // NOI18N
 
         jTextFieldDFE14PlannedStock.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE14PlannedStock.setName("jTextFieldDFE14PlannedStock"); // NOI18N
 
-        jTextFieldKDFE19PlannedStock.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE19PlannedStock.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextFieldDFE19PlannedStock.setName("jTextFieldDFE19PlannedStock"); // NOI18N
 
         jLabelDFPedalCpl.setText(bundle.getString("PedalCpl")); // NOI18N
 
@@ -1510,9 +1583,11 @@ public class MainUI extends javax.swing.JFrame {
 
         jTextFieldDFE26SalesOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextFieldDFE26SalesOrders.setEnabled(false);
+        jTextFieldDFE26SalesOrders.setName("jTextFieldDFE26SalesOrders"); // NOI18N
 
         jTextFieldDFE17SalesOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextFieldDFE17SalesOrders.setEnabled(false);
+        jTextFieldDFE17SalesOrders.setName("jTextFieldDFE17SalesOrders"); // NOI18N
 
         jLabelKFPlannedStock1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelKFPlannedStock1.setText(bundle.getString("PlannedStock")); // NOI18N
@@ -1520,56 +1595,67 @@ public class MainUI extends javax.swing.JFrame {
         jLabelDFE26OrdersInQueque.setText("0");
         jLabelDFE26OrdersInQueque.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabelDFE26OrdersInQueque.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelDFE26OrdersInQueque.setName("jLabelDFE26OrdersInQueque"); // NOI18N
         jLabelDFE26OrdersInQueque.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabelKDE56OrdersInQueque.setText("0");
-        jLabelKDE56OrdersInQueque.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabelKDE56OrdersInQueque.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabelKDE56OrdersInQueque.setPreferredSize(new java.awt.Dimension(60, 16));
+        jLabelDFE56OrdersInQueque.setText("0");
+        jLabelDFE56OrdersInQueque.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabelDFE56OrdersInQueque.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelDFE56OrdersInQueque.setName("jLabelDFE56OrdersInQueque"); // NOI18N
+        jLabelDFE56OrdersInQueque.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabelKDE16OrdersInQueque.setText("0");
-        jLabelKDE16OrdersInQueque.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabelKDE16OrdersInQueque.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabelKDE16OrdersInQueque.setPreferredSize(new java.awt.Dimension(60, 16));
+        jLabelDFE16OrdersInQueque.setText("0");
+        jLabelDFE16OrdersInQueque.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabelDFE16OrdersInQueque.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelDFE16OrdersInQueque.setName("labelsOrdersInQueque.add(jLabelDFE16OrdersInQueque);"); // NOI18N
+        jLabelDFE16OrdersInQueque.setPreferredSize(new java.awt.Dimension(60, 16));
 
         jLabelDFE17OrdersInQueque.setText("0");
         jLabelDFE17OrdersInQueque.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabelDFE17OrdersInQueque.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelDFE17OrdersInQueque.setName("jLabelDFE17OrdersInQueque"); // NOI18N
         jLabelDFE17OrdersInQueque.setPreferredSize(new java.awt.Dimension(60, 16));
 
         jLabelDFE55OrdersInQueque.setText("0");
         jLabelDFE55OrdersInQueque.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabelDFE55OrdersInQueque.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelDFE55OrdersInQueque.setName("jLabelDFE55OrdersInQueque"); // NOI18N
         jLabelDFE55OrdersInQueque.setPreferredSize(new java.awt.Dimension(60, 16));
 
         jLabelDFE5OrdersInQueque.setText("0");
         jLabelDFE5OrdersInQueque.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabelDFE5OrdersInQueque.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelDFE5OrdersInQueque.setName("jLabelDFE5*OrdersInQueque"); // NOI18N
         jLabelDFE5OrdersInQueque.setPreferredSize(new java.awt.Dimension(60, 16));
 
         jLabelDFE11OrdersInQueque.setText("0");
         jLabelDFE11OrdersInQueque.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabelDFE11OrdersInQueque.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelDFE11OrdersInQueque.setName("jLabelDFE11OrdersInQueque"); // NOI18N
         jLabelDFE11OrdersInQueque.setPreferredSize(new java.awt.Dimension(60, 16));
 
         jLabelDFE54OrdersInQueque.setText("0");
         jLabelDFE54OrdersInQueque.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabelDFE54OrdersInQueque.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelDFE54OrdersInQueque.setName("jLabelDFE54OrdersInQueque"); // NOI18N
         jLabelDFE54OrdersInQueque.setPreferredSize(new java.awt.Dimension(60, 16));
 
         jLabelDFE8OrdersInQueque.setText("0");
         jLabelDFE8OrdersInQueque.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabelDFE8OrdersInQueque.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelDFE8OrdersInQueque.setName("jLabelDFE8OrdersInQueque"); // NOI18N
         jLabelDFE8OrdersInQueque.setPreferredSize(new java.awt.Dimension(60, 16));
 
         jLabelDFE14OrdersInQueque.setText("0");
         jLabelDFE14OrdersInQueque.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabelDFE14OrdersInQueque.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelDFE14OrdersInQueque.setName("jLabelDFE14OrdersInQueque"); // NOI18N
         jLabelDFE14OrdersInQueque.setPreferredSize(new java.awt.Dimension(60, 16));
 
         jLabelDFE19OrdersInQueque.setText("0");
         jLabelDFE19OrdersInQueque.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabelDFE19OrdersInQueque.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelDFE19OrdersInQueque.setName("jLabelDFE19OrdersInQueque"); // NOI18N
         jLabelDFE19OrdersInQueque.setPreferredSize(new java.awt.Dimension(60, 16));
 
         javax.swing.GroupLayout jPanelDFLayout = new javax.swing.GroupLayout(jPanelDF);
@@ -1639,9 +1725,9 @@ public class MainUI extends javax.swing.JFrame {
                             .addComponent(jLabelDFE5OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabelDFE17OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabelDFE55OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelKDE16OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelDFE16OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabelDFE26OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelKDE56OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelDFE56OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabelDFE11OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabelDFE54OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabelDFE8OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1681,13 +1767,13 @@ public class MainUI extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(jTextFieldDFE55PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
                         .addComponent(jTextFieldDFE17PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jTextFieldKDFE16PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addComponent(jTextFieldDFE16PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(jTextFieldDFE54PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
                         .addComponent(jTextFieldDFE11PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(jTextFieldDFE5PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jTextFieldKDFE19PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                        .addComponent(jTextFieldDFE19PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
                         .addComponent(jTextFieldDFE14PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(jTextFieldDFE8PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
@@ -1829,7 +1915,7 @@ public class MainUI extends javax.swing.JFrame {
                     .addComponent(jTextFieldDFE56PlannedStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel95, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelDFFahrradOPedal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelKDE56OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelDFE56OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelDFLayout.createSequentialGroup()
@@ -1843,8 +1929,8 @@ public class MainUI extends javax.swing.JFrame {
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel96, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabelDFLenkerCpl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelKDE16OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jTextFieldKDFE16PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelDFE16OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jTextFieldDFE16PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jTextFieldDFE16SalesOrders, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1945,7 +2031,7 @@ public class MainUI extends javax.swing.JFrame {
                     .addComponent(jLabelDFRahmen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel104, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldDFE19SalesOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldKDFE19PlannedStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldDFE19PlannedStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldDFE19StockEndOfPeriod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldDFE19OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldDFE19WorkInProgress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2152,44 +2238,18 @@ public class MainUI extends javax.swing.JFrame {
             jTextFieldKFE18WorkInProgress.setText("20");
             
             //damenfahrrad
-            jTextFieldDFP2StockEndOfPeriod.setText("200");
-            jTextFieldDFE26StockEndOfPeriod.setText("200");
-            jTextFieldDFE56StockEndOfPeriod.setText("200");
-            jTextFieldDFE16StockEndOfPeriod.setText("200");
-            jTextFieldDFE17StockEndOfPeriod.setText("200");
-            jTextFieldDFE55StockEndOfPeriod.setText("200");
-            jTextFieldDFE5StockEndOfPeriod.setText("200");
-            jTextFieldDFE11StockEndOfPeriod.setText("200");
-            jTextFieldDFE54StockEndOfPeriod.setText("200");
-            jTextFieldDFE8StockEndOfPeriod.setText("200");
-            jTextFieldDFE14StockEndOfPeriod.setText("200");
-            jTextFieldDFE19StockEndOfPeriod.setText("200");
-            
-            jTextFieldDFP2OrdersInQueque.setText("160");
-            jTextFieldDFE26OrdersInQueque.setText("160");
-            jTextFieldDFE56OrdersInQueque.setText("160");
-            jTextFieldDFE16OrdersInQueque.setText("160");
-            jTextFieldDFE17OrdersInQueque.setText("160");
-            jTextFieldDFE55OrdersInQueque.setText("160");
-            jTextFieldDFE5OrdersInQueque.setText("160");
-            jTextFieldDFE11OrdersInQueque.setText("160");
-            jTextFieldDFE54OrdersInQueque.setText("160");
-            jTextFieldDFE8OrdersInQueque.setText("160");
-            jTextFieldDFE14OrdersInQueque.setText("160");
-            jTextFieldDFE19OrdersInQueque.setText("160");
-            
-            jTextFieldDFP2WorkInProgress.setText("40");
-            jTextFieldDFE26WorkInProgress.setText("40");
-            jTextFieldDFE56WorkInProgress.setText("40");
-            jTextFieldDFE16WorkInProgress.setText("40");
-            jTextFieldDFE17WorkInProgress.setText("40");
-            jTextFieldDFE55WorkInProgress.setText("40");
-            jTextFieldDFE5WorkInProgress.setText("40");
-            jTextFieldDFE11WorkInProgress.setText("40");
-            jTextFieldDFE54WorkInProgress.setText("40");
-            jTextFieldDFE8WorkInProgress.setText("40");
-            jTextFieldDFE14WorkInProgress.setText("40");
-            jTextFieldDFE19WorkInProgress.setText("40");
+            List<JTextField> dmFields = getDFJTextFields();
+            for(JTextField jtf : dmFields){
+               if(jtf.getName().endsWith("StockEndOfPeriod")){
+                   jtf.setText("200");
+               }
+               if(jtf.getName().endsWith("OrdersInQueque")){
+                   jtf.setText("160");
+               }
+               if(jtf.getName().endsWith("WorkInProgress")){
+                   jtf.setText("40");
+               }
+            }
 
         } else {
             ResourceBundle i18n = Utils.getResourceBundle(locale.getLanguage(), locale.getCountry());
@@ -2269,11 +2329,13 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelDFASchutzblechH;
     private javax.swing.JLabel jLabelDFE11OrdersInQueque;
     private javax.swing.JLabel jLabelDFE14OrdersInQueque;
+    private javax.swing.JLabel jLabelDFE16OrdersInQueque;
     private javax.swing.JLabel jLabelDFE17OrdersInQueque;
     private javax.swing.JLabel jLabelDFE19OrdersInQueque;
     private javax.swing.JLabel jLabelDFE26OrdersInQueque;
     private javax.swing.JLabel jLabelDFE54OrdersInQueque;
     private javax.swing.JLabel jLabelDFE55OrdersInQueque;
+    private javax.swing.JLabel jLabelDFE56OrdersInQueque;
     private javax.swing.JLabel jLabelDFE5OrdersInQueque;
     private javax.swing.JLabel jLabelDFE8OrdersInQueque;
     private javax.swing.JLabel jLabelDFFahrradOPedal;
@@ -2288,8 +2350,6 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelDFVorderradCpl;
     private javax.swing.JLabel jLabelDFVorderradgruppe;
     private javax.swing.JLabel jLabelDamenfahrradPF;
-    private javax.swing.JLabel jLabelKDE16OrdersInQueque;
-    private javax.swing.JLabel jLabelKDE56OrdersInQueque;
     private javax.swing.JLabel jLabelKFASchutzblechH;
     private javax.swing.JLabel jLabelKFE10OrdersInQueque;
     private javax.swing.JLabel jLabelKFE13OrdersInQueque;
@@ -2364,6 +2424,7 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldDFE14StockEndOfPeriod;
     private javax.swing.JTextField jTextFieldDFE14WorkInProgress;
     private javax.swing.JTextField jTextFieldDFE16OrdersInQueque;
+    private javax.swing.JTextField jTextFieldDFE16PlannedStock;
     private javax.swing.JTextField jTextFieldDFE16ProductionOrders;
     private javax.swing.JTextField jTextFieldDFE16SalesOrders;
     private javax.swing.JTextField jTextFieldDFE16StockEndOfPeriod;
@@ -2375,6 +2436,7 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldDFE17StockEndOfPeriod;
     private javax.swing.JTextField jTextFieldDFE17WorkInProgress;
     private javax.swing.JTextField jTextFieldDFE19OrdersInQueque;
+    private javax.swing.JTextField jTextFieldDFE19PlannedStock;
     private javax.swing.JTextField jTextFieldDFE19ProductionOrders;
     private javax.swing.JTextField jTextFieldDFE19SalesOrders;
     private javax.swing.JTextField jTextFieldDFE19StockEndOfPeriod;
@@ -2421,8 +2483,6 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldDFP2SalesOrders;
     private javax.swing.JTextField jTextFieldDFP2StockEndOfPeriod;
     private javax.swing.JTextField jTextFieldDFP2WorkInProgress;
-    private javax.swing.JTextField jTextFieldKDFE16PlannedStock;
-    private javax.swing.JTextField jTextFieldKDFE19PlannedStock;
     private javax.swing.JTextField jTextFieldKFE10OrdersInQueque;
     private javax.swing.JTextField jTextFieldKFE10PlannedStock;
     private javax.swing.JTextField jTextFieldKFE10ProductionOrders;
@@ -2832,6 +2892,7 @@ public class MainUI extends javax.swing.JFrame {
         
 
         //InHouseProduction
+        //Kinderfahrrad
         //SalesOrders
         //E26
         jTextFieldKFE26SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
@@ -3103,6 +3164,188 @@ public class MainUI extends javax.swing.JFrame {
                 jTextFieldKFE18ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE18SalesOrders.getText().equals("") ? "0" : jTextFieldKFE18SalesOrders.getText())), Integer.parseInt((jLabelKFE18OrdersInQueque.getText().equals("") ? "0" : jLabelKFE18OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE18PlannedStock.getText().equals("") ? "0" : jTextFieldKFE18PlannedStock.getText())), Integer.parseInt(jTextFieldKFE18StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE18StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE18OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE18OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE18WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE18WorkInProgress.getText())));
             }
         });
+        
+        //Damenfahrrad
+        //P2
+        jTextFieldDFP2PlannedStock.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                inputFieldDFChanged("P2");
+            }
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                inputFieldDFChanged("P2");
+            }
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                inputFieldDFChanged("P2");
+            }
+        });
+        //E26
+        jTextFieldDFE26PlannedStock.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                inputFieldDFChanged("E26");
+            }
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                inputFieldDFChanged("E26");
+            }
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                inputFieldDFChanged("E26");
+            }
+        });
+        //E56
+        jTextFieldDFE56PlannedStock.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                inputFieldDFChanged("E56");
+            }
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                inputFieldDFChanged("E56");
+            }
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                inputFieldDFChanged("E56");
+            }
+        });
+        //E16
+        jTextFieldDFE16PlannedStock.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                inputFieldDFChanged("E16");
+            }
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                inputFieldDFChanged("E16");
+            }
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                inputFieldDFChanged("E16");
+            }
+        });
+        //E17
+        jTextFieldDFE17PlannedStock.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                inputFieldDFChanged("E17");
+            }
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                inputFieldDFChanged("E17");
+            }
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                inputFieldDFChanged("E17");
+            }
+        });
+        //E55
+        jTextFieldDFE55PlannedStock.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                inputFieldDFChanged("E55");
+            }
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                inputFieldDFChanged("E55");
+            }
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                inputFieldDFChanged("E55");
+            }
+        });
+        //E5*
+        jTextFieldDFE5PlannedStock.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                inputFieldDFChanged("E5*");
+            }
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                inputFieldDFChanged("E5*");
+            }
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                inputFieldDFChanged("E5*");
+            }
+        });
+        //E11
+        jTextFieldDFE11PlannedStock.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                inputFieldDFChanged("E11");
+            }
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                inputFieldDFChanged("E11");
+            }
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                inputFieldDFChanged("E11");
+            }
+        });
+        //E54
+        jTextFieldDFE54PlannedStock.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                inputFieldDFChanged("E54");
+            }
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                inputFieldDFChanged("E54");
+            }
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                inputFieldDFChanged("E54");
+            }
+        });
+        //E8
+        jTextFieldDFE8PlannedStock.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                inputFieldDFChanged("E8");
+            }
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                inputFieldDFChanged("E8");
+            }
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                inputFieldDFChanged("E8");
+            }
+        });
+        //E14
+        jTextFieldDFE14PlannedStock.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                inputFieldDFChanged("E14");
+            }
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                inputFieldDFChanged("E14");
+            }
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                inputFieldDFChanged("E14");
+            }
+        });
+        //E19
+        jTextFieldDFE19PlannedStock.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                inputFieldDFChanged("E19");
+            }
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                inputFieldDFChanged("E19");
+            }
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                inputFieldDFChanged("E19");
+            }
+        });
 
         //StockEndOfPeriod
         //P1
@@ -3141,6 +3384,7 @@ public class MainUI extends javax.swing.JFrame {
         });
 
         //OrdersInQueque
+        //Kinderfahrrad
         //P1
         jTextFieldKFP1OrdersInQueque.getDocument().addDocumentListener(new DocumentListener() {
             @Override
@@ -3250,6 +3494,90 @@ public class MainUI extends javax.swing.JFrame {
                 jLabelKFE18OrdersInQueque.setText(jTextFieldKFE49OrdersInQueque.getText());
             }
         });
+        //Damenfahrrad
+        //P2
+        jTextFieldDFP2OrdersInQueque.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                jLabelDFE26OrdersInQueque.setText(jTextFieldDFP2OrdersInQueque.getText());
+                jLabelDFE56OrdersInQueque.setText(jTextFieldDFP2OrdersInQueque.getText());
+            }
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                jLabelDFE26OrdersInQueque.setText(jTextFieldDFP2OrdersInQueque.getText());
+                jLabelDFE56OrdersInQueque.setText(jTextFieldDFP2OrdersInQueque.getText());
+            }
+            @Override
+            public void changedUpdate(DocumentEvent e) {  
+                jLabelDFE26OrdersInQueque.setText(jTextFieldDFP2OrdersInQueque.getText());
+                jLabelDFE56OrdersInQueque.setText(jTextFieldDFP2OrdersInQueque.getText());
+            }
+        });
+        //E56
+        jTextFieldDFE56OrdersInQueque.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                jLabelDFE16OrdersInQueque.setText(jTextFieldDFE56OrdersInQueque.getText());
+                jLabelDFE17OrdersInQueque.setText(jTextFieldDFE56OrdersInQueque.getText());
+                jLabelDFE55OrdersInQueque.setText(jTextFieldDFE56OrdersInQueque.getText());
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                jLabelDFE16OrdersInQueque.setText(jTextFieldDFE56OrdersInQueque.getText());
+                jLabelDFE17OrdersInQueque.setText(jTextFieldDFE56OrdersInQueque.getText());
+                jLabelDFE55OrdersInQueque.setText(jTextFieldDFE56OrdersInQueque.getText());
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                jLabelDFE16OrdersInQueque.setText(jTextFieldDFE56OrdersInQueque.getText());
+                jLabelDFE17OrdersInQueque.setText(jTextFieldDFE56OrdersInQueque.getText());
+                jLabelDFE55OrdersInQueque.setText(jTextFieldDFE56OrdersInQueque.getText());
+            }
+        });
+        //E55
+        jTextFieldDFE55OrdersInQueque.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                jLabelDFE5OrdersInQueque.setText(jTextFieldDFE55OrdersInQueque.getText());
+                jLabelDFE11OrdersInQueque.setText(jTextFieldDFE55OrdersInQueque.getText());
+                jLabelDFE54OrdersInQueque.setText(jTextFieldDFE55OrdersInQueque.getText());
+            }
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                jLabelDFE5OrdersInQueque.setText(jTextFieldDFE55OrdersInQueque.getText());
+                jLabelDFE11OrdersInQueque.setText(jTextFieldDFE55OrdersInQueque.getText());
+                jLabelDFE54OrdersInQueque.setText(jTextFieldDFE55OrdersInQueque.getText());
+            }
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                jLabelDFE5OrdersInQueque.setText(jTextFieldDFE55OrdersInQueque.getText());
+                jLabelDFE11OrdersInQueque.setText(jTextFieldDFE55OrdersInQueque.getText());
+                jLabelDFE54OrdersInQueque.setText(jTextFieldDFE55OrdersInQueque.getText());
+            }
+        });
+        //E54
+        jTextFieldDFE54OrdersInQueque.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                jLabelDFE8OrdersInQueque.setText(jTextFieldDFE54OrdersInQueque.getText());
+                jLabelDFE14OrdersInQueque.setText(jTextFieldDFE54OrdersInQueque.getText());
+                jLabelDFE19OrdersInQueque.setText(jTextFieldDFE54OrdersInQueque.getText());
+            }
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                jLabelDFE8OrdersInQueque.setText(jTextFieldDFE54OrdersInQueque.getText());
+                jLabelDFE14OrdersInQueque.setText(jTextFieldDFE54OrdersInQueque.getText());
+                jLabelDFE19OrdersInQueque.setText(jTextFieldDFE54OrdersInQueque.getText());
+            }
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                jLabelDFE8OrdersInQueque.setText(jTextFieldDFE54OrdersInQueque.getText());
+                jLabelDFE14OrdersInQueque.setText(jTextFieldDFE54OrdersInQueque.getText());
+                jLabelDFE19OrdersInQueque.setText(jTextFieldDFE54OrdersInQueque.getText());
+            }
+        });
 
         //WorkInProgress
         //P1
@@ -3288,6 +3616,7 @@ public class MainUI extends javax.swing.JFrame {
         });
 
         //Production Orders
+        //Kinderfahrrad
         //P1
         jTextFieldKFP1ProductionOrders.getDocument().addDocumentListener(new DocumentListener() {
             @Override
@@ -3295,13 +3624,11 @@ public class MainUI extends javax.swing.JFrame {
                 jTextFieldKFE26SalesOrders.setText(jTextFieldKFP1ProductionOrders.getText());
                 jTextFieldKFE51SalesOrders.setText(jTextFieldKFP1ProductionOrders.getText());
             }
-
             @Override
             public void removeUpdate(DocumentEvent e) {
                 jTextFieldKFE26SalesOrders.setText(jTextFieldKFP1ProductionOrders.getText());
                 jTextFieldKFE51SalesOrders.setText(jTextFieldKFP1ProductionOrders.getText());
             }
-
             @Override
             public void changedUpdate(DocumentEvent e) {
                 jTextFieldKFE26SalesOrders.setText(jTextFieldKFP1ProductionOrders.getText());
@@ -3377,11 +3704,243 @@ public class MainUI extends javax.swing.JFrame {
                 jTextFieldKFE18SalesOrders.setText(jTextFieldKFE49ProductionOrders.getText());
             }
         });
+        
+        //Damenfahrrad
+        //P2
+        jTextFieldDFP2ProductionOrders.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                jTextFieldDFE26SalesOrders.setText(jTextFieldDFP2ProductionOrders.getText());
+                jTextFieldDFE56SalesOrders.setText(jTextFieldDFP2ProductionOrders.getText());
+            }
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                jTextFieldDFE26SalesOrders.setText(jTextFieldDFP2ProductionOrders.getText());
+                jTextFieldDFE56SalesOrders.setText(jTextFieldDFP2ProductionOrders.getText());
+            }
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                jTextFieldDFE26SalesOrders.setText(jTextFieldDFP2ProductionOrders.getText());
+                jTextFieldDFE56SalesOrders.setText(jTextFieldDFP2ProductionOrders.getText());
+            }
+        });
+        //E56
+        jTextFieldDFE56ProductionOrders.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                jTextFieldDFE16SalesOrders.setText(jTextFieldDFE56ProductionOrders.getText());
+                jTextFieldDFE17SalesOrders.setText(jTextFieldDFE56ProductionOrders.getText());
+                jTextFieldDFE55SalesOrders.setText(jTextFieldDFE56ProductionOrders.getText());
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                jTextFieldDFE16SalesOrders.setText(jTextFieldDFE56ProductionOrders.getText());
+                jTextFieldDFE17SalesOrders.setText(jTextFieldDFE56ProductionOrders.getText());
+                jTextFieldDFE55SalesOrders.setText(jTextFieldDFE56ProductionOrders.getText());
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                jTextFieldDFE16SalesOrders.setText(jTextFieldDFE56ProductionOrders.getText());
+                jTextFieldDFE17SalesOrders.setText(jTextFieldDFE56ProductionOrders.getText());
+                jTextFieldDFE55SalesOrders.setText(jTextFieldDFE56ProductionOrders.getText());
+            }
+        });
+        //E55
+        jTextFieldDFE55ProductionOrders.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                jTextFieldDFE5SalesOrders.setText(jTextFieldDFE55ProductionOrders.getText());
+                jTextFieldDFE11SalesOrders.setText(jTextFieldDFE55ProductionOrders.getText());
+                jTextFieldDFE54SalesOrders.setText(jTextFieldDFE55ProductionOrders.getText());
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                jTextFieldDFE5SalesOrders.setText(jTextFieldDFE55ProductionOrders.getText());
+                jTextFieldDFE11SalesOrders.setText(jTextFieldDFE55ProductionOrders.getText());
+                jTextFieldDFE54SalesOrders.setText(jTextFieldDFE55ProductionOrders.getText());
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                jTextFieldDFE5SalesOrders.setText(jTextFieldDFE55ProductionOrders.getText());
+                jTextFieldDFE11SalesOrders.setText(jTextFieldDFE55ProductionOrders.getText());
+                jTextFieldDFE54SalesOrders.setText(jTextFieldDFE55ProductionOrders.getText());
+            }
+        });
+        //E54
+        jTextFieldDFE54ProductionOrders.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                jTextFieldDFE8SalesOrders.setText(jTextFieldDFE54ProductionOrders.getText());
+                jTextFieldDFE14SalesOrders.setText(jTextFieldDFE54ProductionOrders.getText());
+                jTextFieldDFE19SalesOrders.setText(jTextFieldDFE54ProductionOrders.getText());
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                jTextFieldDFE8SalesOrders.setText(jTextFieldDFE54ProductionOrders.getText());
+                jTextFieldDFE14SalesOrders.setText(jTextFieldDFE54ProductionOrders.getText());
+                jTextFieldDFE19SalesOrders.setText(jTextFieldDFE54ProductionOrders.getText());
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                jTextFieldDFE8SalesOrders.setText(jTextFieldDFE54ProductionOrders.getText());
+                jTextFieldDFE14SalesOrders.setText(jTextFieldDFE54ProductionOrders.getText());
+                jTextFieldDFE19SalesOrders.setText(jTextFieldDFE54ProductionOrders.getText());
+            }
+        });
     }
 
     String calculateProductionOrders(int salesOrder, int secondCollumn, int plannedStock, int stockEndOfPeriod, int ordersInQueQue, int workInProgress) {
         int result = salesOrder + secondCollumn + plannedStock - stockEndOfPeriod - ordersInQueQue - workInProgress;
         return String.valueOf(result);
     }
-
+    
+    void inputFieldDFChanged(String product){
+        List<JTextField> dfFields = getDFAllJTextFieldsByProduct(product);
+        String ordersInQueque = getDFJLabelOrdersInQuequeByProduct(product).getText();
+        getDFJTextFieldByProduct(dfFields,"ProductionOrders").setText(
+                        calculateProductionOrders(
+                                Integer.parseInt((getDFJTextFieldByProduct(dfFields,"SalesOrders").getText().equals("") ? "0" : getDFJTextFieldByProduct(dfFields,"SalesOrders").getText())),
+                                Integer.parseInt(ordersInQueque.equals("") ? "0" : ordersInQueque), 
+                                Integer.parseInt((getDFJTextFieldByProduct(dfFields,"PlannedStock").getText().equals("") ? "0" : getDFJTextFieldByProduct(dfFields,"PlannedStock").getText())), 
+                                Integer.parseInt(getDFJTextFieldByProduct(dfFields,"StockEndOfPeriod").getText().equals("") ? "0" : getDFJTextFieldByProduct(dfFields,"StockEndOfPeriod").getText()), 
+                                Integer.parseInt(getDFJTextFieldByProduct(dfFields,"OrdersInQueque").getText().equals("") ? "0" : getDFJTextFieldByProduct(dfFields,"OrdersInQueque").getText()), 
+                                Integer.parseInt(getDFJTextFieldByProduct(dfFields,"WorkInProgress").getText().equals("") ? "0" : getDFJTextFieldByProduct(dfFields,"WorkInProgress").getText())
+                        )
+        );
+    }
+    
+    JTextField getDFJTextFieldByProduct(List<JTextField> dfFields, String product){
+        JTextField field =  new JTextField();
+        for(JTextField jtf : dfFields){
+            if (jtf.getName().contains(product)){
+                field = jtf;
+            }
+        }
+        return field;
+    }
+    
+    public List<JTextField> getDFAllJTextFieldsByProduct(String product){
+         List <JTextField> dfFields = getDFJTextFields();
+         List <JTextField> fields = new ArrayList<JTextField>();
+         for(JTextField jtf : dfFields){
+            if (jtf.getName().contains(product)){
+                fields.add(jtf);
+            }
+        }
+         return fields;
+    }
+    
+    public List<JTextField> getDFJTextFields(){
+        List <JTextField> fields = new ArrayList<JTextField>();
+            fields.add(jTextFieldDFP2SalesOrders);
+            fields.add(jTextFieldDFE26SalesOrders);
+            fields.add(jTextFieldDFE56SalesOrders);
+            fields.add(jTextFieldDFE16SalesOrders);
+            fields.add(jTextFieldDFE17SalesOrders);
+            fields.add(jTextFieldDFE55SalesOrders);
+            fields.add(jTextFieldDFE5SalesOrders);
+            fields.add(jTextFieldDFE11SalesOrders);
+            fields.add(jTextFieldDFE54SalesOrders);
+            fields.add(jTextFieldDFE8SalesOrders);
+            fields.add(jTextFieldDFE14SalesOrders);
+            fields.add(jTextFieldDFE19SalesOrders);
+            
+            fields.add(jTextFieldDFP2PlannedStock);
+            fields.add(jTextFieldDFE26PlannedStock);
+            fields.add(jTextFieldDFE56PlannedStock);
+            fields.add(jTextFieldDFE16PlannedStock);
+            fields.add(jTextFieldDFE17PlannedStock);
+            fields.add(jTextFieldDFE55PlannedStock);
+            fields.add(jTextFieldDFE5PlannedStock);
+            fields.add(jTextFieldDFE11PlannedStock);
+            fields.add(jTextFieldDFE54PlannedStock);
+            fields.add(jTextFieldDFE8PlannedStock);
+            fields.add(jTextFieldDFE14PlannedStock);
+            fields.add(jTextFieldDFE19PlannedStock);
+        
+            fields.add(jTextFieldDFP2StockEndOfPeriod);
+            fields.add(jTextFieldDFE26StockEndOfPeriod);
+            fields.add(jTextFieldDFE56StockEndOfPeriod);
+            fields.add(jTextFieldDFE16StockEndOfPeriod);
+            fields.add(jTextFieldDFE17StockEndOfPeriod);
+            fields.add(jTextFieldDFE55StockEndOfPeriod);
+            fields.add(jTextFieldDFE5StockEndOfPeriod);
+            fields.add(jTextFieldDFE11StockEndOfPeriod);
+            fields.add(jTextFieldDFE54StockEndOfPeriod);
+            fields.add(jTextFieldDFE8StockEndOfPeriod);
+            fields.add(jTextFieldDFE14StockEndOfPeriod);
+            fields.add(jTextFieldDFE19StockEndOfPeriod);
+            
+            fields.add(jTextFieldDFP2OrdersInQueque);
+            fields.add(jTextFieldDFE26OrdersInQueque);
+            fields.add(jTextFieldDFE56OrdersInQueque);
+            fields.add(jTextFieldDFE16OrdersInQueque);
+            fields.add(jTextFieldDFE17OrdersInQueque);
+            fields.add(jTextFieldDFE55OrdersInQueque);
+            fields.add(jTextFieldDFE5OrdersInQueque);
+            fields.add(jTextFieldDFE11OrdersInQueque);
+            fields.add(jTextFieldDFE54OrdersInQueque);
+            fields.add(jTextFieldDFE8OrdersInQueque);
+            fields.add(jTextFieldDFE14OrdersInQueque);
+            fields.add(jTextFieldDFE19OrdersInQueque);
+            
+            fields.add(jTextFieldDFP2WorkInProgress);
+            fields.add(jTextFieldDFE26WorkInProgress);
+            fields.add(jTextFieldDFE56WorkInProgress);
+            fields.add(jTextFieldDFE16WorkInProgress);
+            fields.add(jTextFieldDFE17WorkInProgress);
+            fields.add(jTextFieldDFE55WorkInProgress);
+            fields.add(jTextFieldDFE5WorkInProgress);
+            fields.add(jTextFieldDFE11WorkInProgress);
+            fields.add(jTextFieldDFE54WorkInProgress);
+            fields.add(jTextFieldDFE8WorkInProgress);
+            fields.add(jTextFieldDFE14WorkInProgress);
+            fields.add(jTextFieldDFE19WorkInProgress);
+            
+            fields.add(jTextFieldDFP2ProductionOrders);
+            fields.add(jTextFieldDFE26ProductionOrders);
+            fields.add(jTextFieldDFE56ProductionOrders);
+            fields.add(jTextFieldDFE16ProductionOrders);
+            fields.add(jTextFieldDFE17ProductionOrders);
+            fields.add(jTextFieldDFE55ProductionOrders);
+            fields.add(jTextFieldDFE5ProductionOrders);
+            fields.add(jTextFieldDFE11ProductionOrders);
+            fields.add(jTextFieldDFE54ProductionOrders);
+            fields.add(jTextFieldDFE8ProductionOrders);
+            fields.add(jTextFieldDFE14ProductionOrders);
+            fields.add(jTextFieldDFE19ProductionOrders);
+        return fields;
+    }
+    
+    public List<JLabel> getDFJLablesOrdersInQueque(){
+        List<JLabel> labelsOrdersInQueque = new ArrayList<>();
+            labelsOrdersInQueque.add(jLabelDFE26OrdersInQueque);
+            labelsOrdersInQueque.add(jLabelDFE56OrdersInQueque);
+            labelsOrdersInQueque.add(jLabelDFE16OrdersInQueque);
+            labelsOrdersInQueque.add(jLabelDFE17OrdersInQueque);
+            labelsOrdersInQueque.add(jLabelDFE55OrdersInQueque);
+            labelsOrdersInQueque.add(jLabelDFE5OrdersInQueque);
+            labelsOrdersInQueque.add(jLabelDFE11OrdersInQueque);
+            labelsOrdersInQueque.add(jLabelDFE54OrdersInQueque);
+            labelsOrdersInQueque.add(jLabelDFE8OrdersInQueque);
+            labelsOrdersInQueque.add(jLabelDFE14OrdersInQueque);
+            labelsOrdersInQueque.add(jLabelDFE19OrdersInQueque);
+        return labelsOrdersInQueque;
+    }
+    
+    JLabel getDFJLabelOrdersInQuequeByProduct(String product){
+        JLabel label = new JLabel("");
+        List<JLabel> labelsOrdersInQueque = getDFJLablesOrdersInQueque();
+        for(JLabel lbl : labelsOrdersInQueque){
+            if(lbl.getName().contains(product))
+                label = lbl;
+        }
+        return label;
+    }
 }
