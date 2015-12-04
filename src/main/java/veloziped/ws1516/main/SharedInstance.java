@@ -258,7 +258,7 @@ public class SharedInstance {
         this.forecast = forecast;
     }
 
-    public void calcIncomingOrdersThisPeriod(List<Order> incoming) {
+    public Map<String, Order> calcIncomingOrdersThisPeriod(List<Order> incoming) {
         incomingOrdersThisPeriod = new HashMap<>();
         long currentPeriod = this.results.getPeriod() + 1;
 
@@ -270,6 +270,8 @@ public class SharedInstance {
                 incomingOrdersThisPeriod.put(String.valueOf(order.getArticle()), order);
             }
         }
+        
+        return incomingOrdersThisPeriod;
     }
 
     private long getEstimatedDeliverPeriod(ExtendedArticle article, Order order) {

@@ -23,10 +23,12 @@ import javax.swing.event.DocumentListener;
 import javax.swing.text.JTextComponent;
 import javax.xml.bind.JAXBException;
 import veloziped.ws1516.articles.ExtendedArticle;
+import veloziped.ws1516.disposal.PurchasingDisposal;
 import veloziped.ws1516.generated.Results;
 import veloziped.ws1516.production.CalculationMode;
 import veloziped.ws1516.production.Forecast;
 import veloziped.ws1516.production.PeriodDetail;
+import veloziped.ws1516.production.ProductionPlan;
 import veloziped.ws1516.test.TestData;
 import veloziped.ws1516.util.IntegerField;
 import veloziped.ws1516.util.Utils;
@@ -59,6 +61,8 @@ public class MainUI extends javax.swing.JFrame {
         this.setSelectedLanguage(Locale.getDefault().getLanguage());
         this.setCalculationMode(CalculationMode.PESSIMISTIC);
         this.jButtonCalculate.setEnabled(false);
+        SharedInstance.getInstance().setDiscountFactor(0.1);
+        SharedInstance.getInstance().setBufferFactor(0.05);
 
         this.addInputFieldsListener();
 
@@ -2289,7 +2293,7 @@ public class MainUI extends javax.swing.JFrame {
                 Map<String, ExtendedArticle> extArt = SetupInstance.getInstance()
                         .generateExtendedArticles(SharedInstance.getInstance().getWarehouseStock().getArticle());
                 SharedInstance.getInstance().setExtendedArticles(extArt);
-
+                
                 this.jButtonCalculate.setEnabled(true);
             } catch (JAXBException ex) {
                 Logger.getLogger(MainUI.class.getName()).log(Level.SEVERE, null, ex);
@@ -2365,6 +2369,21 @@ public class MainUI extends javax.swing.JFrame {
 
         Map<String, WorkloadResult> result = WorkloadPlanning.getInstance()
                 .calculateWorkload(SharedInstance.getInstance().getExtendedWorkplaces());
+        
+        SharedInstance.getInstance().calcIncomingOrdersThisPeriod(
+                SharedInstance.getInstance().getFutureInwardStockMovement().getOrder());
+
+                //only for test purposes!! this is actually the forecast
+                ProductionPlan plan = new ProductionPlan();
+                plan.setPeriodN1(periodDetailN1);
+                plan.setPeriodN2(periodDetailN2);
+                plan.setPeriodN3(periodDetailN3);
+                plan.setPeriodN4(periodDetailN4);
+                SharedInstance.getInstance().setProductionPlan(plan);
+                
+                PurchasingDisposal.getInstance().calculateOrders(
+                SharedInstance.getInstance().getExtendedArticles());
+                
     }//GEN-LAST:event_jButtonCalculateActionPerformed
 
     private void jCheckBoxMenuItemCalculationModePessimisticActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItemCalculationModePessimisticActionPerformed

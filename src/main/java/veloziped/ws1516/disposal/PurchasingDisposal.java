@@ -53,7 +53,7 @@ public class PurchasingDisposal {
                     OrderMode mode = this.calcOrderMode(article, consumInDays);
                     long consumInDeliverTime = this.calcConsumInDeliverTime(article, plan);
                     //updated version, maybe change later
-                    long missing = plan.getN1() - stock;
+                    long missing = (plan.getN1() - stock > 0)? (plan.getN1() - stock) : 0;
 
                     /*
                     if (mode == OrderMode.FAST) {
@@ -141,12 +141,12 @@ public class PurchasingDisposal {
     private OrderMode calcOrderMode(ExtendedArticle article, long consumInDays) {
         OrderMode mode;
         
-        boolean normalDeliveryIsOk = (consumInDays <= article
-                .getDeliveryTimeNormalInDays(SharedInstance.getInstance()
-                        .getCalculationMode()));
-        boolean fastDeliveryOk = (consumInDays <= article.
+        boolean normalDeliveryIsOk = (article.
+                getDeliveryTimeNormalInDays(SharedInstance.getInstance()
+                        .getCalculationMode()) <= consumInDays);
+        boolean fastDeliveryOk = (article.
                 getDeliveryTimeFastInDays(SharedInstance.getInstance()
-                        .getCalculationMode()));
+                        .getCalculationMode()) <= consumInDays);
 
         if (normalDeliveryIsOk) {
             mode = OrderMode.NORMAL;
@@ -185,7 +185,7 @@ public class PurchasingDisposal {
         } else if (stock < (n1 + n2 + n3 + n4)) {
             days = 15 + (stock - n1 - n2 - n3) / n4 * 5;
         } else {
-            days = -1;
+            days = 999;
         }
 
         switch (SharedInstance.getInstance().getCalculationMode()) {
