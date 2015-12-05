@@ -52,8 +52,7 @@ public class SharedInstance {
     // 1 == 100%
     private double discountFactor;
     private double bufferFactor;
-    
-    
+
     private Result result;
     private Inwardstockmovement inwardStockMovement;
     private Cycletimes cycleTimes;
@@ -125,7 +124,6 @@ public class SharedInstance {
         this.discountFactor = discountFactor;
     }
 
-
     public CalculationMode getCalculationMode() {
         return calculationMode;
     }
@@ -168,8 +166,7 @@ public class SharedInstance {
     public ProductionPlan getProductionPlan() {
         return productionPlan;
     }
-    
-    
+
     public ExtendedArticle getArticleForId(Long id) {
         ExtendedArticle result = null;
 
@@ -179,7 +176,7 @@ public class SharedInstance {
 
         return result;
     }
-    
+
     public boolean setExtendedArticleForId(Long id, ExtendedArticle article) {
         boolean result = false;
 
@@ -206,7 +203,7 @@ public class SharedInstance {
     public void setExtendedWorkplaces(Map<String, ExtendedWorkplace> workplaces) {
         this.extendedWorkplaces = workplaces;
     }
-    
+
     public void setExtendedArticles(Map<String, ExtendedArticle> articles) {
         this.extendedArticles = articles;
     }
@@ -231,7 +228,7 @@ public class SharedInstance {
 
         return result;
     }
-    
+
     public Order getIncomingOrderForArticleId(Long id) {
         Order result = null;
 
@@ -266,54 +263,40 @@ public class SharedInstance {
             ExtendedArticle article = this.getArticleForId(order.getArticle());
             long estimatedPeriod = this.getEstimatedDeliverPeriod(article, order);
 
-            if (currentPeriod <= estimatedPeriod) {
+            if (estimatedPeriod <= currentPeriod) {
                 incomingOrdersThisPeriod.put(String.valueOf(order.getArticle()), order);
             }
         }
-        
+
         return incomingOrdersThisPeriod;
     }
 
     private long getEstimatedDeliverPeriod(ExtendedArticle article, Order order) {
         long estimatedPeriod = 0;
 
-        switch (this.calculationMode) {
-            case OPTIMISTIC:
-                if (order.getMode() == 5) {
-                    estimatedPeriod = DoubleMath.roundToLong(article.getDeliveryTimeNormalAsPeriods(this.calculationMode) + order.getOrderperiod(), RoundingMode.DOWN);
-                } else if (order.getMode() == 4) {
-                    estimatedPeriod = DoubleMath.roundToLong(article.getDeliveryTimeFastAsPeriod() + order.getOrderperiod(), RoundingMode.DOWN);
-                } else {
-                    throw new IllegalArgumentException("Delivery mode not supported.");
-                }
-                break;
-            case PESSIMISTIC:
-                if (order.getMode() == 5) {
-                    estimatedPeriod = DoubleMath.roundToLong(article.getDeliveryTimeNormalAsPeriods(this.calculationMode) + order.getOrderperiod(), RoundingMode.CEILING);
-                } else if (order.getMode() == 4) {
-                    estimatedPeriod = DoubleMath.roundToLong(article.getDeliveryTimeFastAsPeriod() + order.getOrderperiod(), RoundingMode.CEILING);
-                } else {
-                    throw new IllegalArgumentException("Delivery mode not supported.");
-                }
-                break;
-
+        if (order.getMode() == 5) {
+            estimatedPeriod = DoubleMath.roundToLong(article.getDeliveryTimeNormalAsPeriods(this.calculationMode) + order.getOrderperiod(), RoundingMode.DOWN);
+        } else if (order.getMode() == 4) {
+            estimatedPeriod = DoubleMath.roundToLong(article.getDeliveryTimeFastAsPeriod() + order.getOrderperiod(), RoundingMode.DOWN);
+        } else {
+            throw new IllegalArgumentException("Delivery mode not supported.");
         }
+
         return estimatedPeriod;
     }
-    
-    public static Results parseXmlInput(File file) throws JAXBException{
+
+    public static Results parseXmlInput(File file) throws JAXBException {
         JAXBContext jaxbContext = JAXBContext.newInstance(Results.class);
         Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
         Results results = (Results) jaxbUnmarshaller.unmarshal(file);
         return results;
     }
-    
-    
+
     public void parseResults(Results results) {
-        if(results == null) {
+        if (results == null) {
             return;
         }
-        
+
         this.results = results;
 
         for (Object object : results.getContent()) {
