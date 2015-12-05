@@ -221,14 +221,14 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jTextFieldPFPeriodN2DF" max="32767" attributes="0"/>
-                          <Component id="jLabelPeriodN1PF" pref="142" max="32767" attributes="0"/>
+                          <Component id="jLabelPeriodN1PF" pref="145" max="32767" attributes="0"/>
                           <Component id="jTextFieldPFPeriodN2KF" max="32767" attributes="0"/>
                           <Component id="jTextFieldPFPeriodN2HF" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jTextFieldPFPeriodN3DF" max="32767" attributes="0"/>
-                          <Component id="jLabelPeriodN2PF" pref="142" max="32767" attributes="0"/>
+                          <Component id="jLabelPeriodN2PF" pref="147" max="32767" attributes="0"/>
                           <Component id="jTextFieldPFPeriodN3KF" max="32767" attributes="0"/>
                           <Component id="jTextFieldPFPeriodN3HF" alignment="0" max="32767" attributes="0"/>
                       </Group>
@@ -612,7 +612,7 @@
                                       <Component id="jLabelKFSalesOrders" min="-2" pref="80" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="79" max="32767" attributes="0"/>
+                              <EmptySpace pref="72" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="jLabelKFPlannedStock" min="-2" pref="78" max="-2" attributes="0"/>
@@ -640,7 +640,7 @@
                                       <Component id="jTextFieldKFE7PlannedStock" alignment="1" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="77" max="32767" attributes="0"/>
+                              <EmptySpace pref="74" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jTextFieldKFP1StockEndOfPeriod" alignment="1" min="-2" pref="50" max="-2" attributes="0"/>
                                   <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
@@ -666,7 +666,7 @@
                                   </Group>
                                   <Component id="jLabelKFStockEndOfPeriod" alignment="1" min="-2" pref="80" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="43" max="32767" attributes="0"/>
+                              <EmptySpace pref="42" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jTextFieldKFP1OrdersInQueque" alignment="1" min="-2" pref="48" max="-2" attributes="0"/>
                                   <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
@@ -692,7 +692,7 @@
                                   </Group>
                                   <Component id="jLabelKFOrdersInQueque" alignment="1" min="-2" pref="80" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="61" max="32767" attributes="0"/>
+                              <EmptySpace pref="58" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" attributes="0">
@@ -723,7 +723,7 @@
                                   </Group>
                                   <Component id="jLabelKFWorkInProgress" min="-2" pref="65" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="55" max="32767" attributes="0"/>
+                              <EmptySpace pref="52" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabelKFProductionOrders" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="jTextFieldKFP1ProductionOrders" alignment="1" min="-2" pref="50" max="-2" attributes="0"/>
@@ -2287,7 +2287,7 @@
                                       <Component id="jLabelKFSalesOrders1" min="-2" pref="80" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="79" max="32767" attributes="0"/>
+                              <EmptySpace pref="72" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="jLabelKFPlannedStock1" min="-2" pref="78" max="-2" attributes="0"/>
@@ -2315,7 +2315,7 @@
                                       <Component id="jTextFieldDFE8PlannedStock" alignment="1" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="77" max="32767" attributes="0"/>
+                              <EmptySpace pref="74" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jTextFieldDFP2StockEndOfPeriod" alignment="1" min="-2" pref="50" max="-2" attributes="0"/>
                                   <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
@@ -2341,7 +2341,7 @@
                                   </Group>
                                   <Component id="jLabelKFStockEndOfPeriod1" alignment="1" min="-2" pref="80" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="43" max="32767" attributes="0"/>
+                              <EmptySpace pref="42" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jTextFieldDFP2OrdersInQueque" alignment="1" min="-2" pref="48" max="-2" attributes="0"/>
                                   <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
@@ -2367,7 +2367,7 @@
                                   </Group>
                                   <Component id="jLabelKFOrdersInQueque1" alignment="1" min="-2" pref="80" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="61" max="32767" attributes="0"/>
+                              <EmptySpace pref="58" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
                                   <Group type="103" alignment="1" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
@@ -2398,7 +2398,7 @@
                                   </Group>
                                   <Component id="jLabelKFWorkInProgress1" alignment="1" min="-2" pref="65" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="55" max="32767" attributes="0"/>
+                              <EmptySpace pref="52" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabelKFProductionOrders1" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="jTextFieldDFP2ProductionOrders" alignment="1" min="-2" pref="50" max="-2" attributes="0"/>
@@ -3902,6 +3902,111 @@
                     </Component>
                   </SubComponents>
                 </Container>
+              </SubComponents>
+            </Container>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="jPanelWorkloadPlanning">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Workload Planning">
+                <Property name="tabTitle" type="java.lang.String" value="Workload Planning"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <EmptySpace min="0" pref="1048" max="32767" attributes="0"/>
+                  <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jScrollPane1" pref="1036" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <EmptySpace min="0" pref="670" max="32767" attributes="0"/>
+                  <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jScrollPane1" pref="658" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTable" name="jTableWorkloadPlanning">
+                  <Properties>
+                    <Property name="autoCreateRowSorter" type="boolean" value="true"/>
+                    <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                      <Table columnCount="7" rowCount="4">
+                        <Column editable="false" title="Workplace" type="java.lang.Long"/>
+                        <Column editable="true" title="Last Cycle Times" type="java.lang.Long"/>
+                        <Column editable="false" title="Capacity Needed" type="java.lang.Long"/>
+                        <Column editable="false" title="Overtime p. Day" type="java.lang.Long"/>
+                        <Column editable="false" title="Shifts" type="java.lang.Long"/>
+                        <Column editable="false" title="Free Capacity" type="java.lang.Long"/>
+                        <Column editable="false" title="Workload pct" type="java.lang.Double"/>
+                      </Table>
+                    </Property>
+                    <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                      <TableColumnModel selectionModel="0">
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                      </TableColumnModel>
+                    </Property>
+                    <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                      <TableHeader reorderingAllowed="false" resizingAllowed="true"/>
+                    </Property>
+                  </Properties>
+                </Component>
               </SubComponents>
             </Container>
           </SubComponents>
