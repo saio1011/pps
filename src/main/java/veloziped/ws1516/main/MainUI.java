@@ -3327,7 +3327,7 @@ public class MainUI extends javax.swing.JFrame {
         chooser.setFileFilter(xmlfilter);
         chooser.showOpenDialog(null);
         File file = chooser.getSelectedFile();
-        if (file.getAbsolutePath().endsWith(".xml")) {
+        if (file != null && file.getAbsolutePath().endsWith(".xml")) {
 
             Results res;
             try {
