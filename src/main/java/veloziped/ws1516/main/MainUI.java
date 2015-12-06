@@ -513,16 +513,16 @@ public class MainUI extends javax.swing.JFrame {
         jLabelHerrenfahrradPF.setText(bundle.getString("Herrenfahrrad")); // NOI18N
 
         jLabelPeriodNPF.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelPeriodNPF.setText(bundle.getString("PeriondN")); // NOI18N
+        jLabelPeriodNPF.setText(bundle.getString("Period")); // NOI18N
 
         jLabelPeriodN1PF.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelPeriodN1PF.setText(bundle.getString("PeriondN1")); // NOI18N
+        jLabelPeriodN1PF.setText(bundle.getString("Period")); // NOI18N
 
         jLabelPeriodN2PF.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelPeriodN2PF.setText(bundle.getString("PeriondN2")); // NOI18N
+        jLabelPeriodN2PF.setText(bundle.getString("Period")); // NOI18N
 
         jLabelPeriodN3PF.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelPeriodN3PF.setText(bundle.getString("PeriondN3")); // NOI18N
+        jLabelPeriodN3PF.setText(bundle.getString("Period")); // NOI18N
 
         jTextFieldPFPeriodN1KF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
