@@ -477,6 +477,9 @@ public class MainUI extends javax.swing.JFrame {
         jPanelWorkloadPlanning = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTableWorkloadPlanning = new javax.swing.JTable();
+        jPanelPurchasingDisposition = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTablePurchasingDisposition = new javax.swing.JTable();
         jPanel1 = new javax.swing.JPanel();
         jButtonCalculate = new javax.swing.JButton();
         jButtonImportXml = new javax.swing.JButton();
@@ -3047,10 +3050,7 @@ public class MainUI extends javax.swing.JFrame {
         jTableWorkloadPlanning.setAutoCreateRowSorter(true);
         jTableWorkloadPlanning.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
+
             },
             new String [] {
                 "Workplace", "Last Cycle Times", "Capacity Needed", "Overtime p. Day", "Shifts", "Free Capacity", "Workload pct"
@@ -3071,6 +3071,7 @@ public class MainUI extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        jTableWorkloadPlanning.setShowGrid(false);
         jTableWorkloadPlanning.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(jTableWorkloadPlanning);
 
@@ -3096,6 +3097,47 @@ public class MainUI extends javax.swing.JFrame {
         );
 
         jTabbedPan.addTab("Workload Planning", jPanelWorkloadPlanning);
+
+        jTablePurchasingDisposition.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Article", "Name", "Mode", "Amount"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane2.setViewportView(jTablePurchasingDisposition);
+
+        javax.swing.GroupLayout jPanelPurchasingDispositionLayout = new javax.swing.GroupLayout(jPanelPurchasingDisposition);
+        jPanelPurchasingDisposition.setLayout(jPanelPurchasingDispositionLayout);
+        jPanelPurchasingDispositionLayout.setHorizontalGroup(
+            jPanelPurchasingDispositionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1048, Short.MAX_VALUE)
+            .addGroup(jPanelPurchasingDispositionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelPurchasingDispositionLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 1036, Short.MAX_VALUE)
+                    .addContainerGap()))
+        );
+        jPanelPurchasingDispositionLayout.setVerticalGroup(
+            jPanelPurchasingDispositionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 670, Short.MAX_VALUE)
+            .addGroup(jPanelPurchasingDispositionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelPurchasingDispositionLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 658, Short.MAX_VALUE)
+                    .addContainerGap()))
+        );
+
+        jTabbedPan.addTab("Orders", jPanelPurchasingDisposition);
 
         jButtonCalculate.setText("Calculate");
         jButtonCalculate.addActionListener(new java.awt.event.ActionListener() {
@@ -3410,6 +3452,7 @@ public class MainUI extends javax.swing.JFrame {
                 SharedInstance.getInstance().getExtendedArticles());
 
         this.reFillWorkloadTable(workloadResults.values());
+        this.reFillPurchasingDisposalTable(newOrders);
     }//GEN-LAST:event_jButtonCalculateActionPerformed
 
     private void reFillWorkloadTable(Collection<WorkloadResult> results) {
@@ -3423,6 +3466,19 @@ public class MainUI extends javax.swing.JFrame {
             model.addRow(new Object[]{result.getWorkplaceId().getId(), result.getLastSetupCycles(), result.getTotalCapacityNeeded(),
                 result.getOverTimeDay(), result.getNumberOfShifts(), result.getFreeCapacity(), result.getWorkloadPercentage()});
         }
+    }
+    
+    private void reFillPurchasingDisposalTable(List<Order> orders) {
+       DefaultTableModel model = (DefaultTableModel) jTablePurchasingDisposition.getModel();
+
+        for (int i = model.getRowCount() - 1; i >= 0; i--) {
+            model.removeRow(i);
+        }
+
+        for (Order order : orders) {
+            ExtendedArticle article = SharedInstance.getInstance().getArticleForId(order.getArticle());
+            model.addRow(new Object[]{article.getId(), article.getName(), order.getMode(), order.getAmount()});
+        } 
     }
 
     private void jCheckBoxMenuItemCalculationModePessimisticActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItemCalculationModePessimisticActionPerformed
@@ -3631,8 +3687,10 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelInHouseProduction;
     private javax.swing.JPanel jPanelKF;
     private javax.swing.JPanel jPanelProductionPlanning;
+    private javax.swing.JPanel jPanelPurchasingDisposition;
     private javax.swing.JPanel jPanelWorkloadPlanning;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator10;
     private javax.swing.JSeparator jSeparator11;
@@ -3647,6 +3705,7 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator9;
     private javax.swing.JTabbedPane jTabbedPan;
     private javax.swing.JTabbedPane jTabbedPane2;
+    private javax.swing.JTable jTablePurchasingDisposition;
     private javax.swing.JTable jTableWorkloadPlanning;
     private javax.swing.JTextField jTextFieldDFE11OrdersInQueque;
     private javax.swing.JTextField jTextFieldDFE11PlannedStock;
