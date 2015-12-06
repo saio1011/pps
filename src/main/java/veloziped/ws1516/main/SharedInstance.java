@@ -52,6 +52,7 @@ public class SharedInstance {
     // 1 == 100%
     private double discountFactor;
     private double bufferFactor;
+    private List<Order> newOrders;
 
     private Result result;
     private Inwardstockmovement inwardStockMovement;
@@ -63,6 +64,14 @@ public class SharedInstance {
     private Completedorders completeOrder;
     private Futureinwardstockmovement futureInwardStockMovement;
     private Warehousestock warehouseStock;
+    
+    public List<Order> getNewOrders() {
+        return newOrders;
+    }
+
+    public void setNewOrders(List<Order> newOrders) {
+        this.newOrders = newOrders;
+    }
 
     public double getBufferFactor() {
         return bufferFactor;

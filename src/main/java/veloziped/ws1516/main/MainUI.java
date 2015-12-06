@@ -52,6 +52,7 @@ public class MainUI extends javax.swing.JFrame {
     private PeriodDetail periodDetailN2 = new PeriodDetail(0, 0, 0);
     private PeriodDetail periodDetailN3 = new PeriodDetail(0, 0, 0);
     private PeriodDetail periodDetailN4 = new PeriodDetail(0, 0, 0);
+    private Locale currentLocale = Locale.getDefault();
 
     /**
      * Creates new form MainUI
@@ -63,6 +64,7 @@ public class MainUI extends javax.swing.JFrame {
 
         //set Language selected
         this.setSelectedLanguage(Locale.getDefault().getLanguage());
+        this.changeLanguage(Locale.getDefault().getLanguage(), Locale.getDefault().getCountry());
         this.setCalculationMode(CalculationMode.PESSIMISTIC);
         this.jButtonCalculate.setEnabled(false);
         SharedInstance.getInstance().setDiscountFactor(0.1);
@@ -92,10 +94,10 @@ public class MainUI extends javax.swing.JFrame {
     private void initComponents() {
 
         jTabbedPan = new javax.swing.JTabbedPane();
-        jPanelProductionPlanning = new javax.swing.JPanel();
+        jPanelProductionForecast = new javax.swing.JPanel();
         jLabelKinderfahrradPF = new javax.swing.JLabel();
         jLabelDamenfahrradPF = new javax.swing.JLabel();
-        jLabelMenCyclePF = new javax.swing.JLabel();
+        jLabelHerrenfahrradPF = new javax.swing.JLabel();
         jLabelPeriodNPF = new javax.swing.JLabel();
         jLabelPeriodN1PF = new javax.swing.JLabel();
         jLabelPeriodN2PF = new javax.swing.JLabel();
@@ -120,7 +122,7 @@ public class MainUI extends javax.swing.JFrame {
         jLabelKFSalesOrders = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabelKFStockEndOfPeriod = new javax.swing.JLabel();
-        jLabelKFOrdersInQueque = new javax.swing.JLabel();
+        jLabelKFOrdersInQueue = new javax.swing.JLabel();
         jLabelKFWorkInProgress = new javax.swing.JLabel();
         jLabelKFProductionOrders = new javax.swing.JLabel();
         jTextFieldKFP1SalesOrders = new IntegerField("0");
@@ -237,12 +239,12 @@ public class MainUI extends javax.swing.JFrame {
         jPanelDF = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
         jLabelDFLadiesCycle = new javax.swing.JLabel();
-        jLabelKFSalesOrders1 = new javax.swing.JLabel();
+        jLabelDFSalesOrders = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabelKFStockEndOfPeriod1 = new javax.swing.JLabel();
-        jLabelKFOrdersInQueque1 = new javax.swing.JLabel();
-        jLabelKFWorkInProgress1 = new javax.swing.JLabel();
-        jLabelKFProductionOrders1 = new javax.swing.JLabel();
+        jLabelDFStockEndOfPeriod = new javax.swing.JLabel();
+        jLabelDFOrdersInQueue = new javax.swing.JLabel();
+        jLabelDFWorkInProgress = new javax.swing.JLabel();
+        jLabelDFProductionOrders = new javax.swing.JLabel();
         jTextFieldDFP2SalesOrders = new IntegerField("0");
         jTextFieldDFE56SalesOrders = new IntegerField();
         jTextFieldDFE16SalesOrders = new IntegerField();
@@ -342,7 +344,7 @@ public class MainUI extends javax.swing.JFrame {
         jSeparator7 = new javax.swing.JSeparator();
         jSeparator8 = new javax.swing.JSeparator();
         jTextFieldDFE17SalesOrders = new IntegerField();
-        jLabelKFPlannedStock1 = new javax.swing.JLabel();
+        jLabelDFPlannedStock = new javax.swing.JLabel();
         jLabelDFE26OrdersInQueque = new javax.swing.JLabel();
         jLabelDFE56OrdersInQueque = new javax.swing.JLabel();
         jLabelDFE16OrdersInQueque = new javax.swing.JLabel();
@@ -357,12 +359,12 @@ public class MainUI extends javax.swing.JFrame {
         jPanelHF = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
         jLabelDFLadiesCycle1 = new javax.swing.JLabel();
-        jLabelKFSalesOrders2 = new javax.swing.JLabel();
+        jLabelHFSalesOrders = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jLabelKFStockEndOfPeriod2 = new javax.swing.JLabel();
-        jLabelKFOrdersInQueque2 = new javax.swing.JLabel();
-        jLabelKFWorkInProgress2 = new javax.swing.JLabel();
-        jLabelKFProductionOrders2 = new javax.swing.JLabel();
+        jLabelHFStockEndOfPeriod = new javax.swing.JLabel();
+        jLabelHFOrdersInQueue = new javax.swing.JLabel();
+        jLabelHFWorkInProgress = new javax.swing.JLabel();
+        jLabelHFProductionOrders = new javax.swing.JLabel();
         jTextFieldHFP3SalesOrders = new IntegerField("0");
         jTextFieldHFE31SalesOrders = new IntegerField();
         jTextFieldHFE16SalesOrders = new IntegerField();
@@ -462,7 +464,7 @@ public class MainUI extends javax.swing.JFrame {
         jSeparator11 = new javax.swing.JSeparator();
         jSeparator12 = new javax.swing.JSeparator();
         jTextFieldHFE17SalesOrders = new IntegerField();
-        jLabelKFPlannedStock2 = new javax.swing.JLabel();
+        jLabelHFPlannedStock = new javax.swing.JLabel();
         jLabelHFE26OrdersInQueque = new javax.swing.JLabel();
         jLabelHFE31OrdersInQueque = new javax.swing.JLabel();
         jLabelHFE16OrdersInQueque = new javax.swing.JLabel();
@@ -502,13 +504,13 @@ public class MainUI extends javax.swing.JFrame {
         java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("veloziped/ws1516/i18n/i18n"); // NOI18N
         setTitle(bundle.getString("pps")); // NOI18N
 
-        jPanelProductionPlanning.setAutoscrolls(true);
+        jPanelProductionForecast.setAutoscrolls(true);
 
         jLabelKinderfahrradPF.setText(bundle.getString("Kinderfahrrad")); // NOI18N
 
         jLabelDamenfahrradPF.setText(bundle.getString("Damenfahrrad")); // NOI18N
 
-        jLabelMenCyclePF.setText(bundle.getString("Herrenfahrrad")); // NOI18N
+        jLabelHerrenfahrradPF.setText(bundle.getString("Herrenfahrrad")); // NOI18N
 
         jLabelPeriodNPF.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelPeriodNPF.setText(bundle.getString("PeriondN")); // NOI18N
@@ -546,68 +548,68 @@ public class MainUI extends javax.swing.JFrame {
 
         jTextFieldPFPeriodN4HF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        javax.swing.GroupLayout jPanelProductionPlanningLayout = new javax.swing.GroupLayout(jPanelProductionPlanning);
-        jPanelProductionPlanning.setLayout(jPanelProductionPlanningLayout);
-        jPanelProductionPlanningLayout.setHorizontalGroup(
-            jPanelProductionPlanningLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelProductionPlanningLayout.createSequentialGroup()
+        javax.swing.GroupLayout jPanelProductionForecastLayout = new javax.swing.GroupLayout(jPanelProductionForecast);
+        jPanelProductionForecast.setLayout(jPanelProductionForecastLayout);
+        jPanelProductionForecastLayout.setHorizontalGroup(
+            jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelProductionForecastLayout.createSequentialGroup()
                 .addGap(27, 27, 27)
-                .addGroup(jPanelProductionPlanningLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabelMenCyclePF, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabelHerrenfahrradPF, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelDamenfahrradPF, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelKinderfahrradPF, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(108, 108, 108)
-                .addGroup(jPanelProductionPlanningLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jTextFieldPFPeriodN1DF)
                     .addComponent(jLabelPeriodNPF, javax.swing.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE)
                     .addComponent(jTextFieldPFPeriodN1KF)
                     .addComponent(jTextFieldPFPeriodN1HF))
                 .addGap(18, 18, 18)
-                .addGroup(jPanelProductionPlanningLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jTextFieldPFPeriodN2DF)
                     .addComponent(jLabelPeriodN1PF, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE)
                     .addComponent(jTextFieldPFPeriodN2KF)
                     .addComponent(jTextFieldPFPeriodN2HF))
                 .addGap(18, 18, 18)
-                .addGroup(jPanelProductionPlanningLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jTextFieldPFPeriodN3DF)
                     .addComponent(jLabelPeriodN2PF, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)
                     .addComponent(jTextFieldPFPeriodN3KF)
                     .addComponent(jTextFieldPFPeriodN3HF))
                 .addGap(18, 18, 18)
-                .addGroup(jPanelProductionPlanningLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabelPeriodN3PF, javax.swing.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE)
                     .addComponent(jTextFieldPFPeriodN4KF)
                     .addComponent(jTextFieldPFPeriodN4DF)
                     .addComponent(jTextFieldPFPeriodN4HF))
                 .addGap(142, 142, 142))
         );
-        jPanelProductionPlanningLayout.setVerticalGroup(
-            jPanelProductionPlanningLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelProductionPlanningLayout.createSequentialGroup()
+        jPanelProductionForecastLayout.setVerticalGroup(
+            jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelProductionForecastLayout.createSequentialGroup()
                 .addGap(45, 45, 45)
-                .addGroup(jPanelProductionPlanningLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelPeriodNPF, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabelPeriodN1PF, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabelPeriodN2PF, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabelPeriodN3PF, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(32, 32, 32)
-                .addGroup(jPanelProductionPlanningLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelKinderfahrradPF, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldPFPeriodN1KF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldPFPeriodN2KF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldPFPeriodN3KF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldPFPeriodN4KF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(30, 30, 30)
-                .addGroup(jPanelProductionPlanningLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelDamenfahrradPF, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldPFPeriodN1DF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldPFPeriodN2DF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldPFPeriodN3DF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldPFPeriodN4DF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(30, 30, 30)
-                .addGroup(jPanelProductionPlanningLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelMenCyclePF, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelHerrenfahrradPF, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldPFPeriodN1HF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldPFPeriodN2HF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldPFPeriodN3HF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -615,7 +617,7 @@ public class MainUI extends javax.swing.JFrame {
                 .addContainerGap(433, Short.MAX_VALUE))
         );
 
-        jTabbedPan.addTab(bundle.getString("tabProductionForecast"), jPanelProductionPlanning); // NOI18N
+        jTabbedPan.addTab("Production Forecast", jPanelProductionForecast);
 
         jPanelKF.setMaximumSize(new java.awt.Dimension(16, 28));
         jPanelKF.setPreferredSize(new java.awt.Dimension(16, 28));
@@ -634,8 +636,8 @@ public class MainUI extends javax.swing.JFrame {
         jLabelKFStockEndOfPeriod.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelKFStockEndOfPeriod.setText(bundle.getString("StockEndOfPeriod")); // NOI18N
 
-        jLabelKFOrdersInQueque.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabelKFOrdersInQueque.setText(bundle.getString("OrdersInQueque")); // NOI18N
+        jLabelKFOrdersInQueue.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelKFOrdersInQueue.setText(bundle.getString("OrdersInQueue")); // NOI18N
 
         jLabelKFWorkInProgress.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelKFWorkInProgress.setText(bundle.getString("WorkInProgress")); // NOI18N
@@ -1138,7 +1140,7 @@ public class MainUI extends javax.swing.JFrame {
                         .addComponent(jTextFieldKFE18OrdersInQueque, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
                         .addComponent(jTextFieldKFE13OrdersInQueque, javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(jTextFieldKFE7OrdersInQueque, javax.swing.GroupLayout.Alignment.TRAILING))
-                    .addComponent(jLabelKFOrdersInQueque, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelKFOrdersInQueue, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
                 .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1195,7 +1197,7 @@ public class MainUI extends javax.swing.JFrame {
                     .addComponent(jLabelKFSalesOrders)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel4)
-                        .addComponent(jLabelKFOrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabelKFOrdersInQueue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabelKFWorkInProgress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabelKFProductionOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabelKFPlannedStock, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1376,20 +1378,20 @@ public class MainUI extends javax.swing.JFrame {
         jLabelDFLadiesCycle.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabelDFLadiesCycle.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabelKFSalesOrders1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabelKFSalesOrders1.setText(bundle.getString("SalesOrders")); // NOI18N
+        jLabelDFSalesOrders.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelDFSalesOrders.setText(bundle.getString("SalesOrders")); // NOI18N
 
-        jLabelKFStockEndOfPeriod1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabelKFStockEndOfPeriod1.setText(bundle.getString("StockEndOfPeriod")); // NOI18N
+        jLabelDFStockEndOfPeriod.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelDFStockEndOfPeriod.setText(bundle.getString("StockEndOfPeriod")); // NOI18N
 
-        jLabelKFOrdersInQueque1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabelKFOrdersInQueque1.setText(bundle.getString("OrdersInQueque")); // NOI18N
+        jLabelDFOrdersInQueue.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelDFOrdersInQueue.setText(bundle.getString("OrdersInQueue")); // NOI18N
 
-        jLabelKFWorkInProgress1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabelKFWorkInProgress1.setText(bundle.getString("WorkInProgress")); // NOI18N
+        jLabelDFWorkInProgress.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelDFWorkInProgress.setText(bundle.getString("WorkInProgress")); // NOI18N
 
-        jLabelKFProductionOrders1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabelKFProductionOrders1.setText(bundle.getString("ProductionOrders")); // NOI18N
+        jLabelDFProductionOrders.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelDFProductionOrders.setText(bundle.getString("ProductionOrders")); // NOI18N
 
         jTextFieldDFP2SalesOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextFieldDFP2SalesOrders.setEnabled(false);
@@ -1743,8 +1745,8 @@ public class MainUI extends javax.swing.JFrame {
         jTextFieldDFE17SalesOrders.setEnabled(false);
         jTextFieldDFE17SalesOrders.setName("jTextFieldDFE17SalesOrders"); // NOI18N
 
-        jLabelKFPlannedStock1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabelKFPlannedStock1.setText(bundle.getString("PlannedStock")); // NOI18N
+        jLabelDFPlannedStock.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelDFPlannedStock.setText(bundle.getString("PlannedStock")); // NOI18N
 
         jLabelDFE26OrdersInQueque.setText("0");
         jLabelDFE26OrdersInQueque.setMaximumSize(new java.awt.Dimension(60, 16));
@@ -1907,11 +1909,11 @@ public class MainUI extends javax.swing.JFrame {
                                 .addComponent(jTextFieldDFE8SalesOrders, javax.swing.GroupLayout.Alignment.LEADING))))
                     .addGroup(jPanelDFLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jLabelKFSalesOrders1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabelDFSalesOrders, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
                 .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelDFLayout.createSequentialGroup()
-                        .addComponent(jLabelKFPlannedStock1, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabelDFPlannedStock, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel5))
                     .addComponent(jTextFieldDFP2PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1949,7 +1951,7 @@ public class MainUI extends javax.swing.JFrame {
                         .addComponent(jTextFieldDFE19StockEndOfPeriod, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
                         .addComponent(jTextFieldDFE14StockEndOfPeriod, javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(jTextFieldDFE8StockEndOfPeriod, javax.swing.GroupLayout.Alignment.TRAILING))
-                    .addComponent(jLabelKFStockEndOfPeriod1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelDFStockEndOfPeriod, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
                 .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jTextFieldDFP2OrdersInQueque, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1969,7 +1971,7 @@ public class MainUI extends javax.swing.JFrame {
                         .addComponent(jTextFieldDFE19OrdersInQueque, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
                         .addComponent(jTextFieldDFE14OrdersInQueque, javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(jTextFieldDFE8OrdersInQueque, javax.swing.GroupLayout.Alignment.TRAILING))
-                    .addComponent(jLabelKFOrdersInQueque1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelDFOrdersInQueue, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
                 .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1992,10 +1994,10 @@ public class MainUI extends javax.swing.JFrame {
                             .addComponent(jTextFieldDFE19WorkInProgress, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)
                             .addComponent(jTextFieldDFE14WorkInProgress, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jTextFieldDFE8WorkInProgress, javax.swing.GroupLayout.Alignment.TRAILING)))
-                    .addComponent(jLabelKFWorkInProgress1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelDFWorkInProgress, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
                 .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelKFProductionOrders1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelDFProductionOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldDFP2ProductionOrders, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(jTextFieldDFE56ProductionOrders, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
@@ -2023,14 +2025,14 @@ public class MainUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelKFSalesOrders1)
+                    .addComponent(jLabelDFSalesOrders)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel5)
-                        .addComponent(jLabelKFOrdersInQueque1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabelKFWorkInProgress1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabelKFProductionOrders1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabelKFPlannedStock1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabelKFStockEndOfPeriod1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabelDFOrdersInQueue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabelDFWorkInProgress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabelDFProductionOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabelDFPlannedStock, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabelDFStockEndOfPeriod, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelDFLayout.createSequentialGroup()
@@ -2207,20 +2209,20 @@ public class MainUI extends javax.swing.JFrame {
         jLabelDFLadiesCycle1.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabelDFLadiesCycle1.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabelKFSalesOrders2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabelKFSalesOrders2.setText(bundle.getString("SalesOrders")); // NOI18N
+        jLabelHFSalesOrders.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelHFSalesOrders.setText(bundle.getString("SalesOrders")); // NOI18N
 
-        jLabelKFStockEndOfPeriod2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabelKFStockEndOfPeriod2.setText(bundle.getString("StockEndOfPeriod")); // NOI18N
+        jLabelHFStockEndOfPeriod.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelHFStockEndOfPeriod.setText(bundle.getString("StockEndOfPeriod")); // NOI18N
 
-        jLabelKFOrdersInQueque2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabelKFOrdersInQueque2.setText(bundle.getString("OrdersInQueque")); // NOI18N
+        jLabelHFOrdersInQueue.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelHFOrdersInQueue.setText(bundle.getString("OrdersInQueue")); // NOI18N
 
-        jLabelKFWorkInProgress2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabelKFWorkInProgress2.setText(bundle.getString("WorkInProgress")); // NOI18N
+        jLabelHFWorkInProgress.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelHFWorkInProgress.setText(bundle.getString("WorkInProgress")); // NOI18N
 
-        jLabelKFProductionOrders2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabelKFProductionOrders2.setText(bundle.getString("ProductionOrders")); // NOI18N
+        jLabelHFProductionOrders.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelHFProductionOrders.setText(bundle.getString("ProductionOrders")); // NOI18N
 
         jTextFieldHFP3SalesOrders.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextFieldHFP3SalesOrders.setEnabled(false);
@@ -2574,8 +2576,8 @@ public class MainUI extends javax.swing.JFrame {
         jTextFieldHFE17SalesOrders.setEnabled(false);
         jTextFieldHFE17SalesOrders.setName("jTextFieldHFE17SalesOrders"); // NOI18N
 
-        jLabelKFPlannedStock2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabelKFPlannedStock2.setText(bundle.getString("PlannedStock")); // NOI18N
+        jLabelHFPlannedStock.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelHFPlannedStock.setText(bundle.getString("PlannedStock")); // NOI18N
 
         jLabelHFE26OrdersInQueque.setText("0");
         jLabelHFE26OrdersInQueque.setMaximumSize(new java.awt.Dimension(60, 16));
@@ -2738,11 +2740,11 @@ public class MainUI extends javax.swing.JFrame {
                                 .addComponent(jTextFieldHFE9SalesOrders, javax.swing.GroupLayout.Alignment.LEADING))))
                     .addGroup(jPanelHFLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jLabelKFSalesOrders2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabelHFSalesOrders, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
                 .addGroup(jPanelHFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelHFLayout.createSequentialGroup()
-                        .addComponent(jLabelKFPlannedStock2, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabelHFPlannedStock, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel6))
                     .addComponent(jTextFieldHFP3PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2780,7 +2782,7 @@ public class MainUI extends javax.swing.JFrame {
                         .addComponent(jTextFieldHFE20StockEndOfPeriod, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
                         .addComponent(jTextFieldHFE15StockEndOfPeriod, javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(jTextFieldHFE9StockEndOfPeriod, javax.swing.GroupLayout.Alignment.TRAILING))
-                    .addComponent(jLabelKFStockEndOfPeriod2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelHFStockEndOfPeriod, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
                 .addGroup(jPanelHFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jTextFieldHFP3OrdersInQueque, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2800,7 +2802,7 @@ public class MainUI extends javax.swing.JFrame {
                         .addComponent(jTextFieldHFE20OrdersInQueque, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
                         .addComponent(jTextFieldHFE15OrdersInQueque, javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(jTextFieldHFE9OrdersInQueque, javax.swing.GroupLayout.Alignment.TRAILING))
-                    .addComponent(jLabelKFOrdersInQueque2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelHFOrdersInQueue, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
                 .addGroup(jPanelHFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanelHFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2823,10 +2825,10 @@ public class MainUI extends javax.swing.JFrame {
                             .addComponent(jTextFieldHFE20WorkInProgress, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)
                             .addComponent(jTextFieldHFE15WorkInProgress, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jTextFieldHFE9WorkInProgress, javax.swing.GroupLayout.Alignment.TRAILING)))
-                    .addComponent(jLabelKFWorkInProgress2, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelHFWorkInProgress, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
                 .addGroup(jPanelHFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelKFProductionOrders2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelHFProductionOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldHFP3ProductionOrders, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelHFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(jTextFieldHFE31ProductionOrders, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
@@ -2854,14 +2856,14 @@ public class MainUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanelHFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelKFSalesOrders2)
+                    .addComponent(jLabelHFSalesOrders)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelHFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel6)
-                        .addComponent(jLabelKFOrdersInQueque2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabelKFWorkInProgress2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabelKFProductionOrders2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabelKFPlannedStock2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabelKFStockEndOfPeriod2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabelHFOrdersInQueue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabelHFWorkInProgress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabelHFProductionOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabelHFPlannedStock, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabelHFStockEndOfPeriod, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelHFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelHFLayout.createSequentialGroup()
@@ -3137,7 +3139,7 @@ public class MainUI extends javax.swing.JFrame {
                     .addContainerGap()))
         );
 
-        jTabbedPan.addTab("Orders", jPanelPurchasingDisposition);
+        jTabbedPan.addTab("Purchasing Planning", jPanelPurchasingDisposition);
 
         jButtonCalculate.setText("Calculate");
         jButtonCalculate.addActionListener(new java.awt.event.ActionListener() {
@@ -3288,46 +3290,31 @@ public class MainUI extends javax.swing.JFrame {
     private void jCheckBoxMenuItemEnglishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItemEnglishActionPerformed
         locale = new Locale("en", "US");
         this.changeLanguage(locale.getLanguage(), locale.getCountry());
-        jCheckBoxMenuItemDeutsch.setSelected(false);
-        jCheckBoxMenuItemBulgarian.setSelected(false);
-        jCheckBoxMenuItemFrench.setSelected(false);
-        jCheckBoxMenuItemRomanien.setSelected(false);
+        this.setSelectedLanguage(locale.getLanguage());
     }//GEN-LAST:event_jCheckBoxMenuItemEnglishActionPerformed
 
     private void jCheckBoxMenuItemDeutschActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItemDeutschActionPerformed
         locale = new Locale("de", "DE");
         this.changeLanguage(locale.getLanguage(), locale.getCountry());
-        jCheckBoxMenuItemEnglish.setSelected(false);
-        jCheckBoxMenuItemBulgarian.setSelected(false);
-        jCheckBoxMenuItemFrench.setSelected(false);
-        jCheckBoxMenuItemRomanien.setSelected(false);
+        this.setSelectedLanguage(locale.getLanguage());
     }//GEN-LAST:event_jCheckBoxMenuItemDeutschActionPerformed
 
     private void jCheckBoxMenuItemBulgarianActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItemBulgarianActionPerformed
         locale = new Locale("bg", "BG");
         this.changeLanguage(locale.getLanguage(), locale.getCountry());
-        jCheckBoxMenuItemEnglish.setSelected(false);
-        jCheckBoxMenuItemDeutsch.setSelected(false);
-        jCheckBoxMenuItemFrench.setSelected(false);
-        jCheckBoxMenuItemRomanien.setSelected(false);
+        this.setSelectedLanguage(locale.getLanguage());
     }//GEN-LAST:event_jCheckBoxMenuItemBulgarianActionPerformed
 
     private void jCheckBoxMenuItemFrenchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItemFrenchActionPerformed
         locale = new Locale("fr", "FR");
         this.changeLanguage(locale.getLanguage(), locale.getCountry());
-        jCheckBoxMenuItemEnglish.setSelected(false);
-        jCheckBoxMenuItemDeutsch.setSelected(false);
-        jCheckBoxMenuItemBulgarian.setSelected(false);
-        jCheckBoxMenuItemRomanien.setSelected(false);
+        this.setSelectedLanguage(locale.getLanguage());
     }//GEN-LAST:event_jCheckBoxMenuItemFrenchActionPerformed
 
     private void jCheckBoxMenuItemRomanienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItemRomanienActionPerformed
         locale = new Locale("ro", "RO");
         this.changeLanguage(locale.getLanguage(), locale.getCountry());
-        jCheckBoxMenuItemEnglish.setSelected(false);
-        jCheckBoxMenuItemDeutsch.setSelected(false);
-        jCheckBoxMenuItemFrench.setSelected(false);
-        jCheckBoxMenuItemBulgarian.setSelected(false);
+        this.setSelectedLanguage(locale.getLanguage());
     }//GEN-LAST:event_jCheckBoxMenuItemRomanienActionPerformed
 
     private void importXml() {
@@ -3348,6 +3335,8 @@ public class MainUI extends javax.swing.JFrame {
                 Map<String, ExtendedArticle> extArt = SetupInstance.getInstance()
                         .generateExtendedArticles(SharedInstance.getInstance().getWarehouseStock().getArticle());
                 SharedInstance.getInstance().setExtendedArticles(extArt);
+                
+                this.setPeriodLabels();
 
                 this.jButtonCalculate.setEnabled(true);
             } catch (JAXBException ex) {
@@ -3450,6 +3439,7 @@ public class MainUI extends javax.swing.JFrame {
 
         List<Order> newOrders = PurchasingDisposal.getInstance().calculateOrders(
                 SharedInstance.getInstance().getExtendedArticles());
+        SharedInstance.getInstance().setNewOrders(newOrders);
 
         this.reFillWorkloadTable(workloadResults.values());
         this.reFillPurchasingDisposalTable(newOrders);
@@ -3467,9 +3457,10 @@ public class MainUI extends javax.swing.JFrame {
                 result.getOverTimeDay(), result.getNumberOfShifts(), result.getFreeCapacity(), result.getWorkloadPercentage()});
         }
     }
-    
+
     private void reFillPurchasingDisposalTable(List<Order> orders) {
-       DefaultTableModel model = (DefaultTableModel) jTablePurchasingDisposition.getModel();
+        ResourceBundle i18n = Utils.getResourceBundle(this.currentLocale.getLanguage(), this.currentLocale.getCountry());
+        DefaultTableModel model = (DefaultTableModel) jTablePurchasingDisposition.getModel();
 
         for (int i = model.getRowCount() - 1; i >= 0; i--) {
             model.removeRow(i);
@@ -3477,8 +3468,8 @@ public class MainUI extends javax.swing.JFrame {
 
         for (Order order : orders) {
             ExtendedArticle article = SharedInstance.getInstance().getArticleForId(order.getArticle());
-            model.addRow(new Object[]{article.getId(), article.getName(), order.getMode(), order.getAmount()});
-        } 
+            model.addRow(new Object[]{article.getId(), i18n.getString(article.getName()), order.getMode(), order.getAmount()});
+        }
     }
 
     private void jCheckBoxMenuItemCalculationModePessimisticActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItemCalculationModePessimisticActionPerformed
@@ -3601,20 +3592,26 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelDFLadiesCycle1;
     private javax.swing.JLabel jLabelDFLenkerCpl;
     private javax.swing.JLabel jLabelDFLenkerCpl1;
+    private javax.swing.JLabel jLabelDFOrdersInQueue;
     private javax.swing.JLabel jLabelDFPedalCpl;
     private javax.swing.JLabel jLabelDFPedalCpl1;
+    private javax.swing.JLabel jLabelDFPlannedStock;
+    private javax.swing.JLabel jLabelDFProductionOrders;
     private javax.swing.JLabel jLabelDFRahmen;
     private javax.swing.JLabel jLabelDFRahmen1;
     private javax.swing.JLabel jLabelDFRahmenURaeder;
     private javax.swing.JLabel jLabelDFRahmenURaeder1;
+    private javax.swing.JLabel jLabelDFSalesOrders;
     private javax.swing.JLabel jLabelDFSattelCpl1;
     private javax.swing.JLabel jLabelDFSattelCpl2;
     private javax.swing.JLabel jLabelDFSchutzblechV;
     private javax.swing.JLabel jLabelDFSchutzblechV1;
+    private javax.swing.JLabel jLabelDFStockEndOfPeriod;
     private javax.swing.JLabel jLabelDFVorderradCpl;
     private javax.swing.JLabel jLabelDFVorderradCpl1;
     private javax.swing.JLabel jLabelDFVorderradgruppe;
     private javax.swing.JLabel jLabelDFVorderradgruppe1;
+    private javax.swing.JLabel jLabelDFWorkInProgress;
     private javax.swing.JLabel jLabelDamenfahrradPF;
     private javax.swing.JLabel jLabelHFE12OrdersInQueque;
     private javax.swing.JLabel jLabelHFE15OrdersInQueque;
@@ -3627,6 +3624,13 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelHFE31OrdersInQueque;
     private javax.swing.JLabel jLabelHFE6OrdersInQueque;
     private javax.swing.JLabel jLabelHFE9OrdersInQueque;
+    private javax.swing.JLabel jLabelHFOrdersInQueue;
+    private javax.swing.JLabel jLabelHFPlannedStock;
+    private javax.swing.JLabel jLabelHFProductionOrders;
+    private javax.swing.JLabel jLabelHFSalesOrders;
+    private javax.swing.JLabel jLabelHFStockEndOfPeriod;
+    private javax.swing.JLabel jLabelHFWorkInProgress;
+    private javax.swing.JLabel jLabelHerrenfahrradPF;
     private javax.swing.JLabel jLabelKFASchutzblechH;
     private javax.swing.JLabel jLabelKFE10OrdersInQueque;
     private javax.swing.JLabel jLabelKFE13OrdersInQueque;
@@ -3643,32 +3647,19 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelKFHinterradgruppe;
     private javax.swing.JLabel jLabelKFKinderfahrrad;
     private javax.swing.JLabel jLabelKFLenkerCpl;
-    private javax.swing.JLabel jLabelKFOrdersInQueque;
-    private javax.swing.JLabel jLabelKFOrdersInQueque1;
-    private javax.swing.JLabel jLabelKFOrdersInQueque2;
+    private javax.swing.JLabel jLabelKFOrdersInQueue;
     private javax.swing.JLabel jLabelKFPedalCpl;
     private javax.swing.JLabel jLabelKFPlannedStock;
-    private javax.swing.JLabel jLabelKFPlannedStock1;
-    private javax.swing.JLabel jLabelKFPlannedStock2;
     private javax.swing.JLabel jLabelKFProductionOrders;
-    private javax.swing.JLabel jLabelKFProductionOrders1;
-    private javax.swing.JLabel jLabelKFProductionOrders2;
     private javax.swing.JLabel jLabelKFRahmen;
     private javax.swing.JLabel jLabelKFRahmenURaeder;
     private javax.swing.JLabel jLabelKFSalesOrders;
-    private javax.swing.JLabel jLabelKFSalesOrders1;
-    private javax.swing.JLabel jLabelKFSalesOrders2;
     private javax.swing.JLabel jLabelKFSchutzblechV;
     private javax.swing.JLabel jLabelKFStockEndOfPeriod;
-    private javax.swing.JLabel jLabelKFStockEndOfPeriod1;
-    private javax.swing.JLabel jLabelKFStockEndOfPeriod2;
     private javax.swing.JLabel jLabelKFVorderradCpl;
     private javax.swing.JLabel jLabelKFVorderradgruppe;
     private javax.swing.JLabel jLabelKFWorkInProgress;
-    private javax.swing.JLabel jLabelKFWorkInProgress1;
-    private javax.swing.JLabel jLabelKFWorkInProgress2;
     private javax.swing.JLabel jLabelKinderfahrradPF;
-    private javax.swing.JLabel jLabelMenCyclePF;
     private javax.swing.JLabel jLabelPeriodN1PF;
     private javax.swing.JLabel jLabelPeriodN2PF;
     private javax.swing.JLabel jLabelPeriodN3PF;
@@ -3686,7 +3677,7 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelHF;
     private javax.swing.JPanel jPanelInHouseProduction;
     private javax.swing.JPanel jPanelKF;
-    private javax.swing.JPanel jPanelProductionPlanning;
+    private javax.swing.JPanel jPanelProductionForecast;
     private javax.swing.JPanel jPanelPurchasingDisposition;
     private javax.swing.JPanel jPanelWorkloadPlanning;
     private javax.swing.JScrollPane jScrollPane1;
@@ -3939,36 +3930,130 @@ public class MainUI extends javax.swing.JFrame {
 
     //util methods
     public void changeLanguage(String lang, String country) {
+        this.currentLocale = new Locale(lang, country);
         ResourceBundle i18n = Utils.getResourceBundle(lang, country);
 
+        //menu
         jMenuFile.setText(i18n.getString("File"));
         jMenuSettings.setText(i18n.getString("Settings"));
         jMenuLanguage.setText(i18n.getString("Language"));
+        jMenuCalculationMode.setText(i18n.getString("CalculationMode"));
         jCheckBoxMenuItemDeutsch.setText(i18n.getString("Deutsch"));
         jCheckBoxMenuItemEnglish.setText(i18n.getString("English"));
+        jCheckBoxMenuItemBulgarian.setText(i18n.getString("Bulgarisch"));
+        jCheckBoxMenuItemFrench.setText(i18n.getString("Franzoesisch"));
+        jCheckBoxMenuItemRomanien.setText(i18n.getString("Rumaenisch"));
+        jCheckBoxMenuItemCalculationModeOptimistic.setText(i18n.getString("Optimistic"));
+        jCheckBoxMenuItemCalculationModePessimistic.setText(i18n.getString("Pessimistic"));
         jMenuItemExportFile.setText(i18n.getString("ExportFile"));
         jMenuItemImportFile.setText(i18n.getString("ImportFile"));
+        
+        //buttons
+        jButtonImportXml.setText(i18n.getString("ImportFile"));
+        jButtonCalculate.setText(i18n.getString("Calculate"));
+        
+        //tabs
+        jTabbedPan.setTitleAt(0, i18n.getString("ProductionForecast"));
+        jTabbedPan.setTitleAt(1, i18n.getString("InHauseProduction"));
+        jTabbedPan.setTitleAt(2, i18n.getString("WorkloadPlanning"));
+        jTabbedPan.setTitleAt(3, i18n.getString("PurchasingPlanning"));
+        jTabbedPane2.setTitleAt(0, i18n.getString("Kinderfahrrad"));
+        jTabbedPane2.setTitleAt(1, i18n.getString("Damenfahrrad"));
+        jTabbedPane2.setTitleAt(2, i18n.getString("Herrenfahrrad"));
+        
+        //tables
+        jTableWorkloadPlanning.getColumnModel().getColumn(0).setHeaderValue(i18n.getString("Workplace"));
+        jTableWorkloadPlanning.getColumnModel().getColumn(1).setHeaderValue(i18n.getString("LastCycleTimes"));
+        jTableWorkloadPlanning.getColumnModel().getColumn(2).setHeaderValue(i18n.getString("NeededCapacity"));
+        jTableWorkloadPlanning.getColumnModel().getColumn(3).setHeaderValue(i18n.getString("Overtime"));
+        jTableWorkloadPlanning.getColumnModel().getColumn(4).setHeaderValue(i18n.getString("Shifts"));
+        jTableWorkloadPlanning.getColumnModel().getColumn(5).setHeaderValue(i18n.getString("FreeCapacity"));
+        jTableWorkloadPlanning.getColumnModel().getColumn(6).setHeaderValue(i18n.getString("WorkloadPct"));
+        jTablePurchasingDisposition.getColumnModel().getColumn(0).setHeaderValue(i18n.getString("Article"));
+        jTablePurchasingDisposition.getColumnModel().getColumn(0).setHeaderValue(i18n.getString("Name"));
+        jTablePurchasingDisposition.getColumnModel().getColumn(0).setHeaderValue(i18n.getString("Mode"));
+        jTablePurchasingDisposition.getColumnModel().getColumn(0).setHeaderValue(i18n.getString("Amount"));
+        
+        List<Order> newOrders = SharedInstance.getInstance().getNewOrders();
+        if(newOrders != null && newOrders.size() > 0){
+            this.reFillPurchasingDisposalTable(newOrders);
+        }
+        
+        //labels
+        this.setPeriodLabels();
+        jLabelKinderfahrradPF.setText(i18n.getString("Kinderfahrrad"));
+        jLabelDamenfahrradPF.setText(i18n.getString("Damenfahrrad"));
+        jLabelHerrenfahrradPF.setText(i18n.getString("Herrenfahrrad"));
+        jLabelKFSalesOrders.setText(i18n.getString("SalesOrders"));
+        jLabelDFSalesOrders.setText(i18n.getString("SalesOrders"));
+        jLabelHFSalesOrders.setText(i18n.getString("SalesOrders"));
+        jLabelKFPlannedStock.setText(i18n.getString("PlannedStock"));
+        jLabelDFPlannedStock.setText(i18n.getString("PlannedStock"));
+        jLabelHFPlannedStock.setText(i18n.getString("PlannedStock"));
+        jLabelKFStockEndOfPeriod.setText(i18n.getString("StockEndOfPeriod"));
+        jLabelDFStockEndOfPeriod.setText(i18n.getString("StockEndOfPeriod"));
+        jLabelHFStockEndOfPeriod.setText(i18n.getString("StockEndOfPeriod"));
+        jLabelKFOrdersInQueue.setText(i18n.getString("OrdersInQueue"));
+        jLabelDFOrdersInQueue.setText(i18n.getString("OrdersInQueue"));
+        jLabelHFOrdersInQueue.setText(i18n.getString("OrdersInQueue"));
+        jLabelKFWorkInProgress.setText(i18n.getString("WorkInProgress"));
+        jLabelDFWorkInProgress.setText(i18n.getString("WorkInProgress"));
+        jLabelHFWorkInProgress.setText(i18n.getString("WorkInProgress"));
+        jLabelKFProductionOrders.setText(i18n.getString("ProductionOrders"));
+        jLabelDFProductionOrders.setText(i18n.getString("ProductionOrders"));
+        jLabelHFProductionOrders.setText(i18n.getString("ProductionOrders"));
+    }
+    
+    private void setPeriodLabels() {
+        //also used after xml import
+        ResourceBundle i18n = Utils.getResourceBundle(this.currentLocale.getLanguage(), this.currentLocale.getCountry());
+        Long period = (long) -1;
+        if(SharedInstance.getInstance().getResults() != null) {
+            period = SharedInstance.getInstance().getResults().getPeriod();
+        }
+        jLabelPeriodNPF.setText(i18n.getString("Period") + " " + ((period > -1)? String.valueOf(period+1) : "n"));
+        jLabelPeriodN1PF.setText(i18n.getString("Period") + " " + ((period > -1)? String.valueOf(period+2) : "n+1"));
+        jLabelPeriodN2PF.setText(i18n.getString("Period") + " " + ((period > -1)? String.valueOf(period+3) : "n+2"));
+        jLabelPeriodN3PF.setText(i18n.getString("Period") + " " + ((period > -1)? String.valueOf(period+4) : "n+3"));
     }
 
-    public final void setSelectedLanguage(String language) {
+    public void setSelectedLanguage(String language) {
         switch (language) {
             case "en":
                 jCheckBoxMenuItemEnglish.setSelected(true);
+                jCheckBoxMenuItemDeutsch.setSelected(false);
+                jCheckBoxMenuItemBulgarian.setSelected(false);
+                jCheckBoxMenuItemFrench.setSelected(false);
+                jCheckBoxMenuItemRomanien.setSelected(false);
                 break;
             case "de":
+                jCheckBoxMenuItemEnglish.setSelected(false);
                 jCheckBoxMenuItemDeutsch.setSelected(true);
+                jCheckBoxMenuItemBulgarian.setSelected(false);
+                jCheckBoxMenuItemFrench.setSelected(false);
+                jCheckBoxMenuItemRomanien.setSelected(false);
                 break;
             case "ro":
+                jCheckBoxMenuItemEnglish.setSelected(false);
+                jCheckBoxMenuItemDeutsch.setSelected(false);
+                jCheckBoxMenuItemBulgarian.setSelected(false);
+                jCheckBoxMenuItemFrench.setSelected(false);
                 jCheckBoxMenuItemRomanien.setSelected(true);
                 break;
             case "bg":
+                jCheckBoxMenuItemEnglish.setSelected(false);
+                jCheckBoxMenuItemDeutsch.setSelected(false);
                 jCheckBoxMenuItemBulgarian.setSelected(true);
+                jCheckBoxMenuItemFrench.setSelected(false);
+                jCheckBoxMenuItemRomanien.setSelected(false);
                 break;
             case "fr":
+                jCheckBoxMenuItemEnglish.setSelected(false);
+                jCheckBoxMenuItemDeutsch.setSelected(false);
+                jCheckBoxMenuItemBulgarian.setSelected(false);
                 jCheckBoxMenuItemFrench.setSelected(true);
+                jCheckBoxMenuItemRomanien.setSelected(false);
                 break;
-            default:
-                jCheckBoxMenuItemEnglish.setSelected(true);
         }
     }
 

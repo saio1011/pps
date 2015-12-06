@@ -190,16 +190,14 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
       <SubComponents>
-        <Container class="javax.swing.JPanel" name="jPanelProductionPlanning">
+        <Container class="javax.swing.JPanel" name="jPanelProductionForecast">
           <Properties>
             <Property name="autoscrolls" type="boolean" value="true"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
               <JTabbedPaneConstraints tabName="Production Forecast">
-                <Property name="tabTitle" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="tabProductionForecast" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
-                </Property>
+                <Property name="tabTitle" type="java.lang.String" value="Production Forecast"/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
@@ -210,7 +208,7 @@
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="jLabelMenCyclePF" min="-2" pref="139" max="-2" attributes="0"/>
+                          <Component id="jLabelHerrenfahrradPF" min="-2" pref="139" max="-2" attributes="0"/>
                           <Component id="jLabelDamenfahrradPF" min="-2" pref="139" max="-2" attributes="0"/>
                           <Component id="jLabelKinderfahrradPF" min="-2" pref="139" max="-2" attributes="0"/>
                       </Group>
@@ -274,7 +272,7 @@
                       </Group>
                       <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabelMenCyclePF" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                          <Component id="jLabelHerrenfahrradPF" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
                           <Component id="jTextFieldPFPeriodN1HF" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jTextFieldPFPeriodN2HF" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jTextFieldPFPeriodN3HF" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -300,7 +298,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabelMenCyclePF">
+            <Component class="javax.swing.JLabel" name="jLabelHerrenfahrradPF">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
                   <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="Herrenfahrrad" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
@@ -693,7 +691,7 @@
                                       <Component id="jTextFieldKFE13OrdersInQueque" alignment="1" max="32767" attributes="0"/>
                                       <Component id="jTextFieldKFE7OrdersInQueque" alignment="1" max="32767" attributes="0"/>
                                   </Group>
-                                  <Component id="jLabelKFOrdersInQueque" alignment="1" min="-2" pref="80" max="-2" attributes="0"/>
+                                  <Component id="jLabelKFOrdersInQueue" alignment="1" min="-2" pref="80" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace pref="58" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
@@ -767,7 +765,7 @@
                                   <Component id="jLabelKFSalesOrders" alignment="1" max="32767" attributes="0"/>
                                   <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                                       <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabelKFOrdersInQueque" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabelKFOrdersInQueue" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabelKFWorkInProgress" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabelKFProductionOrders" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabelKFPlannedStock" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
@@ -1015,11 +1013,11 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelKFOrdersInQueque">
+                    <Component class="javax.swing.JLabel" name="jLabelKFOrdersInQueue">
                       <Properties>
                         <Property name="horizontalAlignment" type="int" value="4"/>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="OrdersInQueque" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="OrdersInQueue" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </Property>
                       </Properties>
                     </Component>
@@ -2287,13 +2285,13 @@
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                      <Component id="jLabelKFSalesOrders1" min="-2" pref="80" max="-2" attributes="0"/>
+                                      <Component id="jLabelDFSalesOrders" min="-2" pref="80" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace pref="72" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLabelKFPlannedStock1" min="-2" pref="78" max="-2" attributes="0"/>
+                                      <Component id="jLabelDFPlannedStock" min="-2" pref="78" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                                   </Group>
@@ -2342,7 +2340,7 @@
                                       <Component id="jTextFieldDFE14StockEndOfPeriod" alignment="1" max="32767" attributes="0"/>
                                       <Component id="jTextFieldDFE8StockEndOfPeriod" alignment="1" max="32767" attributes="0"/>
                                   </Group>
-                                  <Component id="jLabelKFStockEndOfPeriod1" alignment="1" min="-2" pref="80" max="-2" attributes="0"/>
+                                  <Component id="jLabelDFStockEndOfPeriod" alignment="1" min="-2" pref="80" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace pref="42" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
@@ -2368,7 +2366,7 @@
                                       <Component id="jTextFieldDFE14OrdersInQueque" alignment="1" max="32767" attributes="0"/>
                                       <Component id="jTextFieldDFE8OrdersInQueque" alignment="1" max="32767" attributes="0"/>
                                   </Group>
-                                  <Component id="jLabelKFOrdersInQueque1" alignment="1" min="-2" pref="80" max="-2" attributes="0"/>
+                                  <Component id="jLabelDFOrdersInQueue" alignment="1" min="-2" pref="80" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace pref="58" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
@@ -2399,11 +2397,11 @@
                                           <Component id="jTextFieldDFE8WorkInProgress" alignment="1" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <Component id="jLabelKFWorkInProgress1" alignment="1" min="-2" pref="65" max="-2" attributes="0"/>
+                                  <Component id="jLabelDFWorkInProgress" alignment="1" min="-2" pref="65" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace pref="52" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabelKFProductionOrders1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabelDFProductionOrders" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="jTextFieldDFP2ProductionOrders" alignment="1" min="-2" pref="50" max="-2" attributes="0"/>
                                   <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
                                       <Component id="jTextFieldDFE56ProductionOrders" alignment="1" pref="50" max="32767" attributes="0"/>
@@ -2439,14 +2437,14 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
                                   <Component id="jLabel13" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelKFSalesOrders1" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="jLabelDFSalesOrders" alignment="1" max="32767" attributes="0"/>
                                   <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                                       <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabelKFOrdersInQueque1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabelKFWorkInProgress1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabelKFProductionOrders1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabelKFPlannedStock1" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                                      <Component id="jLabelKFStockEndOfPeriod1" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
+                                      <Component id="jLabelDFOrdersInQueue" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabelDFWorkInProgress" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabelDFProductionOrders" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabelDFPlannedStock" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                                      <Component id="jLabelDFStockEndOfPeriod" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
@@ -2672,7 +2670,7 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelKFSalesOrders1">
+                    <Component class="javax.swing.JLabel" name="jLabelDFSalesOrders">
                       <Properties>
                         <Property name="horizontalAlignment" type="int" value="4"/>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
@@ -2682,7 +2680,7 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel5">
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelKFStockEndOfPeriod1">
+                    <Component class="javax.swing.JLabel" name="jLabelDFStockEndOfPeriod">
                       <Properties>
                         <Property name="horizontalAlignment" type="int" value="4"/>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
@@ -2690,15 +2688,15 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelKFOrdersInQueque1">
+                    <Component class="javax.swing.JLabel" name="jLabelDFOrdersInQueue">
                       <Properties>
                         <Property name="horizontalAlignment" type="int" value="4"/>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="OrdersInQueque" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="OrdersInQueue" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelKFWorkInProgress1">
+                    <Component class="javax.swing.JLabel" name="jLabelDFWorkInProgress">
                       <Properties>
                         <Property name="horizontalAlignment" type="int" value="4"/>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
@@ -2706,7 +2704,7 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelKFProductionOrders1">
+                    <Component class="javax.swing.JLabel" name="jLabelDFProductionOrders">
                       <Properties>
                         <Property name="horizontalAlignment" type="int" value="4"/>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
@@ -3730,7 +3728,7 @@
                         <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
                       </AuxValues>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelKFPlannedStock1">
+                    <Component class="javax.swing.JLabel" name="jLabelDFPlannedStock">
                       <Properties>
                         <Property name="horizontalAlignment" type="int" value="4"/>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
@@ -4045,13 +4043,13 @@
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                      <Component id="jLabelKFSalesOrders2" min="-2" pref="80" max="-2" attributes="0"/>
+                                      <Component id="jLabelHFSalesOrders" min="-2" pref="80" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace pref="72" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLabelKFPlannedStock2" min="-2" pref="78" max="-2" attributes="0"/>
+                                      <Component id="jLabelHFPlannedStock" min="-2" pref="78" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                                   </Group>
@@ -4100,7 +4098,7 @@
                                       <Component id="jTextFieldHFE15StockEndOfPeriod" alignment="1" max="32767" attributes="0"/>
                                       <Component id="jTextFieldHFE9StockEndOfPeriod" alignment="1" max="32767" attributes="0"/>
                                   </Group>
-                                  <Component id="jLabelKFStockEndOfPeriod2" alignment="1" min="-2" pref="80" max="-2" attributes="0"/>
+                                  <Component id="jLabelHFStockEndOfPeriod" alignment="1" min="-2" pref="80" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace pref="42" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
@@ -4126,7 +4124,7 @@
                                       <Component id="jTextFieldHFE15OrdersInQueque" alignment="1" max="32767" attributes="0"/>
                                       <Component id="jTextFieldHFE9OrdersInQueque" alignment="1" max="32767" attributes="0"/>
                                   </Group>
-                                  <Component id="jLabelKFOrdersInQueque2" alignment="1" min="-2" pref="80" max="-2" attributes="0"/>
+                                  <Component id="jLabelHFOrdersInQueue" alignment="1" min="-2" pref="80" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace pref="58" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
@@ -4157,11 +4155,11 @@
                                           <Component id="jTextFieldHFE9WorkInProgress" alignment="1" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <Component id="jLabelKFWorkInProgress2" alignment="1" min="-2" pref="65" max="-2" attributes="0"/>
+                                  <Component id="jLabelHFWorkInProgress" alignment="1" min="-2" pref="65" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace pref="52" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabelKFProductionOrders2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabelHFProductionOrders" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="jTextFieldHFP3ProductionOrders" alignment="1" min="-2" pref="50" max="-2" attributes="0"/>
                                   <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
                                       <Component id="jTextFieldHFE31ProductionOrders" alignment="1" pref="50" max="32767" attributes="0"/>
@@ -4197,14 +4195,14 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
                                   <Component id="jLabel14" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelKFSalesOrders2" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="jLabelHFSalesOrders" alignment="1" max="32767" attributes="0"/>
                                   <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                                       <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabelKFOrdersInQueque2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabelKFWorkInProgress2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabelKFProductionOrders2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabelKFPlannedStock2" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                                      <Component id="jLabelKFStockEndOfPeriod2" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
+                                      <Component id="jLabelHFOrdersInQueue" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabelHFWorkInProgress" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabelHFProductionOrders" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabelHFPlannedStock" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                                      <Component id="jLabelHFStockEndOfPeriod" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
@@ -4435,7 +4433,7 @@
                         </Property>
                       </AccessibilityProperties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelKFSalesOrders2">
+                    <Component class="javax.swing.JLabel" name="jLabelHFSalesOrders">
                       <Properties>
                         <Property name="horizontalAlignment" type="int" value="4"/>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
@@ -4445,7 +4443,7 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel6">
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelKFStockEndOfPeriod2">
+                    <Component class="javax.swing.JLabel" name="jLabelHFStockEndOfPeriod">
                       <Properties>
                         <Property name="horizontalAlignment" type="int" value="4"/>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
@@ -4453,15 +4451,15 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelKFOrdersInQueque2">
+                    <Component class="javax.swing.JLabel" name="jLabelHFOrdersInQueue">
                       <Properties>
                         <Property name="horizontalAlignment" type="int" value="4"/>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="OrdersInQueque" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="OrdersInQueue" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelKFWorkInProgress2">
+                    <Component class="javax.swing.JLabel" name="jLabelHFWorkInProgress">
                       <Properties>
                         <Property name="horizontalAlignment" type="int" value="4"/>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
@@ -4469,7 +4467,7 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelKFProductionOrders2">
+                    <Component class="javax.swing.JLabel" name="jLabelHFProductionOrders">
                       <Properties>
                         <Property name="horizontalAlignment" type="int" value="4"/>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
@@ -5493,7 +5491,7 @@
                         <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
                       </AuxValues>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelKFPlannedStock2">
+                    <Component class="javax.swing.JLabel" name="jLabelHFPlannedStock">
                       <Properties>
                         <Property name="horizontalAlignment" type="int" value="4"/>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
@@ -5784,8 +5782,8 @@
         <Container class="javax.swing.JPanel" name="jPanelPurchasingDisposition">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="Orders">
-                <Property name="tabTitle" type="java.lang.String" value="Orders"/>
+              <JTabbedPaneConstraints tabName="Purchasing Planning">
+                <Property name="tabTitle" type="java.lang.String" value="Purchasing Planning"/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
