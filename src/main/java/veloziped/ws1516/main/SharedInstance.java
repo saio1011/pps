@@ -332,4 +332,32 @@ public class SharedInstance {
             }
         }
     }
+    
+    public Map<String, ExtendedArticle> calcNewArticleStockValue() {
+        for(ExtendedArticle article : this.extendedArticles.values()) {
+            long change = 0;
+            Order incoming = this.getIncomingOrderForArticleId(article.getId());
+            if(incoming != null) {
+                change += incoming.getAmount();
+            }
+            
+            //TODO: Zuwachs dazurechnen
+            
+            article.setStockChange(change);
+            article.setNewStock(article.getAmount() + change);
+            article.setNewStockValue(article.getPrice() * article.getNewStock());
+            
+            double stockChangePct = 0.0;
+            stockChangePct = (double) article.getAmount() / article.getNewStock();
+            if(stockChangePct < 1) {
+                article.setStockChangePct(((double) 1 - stockChangePct) * 100);
+            } else if(stockChangePct > 1) {
+                article.setStockChangePct((stockChangePct - 1) * -100);
+            }
+            
+            this.setExtendedArticleForId(article.getId(), article);
+        }
+        
+        return this.extendedArticles;
+    }
 }

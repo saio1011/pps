@@ -28,6 +28,10 @@ public class ExtendedArticle extends Article {
     private long usageProductThree;
     private long discountQuantity;
     private String name;
+    private long stockChange;
+    private long newStock;
+    private double newStockValue;
+    private double stockChangePct;
 
     public void setValues(JSONObject values) {
         String aType = (String) values.get("type");
@@ -60,6 +64,10 @@ public class ExtendedArticle extends Article {
         super.price = article.getPrice();
         super.startamount = article.getStartamount();
         super.stockvalue = article.getStockvalue();
+        
+        this.stockChange = 0;
+        this.newStock = super.amount;
+        this.newStockValue = super.stockvalue;
     }
 
     public boolean equals(Object obj) {
@@ -95,6 +103,46 @@ public class ExtendedArticle extends Article {
         }
     }
 
+    public double getStockChangePct() {
+        return stockChangePct;
+    }
+
+    public void setStockChangePct(double stockChangePct) {
+        this.stockChangePct = stockChangePct;
+    }
+    
+    public long getUsageProductOne() {
+        return usageProductOne;
+    }
+
+    public void setUsageProductOne(long usageProductOne) {
+        this.usageProductOne = usageProductOne;
+    }
+
+    public long getStockChange() {
+        return stockChange;
+    }
+
+    public void setStockChange(long stockChange) {
+        this.stockChange = stockChange;
+    }
+
+    public long getNewStock() {
+        return newStock;
+    }
+
+    public void setNewStock(long newStock) {
+        this.newStock = newStock;
+    }
+
+    public double getNewStockValue() {
+        return newStockValue;
+    }
+
+    public void setNewStockValue(double newStockValue) {
+        this.newStockValue = newStockValue;
+    }
+    
     public double getDeliveryTimeFastAsPeriod() {
         //half time of deliver time without deviation
         double deliverFast = (this.deliverTime / 2) * 5;

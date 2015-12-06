@@ -483,6 +483,9 @@ public class MainUI extends javax.swing.JFrame {
         jPanelPurchasingDisposition = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTablePurchasingDisposition = new javax.swing.JTable();
+        jPanelStockChange = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTableStockChange = new javax.swing.JTable();
         jPanel1 = new javax.swing.JPanel();
         jButtonCalculate = new javax.swing.JButton();
         jButtonImportXml = new javax.swing.JButton();
@@ -615,7 +618,7 @@ public class MainUI extends javax.swing.JFrame {
                     .addComponent(jTextFieldPFPeriodN2HF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldPFPeriodN3HF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldPFPeriodN4HF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(439, Short.MAX_VALUE))
+                .addContainerGap(408, Short.MAX_VALUE))
         );
 
         jTabbedPan.addTab("Production Forecast", jPanelProductionForecast);
@@ -3093,11 +3096,11 @@ public class MainUI extends javax.swing.JFrame {
         );
         jPanelWorkloadPlanningLayout.setVerticalGroup(
             jPanelWorkloadPlanningLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 676, Short.MAX_VALUE)
+            .addGap(0, 645, Short.MAX_VALUE)
             .addGroup(jPanelWorkloadPlanningLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelWorkloadPlanningLayout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 664, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 633, Short.MAX_VALUE)
                     .addContainerGap()))
         );
 
@@ -3134,15 +3137,65 @@ public class MainUI extends javax.swing.JFrame {
         );
         jPanelPurchasingDispositionLayout.setVerticalGroup(
             jPanelPurchasingDispositionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 676, Short.MAX_VALUE)
+            .addGap(0, 645, Short.MAX_VALUE)
             .addGroup(jPanelPurchasingDispositionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelPurchasingDispositionLayout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 664, Short.MAX_VALUE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 633, Short.MAX_VALUE)
                     .addContainerGap()))
         );
 
         jTabbedPan.addTab("Purchasing Planning", jPanelPurchasingDisposition);
+
+        jTableStockChange.setAutoCreateRowSorter(true);
+        jTableStockChange.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Article", "Name", "Old Stock", "Old Value", "Change", "New Stock", "New Value", "Change Pct"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Long.class, java.lang.String.class, java.lang.Long.class, java.lang.Double.class, java.lang.Long.class, java.lang.Long.class, java.lang.Double.class, java.lang.Double.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jTableStockChange.getTableHeader().setReorderingAllowed(false);
+        jScrollPane3.setViewportView(jTableStockChange);
+
+        javax.swing.GroupLayout jPanelStockChangeLayout = new javax.swing.GroupLayout(jPanelStockChange);
+        jPanelStockChange.setLayout(jPanelStockChangeLayout);
+        jPanelStockChangeLayout.setHorizontalGroup(
+            jPanelStockChangeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1048, Short.MAX_VALUE)
+            .addGroup(jPanelStockChangeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelStockChangeLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 1036, Short.MAX_VALUE)
+                    .addContainerGap()))
+        );
+        jPanelStockChangeLayout.setVerticalGroup(
+            jPanelStockChangeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 645, Short.MAX_VALUE)
+            .addGroup(jPanelStockChangeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelStockChangeLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 633, Short.MAX_VALUE)
+                    .addContainerGap()))
+        );
+
+        jTabbedPan.addTab("Stock Change", jPanelStockChange);
 
         jButtonCalculate.setText("Calculate");
         jButtonCalculate.addActionListener(new java.awt.event.ActionListener() {
@@ -3163,16 +3216,19 @@ public class MainUI extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(771, 771, 771)
+                .addContainerGap()
                 .addComponent(jButtonImportXml, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)
-                .addGap(49, 49, 49)
+                .addGap(814, 814, 814)
                 .addComponent(jButtonCalculate)
                 .addGap(21, 21, 21))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jButtonCalculate, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(jButtonImportXml, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jButtonImportXml, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonCalculate, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jMenuFile.setText(bundle.getString("File")); // NOI18N
@@ -3277,14 +3333,14 @@ public class MainUI extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(40, 40, 40)
-                .addComponent(jTabbedPan)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(54, 54, 54)
+                .addComponent(jTabbedPan, javax.swing.GroupLayout.PREFERRED_SIZE, 691, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(8, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(686, Short.MAX_VALUE)))
+                    .addContainerGap(702, Short.MAX_VALUE)))
         );
 
         pack();
@@ -3446,9 +3502,12 @@ public class MainUI extends javax.swing.JFrame {
         List<Order> newOrders = PurchasingDisposal.getInstance().calculateOrders(
                 SharedInstance.getInstance().getExtendedArticles());
         SharedInstance.getInstance().setNewOrders(newOrders);
+        
+        Map<String, ExtendedArticle> articles = SharedInstance.getInstance().calcNewArticleStockValue();
 
         this.reFillWorkloadTable(workloadResults.values());
         this.reFillPurchasingDisposalTable(newOrders);
+        this.reFillStockChangeTable(articles);
     }//GEN-LAST:event_jButtonCalculateActionPerformed
 
     private void reFillWorkloadTable(Collection<WorkloadResult> results) {
@@ -3475,6 +3534,20 @@ public class MainUI extends javax.swing.JFrame {
         for (Order order : orders) {
             ExtendedArticle article = SharedInstance.getInstance().getArticleForId(order.getArticle());
             model.addRow(new Object[]{article.getId(), i18n.getString(article.getName()), order.getMode(), order.getAmount()});
+        }
+    }
+    
+    private void reFillStockChangeTable(Map<String, ExtendedArticle> articles) {
+        ResourceBundle i18n = Utils.getResourceBundle(this.currentLocale.getLanguage(), this.currentLocale.getCountry());
+        DefaultTableModel model = (DefaultTableModel) jTableStockChange.getModel();
+
+        for (int i = model.getRowCount() - 1; i >= 0; i--) {
+            model.removeRow(i);
+        }
+
+        for (ExtendedArticle article : articles.values()) {
+            model.addRow(new Object[]{article.getId(), i18n.getString(article.getName()), article.getAmount(), article.getStockvalue(),
+            article.getStockChange(), article.getNewStock(), article.getNewStockValue(), article.getStockChangePct()});
         }
     }
 
@@ -3685,9 +3758,11 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelKF;
     private javax.swing.JPanel jPanelProductionForecast;
     private javax.swing.JPanel jPanelPurchasingDisposition;
+    private javax.swing.JPanel jPanelStockChange;
     private javax.swing.JPanel jPanelWorkloadPlanning;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator10;
     private javax.swing.JSeparator jSeparator11;
@@ -3703,6 +3778,7 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPan;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTable jTablePurchasingDisposition;
+    private javax.swing.JTable jTableStockChange;
     private javax.swing.JTable jTableWorkloadPlanning;
     private javax.swing.JTextField jTextFieldDFE11OrdersInQueque;
     private javax.swing.JTextField jTextFieldDFE11PlannedStock;
@@ -3976,13 +4052,26 @@ public class MainUI extends javax.swing.JFrame {
         jTableWorkloadPlanning.getColumnModel().getColumn(5).setHeaderValue(i18n.getString("FreeCapacity"));
         jTableWorkloadPlanning.getColumnModel().getColumn(6).setHeaderValue(i18n.getString("WorkloadPct"));
         jTablePurchasingDisposition.getColumnModel().getColumn(0).setHeaderValue(i18n.getString("Article"));
-        jTablePurchasingDisposition.getColumnModel().getColumn(0).setHeaderValue(i18n.getString("Name"));
-        jTablePurchasingDisposition.getColumnModel().getColumn(0).setHeaderValue(i18n.getString("Mode"));
-        jTablePurchasingDisposition.getColumnModel().getColumn(0).setHeaderValue(i18n.getString("Amount"));
+        jTablePurchasingDisposition.getColumnModel().getColumn(1).setHeaderValue(i18n.getString("Name"));
+        jTablePurchasingDisposition.getColumnModel().getColumn(2).setHeaderValue(i18n.getString("Mode"));
+        jTablePurchasingDisposition.getColumnModel().getColumn(3).setHeaderValue(i18n.getString("Amount"));
+        jTableStockChange.getColumnModel().getColumn(0).setHeaderValue(i18n.getString("Article"));
+        jTableStockChange.getColumnModel().getColumn(1).setHeaderValue(i18n.getString("Name"));
+        jTableStockChange.getColumnModel().getColumn(2).setHeaderValue(i18n.getString("OldStock"));
+        jTableStockChange.getColumnModel().getColumn(3).setHeaderValue(i18n.getString("OldValue"));
+        jTableStockChange.getColumnModel().getColumn(4).setHeaderValue(i18n.getString("Change"));
+        jTableStockChange.getColumnModel().getColumn(5).setHeaderValue(i18n.getString("NewStock"));
+        jTableStockChange.getColumnModel().getColumn(6).setHeaderValue(i18n.getString("NewValue"));
+        jTableStockChange.getColumnModel().getColumn(7).setHeaderValue(i18n.getString("StockChangePct"));
 
         List<Order> newOrders = SharedInstance.getInstance().getNewOrders();
         if (newOrders != null && newOrders.size() > 0) {
             this.reFillPurchasingDisposalTable(newOrders);
+        }
+        
+        Map<String, ExtendedArticle> articles = SharedInstance.getInstance().getExtendedArticles();
+        if (articles != null && articles.size() > 0) {
+            this.reFillStockChangeTable(articles);
         }
 
         //labels
