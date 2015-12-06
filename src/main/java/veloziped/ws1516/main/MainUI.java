@@ -22,6 +22,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.text.JTextComponent;
 import javax.xml.bind.JAXBException;
@@ -318,7 +319,7 @@ public class MainUI extends javax.swing.JFrame {
         jLabelDFPedalCpl = new javax.swing.JLabel();
         jLabelDFFahrradOPedal = new javax.swing.JLabel();
         jLabelDFLenkerCpl = new javax.swing.JLabel();
-        jLabelDFSattelCpl1 = new javax.swing.JLabel();
+        jLabelDFSattelCpl = new javax.swing.JLabel();
         jLabelDFRahmenURaeder = new javax.swing.JLabel();
         jLabelDFHinterradgruppe = new javax.swing.JLabel();
         jLabelDFASchutzblechH = new javax.swing.JLabel();
@@ -358,7 +359,7 @@ public class MainUI extends javax.swing.JFrame {
         jLabelDFE19OrdersInQueque = new javax.swing.JLabel();
         jPanelHF = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
-        jLabelDFLadiesCycle1 = new javax.swing.JLabel();
+        jLabelHFManCycle = new javax.swing.JLabel();
         jLabelHFSalesOrders = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabelHFStockEndOfPeriod = new javax.swing.JLabel();
@@ -435,17 +436,17 @@ public class MainUI extends javax.swing.JFrame {
         jTextFieldHFE9PlannedStock = new IntegerField();
         jTextFieldHFE15PlannedStock = new IntegerField();
         jTextFieldHFE20PlannedStock = new IntegerField();
-        jLabelDFPedalCpl1 = new javax.swing.JLabel();
-        jLabelDFFahrradOPedal1 = new javax.swing.JLabel();
-        jLabelDFLenkerCpl1 = new javax.swing.JLabel();
-        jLabelDFSattelCpl2 = new javax.swing.JLabel();
-        jLabelDFRahmenURaeder1 = new javax.swing.JLabel();
-        jLabelDFHinterradgruppe1 = new javax.swing.JLabel();
-        jLabelDFASchutzblechH1 = new javax.swing.JLabel();
-        jLabelDFVorderradCpl1 = new javax.swing.JLabel();
-        jLabelDFVorderradgruppe1 = new javax.swing.JLabel();
-        jLabelDFSchutzblechV1 = new javax.swing.JLabel();
-        jLabelDFRahmen1 = new javax.swing.JLabel();
+        jLabelHFPedalCpl = new javax.swing.JLabel();
+        jLabelHFFahrradOPedal = new javax.swing.JLabel();
+        jLabelHFLenkerCpl = new javax.swing.JLabel();
+        jLabelHFSattelCpl = new javax.swing.JLabel();
+        jLabelHFRahmenURaeder = new javax.swing.JLabel();
+        jLabelHFHinterradgruppe = new javax.swing.JLabel();
+        jLabelHFASchutzblechH = new javax.swing.JLabel();
+        jLabelHFVorderradCpl = new javax.swing.JLabel();
+        jLabelHFVorderradgruppe = new javax.swing.JLabel();
+        jLabelHFSchutzblechV = new javax.swing.JLabel();
+        jLabelHFRahmen = new javax.swing.JLabel();
         jLabel105 = new javax.swing.JLabel();
         jLabel106 = new javax.swing.JLabel();
         jLabel107 = new javax.swing.JLabel();
@@ -513,16 +514,16 @@ public class MainUI extends javax.swing.JFrame {
         jLabelHerrenfahrradPF.setText(bundle.getString("Herrenfahrrad")); // NOI18N
 
         jLabelPeriodNPF.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelPeriodNPF.setText(bundle.getString("Period")); // NOI18N
+        jLabelPeriodNPF.setText("Period");
 
         jLabelPeriodN1PF.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelPeriodN1PF.setText(bundle.getString("Period")); // NOI18N
+        jLabelPeriodN1PF.setText("Period");
 
         jLabelPeriodN2PF.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelPeriodN2PF.setText(bundle.getString("Period")); // NOI18N
+        jLabelPeriodN2PF.setText("Period");
 
         jLabelPeriodN3PF.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelPeriodN3PF.setText(bundle.getString("Period")); // NOI18N
+        jLabelPeriodN3PF.setText("Period");
 
         jTextFieldPFPeriodN1KF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
@@ -614,7 +615,7 @@ public class MainUI extends javax.swing.JFrame {
                     .addComponent(jTextFieldPFPeriodN2HF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldPFPeriodN3HF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldPFPeriodN4HF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(433, Short.MAX_VALUE))
+                .addContainerGap(439, Short.MAX_VALUE))
         );
 
         jTabbedPan.addTab("Production Forecast", jPanelProductionForecast);
@@ -625,7 +626,7 @@ public class MainUI extends javax.swing.JFrame {
         jLabel12.setMaximumSize(new java.awt.Dimension(30, 14));
         jLabel12.setMinimumSize(new java.awt.Dimension(30, 14));
 
-        jLabelKFKinderfahrrad.setText(bundle.getString("Kinderhafrrad")); // NOI18N
+        jLabelKFKinderfahrrad.setText(bundle.getString("Kinderfahrrad")); // NOI18N
         jLabelKFKinderfahrrad.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabelKFKinderfahrrad.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabelKFKinderfahrrad.setPreferredSize(new java.awt.Dimension(60, 16));
@@ -809,52 +810,53 @@ public class MainUI extends javax.swing.JFrame {
 
         jLabelKFPedalCpl.setText(bundle.getString("PedalCpl")); // NOI18N
 
-        jLabelKFFahrradOPedal.setText(bundle.getString("KFFahrradOPedal")); // NOI18N
+        jLabelKFFahrradOPedal.setText(bundle.getString("Fahrrad o. Pedal")); // NOI18N
         jLabelKFFahrradOPedal.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabelKFFahrradOPedal.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabelKFFahrradOPedal.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabelKFLenkerCpl.setText(bundle.getString("LenkerCpl")); // NOI18N
+        jLabelKFLenkerCpl.setText(bundle.getString("Lenker cpl.")); // NOI18N
         jLabelKFLenkerCpl.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabelKFLenkerCpl.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabelKFLenkerCpl.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabelSattelCpl.setText(bundle.getString("SattelCpl")); // NOI18N
+        jLabelSattelCpl.setText(bundle.getString("Sattel cpl.")); // NOI18N
         jLabelSattelCpl.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabelSattelCpl.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabelSattelCpl.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabelKFRahmenURaeder.setText(bundle.getString("KFRahmenUndRaeder")); // NOI18N
+        jLabelKFRahmenURaeder.setText(bundle.getString("Rahmen u. Räder")); // NOI18N
         jLabelKFRahmenURaeder.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabelKFRahmenURaeder.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabelKFRahmenURaeder.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabelKFHinterradgruppe.setText(bundle.getString("KFHinterradgruppe")); // NOI18N
+        jLabelKFHinterradgruppe.setText(bundle.getString("Hinterradgruppe")); // NOI18N
         jLabelKFHinterradgruppe.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabelKFHinterradgruppe.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabelKFHinterradgruppe.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabelKFASchutzblechH.setText(bundle.getString("KFSchutzblechH")); // NOI18N
+        jLabelKFASchutzblechH.setText(bundle.getString("Schutzblech h.")); // NOI18N
         jLabelKFASchutzblechH.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabelKFASchutzblechH.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabelKFASchutzblechH.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabelKFVorderradCpl.setText(bundle.getString("KFCVorderradCpl")); // NOI18N
+        jLabelKFVorderradCpl.setText(bundle.getString("Vorderrad cpl.")); // NOI18N
         jLabelKFVorderradCpl.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabelKFVorderradCpl.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabelKFVorderradCpl.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabelKFVorderradgruppe.setText(bundle.getString("KFVorderradgruppe")); // NOI18N
+        jLabelKFVorderradgruppe.setText(bundle.getString("Vorderradgruppe")); // NOI18N
+        jLabelKFVorderradgruppe.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabelKFVorderradgruppe.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabelKFVorderradgruppe.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabelKFVorderradgruppe.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabelKFSchutzblechV.setText(bundle.getString("KFSchutzblechV")); // NOI18N
+        jLabelKFSchutzblechV.setText(bundle.getString("Schutzblech v.")); // NOI18N
         jLabelKFSchutzblechV.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabelKFSchutzblechV.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabelKFSchutzblechV.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabelKFRahmen.setText(bundle.getString("KFRahmen")); // NOI18N
+        jLabelKFRahmen.setText(bundle.getString("Rahmen")); // NOI18N
         jLabelKFRahmen.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabelKFRahmen.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabelKFRahmen.setPreferredSize(new java.awt.Dimension(60, 16));
@@ -1627,52 +1629,53 @@ public class MainUI extends javax.swing.JFrame {
 
         jLabelDFPedalCpl.setText(bundle.getString("PedalCpl")); // NOI18N
 
-        jLabelDFFahrradOPedal.setText(bundle.getString("KFFahrradOPedal")); // NOI18N
+        jLabelDFFahrradOPedal.setText(bundle.getString("Fahrrad o. Pedal")); // NOI18N
         jLabelDFFahrradOPedal.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabelDFFahrradOPedal.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabelDFFahrradOPedal.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabelDFLenkerCpl.setText(bundle.getString("LenkerCpl")); // NOI18N
+        jLabelDFLenkerCpl.setText(bundle.getString("Lenker cpl.")); // NOI18N
         jLabelDFLenkerCpl.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabelDFLenkerCpl.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabelDFLenkerCpl.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabelDFSattelCpl1.setText(bundle.getString("SattelCpl")); // NOI18N
-        jLabelDFSattelCpl1.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabelDFSattelCpl1.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabelDFSattelCpl1.setPreferredSize(new java.awt.Dimension(60, 16));
+        jLabelDFSattelCpl.setText(bundle.getString("Sattel cpl.")); // NOI18N
+        jLabelDFSattelCpl.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabelDFSattelCpl.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelDFSattelCpl.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabelDFRahmenURaeder.setText(bundle.getString("KFRahmenUndRaeder")); // NOI18N
+        jLabelDFRahmenURaeder.setText(bundle.getString("Rahmen u. Räder")); // NOI18N
         jLabelDFRahmenURaeder.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabelDFRahmenURaeder.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabelDFRahmenURaeder.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabelDFHinterradgruppe.setText(bundle.getString("KFHinterradgruppe")); // NOI18N
+        jLabelDFHinterradgruppe.setText(bundle.getString("Hinterradgruppe")); // NOI18N
         jLabelDFHinterradgruppe.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabelDFHinterradgruppe.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabelDFHinterradgruppe.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabelDFASchutzblechH.setText(bundle.getString("KFSchutzblechH")); // NOI18N
+        jLabelDFASchutzblechH.setText(bundle.getString("Schutzblech h.")); // NOI18N
+        jLabelDFASchutzblechH.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabelDFASchutzblechH.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabelDFASchutzblechH.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabelDFASchutzblechH.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabelDFVorderradCpl.setText(bundle.getString("KFCVorderradCpl")); // NOI18N
+        jLabelDFVorderradCpl.setText(bundle.getString("Vorderrad cpl.")); // NOI18N
         jLabelDFVorderradCpl.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabelDFVorderradCpl.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabelDFVorderradCpl.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabelDFVorderradgruppe.setText(bundle.getString("KFVorderradgruppe")); // NOI18N
+        jLabelDFVorderradgruppe.setText(bundle.getString("Vorderradgruppe")); // NOI18N
         jLabelDFVorderradgruppe.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabelDFVorderradgruppe.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabelDFVorderradgruppe.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabelDFSchutzblechV.setText(bundle.getString("KFSchutzblechV")); // NOI18N
+        jLabelDFSchutzblechV.setText(bundle.getString("Schutzblech v.")); // NOI18N
         jLabelDFSchutzblechV.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabelDFSchutzblechV.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabelDFSchutzblechV.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabelDFRahmen.setText(bundle.getString("KFRahmen")); // NOI18N
+        jLabelDFRahmen.setText(bundle.getString("Rahmen")); // NOI18N
         jLabelDFRahmen.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabelDFRahmen.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabelDFRahmen.setPreferredSize(new java.awt.Dimension(60, 16));
@@ -1849,7 +1852,7 @@ public class MainUI extends javax.swing.JFrame {
                                             .addGroup(jPanelDFLayout.createSequentialGroup()
                                                 .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                                     .addComponent(jLabelDFLenkerCpl, javax.swing.GroupLayout.DEFAULT_SIZE, 85, Short.MAX_VALUE)
-                                                    .addComponent(jLabelDFSattelCpl1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                    .addComponent(jLabelDFSattelCpl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                     .addComponent(jLabelDFRahmenURaeder, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                                 .addGap(18, 18, 18)
                                                 .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2105,7 +2108,7 @@ public class MainUI extends javax.swing.JFrame {
                             .addGroup(jPanelDFLayout.createSequentialGroup()
                                 .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(jLabelDFSattelCpl1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabelDFSattelCpl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(jLabel97, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(jTextFieldDFE17PlannedStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jTextFieldDFE17StockEndOfPeriod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2204,10 +2207,10 @@ public class MainUI extends javax.swing.JFrame {
         jLabel14.setMaximumSize(new java.awt.Dimension(30, 14));
         jLabel14.setMinimumSize(new java.awt.Dimension(30, 14));
 
-        jLabelDFLadiesCycle1.setText(bundle.getString("Herrenfahrrad")); // NOI18N
-        jLabelDFLadiesCycle1.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabelDFLadiesCycle1.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabelDFLadiesCycle1.setPreferredSize(new java.awt.Dimension(60, 16));
+        jLabelHFManCycle.setText(bundle.getString("Herrenfahrrad")); // NOI18N
+        jLabelHFManCycle.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabelHFManCycle.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelHFManCycle.setPreferredSize(new java.awt.Dimension(60, 16));
 
         jLabelHFSalesOrders.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelHFSalesOrders.setText(bundle.getString("SalesOrders")); // NOI18N
@@ -2456,57 +2459,57 @@ public class MainUI extends javax.swing.JFrame {
         jTextFieldHFE20PlannedStock.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextFieldHFE20PlannedStock.setName("jTextFieldHFE20PlannedStock"); // NOI18N
 
-        jLabelDFPedalCpl1.setText(bundle.getString("PedalCpl")); // NOI18N
+        jLabelHFPedalCpl.setText(bundle.getString("PedalCpl")); // NOI18N
 
-        jLabelDFFahrradOPedal1.setText(bundle.getString("KFFahrradOPedal")); // NOI18N
-        jLabelDFFahrradOPedal1.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabelDFFahrradOPedal1.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabelDFFahrradOPedal1.setPreferredSize(new java.awt.Dimension(60, 16));
+        jLabelHFFahrradOPedal.setText(bundle.getString("Fahrrad o. Pedal")); // NOI18N
+        jLabelHFFahrradOPedal.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabelHFFahrradOPedal.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelHFFahrradOPedal.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabelDFLenkerCpl1.setText(bundle.getString("LenkerCpl")); // NOI18N
-        jLabelDFLenkerCpl1.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabelDFLenkerCpl1.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabelDFLenkerCpl1.setPreferredSize(new java.awt.Dimension(60, 16));
+        jLabelHFLenkerCpl.setText(bundle.getString("Lenker cpl.")); // NOI18N
+        jLabelHFLenkerCpl.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabelHFLenkerCpl.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelHFLenkerCpl.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabelDFSattelCpl2.setText(bundle.getString("SattelCpl")); // NOI18N
-        jLabelDFSattelCpl2.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabelDFSattelCpl2.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabelDFSattelCpl2.setPreferredSize(new java.awt.Dimension(60, 16));
+        jLabelHFSattelCpl.setText(bundle.getString("Sattel cpl.")); // NOI18N
+        jLabelHFSattelCpl.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabelHFSattelCpl.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelHFSattelCpl.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabelDFRahmenURaeder1.setText(bundle.getString("KFRahmenUndRaeder")); // NOI18N
-        jLabelDFRahmenURaeder1.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabelDFRahmenURaeder1.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabelDFRahmenURaeder1.setPreferredSize(new java.awt.Dimension(60, 16));
+        jLabelHFRahmenURaeder.setText(bundle.getString("Rahmen u. Räder")); // NOI18N
+        jLabelHFRahmenURaeder.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabelHFRahmenURaeder.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelHFRahmenURaeder.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabelDFHinterradgruppe1.setText(bundle.getString("KFHinterradgruppe")); // NOI18N
-        jLabelDFHinterradgruppe1.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabelDFHinterradgruppe1.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabelDFHinterradgruppe1.setPreferredSize(new java.awt.Dimension(60, 16));
+        jLabelHFHinterradgruppe.setText(bundle.getString("Hinterradgruppe")); // NOI18N
+        jLabelHFHinterradgruppe.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabelHFHinterradgruppe.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelHFHinterradgruppe.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabelDFASchutzblechH1.setText(bundle.getString("KFSchutzblechH")); // NOI18N
-        jLabelDFASchutzblechH1.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabelDFASchutzblechH1.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabelDFASchutzblechH1.setPreferredSize(new java.awt.Dimension(60, 16));
+        jLabelHFASchutzblechH.setText(bundle.getString("Schutzblech h.")); // NOI18N
+        jLabelHFASchutzblechH.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabelHFASchutzblechH.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelHFASchutzblechH.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabelDFVorderradCpl1.setText(bundle.getString("KFCVorderradCpl")); // NOI18N
-        jLabelDFVorderradCpl1.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabelDFVorderradCpl1.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabelDFVorderradCpl1.setPreferredSize(new java.awt.Dimension(60, 16));
+        jLabelHFVorderradCpl.setText(bundle.getString("Vorderrad cpl.")); // NOI18N
+        jLabelHFVorderradCpl.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabelHFVorderradCpl.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelHFVorderradCpl.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabelDFVorderradgruppe1.setText(bundle.getString("KFVorderradgruppe")); // NOI18N
-        jLabelDFVorderradgruppe1.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabelDFVorderradgruppe1.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabelDFVorderradgruppe1.setPreferredSize(new java.awt.Dimension(60, 16));
+        jLabelHFVorderradgruppe.setText(bundle.getString("Vorderradgruppe")); // NOI18N
+        jLabelHFVorderradgruppe.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabelHFVorderradgruppe.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelHFVorderradgruppe.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabelDFSchutzblechV1.setText(bundle.getString("KFSchutzblechV")); // NOI18N
-        jLabelDFSchutzblechV1.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabelDFSchutzblechV1.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabelDFSchutzblechV1.setPreferredSize(new java.awt.Dimension(60, 16));
+        jLabelHFSchutzblechV.setText(bundle.getString("Schutzblech v.")); // NOI18N
+        jLabelHFSchutzblechV.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabelHFSchutzblechV.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelHFSchutzblechV.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabelDFRahmen1.setText(bundle.getString("KFRahmen")); // NOI18N
-        jLabelDFRahmen1.setMaximumSize(new java.awt.Dimension(60, 16));
-        jLabelDFRahmen1.setMinimumSize(new java.awt.Dimension(60, 16));
-        jLabelDFRahmen1.setPreferredSize(new java.awt.Dimension(60, 16));
+        jLabelHFRahmen.setText(bundle.getString("Rahmen")); // NOI18N
+        jLabelHFRahmen.setMaximumSize(new java.awt.Dimension(60, 16));
+        jLabelHFRahmen.setMinimumSize(new java.awt.Dimension(60, 16));
+        jLabelHFRahmen.setPreferredSize(new java.awt.Dimension(60, 16));
 
         jLabel105.setText("E26");
         jLabel105.setMaximumSize(new java.awt.Dimension(60, 16));
@@ -2662,26 +2665,26 @@ public class MainUI extends javax.swing.JFrame {
                                     .addGroup(jPanelHFLayout.createSequentialGroup()
                                         .addGroup(jPanelHFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addGroup(jPanelHFLayout.createSequentialGroup()
-                                                .addComponent(jLabelDFLadiesCycle1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(jLabelHFManCycle, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGap(18, 18, 18)
                                                 .addComponent(jLabel106, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelHFLayout.createSequentialGroup()
-                                                .addComponent(jLabelDFVorderradCpl1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(jLabelHFVorderradCpl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                 .addGap(18, 18, 18)
                                                 .addComponent(jLabel113, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addGroup(jPanelHFLayout.createSequentialGroup()
                                                 .addGroup(jPanelHFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                    .addComponent(jLabelDFPedalCpl1, javax.swing.GroupLayout.DEFAULT_SIZE, 85, Short.MAX_VALUE)
-                                                    .addComponent(jLabelDFFahrradOPedal1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                                    .addComponent(jLabelHFPedalCpl, javax.swing.GroupLayout.DEFAULT_SIZE, 85, Short.MAX_VALUE)
+                                                    .addComponent(jLabelHFFahrradOPedal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                                 .addGap(18, 18, 18)
                                                 .addGroup(jPanelHFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                     .addComponent(jLabel107, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                     .addComponent(jLabel105, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                             .addGroup(jPanelHFLayout.createSequentialGroup()
                                                 .addGroup(jPanelHFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                    .addComponent(jLabelDFLenkerCpl1, javax.swing.GroupLayout.DEFAULT_SIZE, 85, Short.MAX_VALUE)
-                                                    .addComponent(jLabelDFSattelCpl2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                    .addComponent(jLabelDFRahmenURaeder1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                                    .addComponent(jLabelHFLenkerCpl, javax.swing.GroupLayout.DEFAULT_SIZE, 85, Short.MAX_VALUE)
+                                                    .addComponent(jLabelHFSattelCpl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                    .addComponent(jLabelHFRahmenURaeder, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                                 .addGap(18, 18, 18)
                                                 .addGroup(jPanelHFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                     .addComponent(jLabel110, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2690,9 +2693,9 @@ public class MainUI extends javax.swing.JFrame {
                                                         .addComponent(jLabel108, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                             .addGroup(jPanelHFLayout.createSequentialGroup()
                                                 .addGroup(jPanelHFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                    .addComponent(jLabelDFVorderradgruppe1, javax.swing.GroupLayout.DEFAULT_SIZE, 85, Short.MAX_VALUE)
-                                                    .addComponent(jLabelDFSchutzblechV1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                    .addComponent(jLabelDFRahmen1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                                    .addComponent(jLabelHFVorderradgruppe, javax.swing.GroupLayout.DEFAULT_SIZE, 85, Short.MAX_VALUE)
+                                                    .addComponent(jLabelHFSchutzblechV, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                    .addComponent(jLabelHFRahmen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                                 .addGap(18, 18, 18)
                                                 .addGroup(jPanelHFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                     .addComponent(jLabel116, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2701,13 +2704,13 @@ public class MainUI extends javax.swing.JFrame {
                                         .addGap(0, 0, Short.MAX_VALUE))
                                     .addGroup(jPanelHFLayout.createSequentialGroup()
                                         .addGroup(jPanelHFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                            .addComponent(jLabelDFASchutzblechH1, javax.swing.GroupLayout.DEFAULT_SIZE, 85, Short.MAX_VALUE)
-                                            .addComponent(jLabelDFHinterradgruppe1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                            .addComponent(jLabelHFASchutzblechH, javax.swing.GroupLayout.DEFAULT_SIZE, 85, Short.MAX_VALUE)
+                                            .addComponent(jLabelHFHinterradgruppe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                         .addGap(18, 18, 18)
                                         .addGroup(jPanelHFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel111, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jLabel112, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE))))))
-                        .addGap(45, 45, 45)
+                        .addGap(85, 85, 85)
                         .addGroup(jPanelHFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabelHFE6OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabelHFE17OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2741,7 +2744,7 @@ public class MainUI extends javax.swing.JFrame {
                     .addGroup(jPanelHFLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jLabelHFSalesOrders, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
                 .addGroup(jPanelHFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelHFLayout.createSequentialGroup()
                         .addComponent(jLabelHFPlannedStock, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2763,7 +2766,7 @@ public class MainUI extends javax.swing.JFrame {
                         .addComponent(jTextFieldHFE20PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
                         .addComponent(jTextFieldHFE15PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(jTextFieldHFE9PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
                 .addGroup(jPanelHFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jTextFieldHFP3StockEndOfPeriod, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelHFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -2783,7 +2786,7 @@ public class MainUI extends javax.swing.JFrame {
                         .addComponent(jTextFieldHFE15StockEndOfPeriod, javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(jTextFieldHFE9StockEndOfPeriod, javax.swing.GroupLayout.Alignment.TRAILING))
                     .addComponent(jLabelHFStockEndOfPeriod, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
                 .addGroup(jPanelHFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jTextFieldHFP3OrdersInQueque, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelHFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -2803,7 +2806,7 @@ public class MainUI extends javax.swing.JFrame {
                         .addComponent(jTextFieldHFE15OrdersInQueque, javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(jTextFieldHFE9OrdersInQueque, javax.swing.GroupLayout.Alignment.TRAILING))
                     .addComponent(jLabelHFOrdersInQueue, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
                 .addGroup(jPanelHFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanelHFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanelHFLayout.createSequentialGroup()
@@ -2826,7 +2829,7 @@ public class MainUI extends javax.swing.JFrame {
                             .addComponent(jTextFieldHFE15WorkInProgress, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jTextFieldHFE9WorkInProgress, javax.swing.GroupLayout.Alignment.TRAILING)))
                     .addComponent(jLabelHFWorkInProgress, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                 .addGroup(jPanelHFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabelHFProductionOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldHFP3ProductionOrders, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2877,7 +2880,7 @@ public class MainUI extends javax.swing.JFrame {
                         .addGap(12, 12, 12))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelHFLayout.createSequentialGroup()
                         .addGroup(jPanelHFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabelDFLadiesCycle1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelHFManCycle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel106, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)))
                 .addComponent(jSeparator9, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2890,7 +2893,7 @@ public class MainUI extends javax.swing.JFrame {
                     .addComponent(jTextFieldHFE26PlannedStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldHFE26SalesOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel105, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelDFPedalCpl1)
+                    .addComponent(jLabelHFPedalCpl)
                     .addComponent(jLabelHFE26OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanelHFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -2901,7 +2904,7 @@ public class MainUI extends javax.swing.JFrame {
                     .addComponent(jTextFieldHFE31ProductionOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldHFE31PlannedStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel107, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelDFFahrradOPedal1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelHFFahrradOPedal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelHFE31OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addComponent(jSeparator10, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jPanelHFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2915,7 +2918,7 @@ public class MainUI extends javax.swing.JFrame {
                     .addGroup(jPanelHFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelHFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel108, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelDFLenkerCpl1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelHFLenkerCpl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabelHFE16OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addComponent(jTextFieldHFE16PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jTextFieldHFE16SalesOrders, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -2936,7 +2939,7 @@ public class MainUI extends javax.swing.JFrame {
                             .addGroup(jPanelHFLayout.createSequentialGroup()
                                 .addGroup(jPanelHFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanelHFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(jLabelDFSattelCpl2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabelHFSattelCpl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(jLabel109, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(jTextFieldHFE17PlannedStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jTextFieldHFE17StockEndOfPeriod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2949,7 +2952,7 @@ public class MainUI extends javax.swing.JFrame {
                                     .addComponent(jLabelHFE17OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(22, 22, 22)))
                         .addGroup(jPanelHFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabelDFRahmenURaeder1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelHFRahmenURaeder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel110, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabelHFE30OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -2966,10 +2969,10 @@ public class MainUI extends javax.swing.JFrame {
                         .addComponent(jTextFieldHFE6SalesOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabelHFE6OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel111, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabelDFHinterradgruppe1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabelHFHinterradgruppe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanelHFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelDFASchutzblechH1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelHFASchutzblechH, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel112, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldHFE12SalesOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldHFE12PlannedStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2988,12 +2991,12 @@ public class MainUI extends javax.swing.JFrame {
                     .addComponent(jTextFieldHFE29ProductionOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelHFE29OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel113, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelDFVorderradCpl1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelHFVorderradCpl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator12, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelHFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelDFVorderradgruppe1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelHFVorderradgruppe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel114, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldHFE9SalesOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldHFE9PlannedStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3004,7 +3007,7 @@ public class MainUI extends javax.swing.JFrame {
                     .addComponent(jLabelHFE9OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanelHFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelDFSchutzblechV1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelHFSchutzblechV, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel115, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldHFE15SalesOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldHFE15PlannedStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3015,7 +3018,7 @@ public class MainUI extends javax.swing.JFrame {
                     .addComponent(jLabelHFE15OrdersInQueque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanelHFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelDFRahmen1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelHFRahmen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel116, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldHFE20SalesOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldHFE20PlannedStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3027,7 +3030,7 @@ public class MainUI extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jLabelDFLadiesCycle1.getAccessibleContext().setAccessibleName(bundle.getString("Herrenfahrrad")); // NOI18N
+        jLabelHFManCycle.getAccessibleContext().setAccessibleName(bundle.getString("Herrenfahrrad")); // NOI18N
 
         jTabbedPane2.addTab(bundle.getString("Herrenfahrrad"), jPanelHF); // NOI18N
 
@@ -3090,11 +3093,11 @@ public class MainUI extends javax.swing.JFrame {
         );
         jPanelWorkloadPlanningLayout.setVerticalGroup(
             jPanelWorkloadPlanningLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 670, Short.MAX_VALUE)
+            .addGap(0, 676, Short.MAX_VALUE)
             .addGroup(jPanelWorkloadPlanningLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelWorkloadPlanningLayout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 658, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 664, Short.MAX_VALUE)
                     .addContainerGap()))
         );
 
@@ -3131,11 +3134,11 @@ public class MainUI extends javax.swing.JFrame {
         );
         jPanelPurchasingDispositionLayout.setVerticalGroup(
             jPanelPurchasingDispositionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 670, Short.MAX_VALUE)
+            .addGap(0, 676, Short.MAX_VALUE)
             .addGroup(jPanelPurchasingDispositionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelPurchasingDispositionLayout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 658, Short.MAX_VALUE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 664, Short.MAX_VALUE)
                     .addContainerGap()))
         );
 
@@ -3276,7 +3279,7 @@ public class MainUI extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(40, 40, 40)
                 .addComponent(jTabbedPan)
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -3318,7 +3321,10 @@ public class MainUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jCheckBoxMenuItemRomanienActionPerformed
 
     private void importXml() {
+        FileNameExtensionFilter xmlfilter = new FileNameExtensionFilter(
+     "xml files (*.xml)", "xml");
         JFileChooser chooser = new JFileChooser();
+        chooser.setFileFilter(xmlfilter);
         chooser.showOpenDialog(null);
         File file = chooser.getSelectedFile();
         if (file.getAbsolutePath().endsWith(".xml")) {
@@ -3335,7 +3341,7 @@ public class MainUI extends javax.swing.JFrame {
                 Map<String, ExtendedArticle> extArt = SetupInstance.getInstance()
                         .generateExtendedArticles(SharedInstance.getInstance().getWarehouseStock().getArticle());
                 SharedInstance.getInstance().setExtendedArticles(extArt);
-                
+
                 this.setPeriodLabels();
 
                 this.jButtonCalculate.setEnabled(true);
@@ -3572,7 +3578,6 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel98;
     private javax.swing.JLabel jLabel99;
     private javax.swing.JLabel jLabelDFASchutzblechH;
-    private javax.swing.JLabel jLabelDFASchutzblechH1;
     private javax.swing.JLabel jLabelDFE11OrdersInQueque;
     private javax.swing.JLabel jLabelDFE14OrdersInQueque;
     private javax.swing.JLabel jLabelDFE16OrdersInQueque;
@@ -3585,34 +3590,24 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelDFE5OrdersInQueque;
     private javax.swing.JLabel jLabelDFE8OrdersInQueque;
     private javax.swing.JLabel jLabelDFFahrradOPedal;
-    private javax.swing.JLabel jLabelDFFahrradOPedal1;
     private javax.swing.JLabel jLabelDFHinterradgruppe;
-    private javax.swing.JLabel jLabelDFHinterradgruppe1;
     private javax.swing.JLabel jLabelDFLadiesCycle;
-    private javax.swing.JLabel jLabelDFLadiesCycle1;
     private javax.swing.JLabel jLabelDFLenkerCpl;
-    private javax.swing.JLabel jLabelDFLenkerCpl1;
     private javax.swing.JLabel jLabelDFOrdersInQueue;
     private javax.swing.JLabel jLabelDFPedalCpl;
-    private javax.swing.JLabel jLabelDFPedalCpl1;
     private javax.swing.JLabel jLabelDFPlannedStock;
     private javax.swing.JLabel jLabelDFProductionOrders;
     private javax.swing.JLabel jLabelDFRahmen;
-    private javax.swing.JLabel jLabelDFRahmen1;
     private javax.swing.JLabel jLabelDFRahmenURaeder;
-    private javax.swing.JLabel jLabelDFRahmenURaeder1;
     private javax.swing.JLabel jLabelDFSalesOrders;
-    private javax.swing.JLabel jLabelDFSattelCpl1;
-    private javax.swing.JLabel jLabelDFSattelCpl2;
+    private javax.swing.JLabel jLabelDFSattelCpl;
     private javax.swing.JLabel jLabelDFSchutzblechV;
-    private javax.swing.JLabel jLabelDFSchutzblechV1;
     private javax.swing.JLabel jLabelDFStockEndOfPeriod;
     private javax.swing.JLabel jLabelDFVorderradCpl;
-    private javax.swing.JLabel jLabelDFVorderradCpl1;
     private javax.swing.JLabel jLabelDFVorderradgruppe;
-    private javax.swing.JLabel jLabelDFVorderradgruppe1;
     private javax.swing.JLabel jLabelDFWorkInProgress;
     private javax.swing.JLabel jLabelDamenfahrradPF;
+    private javax.swing.JLabel jLabelHFASchutzblechH;
     private javax.swing.JLabel jLabelHFE12OrdersInQueque;
     private javax.swing.JLabel jLabelHFE15OrdersInQueque;
     private javax.swing.JLabel jLabelHFE16OrdersInQueque;
@@ -3624,11 +3619,22 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelHFE31OrdersInQueque;
     private javax.swing.JLabel jLabelHFE6OrdersInQueque;
     private javax.swing.JLabel jLabelHFE9OrdersInQueque;
+    private javax.swing.JLabel jLabelHFFahrradOPedal;
+    private javax.swing.JLabel jLabelHFHinterradgruppe;
+    private javax.swing.JLabel jLabelHFLenkerCpl;
+    private javax.swing.JLabel jLabelHFManCycle;
     private javax.swing.JLabel jLabelHFOrdersInQueue;
+    private javax.swing.JLabel jLabelHFPedalCpl;
     private javax.swing.JLabel jLabelHFPlannedStock;
     private javax.swing.JLabel jLabelHFProductionOrders;
+    private javax.swing.JLabel jLabelHFRahmen;
+    private javax.swing.JLabel jLabelHFRahmenURaeder;
     private javax.swing.JLabel jLabelHFSalesOrders;
+    private javax.swing.JLabel jLabelHFSattelCpl;
+    private javax.swing.JLabel jLabelHFSchutzblechV;
     private javax.swing.JLabel jLabelHFStockEndOfPeriod;
+    private javax.swing.JLabel jLabelHFVorderradCpl;
+    private javax.swing.JLabel jLabelHFVorderradgruppe;
     private javax.swing.JLabel jLabelHFWorkInProgress;
     private javax.swing.JLabel jLabelHerrenfahrradPF;
     private javax.swing.JLabel jLabelKFASchutzblechH;
@@ -3947,11 +3953,11 @@ public class MainUI extends javax.swing.JFrame {
         jCheckBoxMenuItemCalculationModePessimistic.setText(i18n.getString("Pessimistic"));
         jMenuItemExportFile.setText(i18n.getString("ExportFile"));
         jMenuItemImportFile.setText(i18n.getString("ImportFile"));
-        
+
         //buttons
         jButtonImportXml.setText(i18n.getString("ImportFile"));
         jButtonCalculate.setText(i18n.getString("Calculate"));
-        
+
         //tabs
         jTabbedPan.setTitleAt(0, i18n.getString("ProductionForecast"));
         jTabbedPan.setTitleAt(1, i18n.getString("InHauseProduction"));
@@ -3960,7 +3966,7 @@ public class MainUI extends javax.swing.JFrame {
         jTabbedPane2.setTitleAt(0, i18n.getString("Kinderfahrrad"));
         jTabbedPane2.setTitleAt(1, i18n.getString("Damenfahrrad"));
         jTabbedPane2.setTitleAt(2, i18n.getString("Herrenfahrrad"));
-        
+
         //tables
         jTableWorkloadPlanning.getColumnModel().getColumn(0).setHeaderValue(i18n.getString("Workplace"));
         jTableWorkloadPlanning.getColumnModel().getColumn(1).setHeaderValue(i18n.getString("LastCycleTimes"));
@@ -3973,12 +3979,12 @@ public class MainUI extends javax.swing.JFrame {
         jTablePurchasingDisposition.getColumnModel().getColumn(0).setHeaderValue(i18n.getString("Name"));
         jTablePurchasingDisposition.getColumnModel().getColumn(0).setHeaderValue(i18n.getString("Mode"));
         jTablePurchasingDisposition.getColumnModel().getColumn(0).setHeaderValue(i18n.getString("Amount"));
-        
+
         List<Order> newOrders = SharedInstance.getInstance().getNewOrders();
-        if(newOrders != null && newOrders.size() > 0){
+        if (newOrders != null && newOrders.size() > 0) {
             this.reFillPurchasingDisposalTable(newOrders);
         }
-        
+
         //labels
         this.setPeriodLabels();
         jLabelKinderfahrradPF.setText(i18n.getString("Kinderfahrrad"));
@@ -4002,19 +4008,58 @@ public class MainUI extends javax.swing.JFrame {
         jLabelKFProductionOrders.setText(i18n.getString("ProductionOrders"));
         jLabelDFProductionOrders.setText(i18n.getString("ProductionOrders"));
         jLabelHFProductionOrders.setText(i18n.getString("ProductionOrders"));
+        //article names
+        jLabelKFKinderfahrrad.setText(i18n.getString("Kinderfahrrad"));
+        jLabelKFPedalCpl.setText(i18n.getString("Pedal cpl."));
+        jLabelKFFahrradOPedal.setText(i18n.getString("Fahrrad o. Pedal"));
+        jLabelKFLenkerCpl.setText(i18n.getString("Lenker cpl."));
+        jLabelSattelCpl.setText(i18n.getString("Sattel cpl."));
+        jLabelKFRahmenURaeder.setText(i18n.getString("Rahmen u. Räder"));
+        jLabelKFHinterradgruppe.setText(i18n.getString("Hinterradgruppe"));
+        jLabelKFASchutzblechH.setText(i18n.getString("Schutzblech h."));
+        jLabelKFVorderradCpl.setText(i18n.getString("Vorderrad cpl."));
+        jLabelKFVorderradgruppe.setText(i18n.getString("Vorderradgruppe"));
+        jLabelKFSchutzblechV.setText(i18n.getString("Schutzblech v."));
+        jLabelKFRahmen.setText(i18n.getString("Rahmen"));
+        
+        jLabelDFLadiesCycle.setText(i18n.getString("Kinderfahrrad"));
+        jLabelDFPedalCpl.setText(i18n.getString("Pedal cpl."));
+        jLabelDFFahrradOPedal.setText(i18n.getString("Fahrrad o. Pedal"));
+        jLabelDFLenkerCpl.setText(i18n.getString("Lenker cpl."));
+        jLabelDFSattelCpl.setText(i18n.getString("Sattel cpl."));
+        jLabelDFRahmenURaeder.setText(i18n.getString("Rahmen u. Räder"));
+        jLabelDFHinterradgruppe.setText(i18n.getString("Hinterradgruppe"));
+        jLabelDFASchutzblechH.setText(i18n.getString("Schutzblech h."));
+        jLabelDFVorderradCpl.setText(i18n.getString("Vorderrad cpl."));
+        jLabelDFVorderradgruppe.setText(i18n.getString("Vorderradgruppe"));
+        jLabelDFSchutzblechV.setText(i18n.getString("Schutzblech v."));
+        jLabelDFRahmen.setText(i18n.getString("Rahmen"));
+        
+        jLabelHFManCycle.setText(i18n.getString("Kinderfahrrad"));
+        jLabelHFPedalCpl.setText(i18n.getString("Pedal cpl."));
+        jLabelHFFahrradOPedal.setText(i18n.getString("Fahrrad o. Pedal"));
+        jLabelHFLenkerCpl.setText(i18n.getString("Lenker cpl."));
+        jLabelHFSattelCpl.setText(i18n.getString("Sattel cpl."));
+        jLabelHFRahmenURaeder.setText(i18n.getString("Rahmen u. Räder"));
+        jLabelHFHinterradgruppe.setText(i18n.getString("Hinterradgruppe"));
+        jLabelHFASchutzblechH.setText(i18n.getString("Schutzblech h."));
+        jLabelHFVorderradCpl.setText(i18n.getString("Vorderrad cpl."));
+        jLabelHFVorderradgruppe.setText(i18n.getString("Vorderradgruppe"));
+        jLabelHFSchutzblechV.setText(i18n.getString("Schutzblech v."));
+        jLabelHFRahmen.setText(i18n.getString("Rahmen"));
     }
-    
+
     private void setPeriodLabels() {
         //also used after xml import
         ResourceBundle i18n = Utils.getResourceBundle(this.currentLocale.getLanguage(), this.currentLocale.getCountry());
         Long period = (long) -1;
-        if(SharedInstance.getInstance().getResults() != null) {
+        if (SharedInstance.getInstance().getResults() != null) {
             period = SharedInstance.getInstance().getResults().getPeriod();
         }
-        jLabelPeriodNPF.setText(i18n.getString("Period") + " " + ((period > -1)? String.valueOf(period+1) : "n"));
-        jLabelPeriodN1PF.setText(i18n.getString("Period") + " " + ((period > -1)? String.valueOf(period+2) : "n+1"));
-        jLabelPeriodN2PF.setText(i18n.getString("Period") + " " + ((period > -1)? String.valueOf(period+3) : "n+2"));
-        jLabelPeriodN3PF.setText(i18n.getString("Period") + " " + ((period > -1)? String.valueOf(period+4) : "n+3"));
+        jLabelPeriodNPF.setText(i18n.getString("Period") + " " + ((period > -1) ? String.valueOf(period + 1) : "n"));
+        jLabelPeriodN1PF.setText(i18n.getString("Period") + " " + ((period > -1) ? String.valueOf(period + 2) : "n+1"));
+        jLabelPeriodN2PF.setText(i18n.getString("Period") + " " + ((period > -1) ? String.valueOf(period + 3) : "n+2"));
+        jLabelPeriodN3PF.setText(i18n.getString("Period") + " " + ((period > -1) ? String.valueOf(period + 4) : "n+3"));
     }
 
     public void setSelectedLanguage(String language) {
@@ -4095,7 +4140,7 @@ public class MainUI extends javax.swing.JFrame {
 
     private void jTextFieldPFPeriodN1HFChanged() {
         jTextFieldHFP3SalesOrders.setText(jTextFieldPFPeriodN1HF.getText());
-        
+
         periodDetailN1.setProduct3(Utils.getNumberFromString(jTextFieldPFPeriodN1HF.getText()).longValue());
         reSetForecast();
 
@@ -5595,7 +5640,7 @@ public class MainUI extends javax.swing.JFrame {
                 jTextFieldDFE19SalesOrders.setText(jTextFieldDFE54ProductionOrders.getText());
             }
         });
-         //Herrenfahrrad
+        //Herrenfahrrad
         //P3
         jTextFieldHFP3ProductionOrders.getDocument().addDocumentListener(new DocumentListener() {
             @Override
@@ -5918,7 +5963,7 @@ public class MainUI extends javax.swing.JFrame {
         fields.add(jTextFieldHFE20ProductionOrders);
         return fields;
     }
-    
+
     public List<JLabel> getHFJLablesOrdersInQueque() {
         List<JLabel> labelsOrdersInQueque = new ArrayList<>();
         labelsOrdersInQueque.add(jLabelHFE26OrdersInQueque);
@@ -5934,7 +5979,7 @@ public class MainUI extends javax.swing.JFrame {
         labelsOrdersInQueque.add(jLabelHFE20OrdersInQueque);
         return labelsOrdersInQueque;
     }
-    
+
     JLabel getHFJLabelOrdersInQuequeByProduct(String product) {
         JLabel label = new JLabel("");
         List<JLabel> labelsOrdersInQueque = getHFJLablesOrdersInQueque();
@@ -5945,8 +5990,8 @@ public class MainUI extends javax.swing.JFrame {
         }
         return label;
     }
-    
-        void inputFieldHFChanged(String product) {
+
+    void inputFieldHFChanged(String product) {
         List<JTextField> hfFields = getHFAllJTextFieldsByProduct(product);
         String ordersInQueque = getHFJLabelOrdersInQuequeByProduct(product).getText();
         getHFJTextFieldByProduct(hfFields, "ProductionOrders").setText(

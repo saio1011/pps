@@ -173,7 +173,7 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
               <Component id="jTabbedPan" max="32767" attributes="0"/>
-              <EmptySpace pref="12" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
@@ -278,7 +278,7 @@
                           <Component id="jTextFieldPFPeriodN3HF" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jTextFieldPFPeriodN4HF" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="433" max="32767" attributes="0"/>
+                      <EmptySpace pref="439" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -308,33 +308,25 @@
             <Component class="javax.swing.JLabel" name="jLabelPeriodNPF">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="Period" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
-                </Property>
+                <Property name="text" type="java.lang.String" value="Period"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabelPeriodN1PF">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="Period" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
-                </Property>
+                <Property name="text" type="java.lang.String" value="Period"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabelPeriodN2PF">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="Period" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
-                </Property>
+                <Property name="text" type="java.lang.String" value="Period"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabelPeriodN3PF">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="Period" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
-                </Property>
+                <Property name="text" type="java.lang.String" value="Period"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextFieldPFPeriodN1KF">
@@ -982,7 +974,7 @@
                     <Component class="javax.swing.JLabel" name="jLabelKFKinderfahrrad">
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="Kinderhafrrad" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="Kinderfahrrad" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </Property>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[60, 16]"/>
@@ -1630,7 +1622,7 @@
                     <Component class="javax.swing.JLabel" name="jLabelKFFahrradOPedal">
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="KFFahrradOPedal" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="Fahrrad o. Pedal" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </Property>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[60, 16]"/>
@@ -1646,7 +1638,7 @@
                     <Component class="javax.swing.JLabel" name="jLabelKFLenkerCpl">
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="LenkerCpl" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="Lenker cpl." replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </Property>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[60, 16]"/>
@@ -1662,7 +1654,7 @@
                     <Component class="javax.swing.JLabel" name="jLabelSattelCpl">
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="SattelCpl" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="Sattel cpl." replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </Property>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[60, 16]"/>
@@ -1678,7 +1670,7 @@
                     <Component class="javax.swing.JLabel" name="jLabelKFRahmenURaeder">
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="KFRahmenUndRaeder" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="Rahmen u. R&#xe4;der" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </Property>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[60, 16]"/>
@@ -1694,7 +1686,7 @@
                     <Component class="javax.swing.JLabel" name="jLabelKFHinterradgruppe">
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="KFHinterradgruppe" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="Hinterradgruppe" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </Property>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[60, 16]"/>
@@ -1710,7 +1702,7 @@
                     <Component class="javax.swing.JLabel" name="jLabelKFASchutzblechH">
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="KFSchutzblechH" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="Schutzblech h." replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </Property>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[60, 16]"/>
@@ -1726,7 +1718,7 @@
                     <Component class="javax.swing.JLabel" name="jLabelKFVorderradCpl">
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="KFCVorderradCpl" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="Vorderrad cpl." replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </Property>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[60, 16]"/>
@@ -1742,7 +1734,10 @@
                     <Component class="javax.swing.JLabel" name="jLabelKFVorderradgruppe">
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="KFVorderradgruppe" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="Vorderradgruppe" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                        </Property>
+                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                          <Color id="Standardcursor"/>
                         </Property>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[60, 16]"/>
@@ -1758,7 +1753,7 @@
                     <Component class="javax.swing.JLabel" name="jLabelKFSchutzblechV">
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="KFSchutzblechV" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="Schutzblech v." replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </Property>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[60, 16]"/>
@@ -1774,7 +1769,7 @@
                     <Component class="javax.swing.JLabel" name="jLabelKFRahmen">
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="KFRahmen" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="Rahmen" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </Property>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[60, 16]"/>
@@ -2203,7 +2198,7 @@
                                                           <Group type="102" alignment="0" attributes="0">
                                                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                                                   <Component id="jLabelDFLenkerCpl" alignment="0" pref="85" max="32767" attributes="0"/>
-                                                                  <Component id="jLabelDFSattelCpl1" alignment="0" max="32767" attributes="0"/>
+                                                                  <Component id="jLabelDFSattelCpl" alignment="0" max="32767" attributes="0"/>
                                                                   <Component id="jLabelDFRahmenURaeder" alignment="0" max="32767" attributes="0"/>
                                                               </Group>
                                                               <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -2533,7 +2528,7 @@
                                           <Group type="102" alignment="0" attributes="0">
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                                      <Component id="jLabelDFSattelCpl1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabelDFSattelCpl" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       <Component id="jLabel97" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Component id="jTextFieldDFE17PlannedStock" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -3375,7 +3370,7 @@
                     <Component class="javax.swing.JLabel" name="jLabelDFFahrradOPedal">
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="KFFahrradOPedal" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="Fahrrad o. Pedal" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </Property>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[60, 16]"/>
@@ -3391,7 +3386,7 @@
                     <Component class="javax.swing.JLabel" name="jLabelDFLenkerCpl">
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="LenkerCpl" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="Lenker cpl." replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </Property>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[60, 16]"/>
@@ -3404,10 +3399,10 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelDFSattelCpl1">
+                    <Component class="javax.swing.JLabel" name="jLabelDFSattelCpl">
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="SattelCpl" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="Sattel cpl." replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </Property>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[60, 16]"/>
@@ -3423,7 +3418,7 @@
                     <Component class="javax.swing.JLabel" name="jLabelDFRahmenURaeder">
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="KFRahmenUndRaeder" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="Rahmen u. R&#xe4;der" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </Property>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[60, 16]"/>
@@ -3439,7 +3434,7 @@
                     <Component class="javax.swing.JLabel" name="jLabelDFHinterradgruppe">
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="KFHinterradgruppe" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="Hinterradgruppe" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </Property>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[60, 16]"/>
@@ -3455,7 +3450,10 @@
                     <Component class="javax.swing.JLabel" name="jLabelDFASchutzblechH">
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="KFSchutzblechH" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="Schutzblech h." replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                        </Property>
+                        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                          <Color id="Standardcursor"/>
                         </Property>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[60, 16]"/>
@@ -3471,7 +3469,7 @@
                     <Component class="javax.swing.JLabel" name="jLabelDFVorderradCpl">
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="KFCVorderradCpl" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="Vorderrad cpl." replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </Property>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[60, 16]"/>
@@ -3487,7 +3485,7 @@
                     <Component class="javax.swing.JLabel" name="jLabelDFVorderradgruppe">
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="KFVorderradgruppe" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="Vorderradgruppe" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </Property>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[60, 16]"/>
@@ -3503,7 +3501,7 @@
                     <Component class="javax.swing.JLabel" name="jLabelDFSchutzblechV">
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="KFSchutzblechV" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="Schutzblech v." replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </Property>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[60, 16]"/>
@@ -3519,7 +3517,7 @@
                     <Component class="javax.swing.JLabel" name="jLabelDFRahmen">
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="KFRahmen" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="Rahmen" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </Property>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[60, 16]"/>
@@ -3938,19 +3936,19 @@
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                                           <Group type="102" alignment="0" attributes="0">
-                                                              <Component id="jLabelDFLadiesCycle1" min="-2" pref="85" max="-2" attributes="0"/>
+                                                              <Component id="jLabelHFManCycle" min="-2" pref="85" max="-2" attributes="0"/>
                                                               <EmptySpace type="separate" max="-2" attributes="0"/>
                                                               <Component id="jLabel106" min="-2" pref="35" max="-2" attributes="0"/>
                                                           </Group>
                                                           <Group type="102" alignment="1" attributes="0">
-                                                              <Component id="jLabelDFVorderradCpl1" max="32767" attributes="0"/>
+                                                              <Component id="jLabelHFVorderradCpl" max="32767" attributes="0"/>
                                                               <EmptySpace type="separate" max="-2" attributes="0"/>
                                                               <Component id="jLabel113" min="-2" pref="35" max="-2" attributes="0"/>
                                                           </Group>
                                                           <Group type="102" alignment="0" attributes="0">
                                                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                                  <Component id="jLabelDFPedalCpl1" alignment="0" pref="85" max="32767" attributes="0"/>
-                                                                  <Component id="jLabelDFFahrradOPedal1" alignment="0" max="32767" attributes="0"/>
+                                                                  <Component id="jLabelHFPedalCpl" alignment="0" pref="85" max="32767" attributes="0"/>
+                                                                  <Component id="jLabelHFFahrradOPedal" alignment="0" max="32767" attributes="0"/>
                                                               </Group>
                                                               <EmptySpace type="separate" max="-2" attributes="0"/>
                                                               <Group type="103" groupAlignment="0" attributes="0">
@@ -3960,9 +3958,9 @@
                                                           </Group>
                                                           <Group type="102" alignment="0" attributes="0">
                                                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                                  <Component id="jLabelDFLenkerCpl1" alignment="0" pref="85" max="32767" attributes="0"/>
-                                                                  <Component id="jLabelDFSattelCpl2" alignment="0" max="32767" attributes="0"/>
-                                                                  <Component id="jLabelDFRahmenURaeder1" alignment="0" max="32767" attributes="0"/>
+                                                                  <Component id="jLabelHFLenkerCpl" alignment="0" pref="85" max="32767" attributes="0"/>
+                                                                  <Component id="jLabelHFSattelCpl" alignment="0" max="32767" attributes="0"/>
+                                                                  <Component id="jLabelHFRahmenURaeder" alignment="0" max="32767" attributes="0"/>
                                                               </Group>
                                                               <EmptySpace type="separate" max="-2" attributes="0"/>
                                                               <Group type="103" groupAlignment="0" attributes="0">
@@ -3975,9 +3973,9 @@
                                                           </Group>
                                                           <Group type="102" alignment="0" attributes="0">
                                                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                                  <Component id="jLabelDFVorderradgruppe1" alignment="0" pref="85" max="32767" attributes="0"/>
-                                                                  <Component id="jLabelDFSchutzblechV1" alignment="0" max="32767" attributes="0"/>
-                                                                  <Component id="jLabelDFRahmen1" alignment="0" max="32767" attributes="0"/>
+                                                                  <Component id="jLabelHFVorderradgruppe" alignment="0" pref="85" max="32767" attributes="0"/>
+                                                                  <Component id="jLabelHFSchutzblechV" alignment="0" max="32767" attributes="0"/>
+                                                                  <Component id="jLabelHFRahmen" alignment="0" max="32767" attributes="0"/>
                                                               </Group>
                                                               <EmptySpace type="separate" max="-2" attributes="0"/>
                                                               <Group type="103" groupAlignment="0" attributes="0">
@@ -3991,8 +3989,8 @@
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                                          <Component id="jLabelDFASchutzblechH1" alignment="1" pref="85" max="32767" attributes="0"/>
-                                                          <Component id="jLabelDFHinterradgruppe1" alignment="1" max="32767" attributes="0"/>
+                                                          <Component id="jLabelHFASchutzblechH" alignment="1" pref="85" max="32767" attributes="0"/>
+                                                          <Component id="jLabelHFHinterradgruppe" alignment="1" max="32767" attributes="0"/>
                                                       </Group>
                                                       <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="0" attributes="0">
@@ -4003,7 +4001,7 @@
                                               </Group>
                                           </Group>
                                       </Group>
-                                      <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jLabelHFE6OrdersInQueque" alignment="0" min="-2" pref="35" max="-2" attributes="0"/>
                                           <Component id="jLabelHFE17OrdersInQueque" alignment="0" min="-2" pref="35" max="-2" attributes="0"/>
@@ -4046,7 +4044,7 @@
                                       <Component id="jLabelHFSalesOrders" min="-2" pref="80" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="72" max="32767" attributes="0"/>
+                              <EmptySpace pref="65" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="jLabelHFPlannedStock" min="-2" pref="78" max="-2" attributes="0"/>
@@ -4074,7 +4072,7 @@
                                       <Component id="jTextFieldHFE9PlannedStock" alignment="1" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="74" max="32767" attributes="0"/>
+                              <EmptySpace pref="62" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jTextFieldHFP3StockEndOfPeriod" alignment="1" min="-2" pref="50" max="-2" attributes="0"/>
                                   <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
@@ -4100,7 +4098,7 @@
                                   </Group>
                                   <Component id="jLabelHFStockEndOfPeriod" alignment="1" min="-2" pref="80" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="42" max="32767" attributes="0"/>
+                              <EmptySpace pref="35" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jTextFieldHFP3OrdersInQueque" alignment="1" min="-2" pref="48" max="-2" attributes="0"/>
                                   <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
@@ -4126,7 +4124,7 @@
                                   </Group>
                                   <Component id="jLabelHFOrdersInQueue" alignment="1" min="-2" pref="80" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="58" max="32767" attributes="0"/>
+                              <EmptySpace pref="51" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
                                   <Group type="103" alignment="1" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
@@ -4157,7 +4155,7 @@
                                   </Group>
                                   <Component id="jLabelHFWorkInProgress" alignment="1" min="-2" pref="65" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="52" max="32767" attributes="0"/>
+                              <EmptySpace pref="45" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabelHFProductionOrders" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="jTextFieldHFP3ProductionOrders" alignment="1" min="-2" pref="50" max="-2" attributes="0"/>
@@ -4220,7 +4218,7 @@
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="jLabelDFLadiesCycle1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabelHFManCycle" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel106" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -4236,7 +4234,7 @@
                                   <Component id="jTextFieldHFE26PlannedStock" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jTextFieldHFE26SalesOrders" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel105" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelDFPedalCpl1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabelHFPedalCpl" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabelHFE26OrdersInQueque" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -4248,7 +4246,7 @@
                                   <Component id="jTextFieldHFE31ProductionOrders" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jTextFieldHFE31PlannedStock" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel107" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelDFFahrradOPedal1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabelHFFahrradOPedal" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabelHFE31OrdersInQueque" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Component id="jSeparator10" min="-2" pref="10" max="-2" attributes="0"/>
@@ -4265,7 +4263,7 @@
                                   <Group type="103" alignment="0" groupAlignment="0" attributes="0">
                                       <Group type="103" alignment="1" groupAlignment="3" attributes="0">
                                           <Component id="jLabel108" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabelDFLenkerCpl1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabelHFLenkerCpl" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabelHFE16OrdersInQueque" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Component id="jTextFieldHFE16PlannedStock" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -4291,7 +4289,7 @@
                                           <Group type="102" alignment="0" attributes="0">
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                                      <Component id="jLabelDFSattelCpl2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabelHFSattelCpl" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       <Component id="jLabel109" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Component id="jTextFieldHFE17PlannedStock" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -4310,7 +4308,7 @@
                                           </Group>
                                       </Group>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="jLabelDFRahmenURaeder1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabelHFRahmenURaeder" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel110" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabelHFE30OrdersInQueque" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
@@ -4331,12 +4329,12 @@
                                       <Component id="jTextFieldHFE6SalesOrders" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabelHFE6OrdersInQueque" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel111" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabelDFHinterradgruppe1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabelHFHinterradgruppe" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabelDFASchutzblechH1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabelHFASchutzblechH" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel112" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jTextFieldHFE12SalesOrders" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jTextFieldHFE12PlannedStock" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -4356,13 +4354,13 @@
                                   <Component id="jTextFieldHFE29ProductionOrders" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabelHFE29OrdersInQueque" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel113" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelDFVorderradCpl1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabelHFVorderradCpl" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jSeparator12" min="-2" pref="10" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabelDFVorderradgruppe1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabelHFVorderradgruppe" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel114" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jTextFieldHFE9SalesOrders" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jTextFieldHFE9PlannedStock" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -4374,7 +4372,7 @@
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabelDFSchutzblechV1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabelHFSchutzblechV" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel115" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jTextFieldHFE15SalesOrders" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jTextFieldHFE15PlannedStock" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -4386,7 +4384,7 @@
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabelDFRahmen1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabelHFRahmen" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel116" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jTextFieldHFE20SalesOrders" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jTextFieldHFE20PlannedStock" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -4412,7 +4410,7 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelDFLadiesCycle1">
+                    <Component class="javax.swing.JLabel" name="jLabelHFManCycle">
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
                           <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="Herrenfahrrad" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
@@ -5128,17 +5126,17 @@
                         <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
                       </AuxValues>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelDFPedalCpl1">
+                    <Component class="javax.swing.JLabel" name="jLabelHFPedalCpl">
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
                           <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="PedalCpl" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelDFFahrradOPedal1">
+                    <Component class="javax.swing.JLabel" name="jLabelHFFahrradOPedal">
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="KFFahrradOPedal" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="Fahrrad o. Pedal" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </Property>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[60, 16]"/>
@@ -5151,10 +5149,10 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelDFLenkerCpl1">
+                    <Component class="javax.swing.JLabel" name="jLabelHFLenkerCpl">
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="LenkerCpl" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="Lenker cpl." replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </Property>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[60, 16]"/>
@@ -5167,10 +5165,10 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelDFSattelCpl2">
+                    <Component class="javax.swing.JLabel" name="jLabelHFSattelCpl">
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="SattelCpl" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="Sattel cpl." replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </Property>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[60, 16]"/>
@@ -5183,10 +5181,10 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelDFRahmenURaeder1">
+                    <Component class="javax.swing.JLabel" name="jLabelHFRahmenURaeder">
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="KFRahmenUndRaeder" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="Rahmen u. R&#xe4;der" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </Property>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[60, 16]"/>
@@ -5199,10 +5197,10 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelDFHinterradgruppe1">
+                    <Component class="javax.swing.JLabel" name="jLabelHFHinterradgruppe">
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="KFHinterradgruppe" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="Hinterradgruppe" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </Property>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[60, 16]"/>
@@ -5215,10 +5213,10 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelDFASchutzblechH1">
+                    <Component class="javax.swing.JLabel" name="jLabelHFASchutzblechH">
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="KFSchutzblechH" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="Schutzblech h." replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </Property>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[60, 16]"/>
@@ -5231,10 +5229,10 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelDFVorderradCpl1">
+                    <Component class="javax.swing.JLabel" name="jLabelHFVorderradCpl">
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="KFCVorderradCpl" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="Vorderrad cpl." replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </Property>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[60, 16]"/>
@@ -5247,10 +5245,10 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelDFVorderradgruppe1">
+                    <Component class="javax.swing.JLabel" name="jLabelHFVorderradgruppe">
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="KFVorderradgruppe" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="Vorderradgruppe" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </Property>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[60, 16]"/>
@@ -5263,10 +5261,10 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelDFSchutzblechV1">
+                    <Component class="javax.swing.JLabel" name="jLabelHFSchutzblechV">
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="KFSchutzblechV" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="Schutzblech v." replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </Property>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[60, 16]"/>
@@ -5279,10 +5277,10 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabelDFRahmen1">
+                    <Component class="javax.swing.JLabel" name="jLabelHFRahmen">
                       <Properties>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="KFRahmen" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
+                          <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="Rahmen" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                         </Property>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[60, 16]"/>
@@ -5694,11 +5692,11 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="670" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="676" max="32767" attributes="0"/>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jScrollPane1" pref="658" max="32767" attributes="0"/>
+                          <Component id="jScrollPane1" pref="664" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -5803,11 +5801,11 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="670" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="676" max="32767" attributes="0"/>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jScrollPane2" pref="658" max="32767" attributes="0"/>
+                          <Component id="jScrollPane2" pref="664" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
