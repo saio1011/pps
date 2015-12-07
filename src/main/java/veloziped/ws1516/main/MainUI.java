@@ -4111,7 +4111,7 @@ public class MainUI extends javax.swing.JFrame {
         jLabelKFSchutzblechV.setText(i18n.getString("Schutzblech v."));
         jLabelKFRahmen.setText(i18n.getString("Rahmen"));
         
-        jLabelDFLadiesCycle.setText(i18n.getString("Kinderfahrrad"));
+        jLabelDFLadiesCycle.setText(i18n.getString("Damenfahrrad"));
         jLabelDFPedalCpl.setText(i18n.getString("Pedal cpl."));
         jLabelDFFahrradOPedal.setText(i18n.getString("Fahrrad o. Pedal"));
         jLabelDFLenkerCpl.setText(i18n.getString("Lenker cpl."));
@@ -4124,7 +4124,7 @@ public class MainUI extends javax.swing.JFrame {
         jLabelDFSchutzblechV.setText(i18n.getString("Schutzblech v."));
         jLabelDFRahmen.setText(i18n.getString("Rahmen"));
         
-        jLabelHFManCycle.setText(i18n.getString("Kinderfahrrad"));
+        jLabelHFManCycle.setText(i18n.getString("Herrenfahrrad"));
         jLabelHFPedalCpl.setText(i18n.getString("Pedal cpl."));
         jLabelHFFahrradOPedal.setText(i18n.getString("Fahrrad o. Pedal"));
         jLabelHFLenkerCpl.setText(i18n.getString("Lenker cpl."));
