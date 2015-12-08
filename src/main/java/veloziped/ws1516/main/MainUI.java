@@ -9,6 +9,7 @@ import java.io.File;
 import java.util.AbstractList;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
@@ -3106,6 +3107,7 @@ public class MainUI extends javax.swing.JFrame {
 
         jTabbedPan.addTab("Workload Planning", jPanelWorkloadPlanning);
 
+        jTablePurchasingDisposition.setAutoCreateRowSorter(true);
         jTablePurchasingDisposition.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -3122,6 +3124,7 @@ public class MainUI extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        jTablePurchasingDisposition.getTableHeader().setReorderingAllowed(false);
         jScrollPane2.setViewportView(jTablePurchasingDisposition);
 
         javax.swing.GroupLayout jPanelPurchasingDispositionLayout = new javax.swing.GroupLayout(jPanelPurchasingDisposition);
@@ -3516,9 +3519,12 @@ public class MainUI extends javax.swing.JFrame {
         for (int i = model.getRowCount() - 1; i >= 0; i--) {
             model.removeRow(i);
         }
+        
+        List<WorkloadResult> list = new ArrayList<WorkloadResult> (results);
+        Collections.sort(list);
 
-        for (WorkloadResult result : results) {
-            model.addRow(new Object[]{result.getWorkplaceId().getId(), result.getLastSetupCycles(), result.getTotalCapacityNeeded(),
+        for (WorkloadResult result : list) {
+            model.addRow(new Object[]{result.getWorkplace().getId(), result.getLastSetupCycles(), result.getTotalCapacityNeeded(),
                 result.getOverTimeDay(), result.getNumberOfShifts(), result.getFreeCapacity(), result.getWorkloadPercentage()});
         }
     }
@@ -3530,6 +3536,8 @@ public class MainUI extends javax.swing.JFrame {
         for (int i = model.getRowCount() - 1; i >= 0; i--) {
             model.removeRow(i);
         }
+        
+        Collections.sort(orders);
 
         for (Order order : orders) {
             ExtendedArticle article = SharedInstance.getInstance().getArticleForId(order.getArticle());
@@ -3544,8 +3552,11 @@ public class MainUI extends javax.swing.JFrame {
         for (int i = model.getRowCount() - 1; i >= 0; i--) {
             model.removeRow(i);
         }
+        
+        List<ExtendedArticle> list = new ArrayList<ExtendedArticle> (articles.values());
+        Collections.sort(list);
 
-        for (ExtendedArticle article : articles.values()) {
+        for (ExtendedArticle article : list) {
             model.addRow(new Object[]{article.getId(), i18n.getString(article.getName()), article.getAmount(), article.getStockvalue(),
             article.getStockChange(), article.getNewStock(), article.getNewStockValue(), article.getStockChangePct()});
         }

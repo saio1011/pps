@@ -63,7 +63,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
     "batch"
 })
 @XmlRootElement(name = "order")
-public class Order {
+public class Order implements Comparable<Order>{
 
     protected List<Batch> batch;
     @XmlAttribute(name = "amount")
@@ -584,6 +584,11 @@ public class Order {
      */
     public void setTime(Long value) {
         this.time = value;
+    }
+
+    @Override
+    public int compareTo(Order o) {
+        return Long.compare(this.article, o.getArticle());
     }
 
 }
