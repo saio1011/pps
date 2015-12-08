@@ -9,7 +9,7 @@ import com.google.common.math.DoubleMath;
 import java.math.RoundingMode;
 import java.util.Objects;
 import org.json.simple.JSONObject;
-import veloziped.ws1516.generated.Article;
+import veloziped.ws1516.generated.Results.Article;
 import veloziped.ws1516.production.CalculationMode;
 
 /**

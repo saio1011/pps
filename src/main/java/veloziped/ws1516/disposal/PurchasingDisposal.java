@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 import veloziped.ws1516.articles.ArticleType;
 import veloziped.ws1516.articles.ExtendedArticle;
-import veloziped.ws1516.generated.Order;
+import veloziped.ws1516.generated.Results.Order;
 import veloziped.ws1516.main.SharedInstance;
 import veloziped.ws1516.production.ProductionPlan;
 

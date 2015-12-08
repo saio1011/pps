@@ -5,7 +5,7 @@
  */
 package veloziped.ws1516.disposal;
 
-import veloziped.ws1516.generated.Waitingliststock;
+import veloziped.ws1516.generated.Results.Waitingliststock;
 
 /**
  *

@@ -5,7 +5,7 @@
  */
 package veloziped.ws1516.workplace;
 
-import veloziped.ws1516.generated.Workplace;
+import veloziped.ws1516.generated.Results.Workplace;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
