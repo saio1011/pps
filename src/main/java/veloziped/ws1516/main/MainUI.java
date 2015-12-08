@@ -3776,7 +3776,16 @@ public class MainUI extends javax.swing.JFrame {
         //disable the "All files" option.
         chooser.setAcceptAllFileFilterUsed(false);
         if (chooser.showOpenDialog(this) == JFileChooser.APPROVE_OPTION) {
-            File file = new File(chooser.getSelectedFile().getAbsolutePath() + "\\input.xml");
+            String os = System.getProperty("os.name");
+            String trennzeichen = "";
+            if(os != null && os.startsWith("Windows")){
+                trennzeichen = "\\";
+            } else {
+                //linux | mac
+                trennzeichen = "/";
+            }
+            
+            File file = new File(chooser.getSelectedFile().getAbsolutePath() + trennzeichen + "input.xml");
             SharedInstance.getInstance().saveInputFile(file);
         } else {
             System.out.println("No Selection ");
