@@ -128,7 +128,7 @@ public class WorkloadResult implements Comparable<WorkloadResult>{
     private void calcCapacityNeeded() {
         for (ProcessTime process : this.workplace.getProcessTimes()) {
             Long orderQuantity = SharedInstance.getInstance()
-                    .getOrderQuantityForArticleId(process.getArticleId());
+                    .getArticleForId(process.getArticleId()).getPlannedProductionAmount();
 
             if (orderQuantity != null) {
                 this.capacityNeeded += orderQuantity * process.getRunTime();
@@ -139,7 +139,7 @@ public class WorkloadResult implements Comparable<WorkloadResult>{
     private void calcSetupTime() {
         for (ProcessTime process : this.workplace.getProcessTimes()) {
             Long orderQuantity = SharedInstance.getInstance()
-                    .getOrderQuantityForArticleId(process.getArticleId());
+                    .getArticleForId(process.getArticleId()).getPlannedProductionAmount();
 
             if (orderQuantity != null && orderQuantity > 0) {
                 this.setupTime += process.getSetupTime();

@@ -45,7 +45,6 @@ public class SharedInstance {
     }
 
     private Forecast forecast = new Forecast();
-    private Map<String, Long> orderQuantities;
     private Map<String, ExtendedWorkplace> extendedWorkplaces;
     private Map<String, ExtendedArticle> extendedArticles;
     private Map<String, Order> incomingOrdersThisPeriod;
@@ -220,27 +219,6 @@ public class SharedInstance {
         this.extendedArticles = articles;
     }
 
-    public boolean setOrderQuantityForArticleId(Long id, Long quantity) {
-        boolean result = false;
-
-        if (id != null) {
-            orderQuantities.put(String.valueOf(id), quantity);
-            result = true;
-        }
-
-        return result;
-    }
-
-    public Long getOrderQuantityForArticleId(Long id) {
-        Long result = null;
-
-        if (id != null) {
-            result = orderQuantities.get(String.valueOf(id));
-        }
-
-        return result;
-    }
-
     public Order getIncomingOrderForArticleId(Long id) {
         Order result = null;
 
@@ -249,14 +227,6 @@ public class SharedInstance {
         }
 
         return result;
-    }
-
-    public Map<String, Long> getOrderQuantities() {
-        return orderQuantities;
-    }
-
-    public void setOrderQuantities(Map<String, Long> orderQuantities) {
-        this.orderQuantities = orderQuantities;
     }
 
     public Forecast getForecast() {
@@ -350,8 +320,9 @@ public class SharedInstance {
             if (incoming != null) {
                 change += incoming.getAmount();
             }
+            //Zuwachs dazurechnen
+            change += (article.getSafetyStock() - article.getAmount());
 
-            //TODO: Zuwachs dazurechnen
             article.setStockChange(change);
             article.setNewStock(article.getAmount() + change);
             article.setNewStockValue(article.getPrice() * article.getNewStock());

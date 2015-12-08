@@ -17,7 +17,6 @@ import veloziped.ws1516.production.CalculationMode;
  * @author Martin
  */
 public class ExtendedArticle extends Article implements Comparable<ExtendedArticle>{
-
     private ArticleType type;
     private ArticleUsage usage;
     private double deliverTime;
@@ -32,6 +31,8 @@ public class ExtendedArticle extends Article implements Comparable<ExtendedArtic
     private long newStock;
     private double newStockValue;
     private double stockChangePct;
+    private long safetyStock;
+    private long plannedProductionAmount;
 
     public void setValues(JSONObject values) {
         String aType = (String) values.get("type");
@@ -68,6 +69,9 @@ public class ExtendedArticle extends Article implements Comparable<ExtendedArtic
         this.stockChange = 0;
         this.newStock = super.amount;
         this.newStockValue = super.stockvalue;
+        this.safetyStock = super.amount;
+        //remove 100 value in release
+        this.plannedProductionAmount = 100;
     }
 
     public boolean equals(Object obj) {
@@ -103,6 +107,22 @@ public class ExtendedArticle extends Article implements Comparable<ExtendedArtic
         }
     }
 
+    public long getSafetyStock() {
+        return safetyStock;
+    }
+
+    public void setSafetyStock(long safetyStock) {
+        this.safetyStock = safetyStock;
+    }
+
+    public long getPlannedProductionAmount() {
+        return plannedProductionAmount;
+    }
+
+    public void setPlannedProductionAmount(long plannedProductionAmount) {
+        this.plannedProductionAmount = plannedProductionAmount;
+    }
+    
     public double getStockChangePct() {
         return stockChangePct;
     }
