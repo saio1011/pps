@@ -16,7 +16,7 @@ import static java.lang.Math.round;
  *
  * @author Martin
  */
-public class WorkloadResult {
+public class WorkloadResult implements Comparable<WorkloadResult>{
 
     //TODO: Kap. Bed. (Rückstand Vorperiode)
     private final ExtendedWorkplace workplace;
@@ -110,7 +110,7 @@ public class WorkloadResult {
         return capacityNeeded;
     }
 
-    public ExtendedWorkplace getWorkplaceId() {
+    public ExtendedWorkplace getWorkplace() {
         return workplace;
     }
 
@@ -223,5 +223,10 @@ public class WorkloadResult {
         double perct = Double.valueOf(this.totalCapacityNeeded) / (this.numberOfShifts * WorkloadPlanning.LIMITPERSHIFT);
         
         this.workloadPercentage = perct * 100;
+    }
+
+    @Override
+    public int compareTo(WorkloadResult o) {
+        return Long.compare(this.workplace.getId(), o.getWorkplace().getId());
     }
 }

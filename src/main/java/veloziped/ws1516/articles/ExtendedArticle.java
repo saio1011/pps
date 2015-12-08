@@ -16,7 +16,7 @@ import veloziped.ws1516.production.CalculationMode;
  *
  * @author Martin
  */
-public class ExtendedArticle extends Article {
+public class ExtendedArticle extends Article implements Comparable<ExtendedArticle>{
 
     private ArticleType type;
     private ArticleUsage usage;
@@ -229,6 +229,11 @@ public class ExtendedArticle extends Article {
 
     public ArticleType getType() {
         return type;
+    }
+
+    @Override
+    public int compareTo(ExtendedArticle o) {
+        return Long.compare(super.id, o.getId());
     }
 
 }
