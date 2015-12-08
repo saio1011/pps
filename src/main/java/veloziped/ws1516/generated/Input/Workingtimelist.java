@@ -75,4 +75,8 @@ public class Workingtimelist {
         return this.workingtime;
     }
 
+    public void setWorkingtime(List<Workingtime> workingtime) {
+        this.workingtime = workingtime;
+    }
+
 }

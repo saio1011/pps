@@ -75,4 +75,8 @@ public class Selldirect {
         return this.item;
     }
 
+    public void setItem(List<Item> item) {
+        this.item = item;
+    }
+
 }

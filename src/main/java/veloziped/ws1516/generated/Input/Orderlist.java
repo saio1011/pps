@@ -75,4 +75,8 @@ public class Orderlist {
         return this.order;
     }
 
+    public void setOrder(List<Order> order) {
+        this.order = order;
+    }
+
 }
