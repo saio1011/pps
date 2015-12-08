@@ -164,7 +164,7 @@
                       <Component id="jPanel1" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
-                  <Component id="jScrollPane5" pref="1279" max="32767" attributes="0"/>
+                  <Component id="jScrollPane5" max="32767" attributes="0"/>
               </Group>
           </Group>
       </Group>
@@ -174,7 +174,7 @@
           <Group type="102" alignment="1" attributes="0">
               <Component id="jPanel1" min="-2" pref="44" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jScrollPane5" pref="682" max="32767" attributes="0"/>
+              <Component id="jScrollPane5" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -188,36 +188,37 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jButtonImportXml" min="-2" pref="177" max="-2" attributes="0"/>
+                  <Component id="jButtonImportXml" min="-2" pref="170" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
                   <Component id="jLabelDiscountFactor" min="-2" pref="80" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jSpinnerDiscountFactor" min="-2" pref="48" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                   <Component id="jLabelBufferFactor" min="-2" pref="60" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jSpinnerBufferFactor" min="-2" pref="48" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jButtonCalculate" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jButtonCalculate" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabelBufferFactor" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jSpinnerDiscountFactor" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabelDiscountFactor" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jSpinnerBufferFactor" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jButtonImportXml" min="-2" pref="33" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabelDiscountFactor" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jSpinnerDiscountFactor" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabelBufferFactor" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jSpinnerBufferFactor" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jButtonCalculate" alignment="3" max="32767" attributes="0"/>
+                          </Group>
                       </Group>
+                      <Component id="jButtonImportXml" alignment="0" min="-2" pref="33" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -312,27 +313,27 @@
                           <EmptySpace min="-2" pref="108" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jTextFieldPFPeriodN1DF" max="32767" attributes="0"/>
-                              <Component id="jLabelPeriodNPF" pref="191" max="32767" attributes="0"/>
+                              <Component id="jLabelPeriodNPF" pref="204" max="32767" attributes="0"/>
                               <Component id="jTextFieldPFPeriodN1KF" max="32767" attributes="0"/>
                               <Component id="jTextFieldPFPeriodN1HF" alignment="0" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jTextFieldPFPeriodN2DF" max="32767" attributes="0"/>
-                              <Component id="jLabelPeriodN1PF" pref="193" max="32767" attributes="0"/>
+                              <Component id="jLabelPeriodN1PF" pref="204" max="32767" attributes="0"/>
                               <Component id="jTextFieldPFPeriodN2KF" max="32767" attributes="0"/>
                               <Component id="jTextFieldPFPeriodN2HF" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jTextFieldPFPeriodN3DF" max="32767" attributes="0"/>
-                              <Component id="jLabelPeriodN2PF" pref="193" max="32767" attributes="0"/>
+                              <Component id="jLabelPeriodN2PF" pref="204" max="32767" attributes="0"/>
                               <Component id="jTextFieldPFPeriodN3KF" max="32767" attributes="0"/>
                               <Component id="jTextFieldPFPeriodN3HF" alignment="0" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabelPeriodN3PF" pref="192" max="32767" attributes="0"/>
+                              <Component id="jLabelPeriodN3PF" pref="203" max="32767" attributes="0"/>
                               <Component id="jTextFieldPFPeriodN4KF" max="32767" attributes="0"/>
                               <Component id="jTextFieldPFPeriodN4DF" max="32767" attributes="0"/>
                               <Component id="jTextFieldPFPeriodN4HF" alignment="0" max="32767" attributes="0"/>
@@ -375,7 +376,7 @@
                               <Component id="jTextFieldPFPeriodN3HF" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jTextFieldPFPeriodN4HF" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="424" max="32767" attributes="0"/>
+                          <EmptySpace pref="434" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -549,8 +550,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jScrollPane6" min="-2" pref="641" max="-2" attributes="0"/>
-                          <EmptySpace pref="14" max="32767" attributes="0"/>
+                          <Component id="jScrollPane6" pref="665" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -707,7 +707,7 @@
                                               <Component id="jLabelKFSalesOrders" min="-2" pref="80" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <EmptySpace pref="103" max="32767" attributes="0"/>
+                                      <EmptySpace pref="111" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jLabelKFPlannedStock" min="-2" pref="78" max="-2" attributes="0"/>
@@ -735,7 +735,7 @@
                                               <Component id="jTextFieldKFE7PlannedStock" alignment="1" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <EmptySpace pref="105" max="32767" attributes="0"/>
+                                      <EmptySpace pref="113" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jTextFieldKFP1StockEndOfPeriod" alignment="1" min="-2" pref="50" max="-2" attributes="0"/>
                                           <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
@@ -761,7 +761,7 @@
                                           </Group>
                                           <Component id="jLabelKFStockEndOfPeriod" alignment="1" min="-2" pref="80" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="92" max="32767" attributes="0"/>
+                                      <EmptySpace pref="100" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jTextFieldKFP1OrdersInQueque" alignment="1" min="-2" pref="48" max="-2" attributes="0"/>
                                           <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
@@ -787,7 +787,7 @@
                                           </Group>
                                           <Component id="jLabelKFOrdersInQueue" alignment="1" min="-2" pref="80" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="89" max="32767" attributes="0"/>
+                                      <EmptySpace pref="99" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="1" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" attributes="0">
@@ -818,7 +818,7 @@
                                           </Group>
                                           <Component id="jLabelKFWorkInProgress" min="-2" pref="65" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="89" max="32767" attributes="0"/>
+                                      <EmptySpace pref="102" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jLabelKFProductionOrders" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="jTextFieldKFP1ProductionOrders" alignment="1" min="-2" pref="50" max="-2" attributes="0"/>
@@ -2385,7 +2385,7 @@
                                               <Component id="jLabelDFSalesOrders" min="-2" pref="80" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <EmptySpace pref="103" max="32767" attributes="0"/>
+                                      <EmptySpace pref="111" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jLabelDFPlannedStock" min="-2" pref="78" max="-2" attributes="0"/>
@@ -2413,7 +2413,7 @@
                                               <Component id="jTextFieldDFE8PlannedStock" alignment="1" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <EmptySpace pref="105" max="32767" attributes="0"/>
+                                      <EmptySpace pref="113" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jTextFieldDFP2StockEndOfPeriod" alignment="1" min="-2" pref="50" max="-2" attributes="0"/>
                                           <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
@@ -2439,7 +2439,7 @@
                                           </Group>
                                           <Component id="jLabelDFStockEndOfPeriod" alignment="1" min="-2" pref="80" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="92" max="32767" attributes="0"/>
+                                      <EmptySpace pref="100" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jTextFieldDFP2OrdersInQueque" alignment="1" min="-2" pref="48" max="-2" attributes="0"/>
                                           <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
@@ -2465,7 +2465,7 @@
                                           </Group>
                                           <Component id="jLabelDFOrdersInQueue" alignment="1" min="-2" pref="80" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="89" max="32767" attributes="0"/>
+                                      <EmptySpace pref="99" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="1" attributes="0">
                                           <Group type="103" alignment="1" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="0" attributes="0">
@@ -2496,7 +2496,7 @@
                                           </Group>
                                           <Component id="jLabelDFWorkInProgress" alignment="1" min="-2" pref="65" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="89" max="32767" attributes="0"/>
+                                      <EmptySpace pref="102" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jLabelDFProductionOrders" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="jTextFieldDFP2ProductionOrders" alignment="1" min="-2" pref="50" max="-2" attributes="0"/>
@@ -4103,7 +4103,7 @@
                                                       </Group>
                                                   </Group>
                                               </Group>
-                                              <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Component id="jLabelHFE6OrdersInQueque" alignment="0" min="-2" pref="35" max="-2" attributes="0"/>
                                                   <Component id="jLabelHFE17OrdersInQueque" alignment="0" min="-2" pref="35" max="-2" attributes="0"/>
@@ -4146,7 +4146,7 @@
                                               <Component id="jLabelHFSalesOrders" min="-2" pref="80" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <EmptySpace pref="96" max="32767" attributes="0"/>
+                                      <EmptySpace pref="110" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jLabelHFPlannedStock" min="-2" pref="78" max="-2" attributes="0"/>
@@ -4174,7 +4174,7 @@
                                               <Component id="jTextFieldHFE9PlannedStock" alignment="1" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <EmptySpace pref="93" max="32767" attributes="0"/>
+                                      <EmptySpace pref="113" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jTextFieldHFP3StockEndOfPeriod" alignment="1" min="-2" pref="50" max="-2" attributes="0"/>
                                           <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
@@ -4200,7 +4200,7 @@
                                           </Group>
                                           <Component id="jLabelHFStockEndOfPeriod" alignment="1" min="-2" pref="80" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="85" max="32767" attributes="0"/>
+                                      <EmptySpace pref="99" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jTextFieldHFP3OrdersInQueque" alignment="1" min="-2" pref="48" max="-2" attributes="0"/>
                                           <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
@@ -4226,7 +4226,7 @@
                                           </Group>
                                           <Component id="jLabelHFOrdersInQueue" alignment="1" min="-2" pref="80" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="82" max="32767" attributes="0"/>
+                                      <EmptySpace pref="102" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="1" attributes="0">
                                           <Group type="103" alignment="1" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="0" attributes="0">
@@ -4257,7 +4257,7 @@
                                           </Group>
                                           <Component id="jLabelHFWorkInProgress" alignment="1" min="-2" pref="65" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="82" max="32767" attributes="0"/>
+                                      <EmptySpace pref="101" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jLabelHFProductionOrders" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="jTextFieldHFP3ProductionOrders" alignment="1" min="-2" pref="50" max="-2" attributes="0"/>
@@ -5784,11 +5784,11 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="1239" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="1285" max="32767" attributes="0"/>
                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jScrollPane1" pref="1227" max="32767" attributes="0"/>
+                              <Component id="jScrollPane1" pref="1273" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -5796,11 +5796,11 @@
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="661" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="671" max="32767" attributes="0"/>
                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jScrollPane1" pref="649" max="32767" attributes="0"/>
+                              <Component id="jScrollPane1" pref="659" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -5893,11 +5893,11 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="1239" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="1285" max="32767" attributes="0"/>
                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jScrollPane2" pref="1227" max="32767" attributes="0"/>
+                              <Component id="jScrollPane2" pref="1273" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -5905,11 +5905,11 @@
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="661" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="671" max="32767" attributes="0"/>
                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jScrollPane2" pref="649" max="32767" attributes="0"/>
+                              <Component id="jScrollPane2" pref="659" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -5980,11 +5980,11 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="1239" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="1285" max="32767" attributes="0"/>
                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jScrollPane3" pref="1227" max="32767" attributes="0"/>
+                              <Component id="jScrollPane3" pref="1273" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -5992,11 +5992,11 @@
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="661" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="671" max="32767" attributes="0"/>
                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jScrollPane3" pref="649" max="32767" attributes="0"/>
+                              <Component id="jScrollPane3" pref="659" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -6097,13 +6097,13 @@
                               <Component id="jButtonMoveDown" max="32767" attributes="0"/>
                               <Component id="jButtonMoveUp" min="-2" pref="80" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="849" max="32767" attributes="0"/>
+                          <EmptySpace pref="895" max="32767" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jScrollPane4" min="-2" pref="295" max="-2" attributes="0"/>
-                              <EmptySpace pref="938" max="32767" attributes="0"/>
+                              <EmptySpace pref="984" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -6115,12 +6115,12 @@
                           <Component id="jButtonMoveUp" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jButtonMoveDown" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="591" max="32767" attributes="0"/>
+                          <EmptySpace pref="601" max="32767" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jScrollPane4" pref="649" max="32767" attributes="0"/>
+                              <Component id="jScrollPane4" pref="659" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
