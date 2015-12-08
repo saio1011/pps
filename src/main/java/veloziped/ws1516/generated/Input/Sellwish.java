@@ -75,4 +75,8 @@ public class Sellwish {
         return this.item;
     }
 
+    public void setItem(List<Item> item) {
+        this.item = item;
+    }
+
 }

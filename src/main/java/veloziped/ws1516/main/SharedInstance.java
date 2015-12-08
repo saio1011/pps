@@ -8,6 +8,7 @@ package veloziped.ws1516.main;
 import com.google.common.math.DoubleMath;
 import java.io.File;
 import java.math.RoundingMode;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -18,6 +19,14 @@ import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 import veloziped.ws1516.articles.ExtendedArticle;
 import veloziped.ws1516.generated.Input.Input;
+import veloziped.ws1516.generated.Input.Item;
+import veloziped.ws1516.generated.Input.Orderlist;
+import veloziped.ws1516.generated.Input.Productionlist;
+import veloziped.ws1516.generated.Input.Qualitycontrol;
+import veloziped.ws1516.generated.Input.Selldirect;
+import veloziped.ws1516.generated.Input.Sellwish;
+import veloziped.ws1516.generated.Input.Workingtime;
+import veloziped.ws1516.generated.Input.Workingtimelist;
 import veloziped.ws1516.generated.Results.Completedorders;
 import veloziped.ws1516.generated.Results.Cycletimes;
 import veloziped.ws1516.generated.Results.Futureinwardstockmovement;
@@ -33,6 +42,7 @@ import veloziped.ws1516.generated.Results.Warehousestock;
 import veloziped.ws1516.production.Forecast;
 import veloziped.ws1516.production.ProductionPlan;
 import veloziped.ws1516.production.CalculationMode;
+import veloziped.ws1516.workload.WorkloadResult;
 import veloziped.ws1516.workplace.ExtendedWorkplace;
 
 /**
@@ -55,6 +65,8 @@ public class SharedInstance {
     private double discountFactor;
     private double bufferFactor;
     private List<Order> newOrders;
+    private List<Item> sellDirect;
+    private Map<String, WorkloadResult> workloadResults;
 
     private Result result;
     private Inwardstockmovement inwardStockMovement;
@@ -67,7 +79,32 @@ public class SharedInstance {
     private Futureinwardstockmovement futureInwardStockMovement;
     private Warehousestock warehouseStock;
 
+    public List<Item> getSellDirect() {
+        if(sellDirect == null) {
+            return new ArrayList<>();
+        }
+        return sellDirect;
+    }
+
+    public void setSellDirect(List<Item> sellDirect) {
+        this.sellDirect = sellDirect;
+    }
+
+    public Map<String, WorkloadResult> getWorkloadResults() {
+        if(workloadResults == null) {
+            return new HashMap<>();
+        }
+        return workloadResults;
+    }
+
+    public void setWorkloadResults(Map<String, WorkloadResult> workloadResults) {
+        this.workloadResults = workloadResults;
+    }
+
     public List<Order> getNewOrders() {
+        if(newOrders == null) {
+            return new ArrayList<>();
+        }
         return newOrders;
     }
 
@@ -279,12 +316,15 @@ public class SharedInstance {
         return results;
     }
 
-    public void saveInputFile(File file, Input input) {
+    public void saveInputFile(File file) {
+        Input input = this.combineInput();
         try {
             JAXBContext context = JAXBContext
                     .newInstance(Input.class);
             Marshaller m = context.createMarshaller();
             m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+            //This removes all the XML declaration line.
+            m.setProperty(Marshaller.JAXB_FRAGMENT, true);
 
             m.marshal(input, file);
 
@@ -292,7 +332,94 @@ public class SharedInstance {
             JOptionPane.showMessageDialog(null, "Could not save data", null, JOptionPane.ERROR_MESSAGE);
         }
     }
+    
+    public Input combineInput() {
+        Input input = new Input();
+        
+        Qualitycontrol control = new Qualitycontrol();
+        control.setDelay(0);
+        control.setLosequantity(0);
+        control.setType("no");
+        input.setQualitycontrol(control);
+        
+        input.setSellwish(this.getSellwish());
+        input.setSelldirect(this.getSelldirectForInput());
+        input.setOrderlist(this.getOrderList());
+        input.setWorkingtimelist(this.getWorkingTimeList());
+        input.setProductionlist(this.getProductionList());
+        
+        return input;
+    }
 
+    private Sellwish getSellwish() {
+        Sellwish sellwish = new Sellwish();
+        List<Item> items = new ArrayList<>();
+        
+        Item p1 = new Item();
+        p1.setArticle(1);
+        p1.setQuantity(0);
+        //p1.setQuantity(this.getArticleForId((long)1).get);
+        Item p2 = new Item();
+        p2.setArticle(2);
+        p2.setQuantity(0);
+        //p2.setQuantity(this.getArticleForId((long)2).get);
+        Item p3 = new Item();
+        p3.setArticle(3);
+        p3.setQuantity(0);
+        //p3.setQuantity(this.getArticleForId((long)3).get);
+        items.add(p1);
+        items.add(p2);
+        items.add(p3);
+        sellwish.setItem(items);
+        
+        return sellwish;
+    }
+    
+    private Selldirect getSelldirectForInput() {
+        Selldirect sell = new Selldirect();
+        sell.setItem(this.getSellDirect());
+        
+        return sell;
+    }
+    
+    private Orderlist getOrderList() {
+        Orderlist list = new Orderlist();
+        List<veloziped.ws1516.generated.Input.Order> orderList = new ArrayList<>();
+
+        for(Order order : this.getNewOrders()) {
+            veloziped.ws1516.generated.Input.Order inputOrder = new veloziped.ws1516.generated.Input.Order();
+            inputOrder.setArticle(order.getArticle());
+            inputOrder.setModus(order.getMode());
+            inputOrder.setQuantity(order.getAmount());
+            orderList.add(inputOrder);
+        }
+        
+        list.setOrder(orderList);
+        return list;
+    }
+    
+    private Workingtimelist getWorkingTimeList() {
+        Workingtimelist timeList = new Workingtimelist();
+        List<Workingtime> work = new ArrayList<>();
+        
+        for(WorkloadResult result : this.getWorkloadResults().values()) {
+            Workingtime time = new Workingtime();
+            time.setStation(result.getWorkplace().getId());
+            time.setShift(result.getNumberOfShifts());
+            time.setOvertime(result.getOverTimeDay());
+            work.add(time);
+        }
+        
+        timeList.setWorkingtime(work);
+        return timeList;
+    }
+    
+    private Productionlist getProductionList() {
+       Productionlist prodList = new Productionlist();
+       
+       return prodList;
+    }
+    
     public void parseResults(Results results) {
         if (results == null) {
             return;

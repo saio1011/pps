@@ -3711,6 +3711,7 @@ public class MainUI extends javax.swing.JFrame {
 
         Map<String, WorkloadResult> workloadResults = WorkloadPlanning.getInstance()
                 .calculateWorkload(SharedInstance.getInstance().getExtendedWorkplaces());
+        SharedInstance.getInstance().setWorkloadResults(workloadResults);
 
         SharedInstance.getInstance().calcIncomingOrdersThisPeriod(
                 SharedInstance.getInstance().getFutureInwardStockMovement().getOrder());
@@ -3772,16 +3773,11 @@ public class MainUI extends javax.swing.JFrame {
     private void exportXML() {
         JFileChooser chooser = new JFileChooser();
         chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-        //
-        // disable the "All files" option.
-        //
+        //disable the "All files" option.
         chooser.setAcceptAllFileFilterUsed(false);
-        //    
         if (chooser.showOpenDialog(this) == JFileChooser.APPROVE_OPTION) {
             File file = new File(chooser.getSelectedFile().getAbsolutePath() + "\\input.xml");
-            Input input = new Input();
-            input.setOrderlist(new Orderlist());
-            SharedInstance.getInstance().saveInputFile(file, input);
+            SharedInstance.getInstance().saveInputFile(file);
         } else {
             System.out.println("No Selection ");
         }
