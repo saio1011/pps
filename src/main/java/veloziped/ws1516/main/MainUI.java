@@ -3439,6 +3439,9 @@ public class MainUI extends javax.swing.JFrame {
             Results res;
             try {
                 res = SharedInstance.parseXmlInput(file);
+                if(res == null) {
+                    return;
+                }
                 SharedInstance.getInstance().parseResults(res);
 
                 Map<String, ExtendedWorkplace> extWork = SetupInstance.getInstance()

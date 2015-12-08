@@ -298,25 +298,30 @@ public class SharedInstance {
     }
 
     public static Results parseXmlInput(File file) throws JAXBException {
-        JAXBContext jaxbContext = JAXBContext.newInstance(Results.class);
-        Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
-        Results results = (Results) jaxbUnmarshaller.unmarshal(file);
+        Results results = null;
+        try {
+            JAXBContext jaxbContext = JAXBContext.newInstance(Results.class);
+            Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
+            results = (Results) jaxbUnmarshaller.unmarshal(file);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Could not load data", null, JOptionPane.ERROR_MESSAGE);
+        }
         return results;
     }
-    
-    public void saveInputFile(File file, Input input) {
-    try {
-        JAXBContext context = JAXBContext
-                .newInstance(Input.class);
-        Marshaller m = context.createMarshaller();
-        m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 
-        m.marshal(input, file);
+    public void saveInputFile(File file, Input input) {
+        try {
+            JAXBContext context = JAXBContext
+                    .newInstance(Input.class);
+            Marshaller m = context.createMarshaller();
+            m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+
+            m.marshal(input, file);
 
         } catch (Exception e) {
-        JOptionPane.showMessageDialog(null, "Could not save data", null, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Could not save data", null, JOptionPane.ERROR_MESSAGE);
+        }
     }
-}
 
     public void parseResults(Results results) {
         if (results == null) {
