@@ -9,14 +9,17 @@ import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.List;
 import veloziped.ws1516.articles.ExtendedArticle;
+import veloziped.ws1516.generated.Results.Ordersinwork;
+import veloziped.ws1516.generated.Results.Waitinglist;
 import veloziped.ws1516.generated.Results.Workplace;
+import veloziped.ws1516.main.SharedInstance;
 import veloziped.ws1516.workplace.ExtendedWorkplace;
 
 /**
  *
  * @author Rosen
  */
-public class AdditionalTimeNeedInput {
+public class ATNI {
 
     static Hashtable<String, String> WorkplacesHashTable;
     private ExtendedWorkplace workplace;
@@ -25,8 +28,10 @@ public class AdditionalTimeNeedInput {
     private long amount;
     private long timeNeeded;
     private ArticleDelayTyp articleDelayTyp;
+    List<Workplace> workplacesWithWaitingTime;
+    Ordersinwork ordersInWork;
 
-    public AdditionalTimeNeedInput() {
+    public ATNI() {
         WorkplacesHashTable = new Hashtable<>();
         WorkplacesHashTable.put("13,13", "12,8,7,9");
         WorkplacesHashTable.put("12,13", "8,7,9");
@@ -75,10 +80,6 @@ public class AdditionalTimeNeedInput {
         WorkplacesHashTable.put("7,14", "9");
     }
 
-    /* The WPs in Line P1
-        Keys in Form PX.WP.EX
-        Values String dotseparated
-     */
     public long[] GetChildWorkplaces(long workplaceId, long articleId) {
 
         String[] res = WorkplacesHashTable.get(workplaceId + "," + articleId).split(",");
@@ -90,6 +91,57 @@ public class AdditionalTimeNeedInput {
         return numbers;
     }
 
+    public void additionalAmountsCalculate() {
+        workplacesWithWaitingTime = SharedInstance.getInstance().getWaitinglistWorkstations().getWorkplace();
+        ordersInWork = SharedInstance.getInstance().getOrdersInWork();
+
+        for (Workplace wpl : workplacesWithWaitingTime) {
+            if (wpl.getTimeneed() != 0) {
+                List<Waitinglist> waitingLists = wpl.getWaitinglist();
+                for (Waitinglist waitinglist : waitingLists) {
+                    ExtendedArticle extendedArticleWithAddAmount = SharedInstance.getInstance().getArticleForId(waitinglist.getItem());
+                    extendedArticleWithAddAmount.setAdditionalAmount(waitinglist.getAmount());
+                    SharedInstance.getInstance().setExtendedArticleForId(extendedArticleWithAddAmount.getId(), extendedArticleWithAddAmount);
+                }
+            }
+        }
+    }
+
+    public void AddWaitingTimesToArticle(long id) {
+        ExtendedArticle a = SharedInstance.getInstance().getArticleForId(id);
+
+    }
+
+    // Schritt 1: Einlesen der XML
+    // Von der XML werden die Wartelisteeinträge und die "in Bearbeitung"'s Einträge in eine Liste von ATNI gemappt
+    // Können wir erst machen wenn Hendrick gepusht hat
+    //Schritt 2: Aufarbeitung der ExtendedKlassen
+    //Die Liste der ATNI wird abgearbeitet und in die ExtendedWorplaces wird die Variable "additionalTimeCapacity" befüllt
+    /*ExtendedWorkplace tmp_ew;
+    for(ATNI xxx : List<ATNI>
+
+    
+        ) {
+            tmp_ew = findWPbyID(xxx.WorkplaceID);
+        tmp_ex.addAdditionalTime(xxx.TimeNeed);
+        if (xxx.Type == "Warteliste") {
+            // Für jeden Child des Workplace wird auch die Wartezeit hinzugefügt
+            List<long> wp_ids = xxx.GetChildWP() // ArtikelID und WPID müssten beide on dem Objekt xxx intern vorhanden sein, hab gerade nicht den Code da
+            foreach(long id in wp_ids
+            
+                ) {
+			tmp_ew = findWPbyID(xxx.WorkplaceID);
+                tmp_ex.addAdditionalTime(xxx.TimeNeed);
+            }
+        }
+    }
+     */ // Danach müssten die Wartelistezeiten bzw. die "in Bearbeitungszeiten" auf alle Workplaces verteilt sein
+    //Schritt 3: Die Wartelistemenge bzw. "in Bearbeitungsmengen" für die Eigendispositon auch auf die einzelenen Produkte verteilt werden
+    // Dafür hab ich bisher noch keine Idee, werde mir aber heute/morgen ein paar Gedanken machen
+    /* The WPs in Line P1
+        Keys in Form PX.WP.EX
+        Values String Komma separated
+     */
     public ExtendedWorkplace getWorkplace() {
         return workplace;
     }
