@@ -73,6 +73,8 @@ public class MainUI extends javax.swing.JFrame {
         this.jButtonCalculate.setEnabled(false);
         SharedInstance.getInstance().setDiscountFactor(0.1);
         SharedInstance.getInstance().setBufferFactor(0.05);
+        this.jSpinnerDiscountFactor.setValue(SharedInstance.getInstance().getDiscountFactor() * 100);
+        this.jSpinnerBufferFactor.setValue(SharedInstance.getInstance().getBufferFactor() * 100);
 
         this.addInputFieldsListener();
 
@@ -492,6 +494,10 @@ public class MainUI extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jButtonCalculate = new javax.swing.JButton();
         jButtonImportXml = new javax.swing.JButton();
+        jSpinnerBufferFactor = new javax.swing.JSpinner();
+        jLabelBufferFactor = new javax.swing.JLabel();
+        jSpinnerDiscountFactor = new javax.swing.JSpinner();
+        jLabelDiscountFactor = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuFile = new javax.swing.JMenu();
         jMenuItemImportFile = new javax.swing.JMenuItem();
@@ -3216,14 +3222,44 @@ public class MainUI extends javax.swing.JFrame {
             }
         });
 
+        jSpinnerBufferFactor.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        jSpinnerBufferFactor.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSpinnerBufferFactorStateChanged(evt);
+            }
+        });
+
+        jLabelBufferFactor.setText("Puffer");
+        jLabelBufferFactor.setToolTipText("Puffermenge für Bestellungen");
+
+        jSpinnerDiscountFactor.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        jSpinnerDiscountFactor.setEditor(new javax.swing.JSpinner.NumberEditor(jSpinnerDiscountFactor, ""));
+        jSpinnerDiscountFactor.setRequestFocusEnabled(false);
+        jSpinnerDiscountFactor.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSpinnerDiscountFactorStateChanged(evt);
+            }
+        });
+
+        jLabelDiscountFactor.setText("Discount");
+        jLabelDiscountFactor.setToolTipText("Faktor ab wann Discount in Anspruch genommen werden soll");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButtonImportXml, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)
-                .addGap(814, 814, 814)
+                .addComponent(jButtonImportXml, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(571, 571, 571)
+                .addComponent(jLabelDiscountFactor, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSpinnerDiscountFactor, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabelBufferFactor, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSpinnerBufferFactor, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(jButtonCalculate)
                 .addGap(21, 21, 21))
         );
@@ -3232,7 +3268,12 @@ public class MainUI extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(jButtonImportXml, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButtonCalculate, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jButtonCalculate, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
+                        .addComponent(jLabelBufferFactor)
+                        .addComponent(jSpinnerDiscountFactor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabelDiscountFactor)
+                        .addComponent(jSpinnerBufferFactor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -3491,35 +3532,6 @@ public class MainUI extends javax.swing.JFrame {
         this.importXml();
     }//GEN-LAST:event_jMenuItemImportFileActionPerformed
 
-    private void jButtonCalculateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCalculateActionPerformed
-        // TODO add your handling code here:
-        SharedInstance.getInstance().setOrderQuantities(TestData.getOrderQuantities());
-
-        Map<String, WorkloadResult> workloadResults = WorkloadPlanning.getInstance()
-                .calculateWorkload(SharedInstance.getInstance().getExtendedWorkplaces());
-
-        SharedInstance.getInstance().calcIncomingOrdersThisPeriod(
-                SharedInstance.getInstance().getFutureInwardStockMovement().getOrder());
-
-        //only for test purposes!! this is actually the forecast
-        ProductionPlan plan = new ProductionPlan();
-        plan.setPeriodN1(periodDetailN1);
-        plan.setPeriodN2(periodDetailN2);
-        plan.setPeriodN3(periodDetailN3);
-        plan.setPeriodN4(periodDetailN4);
-        SharedInstance.getInstance().setProductionPlan(plan);
-
-        List<Order> newOrders = PurchasingDisposal.getInstance().calculateOrders(
-                SharedInstance.getInstance().getExtendedArticles());
-        SharedInstance.getInstance().setNewOrders(newOrders);
-
-        Map<String, ExtendedArticle> articles = SharedInstance.getInstance().calcNewArticleStockValue();
-
-        this.reFillWorkloadTable(workloadResults.values());
-        this.reFillPurchasingDisposalTable(newOrders);
-        this.reFillStockChangeTable(articles);
-    }//GEN-LAST:event_jButtonCalculateActionPerformed
-
     private void reFillWorkloadTable(Collection<WorkloadResult> results) {
         DefaultTableModel model = (DefaultTableModel) jTableWorkloadPlanning.getModel();
 
@@ -3577,13 +3589,51 @@ public class MainUI extends javax.swing.JFrame {
         this.setCalculationMode(CalculationMode.OPTIMISTIC);
     }//GEN-LAST:event_jCheckBoxMenuItemCalculationModeOptimisticActionPerformed
 
+    private void jMenuItemExportFileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemExportFileActionPerformed
+        this.exportFile();
+    }//GEN-LAST:event_jMenuItemExportFileActionPerformed
+
     private void jButtonImportXmlActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonImportXmlActionPerformed
         this.importXml();
     }//GEN-LAST:event_jButtonImportXmlActionPerformed
 
-    private void jMenuItemExportFileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemExportFileActionPerformed
-        this.exportFile();
-    }//GEN-LAST:event_jMenuItemExportFileActionPerformed
+    private void jButtonCalculateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCalculateActionPerformed
+        // TODO add your handling code here:
+        SharedInstance.getInstance().setOrderQuantities(TestData.getOrderQuantities());
+
+        Map<String, WorkloadResult> workloadResults = WorkloadPlanning.getInstance()
+        .calculateWorkload(SharedInstance.getInstance().getExtendedWorkplaces());
+
+        SharedInstance.getInstance().calcIncomingOrdersThisPeriod(
+            SharedInstance.getInstance().getFutureInwardStockMovement().getOrder());
+
+        //only for test purposes!! this is actually the forecast
+        ProductionPlan plan = new ProductionPlan();
+        plan.setPeriodN1(periodDetailN1);
+        plan.setPeriodN2(periodDetailN2);
+        plan.setPeriodN3(periodDetailN3);
+        plan.setPeriodN4(periodDetailN4);
+        SharedInstance.getInstance().setProductionPlan(plan);
+
+        List<Order> newOrders = PurchasingDisposal.getInstance().calculateOrders(
+            SharedInstance.getInstance().getExtendedArticles());
+        SharedInstance.getInstance().setNewOrders(newOrders);
+
+        Map<String, ExtendedArticle> articles = SharedInstance.getInstance().calcNewArticleStockValue();
+
+        this.reFillWorkloadTable(workloadResults.values());
+        this.reFillPurchasingDisposalTable(newOrders);
+        this.reFillStockChangeTable(articles);
+    }//GEN-LAST:event_jButtonCalculateActionPerformed
+
+    private void jSpinnerDiscountFactorStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinnerDiscountFactorStateChanged
+        SharedInstance.getInstance().setDiscountFactor(Double.valueOf(jSpinnerDiscountFactor.getValue().toString()) / 100);
+    }//GEN-LAST:event_jSpinnerDiscountFactorStateChanged
+
+    private void jSpinnerBufferFactorStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinnerBufferFactorStateChanged
+        SharedInstance.getInstance().setBufferFactor(Double.valueOf(jSpinnerBufferFactor.getValue().toString()) / 100);
+        SharedInstance in = SharedInstance.getInstance();
+    }//GEN-LAST:event_jSpinnerBufferFactorStateChanged
 
     private void exportFile() {
         Input input = new Input();
@@ -3678,6 +3728,7 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel97;
     private javax.swing.JLabel jLabel98;
     private javax.swing.JLabel jLabel99;
+    private javax.swing.JLabel jLabelBufferFactor;
     private javax.swing.JLabel jLabelDFASchutzblechH;
     private javax.swing.JLabel jLabelDFE11OrdersInQueque;
     private javax.swing.JLabel jLabelDFE14OrdersInQueque;
@@ -3708,6 +3759,7 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelDFVorderradgruppe;
     private javax.swing.JLabel jLabelDFWorkInProgress;
     private javax.swing.JLabel jLabelDamenfahrradPF;
+    private javax.swing.JLabel jLabelDiscountFactor;
     private javax.swing.JLabel jLabelHFASchutzblechH;
     private javax.swing.JLabel jLabelHFE12OrdersInQueque;
     private javax.swing.JLabel jLabelHFE15OrdersInQueque;
@@ -3803,6 +3855,8 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator7;
     private javax.swing.JSeparator jSeparator8;
     private javax.swing.JSeparator jSeparator9;
+    private javax.swing.JSpinner jSpinnerBufferFactor;
+    private javax.swing.JSpinner jSpinnerDiscountFactor;
     private javax.swing.JTabbedPane jTabbedPan;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTable jTablePurchasingDisposition;
@@ -4164,6 +4218,9 @@ public class MainUI extends javax.swing.JFrame {
         jLabelHFVorderradgruppe.setText(i18n.getString("Vorderradgruppe"));
         jLabelHFSchutzblechV.setText(i18n.getString("Schutzblech v."));
         jLabelHFRahmen.setText(i18n.getString("Rahmen"));
+        
+        jLabelDiscountFactor.setText(i18n.getString("DiscountFactor"));
+        jLabelBufferFactor.setText(i18n.getString("BufferFactor"));
     }
 
     private void setPeriodLabels() {

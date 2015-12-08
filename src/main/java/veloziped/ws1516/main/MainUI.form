@@ -5987,8 +5987,16 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jButtonImportXml" pref="127" max="32767" attributes="0"/>
-                  <EmptySpace min="-2" pref="814" max="-2" attributes="0"/>
+                  <Component id="jButtonImportXml" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="571" max="-2" attributes="0"/>
+                  <Component id="jLabelDiscountFactor" min="-2" pref="80" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jSpinnerDiscountFactor" min="-2" pref="48" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="jLabelBufferFactor" min="-2" pref="60" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jSpinnerBufferFactor" min="-2" pref="48" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jButtonCalculate" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
               </Group>
@@ -5999,7 +6007,13 @@
               <Group type="102" alignment="0" attributes="0">
                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
                       <Component id="jButtonImportXml" max="32767" attributes="0"/>
-                      <Component id="jButtonCalculate" pref="39" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jButtonCalculate" alignment="3" pref="39" max="32767" attributes="0"/>
+                          <Component id="jLabelBufferFactor" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jSpinnerDiscountFactor" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelDiscountFactor" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jSpinnerBufferFactor" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -6022,6 +6036,42 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonImportXmlActionPerformed"/>
           </Events>
+        </Component>
+        <Component class="javax.swing.JSpinner" name="jSpinnerBufferFactor">
+          <Properties>
+            <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+              <SpinnerModel initial="0" minimum="0" numberType="java.lang.Integer" stepSize="1" type="number"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="jSpinnerBufferFactorStateChanged"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabelBufferFactor">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Puffer"/>
+            <Property name="toolTipText" type="java.lang.String" value="Puffermenge f&#xfc;r Bestellungen"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JSpinner" name="jSpinnerDiscountFactor">
+          <Properties>
+            <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+              <SpinnerModel initial="0" minimum="0" numberType="java.lang.Integer" stepSize="1" type="number"/>
+            </Property>
+            <Property name="editor" type="javax.swing.JComponent" editor="org.netbeans.modules.form.editors.SpinnerEditorEditor">
+              <SpinnerEditor format="" type="3"/>
+            </Property>
+            <Property name="requestFocusEnabled" type="boolean" value="false"/>
+          </Properties>
+          <Events>
+            <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="jSpinnerDiscountFactorStateChanged"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabelDiscountFactor">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Discount"/>
+            <Property name="toolTipText" type="java.lang.String" value="Faktor ab wann Discount in Anspruch genommen werden soll"/>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>
