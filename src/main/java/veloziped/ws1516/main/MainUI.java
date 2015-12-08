@@ -829,7 +829,7 @@ public class MainUI extends javax.swing.JFrame {
         jLabelSattelCpl.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabelSattelCpl.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabelKFRahmenURaeder.setText(bundle.getString("Rahmen u. Räder")); // NOI18N
+        jLabelKFRahmenURaeder.setText(bundle.getString("Rahmen u. Raeder")); // NOI18N
         jLabelKFRahmenURaeder.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabelKFRahmenURaeder.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabelKFRahmenURaeder.setPreferredSize(new java.awt.Dimension(60, 16));
@@ -1648,7 +1648,7 @@ public class MainUI extends javax.swing.JFrame {
         jLabelDFSattelCpl.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabelDFSattelCpl.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabelDFRahmenURaeder.setText(bundle.getString("Rahmen u. Räder")); // NOI18N
+        jLabelDFRahmenURaeder.setText(bundle.getString("Rahmen u. Raeder")); // NOI18N
         jLabelDFRahmenURaeder.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabelDFRahmenURaeder.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabelDFRahmenURaeder.setPreferredSize(new java.awt.Dimension(60, 16));
@@ -2480,7 +2480,7 @@ public class MainUI extends javax.swing.JFrame {
         jLabelHFSattelCpl.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabelHFSattelCpl.setPreferredSize(new java.awt.Dimension(60, 16));
 
-        jLabelHFRahmenURaeder.setText(bundle.getString("Rahmen u. Räder")); // NOI18N
+        jLabelHFRahmenURaeder.setText(bundle.getString("Rahmen u. Raeder")); // NOI18N
         jLabelHFRahmenURaeder.setMaximumSize(new java.awt.Dimension(60, 16));
         jLabelHFRahmenURaeder.setMinimumSize(new java.awt.Dimension(60, 16));
         jLabelHFRahmenURaeder.setPreferredSize(new java.awt.Dimension(60, 16));
@@ -4114,7 +4114,7 @@ public class MainUI extends javax.swing.JFrame {
         jLabelKFFahrradOPedal.setText(i18n.getString("Fahrrad o. Pedal"));
         jLabelKFLenkerCpl.setText(i18n.getString("Lenker cpl."));
         jLabelSattelCpl.setText(i18n.getString("Sattel cpl."));
-        jLabelKFRahmenURaeder.setText(i18n.getString("Rahmen u. Räder"));
+        jLabelKFRahmenURaeder.setText(i18n.getString("Rahmen u. Raeder"));
         jLabelKFHinterradgruppe.setText(i18n.getString("Hinterradgruppe"));
         jLabelKFASchutzblechH.setText(i18n.getString("Schutzblech h."));
         jLabelKFVorderradCpl.setText(i18n.getString("Vorderrad cpl."));
@@ -4127,7 +4127,7 @@ public class MainUI extends javax.swing.JFrame {
         jLabelDFFahrradOPedal.setText(i18n.getString("Fahrrad o. Pedal"));
         jLabelDFLenkerCpl.setText(i18n.getString("Lenker cpl."));
         jLabelDFSattelCpl.setText(i18n.getString("Sattel cpl."));
-        jLabelDFRahmenURaeder.setText(i18n.getString("Rahmen u. Räder"));
+        jLabelDFRahmenURaeder.setText(i18n.getString("Rahmen u. Raeder"));
         jLabelDFHinterradgruppe.setText(i18n.getString("Hinterradgruppe"));
         jLabelDFASchutzblechH.setText(i18n.getString("Schutzblech h."));
         jLabelDFVorderradCpl.setText(i18n.getString("Vorderrad cpl."));
@@ -4140,7 +4140,7 @@ public class MainUI extends javax.swing.JFrame {
         jLabelHFFahrradOPedal.setText(i18n.getString("Fahrrad o. Pedal"));
         jLabelHFLenkerCpl.setText(i18n.getString("Lenker cpl."));
         jLabelHFSattelCpl.setText(i18n.getString("Sattel cpl."));
-        jLabelHFRahmenURaeder.setText(i18n.getString("Rahmen u. Räder"));
+        jLabelHFRahmenURaeder.setText(i18n.getString("Rahmen u. Raeder"));
         jLabelHFHinterradgruppe.setText(i18n.getString("Hinterradgruppe"));
         jLabelHFASchutzblechH.setText(i18n.getString("Schutzblech h."));
         jLabelHFVorderradCpl.setText(i18n.getString("Vorderrad cpl."));
@@ -4199,6 +4199,8 @@ public class MainUI extends javax.swing.JFrame {
                 jCheckBoxMenuItemFrench.setSelected(true);
                 jCheckBoxMenuItemRomanien.setSelected(false);
                 break;
+            default:
+                this.setSelectedLanguage("en");
         }
     }
 
