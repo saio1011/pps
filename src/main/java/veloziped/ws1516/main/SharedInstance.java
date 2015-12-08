@@ -11,10 +11,14 @@ import java.math.RoundingMode;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 import veloziped.ws1516.articles.ExtendedArticle;
+import veloziped.ws1516.generated.Input.Input;
 import veloziped.ws1516.generated.Results.Completedorders;
 import veloziped.ws1516.generated.Results.Cycletimes;
 import veloziped.ws1516.generated.Results.Futureinwardstockmovement;
@@ -300,6 +304,25 @@ public class SharedInstance {
         Results results = (Results) jaxbUnmarshaller.unmarshal(file);
         return results;
     }
+    
+    public void saveInputFile(File file, Input input) {
+    try {
+        JAXBContext context = JAXBContext
+                .newInstance(Input.class);
+        Marshaller m = context.createMarshaller();
+        m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+
+        m.marshal(input, file);
+
+        } catch (Exception e) {
+        Alert alert = new Alert(AlertType.ERROR);
+        alert.setTitle("Error");
+        alert.setHeaderText("Could not save data");
+        alert.setContentText("Could not save data to file:\n" + file.getPath());
+
+        alert.showAndWait();
+    }
+}
 
     public void parseResults(Results results) {
         if (results == null) {
