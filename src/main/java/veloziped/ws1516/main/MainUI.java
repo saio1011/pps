@@ -76,7 +76,6 @@ public class MainUI extends javax.swing.JFrame {
         this.jSpinnerDiscountFactor.setValue(SharedInstance.getInstance().getDiscountFactor() * 100);
         this.jSpinnerBufferFactor.setValue(SharedInstance.getInstance().getBufferFactor() * 100);
 
-        
         this.jTabbedPan.setEnabledAt(2, false);
         this.jTabbedPan.setEnabledAt(3, false);
         this.jTabbedPan.setEnabledAt(4, false);
@@ -3520,108 +3519,109 @@ public class MainUI extends javax.swing.JFrame {
                 "xml files (*.xml)", "xml");
         JFileChooser chooser = new JFileChooser();
         chooser.setFileFilter(xmlfilter);
-        chooser.showOpenDialog(null);
-        File file = chooser.getSelectedFile();
-        if (file != null && file.getAbsolutePath().endsWith(".xml")) {
+        if (chooser.showOpenDialog(this) == JFileChooser.APPROVE_OPTION) {
+            File file = chooser.getSelectedFile();
+            if (file != null && file.getAbsolutePath().endsWith(".xml")) {
 
-            Results res;
-            try {
-                res = SharedInstance.parseXmlInput(file);
-                if(res == null) {
-                    return;
+                Results res;
+                try {
+                    res = SharedInstance.parseXmlInput(file);
+                    if (res == null) {
+                        return;
+                    }
+                    SharedInstance.getInstance().parseResults(res);
+
+                    Map<String, ExtendedWorkplace> extWork = SetupInstance.getInstance()
+                            .generateExtendedWorkplaces(SharedInstance.getInstance().getIdleTimeCosts().getWorkplace());
+                    SharedInstance.getInstance().setExtendedWorkplaces(extWork);
+
+                    Map<String, ExtendedArticle> extArt = SetupInstance.getInstance()
+                            .generateExtendedArticles(SharedInstance.getInstance().getWarehouseStock().getArticle());
+                    SharedInstance.getInstance().setExtendedArticles(extArt);
+
+                    ATNI atni = new ATNI();
+                    atni.additionalAmountsCalculate();
+                    this.setPeriodLabels();
+                    this.jButtonCalculate.setEnabled(true);
+
+                    Map<String, ExtendedArticle> extArticles = SharedInstance.getInstance().getExtendedArticles();
+                    jTextFieldKFP1OrdersInQueque.setText(String.valueOf(extArticles.get("1").getAdditionalAmount()));
+
+                    this.jButtonCalculate.setEnabled(true);
+                } catch (JAXBException ex) {
+                    Logger.getLogger(MainUI.class.getName()).log(Level.SEVERE, null, ex);
                 }
-                SharedInstance.getInstance().parseResults(res);
+                //vorbelegung der Felder 
+                // KF
+                jTextFieldKFP1StockEndOfPeriod.setText("100");
+                jTextFieldKFE26StockEndOfPeriod.setText("100");
+                jTextFieldKFE51StockEndOfPeriod.setText("100");
+                jTextFieldKFE16StockEndOfPeriod.setText("100");
+                jTextFieldKFE17StockEndOfPeriod.setText("100");
+                jTextFieldKFE50StockEndOfPeriod.setText("100");
+                jTextFieldKFE4StockEndOfPeriod.setText("100");
+                jTextFieldKFE10StockEndOfPeriod.setText("100");
+                jTextFieldKFE49StockEndOfPeriod.setText("100");
+                jTextFieldKFE7StockEndOfPeriod.setText("100");
+                jTextFieldKFE13StockEndOfPeriod.setText("100");
+                jTextFieldKFE18StockEndOfPeriod.setText("100");
 
-                Map<String, ExtendedWorkplace> extWork = SetupInstance.getInstance()
-                        .generateExtendedWorkplaces(SharedInstance.getInstance().getIdleTimeCosts().getWorkplace());
-                SharedInstance.getInstance().setExtendedWorkplaces(extWork);
+                jTextFieldKFE26OrdersInQueque.setText("80");
+                jTextFieldKFE51OrdersInQueque.setText("80");
+                jTextFieldKFE16OrdersInQueque.setText("80");
+                jTextFieldKFE17OrdersInQueque.setText("80");
+                jTextFieldKFE50OrdersInQueque.setText("80");
+                jTextFieldKFE4OrdersInQueque.setText("80");
+                jTextFieldKFE10OrdersInQueque.setText("80");
+                jTextFieldKFE49OrdersInQueque.setText("80");
+                jTextFieldKFE7OrdersInQueque.setText("80");
+                jTextFieldKFE13OrdersInQueque.setText("80");
+                jTextFieldKFE18OrdersInQueque.setText("80");
 
-                Map<String, ExtendedArticle> extArt = SetupInstance.getInstance()
-                        .generateExtendedArticles(SharedInstance.getInstance().getWarehouseStock().getArticle());
-                SharedInstance.getInstance().setExtendedArticles(extArt);
+                jTextFieldKFP1WorkInProgress.setText("20");
+                jTextFieldKFE26WorkInProgress.setText("20");
+                jTextFieldKFE51WorkInProgress.setText("20");
+                jTextFieldKFE16WorkInProgress.setText("20");
+                jTextFieldKFE17WorkInProgress.setText("20");
+                jTextFieldKFE50WorkInProgress.setText("20");
+                jTextFieldKFE4WorkInProgress.setText("20");
+                jTextFieldKFE10WorkInProgress.setText("20");
+                jTextFieldKFE49WorkInProgress.setText("20");
+                jTextFieldKFE7WorkInProgress.setText("20");
+                jTextFieldKFE13WorkInProgress.setText("20");
+                jTextFieldKFE18WorkInProgress.setText("20");
 
-                ATNI atni = new ATNI();
-                atni.additionalAmountsCalculate();
-                this.setPeriodLabels();
-                this.jButtonCalculate.setEnabled(true);
+                //damenfahrrad
+                List<JTextField> dmFields = getDFJTextFields();
+                for (JTextField jtf : dmFields) {
+                    if (jtf.getName().endsWith("StockEndOfPeriod")) {
+                        jtf.setText("200");
+                    }
+                    if (jtf.getName().endsWith("OrdersInQueque")) {
+                        jtf.setText("160");
+                    }
+                    if (jtf.getName().endsWith("WorkInProgress")) {
+                        jtf.setText("40");
+                    }
+                }
+                //herrenfahrrad
+                List<JTextField> hfFields = getHFJTextFields();
+                for (JTextField jtf : hfFields) {
+                    if (jtf.getName().endsWith("StockEndOfPeriod")) {
+                        jtf.setText("300");
+                    }
+                    if (jtf.getName().endsWith("OrdersInQueque")) {
+                        jtf.setText("60");
+                    }
+                    if (jtf.getName().endsWith("WorkInProgress")) {
+                        jtf.setText("50");
+                    }
+                }
 
-Map<String, ExtendedArticle> extArticles = SharedInstance.getInstance().getExtendedArticles();
-                jTextFieldKFP1OrdersInQueque.setText(String.valueOf(extArticles.get("1").getAdditionalAmount()));
-
-                this.jButtonCalculate.setEnabled(true);
-            } catch (JAXBException ex) {
-                Logger.getLogger(MainUI.class.getName()).log(Level.SEVERE, null, ex);
+            } else {
+                ResourceBundle i18n = Utils.getResourceBundle(locale.getLanguage(), locale.getCountry());
+                JOptionPane.showMessageDialog(this, i18n.getString("OnlyXML"), null, JOptionPane.ERROR_MESSAGE);
             }
-            //vorbelegung der Felder 
-            // KF
-            jTextFieldKFP1StockEndOfPeriod.setText("100");
-            jTextFieldKFE26StockEndOfPeriod.setText("100");
-            jTextFieldKFE51StockEndOfPeriod.setText("100");
-            jTextFieldKFE16StockEndOfPeriod.setText("100");
-            jTextFieldKFE17StockEndOfPeriod.setText("100");
-            jTextFieldKFE50StockEndOfPeriod.setText("100");
-            jTextFieldKFE4StockEndOfPeriod.setText("100");
-            jTextFieldKFE10StockEndOfPeriod.setText("100");
-            jTextFieldKFE49StockEndOfPeriod.setText("100");
-            jTextFieldKFE7StockEndOfPeriod.setText("100");
-            jTextFieldKFE13StockEndOfPeriod.setText("100");
-            jTextFieldKFE18StockEndOfPeriod.setText("100");
-
-            jTextFieldKFE26OrdersInQueque.setText("80");
-            jTextFieldKFE51OrdersInQueque.setText("80");
-            jTextFieldKFE16OrdersInQueque.setText("80");
-            jTextFieldKFE17OrdersInQueque.setText("80");
-            jTextFieldKFE50OrdersInQueque.setText("80");
-            jTextFieldKFE4OrdersInQueque.setText("80");
-            jTextFieldKFE10OrdersInQueque.setText("80");
-            jTextFieldKFE49OrdersInQueque.setText("80");
-            jTextFieldKFE7OrdersInQueque.setText("80");
-            jTextFieldKFE13OrdersInQueque.setText("80");
-            jTextFieldKFE18OrdersInQueque.setText("80");
-
-            jTextFieldKFP1WorkInProgress.setText("20");
-            jTextFieldKFE26WorkInProgress.setText("20");
-            jTextFieldKFE51WorkInProgress.setText("20");
-            jTextFieldKFE16WorkInProgress.setText("20");
-            jTextFieldKFE17WorkInProgress.setText("20");
-            jTextFieldKFE50WorkInProgress.setText("20");
-            jTextFieldKFE4WorkInProgress.setText("20");
-            jTextFieldKFE10WorkInProgress.setText("20");
-            jTextFieldKFE49WorkInProgress.setText("20");
-            jTextFieldKFE7WorkInProgress.setText("20");
-            jTextFieldKFE13WorkInProgress.setText("20");
-            jTextFieldKFE18WorkInProgress.setText("20");
-
-            //damenfahrrad
-            List<JTextField> dmFields = getDFJTextFields();
-            for (JTextField jtf : dmFields) {
-                if (jtf.getName().endsWith("StockEndOfPeriod")) {
-                    jtf.setText("200");
-                }
-                if (jtf.getName().endsWith("OrdersInQueque")) {
-                    jtf.setText("160");
-                }
-                if (jtf.getName().endsWith("WorkInProgress")) {
-                    jtf.setText("40");
-                }
-            }
-            //herrenfahrrad
-            List<JTextField> hfFields = getHFJTextFields();
-            for (JTextField jtf : hfFields) {
-                if (jtf.getName().endsWith("StockEndOfPeriod")) {
-                    jtf.setText("300");
-                }
-                if (jtf.getName().endsWith("OrdersInQueque")) {
-                    jtf.setText("60");
-                }
-                if (jtf.getName().endsWith("WorkInProgress")) {
-                    jtf.setText("50");
-                }
-            }
-
-        } else {
-            ResourceBundle i18n = Utils.getResourceBundle(locale.getLanguage(), locale.getCountry());
-            JOptionPane.showMessageDialog(this, i18n.getString("OnlyXML"), null, JOptionPane.ERROR_MESSAGE);
         }
     }
     private void jMenuItemImportFileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemImportFileActionPerformed
@@ -3676,7 +3676,7 @@ Map<String, ExtendedArticle> extArticles = SharedInstance.getInstance().getExten
                 article.getStockChange(), article.getNewStock(), article.getNewStockValue(), article.getStockChangePct()});
         }
     }
-    
+
     private void reFillEProdList(Map<String, ExtendedArticle> articles) {
         ResourceBundle i18n = Utils.getResourceBundle(this.currentLocale.getLanguage(), this.currentLocale.getCountry());
         DefaultTableModel model = (DefaultTableModel) jTableEProdList.getModel();
@@ -3699,7 +3699,7 @@ Map<String, ExtendedArticle> extArticles = SharedInstance.getInstance().getExten
     }//GEN-LAST:event_jCheckBoxMenuItemCalculationModeOptimisticActionPerformed
 
     private void jMenuItemExportFileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemExportFileActionPerformed
-        this.exportFile();
+        this.exportXML();
     }//GEN-LAST:event_jMenuItemExportFileActionPerformed
 
     private void jButtonImportXmlActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonImportXmlActionPerformed
@@ -3710,10 +3710,10 @@ Map<String, ExtendedArticle> extArticles = SharedInstance.getInstance().getExten
         // TODO add your handling code here:
 
         Map<String, WorkloadResult> workloadResults = WorkloadPlanning.getInstance()
-        .calculateWorkload(SharedInstance.getInstance().getExtendedWorkplaces());
+                .calculateWorkload(SharedInstance.getInstance().getExtendedWorkplaces());
 
         SharedInstance.getInstance().calcIncomingOrdersThisPeriod(
-            SharedInstance.getInstance().getFutureInwardStockMovement().getOrder());
+                SharedInstance.getInstance().getFutureInwardStockMovement().getOrder());
 
         //only for test purposes!! this is actually the forecast
         ProductionPlan plan = new ProductionPlan();
@@ -3724,7 +3724,7 @@ Map<String, ExtendedArticle> extArticles = SharedInstance.getInstance().getExten
         SharedInstance.getInstance().setProductionPlan(plan);
 
         List<Order> newOrders = PurchasingDisposal.getInstance().calculateOrders(
-            SharedInstance.getInstance().getExtendedArticles());
+                SharedInstance.getInstance().getExtendedArticles());
         SharedInstance.getInstance().setNewOrders(newOrders);
 
         Map<String, ExtendedArticle> articles = SharedInstance.getInstance().calcNewArticleStockValue();
@@ -3733,7 +3733,7 @@ Map<String, ExtendedArticle> extArticles = SharedInstance.getInstance().getExten
         this.reFillPurchasingDisposalTable(newOrders);
         this.reFillStockChangeTable(articles);
         this.reFillEProdList(articles);
-        
+
         this.jTabbedPan.setEnabledAt(2, true);
         this.jTabbedPan.setEnabledAt(3, true);
         this.jTabbedPan.setEnabledAt(4, true);
@@ -3751,28 +3751,40 @@ Map<String, ExtendedArticle> extArticles = SharedInstance.getInstance().getExten
 
     private void jButtonMoveUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMoveUpActionPerformed
         int row = jTableEProdList.getSelectedRow();
-        
-        if(row > 0) {
-            DefaultTableModel model = (DefaultTableModel)jTableEProdList.getModel();
+
+        if (row > 0) {
+            DefaultTableModel model = (DefaultTableModel) jTableEProdList.getModel();
             model.moveRow(row, row, row - 1);
-            jTableEProdList.setRowSelectionInterval(row-1, row-1);
+            jTableEProdList.setRowSelectionInterval(row - 1, row - 1);
         }
     }//GEN-LAST:event_jButtonMoveUpActionPerformed
 
     private void jButtonMoveDownActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMoveDownActionPerformed
         int row = jTableEProdList.getSelectedRow();
-        
-        if(row > -1 && row < jTableEProdList.getRowCount() -1 ) {
-            DefaultTableModel model = (DefaultTableModel)jTableEProdList.getModel();
+
+        if (row > -1 && row < jTableEProdList.getRowCount() - 1) {
+            DefaultTableModel model = (DefaultTableModel) jTableEProdList.getModel();
             model.moveRow(row, row, row + 1);
-            jTableEProdList.setRowSelectionInterval(row+1, row+1);
+            jTableEProdList.setRowSelectionInterval(row + 1, row + 1);
         }
     }//GEN-LAST:event_jButtonMoveDownActionPerformed
 
-    private void exportFile() {
-        Input input = new Input();
-        input.setOrderlist(new Orderlist());
-        SharedInstance.getInstance().saveInputFile(new File("/Users/Martin/Desktop/input.xml"), input);
+    private void exportXML() {
+        JFileChooser chooser = new JFileChooser();
+        chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+        //
+        // disable the "All files" option.
+        //
+        chooser.setAcceptAllFileFilterUsed(false);
+        //    
+        if (chooser.showOpenDialog(this) == JFileChooser.APPROVE_OPTION) {
+            File file = new File(chooser.getSelectedFile().getAbsolutePath() + "\\input.xml");
+            Input input = new Input();
+            input.setOrderlist(new Orderlist());
+            SharedInstance.getInstance().saveInputFile(file, input);
+        } else {
+            System.out.println("No Selection ");
+        }
     }
 
     /**
@@ -4366,7 +4378,7 @@ Map<String, ExtendedArticle> extArticles = SharedInstance.getInstance().getExten
         jLabelHFVorderradgruppe.setText(i18n.getString("Vorderradgruppe"));
         jLabelHFSchutzblechV.setText(i18n.getString("Schutzblech v."));
         jLabelHFRahmen.setText(i18n.getString("Rahmen"));
-        
+
         jLabelDiscountFactor.setText(i18n.getString("DiscountFactor"));
         jLabelBufferFactor.setText(i18n.getString("BufferFactor"));
     }
