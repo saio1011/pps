@@ -32,6 +32,7 @@ public class ExtendedArticle extends Article implements Comparable<ExtendedArtic
     private long newStock;
     private double newStockValue;
     private double stockChangePct;
+    private long additionalAmount;
 
     public void setValues(JSONObject values) {
         String aType = (String) values.get("type");
@@ -231,6 +232,13 @@ public class ExtendedArticle extends Article implements Comparable<ExtendedArtic
         return type;
     }
 
+    public long getAdditionalAmount() {
+        return additionalAmount;
+    }
+
+    public void setAdditionalAmount(long additionalAmount) {
+        this.additionalAmount = additionalAmount;
+    }
     @Override
     public int compareTo(ExtendedArticle o) {
         return Long.compare(super.id, o.getId());
