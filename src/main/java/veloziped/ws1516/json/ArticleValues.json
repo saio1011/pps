@@ -476,7 +476,7 @@
                     "usageProductTwo": 0,
                     "usageProductThree": 0,
                     "discountQuantity": 0,
-                    "name": "Rahmen u. Räder"
+                    "name": "Rahmen u. Raeder"
                 }
     },
     {
@@ -796,7 +796,7 @@
                     "usageProductTwo": 0,
                     "usageProductThree": 0,
                     "discountQuantity": 0,
-                    "name": "Rahmen u. Räder"
+                    "name": "Rahmen u. Raeder"
                 }
     },
     {
@@ -876,7 +876,7 @@
                     "usageProductTwo": 0,
                     "usageProductThree": 0,
                     "discountQuantity": 0,
-                    "name": "Rahmen u. Räder"
+                    "name": "Rahmen u. Raeder"
                 }
     },
     {
@@ -940,7 +940,7 @@
                     "usageProductTwo": 2,
                     "usageProductThree": 2,
                     "discountQuantity": 1800,
-                    "name": "Schweißdraht"
+                    "name": "Schweissdraht"
                 }
     }
 ]
