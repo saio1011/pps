@@ -28,6 +28,7 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.text.JTextComponent;
 import javax.xml.bind.JAXBException;
 import veloziped.ws1516.articles.ExtendedArticle;
+import veloziped.ws1516.disposal.ATNI;
 import veloziped.ws1516.disposal.PurchasingDisposal;
 import veloziped.ws1516.generated.Input.Input;
 import veloziped.ws1516.generated.Input.Orderlist;
@@ -3408,7 +3409,13 @@ public class MainUI extends javax.swing.JFrame {
                         .generateExtendedArticles(SharedInstance.getInstance().getWarehouseStock().getArticle());
                 SharedInstance.getInstance().setExtendedArticles(extArt);
 
+                ATNI atni = new ATNI();
+                atni.additionalAmountsCalculate();
                 this.setPeriodLabels();
+                this.jButtonCalculate.setEnabled(true);
+
+Map<String, ExtendedArticle> extArticles = SharedInstance.getInstance().getExtendedArticles();
+                jTextFieldKFP1OrdersInQueque.setText(String.valueOf(extArticles.get("1").getAdditionalAmount()));
 
                 this.jButtonCalculate.setEnabled(true);
             } catch (JAXBException ex) {
@@ -3429,7 +3436,6 @@ public class MainUI extends javax.swing.JFrame {
             jTextFieldKFE13StockEndOfPeriod.setText("100");
             jTextFieldKFE18StockEndOfPeriod.setText("100");
 
-            jTextFieldKFP1OrdersInQueque.setText("80");
             jTextFieldKFE26OrdersInQueque.setText("80");
             jTextFieldKFE51OrdersInQueque.setText("80");
             jTextFieldKFE16OrdersInQueque.setText("80");
