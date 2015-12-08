@@ -15,18 +15,18 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 import veloziped.ws1516.articles.ExtendedArticle;
-import veloziped.ws1516.generated.Completedorders;
-import veloziped.ws1516.generated.Cycletimes;
-import veloziped.ws1516.generated.Futureinwardstockmovement;
-import veloziped.ws1516.generated.Idletimecosts;
-import veloziped.ws1516.generated.Inwardstockmovement;
-import veloziped.ws1516.generated.Order;
-import veloziped.ws1516.generated.Ordersinwork;
-import veloziped.ws1516.generated.Result;
-import veloziped.ws1516.generated.Results;
-import veloziped.ws1516.generated.Waitingliststock;
-import veloziped.ws1516.generated.Waitinglistworkstations;
-import veloziped.ws1516.generated.Warehousestock;
+import veloziped.ws1516.generated.Results.Completedorders;
+import veloziped.ws1516.generated.Results.Cycletimes;
+import veloziped.ws1516.generated.Results.Futureinwardstockmovement;
+import veloziped.ws1516.generated.Results.Idletimecosts;
+import veloziped.ws1516.generated.Results.Inwardstockmovement;
+import veloziped.ws1516.generated.Results.Order;
+import veloziped.ws1516.generated.Results.Ordersinwork;
+import veloziped.ws1516.generated.Results.Result;
+import veloziped.ws1516.generated.Results.Results;
+import veloziped.ws1516.generated.Results.Waitingliststock;
+import veloziped.ws1516.generated.Results.Waitinglistworkstations;
+import veloziped.ws1516.generated.Results.Warehousestock;
 import veloziped.ws1516.production.Forecast;
 import veloziped.ws1516.production.ProductionPlan;
 import veloziped.ws1516.production.CalculationMode;
@@ -64,7 +64,7 @@ public class SharedInstance {
     private Completedorders completeOrder;
     private Futureinwardstockmovement futureInwardStockMovement;
     private Warehousestock warehouseStock;
-    
+
     public List<Order> getNewOrders() {
         return newOrders;
     }
@@ -308,56 +308,43 @@ public class SharedInstance {
 
         this.results = results;
 
-        for (Object object : results.getContent()) {
-            if (object.getClass().equals(Warehousestock.class)) {
-                warehouseStock = (Warehousestock) object;
-            } else if (object.getClass().equals(Result.class)) {
-                result = (Result) object;
-            } else if (object.getClass().equals(Inwardstockmovement.class)) {
-                inwardStockMovement = (Inwardstockmovement) object;
-            } else if (object.getClass().equals(Cycletimes.class)) {
-                cycleTimes = (Cycletimes) object;
-            } else if (object.getClass().equals(Waitinglistworkstations.class)) {
-                waitinglistWorkstations = (Waitinglistworkstations) object;
-            } else if (object.getClass().equals(Idletimecosts.class)) {
-                idleTimeCosts = (Idletimecosts) object;
-            } else if (object.getClass().equals(Waitingliststock.class)) {
-                waitinglistStock = (Waitingliststock) object;
-            } else if (object.getClass().equals(Ordersinwork.class)) {
-                ordersInWork = (Ordersinwork) object;
-            } else if (object.getClass().equals(Completedorders.class)) {
-                completeOrder = (Completedorders) object;
-            } else if (object.getClass().equals(Futureinwardstockmovement.class)) {
-                futureInwardStockMovement = (Futureinwardstockmovement) object;
-            }
-        }
+        warehouseStock = results.getWarehousestock();
+        result = results.getResult();
+        inwardStockMovement = results.getInwardstockmovement();
+        cycleTimes = results.getCycletimes();
+        waitinglistWorkstations = results.getWaitinglistworkstations();
+        idleTimeCosts = results.getIdletimecosts();
+        waitinglistStock = results.getWaitingliststock();
+        ordersInWork = results.getOrdersinwork();
+        completeOrder = results.getCompletedorders();
+        futureInwardStockMovement = results.getFutureinwardstockmovement();
+
     }
-    
+
     public Map<String, ExtendedArticle> calcNewArticleStockValue() {
-        for(ExtendedArticle article : this.extendedArticles.values()) {
+        for (ExtendedArticle article : this.extendedArticles.values()) {
             long change = 0;
             Order incoming = this.getIncomingOrderForArticleId(article.getId());
-            if(incoming != null) {
+            if (incoming != null) {
                 change += incoming.getAmount();
             }
-            
+
             //TODO: Zuwachs dazurechnen
-            
             article.setStockChange(change);
             article.setNewStock(article.getAmount() + change);
             article.setNewStockValue(article.getPrice() * article.getNewStock());
-            
+
             double stockChangePct = 0.0;
             stockChangePct = (double) article.getAmount() / article.getNewStock();
-            if(stockChangePct < 1) {
+            if (stockChangePct < 1) {
                 article.setStockChangePct(((double) 1 - stockChangePct) * 100);
-            } else if(stockChangePct > 1) {
+            } else if (stockChangePct > 1) {
                 article.setStockChangePct((stockChangePct - 1) * -100);
             }
-            
+
             this.setExtendedArticleForId(article.getId(), article);
         }
-        
+
         return this.extendedArticles;
     }
 }

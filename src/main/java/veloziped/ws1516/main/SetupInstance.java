@@ -13,8 +13,8 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import veloziped.ws1516.articles.ExtendedArticle;
-import veloziped.ws1516.generated.Article;
-import veloziped.ws1516.generated.Workplace;
+import veloziped.ws1516.generated.Results.Article;
+import veloziped.ws1516.generated.Results.Workplace;
 import veloziped.ws1516.workplace.ExtendedWorkplace;
 
 /**

@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.List;
 import veloziped.ws1516.articles.ExtendedArticle;
-import veloziped.ws1516.generated.Workplace;
+import veloziped.ws1516.generated.Results.Workplace;
 import veloziped.ws1516.workplace.ExtendedWorkplace;
 
 /**
