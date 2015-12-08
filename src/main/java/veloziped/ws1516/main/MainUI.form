@@ -30,6 +30,9 @@
                   <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="ExportFile" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemExportFileActionPerformed"/>
+              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>

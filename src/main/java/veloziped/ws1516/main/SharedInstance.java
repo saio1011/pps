@@ -11,8 +11,7 @@ import java.math.RoundingMode;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Alert.AlertType;
+import javax.swing.JOptionPane;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
@@ -315,12 +314,7 @@ public class SharedInstance {
         m.marshal(input, file);
 
         } catch (Exception e) {
-        Alert alert = new Alert(AlertType.ERROR);
-        alert.setTitle("Error");
-        alert.setHeaderText("Could not save data");
-        alert.setContentText("Could not save data to file:\n" + file.getPath());
-
-        alert.showAndWait();
+        JOptionPane.showMessageDialog(null, "Could not save data", null, JOptionPane.ERROR_MESSAGE);
     }
 }
 

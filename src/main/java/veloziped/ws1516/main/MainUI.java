@@ -29,6 +29,8 @@ import javax.swing.text.JTextComponent;
 import javax.xml.bind.JAXBException;
 import veloziped.ws1516.articles.ExtendedArticle;
 import veloziped.ws1516.disposal.PurchasingDisposal;
+import veloziped.ws1516.generated.Input.Input;
+import veloziped.ws1516.generated.Input.Orderlist;
 import veloziped.ws1516.generated.Results.Order;
 import veloziped.ws1516.generated.Results.Results;
 import veloziped.ws1516.production.CalculationMode;
@@ -3245,6 +3247,11 @@ public class MainUI extends javax.swing.JFrame {
         jMenuFile.add(jMenuItemImportFile);
 
         jMenuItemExportFile.setText(bundle.getString("ExportFile")); // NOI18N
+        jMenuItemExportFile.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemExportFileActionPerformed(evt);
+            }
+        });
         jMenuFile.add(jMenuItemExportFile);
 
         jMenuBar1.add(jMenuFile);
@@ -3381,7 +3388,7 @@ public class MainUI extends javax.swing.JFrame {
 
     private void importXml() {
         FileNameExtensionFilter xmlfilter = new FileNameExtensionFilter(
-     "xml files (*.xml)", "xml");
+                "xml files (*.xml)", "xml");
         JFileChooser chooser = new JFileChooser();
         chooser.setFileFilter(xmlfilter);
         chooser.showOpenDialog(null);
@@ -3505,7 +3512,7 @@ public class MainUI extends javax.swing.JFrame {
         List<Order> newOrders = PurchasingDisposal.getInstance().calculateOrders(
                 SharedInstance.getInstance().getExtendedArticles());
         SharedInstance.getInstance().setNewOrders(newOrders);
-        
+
         Map<String, ExtendedArticle> articles = SharedInstance.getInstance().calcNewArticleStockValue();
 
         this.reFillWorkloadTable(workloadResults.values());
@@ -3519,8 +3526,8 @@ public class MainUI extends javax.swing.JFrame {
         for (int i = model.getRowCount() - 1; i >= 0; i--) {
             model.removeRow(i);
         }
-        
-        List<WorkloadResult> list = new ArrayList<WorkloadResult> (results);
+
+        List<WorkloadResult> list = new ArrayList<WorkloadResult>(results);
         Collections.sort(list);
 
         for (WorkloadResult result : list) {
@@ -3536,7 +3543,7 @@ public class MainUI extends javax.swing.JFrame {
         for (int i = model.getRowCount() - 1; i >= 0; i--) {
             model.removeRow(i);
         }
-        
+
         Collections.sort(orders);
 
         for (Order order : orders) {
@@ -3544,7 +3551,7 @@ public class MainUI extends javax.swing.JFrame {
             model.addRow(new Object[]{article.getId(), i18n.getString(article.getName()), order.getMode(), order.getAmount()});
         }
     }
-    
+
     private void reFillStockChangeTable(Map<String, ExtendedArticle> articles) {
         ResourceBundle i18n = Utils.getResourceBundle(this.currentLocale.getLanguage(), this.currentLocale.getCountry());
         DefaultTableModel model = (DefaultTableModel) jTableStockChange.getModel();
@@ -3552,13 +3559,13 @@ public class MainUI extends javax.swing.JFrame {
         for (int i = model.getRowCount() - 1; i >= 0; i--) {
             model.removeRow(i);
         }
-        
-        List<ExtendedArticle> list = new ArrayList<ExtendedArticle> (articles.values());
+
+        List<ExtendedArticle> list = new ArrayList<ExtendedArticle>(articles.values());
         Collections.sort(list);
 
         for (ExtendedArticle article : list) {
             model.addRow(new Object[]{article.getId(), i18n.getString(article.getName()), article.getAmount(), article.getStockvalue(),
-            article.getStockChange(), article.getNewStock(), article.getNewStockValue(), article.getStockChangePct()});
+                article.getStockChange(), article.getNewStock(), article.getNewStockValue(), article.getStockChangePct()});
         }
     }
 
@@ -3573,6 +3580,16 @@ public class MainUI extends javax.swing.JFrame {
     private void jButtonImportXmlActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonImportXmlActionPerformed
         this.importXml();
     }//GEN-LAST:event_jButtonImportXmlActionPerformed
+
+    private void jMenuItemExportFileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemExportFileActionPerformed
+        this.exportFile();
+    }//GEN-LAST:event_jMenuItemExportFileActionPerformed
+
+    private void exportFile() {
+        Input input = new Input();
+        input.setOrderlist(new Orderlist());
+        SharedInstance.getInstance().saveInputFile(new File("/Users/Martin/Desktop/input.xml"), input);
+    }
 
     /**
      * @param args the command line arguments
@@ -4079,7 +4096,7 @@ public class MainUI extends javax.swing.JFrame {
         if (newOrders != null && newOrders.size() > 0) {
             this.reFillPurchasingDisposalTable(newOrders);
         }
-        
+
         Map<String, ExtendedArticle> articles = SharedInstance.getInstance().getExtendedArticles();
         if (articles != null && articles.size() > 0) {
             this.reFillStockChangeTable(articles);
@@ -4121,7 +4138,7 @@ public class MainUI extends javax.swing.JFrame {
         jLabelKFVorderradgruppe.setText(i18n.getString("Vorderradgruppe"));
         jLabelKFSchutzblechV.setText(i18n.getString("Schutzblech v."));
         jLabelKFRahmen.setText(i18n.getString("Rahmen"));
-        
+
         jLabelDFLadiesCycle.setText(i18n.getString("Damenfahrrad"));
         jLabelDFPedalCpl.setText(i18n.getString("Pedal cpl."));
         jLabelDFFahrradOPedal.setText(i18n.getString("Fahrrad o. Pedal"));
@@ -4134,7 +4151,7 @@ public class MainUI extends javax.swing.JFrame {
         jLabelDFVorderradgruppe.setText(i18n.getString("Vorderradgruppe"));
         jLabelDFSchutzblechV.setText(i18n.getString("Schutzblech v."));
         jLabelDFRahmen.setText(i18n.getString("Rahmen"));
-        
+
         jLabelHFManCycle.setText(i18n.getString("Herrenfahrrad"));
         jLabelHFPedalCpl.setText(i18n.getString("Pedal cpl."));
         jLabelHFFahrradOPedal.setText(i18n.getString("Fahrrad o. Pedal"));
