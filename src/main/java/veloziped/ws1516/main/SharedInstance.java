@@ -6,7 +6,9 @@
 package veloziped.ws1516.main;
 
 import com.google.common.math.DoubleMath;
+import java.awt.Desktop;
 import java.io.File;
+import java.io.IOException;
 import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -80,7 +82,7 @@ public class SharedInstance {
     private Warehousestock warehouseStock;
 
     public List<Item> getSellDirect() {
-        if(sellDirect == null) {
+        if (sellDirect == null) {
             return new ArrayList<>();
         }
         return sellDirect;
@@ -91,7 +93,7 @@ public class SharedInstance {
     }
 
     public Map<String, WorkloadResult> getWorkloadResults() {
-        if(workloadResults == null) {
+        if (workloadResults == null) {
             return new HashMap<>();
         }
         return workloadResults;
@@ -102,7 +104,7 @@ public class SharedInstance {
     }
 
     public List<Order> getNewOrders() {
-        if(newOrders == null) {
+        if (newOrders == null) {
             return new ArrayList<>();
         }
         return newOrders;
@@ -328,33 +330,45 @@ public class SharedInstance {
 
             m.marshal(input, file);
 
+            Desktop desktop = null;
+            try {
+                if (Desktop.isDesktopSupported()) {
+                    desktop = Desktop.getDesktop();
+                    desktop.open(new File(file.getParent()));
+                } else {
+                    System.out.println("desktop is not supported");
+
+                }
+            } catch (IOException e) {
+            }
+
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Could not save data", null, JOptionPane.ERROR_MESSAGE);
         }
     }
-    
+
     public Input combineInput() {
         Input input = new Input();
-        
+
         Qualitycontrol control = new Qualitycontrol();
         control.setDelay(0);
         control.setLosequantity(0);
         control.setType("no");
         input.setQualitycontrol(control);
-        
+
         input.setSellwish(this.getSellwish());
         input.setSelldirect(this.getSelldirectForInput());
         input.setOrderlist(this.getOrderList());
         input.setWorkingtimelist(this.getWorkingTimeList());
         input.setProductionlist(this.getProductionList());
-        
+
         return input;
     }
 
     private Sellwish getSellwish() {
         Sellwish sellwish = new Sellwish();
         List<Item> items = new ArrayList<>();
-        
+
         Item p1 = new Item();
         p1.setArticle(1);
         p1.setQuantity(0);
@@ -371,55 +385,55 @@ public class SharedInstance {
         items.add(p2);
         items.add(p3);
         sellwish.setItem(items);
-        
+
         return sellwish;
     }
-    
+
     private Selldirect getSelldirectForInput() {
         Selldirect sell = new Selldirect();
         sell.setItem(this.getSellDirect());
-        
+
         return sell;
     }
-    
+
     private Orderlist getOrderList() {
         Orderlist list = new Orderlist();
         List<veloziped.ws1516.generated.Input.Order> orderList = new ArrayList<>();
 
-        for(Order order : this.getNewOrders()) {
+        for (Order order : this.getNewOrders()) {
             veloziped.ws1516.generated.Input.Order inputOrder = new veloziped.ws1516.generated.Input.Order();
             inputOrder.setArticle(order.getArticle());
             inputOrder.setModus(order.getMode());
             inputOrder.setQuantity(order.getAmount());
             orderList.add(inputOrder);
         }
-        
+
         list.setOrder(orderList);
         return list;
     }
-    
+
     private Workingtimelist getWorkingTimeList() {
         Workingtimelist timeList = new Workingtimelist();
         List<Workingtime> work = new ArrayList<>();
-        
-        for(WorkloadResult result : this.getWorkloadResults().values()) {
+
+        for (WorkloadResult result : this.getWorkloadResults().values()) {
             Workingtime time = new Workingtime();
             time.setStation(result.getWorkplace().getId());
             time.setShift(result.getNumberOfShifts());
             time.setOvertime(result.getOverTimeDay());
             work.add(time);
         }
-        
+
         timeList.setWorkingtime(work);
         return timeList;
     }
-    
+
     private Productionlist getProductionList() {
-       Productionlist prodList = new Productionlist();
-       
-       return prodList;
+        Productionlist prodList = new Productionlist();
+
+        return prodList;
     }
-    
+
     public void parseResults(Results results) {
         if (results == null) {
             return;
