@@ -3537,7 +3537,7 @@ public class MainUI extends javax.swing.JFrame {
             model.removeRow(i);
         }
         
-        //Collections.sort(orders);
+        Collections.sort(orders);
 
         for (Order order : orders) {
             ExtendedArticle article = SharedInstance.getInstance().getArticleForId(order.getArticle());
