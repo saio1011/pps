@@ -5,84 +5,127 @@
  */
 package veloziped.ws1516.disposal;
 
-import java.io.Console;
-import org.junit.experimental.results.PrintableResult;
-import veloziped.ws1516.articles.ArticleType;
+import java.util.Hashtable;
+import java.util.List;
 import veloziped.ws1516.articles.ExtendedArticle;
-import veloziped.ws1516.production.Forecast;
-import veloziped.ws1516.production.PeriodDetail;
+import veloziped.ws1516.generated.Results.Waitinglist;
+import veloziped.ws1516.generated.Results.Workplace;
+import veloziped.ws1516.main.SharedInstance;
+import veloziped.ws1516.workplace.ExtendedWorkplace;
 
 /**
  *
  * @author Rosen
  */
-// TODO...
 public class Disposal {
 
-    // Die Produktionsprognose
-    private Forecast forecast;
-    // Prod. Auftraege
-    private long prodOrder;
-    // Period
-    private PeriodDetail period;
-    // Produkte 1,2,3
-    private long productAmount;
-    // Verbindliche Aufträge
-    private long order;
-    // Sicherheitsbestand
-    private long securityProvision;
-    // Lager Ende Vorperiode
-    private long storeLastPeriod;
-    // Warteschlange
-    private long waitingArticle;
-    // In Bearbeitung
-    private long processingArticle;
+    private static Hashtable<String, String> WorkplacesHashTable;
+    private ExtendedWorkplace extendedWorkplace;
+    private ExtendedArticle extendedArticle;
+    private List<Workplace> workplacesList;
+    private List<Workplace> ordersInWork;
+    private long timeneed;
 
-    public Disposal(
-            Forecast forecast,
-            long prodOrder,
-            long productAmount,
-            long order,
-            long securityProvision,
-            long storeLastPeriod,
-            long waitingArticle,
-            long processingArticle,
-            PeriodDetail period) {
-        this.forecast = forecast;
-        this.prodOrder = prodOrder;
-        this.productAmount = productAmount;
-        this.order = order;
-        this.securityProvision = securityProvision;
-        this.storeLastPeriod = storeLastPeriod;
-        this.waitingArticle = waitingArticle;
-        this.processingArticle = processingArticle;
-        //this.period = forecast.getPeriodN0();
+    public Disposal() {
+        WorkplacesHashTable = new Hashtable<>();
+        WorkplacesHashTable.put("13,13", "12,8,7,9");
+        WorkplacesHashTable.put("1,29", "12,8,7,9");
+        WorkplacesHashTable.put("12,13", "8,7,9");
+        WorkplacesHashTable.put("8,13", "7,9");
+        WorkplacesHashTable.put("7,13", "9");
+        WorkplacesHashTable.put("6,18", "8,7,9");
+        WorkplacesHashTable.put("8,18", "7,9");
+        WorkplacesHashTable.put("7,18", "9");
+        WorkplacesHashTable.put("10,7", "11");
+        WorkplacesHashTable.put("6,16", "14");
+        WorkplacesHashTable.put("10,4", "11");
+        WorkplacesHashTable.put("7,26", "15");
+        WorkplacesHashTable.put("13,10", "12,8,7,9");
+        WorkplacesHashTable.put("12,10", "8,7,9");
+        WorkplacesHashTable.put("8,10", "7,9");
+        WorkplacesHashTable.put("7,10", "9");
+        WorkplacesHashTable.put("10,8", "11");
+        WorkplacesHashTable.put("6,16", "14");
+        WorkplacesHashTable.put("10,5", "11");
+        WorkplacesHashTable.put("7,26", "15");
+        WorkplacesHashTable.put("13,11", "12,8,7,9");
+        WorkplacesHashTable.put("12,11", "8,7,9");
+        WorkplacesHashTable.put("8,11", "7,9");
+        WorkplacesHashTable.put("7,11", "9");
+        WorkplacesHashTable.put("6,19", "8,7,9");
+        WorkplacesHashTable.put("8,19", "7,9");
+        WorkplacesHashTable.put("7,19", "9");
+        WorkplacesHashTable.put("13,15", "12,8,7,9");
+        WorkplacesHashTable.put("12,15", "8,7,9");
+        WorkplacesHashTable.put("8,15", "7,9");
+        WorkplacesHashTable.put("7,15", "9");
+        WorkplacesHashTable.put("6,20", "8,7,9");
+        WorkplacesHashTable.put("8,20", "7,9");
+        WorkplacesHashTable.put("7,20", "9");
+        WorkplacesHashTable.put("10,9", "11");
+        WorkplacesHashTable.put("10,6", "11");
+        WorkplacesHashTable.put("6,16", "14");
+        WorkplacesHashTable.put("7,26", "15");
+        WorkplacesHashTable.put("13,12", "12,8,7,9");
+        WorkplacesHashTable.put("12,12", "8,7,9");
+        WorkplacesHashTable.put("8,12", "7,9");
+        WorkplacesHashTable.put("7,12", "9");
+        WorkplacesHashTable.put("13,14", "12,8,7,9");
+        WorkplacesHashTable.put("12,14", "8,7,9");
+        WorkplacesHashTable.put("8,14", "7,9");
+        WorkplacesHashTable.put("7,14", "9");
     }
 
-    long CalculateProdOrders(
-            long order,
-            long securityProvision,
-            long storeLastPeriod,
-            long waitingArticle,
-            long processingArticle) {
-        long param = order + securityProvision - storeLastPeriod - waitingArticle - processingArticle;
-
-        return param > 0 ? param : 0;
-    }
-
-    /*void CalculateProdOrders(
-            ExtendedArticle article) {
-        if (article.getType().equals(ArticleType.P)) {
-            // TODO in Article property for ProdMenge
-            // TODO 
-            long pa = order + securityProvision - storeLastPeriod - waitingArticle - processingArticle;
-            article.setProdAmount(article.getProdAmount() > 0 ? article.getProdAmount() : 0);
+    public String[] getChildWorkplaces(long workplaceId, long articleId) {
+        if (WorkplacesHashTable.containsKey(workplaceId + "," + articleId)) {
+            return WorkplacesHashTable.get(String.valueOf(workplaceId) + "," + String.valueOf(articleId)).split(",");
         } else {
-            PeriodDetail per = forecast.getPeriodN0();
-            this.prodOrder = article.getParentArticle().getProdAmount() > 0 ? article.getParentArticle().getProdAmount() : 0;
-            //if (parentArticle.) {
-
-            //}
+            return new String[0];
         }
-    }*/
+    }
+
+    private void calculateOrdersInWork(List<Workplace> orders) {
+        for (Workplace workplace : orders) {
+            extendedWorkplace = SharedInstance.getInstance().getWorkplaceForId(workplace.getId());
+            timeneed = workplace.getTimeneed();
+
+            try {
+                timeneed += extendedWorkplace.getTimeneed();
+            } catch (Exception e) {
+            }
+
+            extendedWorkplace.setTimeneed(timeneed);
+            SharedInstance.getInstance().setWorkplaceForId(extendedWorkplace.getId(), extendedWorkplace);
+
+            ExtendedArticle extendedArticle = SharedInstance.getInstance().getArticleForId(workplace.getItem());
+            extendedArticle.setAdditionalAmount(extendedArticle.getAdditionalAmount() + workplace.getAmount());
+            SharedInstance.getInstance().setExtendedArticleForId(extendedArticle.getId(), extendedArticle);
+        }
+    }
+
+    private void calculateWaitingLists(List<Workplace> workplaces) {
+        for (Workplace wpl : workplaces) {
+            if (wpl.getTimeneed() != 0) {
+                List<Waitinglist> waitingLists = wpl.getWaitinglist();
+                for (Waitinglist waitinglist : waitingLists) {
+                    String[] wp = getChildWorkplaces(wpl.getId(), waitinglist.getItem());
+                    if (wp.length != 0) {
+                        for (String wpId : wp) {
+                            ExtendedWorkplace tmpWp = SharedInstance.getInstance().getWorkplaceForId(Long.parseLong(wpId));
+                            tmpWp.setTimeneed(wpl.getTimeneed());
+                            SharedInstance.getInstance().setWorkplaceForId(Long.parseLong(wpId), tmpWp);
+                        }
+                    }
+                    ExtendedArticle extendedArticleWithAddAmount = SharedInstance.getInstance().getArticleForId(waitinglist.getItem());
+                    extendedArticleWithAddAmount.setAdditionalAmount(waitinglist.getAmount());
+                    SharedInstance.getInstance().setExtendedArticleForId(extendedArticleWithAddAmount.getId(), extendedArticleWithAddAmount);
+                }
+            }
+        }
+    }
+
+    public void calculateAdditionalAmountAndTime() {
+        calculateWaitingLists(SharedInstance.getInstance().getWaitinglistWorkstations().getWorkplace());
+        calculateOrdersInWork(SharedInstance.getInstance().getOrdersInWork().getWorkplace());
+    }
 }

@@ -28,7 +28,7 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.text.JTextComponent;
 import javax.xml.bind.JAXBException;
 import veloziped.ws1516.articles.ExtendedArticle;
-import veloziped.ws1516.disposal.ATNI;
+import veloziped.ws1516.disposal.Disposal;
 import veloziped.ws1516.disposal.PurchasingDisposal;
 import veloziped.ws1516.generated.Input.Input;
 import veloziped.ws1516.generated.Input.Orderlist;
@@ -3542,8 +3542,8 @@ public class MainUI extends javax.swing.JFrame {
                             .generateExtendedArticles(SharedInstance.getInstance().getWarehouseStock().getArticle());
                     SharedInstance.getInstance().setExtendedArticles(extArt);
 
-                    ATNI atni = new ATNI();
-                    atni.additionalAmountsCalculate();
+                    Disposal disposal = new Disposal();
+                    disposal.calculateAdditionalAmountAndTime();
                     this.setPeriodLabels();
                     this.jButtonCalculate.setEnabled(true);
 

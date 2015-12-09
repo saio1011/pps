@@ -41,6 +41,7 @@ import veloziped.ws1516.generated.Results.Results;
 import veloziped.ws1516.generated.Results.Waitingliststock;
 import veloziped.ws1516.generated.Results.Waitinglistworkstations;
 import veloziped.ws1516.generated.Results.Warehousestock;
+import veloziped.ws1516.generated.Results.Workplace;
 import veloziped.ws1516.production.Forecast;
 import veloziped.ws1516.production.ProductionPlan;
 import veloziped.ws1516.production.CalculationMode;
@@ -59,6 +60,7 @@ public class SharedInstance {
     private Forecast forecast = new Forecast();
     private Map<String, ExtendedWorkplace> extendedWorkplaces;
     private Map<String, ExtendedArticle> extendedArticles;
+    private Map<String, Workplace> workplaces;
     private Map<String, Order> incomingOrdersThisPeriod;
     private ProductionPlan productionPlan;
     private Results results;
@@ -238,6 +240,27 @@ public class SharedInstance {
         return result;
     }
 
+    public boolean setWorkplaceForId(Long id, ExtendedWorkplace workplace) {
+        boolean result = false;
+
+        if (id != null) {
+            extendedWorkplaces.put(String.valueOf(id), workplace);
+            result = true;
+        }
+
+        return result;
+    }
+
+    public boolean setWorkplaceForId(Long id, Workplace workplace) {
+        boolean result = false;
+
+        if (id != null) {
+            workplaces.put(String.valueOf(id), workplace);
+            result = true;
+        }
+
+        return result;
+    }
     public ProductionPlan getProcudtionPlan() {
         return productionPlan;
     }
@@ -481,4 +504,6 @@ public class SharedInstance {
 
         return this.extendedArticles;
     }
+    
+    
 }
