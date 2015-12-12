@@ -6,17 +6,18 @@
 package veloziped.ws1516.main;
 
 import java.io.File;
-import java.util.AbstractList;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.ResourceBundle;
+import java.util.Set;
+import java.util.TreeSet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.DefaultRowSorter;
 import javax.swing.JFileChooser;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -25,13 +26,10 @@ import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.text.JTextComponent;
 import javax.xml.bind.JAXBException;
 import veloziped.ws1516.articles.ExtendedArticle;
 import veloziped.ws1516.disposal.Disposal;
 import veloziped.ws1516.disposal.PurchasingDisposal;
-import veloziped.ws1516.generated.Input.Input;
-import veloziped.ws1516.generated.Input.Orderlist;
 import veloziped.ws1516.generated.Results.Order;
 import veloziped.ws1516.generated.Results.Results;
 import veloziped.ws1516.production.CalculationMode;
@@ -3547,9 +3545,17 @@ public class MainUI extends javax.swing.JFrame {
                     this.setPeriodLabels();
                     this.jButtonCalculate.setEnabled(true);
 
+                    
                     Map<String, ExtendedArticle> extArticles = SharedInstance.getInstance().getExtendedArticles();
-                    jTextFieldKFP1OrdersInQueque.setText(String.valueOf(extArticles.get("1").getAdditionalAmount()));
-
+//                    jTextFieldKFP1OrdersInQueque.setText(String.valueOf(extArticles.get("1").getAdditionalAmount()));
+                    
+                    //Vorbelegung Dammenfahrrad
+                    Map<JTextField, String> dfMapFieldsWithKeys = getMapFieldsWithKeys(getDFJTextFields());
+                    fillTextFileds(dfMapFieldsWithKeys, extArticles);
+                    //Vorbelegung Herrenfahrrad
+                    Map<JTextField, String> hfMapFieldsWithKeys = getMapFieldsWithKeys(getHFJTextFields());
+                    fillTextFileds(hfMapFieldsWithKeys, extArticles);
+                        
                     this.jButtonCalculate.setEnabled(true);
                 } catch (JAXBException ex) {
                     Logger.getLogger(MainUI.class.getName()).log(Level.SEVERE, null, ex);
@@ -3594,36 +3600,23 @@ public class MainUI extends javax.swing.JFrame {
                 jTextFieldKFE13WorkInProgress.setText("20");
                 jTextFieldKFE18WorkInProgress.setText("20");
 
-                //damenfahrrad
-                List<JTextField> dmFields = getDFJTextFields();
-                for (JTextField jtf : dmFields) {
-                    if (jtf.getName().endsWith("StockEndOfPeriod")) {
-                        jtf.setText("200");
-                    }
-                    if (jtf.getName().endsWith("OrdersInQueque")) {
-                        jtf.setText("160");
-                    }
-                    if (jtf.getName().endsWith("WorkInProgress")) {
-                        jtf.setText("40");
-                    }
-                }
-                //herrenfahrrad
-                List<JTextField> hfFields = getHFJTextFields();
-                for (JTextField jtf : hfFields) {
-                    if (jtf.getName().endsWith("StockEndOfPeriod")) {
-                        jtf.setText("300");
-                    }
-                    if (jtf.getName().endsWith("OrdersInQueque")) {
-                        jtf.setText("60");
-                    }
-                    if (jtf.getName().endsWith("WorkInProgress")) {
-                        jtf.setText("50");
-                    }
-                }
-
             } else {
                 ResourceBundle i18n = Utils.getResourceBundle(locale.getLanguage(), locale.getCountry());
                 JOptionPane.showMessageDialog(this, i18n.getString("OnlyXML"), null, JOptionPane.ERROR_MESSAGE);
+            }
+        }
+    }
+    public void fillTextFileds(Map<JTextField, String> mapFieldsWithKeys, Map<String, ExtendedArticle> extArticles) {
+        for (Map.Entry<JTextField, String> entry : mapFieldsWithKeys.entrySet()) {
+            if (entry.getKey().getName().endsWith("OrdersInQueque")) {
+                entry.getKey().setText(String.valueOf(extArticles.get(entry.getValue()).getAdditionalAmount()));
+            }
+            if (entry.getKey().getName().endsWith("StockEndOfPeriod")) {
+                entry.getKey().setText(String.valueOf(extArticles.get(entry.getValue()).getStockvalue()));
+                entry.getKey().setText("60");
+            }
+            if (entry.getKey().getName().endsWith("WorkInProgress")) {
+                entry.getKey().setText("45");
             }
         }
     }
@@ -6199,6 +6192,15 @@ public class MainUI extends javax.swing.JFrame {
         fields.add(jTextFieldDFE14ProductionOrders);
         fields.add(jTextFieldDFE19ProductionOrders);
         return fields;
+    }
+    
+    public Map<JTextField, String> getMapFieldsWithKeys(List<JTextField> fields){
+        Map<JTextField, String> fieldsWithKeys = new HashMap<>();
+        for(JTextField field : fields){
+            String  prodNumber = field.getName().replaceAll("[^0-9]+", "");
+            fieldsWithKeys.put(field, prodNumber);
+        }
+        return fieldsWithKeys;
     }
 
     public List<JLabel> getDFJLablesOrdersInQueque() {
