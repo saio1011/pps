@@ -46,6 +46,16 @@ public class ExtendedWorkplace extends Workplace {
         return processTimes;
     }
 
+    public ProcessTime getProcessTimeForArticle(long id) {
+        ProcessTime res = null;
+        for (ProcessTime pt : this.processTimes) {
+            if (pt.getArticleId() == id) {
+                res = pt;
+            }
+        }
+        return res;
+    }
+
     public void setValues(JSONObject workplace) {
         double firstShiftWage = (double) workplace.get("firstShiftWage");
         double secondShiftWage = (double) workplace.get("secondShiftWage");
@@ -66,7 +76,7 @@ public class ExtendedWorkplace extends Workplace {
             ProcessTime processTime = new ProcessTime(articleId, runTime, setupTime);
             processTimes.add(processTime);
         }
-        
+
         this.firstShiftWage = firstShiftWage;
         this.secondShiftWage = secondShiftWage;
         this.thirdShiftWage = thirdShiftWage;

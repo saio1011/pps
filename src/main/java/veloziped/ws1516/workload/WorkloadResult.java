@@ -13,12 +13,17 @@ import static java.lang.Math.round;
 import static java.lang.Math.round;
 import static java.lang.Math.round;
 import static java.lang.Math.round;
+import java.util.List;
+import veloziped.ws1516.generated.Results.Ordersinwork;
+import veloziped.ws1516.generated.Results.Waitinglist;
+import veloziped.ws1516.generated.Results.Waitinglistworkstations;
+import veloziped.ws1516.generated.Results.Workplace;
 
 /**
  *
  * @author Martin
  */
-public class WorkloadResult implements Comparable<WorkloadResult>{
+public class WorkloadResult implements Comparable<WorkloadResult> {
 
     //TODO: Kap. Bed. (Rückstand Vorperiode)
     private final ExtendedWorkplace workplace;
@@ -27,8 +32,8 @@ public class WorkloadResult implements Comparable<WorkloadResult>{
     private long lastSetupCycles;
     private double setupFactor;
     private long additionalSetupTime;
-    private final long backlogCapacityLastPeriod;
-    private final long backlogSetupTimeLastPeriod;
+    private long backlogCapacityLastPeriod;
+    private long backlogSetupTimeLastPeriod;
     private long totalCapacityNeeded;
     private long numberOfShifts;
     private long overTimePeriod;
@@ -40,10 +45,33 @@ public class WorkloadResult implements Comparable<WorkloadResult>{
         this.workplace = workplace;
         this.lastSetupCycles = workplace.getSetupevents();
 
-        //TODO get from xml
         this.backlogCapacityLastPeriod = 0;
         this.backlogSetupTimeLastPeriod = 0;
 
+        //do not get from workplace because the value is not in there
+        Waitinglistworkstations wStations = SharedInstance.getInstance().getWaitinglistWorkstations();
+        for (Workplace place : wStations.getWorkplace()) {
+            if (place.getId() == this.workplace.getId()) {
+                this.backlogCapacityLastPeriod = place.getTimeneed();
+                
+                List<Waitinglist> list = place.getWaitinglist();
+                for(Waitinglist l : list) {
+                    ProcessTime pt = this.workplace.getProcessTimeForArticle(l.getItem());
+                    if(pt != null) {
+                        this.backlogSetupTimeLastPeriod += pt.getSetupTime();
+                    }
+                }
+            }
+        }
+        
+        Ordersinwork inWork = SharedInstance.getInstance().getOrdersInWork();
+        for(Workplace place : inWork.getWorkplace()) {
+            if (place.getId() == this.workplace.getId()) {
+                this.backlogCapacityLastPeriod += place.getTimeneed();
+                //no setup time because its already in work
+            }
+        }
+ 
         this.capacityNeeded = 0;
         this.setupTime = 0;
         this.setupFactor = 0;
@@ -161,9 +189,9 @@ public class WorkloadResult implements Comparable<WorkloadResult>{
     }
 
     private void calcTotalCapacityNeeded() {
-        this.totalCapacityNeeded = this.capacityNeeded 
+        this.totalCapacityNeeded = this.capacityNeeded
                 //+ this.setupTime
-                + this.additionalSetupTime 
+                + this.additionalSetupTime
                 + this.backlogCapacityLastPeriod
                 + this.backlogSetupTimeLastPeriod;
     }
@@ -223,7 +251,7 @@ public class WorkloadResult implements Comparable<WorkloadResult>{
 
     private void calcWorkloadPercentage() {
         double perct = Double.valueOf(this.totalCapacityNeeded) / (this.numberOfShifts * WorkloadPlanning.LIMITPERSHIFT);
-        
+
         this.workloadPercentage = perct * 100;
     }
 
