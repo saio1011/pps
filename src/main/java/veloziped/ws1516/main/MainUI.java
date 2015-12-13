@@ -3714,10 +3714,9 @@ public class MainUI extends javax.swing.JFrame {
             }
             if (entry.getKey().getName().endsWith("StockEndOfPeriod")) {
                 entry.getKey().setText(String.valueOf(extArticles.get(entry.getValue()).getAmount()));
-//                entry.getKey().setText("60");
             }
             if (entry.getKey().getName().endsWith("WorkInProgress")) {
-                entry.getKey().setText("45");
+                entry.getKey().setText(String.valueOf(extArticles.get(entry.getValue()).getAdditionalAmountInWork()));
             }
         }
     }
