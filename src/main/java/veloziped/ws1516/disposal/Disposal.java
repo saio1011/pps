@@ -98,7 +98,7 @@ public class Disposal {
             SharedInstance.getInstance().setExtendedWorkplaceForId(extendedWorkplace.getId(), extendedWorkplace);
 
             ExtendedArticle extendedArticle = SharedInstance.getInstance().getArticleForId(workplace.getItem());
-            extendedArticle.setAdditionalAmountInWork(extendedArticle.getAdditionalAmount() + workplace.getAmount());
+            extendedArticle.setAdditionalAmountInWork(workplace.getAmount());
             SharedInstance.getInstance().setExtendedArticleForId(extendedArticle.getId(), extendedArticle);
         }
     }
