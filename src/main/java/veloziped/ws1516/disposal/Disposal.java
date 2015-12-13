@@ -91,8 +91,7 @@ public class Disposal {
 
             try {
                 timeneed += extendedWorkplace.getTimeneed();
-            } catch (Exception e) {
-            }
+            } catch (Exception e) { }
 
             extendedWorkplace.setTimeneed(timeneed);
             SharedInstance.getInstance().setExtendedWorkplaceForId(extendedWorkplace.getId(), extendedWorkplace);
