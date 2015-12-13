@@ -79,6 +79,8 @@ public class MainUI extends javax.swing.JFrame {
         this.jTabbedPan.setEnabledAt(4, false);
         this.jTabbedPan.setEnabledAt(5, false);
         this.addInputFieldsListener();
+        
+        this.setInHouseProductionJTextFieldsEnabled(false);
 
     }
 
@@ -3621,57 +3623,21 @@ public class MainUI extends javax.swing.JFrame {
                     Map<String, ExtendedArticle> extArticles = SharedInstance.getInstance().getExtendedArticles();
 //                    jTextFieldKFP1OrdersInQueque.setText(String.valueOf(extArticles.get("1").getAdditionalAmount()));
                     
-                    //Vorbelegung Dammenfahrrad
+                    //Vorbelegung Damenfahrrad
                     Map<JTextField, String> dfMapFieldsWithKeys = getMapFieldsWithKeys(getDFJTextFields());
                     fillTextFileds(dfMapFieldsWithKeys, extArticles);
                     //Vorbelegung Herrenfahrrad
                     Map<JTextField, String> hfMapFieldsWithKeys = getMapFieldsWithKeys(getHFJTextFields());
                     fillTextFileds(hfMapFieldsWithKeys, extArticles);
+                    //Vorbelegung Kinderfahrad
+                    Map<JTextField, String> kfMapFieldsWithKeys = getMapFieldsWithKeys(getKFJTextFields());
+                    fillTextFileds(kfMapFieldsWithKeys, extArticles);
+                    
                         
                     this.jButtonCalculate.setEnabled(true);
                 } catch (JAXBException ex) {
                     Logger.getLogger(MainUI.class.getName()).log(Level.SEVERE, null, ex);
                 }
-                //vorbelegung der Felder 
-                // KF
-                jTextFieldKFP1StockEndOfPeriod.setText("100");
-                jTextFieldKFE26StockEndOfPeriod.setText("100");
-                jTextFieldKFE51StockEndOfPeriod.setText("100");
-                jTextFieldKFE16StockEndOfPeriod.setText("100");
-                jTextFieldKFE17StockEndOfPeriod.setText("100");
-                jTextFieldKFE50StockEndOfPeriod.setText("100");
-                jTextFieldKFE4StockEndOfPeriod.setText("100");
-                jTextFieldKFE10StockEndOfPeriod.setText("100");
-                jTextFieldKFE49StockEndOfPeriod.setText("100");
-                jTextFieldKFE7StockEndOfPeriod.setText("100");
-                jTextFieldKFE13StockEndOfPeriod.setText("100");
-                jTextFieldKFE18StockEndOfPeriod.setText("100");
-
-                jTextFieldKFE26OrdersInQueque.setText("80");
-                jTextFieldKFE51OrdersInQueque.setText("80");
-                jTextFieldKFE16OrdersInQueque.setText("80");
-                jTextFieldKFE17OrdersInQueque.setText("80");
-                jTextFieldKFE50OrdersInQueque.setText("80");
-                jTextFieldKFE4OrdersInQueque.setText("80");
-                jTextFieldKFE10OrdersInQueque.setText("80");
-                jTextFieldKFE49OrdersInQueque.setText("80");
-                jTextFieldKFE7OrdersInQueque.setText("80");
-                jTextFieldKFE13OrdersInQueque.setText("80");
-                jTextFieldKFE18OrdersInQueque.setText("80");
-
-                jTextFieldKFP1WorkInProgress.setText("20");
-                jTextFieldKFE26WorkInProgress.setText("20");
-                jTextFieldKFE51WorkInProgress.setText("20");
-                jTextFieldKFE16WorkInProgress.setText("20");
-                jTextFieldKFE17WorkInProgress.setText("20");
-                jTextFieldKFE50WorkInProgress.setText("20");
-                jTextFieldKFE4WorkInProgress.setText("20");
-                jTextFieldKFE10WorkInProgress.setText("20");
-                jTextFieldKFE49WorkInProgress.setText("20");
-                jTextFieldKFE7WorkInProgress.setText("20");
-                jTextFieldKFE13WorkInProgress.setText("20");
-                jTextFieldKFE18WorkInProgress.setText("20");
-
             } else {
                 ResourceBundle i18n = Utils.getResourceBundle(locale.getLanguage(), locale.getCountry());
                 JOptionPane.showMessageDialog(this, i18n.getString("OnlyXML"), null, JOptionPane.ERROR_MESSAGE);
@@ -3684,13 +3650,37 @@ public class MainUI extends javax.swing.JFrame {
                 entry.getKey().setText(String.valueOf(extArticles.get(entry.getValue()).getAdditionalAmount()));
             }
             if (entry.getKey().getName().endsWith("StockEndOfPeriod")) {
-                entry.getKey().setText(String.valueOf(extArticles.get(entry.getValue()).getStockvalue()));
+//                entry.getKey().setText(String.valueOf(extArticles.get(entry.getValue()).getStockvalue()));
                 entry.getKey().setText("60");
             }
             if (entry.getKey().getName().endsWith("WorkInProgress")) {
                 entry.getKey().setText("45");
             }
         }
+    }
+    public void setjTextFieldInHouseProductionEnabled(Map<JTextField, String> mapFieldsWithKeys, Boolean value) {
+        for (Map.Entry<JTextField, String> entry : mapFieldsWithKeys.entrySet()) {
+            if (entry.getKey().getName().endsWith("OrdersInQueque")) {
+                entry.getKey().setEnabled(value);
+            }
+            if (entry.getKey().getName().endsWith("StockEndOfPeriod")) {
+                entry.getKey().setEnabled(value);
+            }
+            if (entry.getKey().getName().endsWith("WorkInProgress")) {
+                entry.getKey().setEnabled(value);
+            }
+        }
+    }
+    public void setInHouseProductionJTextFieldsEnabled(Boolean value){
+        //Kinderfahrrad
+        Map<JTextField, String> kfMapFieldsWithKeys = getMapFieldsWithKeys(getKFJTextFields());
+        setjTextFieldInHouseProductionEnabled(kfMapFieldsWithKeys, value);
+        //Damenfahrrad
+        Map<JTextField, String> dfMapFieldsWithKeys = getMapFieldsWithKeys(getDFJTextFields());
+        setjTextFieldInHouseProductionEnabled(dfMapFieldsWithKeys, value);
+        //Herrenfahrrad
+        Map<JTextField, String> hfMapFieldsWithKeys = getMapFieldsWithKeys(getHFJTextFields());
+        setjTextFieldInHouseProductionEnabled(hfMapFieldsWithKeys, value);
     }
     private void jMenuItemImportFileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemImportFileActionPerformed
         this.importXml();
@@ -4881,46 +4871,46 @@ public class MainUI extends javax.swing.JFrame {
             @Override
             public void insertUpdate(DocumentEvent e) {
                 jTextFieldKFE26ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE26SalesOrders.getText().equals("") ? "0" : jTextFieldKFE26SalesOrders.getText())), Integer.parseInt((jLabelKFE26OrdersInQueque.getText().equals("") ? "0" : jLabelKFE26OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE26PlannedStock.getText().equals("") ? "0" : jTextFieldKFE26PlannedStock.getText())), Integer.parseInt(jTextFieldKFE26StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE26StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE26OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE26OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE26WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE26WorkInProgress.getText())));
-                jTextFieldKFE51PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
-                jTextFieldKFE16PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
-                jTextFieldKFE17PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
-                jTextFieldKFE50PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
-                jTextFieldKFE4PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
-                jTextFieldKFE10PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
-                jTextFieldKFE49PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
-                jTextFieldKFE7PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
-                jTextFieldKFE13PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
-                jTextFieldKFE18PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+//                jTextFieldKFE51PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+//                jTextFieldKFE16PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+//                jTextFieldKFE17PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+//                jTextFieldKFE50PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+//                jTextFieldKFE4PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+//                jTextFieldKFE10PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+//                jTextFieldKFE49PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+//                jTextFieldKFE7PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+//                jTextFieldKFE13PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+//                jTextFieldKFE18PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
             }
 
             @Override
             public void removeUpdate(DocumentEvent e) {
                 jTextFieldKFE26ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE26SalesOrders.getText().equals("") ? "0" : jTextFieldKFE26SalesOrders.getText())), Integer.parseInt((jLabelKFE26OrdersInQueque.getText().equals("") ? "0" : jLabelKFE26OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE26PlannedStock.getText().equals("") ? "0" : jTextFieldKFE26PlannedStock.getText())), Integer.parseInt(jTextFieldKFE26StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE26StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE26OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE26OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE26WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE26WorkInProgress.getText())));
-                jTextFieldKFE51PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
-                jTextFieldKFE16PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
-                jTextFieldKFE17PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
-                jTextFieldKFE50PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
-                jTextFieldKFE4PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
-                jTextFieldKFE10PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
-                jTextFieldKFE49PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
-                jTextFieldKFE7PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
-                jTextFieldKFE13PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
-                jTextFieldKFE18PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+//                jTextFieldKFE51PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+//                jTextFieldKFE16PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+//                jTextFieldKFE17PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+//                jTextFieldKFE50PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+//                jTextFieldKFE4PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+//                jTextFieldKFE10PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+//                jTextFieldKFE49PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+//                jTextFieldKFE7PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+//                jTextFieldKFE13PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+//                jTextFieldKFE18PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
             }
 
             @Override
             public void changedUpdate(DocumentEvent e) {
                 jTextFieldKFE26ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE26SalesOrders.getText().equals("") ? "0" : jTextFieldKFE26SalesOrders.getText())), Integer.parseInt((jLabelKFE26OrdersInQueque.getText().equals("") ? "0" : jLabelKFE26OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE26PlannedStock.getText().equals("") ? "0" : jTextFieldKFE26PlannedStock.getText())), Integer.parseInt(jTextFieldKFE26StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE26StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE26OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE26OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE26WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE26WorkInProgress.getText())));
-                jTextFieldKFE51PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
-                jTextFieldKFE16PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
-                jTextFieldKFE17PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
-                jTextFieldKFE50PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
-                jTextFieldKFE4PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
-                jTextFieldKFE10PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
-                jTextFieldKFE49PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
-                jTextFieldKFE7PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
-                jTextFieldKFE13PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
-                jTextFieldKFE18PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+//                jTextFieldKFE51PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+//                jTextFieldKFE16PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+//                jTextFieldKFE17PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+//                jTextFieldKFE50PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+//                jTextFieldKFE4PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+//                jTextFieldKFE10PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+//                jTextFieldKFE49PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+//                jTextFieldKFE7PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+//                jTextFieldKFE13PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
+//                jTextFieldKFE18PlannedStock.setText(jTextFieldKFE26PlannedStock.getText());
             }
         });
         //E51
