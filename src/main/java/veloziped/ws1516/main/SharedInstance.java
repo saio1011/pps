@@ -11,6 +11,8 @@ import java.io.File;
 import java.io.IOException;
 import java.math.RoundingMode;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -23,6 +25,7 @@ import veloziped.ws1516.articles.ExtendedArticle;
 import veloziped.ws1516.generated.Input.Input;
 import veloziped.ws1516.generated.Input.Item;
 import veloziped.ws1516.generated.Input.Orderlist;
+import veloziped.ws1516.generated.Input.Production;
 import veloziped.ws1516.generated.Input.Productionlist;
 import veloziped.ws1516.generated.Input.Qualitycontrol;
 import veloziped.ws1516.generated.Input.Selldirect;
@@ -71,6 +74,7 @@ public class SharedInstance {
     private List<Order> newOrders;
     private List<Item> sellDirect;
     private Map<String, WorkloadResult> workloadResults;
+    private List<Production> productionListCalculated;
 
     private Result result;
     private Inwardstockmovement inwardStockMovement;
@@ -82,6 +86,14 @@ public class SharedInstance {
     private Completedorders completeOrder;
     private Futureinwardstockmovement futureInwardStockMovement;
     private Warehousestock warehouseStock;
+
+    public List<Production> getProductionListCalculated() {
+        return productionListCalculated;
+    }
+
+    public void setProductionListCalculated(List<Production> productionListCalculated) {
+        this.productionListCalculated = productionListCalculated;
+    }
 
     public List<Item> getSellDirect() {
         if (sellDirect == null) {
@@ -261,6 +273,7 @@ public class SharedInstance {
 
         return result;
     }
+
     public ProductionPlan getProcudtionPlan() {
         return productionPlan;
     }
@@ -453,6 +466,7 @@ public class SharedInstance {
 
     private Productionlist getProductionList() {
         Productionlist prodList = new Productionlist();
+        prodList.setProduction(this.productionListCalculated);
 
         return prodList;
     }
@@ -504,6 +518,105 @@ public class SharedInstance {
 
         return this.extendedArticles;
     }
-    
-    
+
+    public final int[] productionListOrder = new int[]{
+        13,
+        18,
+        7,
+        14,
+        19,
+        8,
+        15,
+        20,
+        9,
+        10,
+        4,
+        49,
+        11,
+        5,
+        54,
+        12,
+        29,
+        6,
+        50,
+        55,
+        30,
+        16,
+        17,
+        51,
+        56,
+        31,
+        26,
+        1,
+        2,
+        3};
+
+    public List<Production> calculateProductionList() {
+        List<Production> pList = new ArrayList<>();
+        int Interation_One = 100;
+        int Interation_Two = 150;
+
+        Map<String, ExtendedArticle> articles = this.extendedArticles;
+
+        for (int i = 0; i < this.productionListOrder.length; i++) {
+            ExtendedArticle article = articles.get(String.valueOf(this.productionListOrder[i]));
+
+            if (article.getPlannedProductionAmount() > Interation_One) {
+                Production prod = new Production();
+                prod.setArticle(article.getId());
+                prod.setQuantity(Interation_One);
+                pList.add(prod);
+
+                article.setPlannedProductionAmount(article.getPlannedProductionAmount() - Interation_One);
+            } else if (article.getPlannedProductionAmount() > 0) {
+                Production prod = new Production();
+                prod.setArticle(article.getId());
+                prod.setQuantity(article.getPlannedProductionAmount());
+                pList.add(prod);
+            }
+        }
+
+        for (int i = 0; i < this.productionListOrder.length; i++) {
+            ExtendedArticle article = articles.get(String.valueOf(this.productionListOrder[i]));
+
+            if (article.getPlannedProductionAmount() > Interation_Two) {
+                Production prod = new Production();
+                prod.setArticle(article.getId());
+                prod.setQuantity(Interation_Two);
+                pList.add(prod);
+
+                article.setPlannedProductionAmount(article.getPlannedProductionAmount() - Interation_Two);
+            } else if (article.getPlannedProductionAmount() > 0) {
+                Production prod = new Production();
+                prod.setArticle(article.getId());
+                prod.setQuantity(article.getPlannedProductionAmount());
+                pList.add(prod);
+            }
+        }
+        
+        for (int i = 0; i < this.productionListOrder.length; i++) {
+            ExtendedArticle article = articles.get(String.valueOf(this.productionListOrder[i]));
+
+            if (article.getPlannedProductionAmount() > 0) {
+                Production prod = new Production();
+                prod.setArticle(article.getId());
+                prod.setQuantity(article.getPlannedProductionAmount());
+                pList.add(prod);
+            }
+        }
+
+        this.productionListCalculated = pList;
+
+        return this.productionListCalculated;
+    }
+
+    public static final <T> void swap(T[] a, int i, int j) {
+        T t = a[i];
+        a[i] = a[j];
+        a[j] = t;
+    }
+
+    public void swapProductionListOrder(int i, int j) {
+        Collections.swap(this.productionListCalculated, i, j);
+    }
 }

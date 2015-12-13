@@ -75,4 +75,8 @@ public class Productionlist {
         return this.production;
     }
 
+    public void setProduction(List<Production> production) {
+        this.production = production;
+    }
+
 }
