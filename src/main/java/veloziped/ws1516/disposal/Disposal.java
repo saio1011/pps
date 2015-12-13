@@ -95,10 +95,10 @@ public class Disposal {
             }
 
             extendedWorkplace.setTimeneed(timeneed);
-            SharedInstance.getInstance().setWorkplaceForId(extendedWorkplace.getId(), extendedWorkplace);
+            SharedInstance.getInstance().setExtendedWorkplaceForId(extendedWorkplace.getId(), extendedWorkplace);
 
             ExtendedArticle extendedArticle = SharedInstance.getInstance().getArticleForId(workplace.getItem());
-            extendedArticle.setAdditionalAmount(extendedArticle.getAdditionalAmount() + workplace.getAmount());
+            extendedArticle.setAdditionalAmountInWork(extendedArticle.getAdditionalAmount() + workplace.getAmount());
             SharedInstance.getInstance().setExtendedArticleForId(extendedArticle.getId(), extendedArticle);
         }
     }
@@ -113,7 +113,7 @@ public class Disposal {
                         for (String wpId : wp) {
                             ExtendedWorkplace tmpWp = SharedInstance.getInstance().getWorkplaceForId(Long.parseLong(wpId));
                             tmpWp.setTimeneed(wpl.getTimeneed());
-                            SharedInstance.getInstance().setWorkplaceForId(Long.parseLong(wpId), tmpWp);
+                            SharedInstance.getInstance().setExtendedWorkplaceForId(Long.parseLong(wpId), tmpWp);
                         }
                     }
                     ExtendedArticle extendedArticleWithAddAmount = SharedInstance.getInstance().getArticleForId(waitinglist.getItem());

@@ -31,6 +31,9 @@ import javax.xml.bind.JAXBException;
 import veloziped.ws1516.articles.ExtendedArticle;
 import veloziped.ws1516.disposal.Disposal;
 import veloziped.ws1516.disposal.PurchasingDisposal;
+import veloziped.ws1516.generated.Input.Input;
+import veloziped.ws1516.generated.Input.Orderlist;
+import veloziped.ws1516.generated.Input.Production;
 import veloziped.ws1516.generated.Results.Order;
 import veloziped.ws1516.generated.Results.Results;
 import veloziped.ws1516.production.CalculationMode;
@@ -56,7 +59,6 @@ public class MainUI extends javax.swing.JFrame {
     private PeriodDetail periodDetailN2 = new PeriodDetail(0, 0, 0);
     private PeriodDetail periodDetailN3 = new PeriodDetail(0, 0, 0);
     private PeriodDetail periodDetailN4 = new PeriodDetail(0, 0, 0);
-    private Locale currentLocale = Locale.getDefault();
 
     /**
      * Creates new form MainUI
@@ -3764,7 +3766,8 @@ public class MainUI extends javax.swing.JFrame {
     }
 
     private void reFillPurchasingDisposalTable(List<Order> orders) {
-        ResourceBundle i18n = Utils.getResourceBundle(this.currentLocale.getLanguage(), this.currentLocale.getCountry());
+        Locale locale = SharedInstance.getInstance().getCurrentLocale();
+        ResourceBundle i18n = Utils.getResourceBundle(locale.getLanguage(), locale.getCountry());
         DefaultTableModel model = (DefaultTableModel) jTablePurchasingDisposition.getModel();
 
         for (int i = model.getRowCount() - 1; i >= 0; i--) {
@@ -3780,7 +3783,8 @@ public class MainUI extends javax.swing.JFrame {
     }
 
     private void reFillStockChangeTable(Map<String, ExtendedArticle> articles) {
-        ResourceBundle i18n = Utils.getResourceBundle(this.currentLocale.getLanguage(), this.currentLocale.getCountry());
+        Locale locale = SharedInstance.getInstance().getCurrentLocale();
+        ResourceBundle i18n = Utils.getResourceBundle(locale.getLanguage(), locale.getCountry());
         DefaultTableModel model = (DefaultTableModel) jTableStockChange.getModel();
 
         for (int i = model.getRowCount() - 1; i >= 0; i--) {
@@ -3796,16 +3800,18 @@ public class MainUI extends javax.swing.JFrame {
         }
     }
 
-    private void reFillEProdList(Map<String, ExtendedArticle> articles) {
-        ResourceBundle i18n = Utils.getResourceBundle(this.currentLocale.getLanguage(), this.currentLocale.getCountry());
+    private void reFillEProdList(List<Production> pList) {
+        Locale locale = SharedInstance.getInstance().getCurrentLocale();
+        ResourceBundle i18n = Utils.getResourceBundle(locale.getLanguage(), locale.getCountry());
         DefaultTableModel model = (DefaultTableModel) jTableEProdList.getModel();
 
         for (int i = model.getRowCount() - 1; i >= 0; i--) {
             model.removeRow(i);
         }
 
-        for (ExtendedArticle article : articles.values()) {
-            model.addRow(new Object[]{article.getId(), i18n.getString(article.getName()), article.getPlannedProductionAmount()});
+        for (Production p : pList) {
+            ExtendedArticle article = SharedInstance.getInstance().getArticleForId(p.getArticle());
+            model.addRow(new Object[]{p.getArticle(), i18n.getString(article.getName()), p.getQuantity()});
         }
     }
 
@@ -3828,10 +3834,12 @@ public class MainUI extends javax.swing.JFrame {
     private void jButtonCalculateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCalculateActionPerformed
         // TODO add your handling code here:
 
+        //worklaod
         Map<String, WorkloadResult> workloadResults = WorkloadPlanning.getInstance()
                 .calculateWorkload(SharedInstance.getInstance().getExtendedWorkplaces());
         SharedInstance.getInstance().setWorkloadResults(workloadResults);
 
+        //calcualte which order arrive this period
         SharedInstance.getInstance().calcIncomingOrdersThisPeriod(
                 SharedInstance.getInstance().getFutureInwardStockMovement().getOrder());
 
@@ -3843,16 +3851,21 @@ public class MainUI extends javax.swing.JFrame {
         plan.setPeriodN4(periodDetailN4);
         SharedInstance.getInstance().setProductionPlan(plan);
 
+        //purchasing disposal
         List<Order> newOrders = PurchasingDisposal.getInstance().calculateOrders(
                 SharedInstance.getInstance().getExtendedArticles());
         SharedInstance.getInstance().setNewOrders(newOrders);
 
+        //stock
         Map<String, ExtendedArticle> articles = SharedInstance.getInstance().calcNewArticleStockValue();
+        
+        //production list order
+        List<Production> productionList = SharedInstance.getInstance().calculateProductionList();
 
         this.reFillWorkloadTable(workloadResults.values());
         this.reFillPurchasingDisposalTable(newOrders);
         this.reFillStockChangeTable(articles);
-        this.reFillEProdList(articles);
+        this.reFillEProdList(productionList);
 
         this.jTabbedPan.setEnabledAt(2, true);
         this.jTabbedPan.setEnabledAt(3, true);
@@ -3876,6 +3889,7 @@ public class MainUI extends javax.swing.JFrame {
             DefaultTableModel model = (DefaultTableModel) jTableEProdList.getModel();
             model.moveRow(row, row, row - 1);
             jTableEProdList.setRowSelectionInterval(row - 1, row - 1);
+            SharedInstance.getInstance().swapProductionListOrder(row, row - 1);
         }
     }//GEN-LAST:event_jButtonMoveUpActionPerformed
 
@@ -3886,6 +3900,7 @@ public class MainUI extends javax.swing.JFrame {
             DefaultTableModel model = (DefaultTableModel) jTableEProdList.getModel();
             model.moveRow(row, row, row + 1);
             jTableEProdList.setRowSelectionInterval(row + 1, row + 1);
+            SharedInstance.getInstance().swapProductionListOrder(row, row + 1);
         }
     }//GEN-LAST:event_jButtonMoveDownActionPerformed
 
@@ -4384,7 +4399,7 @@ public class MainUI extends javax.swing.JFrame {
 
     //util methods
     public void changeLanguage(String lang, String country) {
-        this.currentLocale = new Locale(lang, country);
+        SharedInstance.getInstance().setCurrentLocale(new Locale(lang, country));
         ResourceBundle i18n = Utils.getResourceBundle(lang, country);
 
         //menu
@@ -4449,10 +4464,15 @@ public class MainUI extends javax.swing.JFrame {
         }
 
         Map<String, ExtendedArticle> articles = SharedInstance.getInstance().getExtendedArticles();
+        
         if (articles != null && articles.size() > 0) {
             this.reFillStockChangeTable(articles);
-            //TODO: fill with correct values
-            this.reFillEProdList(articles);
+        }
+        
+        List<Production> pList = SharedInstance.getInstance().getProductionListCalculated();
+        
+        if (pList != null && pList.size()> 0) {
+            this.reFillEProdList(pList);
         }
 
         //labels
@@ -4524,7 +4544,8 @@ public class MainUI extends javax.swing.JFrame {
 
     private void setPeriodLabels() {
         //also used after xml import
-        ResourceBundle i18n = Utils.getResourceBundle(this.currentLocale.getLanguage(), this.currentLocale.getCountry());
+        Locale locale = SharedInstance.getInstance().getCurrentLocale();
+        ResourceBundle i18n = Utils.getResourceBundle(locale.getLanguage(), locale.getCountry());
         Long period = (long) -1;
         if (SharedInstance.getInstance().getResults() != null) {
             period = SharedInstance.getInstance().getResults().getPeriod();
