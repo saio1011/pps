@@ -5,6 +5,7 @@
  */
 package veloziped.ws1516.main;
 
+import java.awt.Panel;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -37,6 +38,7 @@ import veloziped.ws1516.production.Forecast;
 import veloziped.ws1516.production.PeriodDetail;
 import veloziped.ws1516.production.ProductionPlan;
 import veloziped.ws1516.util.IntegerField;
+import veloziped.ws1516.util.LoadHelpFile;
 import veloziped.ws1516.util.Utils;
 import veloziped.ws1516.workload.WorkloadPlanning;
 import veloziped.ws1516.workload.WorkloadResult;
@@ -103,6 +105,10 @@ public class MainUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jFrameHelpDialog = new javax.swing.JFrame();
+        jPanelHelpDialog = new javax.swing.JPanel();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        jTextAreaHelpFile = new javax.swing.JTextArea();
         jPanel1 = new javax.swing.JPanel();
         jButtonCalculate = new javax.swing.JButton();
         jButtonImportXml = new javax.swing.JButton();
@@ -523,9 +529,52 @@ public class MainUI extends javax.swing.JFrame {
         jMenuCalculationMode = new javax.swing.JMenu();
         jCheckBoxMenuItemCalculationModePessimistic = new javax.swing.JCheckBoxMenuItem();
         jCheckBoxMenuItemCalculationModeOptimistic = new javax.swing.JCheckBoxMenuItem();
+        jMenu1 = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
+
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("veloziped/ws1516/i18n/i18n"); // NOI18N
+        jFrameHelpDialog.setTitle(bundle.getString("HelpDialog")); // NOI18N
+        jFrameHelpDialog.setBounds(new java.awt.Rectangle(100, 23, 1000, 800));
+
+        jTextAreaHelpFile.setColumns(20);
+        jTextAreaHelpFile.setRows(5);
+        jScrollPane8.setViewportView(jTextAreaHelpFile);
+
+        javax.swing.GroupLayout jPanelHelpDialogLayout = new javax.swing.GroupLayout(jPanelHelpDialog);
+        jPanelHelpDialog.setLayout(jPanelHelpDialogLayout);
+        jPanelHelpDialogLayout.setHorizontalGroup(
+            jPanelHelpDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelHelpDialogLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane8, javax.swing.GroupLayout.DEFAULT_SIZE, 1081, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanelHelpDialogLayout.setVerticalGroup(
+            jPanelHelpDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelHelpDialogLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane8, javax.swing.GroupLayout.DEFAULT_SIZE, 592, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout jFrameHelpDialogLayout = new javax.swing.GroupLayout(jFrameHelpDialog.getContentPane());
+        jFrameHelpDialog.getContentPane().setLayout(jFrameHelpDialogLayout);
+        jFrameHelpDialogLayout.setHorizontalGroup(
+            jFrameHelpDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jFrameHelpDialogLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanelHelpDialog, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jFrameHelpDialogLayout.setVerticalGroup(
+            jFrameHelpDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jFrameHelpDialogLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanelHelpDialog, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("veloziped/ws1516/i18n/i18n"); // NOI18N
         setTitle(bundle.getString("pps")); // NOI18N
 
         jButtonCalculate.setText("Calculate");
@@ -710,7 +759,7 @@ public class MainUI extends javax.swing.JFrame {
                     .addComponent(jTextFieldPFPeriodN2HF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldPFPeriodN3HF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldPFPeriodN4HF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(434, Short.MAX_VALUE))
+                .addGap(84, 84, 84))
         );
 
         jTabbedPan.addTab("Production Forecast", jPanelProductionForecast);
@@ -3533,6 +3582,18 @@ public class MainUI extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenuSettings);
 
+        jMenu1.setText(bundle.getString("jMenuHelp")); // NOI18N
+
+        jMenuItem2.setText(bundle.getString("ShowHelpFile")); // NOI18N
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem2);
+
+        jMenuBar1.add(jMenu1);
+
         setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -3650,8 +3711,8 @@ public class MainUI extends javax.swing.JFrame {
                 entry.getKey().setText(String.valueOf(extArticles.get(entry.getValue()).getAdditionalAmount()));
             }
             if (entry.getKey().getName().endsWith("StockEndOfPeriod")) {
-//                entry.getKey().setText(String.valueOf(extArticles.get(entry.getValue()).getStockvalue()));
-                entry.getKey().setText("60");
+                entry.getKey().setText(String.valueOf(extArticles.get(entry.getValue()).getAmount()));
+//                entry.getKey().setText("60");
             }
             if (entry.getKey().getName().endsWith("WorkInProgress")) {
                 entry.getKey().setText("45");
@@ -3828,6 +3889,13 @@ public class MainUI extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButtonMoveDownActionPerformed
 
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        jFrameHelpDialog.setVisible(true);
+        jTextAreaHelpFile.setEditable(false);
+        LoadHelpFile hp = new LoadHelpFile("file/HelpFile.txt");
+        jTextAreaHelpFile.setText(hp.toString());
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
     private void exportXML() {
         JFileChooser chooser = new JFileChooser();
         chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
@@ -3897,6 +3965,7 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItemEnglish;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItemFrench;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItemRomanien;
+    private javax.swing.JFrame jFrameHelpDialog;
     private javax.swing.JLabel jLabel100;
     private javax.swing.JLabel jLabel101;
     private javax.swing.JLabel jLabel102;
@@ -4035,9 +4104,11 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelPeriodN3PF;
     private javax.swing.JLabel jLabelPeriodNPF;
     private javax.swing.JLabel jLabelSattelCpl;
+    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu jMenuCalculationMode;
     private javax.swing.JMenu jMenuFile;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItemExportFile;
     private javax.swing.JMenuItem jMenuItemImportFile;
     private javax.swing.JMenu jMenuLanguage;
@@ -4046,6 +4117,7 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelDF;
     private javax.swing.JPanel jPanelEProdList;
     private javax.swing.JPanel jPanelHF;
+    private javax.swing.JPanel jPanelHelpDialog;
     private javax.swing.JPanel jPanelInHouseProduction;
     private javax.swing.JPanel jPanelKF;
     private javax.swing.JPanel jPanelProductionForecast;
@@ -4058,6 +4130,7 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator10;
     private javax.swing.JSeparator jSeparator11;
@@ -4078,6 +4151,7 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JTable jTablePurchasingDisposition;
     private javax.swing.JTable jTableStockChange;
     private javax.swing.JTable jTableWorkloadPlanning;
+    private javax.swing.JTextArea jTextAreaHelpFile;
     private javax.swing.JTextField jTextFieldDFE11OrdersInQueque;
     private javax.swing.JTextField jTextFieldDFE11PlannedStock;
     private javax.swing.JTextField jTextFieldDFE11ProductionOrders;
@@ -6519,4 +6593,5 @@ public class MainUI extends javax.swing.JFrame {
         }
         return fields;
     }
+    
 }
