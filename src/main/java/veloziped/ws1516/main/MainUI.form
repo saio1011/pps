@@ -1135,6 +1135,7 @@
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
                                 <Property name="enabled" type="boolean" value="false"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFP1SalesOrders" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField(&quot;0&quot;)"/>
@@ -1144,6 +1145,7 @@
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
                                 <Property name="enabled" type="boolean" value="false"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE51SalesOrders" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1153,6 +1155,7 @@
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
                                 <Property name="enabled" type="boolean" value="false"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE16SalesOrders" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1162,6 +1165,7 @@
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
                                 <Property name="enabled" type="boolean" value="false"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE50SalesOrders" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1172,6 +1176,7 @@
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
                                 <Property name="enabled" type="boolean" value="false"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE4SalesOrders" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1181,6 +1186,7 @@
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
                                 <Property name="enabled" type="boolean" value="false"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE10SalesOrders" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1190,6 +1196,7 @@
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
                                 <Property name="enabled" type="boolean" value="false"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE49SalesOrders" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1199,6 +1206,7 @@
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
                                 <Property name="enabled" type="boolean" value="false"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE7SalesOrders" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1208,6 +1216,7 @@
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
                                 <Property name="enabled" type="boolean" value="false"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE13SalesOrders" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1217,6 +1226,7 @@
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
                                 <Property name="enabled" type="boolean" value="false"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE18SalesOrders" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1225,6 +1235,7 @@
                             <Component class="javax.swing.JTextField" name="jTextFieldKFE26StockEndOfPeriod">
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE26StockEndOfPeriod" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1233,6 +1244,7 @@
                             <Component class="javax.swing.JTextField" name="jTextFieldKFP1StockEndOfPeriod">
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFP1StockEndOfPeriod" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1241,6 +1253,7 @@
                             <Component class="javax.swing.JTextField" name="jTextFieldKFE51StockEndOfPeriod">
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE51StockEndOfPeriod" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1249,6 +1262,7 @@
                             <Component class="javax.swing.JTextField" name="jTextFieldKFE17StockEndOfPeriod">
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE17StockEndOfPeriod" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1257,6 +1271,7 @@
                             <Component class="javax.swing.JTextField" name="jTextFieldKFE16StockEndOfPeriod">
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE16StockEndOfPeriod" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1265,6 +1280,7 @@
                             <Component class="javax.swing.JTextField" name="jTextFieldKFE50StockEndOfPeriod">
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE50StockEndOfPeriod" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1273,6 +1289,7 @@
                             <Component class="javax.swing.JTextField" name="jTextFieldKFE10StockEndOfPeriod">
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE10StockEndOfPeriod" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1281,6 +1298,7 @@
                             <Component class="javax.swing.JTextField" name="jTextFieldKFE4StockEndOfPeriod">
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE4StockEndOfPeriod" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1289,6 +1307,7 @@
                             <Component class="javax.swing.JTextField" name="jTextFieldKFE49StockEndOfPeriod">
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE49StockEndOfPeriod" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1297,6 +1316,7 @@
                             <Component class="javax.swing.JTextField" name="jTextFieldKFE13StockEndOfPeriod">
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE13StockEndOfPeriod" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1305,6 +1325,7 @@
                             <Component class="javax.swing.JTextField" name="jTextFieldKFE7StockEndOfPeriod">
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE7StockEndOfPeriod" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1313,6 +1334,7 @@
                             <Component class="javax.swing.JTextField" name="jTextFieldKFE18StockEndOfPeriod">
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE18StockEndOfPeriod" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1321,6 +1343,7 @@
                             <Component class="javax.swing.JTextField" name="jTextFieldKFE26OrdersInQueque">
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE26OrdersInQueque" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1329,6 +1352,7 @@
                             <Component class="javax.swing.JTextField" name="jTextFieldKFP1OrdersInQueque">
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFP1OrdersInQueque" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1337,6 +1361,7 @@
                             <Component class="javax.swing.JTextField" name="jTextFieldKFE51OrdersInQueque">
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE51OrdersInQueque" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1345,6 +1370,7 @@
                             <Component class="javax.swing.JTextField" name="jTextFieldKFE16OrdersInQueque">
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE16OrdersInQueque" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1353,6 +1379,7 @@
                             <Component class="javax.swing.JTextField" name="jTextFieldKFE17OrdersInQueque">
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE17OrdersInQueque" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1361,6 +1388,7 @@
                             <Component class="javax.swing.JTextField" name="jTextFieldKFE50OrdersInQueque">
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE50OrdersInQueque" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1369,6 +1397,7 @@
                             <Component class="javax.swing.JTextField" name="jTextFieldKFE4OrdersInQueque">
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE4OrdersInQueque" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1377,6 +1406,7 @@
                             <Component class="javax.swing.JTextField" name="jTextFieldKFE10OrdersInQueque">
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE10OrdersInQueque" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1385,6 +1415,7 @@
                             <Component class="javax.swing.JTextField" name="jTextFieldKFE49OrdersInQueque">
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE49OrdersInQueque" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1393,6 +1424,7 @@
                             <Component class="javax.swing.JTextField" name="jTextFieldKFE7OrdersInQueque">
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE7OrdersInQueque" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1401,6 +1433,7 @@
                             <Component class="javax.swing.JTextField" name="jTextFieldKFE13OrdersInQueque">
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE13OrdersInQueque" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1409,6 +1442,7 @@
                             <Component class="javax.swing.JTextField" name="jTextFieldKFE18OrdersInQueque">
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE18OrdersInQueque" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1417,6 +1451,7 @@
                             <Component class="javax.swing.JTextField" name="jTextFieldKFE26WorkInProgress">
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE26WorkInProgress" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1425,6 +1460,7 @@
                             <Component class="javax.swing.JTextField" name="jTextFieldKFP1WorkInProgress">
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFP1WorkInProgress" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1433,6 +1469,7 @@
                             <Component class="javax.swing.JTextField" name="jTextFieldKFE51WorkInProgress">
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE51WorkInProgress" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1441,6 +1478,7 @@
                             <Component class="javax.swing.JTextField" name="jTextFieldKFE16WorkInProgress">
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE16WorkInProgress" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1449,6 +1487,7 @@
                             <Component class="javax.swing.JTextField" name="jTextFieldKFE17WorkInProgress">
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE17WorkInProgress" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1457,6 +1496,7 @@
                             <Component class="javax.swing.JTextField" name="jTextFieldKFE50WorkInProgress">
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE50WorkInProgress" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1465,6 +1505,7 @@
                             <Component class="javax.swing.JTextField" name="jTextFieldKFE4WorkInProgress">
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE4WorkInProgress" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1473,6 +1514,7 @@
                             <Component class="javax.swing.JTextField" name="jTextFieldKFE10WorkInProgress">
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE10WorkInProgress" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1481,6 +1523,7 @@
                             <Component class="javax.swing.JTextField" name="jTextFieldKFE49WorkInProgress">
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE49WorkInProgress" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1489,6 +1532,7 @@
                             <Component class="javax.swing.JTextField" name="jTextFieldKFE7WorkInProgress">
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE7WorkInProgress" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1497,6 +1541,7 @@
                             <Component class="javax.swing.JTextField" name="jTextFieldKFE13WorkInProgress">
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE13WorkInProgress" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1505,6 +1550,7 @@
                             <Component class="javax.swing.JTextField" name="jTextFieldKFE18WorkInProgress">
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE18WorkInProgress" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1514,6 +1560,7 @@
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
                                 <Property name="enabled" type="boolean" value="false"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE26ProductionOrders" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1523,6 +1570,7 @@
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
                                 <Property name="enabled" type="boolean" value="false"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE51ProductionOrders" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1532,6 +1580,7 @@
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
                                 <Property name="enabled" type="boolean" value="false"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFP1ProductionOrders" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1541,6 +1590,7 @@
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
                                 <Property name="enabled" type="boolean" value="false"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE16ProductionOrders" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1550,6 +1600,7 @@
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
                                 <Property name="enabled" type="boolean" value="false"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE17ProductionOrders" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1559,6 +1610,7 @@
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
                                 <Property name="enabled" type="boolean" value="false"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE50ProductionOrders" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1568,6 +1620,7 @@
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
                                 <Property name="enabled" type="boolean" value="false"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE4ProductionOrders" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1577,6 +1630,7 @@
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
                                 <Property name="enabled" type="boolean" value="false"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE10ProductionOrders" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1586,6 +1640,7 @@
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
                                 <Property name="enabled" type="boolean" value="false"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE49ProductionOrders" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1595,6 +1650,7 @@
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
                                 <Property name="enabled" type="boolean" value="false"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE7ProductionOrders" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1604,6 +1660,7 @@
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
                                 <Property name="enabled" type="boolean" value="false"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE13ProductionOrders" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1613,6 +1670,7 @@
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
                                 <Property name="enabled" type="boolean" value="false"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE18ProductionOrders" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1621,6 +1679,7 @@
                             <Component class="javax.swing.JTextField" name="jTextFieldKFP1PlannedStock">
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFP1PlannedStock" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1629,6 +1688,7 @@
                             <Component class="javax.swing.JTextField" name="jTextFieldKFE26PlannedStock">
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE26PlannedStock" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1637,6 +1697,7 @@
                             <Component class="javax.swing.JTextField" name="jTextFieldKFE51PlannedStock">
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE51PlannedStock" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1645,6 +1706,7 @@
                             <Component class="javax.swing.JTextField" name="jTextFieldKFE16PlannedStock">
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE16PlannedStock" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1653,6 +1715,7 @@
                             <Component class="javax.swing.JTextField" name="jTextFieldKFE17PlannedStock">
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE17PlannedStock" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1661,6 +1724,7 @@
                             <Component class="javax.swing.JTextField" name="jTextFieldKFE50PlannedStock">
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE50PlannedStock" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1669,6 +1733,7 @@
                             <Component class="javax.swing.JTextField" name="jTextFieldKFE4PlannedStock">
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE4PlannedStock" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1677,6 +1742,7 @@
                             <Component class="javax.swing.JTextField" name="jTextFieldKFE10PlannedStock">
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE10PlannedStock" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1685,6 +1751,7 @@
                             <Component class="javax.swing.JTextField" name="jTextFieldKFE49PlannedStock">
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE49PlannedStock" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1693,6 +1760,7 @@
                             <Component class="javax.swing.JTextField" name="jTextFieldKFE7PlannedStock">
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE7PlannedStock" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1701,6 +1769,7 @@
                             <Component class="javax.swing.JTextField" name="jTextFieldKFE13PlannedStock">
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE13PlannedStock" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -1709,6 +1778,7 @@
                             <Component class="javax.swing.JTextField" name="jTextFieldKFE18PlannedStock">
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE18PlannedStock" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -2056,6 +2126,7 @@
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
                                 <Property name="enabled" type="boolean" value="false"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE26SalesOrders" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -2073,6 +2144,7 @@
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="4"/>
                                 <Property name="enabled" type="boolean" value="false"/>
+                                <Property name="name" type="java.lang.String" value="jTextFieldKFE17SalesOrders" noResource="true"/>
                               </Properties>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField()"/>
@@ -5808,67 +5880,7 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-
                 <Container class="javax.swing.JScrollPane" name="jScrollPane1">
-
-                <Component class="javax.swing.JTable" name="jTableWorkloadPlanning">
-                  <Properties>
-                    <Property name="autoCreateRowSorter" type="boolean" value="true"/>
-                    <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                      <Table columnCount="7" rowCount="0">
-                        <Column editable="false" title="Workplace" type="java.lang.Long"/>
-                        <Column editable="true" title="Last Cycle Times" type="java.lang.Long"/>
-                        <Column editable="false" title="Capacity Needed" type="java.lang.Long"/>
-                        <Column editable="false" title="Overtime p. Day" type="java.lang.Long"/>
-                        <Column editable="false" title="Shifts" type="java.lang.Long"/>
-                        <Column editable="false" title="Free Capacity" type="java.lang.Long"/>
-                        <Column editable="false" title="Workload pct" type="java.lang.Double"/>
-                      </Table>
-                    </Property>
-                    <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
-                      <TableColumnModel selectionModel="0">
-                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                          <Title/>
-                          <Editor/>
-                          <Renderer/>
-                        </Column>
-                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                          <Title/>
-                          <Editor/>
-                          <Renderer/>
-                        </Column>
-                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                          <Title/>
-                          <Editor/>
-                          <Renderer/>
-                        </Column>
-                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                          <Title/>
-                          <Editor/>
-                          <Renderer/>
-                        </Column>
-                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                          <Title/>
-                          <Editor/>
-                          <Renderer/>
-                        </Column>
-                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                          <Title/>
-                          <Editor/>
-                          <Renderer/>
-                        </Column>
-                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                          <Title/>
-                          <Editor/>
-                          <Renderer/>
-                        </Column>
-                      </TableColumnModel>
-                    </Property>
-                    <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
-                      <TableHeader reorderingAllowed="false" resizingAllowed="true"/>
-                    </Property>
-                  </Properties>
-                  </Component> <!-- blabla-->>
                   <AuxValues>
                     <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                   </AuxValues>
