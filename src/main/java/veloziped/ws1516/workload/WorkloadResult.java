@@ -11,6 +11,8 @@ import veloziped.ws1516.main.SharedInstance;
 import veloziped.ws1516.workplace.*;
 import static java.lang.Math.round;
 import static java.lang.Math.round;
+import static java.lang.Math.round;
+import static java.lang.Math.round;
 
 /**
  *

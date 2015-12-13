@@ -9,12 +9,16 @@ import com.google.common.math.DoubleMath;
 import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
+import java.util.ResourceBundle;
+import javax.swing.JOptionPane;
 import veloziped.ws1516.articles.ArticleType;
 import veloziped.ws1516.articles.ExtendedArticle;
 import veloziped.ws1516.generated.Results.Order;
 import veloziped.ws1516.main.SharedInstance;
 import veloziped.ws1516.production.ProductionPlan;
+import veloziped.ws1516.util.Utils;
 
 /**
  *
@@ -152,7 +156,10 @@ public class PurchasingDisposal {
         } else if (fastDeliveryOk) {
             mode = OrderMode.FAST;
         } else {
-            //what todo if fast order is not enough?
+            Locale locale = SharedInstance.getInstance().getCurrentLocale();
+            ResourceBundle i18n = Utils.getResourceBundle(locale.getLanguage(), locale.getCountry());
+            JOptionPane.showMessageDialog(null, i18n.getString("ProductionTooHigh"), null, JOptionPane.WARNING_MESSAGE);
+            //which mode?
             throw new IllegalStateException();
         }
 

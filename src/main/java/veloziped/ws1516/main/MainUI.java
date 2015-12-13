@@ -57,7 +57,6 @@ public class MainUI extends javax.swing.JFrame {
     private PeriodDetail periodDetailN2 = new PeriodDetail(0, 0, 0);
     private PeriodDetail periodDetailN3 = new PeriodDetail(0, 0, 0);
     private PeriodDetail periodDetailN4 = new PeriodDetail(0, 0, 0);
-    private Locale currentLocale = Locale.getDefault();
 
     /**
      * Creates new form MainUI
@@ -3649,7 +3648,8 @@ public class MainUI extends javax.swing.JFrame {
     }
 
     private void reFillPurchasingDisposalTable(List<Order> orders) {
-        ResourceBundle i18n = Utils.getResourceBundle(this.currentLocale.getLanguage(), this.currentLocale.getCountry());
+        Locale locale = SharedInstance.getInstance().getCurrentLocale();
+        ResourceBundle i18n = Utils.getResourceBundle(locale.getLanguage(), locale.getCountry());
         DefaultTableModel model = (DefaultTableModel) jTablePurchasingDisposition.getModel();
 
         for (int i = model.getRowCount() - 1; i >= 0; i--) {
@@ -3665,7 +3665,8 @@ public class MainUI extends javax.swing.JFrame {
     }
 
     private void reFillStockChangeTable(Map<String, ExtendedArticle> articles) {
-        ResourceBundle i18n = Utils.getResourceBundle(this.currentLocale.getLanguage(), this.currentLocale.getCountry());
+        Locale locale = SharedInstance.getInstance().getCurrentLocale();
+        ResourceBundle i18n = Utils.getResourceBundle(locale.getLanguage(), locale.getCountry());
         DefaultTableModel model = (DefaultTableModel) jTableStockChange.getModel();
 
         for (int i = model.getRowCount() - 1; i >= 0; i--) {
@@ -3682,7 +3683,8 @@ public class MainUI extends javax.swing.JFrame {
     }
 
     private void reFillEProdList(List<Production> pList) {
-        ResourceBundle i18n = Utils.getResourceBundle(this.currentLocale.getLanguage(), this.currentLocale.getCountry());
+        Locale locale = SharedInstance.getInstance().getCurrentLocale();
+        ResourceBundle i18n = Utils.getResourceBundle(locale.getLanguage(), locale.getCountry());
         DefaultTableModel model = (DefaultTableModel) jTableEProdList.getModel();
 
         for (int i = model.getRowCount() - 1; i >= 0; i--) {
@@ -4266,7 +4268,7 @@ public class MainUI extends javax.swing.JFrame {
 
     //util methods
     public void changeLanguage(String lang, String country) {
-        this.currentLocale = new Locale(lang, country);
+        SharedInstance.getInstance().setCurrentLocale(new Locale(lang, country));
         ResourceBundle i18n = Utils.getResourceBundle(lang, country);
 
         //menu
@@ -4411,7 +4413,8 @@ public class MainUI extends javax.swing.JFrame {
 
     private void setPeriodLabels() {
         //also used after xml import
-        ResourceBundle i18n = Utils.getResourceBundle(this.currentLocale.getLanguage(), this.currentLocale.getCountry());
+        Locale locale = SharedInstance.getInstance().getCurrentLocale();
+        ResourceBundle i18n = Utils.getResourceBundle(locale.getLanguage(), locale.getCountry());
         Long period = (long) -1;
         if (SharedInstance.getInstance().getResults() != null) {
             period = SharedInstance.getInstance().getResults().getPeriod();

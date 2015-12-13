@@ -15,6 +15,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import javax.swing.JOptionPane;
 import javax.xml.bind.JAXBContext;
@@ -63,7 +64,6 @@ public class SharedInstance {
     private Forecast forecast = new Forecast();
     private Map<String, ExtendedWorkplace> extendedWorkplaces;
     private Map<String, ExtendedArticle> extendedArticles;
-    private Map<String, Workplace> workplaces;
     private Map<String, Order> incomingOrdersThisPeriod;
     private ProductionPlan productionPlan;
     private Results results;
@@ -75,6 +75,7 @@ public class SharedInstance {
     private List<Item> sellDirect;
     private Map<String, WorkloadResult> workloadResults;
     private List<Production> productionListCalculated;
+    private Locale currentLocale = Locale.getDefault();
 
     private Result result;
     private Inwardstockmovement inwardStockMovement;
@@ -86,6 +87,14 @@ public class SharedInstance {
     private Completedorders completeOrder;
     private Futureinwardstockmovement futureInwardStockMovement;
     private Warehousestock warehouseStock;
+
+    public Locale getCurrentLocale() {
+        return currentLocale;
+    }
+
+    public void setCurrentLocale(Locale currentLocale) {
+        this.currentLocale = currentLocale;
+    }
 
     public List<Production> getProductionListCalculated() {
         return productionListCalculated;
@@ -252,22 +261,11 @@ public class SharedInstance {
         return result;
     }
 
-    public boolean setWorkplaceForId(Long id, ExtendedWorkplace workplace) {
+    public boolean setExtendedWorkplaceForId(Long id, ExtendedWorkplace workplace) {
         boolean result = false;
 
         if (id != null) {
             extendedWorkplaces.put(String.valueOf(id), workplace);
-            result = true;
-        }
-
-        return result;
-    }
-
-    public boolean setWorkplaceForId(Long id, Workplace workplace) {
-        boolean result = false;
-
-        if (id != null) {
-            workplaces.put(String.valueOf(id), workplace);
             result = true;
         }
 
