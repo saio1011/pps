@@ -5,12 +5,12 @@
  */
 package veloziped.ws1516.util;
 
-import java.io.File;
 import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
-import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.IOUtils;
 
 /**
  *
@@ -23,11 +23,11 @@ public class LoadHelpFile {
     public LoadHelpFile(String filename) {
         try {
             ClassLoader classLoader = getClass().getClassLoader();
-            File file = new File(classLoader.getResource(filename).getFile());
-            if (file.exists()) {
-                helpContent = FileUtils.readFileToString(file);
+            InputStream valueHelpStreamStream = classLoader.getResourceAsStream(filename);
+            if (valueHelpStreamStream != null) {
+                helpContent = IOUtils.toString(valueHelpStreamStream, StandardCharsets.UTF_8);
             } else {
-                JOptionPane.showMessageDialog(null, "File Does not Exist \n" + file.getPath() + "\n" + file.toString());
+                JOptionPane.showMessageDialog(null, "File Does not Exist \n");
             }
         } catch (Exception ex) {
             Logger.getLogger(LoadHelpFile.class.getName()).log(Level.SEVERE, null, ex);

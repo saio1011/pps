@@ -6,9 +6,12 @@
 package veloziped.ws1516.main;
 
 import java.io.FileReader;
+import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import org.apache.commons.io.IOUtils;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -42,9 +45,9 @@ public class SetupInstance {
         articleValues = new HashMap<>();
 
         try {
-            FileReader reader = new FileReader("src/main/java/veloziped/ws1516/json/ArticleValues.json");
-
-            JSONArray a = (JSONArray) parser.parse(reader);
+            ClassLoader classLoader = getClass().getClassLoader();
+            InputStream articleValueStream = classLoader.getResourceAsStream("file/ArticleValues.json");
+            JSONArray a = (JSONArray) parser.parse(IOUtils.toString(articleValueStream, StandardCharsets.UTF_8));
 
             for (Object o : a) {
                 JSONObject articleValues = (JSONObject) o;
@@ -64,9 +67,9 @@ public class SetupInstance {
         workplaceValues = new HashMap<>();
 
         try {
-            FileReader reader = new FileReader("src/main/java/veloziped/ws1516/json/WorkplaceValues.json");
-
-            JSONArray a = (JSONArray) parser.parse(reader);
+            ClassLoader classLoader = getClass().getClassLoader();
+            InputStream workPlaceStream = classLoader.getResourceAsStream("file/WorkplaceValues.json");
+            JSONArray a = (JSONArray) parser.parse(IOUtils.toString(workPlaceStream, StandardCharsets.UTF_8));
 
             for (Object o : a) {
                 JSONObject workplace = (JSONObject) o;

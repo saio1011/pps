@@ -1,0 +1,466 @@
+[
+    {
+        "id": 1,
+        "defaults": {
+            "firstShiftWage": 0.45,
+            "secondShiftWage": 0.55,
+            "thirdShiftWage": 0.7,
+            "overtimeWage": 0.9,
+            "variableMachineCosts": 0.05,
+            "fixMachineCosts": 0.01,
+            "processTimes": [{
+                    "articleId": 49,
+                    "runTime": 6,
+                    "setupTime": 20
+                }, {
+                    "articleId": 54,
+                    "runTime": 6,
+                    "setupTime": 20
+                }, {
+                    "articleId": 29,
+                    "runTime": 6,
+                    "setupTime": 20
+                }]
+        }
+    },
+    {
+        "id": 2,
+        "defaults": {
+            "firstShiftWage": 0.45,
+            "secondShiftWage": 0.55,
+            "thirdShiftWage": 0.7,
+            "overtimeWage": 0.9,
+            "variableMachineCosts": 0.05,
+            "fixMachineCosts": 0.01,
+            "processTimes": [{
+                    "articleId": 50,
+                    "runTime": 5,
+                    "setupTime": 20
+                }, {
+                    "articleId": 55,
+                    "runTime": 5,
+                    "setupTime": 30
+                }, {
+                    "articleId": 30,
+                    "runTime": 5,
+                    "setupTime": 30
+                }]
+        }
+    },
+    {
+        "id": 3,
+        "defaults": {
+            "firstShiftWage": 0.45,
+            "secondShiftWage": 0.55,
+            "thirdShiftWage": 0.7,
+            "overtimeWage": 0.9,
+            "variableMachineCosts": 0.05,
+            "fixMachineCosts": 0.01,
+            "processTimes": [{
+                    "articleId": 51,
+                    "runTime": 5,
+                    "setupTime": 20
+                }, {
+                    "articleId": 56,
+                    "runTime": 6,
+                    "setupTime": 20
+                }, {
+                    "articleId": 31,
+                    "runTime": 6,
+                    "setupTime": 20
+                }]
+        }
+    },
+    {
+        "id": 4,
+        "defaults": {
+            "firstShiftWage": 0.45,
+            "secondShiftWage": 0.55,
+            "thirdShiftWage": 0.7,
+            "overtimeWage": 0.9,
+            "variableMachineCosts": 0.05,
+            "fixMachineCosts": 0.01,
+            "processTimes": [{
+                    "articleId": 1,
+                    "runTime": 6,
+                    "setupTime": 30
+                }, {
+                    "articleId": 2,
+                    "runTime": 7,
+                    "setupTime": 20
+                }, {
+                    "articleId": 3,
+                    "runTime": 7,
+                    "setupTime": 30
+                }]
+        }
+    },
+    {
+        "id": 5,
+        "defaults": {
+            "firstShiftWage": 0.0,
+            "secondShiftWage": 0.0,
+            "thirdShiftWage": 0.0,
+            "overtimeWage": 0.0,
+            "variableMachineCosts": 0.0,
+            "fixMachineCosts": 0.0,
+            "processTimes": []
+        }
+    },
+    {
+        "id": 6,
+        "defaults": {
+            "firstShiftWage": 0.45,
+            "secondShiftWage": 0.55,
+            "thirdShiftWage": 0.7,
+            "overtimeWage": 0.9,
+            "variableMachineCosts": 0.3,
+            "fixMachineCosts": 0.1,
+            "processTimes": [{
+                    "articleId": 16,
+                    "runTime": 2,
+                    "setupTime": 15
+                }, {
+                    "articleId": 18,
+                    "runTime": 3,
+                    "setupTime": 15
+                }, {
+                    "articleId": 19,
+                    "runTime": 3,
+                    "setupTime": 15
+                }, {
+                    "articleId": 20,
+                    "runTime": 3,
+                    "setupTime": 15
+                }]
+        }
+    },
+    {
+        "id": 7,
+        "defaults": {
+            "firstShiftWage": 0.45,
+            "secondShiftWage": 0.55,
+            "thirdShiftWage": 0.7,
+            "overtimeWage": 0.9,
+            "variableMachineCosts": 0.3,
+            "fixMachineCosts": 0.1,
+            "processTimes": [{
+                    "articleId": 10,
+                    "runTime": 2,
+                    "setupTime": 20
+                }, {
+                    "articleId": 11,
+                    "runTime": 2,
+                    "setupTime": 20
+                }, {
+                    "articleId": 12,
+                    "runTime": 2,
+                    "setupTime": 20
+                }, {
+                    "articleId": 13,
+                    "runTime": 2,
+                    "setupTime": 20
+                }, {
+                    "articleId": 14,
+                    "runTime": 2,
+                    "setupTime": 20
+                }, {
+                    "articleId": 15,
+                    "runTime": 2,
+                    "setupTime": 20
+                }, {
+                    "articleId": 18,
+                    "runTime": 2,
+                    "setupTime": 20
+                }, {
+                    "articleId": 19,
+                    "runTime": 2,
+                    "setupTime": 20
+                }, {
+                    "articleId": 20,
+                    "runTime": 2,
+                    "setupTime": 20
+                }, {
+                    "articleId": 26,
+                    "runTime": 2,
+                    "setupTime": 20
+                }]
+        }
+    },
+    {
+        "id": 8,
+        "defaults": {
+            "firstShiftWage": 0.45,
+            "secondShiftWage": 0.55,
+            "thirdShiftWage": 0.7,
+            "overtimeWage": 0.9,
+            "variableMachineCosts": 0.3,
+            "fixMachineCosts": 0.1,
+            "processTimes": [{
+                    "articleId": 10,
+                    "runTime": 1,
+                    "setupTime": 15
+                }, {
+                    "articleId": 11,
+                    "runTime": 2,
+                    "setupTime": 15
+                }, {
+                    "articleId": 12,
+                    "runTime": 2,
+                    "setupTime": 15
+                }, {
+                    "articleId": 13,
+                    "runTime": 1,
+                    "setupTime": 15
+                }, {
+                    "articleId": 14,
+                    "runTime": 2,
+                    "setupTime": 15
+                }, {
+                    "articleId": 15,
+                    "runTime": 2,
+                    "setupTime": 15
+                }, {
+                    "articleId": 18,
+                    "runTime": 3,
+                    "setupTime": 20
+                }, {
+                    "articleId": 19,
+                    "runTime": 3,
+                    "setupTime": 25
+                }, {
+                    "articleId": 20,
+                    "runTime": 3,
+                    "setupTime": 20
+                }]
+        }
+    },
+    {
+        "id": 9,
+        "defaults": {
+            "firstShiftWage": 0.45,
+            "secondShiftWage": 0.55,
+            "thirdShiftWage": 0.7,
+            "overtimeWage": 0.9,
+            "variableMachineCosts": 0.8,
+            "fixMachineCosts": 0.25,
+            "processTimes": [{
+                    "articleId": 10,
+                    "runTime": 3,
+                    "setupTime": 15
+                }, {
+                    "articleId": 11,
+                    "runTime": 3,
+                    "setupTime": 15
+                }, {
+                    "articleId": 12,
+                    "runTime": 3,
+                    "setupTime": 15
+                }, {
+                    "articleId": 13,
+                    "runTime": 3,
+                    "setupTime": 15
+                }, {
+                    "articleId": 14,
+                    "runTime": 3,
+                    "setupTime": 15
+                }, {
+                    "articleId": 15,
+                    "runTime": 3,
+                    "setupTime": 15
+                }, {
+                    "articleId": 18,
+                    "runTime": 2,
+                    "setupTime": 15
+                }, {
+                    "articleId": 19,
+                    "runTime": 2,
+                    "setupTime": 25
+                }, {
+                    "articleId": 20,
+                    "runTime": 2,
+                    "setupTime": 15
+                }]
+        }
+    },
+    {
+        "id": 10,
+        "defaults": {
+            "firstShiftWage": 0.45,
+            "secondShiftWage": 0.55,
+            "thirdShiftWage": 0.7,
+            "overtimeWage": 0.9,
+            "variableMachineCosts": 0.3,
+            "fixMachineCosts": 0.1,
+            "processTimes": [{
+                    "articleId": 4,
+                    "runTime": 4,
+                    "setupTime": 20
+                }, {
+                    "articleId": 5,
+                    "runTime": 4,
+                    "setupTime": 20
+                }, {
+                    "articleId": 6,
+                    "runTime": 4,
+                    "setupTime": 20
+                }, {
+                    "articleId": 7,
+                    "runTime": 4,
+                    "setupTime": 20
+                }, {
+                    "articleId": 8,
+                    "runTime": 4,
+                    "setupTime": 20
+                }, {
+                    "articleId": 9,
+                    "runTime": 4,
+                    "setupTime": 20
+                }]
+        }
+    },
+    {
+        "id": 11,
+        "defaults": {
+            "firstShiftWage": 0.45,
+            "secondShiftWage": 0.55,
+            "thirdShiftWage": 0.7,
+            "overtimeWage": 0.9,
+            "variableMachineCosts": 0.3,
+            "fixMachineCosts": 0.1,
+            "processTimes": [{
+                    "articleId": 4,
+                    "runTime": 4,
+                    "setupTime": 10
+                }, {
+                    "articleId": 5,
+                    "runTime": 4,
+                    "setupTime": 10
+                }, {
+                    "articleId": 6,
+                    "runTime": 4,
+                    "setupTime": 20
+                }, {
+                    "articleId": 7,
+                    "runTime": 4,
+                    "setupTime": 20
+                }, {
+                    "articleId": 8,
+                    "runTime": 4,
+                    "setupTime": 20
+                }, {
+                    "articleId": 9,
+                    "runTime": 4,
+                    "setupTime": 20
+                }]
+        }
+    },
+    {
+        "id": 12,
+        "defaults": {
+            "firstShiftWage": 0.45,
+            "secondShiftWage": 0.55,
+            "thirdShiftWage": 0.7,
+            "overtimeWage": 0.9,
+            "variableMachineCosts": 0.3,
+            "fixMachineCosts": 0.1,
+            "processTimes": [{
+                    "articleId": 10,
+                    "runTime": 3,
+                    "setupTime": 0
+                }, {
+                    "articleId": 11,
+                    "runTime": 3,
+                    "setupTime": 0
+                }, {
+                    "articleId": 12,
+                    "runTime": 3,
+                    "setupTime": 0
+                }, {
+                    "articleId": 13,
+                    "runTime": 3,
+                    "setupTime": 0
+                }, {
+                    "articleId": 14,
+                    "runTime": 3,
+                    "setupTime": 0
+                }, {
+                    "articleId": 15,
+                    "runTime": 3,
+                    "setupTime": 0
+                }]
+        }
+    },
+    {
+        "id": 13,
+        "defaults": {
+            "firstShiftWage": 0.45,
+            "secondShiftWage": 0.55,
+            "thirdShiftWage": 0.7,
+            "overtimeWage": 0.9,
+            "variableMachineCosts": 0.5,
+            "fixMachineCosts": 0.15,
+            "processTimes": [{
+                    "articleId": 10,
+                    "runTime": 2,
+                    "setupTime": 0
+                }, {
+                    "articleId": 11,
+                    "runTime": 2,
+                    "setupTime": 0
+                }, {
+                    "articleId": 12,
+                    "runTime": 2,
+                    "setupTime": 0
+                }, {
+                    "articleId": 13,
+                    "runTime": 2,
+                    "setupTime": 0
+                }, {
+                    "articleId": 14,
+                    "runTime": 2,
+                    "setupTime": 0
+                }, {
+                    "articleId": 15,
+                    "runTime": 2,
+                    "setupTime": 0
+                }]
+        }
+    },
+    {
+        "id": 14,
+        "defaults": {
+            "firstShiftWage": 0.45,
+            "secondShiftWage": 0.55,
+            "thirdShiftWage": 0.7,
+            "overtimeWage": 0.9,
+            "variableMachineCosts": 0.05,
+            "fixMachineCosts": 0.01,
+            "processTimes": [{
+                    "articleId": 16,
+                    "runTime": 3,
+                    "setupTime": 0
+                }]
+        }
+    },
+    {
+        "id": 15,
+        "defaults": {
+            "firstShiftWage": 0.45,
+            "secondShiftWage": 0.55,
+            "thirdShiftWage": 0.7,
+            "overtimeWage": 0.9,
+            "variableMachineCosts": 0.05,
+            "fixMachineCosts": 0.01,
+            "processTimes": [{
+                    "articleId": 17,
+                    "runTime": 3,
+                    "setupTime": 15
+                }, {
+                    "articleId": 26,
+                    "runTime": 3,
+                    "setupTime": 15
+                }]
+        }
+    }
+]
