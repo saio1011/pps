@@ -598,7 +598,7 @@ public class MainUI extends javax.swing.JFrame {
             }
         });
 
-        jSpinnerBufferFactor.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        jSpinnerBufferFactor.setModel(new javax.swing.SpinnerNumberModel(0, 0, 150, 1));
         jSpinnerBufferFactor.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 jSpinnerBufferFactorStateChanged(evt);
@@ -608,7 +608,7 @@ public class MainUI extends javax.swing.JFrame {
         jLabelBufferFactor.setText("Puffer");
         jLabelBufferFactor.setToolTipText("Puffermenge für Bestellungen");
 
-        jSpinnerDiscountFactor.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        jSpinnerDiscountFactor.setModel(new javax.swing.SpinnerNumberModel(0, 0, 100, 1));
         jSpinnerDiscountFactor.setEditor(new javax.swing.JSpinner.NumberEditor(jSpinnerDiscountFactor, ""));
         jSpinnerDiscountFactor.setRequestFocusEnabled(false);
         jSpinnerDiscountFactor.addChangeListener(new javax.swing.event.ChangeListener() {
