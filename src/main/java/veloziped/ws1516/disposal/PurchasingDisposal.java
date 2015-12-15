@@ -153,12 +153,13 @@ public class PurchasingDisposal {
     private OrderMode calcOrderMode(ExtendedArticle article, long consumInDays) {
         OrderMode mode;
 
-        boolean normalDeliveryIsOk = (article.
+        boolean normalDeliveryIsOk = (consumInDays <= article.
                 getDeliveryTimeNormalInDays(SharedInstance.getInstance()
-                        .getCalculationMode()) <= consumInDays);
-        boolean fastDeliveryOk = (article.
+                        .getCalculationMode()));
+        
+        boolean fastDeliveryOk = (consumInDays <= article.
                 getDeliveryTimeFastInDays(SharedInstance.getInstance()
-                        .getCalculationMode()) <= consumInDays);
+                        .getCalculationMode()));
 
         if (normalDeliveryIsOk) {
             mode = OrderMode.NORMAL;
