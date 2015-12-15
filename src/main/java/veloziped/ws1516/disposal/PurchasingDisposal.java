@@ -38,8 +38,11 @@ public class PurchasingDisposal {
         private static final PurchasingDisposal INSTANCE = new PurchasingDisposal();
     }
 
+    private String errorArticles;
+
     public List<Order> calculateOrders(Map<String, ExtendedArticle> articles) {
         List<Order> orders = new ArrayList<>();
+        errorArticles = "";
 
         for (ExtendedArticle article : articles.values()) {
             if (article.getType() == ArticleType.K) {
@@ -86,6 +89,12 @@ public class PurchasingDisposal {
                     orders.add(order);
                 }
             }
+        }
+
+        if(errorArticles.length() > 0) {
+            Locale locale = SharedInstance.getInstance().getCurrentLocale();
+            ResourceBundle i18n = Utils.getResourceBundle(locale.getLanguage(), locale.getCountry());
+            JOptionPane.showMessageDialog(null, String.format(i18n.getString("ProductionToHigh"), errorArticles), null, JOptionPane.WARNING_MESSAGE);
         }
 
         return orders;
@@ -156,11 +165,8 @@ public class PurchasingDisposal {
         } else if (fastDeliveryOk) {
             mode = OrderMode.FAST;
         } else {
-            Locale locale = SharedInstance.getInstance().getCurrentLocale();
-            ResourceBundle i18n = Utils.getResourceBundle(locale.getLanguage(), locale.getCountry());
-            JOptionPane.showMessageDialog(null, i18n.getString("ProductionTooHigh"), null, JOptionPane.WARNING_MESSAGE);
-            //which mode?
-            throw new IllegalStateException();
+            errorArticles += (String.format("\n <ID: %d, %s>", article.getId(), article.getName()));
+            mode = OrderMode.FAST;
         }
 
         return mode;
