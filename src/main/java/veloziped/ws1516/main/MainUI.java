@@ -607,6 +607,7 @@ public class MainUI extends javax.swing.JFrame {
             }
         });
 
+        jLabelBufferFactor.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelBufferFactor.setText("Puffer");
         jLabelBufferFactor.setToolTipText("Puffermenge für Bestellungen");
 
@@ -619,6 +620,7 @@ public class MainUI extends javax.swing.JFrame {
             }
         });
 
+        jLabelDiscountFactor.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelDiscountFactor.setText("Discount");
         jLabelDiscountFactor.setToolTipText("Faktor ab wann Discount in Anspruch genommen werden soll");
 
@@ -630,11 +632,11 @@ public class MainUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jButtonImportXml, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabelDiscountFactor, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabelDiscountFactor, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSpinnerDiscountFactor, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24)
-                .addComponent(jLabelBufferFactor, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabelBufferFactor, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSpinnerBufferFactor, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
