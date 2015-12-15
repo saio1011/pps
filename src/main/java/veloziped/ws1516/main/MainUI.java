@@ -6,6 +6,7 @@
 package veloziped.ws1516.main;
 
 import java.awt.Panel;
+import java.awt.event.ActionEvent;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -19,9 +20,12 @@ import java.util.Set;
 import java.util.TreeSet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.AbstractAction;
+import javax.swing.Action;
 import javax.swing.JFileChooser;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
@@ -42,6 +46,7 @@ import veloziped.ws1516.production.PeriodDetail;
 import veloziped.ws1516.production.ProductionPlan;
 import veloziped.ws1516.util.IntegerField;
 import veloziped.ws1516.util.LoadHelpFile;
+import veloziped.ws1516.util.TableCellListener;
 import veloziped.ws1516.util.Utils;
 import veloziped.ws1516.workload.WorkloadPlanning;
 import veloziped.ws1516.workload.WorkloadResult;
@@ -83,9 +88,9 @@ public class MainUI extends javax.swing.JFrame {
         this.jTabbedPan.setEnabledAt(4, false);
         this.jTabbedPan.setEnabledAt(5, false);
         this.addInputFieldsListener();
-        
-        this.setInHouseProductionJTextFieldsEnabled(false);
 
+        this.setInHouseProductionJTextFieldsEnabled(false);
+        this.setTableListeners();
     }
 
     private void reSetForecast() {
@@ -593,7 +598,7 @@ public class MainUI extends javax.swing.JFrame {
             }
         });
 
-        jSpinnerBufferFactor.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(0), Integer.valueOf(0), null, Integer.valueOf(1)));
+        jSpinnerBufferFactor.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         jSpinnerBufferFactor.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 jSpinnerBufferFactorStateChanged(evt);
@@ -603,7 +608,7 @@ public class MainUI extends javax.swing.JFrame {
         jLabelBufferFactor.setText("Puffer");
         jLabelBufferFactor.setToolTipText("Puffermenge für Bestellungen");
 
-        jSpinnerDiscountFactor.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(0), Integer.valueOf(0), null, Integer.valueOf(1)));
+        jSpinnerDiscountFactor.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         jSpinnerDiscountFactor.setEditor(new javax.swing.JSpinner.NumberEditor(jSpinnerDiscountFactor, ""));
         jSpinnerDiscountFactor.setRequestFocusEnabled(false);
         jSpinnerDiscountFactor.addChangeListener(new javax.swing.event.ChangeListener() {
@@ -3332,15 +3337,27 @@ public class MainUI extends javax.swing.JFrame {
                 "Article", "Name", "Mode", "Amount"
             }
         ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false
+            Class[] types = new Class [] {
+                java.lang.Long.class, java.lang.String.class, java.lang.Long.class, java.lang.Long.class
             };
+            boolean[] canEdit = new boolean [] {
+                false, false, true, true
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
             }
         });
         jTablePurchasingDisposition.getTableHeader().setReorderingAllowed(false);
+        jTablePurchasingDisposition.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                jTablePurchasingDispositionPropertyChange(evt);
+            }
+        });
         jScrollPane2.setViewportView(jTablePurchasingDisposition);
 
         javax.swing.GroupLayout jPanelPurchasingDispositionLayout = new javax.swing.GroupLayout(jPanelPurchasingDisposition);
@@ -3682,10 +3699,9 @@ public class MainUI extends javax.swing.JFrame {
                     this.setPeriodLabels();
                     this.jButtonCalculate.setEnabled(true);
 
-                    
                     Map<String, ExtendedArticle> extArticles = SharedInstance.getInstance().getExtendedArticles();
 //                    jTextFieldKFP1OrdersInQueque.setText(String.valueOf(extArticles.get("1").getAdditionalAmount()));
-                    
+
                     //Vorbelegung Damenfahrrad
                     Map<JTextField, String> dfMapFieldsWithKeys = getMapFieldsWithKeys(getDFJTextFields());
                     fillTextFileds(dfMapFieldsWithKeys, extArticles);
@@ -3695,8 +3711,7 @@ public class MainUI extends javax.swing.JFrame {
                     //Vorbelegung Kinderfahrad
                     Map<JTextField, String> kfMapFieldsWithKeys = getMapFieldsWithKeys(getKFJTextFields());
                     fillTextFileds(kfMapFieldsWithKeys, extArticles);
-                    
-                        
+
                     this.jButtonCalculate.setEnabled(true);
                 } catch (JAXBException ex) {
                     Logger.getLogger(MainUI.class.getName()).log(Level.SEVERE, null, ex);
@@ -3707,6 +3722,7 @@ public class MainUI extends javax.swing.JFrame {
             }
         }
     }
+
     public void fillTextFileds(Map<JTextField, String> mapFieldsWithKeys, Map<String, ExtendedArticle> extArticles) {
         for (Map.Entry<JTextField, String> entry : mapFieldsWithKeys.entrySet()) {
             if (entry.getKey().getName().endsWith("OrdersInQueque")) {
@@ -3720,6 +3736,7 @@ public class MainUI extends javax.swing.JFrame {
             }
         }
     }
+
     public void setjTextFieldInHouseProductionEnabled(Map<JTextField, String> mapFieldsWithKeys, Boolean value) {
         for (Map.Entry<JTextField, String> entry : mapFieldsWithKeys.entrySet()) {
             if (entry.getKey().getName().endsWith("OrdersInQueque")) {
@@ -3733,7 +3750,8 @@ public class MainUI extends javax.swing.JFrame {
             }
         }
     }
-    public void setInHouseProductionJTextFieldsEnabled(Boolean value){
+
+    public void setInHouseProductionJTextFieldsEnabled(Boolean value) {
         //Kinderfahrrad
         Map<JTextField, String> kfMapFieldsWithKeys = getMapFieldsWithKeys(getKFJTextFields());
         setjTextFieldInHouseProductionEnabled(kfMapFieldsWithKeys, value);
@@ -3857,7 +3875,7 @@ public class MainUI extends javax.swing.JFrame {
 
         //stock
         Map<String, ExtendedArticle> articles = SharedInstance.getInstance().calcNewArticleStockValue();
-        
+
         //production list order
         List<Production> productionList = SharedInstance.getInstance().calculateProductionList();
 
@@ -3910,6 +3928,36 @@ public class MainUI extends javax.swing.JFrame {
         jTextAreaHelpFile.setText(hp.toString());
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
+    private void jTablePurchasingDispositionPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jTablePurchasingDispositionPropertyChange
+
+    }//GEN-LAST:event_jTablePurchasingDispositionPropertyChange
+
+    Action purchasingDisposalListener = new AbstractAction() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            TableCellListener tcl = (TableCellListener) e.getSource();
+            
+            if((tcl.getColumn() == 2 && (Long.valueOf(tcl.getNewValue().toString()) == 4 || Long.valueOf(tcl.getNewValue().toString()) == 5))
+                    || (tcl.getColumn() == 3 && Long.valueOf(tcl.getNewValue().toString()) >= 0)) {
+                long id = Long.valueOf(jTablePurchasingDisposition.getModel().getValueAt(tcl.getRow(), 0).toString());
+                long mode = Long.valueOf(jTablePurchasingDisposition.getModel().getValueAt(tcl.getRow(), 2).toString());
+                long amount = Long.valueOf(jTablePurchasingDisposition.getModel().getValueAt(tcl.getRow(), 3).toString());
+                
+                Order order = SharedInstance.getInstance().getNewOrderById(id);
+                order.setMode(mode);
+                order.setAmount(amount);
+                
+                SharedInstance.getInstance().replaceNewOrder(order);
+            } else {
+                jTablePurchasingDisposition.getModel().setValueAt(tcl.getOldValue(), tcl.getRow(), tcl.getColumn());
+            }
+        }
+    };
+    
+    private void setTableListeners() {
+        TableCellListener tcl = new TableCellListener(jTablePurchasingDisposition, purchasingDisposalListener);
+    }
+
     private void exportXML() {
         JFileChooser chooser = new JFileChooser();
         chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
@@ -3918,13 +3966,13 @@ public class MainUI extends javax.swing.JFrame {
         if (chooser.showOpenDialog(this) == JFileChooser.APPROVE_OPTION) {
             String os = System.getProperty("os.name");
             String trennzeichen = "";
-            if(os != null && os.startsWith("Windows")){
+            if (os != null && os.startsWith("Windows")) {
                 trennzeichen = "\\";
             } else {
                 //linux | mac
                 trennzeichen = "/";
             }
-            
+
             File file = new File(chooser.getSelectedFile().getAbsolutePath() + trennzeichen + "input.xml");
             SharedInstance.getInstance().saveInputFile(file);
         } else {
@@ -4463,14 +4511,14 @@ public class MainUI extends javax.swing.JFrame {
         }
 
         Map<String, ExtendedArticle> articles = SharedInstance.getInstance().getExtendedArticles();
-        
+
         if (articles != null && articles.size() > 0) {
             this.reFillStockChangeTable(articles);
         }
-        
+
         List<Production> pList = SharedInstance.getInstance().getProductionListCalculated();
-        
-        if (pList != null && pList.size()> 0) {
+
+        if (pList != null && pList.size() > 0) {
             this.reFillEProdList(pList);
         }
 
@@ -6349,11 +6397,11 @@ public class MainUI extends javax.swing.JFrame {
         fields.add(jTextFieldDFE19ProductionOrders);
         return fields;
     }
-    
-    public Map<JTextField, String> getMapFieldsWithKeys(List<JTextField> fields){
+
+    public Map<JTextField, String> getMapFieldsWithKeys(List<JTextField> fields) {
         Map<JTextField, String> fieldsWithKeys = new HashMap<>();
-        for(JTextField field : fields){
-            String  prodNumber = field.getName().replaceAll("[^0-9]+", "");
+        for (JTextField field : fields) {
+            String prodNumber = field.getName().replaceAll("[^0-9]+", "");
             fieldsWithKeys.put(field, prodNumber);
         }
         return fieldsWithKeys;
@@ -6483,7 +6531,7 @@ public class MainUI extends javax.swing.JFrame {
         labelsOrdersInQueque.add(jLabelHFE20OrdersInQueque);
         return labelsOrdersInQueque;
     }
-    
+
     public List<JTextField> getKFJTextFields() {
         List<JTextField> fields = new ArrayList<JTextField>();
         fields.add(jTextFieldKFP1SalesOrders);
@@ -6613,5 +6661,5 @@ public class MainUI extends javax.swing.JFrame {
         }
         return fields;
     }
-    
+
 }
