@@ -164,7 +164,7 @@ public class WorkloadResult implements Comparable<WorkloadResult> {
             Long orderQuantity = SharedInstance.getInstance()
                     .getArticleForId(process.getArticleId()).getPlannedProductionAmount();
 
-            if (orderQuantity != null) {
+            if (orderQuantity != null && orderQuantity > 0) {
                 this.capacityNeeded += orderQuantity * process.getRunTime();
             }
         }
