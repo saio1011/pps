@@ -2547,7 +2547,7 @@ public class MainUI extends javax.swing.JFrame {
         jTextFieldHFE30OrdersInQueque.setName("jTextFieldHFE30OrdersInQueque"); // NOI18N
 
         jTextFieldHFE6OrdersInQueque.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextFieldHFE6OrdersInQueque.setName("jTextFieldDFE5jTextFieldHFE6*OrdersInQuequeOrdersInQueque"); // NOI18N
+        jTextFieldHFE6OrdersInQueque.setName("jTextFieldHFE6*OrdersInQuequeOrdersInQueque"); // NOI18N
 
         jTextFieldHFE12OrdersInQueque.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextFieldHFE12OrdersInQueque.setName("jTextFieldHFE12OrdersInQueque"); // NOI18N
