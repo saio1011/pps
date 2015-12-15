@@ -235,8 +235,9 @@ public class WorkloadResult implements Comparable<WorkloadResult> {
 
     private void calcOverTime() {
         if (this.totalCapacityNeeded > (this.numberOfShifts * WorkloadPlanning.LIMITPERSHIFT)) {
-            this.overTimePeriod = this.totalCapacityNeeded
+            long calcedOvertime = this.totalCapacityNeeded
                     - (this.numberOfShifts * WorkloadPlanning.LIMITPERSHIFT);
+            this.overTimePeriod = (calcedOvertime <= WorkloadPlanning.LIMITOVERTIME)? calcedOvertime : WorkloadPlanning.LIMITOVERTIME;
         } else {
             this.overTimePeriod = 0;
         }
