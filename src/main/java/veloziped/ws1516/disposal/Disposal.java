@@ -21,9 +21,6 @@ public class Disposal {
 
     private static Hashtable<String, String> WorkplacesHashTable;
     private ExtendedWorkplace extendedWorkplace;
-    private ExtendedArticle extendedArticle;
-    private List<Workplace> workplacesList;
-    private List<Workplace> ordersInWork;
     private long timeneed;
 
     public Disposal() {
@@ -91,13 +88,19 @@ public class Disposal {
 
             try {
                 timeneed += extendedWorkplace.getTimeneed();
-            } catch (Exception e) { }
+            } catch (Exception e) {
+            }
 
             extendedWorkplace.setTimeneed(timeneed);
             SharedInstance.getInstance().setExtendedWorkplaceForId(extendedWorkplace.getId(), extendedWorkplace);
 
             ExtendedArticle extendedArticle = SharedInstance.getInstance().getArticleForId(workplace.getItem());
-            extendedArticle.setAdditionalAmountInWork(workplace.getAmount());
+            if (extendedArticle.getId() == 16 || extendedArticle.getId() == 17 || extendedArticle.getId() == 26) {
+                extendedArticle.setAdditionalAmountInWork((workplace.getAmount() + extendedArticle.getAdditionalAmountInWork()) / 3);
+            } else {
+                extendedArticle.setAdditionalAmountInWork((workplace.getAmount() + extendedArticle.getAdditionalAmountInWork()));
+            }
+
             SharedInstance.getInstance().setExtendedArticleForId(extendedArticle.getId(), extendedArticle);
         }
     }
@@ -116,7 +119,12 @@ public class Disposal {
                         }
                     }
                     ExtendedArticle extendedArticleWithAddAmount = SharedInstance.getInstance().getArticleForId(waitinglist.getItem());
-                    extendedArticleWithAddAmount.setAdditionalAmount(waitinglist.getAmount());
+                    if (extendedArticleWithAddAmount.getId() == 16 || extendedArticleWithAddAmount.getId() == 17 || extendedArticleWithAddAmount.getId() == 26) {
+                        extendedArticleWithAddAmount.setAdditionalAmount((waitinglist.getAmount() + extendedArticleWithAddAmount.getAdditionalAmount()) / 3);
+
+                    } else {
+                        extendedArticleWithAddAmount.setAdditionalAmount((waitinglist.getAmount() + extendedArticleWithAddAmount.getAdditionalAmount()));
+                    }
                     SharedInstance.getInstance().setExtendedArticleForId(extendedArticleWithAddAmount.getId(), extendedArticleWithAddAmount);
                 }
             }
