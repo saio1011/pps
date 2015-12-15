@@ -200,21 +200,21 @@
             </Menu>
           </SubComponents>
         </Menu>
-        <Menu class="javax.swing.JMenu" name="jMenu1">
+        <Menu class="javax.swing.JMenu" name="jMenuHelp">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
               <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="jMenuHelp" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
             </Property>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem2">
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemShowHelp">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
                   <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="ShowHelpFile" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem2ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemShowHelpActionPerformed"/>
               </Events>
             </MenuItem>
           </SubComponents>
@@ -948,14 +948,17 @@
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="1" attributes="0">
                                           <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabelKFSalesOrders" alignment="1" max="32767" attributes="0"/>
-                                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                              <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabelKFOrdersInQueue" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabelKFWorkInProgress" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabelKFProductionOrders" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabelKFPlannedStock" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                                              <Component id="jLabelKFStockEndOfPeriod" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="3" attributes="0">
+                                                  <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabelKFOrdersInQueue" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabelKFWorkInProgress" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabelKFProductionOrders" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabelKFPlannedStock" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                                                  <Component id="jLabelKFStockEndOfPeriod" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
+                                                  <Component id="jLabelKFSalesOrders" max="32767" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
@@ -2698,14 +2701,17 @@
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="1" attributes="0">
                                           <Component id="jLabel13" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabelDFSalesOrders" alignment="1" max="32767" attributes="0"/>
-                                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                              <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabelDFOrdersInQueue" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabelDFWorkInProgress" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabelDFProductionOrders" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabelDFPlannedStock" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                                              <Component id="jLabelDFStockEndOfPeriod" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="3" attributes="0">
+                                                  <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabelDFOrdersInQueue" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabelDFWorkInProgress" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabelDFProductionOrders" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabelDFPlannedStock" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                                                  <Component id="jLabelDFStockEndOfPeriod" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
+                                                  <Component id="jLabelDFSalesOrders" max="32767" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
@@ -4459,14 +4465,17 @@
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="1" attributes="0">
                                           <Component id="jLabel14" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabelHFSalesOrders" alignment="1" max="32767" attributes="0"/>
-                                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                              <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabelHFOrdersInQueue" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabelHFWorkInProgress" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabelHFProductionOrders" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabelHFPlannedStock" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                                              <Component id="jLabelHFStockEndOfPeriod" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="3" attributes="0">
+                                                  <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabelHFOrdersInQueue" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabelHFWorkInProgress" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabelHFProductionOrders" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabelHFPlannedStock" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                                                  <Component id="jLabelHFStockEndOfPeriod" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
+                                                  <Component id="jLabelHFSalesOrders" max="32767" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
