@@ -25,6 +25,15 @@ public class ExtendedWorkplace extends Workplace {
     private double variableMachineCosts;
     private double fixMachineCosts;
     private List<ProcessTime> processTimes;
+    private long editedSetupCycles;
+
+    public long getEditedSetupCycles() {
+        return editedSetupCycles;
+    }
+
+    public void setEditedSetupCycles(long editedSetupCycles) {
+        this.editedSetupCycles = editedSetupCycles;
+    }
 
     @Override
     public boolean equals(Object obj) {
@@ -94,6 +103,7 @@ public class ExtendedWorkplace extends Workplace {
         super.timeneed = workplace.getTimeneed();
         super.wagecosts = workplace.getWagecosts();
         super.wageidletimecosts = workplace.getWageidletimecosts();
+        this.editedSetupCycles = 0;
     }
 
     public double getFixMachineCosts() {

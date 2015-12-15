@@ -43,7 +43,11 @@ public class WorkloadResult implements Comparable<WorkloadResult> {
 
     public WorkloadResult(ExtendedWorkplace workplace) {
         this.workplace = workplace;
-        this.lastSetupCycles = workplace.getSetupevents();
+        if (workplace.getEditedSetupCycles() > 0) {
+            this.lastSetupCycles = workplace.getEditedSetupCycles();
+        } else {
+            this.lastSetupCycles = workplace.getSetupevents();
+        }
 
         this.backlogCapacityLastPeriod = 0;
         this.backlogSetupTimeLastPeriod = 0;
@@ -53,25 +57,25 @@ public class WorkloadResult implements Comparable<WorkloadResult> {
         for (Workplace place : wStations.getWorkplace()) {
             if (place.getId() == this.workplace.getId()) {
                 this.backlogCapacityLastPeriod = place.getTimeneed();
-                
+
                 List<Waitinglist> list = place.getWaitinglist();
-                for(Waitinglist l : list) {
+                for (Waitinglist l : list) {
                     ProcessTime pt = this.workplace.getProcessTimeForArticle(l.getItem());
-                    if(pt != null) {
+                    if (pt != null) {
                         this.backlogSetupTimeLastPeriod += pt.getSetupTime();
                     }
                 }
             }
         }
-        
+
         Ordersinwork inWork = SharedInstance.getInstance().getOrdersInWork();
-        for(Workplace place : inWork.getWorkplace()) {
+        for (Workplace place : inWork.getWorkplace()) {
             if (place.getId() == this.workplace.getId()) {
                 this.backlogCapacityLastPeriod += place.getTimeneed();
                 //no setup time because its already in work
             }
         }
- 
+
         this.capacityNeeded = 0;
         this.setupTime = 0;
         this.setupFactor = 0;

@@ -88,6 +88,23 @@ public class SharedInstance {
     private Futureinwardstockmovement futureInwardStockMovement;
     private Warehousestock warehouseStock;
 
+    public void replaceNewOrder(Order newOrder) {
+        for (int i = 0; i < newOrders.size(); i++) {
+            if (newOrders.get(i).getArticle() == newOrder.getArticle()) {
+                newOrders.set(i, newOrder);
+            }
+        }
+    }
+
+    public Order getNewOrderById(long id) {
+        for (int i = 0; i < newOrders.size(); i++) {
+            if (newOrders.get(i).getArticle() == id) {
+                return newOrders.get(i);
+            }
+        }
+        return null;
+    }
+
     public Locale getCurrentLocale() {
         return currentLocale;
     }
@@ -559,13 +576,19 @@ public class SharedInstance {
         for (int i = 0; i < this.productionListOrder.length; i++) {
             ExtendedArticle article = articles.get(String.valueOf(this.productionListOrder[i]));
 
-            if (article.getPlannedProductionAmount() > Interation_One) {
+            int Interation_One_Use = Interation_One;
+
+            if (article.getId() == 16 || article.getId() == 17 || article.getId() == 26) {
+                Interation_One_Use = 150;
+            }
+
+            if (article.getPlannedProductionAmount() > Interation_One_Use) {
                 Production prod = new Production();
                 prod.setArticle(article.getId());
-                prod.setQuantity(Interation_One);
+                prod.setQuantity(Interation_One_Use);
                 pList.add(prod);
 
-                article.setPlannedProductionAmount(article.getPlannedProductionAmount() - Interation_One);
+                article.setPlannedProductionAmount(article.getPlannedProductionAmount() - Interation_One_Use);
             } else if (article.getPlannedProductionAmount() > 0) {
                 Production prod = new Production();
                 prod.setArticle(article.getId());
@@ -577,13 +600,19 @@ public class SharedInstance {
         for (int i = 0; i < this.productionListOrder.length; i++) {
             ExtendedArticle article = articles.get(String.valueOf(this.productionListOrder[i]));
 
-            if (article.getPlannedProductionAmount() > Interation_Two) {
+            int Interation_Two_Use = Interation_Two;
+
+            if (article.getId() == 16 || article.getId() == 17 || article.getId() == 26) {
+                Interation_Two_Use = 220;
+            }
+
+            if (article.getPlannedProductionAmount() > Interation_Two_Use) {
                 Production prod = new Production();
                 prod.setArticle(article.getId());
-                prod.setQuantity(Interation_Two);
+                prod.setQuantity(Interation_Two_Use);
                 pList.add(prod);
 
-                article.setPlannedProductionAmount(article.getPlannedProductionAmount() - Interation_Two);
+                article.setPlannedProductionAmount(article.getPlannedProductionAmount() - Interation_Two_Use);
             } else if (article.getPlannedProductionAmount() > 0) {
                 Production prod = new Production();
                 prod.setArticle(article.getId());
@@ -591,7 +620,7 @@ public class SharedInstance {
                 pList.add(prod);
             }
         }
-        
+
         for (int i = 0; i < this.productionListOrder.length; i++) {
             ExtendedArticle article = articles.get(String.valueOf(this.productionListOrder[i]));
 
