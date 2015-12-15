@@ -21,9 +21,6 @@ public class Disposal {
 
     private static Hashtable<String, String> WorkplacesHashTable;
     private ExtendedWorkplace extendedWorkplace;
-    private ExtendedArticle extendedArticle;
-    private List<Workplace> workplacesList;
-    private List<Workplace> ordersInWork;
     private long timeneed;
 
     public Disposal() {
