@@ -5,6 +5,7 @@
  */
 package veloziped.ws1516.disposal;
 
+import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.List;
 import veloziped.ws1516.articles.ExtendedArticle;
@@ -131,8 +132,24 @@ public class Disposal {
         }
     }
 
+    private void calculateStockLastPeriod() {
+        
+        long[] ids = new long[3];
+        ids[0] = 16;
+        ids[1] = 17;
+        ids[2] = 26;
+
+        for (int i = 0; i < 3; i++) {
+            ExtendedArticle extendedArticle = SharedInstance.getInstance().getArticleForId(ids[i]);
+            extendedArticle.setAmount(extendedArticle.getAmount()/ 3);
+            SharedInstance.getInstance().setExtendedArticleForId(extendedArticle.getId(), extendedArticle);
+        }
+    }
+
     public void calculateAdditionalAmountAndTime() {
         calculateWaitingLists(SharedInstance.getInstance().getWaitinglistWorkstations().getWorkplace());
         calculateOrdersInWork(SharedInstance.getInstance().getOrdersInWork().getWorkplace());
+        calculateStockLastPeriod();
     }
+
 }
