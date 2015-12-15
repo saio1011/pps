@@ -284,11 +284,11 @@
                   <EmptySpace max="32767" attributes="0"/>
                   <Component id="jLabelDiscountFactor" min="-2" pref="80" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jSpinnerDiscountFactor" min="-2" pref="48" max="-2" attributes="0"/>
+                  <Component id="jSpinnerDiscountFactor" min="-2" pref="60" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                   <Component id="jLabelBufferFactor" min="-2" pref="60" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jSpinnerBufferFactor" min="-2" pref="48" max="-2" attributes="0"/>
+                  <Component id="jSpinnerBufferFactor" min="-2" pref="60" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jButtonCalculate" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
