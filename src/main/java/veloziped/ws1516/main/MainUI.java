@@ -3850,6 +3850,10 @@ public class MainUI extends javax.swing.JFrame {
 
     private void jButtonCalculateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCalculateActionPerformed
         // TODO add your handling code here:
+        //reload workplaces to reset table
+        Map<String, ExtendedWorkplace> extWork = SetupInstance.getInstance()
+                .generateExtendedWorkplaces(SharedInstance.getInstance().getIdleTimeCosts().getWorkplace());
+        SharedInstance.getInstance().setExtendedWorkplaces(extWork);
 
         //worklaod
         Map<String, WorkloadResult> workloadResults = WorkloadPlanning.getInstance()
@@ -3860,9 +3864,15 @@ public class MainUI extends javax.swing.JFrame {
         SharedInstance.getInstance().calcIncomingOrdersThisPeriod(
                 SharedInstance.getInstance().getFutureInwardStockMovement().getOrder());
 
-        //only for test purposes!! this is actually the forecast
         ProductionPlan plan = new ProductionPlan();
-        plan.setPeriodN1(periodDetailN1);
+        ExtendedArticle a1 = SharedInstance.getInstance().getArticleForId((long)1);
+        ExtendedArticle a2 = SharedInstance.getInstance().getArticleForId((long)2);
+        ExtendedArticle a3 = SharedInstance.getInstance().getArticleForId((long)3);
+        PeriodDetail n1 = new PeriodDetail(a1.getPlannedProductionAmount(),
+                a2.getPlannedProductionAmount(),
+                a3.getPlannedProductionAmount());
+        plan.setPeriodN1(n1);
+        //forecast values
         plan.setPeriodN2(periodDetailN2);
         plan.setPeriodN3(periodDetailN3);
         plan.setPeriodN4(periodDetailN4);
@@ -3936,26 +3946,45 @@ public class MainUI extends javax.swing.JFrame {
         @Override
         public void actionPerformed(ActionEvent e) {
             TableCellListener tcl = (TableCellListener) e.getSource();
-            
-            if((tcl.getColumn() == 2 && (Long.valueOf(tcl.getNewValue().toString()) == 4 || Long.valueOf(tcl.getNewValue().toString()) == 5))
+
+            if ((tcl.getColumn() == 2 && (Long.valueOf(tcl.getNewValue().toString()) == 4 || Long.valueOf(tcl.getNewValue().toString()) == 5))
                     || (tcl.getColumn() == 3 && Long.valueOf(tcl.getNewValue().toString()) >= 0)) {
                 long id = Long.valueOf(jTablePurchasingDisposition.getModel().getValueAt(tcl.getRow(), 0).toString());
                 long mode = Long.valueOf(jTablePurchasingDisposition.getModel().getValueAt(tcl.getRow(), 2).toString());
                 long amount = Long.valueOf(jTablePurchasingDisposition.getModel().getValueAt(tcl.getRow(), 3).toString());
-                
+
                 Order order = SharedInstance.getInstance().getNewOrderById(id);
                 order.setMode(mode);
                 order.setAmount(amount);
-                
+
                 SharedInstance.getInstance().replaceNewOrder(order);
             } else {
                 jTablePurchasingDisposition.getModel().setValueAt(tcl.getOldValue(), tcl.getRow(), tcl.getColumn());
             }
         }
     };
-    
+
+    Action workloadListener = new AbstractAction() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            TableCellListener tcl = (TableCellListener) e.getSource();
+
+            if ((tcl.getColumn() == 1 && Long.valueOf(tcl.getNewValue().toString()) >= 0)) {
+                long id = Long.valueOf(jTableWorkloadPlanning.getModel().getValueAt(tcl.getRow(), 0).toString());
+
+                ExtendedWorkplace place = SharedInstance.getInstance().getWorkplaceForId(id);
+                place.setEditedSetupCycles(Long.valueOf(tcl.getNewValue().toString()));
+                SharedInstance.getInstance().setExtendedWorkplaceForId(id, place);
+
+            } else {
+                jTableWorkloadPlanning.getModel().setValueAt(tcl.getOldValue(), tcl.getRow(), tcl.getColumn());
+            }
+        }
+    };
+
     private void setTableListeners() {
-        TableCellListener tcl = new TableCellListener(jTablePurchasingDisposition, purchasingDisposalListener);
+        TableCellListener pDispo = new TableCellListener(jTablePurchasingDisposition, purchasingDisposalListener);
+        TableCellListener workload = new TableCellListener(jTableWorkloadPlanning, workloadListener);
     }
 
     private void exportXML() {
