@@ -96,7 +96,7 @@ public class Disposal {
 
             ExtendedArticle extendedArticle = SharedInstance.getInstance().getArticleForId(workplace.getItem());
             if (extendedArticle.getId() == 16 || extendedArticle.getId() == 17 || extendedArticle.getId() == 26) {
-                extendedArticle.setAdditionalAmountInWork((workplace.getAmount() + extendedArticle.getAdditionalAmountInWork()) / 3);
+                extendedArticle.setAdditionalAmountInWork(workplace.getAmount() / 3 + extendedArticle.getAdditionalAmountInWork());
             } else {
                 extendedArticle.setAdditionalAmountInWork((workplace.getAmount() + extendedArticle.getAdditionalAmountInWork()));
             }
@@ -120,7 +120,7 @@ public class Disposal {
                     }
                     ExtendedArticle extendedArticleWithAddAmount = SharedInstance.getInstance().getArticleForId(waitinglist.getItem());
                     if (extendedArticleWithAddAmount.getId() == 16 || extendedArticleWithAddAmount.getId() == 17 || extendedArticleWithAddAmount.getId() == 26) {
-                        extendedArticleWithAddAmount.setAdditionalAmount((waitinglist.getAmount() + extendedArticleWithAddAmount.getAdditionalAmount()) / 3);
+                        extendedArticleWithAddAmount.setAdditionalAmount(waitinglist.getAmount() / 3 + extendedArticleWithAddAmount.getAdditionalAmount());
 
                     } else {
                         extendedArticleWithAddAmount.setAdditionalAmount((waitinglist.getAmount() + extendedArticleWithAddAmount.getAdditionalAmount()));
