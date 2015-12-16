@@ -36,6 +36,7 @@ import veloziped.ws1516.articles.ExtendedArticle;
 import veloziped.ws1516.disposal.Disposal;
 import veloziped.ws1516.disposal.PurchasingDisposal;
 import veloziped.ws1516.generated.Input.Input;
+import veloziped.ws1516.generated.Input.Item;
 import veloziped.ws1516.generated.Input.Orderlist;
 import veloziped.ws1516.generated.Input.Production;
 import veloziped.ws1516.generated.Results.Order;
@@ -524,6 +525,22 @@ public class MainUI extends javax.swing.JFrame {
         jTableEProdList = new javax.swing.JTable();
         jButtonMoveDown = new javax.swing.JButton();
         jButtonMoveUp = new javax.swing.JButton();
+        jPanelSales = new javax.swing.JPanel();
+        jLabelSalesChildren = new javax.swing.JLabel();
+        jLabelSalesWomen = new javax.swing.JLabel();
+        jLabelSalesMen = new javax.swing.JLabel();
+        jTextFieldSalesKQuantity = new IntegerField("0");
+        jTextFieldSalesDQuantity = new IntegerField("0");
+        jTextFieldSalesHQuantity = new IntegerField("0");
+        jLabelSalesQuantity = new javax.swing.JLabel();
+        jLabelSalesPrice = new javax.swing.JLabel();
+        jLabelSalesPenalty = new javax.swing.JLabel();
+        jTextFieldSalesKPrice = new IntegerField("0");
+        jTextFieldSalesDPrice = new IntegerField("0");
+        jTextFieldSalesHPrice = new IntegerField("0");
+        jTextFieldSalesKPenalty = new IntegerField("0");
+        jTextFieldSalesDPenalty = new IntegerField("0");
+        jTextFieldSalesHPenalty = new IntegerField("0");
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuFile = new javax.swing.JMenu();
         jMenuItemImportFile = new javax.swing.JMenuItem();
@@ -3282,7 +3299,7 @@ public class MainUI extends javax.swing.JFrame {
             jPanelInHouseProductionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelInHouseProductionLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 665, Short.MAX_VALUE))
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 680, Short.MAX_VALUE))
         );
 
         jTabbedPan.addTab(bundle.getString("InHauseProduction"), jPanelInHouseProduction); // NOI18N
@@ -3328,11 +3345,11 @@ public class MainUI extends javax.swing.JFrame {
         );
         jPanelWorkloadPlanningLayout.setVerticalGroup(
             jPanelWorkloadPlanningLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 671, Short.MAX_VALUE)
+            .addGap(0, 686, Short.MAX_VALUE)
             .addGroup(jPanelWorkloadPlanningLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelWorkloadPlanningLayout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 659, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 674, Short.MAX_VALUE)
                     .addContainerGap()))
         );
 
@@ -3383,11 +3400,11 @@ public class MainUI extends javax.swing.JFrame {
         );
         jPanelPurchasingDispositionLayout.setVerticalGroup(
             jPanelPurchasingDispositionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 671, Short.MAX_VALUE)
+            .addGap(0, 686, Short.MAX_VALUE)
             .addGroup(jPanelPurchasingDispositionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelPurchasingDispositionLayout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 659, Short.MAX_VALUE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 674, Short.MAX_VALUE)
                     .addContainerGap()))
         );
 
@@ -3433,11 +3450,11 @@ public class MainUI extends javax.swing.JFrame {
         );
         jPanelStockChangeLayout.setVerticalGroup(
             jPanelStockChangeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 671, Short.MAX_VALUE)
+            .addGap(0, 686, Short.MAX_VALUE)
             .addGroup(jPanelStockChangeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelStockChangeLayout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 659, Short.MAX_VALUE)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 674, Short.MAX_VALUE)
                     .addContainerGap()))
         );
 
@@ -3511,15 +3528,109 @@ public class MainUI extends javax.swing.JFrame {
                 .addComponent(jButtonMoveUp)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButtonMoveDown)
-                .addContainerGap(601, Short.MAX_VALUE))
+                .addContainerGap(616, Short.MAX_VALUE))
             .addGroup(jPanelEProdListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelEProdListLayout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 659, Short.MAX_VALUE)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 674, Short.MAX_VALUE)
                     .addContainerGap()))
         );
 
         jTabbedPan.addTab("Production List", jPanelEProdList);
+
+        jLabelSalesChildren.setText("Kinder");
+
+        jLabelSalesWomen.setText("Damen");
+
+        jLabelSalesMen.setText("Herren");
+
+        jTextFieldSalesKQuantity.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldSalesKQuantityActionPerformed(evt);
+            }
+        });
+
+        jTextFieldSalesDQuantity.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldSalesDQuantityActionPerformed(evt);
+            }
+        });
+
+        jLabelSalesQuantity.setText("Quantity");
+
+        jLabelSalesPrice.setText("Price");
+
+        jLabelSalesPenalty.setText("Penalty");
+
+        javax.swing.GroupLayout jPanelSalesLayout = new javax.swing.GroupLayout(jPanelSales);
+        jPanelSales.setLayout(jPanelSalesLayout);
+        jPanelSalesLayout.setHorizontalGroup(
+            jPanelSalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelSalesLayout.createSequentialGroup()
+                .addGap(81, 81, 81)
+                .addGroup(jPanelSalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jTextFieldSalesDPenalty, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanelSalesLayout.createSequentialGroup()
+                        .addGroup(jPanelSalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabelSalesMen, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelSalesWomen, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelSalesChildren, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanelSalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jTextFieldSalesHQuantity)
+                            .addComponent(jTextFieldSalesDQuantity)
+                            .addComponent(jTextFieldSalesKQuantity, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelSalesLayout.createSequentialGroup()
+                                .addComponent(jLabelSalesQuantity)
+                                .addGap(15, 15, 15)))
+                        .addGap(36, 36, 36)
+                        .addGroup(jPanelSalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabelSalesPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldSalesKPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldSalesDPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldSalesHPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanelSalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelSalesLayout.createSequentialGroup()
+                                .addGap(52, 52, 52)
+                                .addComponent(jLabelSalesPenalty))
+                            .addGroup(jPanelSalesLayout.createSequentialGroup()
+                                .addGap(36, 36, 36)
+                                .addComponent(jTextFieldSalesKPenalty, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelSalesLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextFieldSalesHPenalty, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(782, Short.MAX_VALUE))
+        );
+        jPanelSalesLayout.setVerticalGroup(
+            jPanelSalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelSalesLayout.createSequentialGroup()
+                .addGap(81, 81, 81)
+                .addGroup(jPanelSalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelSalesQuantity)
+                    .addComponent(jLabelSalesPrice)
+                    .addComponent(jLabelSalesPenalty))
+                .addGap(18, 18, 18)
+                .addGroup(jPanelSalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelSalesChildren)
+                    .addComponent(jTextFieldSalesKQuantity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldSalesKPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldSalesKPenalty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(16, 16, 16)
+                .addGroup(jPanelSalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelSalesWomen)
+                    .addComponent(jTextFieldSalesDQuantity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldSalesDPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldSalesDPenalty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanelSalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelSalesMen)
+                    .addComponent(jTextFieldSalesHQuantity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldSalesHPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldSalesHPenalty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(459, Short.MAX_VALUE))
+        );
+
+        jTabbedPan.addTab("Sales", jPanelSales);
 
         jScrollPane5.setViewportView(jTabbedPan);
 
@@ -3864,6 +3975,8 @@ public class MainUI extends javax.swing.JFrame {
     private void jButtonCalculateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCalculateActionPerformed
         // TODO add your handling code here:
         //reload workplaces to reset table
+        SharedInstance.getInstance().setDefaultValues();
+        
         Map<String, ExtendedWorkplace> extWork = SetupInstance.getInstance()
                 .generateExtendedWorkplaces(SharedInstance.getInstance().getIdleTimeCosts().getWorkplace());
         SharedInstance.getInstance().setExtendedWorkplaces(extWork);
@@ -3954,6 +4067,14 @@ public class MainUI extends javax.swing.JFrame {
     private void jTablePurchasingDispositionPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jTablePurchasingDispositionPropertyChange
 
     }//GEN-LAST:event_jTablePurchasingDispositionPropertyChange
+
+    private void jTextFieldSalesDQuantityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldSalesDQuantityActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldSalesDQuantityActionPerformed
+
+    private void jTextFieldSalesKQuantityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldSalesKQuantityActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldSalesKQuantityActionPerformed
 
     Action purchasingDisposalListener = new AbstractAction() {
         @Override
@@ -4207,6 +4328,12 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelPeriodN2PF;
     private javax.swing.JLabel jLabelPeriodN3PF;
     private javax.swing.JLabel jLabelPeriodNPF;
+    private javax.swing.JLabel jLabelSalesChildren;
+    private javax.swing.JLabel jLabelSalesMen;
+    private javax.swing.JLabel jLabelSalesPenalty;
+    private javax.swing.JLabel jLabelSalesPrice;
+    private javax.swing.JLabel jLabelSalesQuantity;
+    private javax.swing.JLabel jLabelSalesWomen;
     private javax.swing.JLabel jLabelSattelCpl;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu jMenuCalculationMode;
@@ -4226,6 +4353,7 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelKF;
     private javax.swing.JPanel jPanelProductionForecast;
     private javax.swing.JPanel jPanelPurchasingDisposition;
+    private javax.swing.JPanel jPanelSales;
     private javax.swing.JPanel jPanelStockChange;
     private javax.swing.JPanel jPanelWorkloadPlanning;
     private javax.swing.JScrollPane jScrollPane1;
@@ -4484,6 +4612,15 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldPFPeriodN4DF;
     private javax.swing.JTextField jTextFieldPFPeriodN4HF;
     private javax.swing.JTextField jTextFieldPFPeriodN4KF;
+    private javax.swing.JTextField jTextFieldSalesDPenalty;
+    private javax.swing.JTextField jTextFieldSalesDPrice;
+    private javax.swing.JTextField jTextFieldSalesDQuantity;
+    private javax.swing.JTextField jTextFieldSalesHPenalty;
+    private javax.swing.JTextField jTextFieldSalesHPrice;
+    private javax.swing.JTextField jTextFieldSalesHQuantity;
+    private javax.swing.JTextField jTextFieldSalesKPenalty;
+    private javax.swing.JTextField jTextFieldSalesKPrice;
+    private javax.swing.JTextField jTextFieldSalesKQuantity;
     // End of variables declaration//GEN-END:variables
 
     //util methods
@@ -4522,6 +4659,7 @@ public class MainUI extends javax.swing.JFrame {
         jTabbedPan.setTitleAt(3, i18n.getString("PurchasingPlanning"));
         jTabbedPan.setTitleAt(4, i18n.getString("Stock"));
         jTabbedPan.setTitleAt(5, i18n.getString("ProductionList"));
+        jTabbedPan.setTitleAt(6, i18n.getString("Sales"));
         jTabbedPane2.setTitleAt(0, i18n.getString("Kinderfahrrad"));
         jTabbedPane2.setTitleAt(1, i18n.getString("Damenfahrrad"));
         jTabbedPane2.setTitleAt(2, i18n.getString("Herrenfahrrad"));
@@ -4632,6 +4770,13 @@ public class MainUI extends javax.swing.JFrame {
 
         jLabelDiscountFactor.setText(i18n.getString("DiscountFactor"));
         jLabelBufferFactor.setText(i18n.getString("BufferFactor"));
+        
+        jLabelSalesChildren.setText(i18n.getString("Kinderfahrrad"));
+        jLabelSalesWomen.setText(i18n.getString("Damenfahrrad"));
+        jLabelSalesMen.setText(i18n.getString("Herrenfahrrad"));
+        jLabelSalesQuantity.setText(i18n.getString("Quantity"));
+        jLabelSalesPrice.setText(i18n.getString("Price"));
+        jLabelSalesPenalty.setText(i18n.getString("Penalty"));
     }
 
     private void setPeriodLabels() {
@@ -4795,8 +4940,213 @@ public class MainUI extends javax.swing.JFrame {
         periodDetailN4.setProduct3(Utils.getNumberFromString(jTextFieldPFPeriodN4HF.getText()).longValue());
         reSetForecast();
     }
+    
+    private void sellDirectP1Changed() {
+        Item item = new Item();
+        item.setArticle(1);
+        double penalty = 0.0;
+        double price = 0.0;
+        long quantity = 0;
+        try {
+           penalty = Double.valueOf(jTextFieldSalesKPenalty.getText());
+           price = Double.valueOf(jTextFieldSalesKPrice.getText());
+           quantity = Long.valueOf(jTextFieldSalesKQuantity.getText());
+        } catch(Exception ex) {
+           penalty = 0.0; 
+           price = 0.0;
+           quantity = 0;
+        }
+        item.setPenalty(penalty);
+        item.setPrice(price);
+        item.setQuantity(quantity);
+    }
+    
+    private void sellDirectP2Changed() {
+        Item item = new Item();
+        item.setArticle(2);
+        double penalty = 0.0;
+        double price = 0.0;
+        long quantity = 0;
+        try {
+           penalty = Double.valueOf(jTextFieldSalesDPenalty.getText());
+           price = Double.valueOf(jTextFieldSalesDPrice.getText());
+           quantity = Long.valueOf(jTextFieldSalesDQuantity.getText());
+        } catch(Exception ex) {
+           penalty = 0.0; 
+           price = 0.0;
+           quantity = 0;
+        }
+        item.setPenalty(penalty);
+        item.setPrice(price);
+        item.setQuantity(quantity);
+    }
+    
+    private void sellDirectP3Changed() {
+        Item item = new Item();
+        item.setArticle(3);
+        double penalty = 0.0;
+        double price = 0.0;
+        long quantity = 0;
+        try {
+           penalty = Double.valueOf(jTextFieldSalesHPenalty.getText());
+           price = Double.valueOf(jTextFieldSalesHPrice.getText());
+           quantity = Long.valueOf(jTextFieldSalesHQuantity.getText());
+        } catch(Exception ex) {
+           penalty = 0.0; 
+           price = 0.0;
+           quantity = 0;
+        }
+        item.setPenalty(penalty);
+        item.setPrice(price);
+        item.setQuantity(quantity);
+    }
 
     final void addInputFieldsListener() {
+        jTextFieldSalesKPenalty.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                sellDirectP1Changed();
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                sellDirectP1Changed();
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                sellDirectP1Changed();
+            }
+        });
+        jTextFieldSalesKPrice.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                sellDirectP1Changed();
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                sellDirectP1Changed();
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                sellDirectP1Changed();
+            }
+        });
+        jTextFieldSalesKQuantity.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                sellDirectP1Changed();
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                sellDirectP1Changed();
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                sellDirectP1Changed();
+            }
+        });
+        jTextFieldSalesDPenalty.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                sellDirectP2Changed();
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                sellDirectP2Changed();
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                sellDirectP2Changed();
+            }
+        });
+        jTextFieldSalesDPrice.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                sellDirectP2Changed();
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                sellDirectP2Changed();
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                sellDirectP2Changed();
+            }
+        });
+        jTextFieldSalesDQuantity.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                sellDirectP2Changed();
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                sellDirectP2Changed();
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                sellDirectP2Changed();
+            }
+        });
+        jTextFieldSalesHPenalty.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                sellDirectP3Changed();
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                sellDirectP3Changed();
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                sellDirectP3Changed();
+            }
+        });
+        jTextFieldSalesHPrice.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                sellDirectP3Changed();
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                sellDirectP3Changed();
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                sellDirectP3Changed();
+            }
+        });
+        jTextFieldSalesHQuantity.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                sellDirectP3Changed();
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                sellDirectP3Changed();
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                sellDirectP3Changed();
+            }
+        });
+        
         //Production Forecast
         //Period N1
         jTextFieldPFPeriodN1KF.getDocument().addDocumentListener(new DocumentListener() {

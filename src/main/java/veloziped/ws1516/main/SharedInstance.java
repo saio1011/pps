@@ -96,6 +96,28 @@ public class SharedInstance {
         }
     }
 
+    public void setDefaultValues() {
+        this.sellDirect = new ArrayList<>();
+        Item p1 = new Item();
+        p1.setArticle(1);
+        p1.setQuantity(0);
+        p1.setPrice(0.0);
+        p1.setPenalty(0.0);
+        Item p2 = new Item();
+        p2.setArticle(1);
+        p2.setQuantity(0);
+        p2.setPrice(0.0);
+        p2.setPenalty(0.0);
+        Item p3 = new Item();
+        p3.setArticle(1);
+        p3.setQuantity(0);
+        p3.setPrice(0.0);
+        p3.setPenalty(0.0);
+        this.sellDirect.add(p1);
+        this.sellDirect.add(p2);
+        this.sellDirect.add(p3);
+    }
+    
     public Order getNewOrderById(long id) {
         for (int i = 0; i < newOrders.size(); i++) {
             if (newOrders.get(i).getArticle() == id) {
@@ -115,6 +137,16 @@ public class SharedInstance {
 
     public List<Production> getProductionListCalculated() {
         return productionListCalculated;
+    }
+    
+    public void setSellDirectForArticle(Item item) {
+        for(Item curItem : this.sellDirect) {
+            if(curItem.getArticle() == item.getArticle()){
+                this.sellDirect.remove(curItem);
+                this.sellDirect.add(item);
+                break;
+            } 
+        }
     }
 
     public void setProductionListCalculated(List<Production> productionListCalculated) {
