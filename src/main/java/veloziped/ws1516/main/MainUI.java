@@ -83,10 +83,14 @@ public class MainUI extends javax.swing.JFrame {
         this.jSpinnerDiscountFactor.setValue(SharedInstance.getInstance().getDiscountFactor() * 100);
         this.jSpinnerBufferFactor.setValue(SharedInstance.getInstance().getBufferFactor() * 100);
 
+        this.jPanel2.setVisible(true);
+        this.jPanel1.setVisible(false);
+        jScrollPane5.setVisible(false);
+        
+        this.jTabbedPan.setEnabledAt(1, false);
         this.jTabbedPan.setEnabledAt(2, false);
         this.jTabbedPan.setEnabledAt(3, false);
         this.jTabbedPan.setEnabledAt(4, false);
-        this.jTabbedPan.setEnabledAt(5, false);
         this.addInputFieldsListener();
 
         this.setInHouseProductionJTextFieldsEnabled(false);
@@ -127,26 +131,6 @@ public class MainUI extends javax.swing.JFrame {
         jLabelDiscountFactor = new javax.swing.JLabel();
         jScrollPane5 = new javax.swing.JScrollPane();
         jTabbedPan = new javax.swing.JTabbedPane();
-        jPanelProductionForecast = new javax.swing.JPanel();
-        jLabelKinderfahrradPF = new javax.swing.JLabel();
-        jLabelDamenfahrradPF = new javax.swing.JLabel();
-        jLabelHerrenfahrradPF = new javax.swing.JLabel();
-        jLabelPeriodNPF = new javax.swing.JLabel();
-        jLabelPeriodN1PF = new javax.swing.JLabel();
-        jLabelPeriodN2PF = new javax.swing.JLabel();
-        jLabelPeriodN3PF = new javax.swing.JLabel();
-        jTextFieldPFPeriodN1KF = new IntegerField();
-        jTextFieldPFPeriodN2KF = new IntegerField();
-        jTextFieldPFPeriodN3KF = new IntegerField();
-        jTextFieldPFPeriodN4KF = new IntegerField();
-        jTextFieldPFPeriodN1DF = new IntegerField();
-        jTextFieldPFPeriodN2DF = new IntegerField();
-        jTextFieldPFPeriodN3DF = new IntegerField();
-        jTextFieldPFPeriodN4DF = new IntegerField();
-        jTextFieldPFPeriodN1HF = new IntegerField();
-        jTextFieldPFPeriodN2HF = new IntegerField();
-        jTextFieldPFPeriodN3HF = new IntegerField();
-        jTextFieldPFPeriodN4HF = new IntegerField();
         jPanelInHouseProduction = new javax.swing.JPanel();
         jScrollPane6 = new javax.swing.JScrollPane();
         jTabbedPane2 = new javax.swing.JTabbedPane();
@@ -524,6 +508,30 @@ public class MainUI extends javax.swing.JFrame {
         jTableEProdList = new javax.swing.JTable();
         jButtonMoveDown = new javax.swing.JButton();
         jButtonMoveUp = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+        jPanelProductionForecast = new javax.swing.JPanel();
+        jLabelKinderfahrradPF = new javax.swing.JLabel();
+        jLabelDamenfahrradPF = new javax.swing.JLabel();
+        jLabelHerrenfahrradPF = new javax.swing.JLabel();
+        jLabelPeriodNPF = new javax.swing.JLabel();
+        jLabelPeriodN1PF = new javax.swing.JLabel();
+        jLabelPeriodN2PF = new javax.swing.JLabel();
+        jLabelPeriodN3PF = new javax.swing.JLabel();
+        jTextFieldPFPeriodN1KF = new IntegerField();
+        jTextFieldPFPeriodN2KF = new IntegerField();
+        jTextFieldPFPeriodN3KF = new IntegerField();
+        jTextFieldPFPeriodN4KF = new IntegerField();
+        jTextFieldPFPeriodN1DF = new IntegerField();
+        jTextFieldPFPeriodN2DF = new IntegerField();
+        jTextFieldPFPeriodN3DF = new IntegerField();
+        jTextFieldPFPeriodN4DF = new IntegerField();
+        jTextFieldPFPeriodN1HF = new IntegerField();
+        jTextFieldPFPeriodN2HF = new IntegerField();
+        jTextFieldPFPeriodN3HF = new IntegerField();
+        jTextFieldPFPeriodN4HF = new IntegerField();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuFile = new javax.swing.JMenu();
         jMenuItemImportFile = new javax.swing.JMenuItem();
@@ -659,121 +667,6 @@ public class MainUI extends javax.swing.JFrame {
                     .addComponent(jButtonImportXml, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-
-        jPanelProductionForecast.setAutoscrolls(true);
-
-        jLabelKinderfahrradPF.setText(bundle.getString("Kinderfahrrad")); // NOI18N
-
-        jLabelDamenfahrradPF.setText(bundle.getString("Damenfahrrad")); // NOI18N
-
-        jLabelHerrenfahrradPF.setText(bundle.getString("Herrenfahrrad")); // NOI18N
-
-        jLabelPeriodNPF.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelPeriodNPF.setText("Period");
-
-        jLabelPeriodN1PF.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelPeriodN1PF.setText("Period");
-
-        jLabelPeriodN2PF.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelPeriodN2PF.setText("Period");
-
-        jLabelPeriodN3PF.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelPeriodN3PF.setText("Period");
-
-        jTextFieldPFPeriodN1KF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextFieldPFPeriodN2KF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextFieldPFPeriodN3KF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextFieldPFPeriodN4KF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextFieldPFPeriodN1DF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextFieldPFPeriodN2DF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextFieldPFPeriodN3DF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextFieldPFPeriodN4DF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextFieldPFPeriodN1HF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextFieldPFPeriodN2HF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextFieldPFPeriodN3HF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextFieldPFPeriodN4HF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        javax.swing.GroupLayout jPanelProductionForecastLayout = new javax.swing.GroupLayout(jPanelProductionForecast);
-        jPanelProductionForecast.setLayout(jPanelProductionForecastLayout);
-        jPanelProductionForecastLayout.setHorizontalGroup(
-            jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelProductionForecastLayout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addGroup(jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabelHerrenfahrradPF, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelDamenfahrradPF, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelKinderfahrradPF, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(108, 108, 108)
-                .addGroup(jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextFieldPFPeriodN1DF)
-                    .addComponent(jLabelPeriodNPF, javax.swing.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)
-                    .addComponent(jTextFieldPFPeriodN1KF)
-                    .addComponent(jTextFieldPFPeriodN1HF))
-                .addGap(18, 18, 18)
-                .addGroup(jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextFieldPFPeriodN2DF)
-                    .addComponent(jLabelPeriodN1PF, javax.swing.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)
-                    .addComponent(jTextFieldPFPeriodN2KF)
-                    .addComponent(jTextFieldPFPeriodN2HF))
-                .addGap(18, 18, 18)
-                .addGroup(jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextFieldPFPeriodN3DF)
-                    .addComponent(jLabelPeriodN2PF, javax.swing.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)
-                    .addComponent(jTextFieldPFPeriodN3KF)
-                    .addComponent(jTextFieldPFPeriodN3HF))
-                .addGap(18, 18, 18)
-                .addGroup(jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelPeriodN3PF, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE)
-                    .addComponent(jTextFieldPFPeriodN4KF)
-                    .addComponent(jTextFieldPFPeriodN4DF)
-                    .addComponent(jTextFieldPFPeriodN4HF))
-                .addGap(142, 142, 142))
-        );
-        jPanelProductionForecastLayout.setVerticalGroup(
-            jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelProductionForecastLayout.createSequentialGroup()
-                .addGap(45, 45, 45)
-                .addGroup(jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelPeriodNPF, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabelPeriodN1PF, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabelPeriodN2PF, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabelPeriodN3PF, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(32, 32, 32)
-                .addGroup(jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelKinderfahrradPF, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldPFPeriodN1KF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldPFPeriodN2KF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldPFPeriodN3KF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldPFPeriodN4KF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelDamenfahrradPF, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldPFPeriodN1DF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldPFPeriodN2DF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldPFPeriodN3DF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldPFPeriodN4DF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelHerrenfahrradPF, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldPFPeriodN1HF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldPFPeriodN2HF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldPFPeriodN3HF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldPFPeriodN4HF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(84, 84, 84))
-        );
-
-        jTabbedPan.addTab("Production Forecast", jPanelProductionForecast);
 
         jPanelKF.setMaximumSize(new java.awt.Dimension(16, 28));
         jPanelKF.setPreferredSize(new java.awt.Dimension(16, 28));
@@ -3523,6 +3416,164 @@ public class MainUI extends javax.swing.JFrame {
 
         jScrollPane5.setViewportView(jTabbedPan);
 
+        jButton1.setText("Weiter");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jPanelProductionForecast.setAutoscrolls(true);
+
+        jLabelKinderfahrradPF.setText(bundle.getString("Kinderfahrrad")); // NOI18N
+
+        jLabelDamenfahrradPF.setText(bundle.getString("Damenfahrrad")); // NOI18N
+
+        jLabelHerrenfahrradPF.setText(bundle.getString("Herrenfahrrad")); // NOI18N
+
+        jLabelPeriodNPF.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelPeriodNPF.setText("Period");
+
+        jLabelPeriodN1PF.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelPeriodN1PF.setText("Period");
+
+        jLabelPeriodN2PF.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelPeriodN2PF.setText("Period");
+
+        jLabelPeriodN3PF.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelPeriodN3PF.setText("Period");
+
+        jTextFieldPFPeriodN1KF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+
+        jTextFieldPFPeriodN2KF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+
+        jTextFieldPFPeriodN3KF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+
+        jTextFieldPFPeriodN4KF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+
+        jTextFieldPFPeriodN1DF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+
+        jTextFieldPFPeriodN2DF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+
+        jTextFieldPFPeriodN3DF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+
+        jTextFieldPFPeriodN4DF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+
+        jTextFieldPFPeriodN1HF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+
+        jTextFieldPFPeriodN2HF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+
+        jTextFieldPFPeriodN3HF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+
+        jTextFieldPFPeriodN4HF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+
+        javax.swing.GroupLayout jPanelProductionForecastLayout = new javax.swing.GroupLayout(jPanelProductionForecast);
+        jPanelProductionForecast.setLayout(jPanelProductionForecastLayout);
+        jPanelProductionForecastLayout.setHorizontalGroup(
+            jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelProductionForecastLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addGroup(jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabelHerrenfahrradPF, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelDamenfahrradPF, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKinderfahrradPF, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(108, 108, 108)
+                .addGroup(jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextFieldPFPeriodN1DF)
+                    .addComponent(jLabelPeriodNPF, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
+                    .addComponent(jTextFieldPFPeriodN1KF)
+                    .addComponent(jTextFieldPFPeriodN1HF))
+                .addGap(18, 18, 18)
+                .addGroup(jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextFieldPFPeriodN2DF)
+                    .addComponent(jLabelPeriodN1PF, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
+                    .addComponent(jTextFieldPFPeriodN2KF)
+                    .addComponent(jTextFieldPFPeriodN2HF))
+                .addGap(18, 18, 18)
+                .addGroup(jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextFieldPFPeriodN3DF)
+                    .addComponent(jLabelPeriodN2PF, javax.swing.GroupLayout.DEFAULT_SIZE, 221, Short.MAX_VALUE)
+                    .addComponent(jTextFieldPFPeriodN3KF)
+                    .addComponent(jTextFieldPFPeriodN3HF))
+                .addGap(18, 18, 18)
+                .addGroup(jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabelPeriodN3PF, javax.swing.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE)
+                    .addComponent(jTextFieldPFPeriodN4KF)
+                    .addComponent(jTextFieldPFPeriodN4DF)
+                    .addComponent(jTextFieldPFPeriodN4HF))
+                .addGap(87, 87, 87))
+        );
+        jPanelProductionForecastLayout.setVerticalGroup(
+            jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelProductionForecastLayout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addGroup(jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelPeriodNPF, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabelPeriodN1PF, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabelPeriodN2PF, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabelPeriodN3PF, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(32, 32, 32)
+                .addGroup(jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelKinderfahrradPF, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldPFPeriodN1KF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldPFPeriodN2KF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldPFPeriodN3KF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldPFPeriodN4KF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelDamenfahrradPF, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldPFPeriodN1DF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldPFPeriodN2DF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldPFPeriodN3DF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldPFPeriodN4DF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelHerrenfahrradPF, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldPFPeriodN1HF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldPFPeriodN2HF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldPFPeriodN3HF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldPFPeriodN4HF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(84, 84, 84))
+        );
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jTextArea1.setText("bla bla Wilcommen \nbla bla \n\n\nBitte Geben Sie jetzt Ihre Prognose ein!");
+        jScrollPane7.setViewportView(jTextArea1);
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(86, 86, 86))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 1292, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jPanelProductionForecast, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 458, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(65, 65, 65))
+            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                    .addContainerGap(225, Short.MAX_VALUE)
+                    .addComponent(jPanelProductionForecast, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(225, Short.MAX_VALUE)))
+        );
+
         jMenuFile.setText(bundle.getString("File")); // NOI18N
 
         jMenuItemImportFile.setText(bundle.getString("ImportFile")); // NOI18N
@@ -3636,6 +3687,11 @@ public class MainUI extends javax.swing.JFrame {
                         .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addContainerGap())
                     .addComponent(jScrollPane5)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3644,6 +3700,10 @@ public class MainUI extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane5)
                 .addContainerGap())
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
         );
 
         pack();
@@ -3907,10 +3967,10 @@ public class MainUI extends javax.swing.JFrame {
         this.reFillStockChangeTable(articles);
         this.reFillEProdList(productionList);
 
+        this.jTabbedPan.setEnabledAt(1, true);
         this.jTabbedPan.setEnabledAt(2, true);
         this.jTabbedPan.setEnabledAt(3, true);
         this.jTabbedPan.setEnabledAt(4, true);
-        this.jTabbedPan.setEnabledAt(5, true);
     }//GEN-LAST:event_jButtonCalculateActionPerformed
 
     private void jSpinnerDiscountFactorStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinnerDiscountFactorStateChanged
@@ -3954,6 +4014,12 @@ public class MainUI extends javax.swing.JFrame {
     private void jTablePurchasingDispositionPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jTablePurchasingDispositionPropertyChange
 
     }//GEN-LAST:event_jTablePurchasingDispositionPropertyChange
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        this.jPanel2.setVisible(false);
+        this.jPanel1.setVisible(true);
+        this.jScrollPane5.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     Action purchasingDisposalListener = new AbstractAction() {
         @Override
@@ -4058,6 +4124,7 @@ public class MainUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonCalculate;
     private javax.swing.JButton jButtonImportXml;
     private javax.swing.JButton jButtonMoveDown;
@@ -4218,6 +4285,7 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JMenu jMenuLanguage;
     private javax.swing.JMenu jMenuSettings;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanelDF;
     private javax.swing.JPanel jPanelEProdList;
     private javax.swing.JPanel jPanelHF;
@@ -4234,6 +4302,7 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator10;
@@ -4255,6 +4324,7 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JTable jTablePurchasingDisposition;
     private javax.swing.JTable jTableStockChange;
     private javax.swing.JTable jTableWorkloadPlanning;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextAreaHelpFile;
     private javax.swing.JTextField jTextFieldDFE11OrdersInQueque;
     private javax.swing.JTextField jTextFieldDFE11PlannedStock;
@@ -4516,12 +4586,12 @@ public class MainUI extends javax.swing.JFrame {
         jButtonMoveDown.setText(i18n.getString("MoveDown"));
 
         //tabs
-        jTabbedPan.setTitleAt(0, i18n.getString("ProductionForecast"));
-        jTabbedPan.setTitleAt(1, i18n.getString("InHauseProduction"));
-        jTabbedPan.setTitleAt(2, i18n.getString("WorkloadPlanning"));
-        jTabbedPan.setTitleAt(3, i18n.getString("PurchasingPlanning"));
-        jTabbedPan.setTitleAt(4, i18n.getString("Stock"));
-        jTabbedPan.setTitleAt(5, i18n.getString("ProductionList"));
+//        jTabbedPan.setTitleAt(0, i18n.getString("ProductionForecast"));
+        jTabbedPan.setTitleAt(0, i18n.getString("InHauseProduction"));
+        jTabbedPan.setTitleAt(1, i18n.getString("WorkloadPlanning"));
+        jTabbedPan.setTitleAt(2, i18n.getString("PurchasingPlanning"));
+        jTabbedPan.setTitleAt(3, i18n.getString("Stock"));
+        jTabbedPan.setTitleAt(4, i18n.getString("ProductionList"));
         jTabbedPane2.setTitleAt(0, i18n.getString("Kinderfahrrad"));
         jTabbedPane2.setTitleAt(1, i18n.getString("Damenfahrrad"));
         jTabbedPane2.setTitleAt(2, i18n.getString("Herrenfahrrad"));
@@ -5009,211 +5079,211 @@ public class MainUI extends javax.swing.JFrame {
         //InHouseProduction
         //Kinderfahrrad
         //SalesOrders
-        //P1
-        jTextFieldKFP1SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
-            @Override
-            public void insertUpdate(DocumentEvent e) {
-                jTextFieldKFP1ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFP1SalesOrders.getText().equals("") ? "0" : jTextFieldKFP1SalesOrders.getText())), 0, Integer.parseInt((jTextFieldKFP1PlannedStock.getText().equals("") ? "0" : jTextFieldKFP1PlannedStock.getText())), Integer.parseInt(jTextFieldKFP1StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFP1StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFP1OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFP1OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFP1WorkInProgress.getText().equals("") ? "0" : jTextFieldKFP1WorkInProgress.getText())));
-            }
-
-            @Override
-            public void removeUpdate(DocumentEvent e) {
-                jTextFieldKFP1ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFP1SalesOrders.getText().equals("") ? "0" : jTextFieldKFP1SalesOrders.getText())), 0, Integer.parseInt((jTextFieldKFP1PlannedStock.getText().equals("") ? "0" : jTextFieldKFP1PlannedStock.getText())), Integer.parseInt(jTextFieldKFP1StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFP1StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFP1OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFP1OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFP1WorkInProgress.getText().equals("") ? "0" : jTextFieldKFP1WorkInProgress.getText())));
-            }
-
-            @Override
-            public void changedUpdate(DocumentEvent e) {
-                jTextFieldKFP1ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFP1SalesOrders.getText().equals("") ? "0" : jTextFieldKFP1SalesOrders.getText())), 0, Integer.parseInt((jTextFieldKFP1PlannedStock.getText().equals("") ? "0" : jTextFieldKFP1PlannedStock.getText())), Integer.parseInt(jTextFieldKFP1StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFP1StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFP1OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFP1OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFP1WorkInProgress.getText().equals("") ? "0" : jTextFieldKFP1WorkInProgress.getText())));
-            }
-        });
-
-        //E26
-        jTextFieldKFE26SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
-            @Override
-            public void insertUpdate(DocumentEvent e) {
-                jTextFieldKFE26ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE26SalesOrders.getText().equals("") ? "0" : jTextFieldKFE26SalesOrders.getText())), Integer.parseInt((jLabelKFE26OrdersInQueque.getText().equals("") ? "0" : jLabelKFE26OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE26PlannedStock.getText().equals("") ? "0" : jTextFieldKFE26PlannedStock.getText())), Integer.parseInt(jTextFieldKFE26StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE26StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE26OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE26OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE26WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE26WorkInProgress.getText())));
-            }
-
-            @Override
-            public void removeUpdate(DocumentEvent e) {
-                jTextFieldKFE26ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE26SalesOrders.getText().equals("") ? "0" : jTextFieldKFE26SalesOrders.getText())), Integer.parseInt((jLabelKFE26OrdersInQueque.getText().equals("") ? "0" : jLabelKFE26OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE26PlannedStock.getText().equals("") ? "0" : jTextFieldKFE26PlannedStock.getText())), Integer.parseInt(jTextFieldKFE26StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE26StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE26OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE26OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE26WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE26WorkInProgress.getText())));
-            }
-
-            @Override
-            public void changedUpdate(DocumentEvent e) {
-                jTextFieldKFE26ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE26SalesOrders.getText().equals("") ? "0" : jTextFieldKFE26SalesOrders.getText())), Integer.parseInt((jLabelKFE26OrdersInQueque.getText().equals("") ? "0" : jLabelKFE26OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE26PlannedStock.getText().equals("") ? "0" : jTextFieldKFE26PlannedStock.getText())), Integer.parseInt(jTextFieldKFE26StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE26StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE26OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE26OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE26WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE26WorkInProgress.getText())));
-            }
-        });
-        //E51
-        jTextFieldKFE51SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
-            @Override
-            public void insertUpdate(DocumentEvent e) {
-                jTextFieldKFE51ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE51SalesOrders.getText().equals("") ? "0" : jTextFieldKFE51SalesOrders.getText())), Integer.parseInt((jLabelKFE51OrdersInQueque.getText().equals("") ? "0" : jLabelKFE51OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE51PlannedStock.getText().equals("") ? "0" : jTextFieldKFE51PlannedStock.getText())), Integer.parseInt(jTextFieldKFE51StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE51StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE51OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE51OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE51WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE51WorkInProgress.getText())));
-            }
-
-            @Override
-            public void removeUpdate(DocumentEvent e) {
-                jTextFieldKFE51ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE51SalesOrders.getText().equals("") ? "0" : jTextFieldKFE51SalesOrders.getText())), Integer.parseInt((jLabelKFE51OrdersInQueque.getText().equals("") ? "0" : jLabelKFE51OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE51PlannedStock.getText().equals("") ? "0" : jTextFieldKFE51PlannedStock.getText())), Integer.parseInt(jTextFieldKFE51StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE51StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE51OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE51OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE51WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE51WorkInProgress.getText())));
-            }
-
-            @Override
-            public void changedUpdate(DocumentEvent e) {
-                jTextFieldKFE51ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE51SalesOrders.getText().equals("") ? "0" : jTextFieldKFE51SalesOrders.getText())), Integer.parseInt((jLabelKFE51OrdersInQueque.getText().equals("") ? "0" : jLabelKFE51OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE51PlannedStock.getText().equals("") ? "0" : jTextFieldKFE51PlannedStock.getText())), Integer.parseInt(jTextFieldKFE51StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE51StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE51OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE51OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE51WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE51WorkInProgress.getText())));
-            }
-        });
-        //E16
-        jTextFieldKFE16SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
-            @Override
-            public void insertUpdate(DocumentEvent e) {
-                jTextFieldKFE16ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE16SalesOrders.getText().equals("") ? "0" : jTextFieldKFE16SalesOrders.getText())), Integer.parseInt((jLabelKFE16OrdersInQueque.getText().equals("") ? "0" : jLabelKFE16OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE16PlannedStock.getText().equals("") ? "0" : jTextFieldKFE16PlannedStock.getText())), Integer.parseInt(jTextFieldKFE16StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE16StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE16OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE16OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE16WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE16WorkInProgress.getText())));
-            }
-
-            @Override
-            public void removeUpdate(DocumentEvent e) {
-                jTextFieldKFE16ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE16SalesOrders.getText().equals("") ? "0" : jTextFieldKFE16SalesOrders.getText())), Integer.parseInt((jLabelKFE16OrdersInQueque.getText().equals("") ? "0" : jLabelKFE16OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE16PlannedStock.getText().equals("") ? "0" : jTextFieldKFE16PlannedStock.getText())), Integer.parseInt(jTextFieldKFE16StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE16StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE16OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE16OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE16WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE16WorkInProgress.getText())));
-            }
-
-            @Override
-            public void changedUpdate(DocumentEvent e) {
-                jTextFieldKFE16ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE16SalesOrders.getText().equals("") ? "0" : jTextFieldKFE16SalesOrders.getText())), Integer.parseInt((jLabelKFE16OrdersInQueque.getText().equals("") ? "0" : jLabelKFE16OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE16PlannedStock.getText().equals("") ? "0" : jTextFieldKFE16PlannedStock.getText())), Integer.parseInt(jTextFieldKFE16StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE16StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE16OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE16OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE16WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE16WorkInProgress.getText())));
-            }
-        });
-        //E17
-        jTextFieldKFE17SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
-            @Override
-            public void insertUpdate(DocumentEvent e) {
-                jTextFieldKFE17ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE17SalesOrders.getText().equals("") ? "0" : jTextFieldKFE17SalesOrders.getText())), Integer.parseInt((jLabelKFE17OrdersInQueque.getText().equals("") ? "0" : jLabelKFE17OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE17PlannedStock.getText().equals("") ? "0" : jTextFieldKFE17PlannedStock.getText())), Integer.parseInt(jTextFieldKFE17StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE17StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE17OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE17OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE17WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE17WorkInProgress.getText())));
-            }
-
-            @Override
-            public void removeUpdate(DocumentEvent e) {
-                jTextFieldKFE17ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE17SalesOrders.getText().equals("") ? "0" : jTextFieldKFE17SalesOrders.getText())), Integer.parseInt((jLabelKFE17OrdersInQueque.getText().equals("") ? "0" : jLabelKFE17OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE17PlannedStock.getText().equals("") ? "0" : jTextFieldKFE17PlannedStock.getText())), Integer.parseInt(jTextFieldKFE17StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE17StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE17OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE17OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE17WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE17WorkInProgress.getText())));
-            }
-
-            @Override
-            public void changedUpdate(DocumentEvent e) {
-                jTextFieldKFE17ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE17SalesOrders.getText().equals("") ? "0" : jTextFieldKFE17SalesOrders.getText())), Integer.parseInt((jLabelKFE17OrdersInQueque.getText().equals("") ? "0" : jLabelKFE17OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE17PlannedStock.getText().equals("") ? "0" : jTextFieldKFE17PlannedStock.getText())), Integer.parseInt(jTextFieldKFE17StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE17StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE17OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE17OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE17WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE17WorkInProgress.getText())));
-            }
-        });
-        //E50
-        jTextFieldKFE50SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
-            @Override
-            public void insertUpdate(DocumentEvent e) {
-                jTextFieldKFE50ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE50SalesOrders.getText().equals("") ? "0" : jTextFieldKFE50SalesOrders.getText())), Integer.parseInt((jLabelKFE50OrdersInQueque.getText().equals("") ? "0" : jLabelKFE50OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE50PlannedStock.getText().equals("") ? "0" : jTextFieldKFE50PlannedStock.getText())), Integer.parseInt(jTextFieldKFE50StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE50StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE50OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE50OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE50WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE50WorkInProgress.getText())));
-            }
-
-            @Override
-            public void removeUpdate(DocumentEvent e) {
-                jTextFieldKFE50ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE50SalesOrders.getText().equals("") ? "0" : jTextFieldKFE50SalesOrders.getText())), Integer.parseInt((jLabelKFE50OrdersInQueque.getText().equals("") ? "0" : jLabelKFE50OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE50PlannedStock.getText().equals("") ? "0" : jTextFieldKFE50PlannedStock.getText())), Integer.parseInt(jTextFieldKFE50StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE50StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE50OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE50OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE50WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE50WorkInProgress.getText())));
-            }
-
-            @Override
-            public void changedUpdate(DocumentEvent e) {
-                jTextFieldKFE50ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE50SalesOrders.getText().equals("") ? "0" : jTextFieldKFE50SalesOrders.getText())), Integer.parseInt((jLabelKFE50OrdersInQueque.getText().equals("") ? "0" : jLabelKFE50OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE50PlannedStock.getText().equals("") ? "0" : jTextFieldKFE50PlannedStock.getText())), Integer.parseInt(jTextFieldKFE50StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE50StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE50OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE50OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE50WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE50WorkInProgress.getText())));
-            }
-        });
-        //E4
-        jTextFieldKFE4SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
-            @Override
-            public void insertUpdate(DocumentEvent e) {
-                jTextFieldKFE4ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE4SalesOrders.getText().equals("") ? "0" : jTextFieldKFE4SalesOrders.getText())), Integer.parseInt((jLabelKFE4OrdersInQueque.getText().equals("") ? "0" : jLabelKFE4OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE4PlannedStock.getText().equals("") ? "0" : jTextFieldKFE4PlannedStock.getText())), Integer.parseInt(jTextFieldKFE4StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE4StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE4OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE4OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE4WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE4WorkInProgress.getText())));
-            }
-
-            @Override
-            public void removeUpdate(DocumentEvent e) {
-                jTextFieldKFE4ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE4SalesOrders.getText().equals("") ? "0" : jTextFieldKFE4SalesOrders.getText())), Integer.parseInt((jLabelKFE4OrdersInQueque.getText().equals("") ? "0" : jLabelKFE4OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE4PlannedStock.getText().equals("") ? "0" : jTextFieldKFE4PlannedStock.getText())), Integer.parseInt(jTextFieldKFE4StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE4StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE4OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE4OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE4WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE4WorkInProgress.getText())));
-            }
-
-            @Override
-            public void changedUpdate(DocumentEvent e) {
-                jTextFieldKFE4ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE4SalesOrders.getText().equals("") ? "0" : jTextFieldKFE4SalesOrders.getText())), Integer.parseInt((jLabelKFE4OrdersInQueque.getText().equals("") ? "0" : jLabelKFE4OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE4PlannedStock.getText().equals("") ? "0" : jTextFieldKFE4PlannedStock.getText())), Integer.parseInt(jTextFieldKFE4StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE4StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE4OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE4OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE4WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE4WorkInProgress.getText())));
-            }
-        });
-        //E10
-        jTextFieldKFE10SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
-            @Override
-            public void insertUpdate(DocumentEvent e) {
-                jTextFieldKFE10ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE10SalesOrders.getText().equals("") ? "0" : jTextFieldKFE10SalesOrders.getText())), Integer.parseInt((jLabelKFE10OrdersInQueque.getText().equals("") ? "0" : jLabelKFE10OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE10PlannedStock.getText().equals("") ? "0" : jTextFieldKFE10PlannedStock.getText())), Integer.parseInt(jTextFieldKFE10StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE10StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE10OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE10OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE10WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE10WorkInProgress.getText())));
-            }
-
-            @Override
-            public void removeUpdate(DocumentEvent e) {
-                jTextFieldKFE10ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE10SalesOrders.getText().equals("") ? "0" : jTextFieldKFE10SalesOrders.getText())), Integer.parseInt((jLabelKFE10OrdersInQueque.getText().equals("") ? "0" : jLabelKFE10OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE10PlannedStock.getText().equals("") ? "0" : jTextFieldKFE10PlannedStock.getText())), Integer.parseInt(jTextFieldKFE10StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE10StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE10OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE10OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE10WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE10WorkInProgress.getText())));
-            }
-
-            @Override
-            public void changedUpdate(DocumentEvent e) {
-                jTextFieldKFE10ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE10SalesOrders.getText().equals("") ? "0" : jTextFieldKFE10SalesOrders.getText())), Integer.parseInt((jLabelKFE10OrdersInQueque.getText().equals("") ? "0" : jLabelKFE10OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE10PlannedStock.getText().equals("") ? "0" : jTextFieldKFE10PlannedStock.getText())), Integer.parseInt(jTextFieldKFE10StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE10StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE10OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE10OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE10WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE10WorkInProgress.getText())));
-            }
-        });
-        //E49
-        jTextFieldKFE49SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
-            @Override
-            public void insertUpdate(DocumentEvent e) {
-                jTextFieldKFE49ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE49SalesOrders.getText().equals("") ? "0" : jTextFieldKFE49SalesOrders.getText())), Integer.parseInt((jLabelKFE49OrdersInQueque.getText().equals("") ? "0" : jLabelKFE49OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE49PlannedStock.getText().equals("") ? "0" : jTextFieldKFE49PlannedStock.getText())), Integer.parseInt(jTextFieldKFE49StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE49StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE49OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE49OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE49WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE49WorkInProgress.getText())));
-            }
-
-            @Override
-            public void removeUpdate(DocumentEvent e) {
-                jTextFieldKFE49ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE49SalesOrders.getText().equals("") ? "0" : jTextFieldKFE49SalesOrders.getText())), Integer.parseInt((jLabelKFE49OrdersInQueque.getText().equals("") ? "0" : jLabelKFE49OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE49PlannedStock.getText().equals("") ? "0" : jTextFieldKFE49PlannedStock.getText())), Integer.parseInt(jTextFieldKFE49StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE49StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE49OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE49OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE49WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE49WorkInProgress.getText())));
-            }
-
-            @Override
-            public void changedUpdate(DocumentEvent e) {
-                jTextFieldKFE49ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE49SalesOrders.getText().equals("") ? "0" : jTextFieldKFE49SalesOrders.getText())), Integer.parseInt((jLabelKFE49OrdersInQueque.getText().equals("") ? "0" : jLabelKFE49OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE49PlannedStock.getText().equals("") ? "0" : jTextFieldKFE49PlannedStock.getText())), Integer.parseInt(jTextFieldKFE49StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE49StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE49OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE49OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE49WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE49WorkInProgress.getText())));
-            }
-        });
-        //E7
-        jTextFieldKFE7SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
-            @Override
-            public void insertUpdate(DocumentEvent e) {
-                jTextFieldKFE7ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE7SalesOrders.getText().equals("") ? "0" : jTextFieldKFE7SalesOrders.getText())), Integer.parseInt((jLabelKFE7OrdersInQueque.getText().equals("") ? "0" : jLabelKFE7OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE7PlannedStock.getText().equals("") ? "0" : jTextFieldKFE7PlannedStock.getText())), Integer.parseInt(jTextFieldKFE7StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE7StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE7OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE7OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE7WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE7WorkInProgress.getText())));
-            }
-
-            @Override
-            public void removeUpdate(DocumentEvent e) {
-                jTextFieldKFE7ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE7SalesOrders.getText().equals("") ? "0" : jTextFieldKFE7SalesOrders.getText())), Integer.parseInt((jLabelKFE7OrdersInQueque.getText().equals("") ? "0" : jLabelKFE7OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE7PlannedStock.getText().equals("") ? "0" : jTextFieldKFE7PlannedStock.getText())), Integer.parseInt(jTextFieldKFE7StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE7StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE7OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE7OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE7WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE7WorkInProgress.getText())));
-            }
-
-            @Override
-            public void changedUpdate(DocumentEvent e) {
-                jTextFieldKFE7ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE7SalesOrders.getText().equals("") ? "0" : jTextFieldKFE7SalesOrders.getText())), Integer.parseInt((jLabelKFE7OrdersInQueque.getText().equals("") ? "0" : jLabelKFE7OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE7PlannedStock.getText().equals("") ? "0" : jTextFieldKFE7PlannedStock.getText())), Integer.parseInt(jTextFieldKFE7StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE7StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE7OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE7OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE7WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE7WorkInProgress.getText())));
-            }
-        });
-        //E13
-        jTextFieldKFE13SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
-            @Override
-            public void insertUpdate(DocumentEvent e) {
-                jTextFieldKFE13ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE13SalesOrders.getText().equals("") ? "0" : jTextFieldKFE13SalesOrders.getText())), Integer.parseInt((jLabelKFE13OrdersInQueque.getText().equals("") ? "0" : jLabelKFE13OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE13PlannedStock.getText().equals("") ? "0" : jTextFieldKFE13PlannedStock.getText())), Integer.parseInt(jTextFieldKFE13StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE13StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE13OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE13OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE13WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE13WorkInProgress.getText())));
-            }
-
-            @Override
-            public void removeUpdate(DocumentEvent e) {
-                jTextFieldKFE13ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE13SalesOrders.getText().equals("") ? "0" : jTextFieldKFE13SalesOrders.getText())), Integer.parseInt((jLabelKFE13OrdersInQueque.getText().equals("") ? "0" : jLabelKFE13OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE13PlannedStock.getText().equals("") ? "0" : jTextFieldKFE13PlannedStock.getText())), Integer.parseInt(jTextFieldKFE13StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE13StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE13OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE13OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE13WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE13WorkInProgress.getText())));
-            }
-
-            @Override
-            public void changedUpdate(DocumentEvent e) {
-                jTextFieldKFE13ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE13SalesOrders.getText().equals("") ? "0" : jTextFieldKFE13SalesOrders.getText())), Integer.parseInt((jLabelKFE13OrdersInQueque.getText().equals("") ? "0" : jLabelKFE13OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE13PlannedStock.getText().equals("") ? "0" : jTextFieldKFE13PlannedStock.getText())), Integer.parseInt(jTextFieldKFE13StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE13StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE13OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE13OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE13WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE13WorkInProgress.getText())));
-            }
-        });
-        //E18
-        jTextFieldKFE18SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
-            @Override
-            public void insertUpdate(DocumentEvent e) {
-                jTextFieldKFE18ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE18SalesOrders.getText().equals("") ? "0" : jTextFieldKFE18SalesOrders.getText())), Integer.parseInt((jLabelKFE18OrdersInQueque.getText().equals("") ? "0" : jLabelKFE18OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE18PlannedStock.getText().equals("") ? "0" : jTextFieldKFE18PlannedStock.getText())), Integer.parseInt(jTextFieldKFE18StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE18StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE18OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE18OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE18WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE18WorkInProgress.getText())));
-            }
-
-            @Override
-            public void removeUpdate(DocumentEvent e) {
-                jTextFieldKFE18ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE18SalesOrders.getText().equals("") ? "0" : jTextFieldKFE18SalesOrders.getText())), Integer.parseInt((jLabelKFE18OrdersInQueque.getText().equals("") ? "0" : jLabelKFE18OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE18PlannedStock.getText().equals("") ? "0" : jTextFieldKFE18PlannedStock.getText())), Integer.parseInt(jTextFieldKFE18StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE18StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE18OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE18OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE18WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE18WorkInProgress.getText())));
-            }
-
-            @Override
-            public void changedUpdate(DocumentEvent e) {
-                jTextFieldKFE18ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE18SalesOrders.getText().equals("") ? "0" : jTextFieldKFE18SalesOrders.getText())), Integer.parseInt((jLabelKFE18OrdersInQueque.getText().equals("") ? "0" : jLabelKFE18OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE18PlannedStock.getText().equals("") ? "0" : jTextFieldKFE18PlannedStock.getText())), Integer.parseInt(jTextFieldKFE18StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE18StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE18OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE18OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE18WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE18WorkInProgress.getText())));
-            }
-        });
+//        //P1
+//        jTextFieldKFP1SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
+//            @Override
+//            public void insertUpdate(DocumentEvent e) {
+//                jTextFieldKFP1ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFP1SalesOrders.getText().equals("") ? "0" : jTextFieldKFP1SalesOrders.getText())), 0, Integer.parseInt((jTextFieldKFP1PlannedStock.getText().equals("") ? "0" : jTextFieldKFP1PlannedStock.getText())), Integer.parseInt(jTextFieldKFP1StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFP1StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFP1OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFP1OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFP1WorkInProgress.getText().equals("") ? "0" : jTextFieldKFP1WorkInProgress.getText())));
+//            }
+//
+//            @Override
+//            public void removeUpdate(DocumentEvent e) {
+//                jTextFieldKFP1ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFP1SalesOrders.getText().equals("") ? "0" : jTextFieldKFP1SalesOrders.getText())), 0, Integer.parseInt((jTextFieldKFP1PlannedStock.getText().equals("") ? "0" : jTextFieldKFP1PlannedStock.getText())), Integer.parseInt(jTextFieldKFP1StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFP1StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFP1OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFP1OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFP1WorkInProgress.getText().equals("") ? "0" : jTextFieldKFP1WorkInProgress.getText())));
+//            }
+//
+//            @Override
+//            public void changedUpdate(DocumentEvent e) {
+//                jTextFieldKFP1ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFP1SalesOrders.getText().equals("") ? "0" : jTextFieldKFP1SalesOrders.getText())), 0, Integer.parseInt((jTextFieldKFP1PlannedStock.getText().equals("") ? "0" : jTextFieldKFP1PlannedStock.getText())), Integer.parseInt(jTextFieldKFP1StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFP1StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFP1OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFP1OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFP1WorkInProgress.getText().equals("") ? "0" : jTextFieldKFP1WorkInProgress.getText())));
+//            }
+//        });
+//
+//        //E26
+//        jTextFieldKFE26SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
+//            @Override
+//            public void insertUpdate(DocumentEvent e) {
+//                jTextFieldKFE26ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE26SalesOrders.getText().equals("") ? "0" : jTextFieldKFE26SalesOrders.getText())), Integer.parseInt((jLabelKFE26OrdersInQueque.getText().equals("") ? "0" : jLabelKFE26OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE26PlannedStock.getText().equals("") ? "0" : jTextFieldKFE26PlannedStock.getText())), Integer.parseInt(jTextFieldKFE26StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE26StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE26OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE26OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE26WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE26WorkInProgress.getText())));
+//            }
+//
+//            @Override
+//            public void removeUpdate(DocumentEvent e) {
+//                jTextFieldKFE26ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE26SalesOrders.getText().equals("") ? "0" : jTextFieldKFE26SalesOrders.getText())), Integer.parseInt((jLabelKFE26OrdersInQueque.getText().equals("") ? "0" : jLabelKFE26OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE26PlannedStock.getText().equals("") ? "0" : jTextFieldKFE26PlannedStock.getText())), Integer.parseInt(jTextFieldKFE26StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE26StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE26OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE26OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE26WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE26WorkInProgress.getText())));
+//            }
+//
+//            @Override
+//            public void changedUpdate(DocumentEvent e) {
+//                jTextFieldKFE26ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE26SalesOrders.getText().equals("") ? "0" : jTextFieldKFE26SalesOrders.getText())), Integer.parseInt((jLabelKFE26OrdersInQueque.getText().equals("") ? "0" : jLabelKFE26OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE26PlannedStock.getText().equals("") ? "0" : jTextFieldKFE26PlannedStock.getText())), Integer.parseInt(jTextFieldKFE26StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE26StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE26OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE26OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE26WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE26WorkInProgress.getText())));
+//            }
+//        });
+//        //E51
+//        jTextFieldKFE51SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
+//            @Override
+//            public void insertUpdate(DocumentEvent e) {
+//                jTextFieldKFE51ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE51SalesOrders.getText().equals("") ? "0" : jTextFieldKFE51SalesOrders.getText())), Integer.parseInt((jLabelKFE51OrdersInQueque.getText().equals("") ? "0" : jLabelKFE51OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE51PlannedStock.getText().equals("") ? "0" : jTextFieldKFE51PlannedStock.getText())), Integer.parseInt(jTextFieldKFE51StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE51StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE51OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE51OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE51WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE51WorkInProgress.getText())));
+//            }
+//
+//            @Override
+//            public void removeUpdate(DocumentEvent e) {
+//                jTextFieldKFE51ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE51SalesOrders.getText().equals("") ? "0" : jTextFieldKFE51SalesOrders.getText())), Integer.parseInt((jLabelKFE51OrdersInQueque.getText().equals("") ? "0" : jLabelKFE51OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE51PlannedStock.getText().equals("") ? "0" : jTextFieldKFE51PlannedStock.getText())), Integer.parseInt(jTextFieldKFE51StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE51StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE51OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE51OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE51WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE51WorkInProgress.getText())));
+//            }
+//
+//            @Override
+//            public void changedUpdate(DocumentEvent e) {
+//                jTextFieldKFE51ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE51SalesOrders.getText().equals("") ? "0" : jTextFieldKFE51SalesOrders.getText())), Integer.parseInt((jLabelKFE51OrdersInQueque.getText().equals("") ? "0" : jLabelKFE51OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE51PlannedStock.getText().equals("") ? "0" : jTextFieldKFE51PlannedStock.getText())), Integer.parseInt(jTextFieldKFE51StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE51StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE51OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE51OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE51WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE51WorkInProgress.getText())));
+//            }
+//        });
+//        //E16
+//        jTextFieldKFE16SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
+//            @Override
+//            public void insertUpdate(DocumentEvent e) {
+//                jTextFieldKFE16ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE16SalesOrders.getText().equals("") ? "0" : jTextFieldKFE16SalesOrders.getText())), Integer.parseInt((jLabelKFE16OrdersInQueque.getText().equals("") ? "0" : jLabelKFE16OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE16PlannedStock.getText().equals("") ? "0" : jTextFieldKFE16PlannedStock.getText())), Integer.parseInt(jTextFieldKFE16StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE16StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE16OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE16OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE16WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE16WorkInProgress.getText())));
+//            }
+//
+//            @Override
+//            public void removeUpdate(DocumentEvent e) {
+//                jTextFieldKFE16ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE16SalesOrders.getText().equals("") ? "0" : jTextFieldKFE16SalesOrders.getText())), Integer.parseInt((jLabelKFE16OrdersInQueque.getText().equals("") ? "0" : jLabelKFE16OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE16PlannedStock.getText().equals("") ? "0" : jTextFieldKFE16PlannedStock.getText())), Integer.parseInt(jTextFieldKFE16StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE16StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE16OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE16OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE16WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE16WorkInProgress.getText())));
+//            }
+//
+//            @Override
+//            public void changedUpdate(DocumentEvent e) {
+//                jTextFieldKFE16ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE16SalesOrders.getText().equals("") ? "0" : jTextFieldKFE16SalesOrders.getText())), Integer.parseInt((jLabelKFE16OrdersInQueque.getText().equals("") ? "0" : jLabelKFE16OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE16PlannedStock.getText().equals("") ? "0" : jTextFieldKFE16PlannedStock.getText())), Integer.parseInt(jTextFieldKFE16StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE16StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE16OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE16OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE16WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE16WorkInProgress.getText())));
+//            }
+//        });
+//        //E17
+//        jTextFieldKFE17SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
+//            @Override
+//            public void insertUpdate(DocumentEvent e) {
+//                jTextFieldKFE17ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE17SalesOrders.getText().equals("") ? "0" : jTextFieldKFE17SalesOrders.getText())), Integer.parseInt((jLabelKFE17OrdersInQueque.getText().equals("") ? "0" : jLabelKFE17OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE17PlannedStock.getText().equals("") ? "0" : jTextFieldKFE17PlannedStock.getText())), Integer.parseInt(jTextFieldKFE17StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE17StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE17OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE17OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE17WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE17WorkInProgress.getText())));
+//            }
+//
+//            @Override
+//            public void removeUpdate(DocumentEvent e) {
+//                jTextFieldKFE17ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE17SalesOrders.getText().equals("") ? "0" : jTextFieldKFE17SalesOrders.getText())), Integer.parseInt((jLabelKFE17OrdersInQueque.getText().equals("") ? "0" : jLabelKFE17OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE17PlannedStock.getText().equals("") ? "0" : jTextFieldKFE17PlannedStock.getText())), Integer.parseInt(jTextFieldKFE17StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE17StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE17OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE17OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE17WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE17WorkInProgress.getText())));
+//            }
+//
+//            @Override
+//            public void changedUpdate(DocumentEvent e) {
+//                jTextFieldKFE17ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE17SalesOrders.getText().equals("") ? "0" : jTextFieldKFE17SalesOrders.getText())), Integer.parseInt((jLabelKFE17OrdersInQueque.getText().equals("") ? "0" : jLabelKFE17OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE17PlannedStock.getText().equals("") ? "0" : jTextFieldKFE17PlannedStock.getText())), Integer.parseInt(jTextFieldKFE17StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE17StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE17OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE17OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE17WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE17WorkInProgress.getText())));
+//            }
+//        });
+//        //E50
+//        jTextFieldKFE50SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
+//            @Override
+//            public void insertUpdate(DocumentEvent e) {
+//                jTextFieldKFE50ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE50SalesOrders.getText().equals("") ? "0" : jTextFieldKFE50SalesOrders.getText())), Integer.parseInt((jLabelKFE50OrdersInQueque.getText().equals("") ? "0" : jLabelKFE50OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE50PlannedStock.getText().equals("") ? "0" : jTextFieldKFE50PlannedStock.getText())), Integer.parseInt(jTextFieldKFE50StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE50StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE50OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE50OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE50WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE50WorkInProgress.getText())));
+//            }
+//
+//            @Override
+//            public void removeUpdate(DocumentEvent e) {
+//                jTextFieldKFE50ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE50SalesOrders.getText().equals("") ? "0" : jTextFieldKFE50SalesOrders.getText())), Integer.parseInt((jLabelKFE50OrdersInQueque.getText().equals("") ? "0" : jLabelKFE50OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE50PlannedStock.getText().equals("") ? "0" : jTextFieldKFE50PlannedStock.getText())), Integer.parseInt(jTextFieldKFE50StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE50StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE50OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE50OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE50WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE50WorkInProgress.getText())));
+//            }
+//
+//            @Override
+//            public void changedUpdate(DocumentEvent e) {
+//                jTextFieldKFE50ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE50SalesOrders.getText().equals("") ? "0" : jTextFieldKFE50SalesOrders.getText())), Integer.parseInt((jLabelKFE50OrdersInQueque.getText().equals("") ? "0" : jLabelKFE50OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE50PlannedStock.getText().equals("") ? "0" : jTextFieldKFE50PlannedStock.getText())), Integer.parseInt(jTextFieldKFE50StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE50StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE50OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE50OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE50WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE50WorkInProgress.getText())));
+//            }
+//        });
+//        //E4
+//        jTextFieldKFE4SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
+//            @Override
+//            public void insertUpdate(DocumentEvent e) {
+//                jTextFieldKFE4ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE4SalesOrders.getText().equals("") ? "0" : jTextFieldKFE4SalesOrders.getText())), Integer.parseInt((jLabelKFE4OrdersInQueque.getText().equals("") ? "0" : jLabelKFE4OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE4PlannedStock.getText().equals("") ? "0" : jTextFieldKFE4PlannedStock.getText())), Integer.parseInt(jTextFieldKFE4StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE4StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE4OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE4OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE4WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE4WorkInProgress.getText())));
+//            }
+//
+//            @Override
+//            public void removeUpdate(DocumentEvent e) {
+//                jTextFieldKFE4ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE4SalesOrders.getText().equals("") ? "0" : jTextFieldKFE4SalesOrders.getText())), Integer.parseInt((jLabelKFE4OrdersInQueque.getText().equals("") ? "0" : jLabelKFE4OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE4PlannedStock.getText().equals("") ? "0" : jTextFieldKFE4PlannedStock.getText())), Integer.parseInt(jTextFieldKFE4StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE4StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE4OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE4OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE4WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE4WorkInProgress.getText())));
+//            }
+//
+//            @Override
+//            public void changedUpdate(DocumentEvent e) {
+//                jTextFieldKFE4ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE4SalesOrders.getText().equals("") ? "0" : jTextFieldKFE4SalesOrders.getText())), Integer.parseInt((jLabelKFE4OrdersInQueque.getText().equals("") ? "0" : jLabelKFE4OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE4PlannedStock.getText().equals("") ? "0" : jTextFieldKFE4PlannedStock.getText())), Integer.parseInt(jTextFieldKFE4StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE4StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE4OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE4OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE4WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE4WorkInProgress.getText())));
+//            }
+//        });
+//        //E10
+//        jTextFieldKFE10SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
+//            @Override
+//            public void insertUpdate(DocumentEvent e) {
+//                jTextFieldKFE10ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE10SalesOrders.getText().equals("") ? "0" : jTextFieldKFE10SalesOrders.getText())), Integer.parseInt((jLabelKFE10OrdersInQueque.getText().equals("") ? "0" : jLabelKFE10OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE10PlannedStock.getText().equals("") ? "0" : jTextFieldKFE10PlannedStock.getText())), Integer.parseInt(jTextFieldKFE10StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE10StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE10OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE10OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE10WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE10WorkInProgress.getText())));
+//            }
+//
+//            @Override
+//            public void removeUpdate(DocumentEvent e) {
+//                jTextFieldKFE10ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE10SalesOrders.getText().equals("") ? "0" : jTextFieldKFE10SalesOrders.getText())), Integer.parseInt((jLabelKFE10OrdersInQueque.getText().equals("") ? "0" : jLabelKFE10OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE10PlannedStock.getText().equals("") ? "0" : jTextFieldKFE10PlannedStock.getText())), Integer.parseInt(jTextFieldKFE10StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE10StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE10OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE10OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE10WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE10WorkInProgress.getText())));
+//            }
+//
+//            @Override
+//            public void changedUpdate(DocumentEvent e) {
+//                jTextFieldKFE10ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE10SalesOrders.getText().equals("") ? "0" : jTextFieldKFE10SalesOrders.getText())), Integer.parseInt((jLabelKFE10OrdersInQueque.getText().equals("") ? "0" : jLabelKFE10OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE10PlannedStock.getText().equals("") ? "0" : jTextFieldKFE10PlannedStock.getText())), Integer.parseInt(jTextFieldKFE10StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE10StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE10OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE10OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE10WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE10WorkInProgress.getText())));
+//            }
+//        });
+//        //E49
+//        jTextFieldKFE49SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
+//            @Override
+//            public void insertUpdate(DocumentEvent e) {
+//                jTextFieldKFE49ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE49SalesOrders.getText().equals("") ? "0" : jTextFieldKFE49SalesOrders.getText())), Integer.parseInt((jLabelKFE49OrdersInQueque.getText().equals("") ? "0" : jLabelKFE49OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE49PlannedStock.getText().equals("") ? "0" : jTextFieldKFE49PlannedStock.getText())), Integer.parseInt(jTextFieldKFE49StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE49StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE49OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE49OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE49WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE49WorkInProgress.getText())));
+//            }
+//
+//            @Override
+//            public void removeUpdate(DocumentEvent e) {
+//                jTextFieldKFE49ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE49SalesOrders.getText().equals("") ? "0" : jTextFieldKFE49SalesOrders.getText())), Integer.parseInt((jLabelKFE49OrdersInQueque.getText().equals("") ? "0" : jLabelKFE49OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE49PlannedStock.getText().equals("") ? "0" : jTextFieldKFE49PlannedStock.getText())), Integer.parseInt(jTextFieldKFE49StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE49StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE49OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE49OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE49WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE49WorkInProgress.getText())));
+//            }
+//
+//            @Override
+//            public void changedUpdate(DocumentEvent e) {
+//                jTextFieldKFE49ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE49SalesOrders.getText().equals("") ? "0" : jTextFieldKFE49SalesOrders.getText())), Integer.parseInt((jLabelKFE49OrdersInQueque.getText().equals("") ? "0" : jLabelKFE49OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE49PlannedStock.getText().equals("") ? "0" : jTextFieldKFE49PlannedStock.getText())), Integer.parseInt(jTextFieldKFE49StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE49StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE49OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE49OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE49WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE49WorkInProgress.getText())));
+//            }
+//        });
+//        //E7
+//        jTextFieldKFE7SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
+//            @Override
+//            public void insertUpdate(DocumentEvent e) {
+//                jTextFieldKFE7ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE7SalesOrders.getText().equals("") ? "0" : jTextFieldKFE7SalesOrders.getText())), Integer.parseInt((jLabelKFE7OrdersInQueque.getText().equals("") ? "0" : jLabelKFE7OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE7PlannedStock.getText().equals("") ? "0" : jTextFieldKFE7PlannedStock.getText())), Integer.parseInt(jTextFieldKFE7StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE7StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE7OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE7OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE7WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE7WorkInProgress.getText())));
+//            }
+//
+//            @Override
+//            public void removeUpdate(DocumentEvent e) {
+//                jTextFieldKFE7ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE7SalesOrders.getText().equals("") ? "0" : jTextFieldKFE7SalesOrders.getText())), Integer.parseInt((jLabelKFE7OrdersInQueque.getText().equals("") ? "0" : jLabelKFE7OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE7PlannedStock.getText().equals("") ? "0" : jTextFieldKFE7PlannedStock.getText())), Integer.parseInt(jTextFieldKFE7StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE7StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE7OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE7OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE7WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE7WorkInProgress.getText())));
+//            }
+//
+//            @Override
+//            public void changedUpdate(DocumentEvent e) {
+//                jTextFieldKFE7ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE7SalesOrders.getText().equals("") ? "0" : jTextFieldKFE7SalesOrders.getText())), Integer.parseInt((jLabelKFE7OrdersInQueque.getText().equals("") ? "0" : jLabelKFE7OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE7PlannedStock.getText().equals("") ? "0" : jTextFieldKFE7PlannedStock.getText())), Integer.parseInt(jTextFieldKFE7StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE7StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE7OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE7OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE7WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE7WorkInProgress.getText())));
+//            }
+//        });
+//        //E13
+//        jTextFieldKFE13SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
+//            @Override
+//            public void insertUpdate(DocumentEvent e) {
+//                jTextFieldKFE13ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE13SalesOrders.getText().equals("") ? "0" : jTextFieldKFE13SalesOrders.getText())), Integer.parseInt((jLabelKFE13OrdersInQueque.getText().equals("") ? "0" : jLabelKFE13OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE13PlannedStock.getText().equals("") ? "0" : jTextFieldKFE13PlannedStock.getText())), Integer.parseInt(jTextFieldKFE13StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE13StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE13OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE13OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE13WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE13WorkInProgress.getText())));
+//            }
+//
+//            @Override
+//            public void removeUpdate(DocumentEvent e) {
+//                jTextFieldKFE13ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE13SalesOrders.getText().equals("") ? "0" : jTextFieldKFE13SalesOrders.getText())), Integer.parseInt((jLabelKFE13OrdersInQueque.getText().equals("") ? "0" : jLabelKFE13OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE13PlannedStock.getText().equals("") ? "0" : jTextFieldKFE13PlannedStock.getText())), Integer.parseInt(jTextFieldKFE13StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE13StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE13OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE13OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE13WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE13WorkInProgress.getText())));
+//            }
+//
+//            @Override
+//            public void changedUpdate(DocumentEvent e) {
+//                jTextFieldKFE13ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE13SalesOrders.getText().equals("") ? "0" : jTextFieldKFE13SalesOrders.getText())), Integer.parseInt((jLabelKFE13OrdersInQueque.getText().equals("") ? "0" : jLabelKFE13OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE13PlannedStock.getText().equals("") ? "0" : jTextFieldKFE13PlannedStock.getText())), Integer.parseInt(jTextFieldKFE13StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE13StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE13OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE13OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE13WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE13WorkInProgress.getText())));
+//            }
+//        });
+//        //E18
+//        jTextFieldKFE18SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
+//            @Override
+//            public void insertUpdate(DocumentEvent e) {
+//                jTextFieldKFE18ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE18SalesOrders.getText().equals("") ? "0" : jTextFieldKFE18SalesOrders.getText())), Integer.parseInt((jLabelKFE18OrdersInQueque.getText().equals("") ? "0" : jLabelKFE18OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE18PlannedStock.getText().equals("") ? "0" : jTextFieldKFE18PlannedStock.getText())), Integer.parseInt(jTextFieldKFE18StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE18StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE18OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE18OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE18WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE18WorkInProgress.getText())));
+//            }
+//
+//            @Override
+//            public void removeUpdate(DocumentEvent e) {
+//                jTextFieldKFE18ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE18SalesOrders.getText().equals("") ? "0" : jTextFieldKFE18SalesOrders.getText())), Integer.parseInt((jLabelKFE18OrdersInQueque.getText().equals("") ? "0" : jLabelKFE18OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE18PlannedStock.getText().equals("") ? "0" : jTextFieldKFE18PlannedStock.getText())), Integer.parseInt(jTextFieldKFE18StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE18StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE18OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE18OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE18WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE18WorkInProgress.getText())));
+//            }
+//
+//            @Override
+//            public void changedUpdate(DocumentEvent e) {
+//                jTextFieldKFE18ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE18SalesOrders.getText().equals("") ? "0" : jTextFieldKFE18SalesOrders.getText())), Integer.parseInt((jLabelKFE18OrdersInQueque.getText().equals("") ? "0" : jLabelKFE18OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE18PlannedStock.getText().equals("") ? "0" : jTextFieldKFE18PlannedStock.getText())), Integer.parseInt(jTextFieldKFE18StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE18StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE18OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE18OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE18WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE18WorkInProgress.getText())));
+//            }
+//        });
 
         //PlannedWarehouseStock
         //P1
@@ -5495,210 +5565,210 @@ public class MainUI extends javax.swing.JFrame {
 
         //Damenfahrrad
         //SalesOrders
-        //P2
-                jTextFieldDFP2SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
-            @Override
-            public void insertUpdate(DocumentEvent e) {
-                inputFieldDFChanged("P2");
-            }
-
-            @Override
-            public void removeUpdate(DocumentEvent e) {
-                inputFieldDFChanged("P2");
-            }
-
-            @Override
-            public void changedUpdate(DocumentEvent e) {
-                inputFieldDFChanged("P2");
-            }
-        });
-        //E26
-        jTextFieldDFE26SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
-            @Override
-            public void insertUpdate(DocumentEvent e) {
-                inputFieldDFChanged("E26");
-            }
-
-            @Override
-            public void removeUpdate(DocumentEvent e) {
-                inputFieldDFChanged("E26");
-            }
-
-            @Override
-            public void changedUpdate(DocumentEvent e) {
-                inputFieldDFChanged("E26");
-            }
-        });
-        //E56
-        jTextFieldDFE56SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
-            @Override
-            public void insertUpdate(DocumentEvent e) {
-                inputFieldDFChanged("E56");
-            }
-
-            @Override
-            public void removeUpdate(DocumentEvent e) {
-                inputFieldDFChanged("E56");
-            }
-
-            @Override
-            public void changedUpdate(DocumentEvent e) {
-                inputFieldDFChanged("E56");
-            }
-        });
-        //E16
-        jTextFieldDFE16SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
-            @Override
-            public void insertUpdate(DocumentEvent e) {
-                inputFieldDFChanged("E16");
-            }
-
-            @Override
-            public void removeUpdate(DocumentEvent e) {
-                inputFieldDFChanged("E16");
-            }
-
-            @Override
-            public void changedUpdate(DocumentEvent e) {
-                inputFieldDFChanged("E16");
-            }
-        });
-        //E17
-        jTextFieldDFE17SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
-            @Override
-            public void insertUpdate(DocumentEvent e) {
-                inputFieldDFChanged("E17");
-            }
-
-            @Override
-            public void removeUpdate(DocumentEvent e) {
-                inputFieldDFChanged("E17");
-            }
-
-            @Override
-            public void changedUpdate(DocumentEvent e) {
-                inputFieldDFChanged("E17");
-            }
-        });
-        //E55
-        jTextFieldDFE55SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
-            @Override
-            public void insertUpdate(DocumentEvent e) {
-                inputFieldDFChanged("E55");
-            }
-
-            @Override
-            public void removeUpdate(DocumentEvent e) {
-                inputFieldDFChanged("E55");
-            }
-
-            @Override
-            public void changedUpdate(DocumentEvent e) {
-                inputFieldDFChanged("E55");
-            }
-        });
-        //E5*
-        jTextFieldDFE5SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
-            @Override
-            public void insertUpdate(DocumentEvent e) {
-                inputFieldDFChanged("E5*");
-            }
-
-            @Override
-            public void removeUpdate(DocumentEvent e) {
-                inputFieldDFChanged("E5*");
-            }
-
-            @Override
-            public void changedUpdate(DocumentEvent e) {
-                inputFieldDFChanged("E5*");
-            }
-        });
-        //E11
-        jTextFieldDFE11SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
-            @Override
-            public void insertUpdate(DocumentEvent e) {
-                inputFieldDFChanged("E11");
-            }
-
-            @Override
-            public void removeUpdate(DocumentEvent e) {
-                inputFieldDFChanged("E11");
-            }
-
-            @Override
-            public void changedUpdate(DocumentEvent e) {
-                inputFieldDFChanged("E11");
-            }
-        });
-        //E54
-        jTextFieldDFE54SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
-            @Override
-            public void insertUpdate(DocumentEvent e) {
-                inputFieldDFChanged("E54");
-            }
-
-            @Override
-            public void removeUpdate(DocumentEvent e) {
-                inputFieldDFChanged("E54");
-            }
-
-            @Override
-            public void changedUpdate(DocumentEvent e) {
-                inputFieldDFChanged("E54");
-            }
-        });
-        //E8
-        jTextFieldDFE8SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
-            @Override
-            public void insertUpdate(DocumentEvent e) {
-                inputFieldDFChanged("E8");
-            }
-
-            @Override
-            public void removeUpdate(DocumentEvent e) {
-                inputFieldDFChanged("E8");
-            }
-
-            @Override
-            public void changedUpdate(DocumentEvent e) {
-                inputFieldDFChanged("E8");
-            }
-        });
-        //E14
-        jTextFieldDFE14SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
-            @Override
-            public void insertUpdate(DocumentEvent e) {
-                inputFieldDFChanged("E14");
-            }
-
-            @Override
-            public void removeUpdate(DocumentEvent e) {
-                inputFieldDFChanged("E14");
-            }
-
-            @Override
-            public void changedUpdate(DocumentEvent e) {
-                inputFieldDFChanged("E14");
-            }
-        });
-        //E19
-        jTextFieldDFE19SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
-            @Override
-            public void insertUpdate(DocumentEvent e) {
-                inputFieldDFChanged("E19");
-            }
-
-            @Override
-            public void removeUpdate(DocumentEvent e) {
-                inputFieldDFChanged("E19");
-            }
-
-            @Override
-            public void changedUpdate(DocumentEvent e) {
-                inputFieldDFChanged("E19");
-            }
-        });
+//        //P2
+//                jTextFieldDFP2SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
+//            @Override
+//            public void insertUpdate(DocumentEvent e) {
+//                inputFieldDFChanged("P2");
+//            }
+//
+//            @Override
+//            public void removeUpdate(DocumentEvent e) {
+//                inputFieldDFChanged("P2");
+//            }
+//
+//            @Override
+//            public void changedUpdate(DocumentEvent e) {
+//                inputFieldDFChanged("P2");
+//            }
+//        });
+//        //E26
+//        jTextFieldDFE26SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
+//            @Override
+//            public void insertUpdate(DocumentEvent e) {
+//                inputFieldDFChanged("E26");
+//            }
+//
+//            @Override
+//            public void removeUpdate(DocumentEvent e) {
+//                inputFieldDFChanged("E26");
+//            }
+//
+//            @Override
+//            public void changedUpdate(DocumentEvent e) {
+//                inputFieldDFChanged("E26");
+//            }
+//        });
+//        //E56
+//        jTextFieldDFE56SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
+//            @Override
+//            public void insertUpdate(DocumentEvent e) {
+//                inputFieldDFChanged("E56");
+//            }
+//
+//            @Override
+//            public void removeUpdate(DocumentEvent e) {
+//                inputFieldDFChanged("E56");
+//            }
+//
+//            @Override
+//            public void changedUpdate(DocumentEvent e) {
+//                inputFieldDFChanged("E56");
+//            }
+//        });
+//        //E16
+//        jTextFieldDFE16SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
+//            @Override
+//            public void insertUpdate(DocumentEvent e) {
+//                inputFieldDFChanged("E16");
+//            }
+//
+//            @Override
+//            public void removeUpdate(DocumentEvent e) {
+//                inputFieldDFChanged("E16");
+//            }
+//
+//            @Override
+//            public void changedUpdate(DocumentEvent e) {
+//                inputFieldDFChanged("E16");
+//            }
+//        });
+//        //E17
+//        jTextFieldDFE17SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
+//            @Override
+//            public void insertUpdate(DocumentEvent e) {
+//                inputFieldDFChanged("E17");
+//            }
+//
+//            @Override
+//            public void removeUpdate(DocumentEvent e) {
+//                inputFieldDFChanged("E17");
+//            }
+//
+//            @Override
+//            public void changedUpdate(DocumentEvent e) {
+//                inputFieldDFChanged("E17");
+//            }
+//        });
+//        //E55
+//        jTextFieldDFE55SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
+//            @Override
+//            public void insertUpdate(DocumentEvent e) {
+//                inputFieldDFChanged("E55");
+//            }
+//
+//            @Override
+//            public void removeUpdate(DocumentEvent e) {
+//                inputFieldDFChanged("E55");
+//            }
+//
+//            @Override
+//            public void changedUpdate(DocumentEvent e) {
+//                inputFieldDFChanged("E55");
+//            }
+//        });
+//        //E5*
+//        jTextFieldDFE5SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
+//            @Override
+//            public void insertUpdate(DocumentEvent e) {
+//                inputFieldDFChanged("E5*");
+//            }
+//
+//            @Override
+//            public void removeUpdate(DocumentEvent e) {
+//                inputFieldDFChanged("E5*");
+//            }
+//
+//            @Override
+//            public void changedUpdate(DocumentEvent e) {
+//                inputFieldDFChanged("E5*");
+//            }
+//        });
+//        //E11
+//        jTextFieldDFE11SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
+//            @Override
+//            public void insertUpdate(DocumentEvent e) {
+//                inputFieldDFChanged("E11");
+//            }
+//
+//            @Override
+//            public void removeUpdate(DocumentEvent e) {
+//                inputFieldDFChanged("E11");
+//            }
+//
+//            @Override
+//            public void changedUpdate(DocumentEvent e) {
+//                inputFieldDFChanged("E11");
+//            }
+//        });
+//        //E54
+//        jTextFieldDFE54SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
+//            @Override
+//            public void insertUpdate(DocumentEvent e) {
+//                inputFieldDFChanged("E54");
+//            }
+//
+//            @Override
+//            public void removeUpdate(DocumentEvent e) {
+//                inputFieldDFChanged("E54");
+//            }
+//
+//            @Override
+//            public void changedUpdate(DocumentEvent e) {
+//                inputFieldDFChanged("E54");
+//            }
+//        });
+//        //E8
+//        jTextFieldDFE8SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
+//            @Override
+//            public void insertUpdate(DocumentEvent e) {
+//                inputFieldDFChanged("E8");
+//            }
+//
+//            @Override
+//            public void removeUpdate(DocumentEvent e) {
+//                inputFieldDFChanged("E8");
+//            }
+//
+//            @Override
+//            public void changedUpdate(DocumentEvent e) {
+//                inputFieldDFChanged("E8");
+//            }
+//        });
+//        //E14
+//        jTextFieldDFE14SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
+//            @Override
+//            public void insertUpdate(DocumentEvent e) {
+//                inputFieldDFChanged("E14");
+//            }
+//
+//            @Override
+//            public void removeUpdate(DocumentEvent e) {
+//                inputFieldDFChanged("E14");
+//            }
+//
+//            @Override
+//            public void changedUpdate(DocumentEvent e) {
+//                inputFieldDFChanged("E14");
+//            }
+//        });
+//        //E19
+//        jTextFieldDFE19SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
+//            @Override
+//            public void insertUpdate(DocumentEvent e) {
+//                inputFieldDFChanged("E19");
+//            }
+//
+//            @Override
+//            public void removeUpdate(DocumentEvent e) {
+//                inputFieldDFChanged("E19");
+//            }
+//
+//            @Override
+//            public void changedUpdate(DocumentEvent e) {
+//                inputFieldDFChanged("E19");
+//            }
+//        });
         //PlannedStock
         //P2
         jTextFieldDFP2PlannedStock.getDocument().addDocumentListener(new DocumentListener() {
@@ -5905,213 +5975,213 @@ public class MainUI extends javax.swing.JFrame {
             }
         });
         //Herrenfahrrad
-        //SalesOrders
-        //P3
-        jTextFieldHFP3SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
-            @Override
-            public void insertUpdate(DocumentEvent e) {
-                inputFieldHFChanged("P3");
-            }
-
-            @Override
-            public void removeUpdate(DocumentEvent e) {
-                inputFieldHFChanged("P3");
-            }
-
-            @Override
-            public void changedUpdate(DocumentEvent e) {
-                inputFieldHFChanged("P3");
-            }
-        });
-        //E26
-        jTextFieldHFE26SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
-            @Override
-            public void insertUpdate(DocumentEvent e) {
-                inputFieldHFChanged("E26");
-            }
-
-            @Override
-            public void removeUpdate(DocumentEvent e) {
-                inputFieldHFChanged("E26");
-            }
-
-            @Override
-            public void changedUpdate(DocumentEvent e) {
-                inputFieldHFChanged("E26");
-            }
-        });
-        //E31
-        jTextFieldHFE31SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
-            @Override
-            public void insertUpdate(DocumentEvent e) {
-                inputFieldHFChanged("E31");
-            }
-
-            @Override
-            public void removeUpdate(DocumentEvent e) {
-                inputFieldHFChanged("E31");
-            }
-
-            @Override
-            public void changedUpdate(DocumentEvent e) {
-                inputFieldHFChanged("E31");
-            }
-        });
-        //E16
-        jTextFieldHFE16SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
-            @Override
-            public void insertUpdate(DocumentEvent e) {
-                inputFieldHFChanged("E16");
-            }
-
-            @Override
-            public void removeUpdate(DocumentEvent e) {
-                inputFieldHFChanged("E16");
-            }
-
-            @Override
-            public void changedUpdate(DocumentEvent e) {
-                inputFieldHFChanged("E16");
-            }
-        });
-        //E17
-        jTextFieldHFE17SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
-            @Override
-            public void insertUpdate(DocumentEvent e) {
-                inputFieldHFChanged("E17");
-            }
-
-            @Override
-            public void removeUpdate(DocumentEvent e) {
-                inputFieldHFChanged("E17");
-            }
-
-            @Override
-            public void changedUpdate(DocumentEvent e) {
-                inputFieldHFChanged("E17");
-            }
-        });
-        //E30
-        jTextFieldHFE30SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
-            @Override
-            public void insertUpdate(DocumentEvent e) {
-                inputFieldHFChanged("E30");
-            }
-
-            @Override
-            public void removeUpdate(DocumentEvent e) {
-                inputFieldHFChanged("E30");
-            }
-
-            @Override
-            public void changedUpdate(DocumentEvent e) {
-                inputFieldHFChanged("E30");
-            }
-        });
-        //E6*
-        jTextFieldHFE6SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
-            @Override
-            public void insertUpdate(DocumentEvent e) {
-                inputFieldHFChanged("E6*");
-            }
-
-            @Override
-            public void removeUpdate(DocumentEvent e) {
-                inputFieldHFChanged("E6*");
-            }
-
-            @Override
-            public void changedUpdate(DocumentEvent e) {
-                inputFieldHFChanged("E6*");
-            }
-        });
-        //E12
-        jTextFieldHFE12SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
-            @Override
-            public void insertUpdate(DocumentEvent e) {
-                inputFieldHFChanged("E12");
-            }
-
-            @Override
-            public void removeUpdate(DocumentEvent e) {
-                inputFieldHFChanged("E12");
-            }
-
-            @Override
-            public void changedUpdate(DocumentEvent e) {
-                inputFieldHFChanged("E12");
-            }
-        });
-        //E29
-        jTextFieldHFE29SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
-            @Override
-            public void insertUpdate(DocumentEvent e) {
-                inputFieldHFChanged("E29");
-            }
-
-            @Override
-            public void removeUpdate(DocumentEvent e) {
-                inputFieldHFChanged("E29");
-            }
-
-            @Override
-            public void changedUpdate(DocumentEvent e) {
-                inputFieldHFChanged("E29");
-            }
-        });
-        //E9
-        jTextFieldHFE9SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
-            @Override
-            public void insertUpdate(DocumentEvent e) {
-                inputFieldHFChanged("E9");
-            }
-
-            @Override
-            public void removeUpdate(DocumentEvent e) {
-                inputFieldHFChanged("E9");
-            }
-
-            @Override
-            public void changedUpdate(DocumentEvent e) {
-                inputFieldHFChanged("E9");
-            }
-        });
-        //E15
-        jTextFieldHFE15SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
-            @Override
-            public void insertUpdate(DocumentEvent e) {
-                inputFieldHFChanged("E15");
-            }
-
-            @Override
-            public void removeUpdate(DocumentEvent e) {
-                inputFieldHFChanged("E15");
-            }
-
-            @Override
-            public void changedUpdate(DocumentEvent e) {
-                inputFieldHFChanged("E15");
-            }
-        });
-        //E20
-        jTextFieldHFE20SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
-            @Override
-            public void insertUpdate(DocumentEvent e) {
-                inputFieldHFChanged("E20");
-            }
-
-            @Override
-            public void removeUpdate(DocumentEvent e) {
-                inputFieldHFChanged("E20");
-            }
-
-            @Override
-            public void changedUpdate(DocumentEvent e) {
-                inputFieldHFChanged("E20");
-            }
-        });
-        //PlannedStock
-        //P3
+//        //SalesOrders
+//        //P3
+//        jTextFieldHFP3SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
+//            @Override
+//            public void insertUpdate(DocumentEvent e) {
+//                inputFieldHFChanged("P3");
+//            }
+//
+//            @Override
+//            public void removeUpdate(DocumentEvent e) {
+//                inputFieldHFChanged("P3");
+//            }
+//
+//            @Override
+//            public void changedUpdate(DocumentEvent e) {
+//                inputFieldHFChanged("P3");
+//            }
+//        });
+//        //E26
+//        jTextFieldHFE26SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
+//            @Override
+//            public void insertUpdate(DocumentEvent e) {
+//                inputFieldHFChanged("E26");
+//            }
+//
+//            @Override
+//            public void removeUpdate(DocumentEvent e) {
+//                inputFieldHFChanged("E26");
+//            }
+//
+//            @Override
+//            public void changedUpdate(DocumentEvent e) {
+//                inputFieldHFChanged("E26");
+//            }
+//        });
+//        //E31
+//        jTextFieldHFE31SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
+//            @Override
+//            public void insertUpdate(DocumentEvent e) {
+//                inputFieldHFChanged("E31");
+//            }
+//
+//            @Override
+//            public void removeUpdate(DocumentEvent e) {
+//                inputFieldHFChanged("E31");
+//            }
+//
+//            @Override
+//            public void changedUpdate(DocumentEvent e) {
+//                inputFieldHFChanged("E31");
+//            }
+//        });
+//        //E16
+//        jTextFieldHFE16SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
+//            @Override
+//            public void insertUpdate(DocumentEvent e) {
+//                inputFieldHFChanged("E16");
+//            }
+//
+//            @Override
+//            public void removeUpdate(DocumentEvent e) {
+//                inputFieldHFChanged("E16");
+//            }
+//
+//            @Override
+//            public void changedUpdate(DocumentEvent e) {
+//                inputFieldHFChanged("E16");
+//            }
+//        });
+//        //E17
+//        jTextFieldHFE17SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
+//            @Override
+//            public void insertUpdate(DocumentEvent e) {
+//                inputFieldHFChanged("E17");
+//            }
+//
+//            @Override
+//            public void removeUpdate(DocumentEvent e) {
+//                inputFieldHFChanged("E17");
+//            }
+//
+//            @Override
+//            public void changedUpdate(DocumentEvent e) {
+//                inputFieldHFChanged("E17");
+//            }
+//        });
+//        //E30
+//        jTextFieldHFE30SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
+//            @Override
+//            public void insertUpdate(DocumentEvent e) {
+//                inputFieldHFChanged("E30");
+//            }
+//
+//            @Override
+//            public void removeUpdate(DocumentEvent e) {
+//                inputFieldHFChanged("E30");
+//            }
+//
+//            @Override
+//            public void changedUpdate(DocumentEvent e) {
+//                inputFieldHFChanged("E30");
+//            }
+//        });
+//        //E6*
+//        jTextFieldHFE6SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
+//            @Override
+//            public void insertUpdate(DocumentEvent e) {
+//                inputFieldHFChanged("E6*");
+//            }
+//
+//            @Override
+//            public void removeUpdate(DocumentEvent e) {
+//                inputFieldHFChanged("E6*");
+//            }
+//
+//            @Override
+//            public void changedUpdate(DocumentEvent e) {
+//                inputFieldHFChanged("E6*");
+//            }
+//        });
+//        //E12
+//        jTextFieldHFE12SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
+//            @Override
+//            public void insertUpdate(DocumentEvent e) {
+//                inputFieldHFChanged("E12");
+//            }
+//
+//            @Override
+//            public void removeUpdate(DocumentEvent e) {
+//                inputFieldHFChanged("E12");
+//            }
+//
+//            @Override
+//            public void changedUpdate(DocumentEvent e) {
+//                inputFieldHFChanged("E12");
+//            }
+//        });
+//        //E29
+//        jTextFieldHFE29SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
+//            @Override
+//            public void insertUpdate(DocumentEvent e) {
+//                inputFieldHFChanged("E29");
+//            }
+//
+//            @Override
+//            public void removeUpdate(DocumentEvent e) {
+//                inputFieldHFChanged("E29");
+//            }
+//
+//            @Override
+//            public void changedUpdate(DocumentEvent e) {
+//                inputFieldHFChanged("E29");
+//            }
+//        });
+//        //E9
+//        jTextFieldHFE9SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
+//            @Override
+//            public void insertUpdate(DocumentEvent e) {
+//                inputFieldHFChanged("E9");
+//            }
+//
+//            @Override
+//            public void removeUpdate(DocumentEvent e) {
+//                inputFieldHFChanged("E9");
+//            }
+//
+//            @Override
+//            public void changedUpdate(DocumentEvent e) {
+//                inputFieldHFChanged("E9");
+//            }
+//        });
+//        //E15
+//        jTextFieldHFE15SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
+//            @Override
+//            public void insertUpdate(DocumentEvent e) {
+//                inputFieldHFChanged("E15");
+//            }
+//
+//            @Override
+//            public void removeUpdate(DocumentEvent e) {
+//                inputFieldHFChanged("E15");
+//            }
+//
+//            @Override
+//            public void changedUpdate(DocumentEvent e) {
+//                inputFieldHFChanged("E15");
+//            }
+//        });
+//        //E20
+//        jTextFieldHFE20SalesOrders.getDocument().addDocumentListener(new DocumentListener() {
+//            @Override
+//            public void insertUpdate(DocumentEvent e) {
+//                inputFieldHFChanged("E20");
+//            }
+//
+//            @Override
+//            public void removeUpdate(DocumentEvent e) {
+//                inputFieldHFChanged("E20");
+//            }
+//
+//            @Override
+//            public void changedUpdate(DocumentEvent e) {
+//                inputFieldHFChanged("E20");
+//            }
+//        });
+//        //PlannedStock
+//        //P3
         jTextFieldHFP3PlannedStock.getDocument().addDocumentListener(new DocumentListener() {
             @Override
             public void insertUpdate(DocumentEvent e) {
