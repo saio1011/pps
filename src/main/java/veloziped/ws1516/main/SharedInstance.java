@@ -104,12 +104,12 @@ public class SharedInstance {
         p1.setPrice(0.0);
         p1.setPenalty(0.0);
         Item p2 = new Item();
-        p2.setArticle(1);
+        p2.setArticle(2);
         p2.setQuantity(0);
         p2.setPrice(0.0);
         p2.setPenalty(0.0);
         Item p3 = new Item();
-        p3.setArticle(1);
+        p3.setArticle(3);
         p3.setQuantity(0);
         p3.setPrice(0.0);
         p3.setPenalty(0.0);
