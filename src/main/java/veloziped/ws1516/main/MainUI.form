@@ -6587,9 +6587,15 @@
                               <Component id="jLabelCostsNumberHouses" alignment="0" max="32767" attributes="0"/>
                               <Component id="jLabelCostsWarehouseHoldungValue" max="32767" attributes="0"/>
                           </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="jLabelCostsEstimatedStockValuePct" pref="55" max="32767" attributes="0"/>
+                              <Component id="jLabelCostsNumberHousesChange" max="32767" attributes="0"/>
+                              <Component id="jLabelCostsWarehouseHoldingPct" max="32767" attributes="0"/>
+                          </Group>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
-                                  <EmptySpace min="-2" pref="275" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="202" max="-2" attributes="0"/>
                                   <Component id="jLabelCostsTitleLabor" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="139" max="-2" attributes="0"/>
                                   <Component id="jLabelCostsTitleLeerlauf" min="-2" max="-2" attributes="0"/>
@@ -6599,12 +6605,8 @@
                                   <Component id="jLabelCostsTitleMaterial" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jLabelCostsEstimatedStockValuePct" pref="55" max="32767" attributes="0"/>
-                                      <Component id="jLabelCostsNumberHousesChange" max="32767" attributes="0"/>
-                                      <Component id="jLabelCostsWarehouseHoldingPct" max="32767" attributes="0"/>
-                                  </Group>
+                                  <EmptySpace min="-2" pref="179" max="-2" attributes="0"/>
+                                  <Component id="jLabelCostsLaborCosts" min="-2" pref="89" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace pref="324" max="32767" attributes="0"/>
@@ -6624,7 +6626,10 @@
                               </Group>
                               <Group type="103" alignment="0" groupAlignment="1" attributes="0">
                                   <Group type="102" attributes="0">
-                                      <Component id="jLabelCostsEstimatedStockValuePct" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="jLabelCostsEstimatedStockValuePct" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabelCostsLaborCosts" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
                                       <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                                       <Component id="jLabelCostsWarehouseHoldingPct" min="-2" max="-2" attributes="0"/>
                                   </Group>
@@ -6738,6 +6743,11 @@
                 <Component class="javax.swing.JLabel" name="jLabelCostsTitleMaterial">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Material"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabelCostsLaborCosts">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value=" "/>
                   </Properties>
                 </Component>
               </SubComponents>

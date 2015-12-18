@@ -572,6 +572,7 @@ public class MainUI extends javax.swing.JFrame {
         jLabelCostsTitleLeerlauf = new javax.swing.JLabel();
         jLabelCostsTitleMachine = new javax.swing.JLabel();
         jLabelCostsTitleMaterial = new javax.swing.JLabel();
+        jLabelCostsLaborCosts = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuFile = new javax.swing.JMenu();
         jMenuItemImportFile = new javax.swing.JMenuItem();
@@ -3707,6 +3708,8 @@ public class MainUI extends javax.swing.JFrame {
 
         jLabelCostsTitleMaterial.setText("Material");
 
+        jLabelCostsLaborCosts.setText(" ");
+
         javax.swing.GroupLayout jPanelCostsLayout = new javax.swing.GroupLayout(jPanelCosts);
         jPanelCosts.setLayout(jPanelCostsLayout);
         jPanelCostsLayout.setHorizontalGroup(
@@ -3725,9 +3728,14 @@ public class MainUI extends javax.swing.JFrame {
                     .addComponent(jLabelCostsEstimatedStockValue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabelCostsNumberHouses, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabelCostsWarehouseHoldungValue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanelCostsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabelCostsEstimatedStockValuePct, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
+                    .addComponent(jLabelCostsNumberHousesChange, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabelCostsWarehouseHoldingPct, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGroup(jPanelCostsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelCostsLayout.createSequentialGroup()
-                        .addGap(275, 275, 275)
+                        .addGap(202, 202, 202)
                         .addComponent(jLabelCostsTitleLabor)
                         .addGap(139, 139, 139)
                         .addComponent(jLabelCostsTitleLeerlauf)
@@ -3736,11 +3744,8 @@ public class MainUI extends javax.swing.JFrame {
                         .addGap(112, 112, 112)
                         .addComponent(jLabelCostsTitleMaterial))
                     .addGroup(jPanelCostsLayout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanelCostsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabelCostsEstimatedStockValuePct, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
-                            .addComponent(jLabelCostsNumberHousesChange, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabelCostsWarehouseHoldingPct, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGap(179, 179, 179)
+                        .addComponent(jLabelCostsLaborCosts, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(324, Short.MAX_VALUE))
         );
         jPanelCostsLayout.setVerticalGroup(
@@ -3755,7 +3760,9 @@ public class MainUI extends javax.swing.JFrame {
                         .addComponent(jLabelCostsTitleMaterial))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelCostsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(jPanelCostsLayout.createSequentialGroup()
-                            .addComponent(jLabelCostsEstimatedStockValuePct)
+                            .addGroup(jPanelCostsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabelCostsEstimatedStockValuePct)
+                                .addComponent(jLabelCostsLaborCosts))
                             .addGap(40, 40, 40)
                             .addComponent(jLabelCostsWarehouseHoldingPct))
                         .addGroup(jPanelCostsLayout.createSequentialGroup()
@@ -4406,6 +4413,7 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelBufferFactor;
     private javax.swing.JLabel jLabelCostsEstimatedStockValue;
     private javax.swing.JLabel jLabelCostsEstimatedStockValuePct;
+    private javax.swing.JLabel jLabelCostsLaborCosts;
     private javax.swing.JLabel jLabelCostsNumberHouses;
     private javax.swing.JLabel jLabelCostsNumberHousesChange;
     private javax.swing.JLabel jLabelCostsOldStockValue;
@@ -7935,6 +7943,8 @@ public class MainUI extends javax.swing.JFrame {
      jLabelCostsWarehouseHoldingPct.setText(String.valueOf(costs.getWarehouseHoldingPctChange()) + " %");
      jLabelCostsNumberHousesChange.setText(String.valueOf(costs.getCountWarehouseChange()));
      jLabelCostsEstimatedStockValuePct.setText(String.valueOf(costs.getStockChangePct()) + " %");
+     
+     jLabelCostsLaborCosts.setText(String.valueOf(costs.getLaborCosts()));
     }
     
     private void resetCostsFields() {
@@ -7945,6 +7955,8 @@ public class MainUI extends javax.swing.JFrame {
      jLabelCostsWarehouseHoldingPct.setText("0");
      jLabelCostsNumberHousesChange.setText("0");
      jLabelCostsEstimatedStockValuePct.setText("0");
+     
+     jLabelCostsLaborCosts.setText("0");
     }
 
 }

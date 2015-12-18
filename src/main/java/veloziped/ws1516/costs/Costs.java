@@ -13,6 +13,9 @@ import java.util.Collection;
 import java.util.List;
 import veloziped.ws1516.articles.ExtendedArticle;
 import veloziped.ws1516.main.SharedInstance;
+import veloziped.ws1516.workload.WorkloadResult;
+import veloziped.ws1516.workplace.ExtendedWorkplace;
+import veloziped.ws1516.workplace.ProcessTime;
 
 /**
  *
@@ -102,6 +105,8 @@ public class Costs {
         this.averageStockValue();
         this.numberHouses();
         this.warehouseHolding();
+
+        this.laberCosts();
     }
 
     private void oldStockValue() {
@@ -159,5 +164,51 @@ public class Costs {
                 this.warehouseHoldingPctChange = SharedInstance.twoDecimals((holdingPct - 1) * -100);
             }
         }
+    }
+
+    private void laberCosts() {
+        Collection<WorkloadResult> wResults = SharedInstance.getInstance().getWorkloadResults().values();
+
+        for (WorkloadResult result : wResults) {
+            for (ProcessTime times : result.getWorkplace().getProcessTimes()) {
+                ExtendedArticle article = SharedInstance.getInstance().getArticleForId(times.getArticleId());
+                
+                if (result.getNumberOfShifts() == 1) {
+                    long overtimeProd = calcProductionAmountInOvertime(result, times);
+
+                    this.laborCosts += (article.getPlannedProductionAmount() - overtimeProd) * times.getRunTime() * result.getWorkplace().getFirstShiftWage()
+                            + result.getLastSetupCycles() * result.getWorkplace().getFirstShiftWage()
+                            + overtimeProd * times.getRunTime() * result.getWorkplace().getFirstShiftWage();
+                } else {
+                    
+                }
+            }
+        }
+    }
+
+    private long calcProductionAmountInOvertime(WorkloadResult wRes, ProcessTime time) {
+        long result = 0;
+        double calc = result = wRes.getOverTimePeriod() / time.getRunTime() - time.getSetupTime();
+        try {
+            if (calc > 0) {
+                result = DoubleMath.roundToLong(calc, RoundingMode.HALF_UP);
+            }
+        } catch (NumberFormatException ex) {
+
+        }
+        return result;
+    }
+    
+    private long calcProductionAmountInShift(WorkloadResult wRes, ProcessTime time) {
+        long result = 0;
+        double calc = result = (wRes.getTotalCapacityNeeded() - wRes.getOverTimePeriod()) / time.getRunTime() - time.getSetupTime();
+        try {
+            if (calc > 0) {
+                result = DoubleMath.roundToLong(calc, RoundingMode.HALF_UP);
+            }
+        } catch (NumberFormatException ex) {
+
+        }
+        return result;
     }
 }
