@@ -78,6 +78,10 @@ public class MainUI extends javax.swing.JFrame {
         SetupInstance.getInstance().readWorkplaceJson();
         SetupInstance.getInstance().readArticleJson();
         initComponents();
+        
+        this.jPanel2.setVisible(true);
+        this.jPanel1.setVisible(false);
+        jScrollPane5.setVisible(false);
 
         //set Language selected
         this.setSelectedLanguage(Locale.getDefault().getLanguage());
@@ -91,10 +95,11 @@ public class MainUI extends javax.swing.JFrame {
 
         resetDirectSale();
         resetCostsFields();
+        
+        this.jTabbedPan.setEnabledAt(1, false);
         this.jTabbedPan.setEnabledAt(2, false);
         this.jTabbedPan.setEnabledAt(3, false);
         this.jTabbedPan.setEnabledAt(4, false);
-        this.jTabbedPan.setEnabledAt(5, false);
         this.addInputFieldsListener();
 
         this.setInHouseProductionJTextFieldsEnabled(false);
@@ -135,26 +140,6 @@ public class MainUI extends javax.swing.JFrame {
         jLabelDiscountFactor = new javax.swing.JLabel();
         jScrollPane5 = new javax.swing.JScrollPane();
         jTabbedPan = new javax.swing.JTabbedPane();
-        jPanelProductionForecast = new javax.swing.JPanel();
-        jLabelKinderfahrradPF = new javax.swing.JLabel();
-        jLabelDamenfahrradPF = new javax.swing.JLabel();
-        jLabelHerrenfahrradPF = new javax.swing.JLabel();
-        jLabelPeriodNPF = new javax.swing.JLabel();
-        jLabelPeriodN1PF = new javax.swing.JLabel();
-        jLabelPeriodN2PF = new javax.swing.JLabel();
-        jLabelPeriodN3PF = new javax.swing.JLabel();
-        jTextFieldPFPeriodN1KF = new IntegerField();
-        jTextFieldPFPeriodN2KF = new IntegerField();
-        jTextFieldPFPeriodN3KF = new IntegerField();
-        jTextFieldPFPeriodN4KF = new IntegerField();
-        jTextFieldPFPeriodN1DF = new IntegerField();
-        jTextFieldPFPeriodN2DF = new IntegerField();
-        jTextFieldPFPeriodN3DF = new IntegerField();
-        jTextFieldPFPeriodN4DF = new IntegerField();
-        jTextFieldPFPeriodN1HF = new IntegerField();
-        jTextFieldPFPeriodN2HF = new IntegerField();
-        jTextFieldPFPeriodN3HF = new IntegerField();
-        jTextFieldPFPeriodN4HF = new IntegerField();
         jPanelInHouseProduction = new javax.swing.JPanel();
         jScrollPane6 = new javax.swing.JScrollPane();
         jTabbedPane2 = new javax.swing.JTabbedPane();
@@ -573,6 +558,28 @@ public class MainUI extends javax.swing.JFrame {
         jLabelCostsTitleMachine = new javax.swing.JLabel();
         jLabelCostsTitleMaterial = new javax.swing.JLabel();
         jLabelCostsLaborCosts = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jPanelProductionForecast = new javax.swing.JPanel();
+        jLabelKinderfahrradPF = new javax.swing.JLabel();
+        jLabelDamenfahrradPF = new javax.swing.JLabel();
+        jLabelHerrenfahrradPF = new javax.swing.JLabel();
+        jLabelPeriodNPF = new javax.swing.JLabel();
+        jLabelPeriodN1PF = new javax.swing.JLabel();
+        jLabelPeriodN2PF = new javax.swing.JLabel();
+        jLabelPeriodN3PF = new javax.swing.JLabel();
+        jTextFieldPFPeriodN1KF = new IntegerField();
+        jTextFieldPFPeriodN2KF = new IntegerField();
+        jTextFieldPFPeriodN3KF = new IntegerField();
+        jTextFieldPFPeriodN4KF = new IntegerField();
+        jTextFieldPFPeriodN1DF = new IntegerField();
+        jTextFieldPFPeriodN2DF = new IntegerField();
+        jTextFieldPFPeriodN3DF = new IntegerField();
+        jTextFieldPFPeriodN4DF = new IntegerField();
+        jTextFieldPFPeriodN1HF = new IntegerField();
+        jTextFieldPFPeriodN2HF = new IntegerField();
+        jTextFieldPFPeriodN3HF = new IntegerField();
+        jTextFieldPFPeriodN4HF = new IntegerField();
+        jButton1 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuFile = new javax.swing.JMenu();
         jMenuItemImportFile = new javax.swing.JMenuItem();
@@ -708,121 +715,6 @@ public class MainUI extends javax.swing.JFrame {
                     .addComponent(jButtonImportXml, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-
-        jPanelProductionForecast.setAutoscrolls(true);
-
-        jLabelKinderfahrradPF.setText(bundle.getString("Kinderfahrrad")); // NOI18N
-
-        jLabelDamenfahrradPF.setText(bundle.getString("Damenfahrrad")); // NOI18N
-
-        jLabelHerrenfahrradPF.setText(bundle.getString("Herrenfahrrad")); // NOI18N
-
-        jLabelPeriodNPF.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelPeriodNPF.setText("Period");
-
-        jLabelPeriodN1PF.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelPeriodN1PF.setText("Period");
-
-        jLabelPeriodN2PF.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelPeriodN2PF.setText("Period");
-
-        jLabelPeriodN3PF.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelPeriodN3PF.setText("Period");
-
-        jTextFieldPFPeriodN1KF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextFieldPFPeriodN2KF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextFieldPFPeriodN3KF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextFieldPFPeriodN4KF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextFieldPFPeriodN1DF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextFieldPFPeriodN2DF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextFieldPFPeriodN3DF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextFieldPFPeriodN4DF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextFieldPFPeriodN1HF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextFieldPFPeriodN2HF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextFieldPFPeriodN3HF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        jTextFieldPFPeriodN4HF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        javax.swing.GroupLayout jPanelProductionForecastLayout = new javax.swing.GroupLayout(jPanelProductionForecast);
-        jPanelProductionForecast.setLayout(jPanelProductionForecastLayout);
-        jPanelProductionForecastLayout.setHorizontalGroup(
-            jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelProductionForecastLayout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addGroup(jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabelHerrenfahrradPF, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelDamenfahrradPF, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelKinderfahrradPF, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(108, 108, 108)
-                .addGroup(jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextFieldPFPeriodN1DF)
-                    .addComponent(jLabelPeriodNPF, javax.swing.GroupLayout.DEFAULT_SIZE, 249, Short.MAX_VALUE)
-                    .addComponent(jTextFieldPFPeriodN1KF)
-                    .addComponent(jTextFieldPFPeriodN1HF))
-                .addGap(18, 18, 18)
-                .addGroup(jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextFieldPFPeriodN2DF)
-                    .addComponent(jLabelPeriodN1PF, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
-                    .addComponent(jTextFieldPFPeriodN2KF)
-                    .addComponent(jTextFieldPFPeriodN2HF))
-                .addGap(18, 18, 18)
-                .addGroup(jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextFieldPFPeriodN3DF)
-                    .addComponent(jLabelPeriodN2PF, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
-                    .addComponent(jTextFieldPFPeriodN3KF)
-                    .addComponent(jTextFieldPFPeriodN3HF))
-                .addGap(18, 18, 18)
-                .addGroup(jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelPeriodN3PF, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
-                    .addComponent(jTextFieldPFPeriodN4KF)
-                    .addComponent(jTextFieldPFPeriodN4DF)
-                    .addComponent(jTextFieldPFPeriodN4HF))
-                .addGap(142, 142, 142))
-        );
-        jPanelProductionForecastLayout.setVerticalGroup(
-            jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelProductionForecastLayout.createSequentialGroup()
-                .addGap(45, 45, 45)
-                .addGroup(jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelPeriodNPF, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabelPeriodN1PF, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabelPeriodN2PF, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabelPeriodN3PF, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(32, 32, 32)
-                .addGroup(jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelKinderfahrradPF, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldPFPeriodN1KF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldPFPeriodN2KF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldPFPeriodN3KF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldPFPeriodN4KF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelDamenfahrradPF, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldPFPeriodN1DF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldPFPeriodN2DF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldPFPeriodN3DF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldPFPeriodN4DF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelHerrenfahrradPF, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldPFPeriodN1HF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldPFPeriodN2HF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldPFPeriodN3HF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldPFPeriodN4HF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(84, 84, 84))
-        );
-
-        jTabbedPan.addTab("Production Forecast", jPanelProductionForecast);
 
         jPanelKF.setMaximumSize(new java.awt.Dimension(16, 28));
         jPanelKF.setPreferredSize(new java.awt.Dimension(16, 28));
@@ -3791,6 +3683,153 @@ public class MainUI extends javax.swing.JFrame {
 
         jScrollPane5.setViewportView(jTabbedPan);
 
+        jPanelProductionForecast.setAutoscrolls(true);
+
+        jLabelKinderfahrradPF.setText(bundle.getString("Kinderfahrrad")); // NOI18N
+
+        jLabelDamenfahrradPF.setText(bundle.getString("Damenfahrrad")); // NOI18N
+
+        jLabelHerrenfahrradPF.setText(bundle.getString("Herrenfahrrad")); // NOI18N
+
+        jLabelPeriodNPF.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelPeriodNPF.setText("Period");
+
+        jLabelPeriodN1PF.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelPeriodN1PF.setText("Period");
+
+        jLabelPeriodN2PF.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelPeriodN2PF.setText("Period");
+
+        jLabelPeriodN3PF.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelPeriodN3PF.setText("Period");
+
+        jTextFieldPFPeriodN1KF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+
+        jTextFieldPFPeriodN2KF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+
+        jTextFieldPFPeriodN3KF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+
+        jTextFieldPFPeriodN4KF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+
+        jTextFieldPFPeriodN1DF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+
+        jTextFieldPFPeriodN2DF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+
+        jTextFieldPFPeriodN3DF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+
+        jTextFieldPFPeriodN4DF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+
+        jTextFieldPFPeriodN1HF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+
+        jTextFieldPFPeriodN2HF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+
+        jTextFieldPFPeriodN3HF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+
+        jTextFieldPFPeriodN4HF.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+
+        javax.swing.GroupLayout jPanelProductionForecastLayout = new javax.swing.GroupLayout(jPanelProductionForecast);
+        jPanelProductionForecast.setLayout(jPanelProductionForecastLayout);
+        jPanelProductionForecastLayout.setHorizontalGroup(
+            jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelProductionForecastLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addGroup(jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabelHerrenfahrradPF, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelDamenfahrradPF, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKinderfahrradPF, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(108, 108, 108)
+                .addGroup(jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextFieldPFPeriodN1DF)
+                    .addComponent(jLabelPeriodNPF, javax.swing.GroupLayout.DEFAULT_SIZE, 249, Short.MAX_VALUE)
+                    .addComponent(jTextFieldPFPeriodN1KF)
+                    .addComponent(jTextFieldPFPeriodN1HF))
+                .addGap(18, 18, 18)
+                .addGroup(jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextFieldPFPeriodN2DF)
+                    .addComponent(jLabelPeriodN1PF, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+                    .addComponent(jTextFieldPFPeriodN2KF)
+                    .addComponent(jTextFieldPFPeriodN2HF))
+                .addGap(18, 18, 18)
+                .addGroup(jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextFieldPFPeriodN3DF)
+                    .addComponent(jLabelPeriodN2PF, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+                    .addComponent(jTextFieldPFPeriodN3KF)
+                    .addComponent(jTextFieldPFPeriodN3HF))
+                .addGap(18, 18, 18)
+                .addGroup(jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabelPeriodN3PF, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+                    .addComponent(jTextFieldPFPeriodN4KF)
+                    .addComponent(jTextFieldPFPeriodN4DF)
+                    .addComponent(jTextFieldPFPeriodN4HF))
+                .addGap(142, 142, 142))
+        );
+        jPanelProductionForecastLayout.setVerticalGroup(
+            jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelProductionForecastLayout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addGroup(jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelPeriodNPF, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabelPeriodN1PF, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabelPeriodN2PF, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabelPeriodN3PF, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(32, 32, 32)
+                .addGroup(jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelKinderfahrradPF, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldPFPeriodN1KF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldPFPeriodN2KF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldPFPeriodN3KF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldPFPeriodN4KF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelDamenfahrradPF, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldPFPeriodN1DF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldPFPeriodN2DF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldPFPeriodN3DF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldPFPeriodN4DF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(jPanelProductionForecastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelHerrenfahrradPF, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldPFPeriodN1HF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldPFPeriodN2HF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldPFPeriodN3HF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldPFPeriodN4HF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(84, 84, 84))
+        );
+
+        jButton1.setText("jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(1232, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(159, 159, 159))
+            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanelProductionForecast, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(612, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(142, 142, 142))
+            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanelProductionForecast, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
         jMenuFile.setText(bundle.getString("File")); // NOI18N
 
         jMenuItemImportFile.setText(bundle.getString("ImportFile")); // NOI18N
@@ -3904,6 +3943,11 @@ public class MainUI extends javax.swing.JFrame {
                         .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addContainerGap())
                     .addComponent(jScrollPane5)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3912,6 +3956,10 @@ public class MainUI extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane5)
                 .addContainerGap())
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 14, Short.MAX_VALUE)))
         );
 
         pack();
@@ -4181,10 +4229,10 @@ public class MainUI extends javax.swing.JFrame {
         costs.calculateCosts();
         fillCostsLabelValues(costs);
 
+        this.jTabbedPan.setEnabledAt(1, true);
         this.jTabbedPan.setEnabledAt(2, true);
         this.jTabbedPan.setEnabledAt(3, true);
         this.jTabbedPan.setEnabledAt(4, true);
-        this.jTabbedPan.setEnabledAt(5, true);
     }//GEN-LAST:event_jButtonCalculateActionPerformed
 
     private void jSpinnerDiscountFactorStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinnerDiscountFactorStateChanged
@@ -4240,6 +4288,12 @@ public class MainUI extends javax.swing.JFrame {
     private void jButtonSalesResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalesResetActionPerformed
         resetDirectSale();
     }//GEN-LAST:event_jButtonSalesResetActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        this.jPanel2.setVisible(false);
+        this.jPanel1.setVisible(true);
+        this.jScrollPane5.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void resetDirectSale() {
         jTextFieldSalesDPrice.setText("0");
@@ -4355,6 +4409,7 @@ public class MainUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonCalculate;
     private javax.swing.JButton jButtonImportXml;
     private javax.swing.JButton jButtonMoveDown;
@@ -4539,6 +4594,7 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JMenu jMenuLanguage;
     private javax.swing.JMenu jMenuSettings;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanelCosts;
     private javax.swing.JPanel jPanelDF;
     private javax.swing.JPanel jPanelEProdList;
@@ -4849,14 +4905,14 @@ public class MainUI extends javax.swing.JFrame {
         jButtonSalesReset.setText(i18n.getString("Reset"));
 
         //tabs
-        jTabbedPan.setTitleAt(0, i18n.getString("ProductionForecast"));
-        jTabbedPan.setTitleAt(1, i18n.getString("InHauseProduction"));
-        jTabbedPan.setTitleAt(2, i18n.getString("WorkloadPlanning"));
-        jTabbedPan.setTitleAt(3, i18n.getString("PurchasingPlanning"));
-        jTabbedPan.setTitleAt(4, i18n.getString("Stock"));
-        jTabbedPan.setTitleAt(5, i18n.getString("ProductionList"));
-        jTabbedPan.setTitleAt(6, i18n.getString("Sales"));
-        jTabbedPan.setTitleAt(7, i18n.getString("Costs"));
+//        jTabbedPan.setTitleAt(0, i18n.getString("ProductionForecast"));
+        jTabbedPan.setTitleAt(0, i18n.getString("InHauseProduction"));
+        jTabbedPan.setTitleAt(1, i18n.getString("WorkloadPlanning"));
+        jTabbedPan.setTitleAt(2, i18n.getString("PurchasingPlanning"));
+        jTabbedPan.setTitleAt(3, i18n.getString("Stock"));
+        jTabbedPan.setTitleAt(4, i18n.getString("ProductionList"));
+        jTabbedPan.setTitleAt(5, i18n.getString("Sales"));
+        jTabbedPan.setTitleAt(6, i18n.getString("Costs"));
         jTabbedPane2.setTitleAt(0, i18n.getString("Kinderfahrrad"));
         jTabbedPane2.setTitleAt(1, i18n.getString("Damenfahrrad"));
         jTabbedPane2.setTitleAt(2, i18n.getString("Herrenfahrrad"));
