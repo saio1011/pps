@@ -37,6 +37,7 @@ import javax.swing.text.DefaultFormatterFactory;
 import javax.swing.text.NumberFormatter;
 import javax.xml.bind.JAXBException;
 import veloziped.ws1516.articles.ExtendedArticle;
+import veloziped.ws1516.costs.Costs;
 import veloziped.ws1516.disposal.Disposal;
 import veloziped.ws1516.disposal.PurchasingDisposal;
 import veloziped.ws1516.generated.Input.Input;
@@ -89,6 +90,7 @@ public class MainUI extends javax.swing.JFrame {
         this.jSpinnerBufferFactor.setValue(SharedInstance.getInstance().getBufferFactor() * 100);
 
         resetDirectSale();
+        resetCostsFields();
         this.jTabbedPan.setEnabledAt(2, false);
         this.jTabbedPan.setEnabledAt(3, false);
         this.jTabbedPan.setEnabledAt(4, false);
@@ -559,13 +561,13 @@ public class MainUI extends javax.swing.JFrame {
         jLabelCostsTitleEstimatedStockValue = new javax.swing.JLabel();
         jLabelCostsTitleNumberHouses = new javax.swing.JLabel();
         jLabelCostsTitleWarehouseHolding = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
+        jLabelCostsOldStockValue = new javax.swing.JLabel();
+        jLabelCostsEstimatedStockValue = new javax.swing.JLabel();
+        jLabelCostsNumberHouses = new javax.swing.JLabel();
+        jLabelCostsWarehouseHoldungValue = new javax.swing.JLabel();
+        jLabelCostsWarehouseHoldingPct = new javax.swing.JLabel();
+        jLabelCostsNumberHousesChange = new javax.swing.JLabel();
+        jLabelCostsEstimatedStockValuePct = new javax.swing.JLabel();
         jLabelCostsTitleLabor = new javax.swing.JLabel();
         jLabelCostsTitleLeerlauf = new javax.swing.JLabel();
         jLabelCostsTitleMachine = new javax.swing.JLabel();
@@ -3683,19 +3685,19 @@ public class MainUI extends javax.swing.JFrame {
 
         jLabelCostsTitleWarehouseHolding.setText("WarehouseHolding");
 
-        jLabel9.setText(" ");
+        jLabelCostsOldStockValue.setText(" ");
 
-        jLabel10.setText(" ");
+        jLabelCostsEstimatedStockValue.setText(" ");
 
-        jLabel11.setText(" ");
+        jLabelCostsNumberHouses.setText(" ");
 
-        jLabel15.setText(" ");
+        jLabelCostsWarehouseHoldungValue.setText(" ");
 
-        jLabel16.setText(" ");
+        jLabelCostsWarehouseHoldingPct.setText(" ");
 
-        jLabel17.setText(" ");
+        jLabelCostsNumberHousesChange.setText(" ");
 
-        jLabel18.setText(" ");
+        jLabelCostsEstimatedStockValuePct.setText(" ");
 
         jLabelCostsTitleLabor.setText("Labor");
 
@@ -3719,10 +3721,10 @@ public class MainUI extends javax.swing.JFrame {
                     .addComponent(jLabelCostsTitleWarehouseHolding, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(47, 47, 47)
                 .addGroup(jPanelCostsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
-                    .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jLabelCostsOldStockValue, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
+                    .addComponent(jLabelCostsEstimatedStockValue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabelCostsNumberHouses, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabelCostsWarehouseHoldungValue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGroup(jPanelCostsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelCostsLayout.createSequentialGroup()
                         .addGap(275, 275, 275)
@@ -3736,9 +3738,9 @@ public class MainUI extends javax.swing.JFrame {
                     .addGroup(jPanelCostsLayout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addGroup(jPanelCostsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
-                            .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(jLabelCostsEstimatedStockValuePct, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
+                            .addComponent(jLabelCostsNumberHousesChange, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabelCostsWarehouseHoldingPct, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(324, Short.MAX_VALUE))
         );
         jPanelCostsLayout.setVerticalGroup(
@@ -3753,28 +3755,28 @@ public class MainUI extends javax.swing.JFrame {
                         .addComponent(jLabelCostsTitleMaterial))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelCostsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(jPanelCostsLayout.createSequentialGroup()
-                            .addComponent(jLabel18)
+                            .addComponent(jLabelCostsEstimatedStockValuePct)
                             .addGap(40, 40, 40)
-                            .addComponent(jLabel16))
+                            .addComponent(jLabelCostsWarehouseHoldingPct))
                         .addGroup(jPanelCostsLayout.createSequentialGroup()
                             .addComponent(jLabelCostsTitleWarehouse)
                             .addGap(18, 18, 18)
                             .addGroup(jPanelCostsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jLabelCostsTitleOldStockValue)
-                                .addComponent(jLabel9))
+                                .addComponent(jLabelCostsOldStockValue))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                             .addGroup(jPanelCostsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jLabelCostsTitleEstimatedStockValue)
-                                .addComponent(jLabel10))
+                                .addComponent(jLabelCostsEstimatedStockValue))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                             .addGroup(jPanelCostsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jLabelCostsTitleNumberHouses)
-                                .addComponent(jLabel11)
-                                .addComponent(jLabel17))
+                                .addComponent(jLabelCostsNumberHouses)
+                                .addComponent(jLabelCostsNumberHousesChange))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                             .addGroup(jPanelCostsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jLabelCostsTitleWarehouseHolding)
-                                .addComponent(jLabel15)))))
+                                .addComponent(jLabelCostsWarehouseHoldungValue)))))
                 .addContainerGap())
         );
 
@@ -3981,6 +3983,7 @@ public class MainUI extends javax.swing.JFrame {
                     Map<JTextField, String> kfMapFieldsWithKeys = getMapFieldsWithKeys(getKFJTextFields());
                     fillTextFileds(kfMapFieldsWithKeys, extArticles);
 
+                    resetCostsFields();
                     this.jButtonCalculate.setEnabled(true);
                 } catch (JAXBException ex) {
                     Logger.getLogger(MainUI.class.getName()).log(Level.SEVERE, null, ex);
@@ -4166,6 +4169,10 @@ public class MainUI extends javax.swing.JFrame {
         this.reFillPurchasingDisposalTable(newOrders);
         this.reFillStockChangeTable(articles);
         this.reFillEProdList(productionList);
+        
+        Costs costs = new Costs();
+        costs.calculateCosts();
+        fillCostsLabelValues(costs);
 
         this.jTabbedPan.setEnabledAt(2, true);
         this.jTabbedPan.setEnabledAt(3, true);
@@ -4354,7 +4361,6 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItemFrench;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItemRomanien;
     private javax.swing.JFrame jFrameHelpDialog;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel100;
     private javax.swing.JLabel jLabel101;
     private javax.swing.JLabel jLabel102;
@@ -4365,7 +4371,6 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel107;
     private javax.swing.JLabel jLabel108;
     private javax.swing.JLabel jLabel109;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel110;
     private javax.swing.JLabel jLabel111;
     private javax.swing.JLabel jLabel112;
@@ -4376,10 +4381,6 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -4392,7 +4393,6 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel87;
     private javax.swing.JLabel jLabel88;
     private javax.swing.JLabel jLabel89;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabel90;
     private javax.swing.JLabel jLabel91;
     private javax.swing.JLabel jLabel92;
@@ -4404,6 +4404,11 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel98;
     private javax.swing.JLabel jLabel99;
     private javax.swing.JLabel jLabelBufferFactor;
+    private javax.swing.JLabel jLabelCostsEstimatedStockValue;
+    private javax.swing.JLabel jLabelCostsEstimatedStockValuePct;
+    private javax.swing.JLabel jLabelCostsNumberHouses;
+    private javax.swing.JLabel jLabelCostsNumberHousesChange;
+    private javax.swing.JLabel jLabelCostsOldStockValue;
     private javax.swing.JLabel jLabelCostsTitleEstimatedStockValue;
     private javax.swing.JLabel jLabelCostsTitleLabor;
     private javax.swing.JLabel jLabelCostsTitleLeerlauf;
@@ -4413,6 +4418,8 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelCostsTitleOldStockValue;
     private javax.swing.JLabel jLabelCostsTitleWarehouse;
     private javax.swing.JLabel jLabelCostsTitleWarehouseHolding;
+    private javax.swing.JLabel jLabelCostsWarehouseHoldingPct;
+    private javax.swing.JLabel jLabelCostsWarehouseHoldungValue;
     private javax.swing.JLabel jLabelDFASchutzblechH;
     private javax.swing.JLabel jLabelDFE11OrdersInQueque;
     private javax.swing.JLabel jLabelDFE14OrdersInQueque;
@@ -7918,6 +7925,26 @@ public class MainUI extends javax.swing.JFrame {
             }
         }
         return fields;
+    }
+
+    private void fillCostsLabelValues(Costs costs) {
+     jLabelCostsOldStockValue.setText(String.valueOf(costs.getOldStockValue()));
+     jLabelCostsEstimatedStockValue.setText(String.valueOf(costs.getEstimatedStockValue()));
+     jLabelCostsNumberHouses.setText(String.valueOf(costs.getCountOfWarehouses()));
+     jLabelCostsWarehouseHoldungValue.setText(String.valueOf(costs.getWarehouseHoldingCosts()));
+     jLabelCostsWarehouseHoldingPct.setText(String.valueOf(costs.getWarehouseHoldingPctChange()) + " %");
+     jLabelCostsNumberHousesChange.setText(String.valueOf(costs.getCountWarehouseChange()));
+     jLabelCostsEstimatedStockValuePct.setText(String.valueOf(costs.getStockChangePct()) + " %");
+    }
+    
+    private void resetCostsFields() {
+     jLabelCostsOldStockValue.setText("0");
+     jLabelCostsEstimatedStockValue.setText("0");
+     jLabelCostsNumberHouses.setText("0");
+     jLabelCostsWarehouseHoldungValue.setText("0");
+     jLabelCostsWarehouseHoldingPct.setText("0");
+     jLabelCostsNumberHousesChange.setText("0");
+     jLabelCostsEstimatedStockValuePct.setText("0");
     }
 
 }

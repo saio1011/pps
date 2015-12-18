@@ -10,6 +10,8 @@ import java.awt.Desktop;
 import java.io.File;
 import java.io.IOException;
 import java.math.RoundingMode;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -677,5 +679,13 @@ public class SharedInstance {
 
     public void swapProductionListOrder(int i, int j) {
         Collections.swap(this.productionListCalculated, i, j);
+    }
+    
+    
+    public static double twoDecimals(double value) {
+        DecimalFormat df = new DecimalFormat("#.##");
+        df.setDecimalFormatSymbols(DecimalFormatSymbols.getInstance(new Locale("us")));
+        String val = df.format(value);
+        return Double.valueOf(val);
     }
 }
