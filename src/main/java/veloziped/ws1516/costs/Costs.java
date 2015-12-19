@@ -184,6 +184,8 @@ public class Costs {
                 }
             }
         }
+        
+        this.laborCosts = SharedInstance.twoDecimals(this.laborCosts);
     }
 
     private long calcProductionAmountInOvertime(WorkloadResult wRes, ProcessTime time) {

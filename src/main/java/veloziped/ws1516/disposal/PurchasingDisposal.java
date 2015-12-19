@@ -6,8 +6,10 @@
 package veloziped.ws1516.disposal;
 
 import com.google.common.math.DoubleMath;
+import com.rits.cloning.Cloner;
 import java.math.RoundingMode;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
@@ -41,10 +43,13 @@ public class PurchasingDisposal {
     private String errorArticles;
 
     public List<Order> calculateOrders(Map<String, ExtendedArticle> articles) {
+        Cloner cloner = new Cloner();
+        Collection<ExtendedArticle> cArticles = cloner.deepClone(articles.values());
+        
         List<Order> orders = new ArrayList<>();
         errorArticles = "";
 
-        for (ExtendedArticle article : articles.values()) {
+        for (ExtendedArticle article : cArticles) {
             if (article.getType() == ArticleType.K) {
                 Order incoming = SharedInstance.getInstance()
                         .getIncomingOrderForArticleId(article.getId());
