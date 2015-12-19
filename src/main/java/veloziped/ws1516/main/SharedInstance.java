@@ -173,6 +173,10 @@ public class SharedInstance {
         }
         return workloadResults;
     }
+    
+    public WorkloadResult getWorkloadResultForId(long id) {
+        return this.workloadResults.get(String.valueOf(id));
+    }
 
     public void setWorkloadResults(Map<String, WorkloadResult> workloadResults) {
         this.workloadResults = workloadResults;

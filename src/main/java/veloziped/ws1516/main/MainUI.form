@@ -295,7 +295,7 @@
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jButtonBackToWelcome" min="-2" pref="100" max="-2" attributes="0"/>
-                  <EmptySpace pref="908" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
                   <Component id="jLabelDiscountFactor" min="-2" pref="99" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jSpinnerDiscountFactor" min="-2" pref="60" max="-2" attributes="0"/>
@@ -1780,7 +1780,7 @@
                                   <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="Vorderradgruppe" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                                 </Property>
                                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                                  <Color id="Default Cursor"/>
+                                  <Color id="Standardcursor"/>
                                 </Property>
                                 <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                   <Dimension value="[60, 16]"/>
@@ -3501,7 +3501,7 @@
                                   <ResourceString bundle="veloziped/ws1516/i18n/i18n.properties" key="Schutzblech h." replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)"/>
                                 </Property>
                                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                                  <Color id="Default Cursor"/>
+                                  <Color id="Standardcursor"/>
                                 </Property>
                                 <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                   <Dimension value="[60, 16]"/>
@@ -5772,7 +5772,7 @@
                             <Column editable="false" title="Workplace" type="java.lang.Long"/>
                             <Column editable="true" title="Last Cycle Times" type="java.lang.Long"/>
                             <Column editable="false" title="Capacity Needed" type="java.lang.Long"/>
-                            <Column editable="false" title="Overtime p. Day" type="java.lang.Long"/>
+                            <Column editable="true" title="Overtime p. Day" type="java.lang.Long"/>
                             <Column editable="false" title="Shifts" type="java.lang.Long"/>
                             <Column editable="false" title="Free Capacity" type="java.lang.Long"/>
                             <Column editable="false" title="Workload pct" type="java.lang.Double"/>
@@ -6565,7 +6565,7 @@
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                       <Component id="jScrollPane7" min="-2" pref="116" max="-2" attributes="0"/>
-                      <EmptySpace pref="481" max="32767" attributes="0"/>
+                      <EmptySpace pref="479" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jButtonWeiter" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jButtonImportXML" alignment="3" min="-2" max="-2" attributes="0"/>

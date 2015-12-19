@@ -47,7 +47,7 @@ public class WorkloadPlanning {
 
                 if (pT.size() > 0) {
                     WorkloadResult results = new WorkloadResult(place);
-                    results.reCalculateResults();
+                    results.reCalculateResults(null);
                     workloadResults.put(entry.getKey(), results);
                 }
 
@@ -55,6 +55,26 @@ public class WorkloadPlanning {
         }
 
         return workloadResults;
+    }
+    
+    public void reCalculateResultWithSetupCycles(WorkloadResult wResult, long newSetupCycles) {
+        Cloner cloner = new Cloner();
+        WorkloadResult wRes = cloner.deepClone(wResult);
+        wRes.setLastSetupCycles(newSetupCycles);
+        wRes.reCalculateResults(null);
+        
+        this.setSingleResult(wRes);
+    }
+    
+    public void reCalculateResultWithOvertime(WorkloadResult wResult, long overtime) {
+        Cloner cloner = new Cloner();
+        WorkloadResult wRes = cloner.deepClone(wResult);
+        wRes.reCalculateResults(overtime);
+        this.setSingleResult(wRes);
+    }
+    
+    public void setSingleResult(WorkloadResult result) {
+        this.workloadResults.put(String.valueOf(result.getWorkplace().getId()), result);
     }
 
     public Map<String, WorkloadResult> getWorkloadResults() {

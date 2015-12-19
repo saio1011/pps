@@ -45,7 +45,7 @@ public class WorkloadResult implements Comparable<WorkloadResult> {
     public WorkloadResult(ExtendedWorkplace workplace) {
         Cloner cloner = new Cloner();
         this.workplace = cloner.deepClone(workplace);
-        
+
         if (workplace.getEditedSetupCycles() > 0) {
             this.lastSetupCycles = workplace.getEditedSetupCycles();
         } else {
@@ -151,25 +151,31 @@ public class WorkloadResult implements Comparable<WorkloadResult> {
         return workplace;
     }
 
-    public void reCalculateResults() {
+    public void reCalculateResults(Long overtime) {
         this.calcCapacityNeeded();
         this.calcSetupTime();
         this.calcAdditionalSetupTime();
         this.calcTotalCapacityNeeded();
         this.calcNumberOfShifts();
-        this.calcOverTime();
+        if (overtime != null && overtime >= 0) {
+            this.overTimeDay = overtime;
+            this.overTimePeriod = overtime * 5;
+        } else {
+            this.calcOverTime();
+        }
         this.calcFreeCapacity();
         this.calcWorkloadPercentage();
     }
 
     private void calcCapacityNeeded() {
+        this.capacityNeeded = 0;
         for (ProcessTime process : this.workplace.getProcessTimes()) {
             Long orderQuantity = SharedInstance.getInstance()
                     .getArticleForId(process.getArticleId()).getPlannedProductionAmount();
 
             if (orderQuantity != null && orderQuantity > 0) {
                 this.capacityNeeded += orderQuantity * process.getRunTime();
-                if(this.workplace.getId() == 4){
+                if (this.workplace.getId() == 4) {
                     System.out.print("4");
                 }
             }
@@ -177,6 +183,7 @@ public class WorkloadResult implements Comparable<WorkloadResult> {
     }
 
     private void calcSetupTime() {
+        this.setupTime = 0;
         for (ProcessTime process : this.workplace.getProcessTimes()) {
             Long orderQuantity = SharedInstance.getInstance()
                     .getArticleForId(process.getArticleId()).getPlannedProductionAmount();
@@ -199,14 +206,12 @@ public class WorkloadResult implements Comparable<WorkloadResult> {
     }
 
     private void calcTotalCapacityNeeded() {
+        this.totalCapacityNeeded = 0;
         this.totalCapacityNeeded = this.capacityNeeded
                 //+ this.setupTime
                 + this.additionalSetupTime
                 + this.backlogCapacityLastPeriod
                 + this.backlogSetupTimeLastPeriod;
-        if(this.workplace.getId() == 4) {
-           System.out.print("4");
-        }
     }
 
     private void calcNumberOfShifts() {
@@ -246,7 +251,7 @@ public class WorkloadResult implements Comparable<WorkloadResult> {
         if (this.totalCapacityNeeded > (this.numberOfShifts * WorkloadPlanning.LIMITPERSHIFT)) {
             long calcedOvertime = this.totalCapacityNeeded
                     - (this.numberOfShifts * WorkloadPlanning.LIMITPERSHIFT);
-            this.overTimePeriod = (calcedOvertime <= WorkloadPlanning.LIMITOVERTIME)? calcedOvertime : WorkloadPlanning.LIMITOVERTIME;
+            this.overTimePeriod = (calcedOvertime <= WorkloadPlanning.LIMITOVERTIME) ? calcedOvertime : WorkloadPlanning.LIMITOVERTIME;
         } else {
             this.overTimePeriod = 0;
         }

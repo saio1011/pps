@@ -78,7 +78,7 @@ public class MainUI extends javax.swing.JFrame {
         SetupInstance.getInstance().readWorkplaceJson();
         SetupInstance.getInstance().readArticleJson();
         initComponents();
-        
+
         this.jPanel2.setVisible(true);
         this.jPanel1.setVisible(false);
         jScrollPane5.setVisible(false);
@@ -96,7 +96,7 @@ public class MainUI extends javax.swing.JFrame {
 
         resetDirectSale();
         resetCostsFields();
-        
+
         this.jTabbedPan.setEnabledAt(1, false);
         this.jTabbedPan.setEnabledAt(2, false);
         this.jTabbedPan.setEnabledAt(3, false);
@@ -692,7 +692,7 @@ public class MainUI extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jButtonBackToWelcome, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 908, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabelDiscountFactor, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSpinnerDiscountFactor, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3243,7 +3243,7 @@ public class MainUI extends javax.swing.JFrame {
                 java.lang.Long.class, java.lang.Long.class, java.lang.Long.class, java.lang.Long.class, java.lang.Long.class, java.lang.Long.class, java.lang.Double.class
             };
             boolean[] canEdit = new boolean [] {
-                false, true, false, false, false, false, false
+                false, true, false, true, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -3843,7 +3843,7 @@ public class MainUI extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 481, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 479, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonWeiter)
                     .addComponent(jButtonImportXML))
@@ -4125,11 +4125,16 @@ public class MainUI extends javax.swing.JFrame {
         this.importXml();
     }//GEN-LAST:event_jMenuItemImportFileActionPerformed
 
-    private void reFillWorkloadTable(Collection<WorkloadResult> results) {
+    private void reFillWorkloadTable() {
+        Collection<WorkloadResult> results = SharedInstance.getInstance().getWorkloadResults().values();
         DefaultTableModel model = (DefaultTableModel) jTableWorkloadPlanning.getModel();
 
         for (int i = model.getRowCount() - 1; i >= 0; i--) {
             model.removeRow(i);
+        }
+
+        if (results == null || results.isEmpty()) {
+            return;
         }
 
         List<WorkloadResult> list = new ArrayList<WorkloadResult>(results);
@@ -4141,13 +4146,18 @@ public class MainUI extends javax.swing.JFrame {
         }
     }
 
-    private void reFillPurchasingDisposalTable(List<Order> orders) {
+    private void reFillPurchasingDisposalTable() {
+        List<Order> orders = SharedInstance.getInstance().getNewOrders();
         Locale locale = SharedInstance.getInstance().getCurrentLocale();
         ResourceBundle i18n = Utils.getResourceBundle(locale.getLanguage(), locale.getCountry());
         DefaultTableModel model = (DefaultTableModel) jTablePurchasingDisposition.getModel();
 
         for (int i = model.getRowCount() - 1; i >= 0; i--) {
             model.removeRow(i);
+        }
+
+        if (orders == null || orders.isEmpty()) {
+            return;
         }
 
         Collections.sort(orders);
@@ -4158,13 +4168,18 @@ public class MainUI extends javax.swing.JFrame {
         }
     }
 
-    private void reFillStockChangeTable(Map<String, ExtendedArticle> articles) {
+    private void reFillStockChangeTable() {
+        Map<String, ExtendedArticle> articles = SharedInstance.getInstance().getExtendedArticles();
         Locale locale = SharedInstance.getInstance().getCurrentLocale();
         ResourceBundle i18n = Utils.getResourceBundle(locale.getLanguage(), locale.getCountry());
         DefaultTableModel model = (DefaultTableModel) jTableStockChange.getModel();
 
         for (int i = model.getRowCount() - 1; i >= 0; i--) {
             model.removeRow(i);
+        }
+
+        if (articles == null || articles.isEmpty()) {
+            return;
         }
 
         List<ExtendedArticle> list = new ArrayList<ExtendedArticle>(articles.values());
@@ -4176,13 +4191,18 @@ public class MainUI extends javax.swing.JFrame {
         }
     }
 
-    private void reFillEProdList(List<Production> pList) {
+    private void reFillEProdList() {
+        List<Production> pList = SharedInstance.getInstance().getProductionListCalculated();
         Locale locale = SharedInstance.getInstance().getCurrentLocale();
         ResourceBundle i18n = Utils.getResourceBundle(locale.getLanguage(), locale.getCountry());
         DefaultTableModel model = (DefaultTableModel) jTableEProdList.getModel();
 
         for (int i = model.getRowCount() - 1; i >= 0; i--) {
             model.removeRow(i);
+        }
+
+        if (pList == null || pList.isEmpty()) {
+            return;
         }
 
         for (Production p : pList) {
@@ -4207,7 +4227,7 @@ public class MainUI extends javax.swing.JFrame {
         this.jPanel1.setVisible(false);
         this.jScrollPane5.setVisible(false);
         this.jPanel2.setVisible(true);
-        
+
         jMenuItemImportFile.setEnabled(true);
     }//GEN-LAST:event_jButtonBackToWelcomeActionPerformed
 
@@ -4253,11 +4273,11 @@ public class MainUI extends javax.swing.JFrame {
         //production list order
         List<Production> productionList = SharedInstance.getInstance().calculateProductionList();
 
-        this.reFillWorkloadTable(workloadResults.values());
-        this.reFillPurchasingDisposalTable(newOrders);
-        this.reFillStockChangeTable(articles);
-        this.reFillEProdList(productionList);
-        
+        this.reFillWorkloadTable();
+        this.reFillPurchasingDisposalTable();
+        this.reFillStockChangeTable();
+        this.reFillEProdList();
+
         Costs costs = new Costs();
         costs.calculateCosts();
         fillCostsLabelValues(costs);
@@ -4326,7 +4346,7 @@ public class MainUI extends javax.swing.JFrame {
         this.jPanel2.setVisible(false);
         this.jPanel1.setVisible(true);
         this.jScrollPane5.setVisible(true);
-        
+
         jMenuItemImportFile.setEnabled(false);
     }//GEN-LAST:event_jButtonWeiterActionPerformed
 
@@ -4334,11 +4354,11 @@ public class MainUI extends javax.swing.JFrame {
         this.importXml();
     }//GEN-LAST:event_jButtonImportXMLActionPerformed
 
-    private void loadWelcomeMessage(){
+    private void loadWelcomeMessage() {
         LoadHelpFile wel = new LoadHelpFile("file/Welcome.txt");
         jTextAreaWelcome.setText(wel.toString());
     }
-    
+
     private void resetDirectSale() {
         jTextFieldSalesDPrice.setText("0");
         jTextFieldSalesHPrice.setText("0");
@@ -4377,13 +4397,27 @@ public class MainUI extends javax.swing.JFrame {
         public void actionPerformed(ActionEvent e) {
             TableCellListener tcl = (TableCellListener) e.getSource();
 
-            if ((tcl.getColumn() == 1 && Long.valueOf(tcl.getNewValue().toString()) >= 0)) {
+            if (tcl.getColumn() == 1 && Long.valueOf(tcl.getNewValue().toString()) >= 0) {
                 long id = Long.valueOf(jTableWorkloadPlanning.getModel().getValueAt(tcl.getRow(), 0).toString());
 
-                ExtendedWorkplace place = SharedInstance.getInstance().getWorkplaceForId(id);
-                place.setEditedSetupCycles(Long.valueOf(tcl.getNewValue().toString()));
-                SharedInstance.getInstance().setExtendedWorkplaceForId(id, place);
+                WorkloadResult resu = SharedInstance.getInstance().getWorkloadResultForId(id);
+                WorkloadPlanning.getInstance().reCalculateResultWithSetupCycles(resu, Long.valueOf(tcl.getNewValue().toString()));
 
+                reFillWorkloadTable();
+            } else if(tcl.getColumn() == 3 && Long.valueOf(tcl.getNewValue().toString()) >= 0 && Long.valueOf(tcl.getNewValue().toString()) <= WorkloadPlanning.LIMITOVERTIME) {
+                long id = Long.valueOf(jTableWorkloadPlanning.getModel().getValueAt(tcl.getRow(), 0).toString());
+
+                WorkloadResult resu = SharedInstance.getInstance().getWorkloadResultForId(id);
+                WorkloadPlanning.getInstance().reCalculateResultWithOvertime(resu, Long.valueOf(tcl.getNewValue().toString()));
+                
+                reFillWorkloadTable();
+            }else if(tcl.getColumn() == 3 && Long.valueOf(tcl.getNewValue().toString()) >= 0 && Long.valueOf(tcl.getNewValue().toString()) > WorkloadPlanning.LIMITOVERTIME) {
+                long id = Long.valueOf(jTableWorkloadPlanning.getModel().getValueAt(tcl.getRow(), 0).toString());
+
+                WorkloadResult resu = SharedInstance.getInstance().getWorkloadResultForId(id);
+                WorkloadPlanning.getInstance().reCalculateResultWithOvertime(resu, WorkloadPlanning.LIMITOVERTIME);
+                
+                reFillWorkloadTable();
             } else {
                 jTableWorkloadPlanning.getModel().setValueAt(tcl.getOldValue(), tcl.getRow(), tcl.getColumn());
             }
@@ -4989,22 +5023,10 @@ public class MainUI extends javax.swing.JFrame {
         jTableEProdList.getColumnModel().getColumn(1).setHeaderValue(i18n.getString("Name"));
         jTableEProdList.getColumnModel().getColumn(2).setHeaderValue(i18n.getString("Amount"));
 
-        List<Order> newOrders = SharedInstance.getInstance().getNewOrders();
-        if (newOrders != null && newOrders.size() > 0) {
-            this.reFillPurchasingDisposalTable(newOrders);
-        }
-
-        Map<String, ExtendedArticle> articles = SharedInstance.getInstance().getExtendedArticles();
-
-        if (articles != null && articles.size() > 0) {
-            this.reFillStockChangeTable(articles);
-        }
-
-        List<Production> pList = SharedInstance.getInstance().getProductionListCalculated();
-
-        if (pList != null && pList.size() > 0) {
-            this.reFillEProdList(pList);
-        }
+        this.reFillPurchasingDisposalTable();
+        this.reFillStockChangeTable();
+        this.reFillEProdList();
+        
 
         //labels
         this.setPeriodLabels();
@@ -5078,7 +5100,7 @@ public class MainUI extends javax.swing.JFrame {
         jLabelSalesQuantity.setText(i18n.getString("Quantity"));
         jLabelSalesPrice.setText(i18n.getString("Price"));
         jLabelSalesPenalty.setText(i18n.getString("Penalty"));
-        
+
         jLabelCostsTitleEstimatedStockValue.setText(i18n.getString("EstimatedStockValue"));
         jLabelCostsTitleLabor.setText(i18n.getString("Labor"));
         jLabelCostsTitleLeerlauf.setText(i18n.getString("Leerlauf"));
@@ -5897,7 +5919,6 @@ public class MainUI extends javax.swing.JFrame {
 //                jTextFieldKFE18ProductionOrders.setText(calculateProductionOrders(Integer.parseInt((jTextFieldKFE18SalesOrders.getText().equals("") ? "0" : jTextFieldKFE18SalesOrders.getText())), Integer.parseInt((jLabelKFE18OrdersInQueque.getText().equals("") ? "0" : jLabelKFE18OrdersInQueque.getText())), Integer.parseInt((jTextFieldKFE18PlannedStock.getText().equals("") ? "0" : jTextFieldKFE18PlannedStock.getText())), Integer.parseInt(jTextFieldKFE18StockEndOfPeriod.getText().equals("") ? "0" : jTextFieldKFE18StockEndOfPeriod.getText()), Integer.parseInt(jTextFieldKFE18OrdersInQueque.getText().equals("") ? "0" : jTextFieldKFE18OrdersInQueque.getText()), Integer.parseInt(jTextFieldKFE18WorkInProgress.getText().equals("") ? "0" : jTextFieldKFE18WorkInProgress.getText())));
 //            }
 //        });
-
         //PlannedWarehouseStock
         //P1
         jTextFieldKFP1PlannedStock.getDocument().addDocumentListener(new DocumentListener() {
@@ -8040,27 +8061,27 @@ public class MainUI extends javax.swing.JFrame {
     }
 
     private void fillCostsLabelValues(Costs costs) {
-     jLabelCostsOldStockValue.setText(String.valueOf(costs.getOldStockValue()));
-     jLabelCostsEstimatedStockValue.setText(String.valueOf(costs.getEstimatedStockValue()));
-     jLabelCostsNumberHouses.setText(String.valueOf(costs.getCountOfWarehouses()));
-     jLabelCostsWarehouseHoldungValue.setText(String.valueOf(costs.getWarehouseHoldingCosts()));
-     jLabelCostsWarehouseHoldingPct.setText(String.valueOf(costs.getWarehouseHoldingPctChange()) + " %");
-     jLabelCostsNumberHousesChange.setText(String.valueOf(costs.getCountWarehouseChange()));
-     jLabelCostsEstimatedStockValuePct.setText(String.valueOf(costs.getStockChangePct()) + " %");
-     
-     jLabelCostsLaborCosts.setText(String.valueOf(costs.getLaborCosts()));
+        jLabelCostsOldStockValue.setText(String.valueOf(costs.getOldStockValue()));
+        jLabelCostsEstimatedStockValue.setText(String.valueOf(costs.getEstimatedStockValue()));
+        jLabelCostsNumberHouses.setText(String.valueOf(costs.getCountOfWarehouses()));
+        jLabelCostsWarehouseHoldungValue.setText(String.valueOf(costs.getWarehouseHoldingCosts()));
+        jLabelCostsWarehouseHoldingPct.setText(String.valueOf(costs.getWarehouseHoldingPctChange()) + " %");
+        jLabelCostsNumberHousesChange.setText(String.valueOf(costs.getCountWarehouseChange()));
+        jLabelCostsEstimatedStockValuePct.setText(String.valueOf(costs.getStockChangePct()) + " %");
+
+        jLabelCostsLaborCosts.setText(String.valueOf(costs.getLaborCosts()));
     }
-    
+
     private void resetCostsFields() {
-     jLabelCostsOldStockValue.setText("0");
-     jLabelCostsEstimatedStockValue.setText("0");
-     jLabelCostsNumberHouses.setText("0");
-     jLabelCostsWarehouseHoldungValue.setText("0");
-     jLabelCostsWarehouseHoldingPct.setText("0");
-     jLabelCostsNumberHousesChange.setText("0");
-     jLabelCostsEstimatedStockValuePct.setText("0");
-     
-     jLabelCostsLaborCosts.setText("0");
+        jLabelCostsOldStockValue.setText("0");
+        jLabelCostsEstimatedStockValue.setText("0");
+        jLabelCostsNumberHouses.setText("0");
+        jLabelCostsWarehouseHoldungValue.setText("0");
+        jLabelCostsWarehouseHoldingPct.setText("0");
+        jLabelCostsNumberHousesChange.setText("0");
+        jLabelCostsEstimatedStockValuePct.setText("0");
+
+        jLabelCostsLaborCosts.setText("0");
     }
 
 }
