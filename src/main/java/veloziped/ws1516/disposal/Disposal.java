@@ -96,12 +96,7 @@ public class Disposal {
             SharedInstance.getInstance().setExtendedWorkplaceForId(extendedWorkplace.getId(), extendedWorkplace);
 
             ExtendedArticle extendedArticle = SharedInstance.getInstance().getArticleForId(workplace.getItem());
-            if (extendedArticle.getId() == 16 || extendedArticle.getId() == 17 || extendedArticle.getId() == 26) {
-                extendedArticle.setAdditionalAmountInWork(workplace.getAmount() / 3 + extendedArticle.getAdditionalAmountInWork());
-            } else {
-                extendedArticle.setAdditionalAmountInWork((workplace.getAmount() + extendedArticle.getAdditionalAmountInWork()));
-            }
-
+            extendedArticle.setAdditionalAmountInWork(workplace.getAmount() + extendedArticle.getAdditionalAmountInWork());
             SharedInstance.getInstance().setExtendedArticleForId(extendedArticle.getId(), extendedArticle);
         }
     }
@@ -120,36 +115,15 @@ public class Disposal {
                         }
                     }
                     ExtendedArticle extendedArticleWithAddAmount = SharedInstance.getInstance().getArticleForId(waitinglist.getItem());
-                    if (extendedArticleWithAddAmount.getId() == 16 || extendedArticleWithAddAmount.getId() == 17 || extendedArticleWithAddAmount.getId() == 26) {
-                        extendedArticleWithAddAmount.setAdditionalAmount(waitinglist.getAmount() / 3 + extendedArticleWithAddAmount.getAdditionalAmount());
-
-                    } else {
-                        extendedArticleWithAddAmount.setAdditionalAmount((waitinglist.getAmount() + extendedArticleWithAddAmount.getAdditionalAmount()));
-                    }
+                    extendedArticleWithAddAmount.setAdditionalAmount(waitinglist.getAmount() + extendedArticleWithAddAmount.getAdditionalAmount());
                     SharedInstance.getInstance().setExtendedArticleForId(extendedArticleWithAddAmount.getId(), extendedArticleWithAddAmount);
                 }
             }
         }
     }
 
-    private void calculateStockLastPeriod() {
-        
-        long[] ids = new long[3];
-        ids[0] = 16;
-        ids[1] = 17;
-        ids[2] = 26;
-
-        for (int i = 0; i < 3; i++) {
-            ExtendedArticle extendedArticle = SharedInstance.getInstance().getArticleForId(ids[i]);
-            extendedArticle.setAmount(extendedArticle.getAmount()/ 3);
-            SharedInstance.getInstance().setExtendedArticleForId(extendedArticle.getId(), extendedArticle);
-        }
-    }
-
     public void calculateAdditionalAmountAndTime() {
         calculateWaitingLists(SharedInstance.getInstance().getWaitinglistWorkstations().getWorkplace());
         calculateOrdersInWork(SharedInstance.getInstance().getOrdersInWork().getWorkplace());
-        calculateStockLastPeriod();
     }
-
 }
