@@ -7,7 +7,9 @@ package veloziped.ws1516.main;
 
 import java.awt.Panel;
 import java.awt.event.ActionEvent;
+import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.IOException;
 import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -21,8 +23,10 @@ import java.util.Set;
 import java.util.TreeSet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.imageio.ImageIO;
 import javax.swing.AbstractAction;
 import javax.swing.Action;
+import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JFormattedTextField;
 import javax.swing.JLabel;
@@ -97,11 +101,7 @@ public class MainUI extends javax.swing.JFrame {
 
         resetDirectSale();
         resetCostsFields();
-
-        this.jTabbedPan.setEnabledAt(1, false);
-        this.jTabbedPan.setEnabledAt(2, false);
-        this.jTabbedPan.setEnabledAt(3, false);
-        this.jTabbedPan.setEnabledAt(4, false);
+        this.setEnabledTabs(false);
         this.addInputFieldsListener();
 
         this.setInHouseProductionJTextFieldsEnabled(false);
@@ -109,6 +109,14 @@ public class MainUI extends javax.swing.JFrame {
         this.setTableEditColors();
 
         SharedInstance.getInstance().setDefaultValues();
+    }
+    
+    private void setEnabledTabs(boolean value){
+        this.jTabbedPan.setEnabledAt(1, value);
+        this.jTabbedPan.setEnabledAt(2, value);
+        this.jTabbedPan.setEnabledAt(3, value);
+        this.jTabbedPan.setEnabledAt(4, value);
+        this.jTabbedPan.setEnabledAt(6, value);
     }
 
     private void reSetForecast() {
@@ -587,6 +595,7 @@ public class MainUI extends javax.swing.JFrame {
         jScrollPane7 = new javax.swing.JScrollPane();
         jTextAreaWelcome = new javax.swing.JTextArea();
         jButtonImportXML = new javax.swing.JButton();
+        jLabelWelcomeImage = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuFile = new javax.swing.JMenu();
         jMenuItemImportFile = new javax.swing.JMenuItem();
@@ -3508,11 +3517,12 @@ public class MainUI extends javax.swing.JFrame {
                 .addGroup(jPanelSalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jTextFieldSalesDPenalty, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanelSalesLayout.createSequentialGroup()
-                        .addGroup(jPanelSalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabelSalesMen, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelSalesWomen, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelSalesChildren, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanelSalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabelSalesMen, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanelSalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jLabelSalesWomen, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabelSalesChildren, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 46, Short.MAX_VALUE)
                         .addGroup(jPanelSalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jTextFieldSalesHQuantity)
                             .addComponent(jTextFieldSalesDQuantity)
@@ -3520,23 +3530,18 @@ public class MainUI extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelSalesLayout.createSequentialGroup()
                                 .addComponent(jLabelSalesQuantity)
                                 .addGap(15, 15, 15)))
-                        .addGap(36, 36, 36)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                         .addGroup(jPanelSalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabelSalesPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextFieldSalesKPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextFieldSalesDPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextFieldSalesHPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                         .addGroup(jPanelSalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanelSalesLayout.createSequentialGroup()
-                                .addGap(52, 52, 52)
-                                .addComponent(jLabelSalesPenalty))
-                            .addGroup(jPanelSalesLayout.createSequentialGroup()
-                                .addGap(36, 36, 36)
-                                .addComponent(jTextFieldSalesKPenalty, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelSalesLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextFieldSalesHPenalty, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addGap(73, 73, 73)
+                            .addComponent(jTextFieldSalesHPenalty, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldSalesKPenalty, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelSalesPenalty, javax.swing.GroupLayout.Alignment.TRAILING))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
                 .addComponent(jButtonSalesReset, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(793, Short.MAX_VALUE))
         );
@@ -3618,7 +3623,7 @@ public class MainUI extends javax.swing.JFrame {
                     .addComponent(jLabelCostsTitleWarehouse, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabelCostsTitleNumberHouses, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabelCostsTitleWarehouseHolding, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(47, 47, 47)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
                 .addGroup(jPanelCostsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabelCostsOldStockValue, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
                     .addComponent(jLabelCostsEstimatedStockValue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -3829,11 +3834,15 @@ public class MainUI extends javax.swing.JFrame {
                 .addComponent(jScrollPane7)
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(140, Short.MAX_VALUE)
+                .addContainerGap(159, Short.MAX_VALUE)
                 .addComponent(jButtonImportXML, javax.swing.GroupLayout.PREFERRED_SIZE, 990, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 116, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 136, Short.MAX_VALUE)
                 .addComponent(jButtonWeiter, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(157, Short.MAX_VALUE))
+                .addContainerGap(176, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabelWelcomeImage, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(572, 572, 572))
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel2Layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -3845,7 +3854,9 @@ public class MainUI extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 479, Short.MAX_VALUE)
+                .addGap(39, 39, 39)
+                .addComponent(jLabelWelcomeImage, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 406, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonWeiter)
                     .addComponent(jButtonImportXML))
@@ -3975,7 +3986,7 @@ public class MainUI extends javax.swing.JFrame {
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jScrollPane9, javax.swing.GroupLayout.DEFAULT_SIZE, 1488, Short.MAX_VALUE)
+                    .addComponent(jScrollPane9)
                     .addContainerGap()))
         );
         layout.setVerticalGroup(
@@ -3988,7 +3999,7 @@ public class MainUI extends javax.swing.JFrame {
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jScrollPane9, javax.swing.GroupLayout.DEFAULT_SIZE, 817, Short.MAX_VALUE)
+                    .addComponent(jScrollPane9)
                     .addContainerGap()))
         );
 
@@ -4054,19 +4065,8 @@ public class MainUI extends javax.swing.JFrame {
                     disposal.calculateAdditionalAmountAndTime();
                     this.setPeriodLabels();
                     this.jButtonCalculate.setEnabled(true);
-
-                    Map<String, ExtendedArticle> extArticles = SharedInstance.getInstance().getExtendedArticles();
-//                    jTextFieldKFP1OrdersInQueque.setText(String.valueOf(extArticles.get("1").getAdditionalAmount()));
-
-                    //Vorbelegung Damenfahrrad
-                    Map<JTextField, String> dfMapFieldsWithKeys = getMapFieldsWithKeys(getDFJTextFields());
-                    fillTextFileds(dfMapFieldsWithKeys, extArticles);
-                    //Vorbelegung Herrenfahrrad
-                    Map<JTextField, String> hfMapFieldsWithKeys = getMapFieldsWithKeys(getHFJTextFields());
-                    fillTextFileds(hfMapFieldsWithKeys, extArticles);
-                    //Vorbelegung Kinderfahrad
-                    Map<JTextField, String> kfMapFieldsWithKeys = getMapFieldsWithKeys(getKFJTextFields());
-                    fillTextFileds(kfMapFieldsWithKeys, extArticles);
+                    
+                    this.fillFieldsInHouseProduction();
 
                     resetCostsFields();
                     this.jButtonCalculate.setEnabled(true);
@@ -4080,6 +4080,23 @@ public class MainUI extends javax.swing.JFrame {
             }
         }
     }
+    
+    private void fillFieldsInHouseProduction() {
+        Map<String, ExtendedArticle> extArticles = SharedInstance.getInstance().getExtendedArticles();
+        //Vorbelegung Damenfahrrad
+        Map<JTextField, String> dfMapFieldsWithKeys = getMapFieldsWithKeys(getDFJTextFields());
+        fillTextFileds(dfMapFieldsWithKeys, extArticles);
+        //Vorbelegung Herrenfahrrad
+        Map<JTextField, String> hfMapFieldsWithKeys = getMapFieldsWithKeys(getHFJTextFields());
+        fillTextFileds(hfMapFieldsWithKeys, extArticles);
+        //Vorbelegung Kinderfahrad
+        Map<JTextField, String> kfMapFieldsWithKeys = getMapFieldsWithKeys(getKFJTextFields());
+        fillTextFileds(kfMapFieldsWithKeys, extArticles);
+        
+        fillPlannedWarehouseStockInHouseProduction(dfMapFieldsWithKeys);
+        fillPlannedWarehouseStockInHouseProduction(hfMapFieldsWithKeys);
+        fillPlannedWarehouseStockInHouseProduction(kfMapFieldsWithKeys);
+    }
 
     public void fillTextFileds(Map<JTextField, String> mapFieldsWithKeys, Map<String, ExtendedArticle> extArticles) {
         for (Map.Entry<JTextField, String> entry : mapFieldsWithKeys.entrySet()) {
@@ -4092,6 +4109,13 @@ public class MainUI extends javax.swing.JFrame {
             if (entry.getKey().getName().endsWith("WorkInProgress")) {
                 entry.getKey().setText(String.valueOf(extArticles.get(entry.getValue()).getAdditionalAmountInWork()));
             }
+//            if (entry.getKey().getName().endsWith("PlannedStock")) {
+//                entry.getKey().setText("50");
+//            }
+        }
+    }
+    private void fillPlannedWarehouseStockInHouseProduction(Map<JTextField, String> mapFieldsWithKeys){
+        for (Map.Entry<JTextField, String> entry : mapFieldsWithKeys.entrySet()) {
             if (entry.getKey().getName().endsWith("PlannedStock")) {
                 entry.getKey().setText("50");
             }
@@ -4231,6 +4255,7 @@ public class MainUI extends javax.swing.JFrame {
         this.jPanel2.setVisible(true);
 
         jMenuItemImportFile.setEnabled(true);
+        this.setEnabledTabs(false);
     }//GEN-LAST:event_jButtonBackToWelcomeActionPerformed
 
     private void jButtonCalculateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCalculateActionPerformed
@@ -4284,10 +4309,7 @@ public class MainUI extends javax.swing.JFrame {
         costs.calculateCosts();
         fillCostsLabelValues(costs);
 
-        this.jTabbedPan.setEnabledAt(1, true);
-        this.jTabbedPan.setEnabledAt(2, true);
-        this.jTabbedPan.setEnabledAt(3, true);
-        this.jTabbedPan.setEnabledAt(4, true);
+        this.setEnabledTabs(true);
     }//GEN-LAST:event_jButtonCalculateActionPerformed
 
     private void jSpinnerDiscountFactorStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinnerDiscountFactorStateChanged
@@ -4350,17 +4372,19 @@ public class MainUI extends javax.swing.JFrame {
         this.jScrollPane5.setVisible(true);
 
         jMenuItemImportFile.setEnabled(false);
+        
+        this.fillFieldsInHouseProduction();
     }//GEN-LAST:event_jButtonWeiterActionPerformed
 
     private void jButtonImportXMLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonImportXMLActionPerformed
         this.importXml();
+
     }//GEN-LAST:event_jButtonImportXMLActionPerformed
 
     private void loadWelcomeMessage() {
         LoadHelpFile wel = new LoadHelpFile("file/Welcome.txt");
         jTextAreaWelcome.setText(wel.toString());
     }
-
     private void resetDirectSale() {
         jTextFieldSalesDPrice.setText("0");
         jTextFieldSalesHPrice.setText("0");
@@ -4665,6 +4689,7 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelSalesQuantity;
     private javax.swing.JLabel jLabelSalesWomen;
     private javax.swing.JLabel jLabelSattelCpl;
+    private javax.swing.JLabel jLabelWelcomeImage;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu jMenuCalculationMode;
     private javax.swing.JMenu jMenuFile;
@@ -4987,6 +5012,9 @@ public class MainUI extends javax.swing.JFrame {
         jButtonMoveUp.setText(i18n.getString("MoveUp"));
         jButtonMoveDown.setText(i18n.getString("MoveDown"));
         jButtonSalesReset.setText(i18n.getString("Reset"));
+        jButtonBackToWelcome.setText(i18n.getString("jButtonBack"));
+        jButtonWeiter.setText(i18n.getString("jButtonWeiter"));
+        jButtonImportXML.setText(i18n.getString("ImportFile"));
 
         //tabs
 //        jTabbedPan.setTitleAt(0, i18n.getString("ProductionForecast"));
