@@ -461,16 +461,13 @@ public class SharedInstance {
 
         Item p1 = new Item();
         p1.setArticle(1);
-        p1.setQuantity(0);
-        //p1.setQuantity(this.getArticleForId((long)1).get);
+        p1.setQuantity(this.forecast.getPeriodN1().getProduct1());
         Item p2 = new Item();
         p2.setArticle(2);
-        p2.setQuantity(0);
-        //p2.setQuantity(this.getArticleForId((long)2).get);
+        p2.setQuantity(this.forecast.getPeriodN1().getProduct2());
         Item p3 = new Item();
         p3.setArticle(3);
-        p3.setQuantity(0);
-        //p3.setQuantity(this.getArticleForId((long)3).get);
+        p3.setQuantity(this.forecast.getPeriodN1().getProduct3());
         items.add(p1);
         items.add(p2);
         items.add(p3);
