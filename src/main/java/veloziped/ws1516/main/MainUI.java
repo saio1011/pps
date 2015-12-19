@@ -69,6 +69,16 @@ import veloziped.ws1516.workplace.ExtendedWorkplace;
  */
 public class MainUI extends javax.swing.JFrame {
 
+    long indexE16wl;
+    long indexE17wl;
+    long indexE26wl;
+    long indexE16st;
+    long indexE17st;
+    long indexE26st;
+    long indexE16;
+    long indexE17;
+    long indexE26;
+
     private JTextField IntegerField;
     private Locale locale = Locale.getDefault();
     private PeriodDetail periodDetailN1 = new PeriodDetail(0, 0, 0);
@@ -84,34 +94,55 @@ public class MainUI extends javax.swing.JFrame {
         SetupInstance.getInstance().readArticleJson();
         initComponents();
 
-        this.jPanel2.setVisible(true);
-        this.jPanel1.setVisible(false);
-        jScrollPane5.setVisible(false);
+        this.jPanel2.setVisible(
+                true);
+
+        this.jPanel1.setVisible(
+                false);
+        jScrollPane5.setVisible(
+                false);
+
         this.loadWelcomeMessage();
 
         //set Language selected
         this.setSelectedLanguage(Locale.getDefault().getLanguage());
+
         this.changeLanguage(Locale.getDefault().getLanguage(), Locale.getDefault().getCountry());
+
         this.setCalculationMode(CalculationMode.PESSIMISTIC);
-        this.jButtonCalculate.setEnabled(false);
-        SharedInstance.getInstance().setDiscountFactor(0.1);
-        SharedInstance.getInstance().setBufferFactor(0.05);
+
+        this.jButtonCalculate.setEnabled(
+                false);
+        SharedInstance.getInstance()
+                .setDiscountFactor(0.1);
+        SharedInstance.getInstance()
+                .setBufferFactor(0.05);
+
         this.jSpinnerDiscountFactor.setValue(SharedInstance.getInstance().getDiscountFactor() * 100);
+
         this.jSpinnerBufferFactor.setValue(SharedInstance.getInstance().getBufferFactor() * 100);
 
         resetDirectSale();
+
         resetCostsFields();
-        this.setEnabledTabs(false);
+
+        this.setEnabledTabs(
+                false);
+
         this.addInputFieldsListener();
 
-        this.setInHouseProductionJTextFieldsEnabled(false);
+        this.setInHouseProductionJTextFieldsEnabled(
+                false);
+
         this.setTableListeners();
+
         this.setTableEditColors();
 
-        SharedInstance.getInstance().setDefaultValues();
+        SharedInstance.getInstance()
+                .setDefaultValues();
     }
-    
-    private void setEnabledTabs(boolean value){
+
+    private void setEnabledTabs(boolean value) {
         this.jTabbedPan.setEnabledAt(1, value);
         this.jTabbedPan.setEnabledAt(2, value);
         this.jTabbedPan.setEnabledAt(3, value);
@@ -4065,14 +4096,16 @@ public class MainUI extends javax.swing.JFrame {
                     disposal.calculateAdditionalAmountAndTime();
                     this.setPeriodLabels();
                     this.jButtonCalculate.setEnabled(true);
-                    
+
                     this.fillFieldsInHouseProduction();
 
                     resetCostsFields();
                     this.jButtonCalculate.setEnabled(true);
                     this.jButtonWeiter.setEnabled(true);
+
                 } catch (JAXBException ex) {
-                    Logger.getLogger(MainUI.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(MainUI.class
+                            .getName()).log(Level.SEVERE, null, ex);
                 }
             } else {
                 ResourceBundle i18n = Utils.getResourceBundle(locale.getLanguage(), locale.getCountry());
@@ -4080,7 +4113,7 @@ public class MainUI extends javax.swing.JFrame {
             }
         }
     }
-    
+
     private void fillFieldsInHouseProduction() {
         Map<String, ExtendedArticle> extArticles = SharedInstance.getInstance().getExtendedArticles();
         //Vorbelegung Damenfahrrad
@@ -4092,13 +4125,13 @@ public class MainUI extends javax.swing.JFrame {
         //Vorbelegung Kinderfahrad
         Map<JTextField, String> kfMapFieldsWithKeys = getMapFieldsWithKeys(getKFJTextFields());
         fillTextFileds(kfMapFieldsWithKeys, extArticles);
-        
+
         fillPlannedWarehouseStockInHouseProduction(dfMapFieldsWithKeys);
         fillPlannedWarehouseStockInHouseProduction(hfMapFieldsWithKeys);
         fillPlannedWarehouseStockInHouseProduction(kfMapFieldsWithKeys);
     }
 
-    public void fillTextFileds(Map<JTextField, String> mapFieldsWithKeys, Map<String, ExtendedArticle> extArticles) {
+    /* public void fillTextFileds(Map<JTextField, String> mapFieldsWithKeys, Map<String, ExtendedArticle> extArticles) {
         for (Map.Entry<JTextField, String> entry : mapFieldsWithKeys.entrySet()) {
             if (entry.getKey().getName().endsWith("OrdersInQueque")) {
                 entry.getKey().setText(String.valueOf(extArticles.get(entry.getValue()).getAdditionalAmount()));
@@ -4113,8 +4146,138 @@ public class MainUI extends javax.swing.JFrame {
 //                entry.getKey().setText("50");
 //            }
         }
+    }*/
+    public void fillTextFileds(Map<JTextField, String> mapFieldsWithKeys, Map<String, ExtendedArticle> extArticles) {
+        for (Map.Entry<JTextField, String> entry : mapFieldsWithKeys.entrySet()) {
+            if (entry.getKey().getName().endsWith("OrdersInQueque")) {
+                ExtendedArticle tmpArticle = extArticles.get(entry.getValue());
+                long artId = tmpArticle.getId();
+                double additionalAmout = (double) tmpArticle.getAdditionalAmount();
+
+                long p1 = Math.round(additionalAmout / 30) * 10;
+                long p2 = Math.round((additionalAmout - p1) / 20) * 10;
+                long p3 = Math.round(additionalAmout - p1 - p2);
+
+                if (artId == 16) {
+                    if (indexE16wl == 0) {
+                        entry.getKey().setText(String.valueOf(p1));
+                    }
+                    if (indexE16wl == 1) {
+                        entry.getKey().setText(String.valueOf(p2));
+                    }
+                    if (indexE16wl == 2) {
+                        entry.getKey().setText(String.valueOf(p3));
+                    }
+                    indexE16wl++;
+                } else if (artId == 17) {
+                    if (indexE17wl == 0) {
+                        entry.getKey().setText(String.valueOf(p1));
+                    } else if (indexE17wl == 1) {
+                        entry.getKey().setText(String.valueOf(p2));
+                    } else if (indexE17wl == 2) {
+                        entry.getKey().setText(String.valueOf(p3));
+                    }
+                    indexE17wl++;
+                } else if (artId == 26) {
+                    if (indexE26wl == 0) {
+                        entry.getKey().setText(String.valueOf(p1));
+                    } else if (indexE26wl == 1) {
+                        entry.getKey().setText(String.valueOf(p2));
+                    } else if (indexE26wl == 2) {
+                        entry.getKey().setText(String.valueOf(p3));
+                    }
+                    indexE26wl++;
+                } else {
+                    entry.getKey().setText(String.valueOf(extArticles.get(entry.getValue()).getAdditionalAmount()));
+                }
+            }
+            if (entry.getKey().getName().endsWith("StockEndOfPeriod")) {
+                ExtendedArticle tmpArticle = extArticles.get(entry.getValue());
+                long artId = tmpArticle.getId();
+                double stock = (double) tmpArticle.getAmount();
+
+                long p1 = Math.round(stock / 30) * 10;
+                long p2 = Math.round((stock - p1) / 20) * 10;
+                long p3 = Math.round(stock - p1 - p2);
+
+                if (artId == 16) {
+                    if (indexE16st == 0) {
+                        entry.getKey().setText(String.valueOf(p1));
+                    } else if (indexE16st == 1) {
+                        entry.getKey().setText(String.valueOf(p2));
+                    } else {
+                        entry.getKey().setText(String.valueOf(p3));
+                    }
+                    indexE16st++;
+                } else if (artId == 17) {
+                    if (indexE17st == 0) {
+                        entry.getKey().setText(String.valueOf(p1));
+                    } else if (indexE17st == 1) {
+                        entry.getKey().setText(String.valueOf(p2));
+                    } else {
+                        entry.getKey().setText(String.valueOf(p3));
+                    }
+                    indexE17st++;
+                } else if (artId == 26) {
+                    if (indexE26st == 0) {
+                        entry.getKey().setText(String.valueOf(p1));
+                    } else if (indexE26st == 1) {
+                        entry.getKey().setText(String.valueOf(p2));
+                    } else {
+                        entry.getKey().setText(String.valueOf(p3));
+                    }
+                    indexE26st++;
+                } else {
+                    entry.getKey().setText(String.valueOf(extArticles.get(entry.getValue()).getAmount()));
+                }
+            }
+            if (entry.getKey().getName().endsWith("WorkInProgress")) {
+                ExtendedArticle tmpArticle = extArticles.get(entry.getValue());
+                long artId = tmpArticle.getId();
+                double additionalAmout = (double) tmpArticle.getAdditionalAmountInWork();
+
+                long p1 = Math.round(additionalAmout / 30) * 10;
+                long p2 = Math.round((additionalAmout - p1) / 20) * 10;
+                long p3 = Math.round(additionalAmout - p1 - p2);
+
+                if (artId == 16) {
+                    if (indexE16 == 0) {
+                        entry.getKey().setText(String.valueOf(p1));
+                    } else if (indexE16 == 1) {
+                        entry.getKey().setText(String.valueOf(p2));
+                    } else {
+                        entry.getKey().setText(String.valueOf(p3));
+                    }
+                    indexE16++;
+                } else if (artId == 17) {
+                    if (indexE17 == 0) {
+                        entry.getKey().setText(String.valueOf(p1));
+                    } else if (indexE17 == 1) {
+                        entry.getKey().setText(String.valueOf(p2));
+                    } else {
+                        entry.getKey().setText(String.valueOf(p3));
+                    }
+                    indexE17++;
+                } else if (artId == 26) {
+                    if (indexE26 == 0) {
+                        entry.getKey().setText(String.valueOf(p1));
+                    } else if (indexE26 == 1) {
+                        entry.getKey().setText(String.valueOf(p2));
+                    } else {
+                        entry.getKey().setText(String.valueOf(p3));
+                    }
+                    indexE26++;
+                } else {
+                    entry.getKey().setText(String.valueOf(extArticles.get(entry.getValue()).getAdditionalAmountInWork()));
+                }
+                //  if (entry.getKey().getName().endsWith("PlannedStock")) {
+                //      entry.getKey().setText("50");
+                //  }
+            }
+        }
     }
-    private void fillPlannedWarehouseStockInHouseProduction(Map<JTextField, String> mapFieldsWithKeys){
+
+    private void fillPlannedWarehouseStockInHouseProduction(Map<JTextField, String> mapFieldsWithKeys) {
         for (Map.Entry<JTextField, String> entry : mapFieldsWithKeys.entrySet()) {
             if (entry.getKey().getName().endsWith("PlannedStock")) {
                 entry.getKey().setText("50");
@@ -4372,7 +4535,17 @@ public class MainUI extends javax.swing.JFrame {
         this.jScrollPane5.setVisible(true);
 
         jMenuItemImportFile.setEnabled(false);
-        
+
+        indexE16wl = 0;
+        indexE17wl = 0;
+        indexE26wl = 0;
+        indexE16st = 0;
+        indexE17st = 0;
+        indexE26st = 0;
+        indexE16 = 0;
+        indexE17 = 0;
+        indexE26 = 0;
+
         this.fillFieldsInHouseProduction();
     }//GEN-LAST:event_jButtonWeiterActionPerformed
 
@@ -4385,6 +4558,7 @@ public class MainUI extends javax.swing.JFrame {
         LoadHelpFile wel = new LoadHelpFile("file/Welcome.txt");
         jTextAreaWelcome.setText(wel.toString());
     }
+
     private void resetDirectSale() {
         jTextFieldSalesDPrice.setText("0");
         jTextFieldSalesHPrice.setText("0");
@@ -4430,19 +4604,19 @@ public class MainUI extends javax.swing.JFrame {
                 WorkloadPlanning.getInstance().reCalculateResultWithSetupCycles(resu, Long.valueOf(tcl.getNewValue().toString()));
 
                 reFillWorkloadTable();
-            } else if(tcl.getColumn() == 3 && Long.valueOf(tcl.getNewValue().toString()) >= 0 && Long.valueOf(tcl.getNewValue().toString()) <= WorkloadPlanning.LIMITOVERTIME) {
+            } else if (tcl.getColumn() == 3 && Long.valueOf(tcl.getNewValue().toString()) >= 0 && Long.valueOf(tcl.getNewValue().toString()) <= WorkloadPlanning.LIMITOVERTIME) {
                 long id = Long.valueOf(jTableWorkloadPlanning.getModel().getValueAt(tcl.getRow(), 0).toString());
 
                 WorkloadResult resu = SharedInstance.getInstance().getWorkloadResultForId(id);
                 WorkloadPlanning.getInstance().reCalculateResultWithOvertime(resu, Long.valueOf(tcl.getNewValue().toString()));
-                
+
                 reFillWorkloadTable();
-            }else if(tcl.getColumn() == 3 && Long.valueOf(tcl.getNewValue().toString()) >= 0 && Long.valueOf(tcl.getNewValue().toString()) > WorkloadPlanning.LIMITOVERTIME) {
+            } else if (tcl.getColumn() == 3 && Long.valueOf(tcl.getNewValue().toString()) >= 0 && Long.valueOf(tcl.getNewValue().toString()) > WorkloadPlanning.LIMITOVERTIME) {
                 long id = Long.valueOf(jTableWorkloadPlanning.getModel().getValueAt(tcl.getRow(), 0).toString());
 
                 WorkloadResult resu = SharedInstance.getInstance().getWorkloadResultForId(id);
                 WorkloadPlanning.getInstance().reCalculateResultWithOvertime(resu, WorkloadPlanning.LIMITOVERTIME);
-                
+
                 reFillWorkloadTable();
             } else {
                 jTableWorkloadPlanning.getModel().setValueAt(tcl.getOldValue(), tcl.getRow(), tcl.getColumn());
@@ -4491,16 +4665,24 @@ public class MainUI extends javax.swing.JFrame {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
+
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MainUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainUI.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MainUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainUI.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MainUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainUI.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MainUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainUI.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
@@ -5056,7 +5238,6 @@ public class MainUI extends javax.swing.JFrame {
         this.reFillPurchasingDisposalTable();
         this.reFillStockChangeTable();
         this.reFillEProdList();
-        
 
         //labels
         this.setPeriodLabels();
