@@ -295,7 +295,7 @@
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jButtonBackToWelcome" min="-2" pref="100" max="-2" attributes="0"/>
-                  <EmptySpace pref="908" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
                   <Component id="jLabelDiscountFactor" min="-2" pref="99" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jSpinnerDiscountFactor" min="-2" pref="60" max="-2" attributes="0"/>
@@ -6160,12 +6160,14 @@
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Component id="jTextFieldSalesDPenalty" min="-2" pref="85" max="-2" attributes="0"/>
                               <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="jLabelSalesMen" min="-2" pref="83" max="-2" attributes="0"/>
-                                      <Component id="jLabelSalesWomen" min="-2" pref="83" max="-2" attributes="0"/>
-                                      <Component id="jLabelSalesChildren" min="-2" pref="83" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabelSalesMen" alignment="1" min="-2" pref="111" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Component id="jLabelSalesWomen" alignment="1" min="-2" pref="111" max="-2" attributes="0"/>
+                                          <Component id="jLabelSalesChildren" min="-2" pref="111" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" pref="46" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                       <Component id="jTextFieldSalesHQuantity" max="32767" attributes="0"/>
                                       <Component id="jTextFieldSalesDQuantity" alignment="0" max="32767" attributes="0"/>
@@ -6175,30 +6177,22 @@
                                           <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                                  <EmptySpace pref="36" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="1" attributes="0">
                                       <Component id="jLabelSalesPrice" min="-2" pref="61" max="-2" attributes="0"/>
                                       <Component id="jTextFieldSalesKPrice" min="-2" pref="85" max="-2" attributes="0"/>
                                       <Component id="jTextFieldSalesDPrice" min="-2" pref="85" max="-2" attributes="0"/>
                                       <Component id="jTextFieldSalesHPrice" min="-2" pref="85" max="-2" attributes="0"/>
                                   </Group>
+                                  <EmptySpace pref="36" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" attributes="0">
-                                          <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
-                                          <Component id="jLabelSalesPenalty" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                                          <Component id="jTextFieldSalesKPenalty" min="-2" pref="85" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jTextFieldSalesHPenalty" min="-2" pref="85" max="-2" attributes="0"/>
-                                      </Group>
+                                      <Component id="jTextFieldSalesHPenalty" alignment="1" min="-2" pref="85" max="-2" attributes="0"/>
+                                      <Component id="jTextFieldSalesKPenalty" alignment="1" min="-2" pref="85" max="-2" attributes="0"/>
+                                      <Component id="jLabelSalesPenalty" alignment="1" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
-                          <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
+                          <EmptySpace pref="73" max="32767" attributes="0"/>
                           <Component id="jButtonSalesReset" min="-2" pref="100" max="-2" attributes="0"/>
                           <EmptySpace pref="793" max="32767" attributes="0"/>
                       </Group>
@@ -6354,7 +6348,7 @@
                               <Component id="jLabelCostsTitleNumberHouses" alignment="0" max="32767" attributes="0"/>
                               <Component id="jLabelCostsTitleWarehouseHolding" alignment="0" max="32767" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                          <EmptySpace pref="47" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="jLabelCostsOldStockValue" pref="75" max="32767" attributes="0"/>
                               <Component id="jLabelCostsEstimatedStockValue" max="32767" attributes="0"/>
