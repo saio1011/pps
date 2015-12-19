@@ -6,6 +6,7 @@
 package veloziped.ws1516.main;
 
 import com.google.common.math.DoubleMath;
+import com.rits.cloning.Cloner;
 import java.awt.Desktop;
 import java.io.File;
 import java.io.IOException;
@@ -605,7 +606,8 @@ public class SharedInstance {
         int Interation_One = 100;
         int Interation_Two = 150;
 
-        Map<String, ExtendedArticle> articles = this.extendedArticles;
+        Cloner cloner = new Cloner();
+        Map<String, ExtendedArticle> articles = cloner.deepClone(this.extendedArticles);
 
         for (int i = 0; i < this.productionListOrder.length; i++) {
             ExtendedArticle article = articles.get(String.valueOf(this.productionListOrder[i]));

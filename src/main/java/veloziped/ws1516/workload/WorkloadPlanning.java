@@ -5,6 +5,7 @@
  */
 package veloziped.ws1516.workload;
 
+import com.rits.cloning.Cloner;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -35,8 +36,9 @@ public class WorkloadPlanning {
 
     public Map<String, WorkloadResult> calculateWorkload(Map<String, ExtendedWorkplace> workplaces) {
         workloadResults = new HashMap<>();
+        Cloner cloner = new Cloner();
 
-        for (Map.Entry<String, ExtendedWorkplace> entry : workplaces.entrySet()) {
+        for (Map.Entry<String, ExtendedWorkplace> entry : cloner.deepClone(workplaces.entrySet())) {
             ExtendedWorkplace place = entry.getValue();
 
             if (place != null) {

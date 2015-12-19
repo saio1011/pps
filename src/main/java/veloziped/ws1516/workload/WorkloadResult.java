@@ -5,6 +5,7 @@
  */
 package veloziped.ws1516.workload;
 
+import com.rits.cloning.Cloner;
 import static java.lang.Math.ceil;
 import java.text.DecimalFormat;
 import veloziped.ws1516.main.SharedInstance;
@@ -42,7 +43,9 @@ public class WorkloadResult implements Comparable<WorkloadResult> {
     private double workloadPercentage;
 
     public WorkloadResult(ExtendedWorkplace workplace) {
-        this.workplace = workplace;
+        Cloner cloner = new Cloner();
+        this.workplace = cloner.deepClone(workplace);
+        
         if (workplace.getEditedSetupCycles() > 0) {
             this.lastSetupCycles = workplace.getEditedSetupCycles();
         } else {
@@ -166,6 +169,9 @@ public class WorkloadResult implements Comparable<WorkloadResult> {
 
             if (orderQuantity != null && orderQuantity > 0) {
                 this.capacityNeeded += orderQuantity * process.getRunTime();
+                if(this.workplace.getId() == 4){
+                    System.out.print("4");
+                }
             }
         }
     }
@@ -198,6 +204,9 @@ public class WorkloadResult implements Comparable<WorkloadResult> {
                 + this.additionalSetupTime
                 + this.backlogCapacityLastPeriod
                 + this.backlogSetupTimeLastPeriod;
+        if(this.workplace.getId() == 4) {
+           System.out.print("4");
+        }
     }
 
     private void calcNumberOfShifts() {
