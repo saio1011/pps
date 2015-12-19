@@ -50,6 +50,7 @@ import veloziped.ws1516.production.CalculationMode;
 import veloziped.ws1516.production.Forecast;
 import veloziped.ws1516.production.PeriodDetail;
 import veloziped.ws1516.production.ProductionPlan;
+import veloziped.ws1516.util.HighlightTableCell;
 import veloziped.ws1516.util.IntegerField;
 import veloziped.ws1516.util.LoadHelpFile;
 import veloziped.ws1516.util.TableCellListener;
@@ -105,6 +106,7 @@ public class MainUI extends javax.swing.JFrame {
 
         this.setInHouseProductionJTextFieldsEnabled(false);
         this.setTableListeners();
+        this.setTableEditColors();
 
         SharedInstance.getInstance().setDefaultValues();
     }
@@ -8082,6 +8084,13 @@ public class MainUI extends javax.swing.JFrame {
         jLabelCostsEstimatedStockValuePct.setText("0");
 
         jLabelCostsLaborCosts.setText("0");
+    }
+
+    private void setTableEditColors() {
+        jTableWorkloadPlanning.getColumnModel().getColumn(1).setCellRenderer(new HighlightTableCell());
+        jTableWorkloadPlanning.getColumnModel().getColumn(3).setCellRenderer(new HighlightTableCell());
+        jTablePurchasingDisposition.getColumnModel().getColumn(2).setCellRenderer(new HighlightTableCell());
+        jTablePurchasingDisposition.getColumnModel().getColumn(3).setCellRenderer(new HighlightTableCell());
     }
 
 }
