@@ -7996,16 +7996,60 @@ public class MainUI extends javax.swing.JFrame {
         );
         getDFJTextFieldByProduct(dfFields, "ProductionOrders").setText(prodOrders);
         String productId = product.replaceAll("[\\D]", "");
+        
+        long safety = 0;
+        int id = Integer.valueOf(productId);
+        switch(id) {
+            case 26:
+                safety = Long.valueOf((jTextFieldKFE26PlannedStock.getText().isEmpty())? "0" : jTextFieldKFE26PlannedStock.getText())
+                + Long.valueOf((jTextFieldDFE26PlannedStock.getText().isEmpty())? "0" : jTextFieldDFE26PlannedStock.getText())
+                + Long.valueOf((jTextFieldHFE26PlannedStock.getText().isEmpty())? "0" : jTextFieldHFE26PlannedStock.getText());
+                break;
+            case 16:
+                safety = Long.valueOf((jTextFieldKFE16PlannedStock.getText().isEmpty())? "0" : jTextFieldKFE16PlannedStock.getText())
+                + Long.valueOf((jTextFieldDFE16PlannedStock.getText().isEmpty())? "0" : jTextFieldDFE16PlannedStock.getText())
+                + Long.valueOf((jTextFieldHFE16PlannedStock.getText().isEmpty())? "0" : jTextFieldHFE16PlannedStock.getText());
+                break;
+            case 17:
+                safety = Long.valueOf((jTextFieldKFE17PlannedStock.getText().isEmpty())? "0" : jTextFieldKFE17PlannedStock.getText())
+                + Long.valueOf((jTextFieldDFE17PlannedStock.getText().isEmpty())? "0" : jTextFieldDFE17PlannedStock.getText())
+                + Long.valueOf((jTextFieldHFE17PlannedStock.getText().isEmpty())? "0" : jTextFieldHFE17PlannedStock.getText());
+                break;
+            default :
+                Long.valueOf(getDFJTextFieldByProduct(dfFields, "PlannedStock").getText().equals("") ? "0" : getDFJTextFieldByProduct(dfFields, "PlannedStock").getText());
+        }
+        
         ExtendedArticle article = SharedInstance.getInstance().getArticleForId(Long.valueOf(productId));
         article.setPlannedProductionAmount(Long.valueOf(prodOrders));
-         article.setSafetyStock(Long.valueOf((getDFJTextFieldByProduct(dfFields, "PlannedStock").getText().equals("") ? "0" : getDFJTextFieldByProduct(dfFields, "PlannedStock").getText())));
+         article.setSafetyStock(safety);
         SharedInstance.getInstance().setExtendedArticleForId(article.getId(), article);
     }
 
     private void updateExtendetArticle(String articleID, String productionOrders, String safetyStock) {
         ExtendedArticle article = SharedInstance.getInstance().getArticleForId(Long.valueOf(articleID));
         article.setPlannedProductionAmount(Long.valueOf(productionOrders));
-        article.setSafetyStock(Long.valueOf(safetyStock));
+        long safety = 0;
+        int id = Integer.valueOf(articleID);
+        switch(id) {
+            case 26:
+                safety = Long.valueOf((jTextFieldKFE26PlannedStock.getText().isEmpty())? "0" : jTextFieldKFE26PlannedStock.getText())
+                + Long.valueOf((jTextFieldDFE26PlannedStock.getText().isEmpty())? "0" : jTextFieldDFE26PlannedStock.getText())
+                + Long.valueOf((jTextFieldHFE26PlannedStock.getText().isEmpty())? "0" : jTextFieldHFE26PlannedStock.getText());
+                break;
+            case 16:
+                safety = Long.valueOf((jTextFieldKFE16PlannedStock.getText().isEmpty())? "0" : jTextFieldKFE16PlannedStock.getText())
+                + Long.valueOf((jTextFieldDFE16PlannedStock.getText().isEmpty())? "0" : jTextFieldDFE16PlannedStock.getText())
+                + Long.valueOf((jTextFieldHFE16PlannedStock.getText().isEmpty())? "0" : jTextFieldHFE16PlannedStock.getText());
+                break;
+            case 17:
+                safety = Long.valueOf((jTextFieldKFE17PlannedStock.getText().isEmpty())? "0" : jTextFieldKFE17PlannedStock.getText())
+                + Long.valueOf((jTextFieldDFE17PlannedStock.getText().isEmpty())? "0" : jTextFieldDFE17PlannedStock.getText())
+                + Long.valueOf((jTextFieldHFE17PlannedStock.getText().isEmpty())? "0" : jTextFieldHFE17PlannedStock.getText());
+                break;
+            default :
+                Long.valueOf(safetyStock);
+        }
+        article.setSafetyStock(safety);
         SharedInstance.getInstance().setExtendedArticleForId(article.getId(), article);
     }
 
@@ -8353,9 +8397,32 @@ public class MainUI extends javax.swing.JFrame {
         );
         getHFJTextFieldByProduct(hfFields, "ProductionOrders").setText(prodOrders);
         String productId = product.replaceAll("[\\D]", "");
+        
+        long safety = 0;
+        int id = Integer.valueOf(productId);
+        switch(id) {
+            case 26:
+                safety = Long.valueOf((jTextFieldKFE26PlannedStock.getText().isEmpty())? "0" : jTextFieldKFE26PlannedStock.getText())
+                + Long.valueOf((jTextFieldDFE26PlannedStock.getText().isEmpty())? "0" : jTextFieldDFE26PlannedStock.getText())
+                + Long.valueOf((jTextFieldHFE26PlannedStock.getText().isEmpty())? "0" : jTextFieldHFE26PlannedStock.getText());
+                break;
+            case 16:
+                safety = Long.valueOf((jTextFieldKFE16PlannedStock.getText().isEmpty())? "0" : jTextFieldKFE16PlannedStock.getText())
+                + Long.valueOf((jTextFieldDFE16PlannedStock.getText().isEmpty())? "0" : jTextFieldDFE16PlannedStock.getText())
+                + Long.valueOf((jTextFieldHFE16PlannedStock.getText().isEmpty())? "0" : jTextFieldHFE16PlannedStock.getText());
+                break;
+            case 17:
+                safety = Long.valueOf((jTextFieldKFE17PlannedStock.getText().isEmpty())? "0" : jTextFieldKFE17PlannedStock.getText())
+                + Long.valueOf((jTextFieldDFE17PlannedStock.getText().isEmpty())? "0" : jTextFieldDFE17PlannedStock.getText())
+                + Long.valueOf((jTextFieldHFE17PlannedStock.getText().isEmpty())? "0" : jTextFieldHFE17PlannedStock.getText());
+                break;
+            default :
+                Long.valueOf(getDFJTextFieldByProduct(hfFields, "PlannedStock").getText().equals("") ? "0" : getDFJTextFieldByProduct(hfFields, "PlannedStock").getText());
+        }
+        
         ExtendedArticle article = SharedInstance.getInstance().getArticleForId(Long.valueOf(productId));
         article.setPlannedProductionAmount(Long.valueOf(prodOrders));
-        article.setSafetyStock(Long.valueOf((getHFJTextFieldByProduct(hfFields, "PlannedStock").getText().equals("") ? "0" : getHFJTextFieldByProduct(hfFields, "PlannedStock").getText())));
+        article.setSafetyStock(safety);
         SharedInstance.getInstance().setExtendedArticleForId(article.getId(), article);
     }
 
