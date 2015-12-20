@@ -6233,34 +6233,33 @@
                                           <Component id="jLabelSalesChildren" min="-2" pref="111" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace type="separate" pref="46" max="32767" attributes="0"/>
+                                  <EmptySpace type="separate" pref="48" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jTextFieldSalesHQuantity" max="32767" attributes="0"/>
-                                      <Component id="jTextFieldSalesDQuantity" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jTextFieldSalesKQuantity" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <Component id="jLabelSalesQuantity" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                                      <Component id="jLabelSalesQuantity" pref="85" max="32767" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="jTextFieldSalesHQuantity" max="32767" attributes="0"/>
+                                          <Component id="jTextFieldSalesDQuantity" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="jTextFieldSalesKQuantity" alignment="0" pref="85" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace pref="36" max="32767" attributes="0"/>
-                                  <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="jLabelSalesPrice" min="-2" pref="61" max="-2" attributes="0"/>
-                                      <Component id="jTextFieldSalesKPrice" min="-2" pref="85" max="-2" attributes="0"/>
-                                      <Component id="jTextFieldSalesDPrice" min="-2" pref="85" max="-2" attributes="0"/>
-                                      <Component id="jTextFieldSalesHPrice" min="-2" pref="85" max="-2" attributes="0"/>
+                                  <EmptySpace pref="38" max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                      <Component id="jTextFieldSalesKPrice" pref="85" max="32767" attributes="0"/>
+                                      <Component id="jTextFieldSalesDPrice" pref="85" max="32767" attributes="0"/>
+                                      <Component id="jTextFieldSalesHPrice" pref="85" max="32767" attributes="0"/>
+                                      <Component id="jLabelSalesPrice" alignment="1" max="32767" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="36" max="32767" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jTextFieldSalesHPenalty" alignment="1" min="-2" pref="85" max="-2" attributes="0"/>
-                                      <Component id="jTextFieldSalesKPenalty" alignment="1" min="-2" pref="85" max="-2" attributes="0"/>
-                                      <Component id="jLabelSalesPenalty" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace pref="38" max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="jTextFieldSalesHPenalty" alignment="1" pref="85" max="32767" attributes="0"/>
+                                      <Component id="jTextFieldSalesKPenalty" alignment="1" pref="85" max="32767" attributes="0"/>
+                                      <Component id="jLabelSalesPenalty" alignment="1" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
-                          <EmptySpace pref="73" max="32767" attributes="0"/>
+                          <EmptySpace pref="81" max="32767" attributes="0"/>
                           <Component id="jButtonSalesReset" min="-2" pref="100" max="-2" attributes="0"/>
-                          <EmptySpace pref="793" max="32767" attributes="0"/>
+                          <EmptySpace pref="799" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -6295,7 +6294,7 @@
                               <Component id="jTextFieldSalesHPrice" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jTextFieldSalesHPenalty" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="491" max="32767" attributes="0"/>
+                          <EmptySpace pref="533" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -6339,17 +6338,23 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabelSalesQuantity">
                   <Properties>
+                    <Property name="horizontalAlignment" type="int" value="0"/>
                     <Property name="text" type="java.lang.String" value="Quantity"/>
+                    <Property name="horizontalTextPosition" type="int" value="0"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabelSalesPrice">
                   <Properties>
+                    <Property name="horizontalAlignment" type="int" value="0"/>
                     <Property name="text" type="java.lang.String" value="Price"/>
+                    <Property name="horizontalTextPosition" type="int" value="0"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabelSalesPenalty">
                   <Properties>
+                    <Property name="horizontalAlignment" type="int" value="0"/>
                     <Property name="text" type="java.lang.String" value="Penalty"/>
+                    <Property name="horizontalTextPosition" type="int" value="0"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextFieldSalesKPrice">
