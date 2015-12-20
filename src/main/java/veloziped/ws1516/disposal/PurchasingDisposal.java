@@ -171,7 +171,9 @@ public class PurchasingDisposal {
         } else if (fastDeliveryOk) {
             mode = OrderMode.FAST;
         } else {
-            errorArticles += (String.format("\n <ID: %d, %s>", article.getId(), article.getName()));
+            Locale locale = SharedInstance.getInstance().getCurrentLocale();
+            ResourceBundle i18n = Utils.getResourceBundle(locale.getLanguage(), locale.getCountry());
+            errorArticles += (String.format("\n <ID: %d, %s>", article.getId(), i18n.getString(article.getName())));
             mode = OrderMode.FAST;
         }
 
