@@ -5278,6 +5278,8 @@ public class MainUI extends javax.swing.JFrame {
         jButtonBackToWelcome.setText(i18n.getString("jButtonBack"));
         jButtonWeiter.setText(i18n.getString("jButtonWeiter"));
         jButtonImportXML.setText(i18n.getString("ImportFile"));
+        jButtonProdListApply.setText(i18n.getString("Apply"));
+        jButtonProdListReset.setText(i18n.getString("Reset"));
 
         //tabs
 //        jTabbedPan.setTitleAt(0, i18n.getString("ProductionForecast"));
@@ -5402,6 +5404,9 @@ public class MainUI extends javax.swing.JFrame {
         jLabelCostsTitleOldStockValue.setText(i18n.getString("OldStockValue"));
         jLabelCostsTitleWarehouseHolding.setText(i18n.getString("WarehouseHolding"));
         jLabelCostsTitleWarehouse.setText(i18n.getString("Warehouse"));
+        
+        jLabelProdListIterationOne.setText(i18n.getString("IterationOne"));
+        jLabelProdListIterationTwo.setText(i18n.getString("IterationTwo"));
     }
 
     private void setPeriodLabels() {
