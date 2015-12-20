@@ -140,14 +140,6 @@ public class MainUI extends javax.swing.JFrame {
 
         SharedInstance.getInstance()
                 .setDefaultValues();
-        
-        
-        jLabelCostsTitleLabor.setVisible(false);
-        jLabelCostsTitleLeerlauf.setVisible(false);
-        jLabelCostsTitleMachine.setVisible(false);
-        jLabelCostsTitleMaterial.setVisible(false);
-        jLabelCostsLaborCosts.setVisible(false);
-        
     }
 
     private void setEnabledTabs(boolean value) {
@@ -1307,7 +1299,7 @@ public class MainUI extends javax.swing.JFrame {
                     .addGroup(jPanelKFLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jLabelKFSalesOrders, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 141, Short.MAX_VALUE)
                 .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelKFLayout.createSequentialGroup()
                         .addComponent(jLabelKFPlannedStock, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1329,7 +1321,7 @@ public class MainUI extends javax.swing.JFrame {
                         .addComponent(jTextFieldKFE18PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
                         .addComponent(jTextFieldKFE13PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(jTextFieldKFE7PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 143, Short.MAX_VALUE)
                 .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jTextFieldKFP1StockEndOfPeriod, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -1349,7 +1341,7 @@ public class MainUI extends javax.swing.JFrame {
                         .addComponent(jTextFieldKFE13StockEndOfPeriod, javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(jTextFieldKFE7StockEndOfPeriod, javax.swing.GroupLayout.Alignment.TRAILING))
                     .addComponent(jLabelKFStockEndOfPeriod, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 346, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 142, Short.MAX_VALUE)
                 .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jTextFieldKFP1OrdersInQueque, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -1369,7 +1361,7 @@ public class MainUI extends javax.swing.JFrame {
                         .addComponent(jTextFieldKFE13OrdersInQueque, javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(jTextFieldKFE7OrdersInQueque, javax.swing.GroupLayout.Alignment.TRAILING))
                     .addComponent(jLabelKFOrdersInQueue, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 346, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 142, Short.MAX_VALUE)
                 .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanelKFLayout.createSequentialGroup()
@@ -1392,7 +1384,7 @@ public class MainUI extends javax.swing.JFrame {
                             .addComponent(jTextFieldKFE13WorkInProgress, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jTextFieldKFE7WorkInProgress, javax.swing.GroupLayout.Alignment.TRAILING)))
                     .addComponent(jLabelKFWorkInProgress, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 141, Short.MAX_VALUE)
                 .addGroup(jPanelKFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabelKFProductionOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldKFP1ProductionOrders, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2141,7 +2133,7 @@ public class MainUI extends javax.swing.JFrame {
                     .addGroup(jPanelDFLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jLabelDFSalesOrders, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 141, Short.MAX_VALUE)
                 .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelDFLayout.createSequentialGroup()
                         .addComponent(jLabelDFPlannedStock, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2163,7 +2155,7 @@ public class MainUI extends javax.swing.JFrame {
                         .addComponent(jTextFieldDFE19PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
                         .addComponent(jTextFieldDFE14PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(jTextFieldDFE8PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 143, Short.MAX_VALUE)
                 .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jTextFieldDFP2StockEndOfPeriod, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -2183,7 +2175,7 @@ public class MainUI extends javax.swing.JFrame {
                         .addComponent(jTextFieldDFE14StockEndOfPeriod, javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(jTextFieldDFE8StockEndOfPeriod, javax.swing.GroupLayout.Alignment.TRAILING))
                     .addComponent(jLabelDFStockEndOfPeriod, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 346, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 142, Short.MAX_VALUE)
                 .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jTextFieldDFP2OrdersInQueque, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -2203,7 +2195,7 @@ public class MainUI extends javax.swing.JFrame {
                         .addComponent(jTextFieldDFE14OrdersInQueque, javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(jTextFieldDFE8OrdersInQueque, javax.swing.GroupLayout.Alignment.TRAILING))
                     .addComponent(jLabelDFOrdersInQueue, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 346, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 142, Short.MAX_VALUE)
                 .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanelDFLayout.createSequentialGroup()
@@ -2226,7 +2218,7 @@ public class MainUI extends javax.swing.JFrame {
                             .addComponent(jTextFieldDFE14WorkInProgress, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jTextFieldDFE8WorkInProgress, javax.swing.GroupLayout.Alignment.TRAILING)))
                     .addComponent(jLabelDFWorkInProgress, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 141, Short.MAX_VALUE)
                 .addGroup(jPanelDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabelDFProductionOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldDFP2ProductionOrders, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2974,7 +2966,7 @@ public class MainUI extends javax.swing.JFrame {
                     .addGroup(jPanelHFLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jLabelHFSalesOrders, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 140, Short.MAX_VALUE)
                 .addGroup(jPanelHFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelHFLayout.createSequentialGroup()
                         .addComponent(jLabelHFPlannedStock, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2996,7 +2988,7 @@ public class MainUI extends javax.swing.JFrame {
                         .addComponent(jTextFieldHFE20PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
                         .addComponent(jTextFieldHFE15PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(jTextFieldHFE9PlannedStock, javax.swing.GroupLayout.Alignment.TRAILING)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 473, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 143, Short.MAX_VALUE)
                 .addGroup(jPanelHFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jTextFieldHFP3StockEndOfPeriod, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelHFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -3016,7 +3008,7 @@ public class MainUI extends javax.swing.JFrame {
                         .addComponent(jTextFieldHFE15StockEndOfPeriod, javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(jTextFieldHFE9StockEndOfPeriod, javax.swing.GroupLayout.Alignment.TRAILING))
                     .addComponent(jLabelHFStockEndOfPeriod, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 142, Short.MAX_VALUE)
                 .addGroup(jPanelHFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jTextFieldHFP3OrdersInQueque, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelHFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -3036,7 +3028,7 @@ public class MainUI extends javax.swing.JFrame {
                         .addComponent(jTextFieldHFE15OrdersInQueque, javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(jTextFieldHFE9OrdersInQueque, javax.swing.GroupLayout.Alignment.TRAILING))
                     .addComponent(jLabelHFOrdersInQueue, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 141, Short.MAX_VALUE)
                 .addGroup(jPanelHFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanelHFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanelHFLayout.createSequentialGroup()
@@ -3059,7 +3051,7 @@ public class MainUI extends javax.swing.JFrame {
                             .addComponent(jTextFieldHFE15WorkInProgress, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jTextFieldHFE9WorkInProgress, javax.swing.GroupLayout.Alignment.TRAILING)))
                     .addComponent(jLabelHFWorkInProgress, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 143, Short.MAX_VALUE)
                 .addGroup(jPanelHFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabelHFProductionOrders, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldHFP3ProductionOrders, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3317,7 +3309,7 @@ public class MainUI extends javax.swing.JFrame {
         jPanelWorkloadPlanning.setLayout(jPanelWorkloadPlanningLayout);
         jPanelWorkloadPlanningLayout.setHorizontalGroup(
             jPanelWorkloadPlanningLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1551, Short.MAX_VALUE)
+            .addGap(0, 1469, Short.MAX_VALUE)
             .addGroup(jPanelWorkloadPlanningLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelWorkloadPlanningLayout.createSequentialGroup()
                     .addContainerGap()
@@ -3326,7 +3318,7 @@ public class MainUI extends javax.swing.JFrame {
         );
         jPanelWorkloadPlanningLayout.setVerticalGroup(
             jPanelWorkloadPlanningLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 740, Short.MAX_VALUE)
+            .addGap(0, 723, Short.MAX_VALUE)
             .addGroup(jPanelWorkloadPlanningLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelWorkloadPlanningLayout.createSequentialGroup()
                     .addContainerGap()
@@ -3372,7 +3364,7 @@ public class MainUI extends javax.swing.JFrame {
         jPanelPurchasingDisposition.setLayout(jPanelPurchasingDispositionLayout);
         jPanelPurchasingDispositionLayout.setHorizontalGroup(
             jPanelPurchasingDispositionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1551, Short.MAX_VALUE)
+            .addGap(0, 1469, Short.MAX_VALUE)
             .addGroup(jPanelPurchasingDispositionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelPurchasingDispositionLayout.createSequentialGroup()
                     .addContainerGap()
@@ -3381,7 +3373,7 @@ public class MainUI extends javax.swing.JFrame {
         );
         jPanelPurchasingDispositionLayout.setVerticalGroup(
             jPanelPurchasingDispositionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 740, Short.MAX_VALUE)
+            .addGap(0, 723, Short.MAX_VALUE)
             .addGroup(jPanelPurchasingDispositionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelPurchasingDispositionLayout.createSequentialGroup()
                     .addContainerGap()
@@ -3672,7 +3664,6 @@ public class MainUI extends javax.swing.JFrame {
 
         jTabbedPan.addTab("Sales", jPanelSales);
 
-        jLabelCostsTitleWarehouse.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabelCostsTitleWarehouse.setText("Warehouse");
 
         jLabelCostsTitleOldStockValue.setText("OldStockValue");

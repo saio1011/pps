@@ -575,7 +575,7 @@
                                               <Component id="jLabelKFSalesOrders" min="-2" pref="80" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <EmptySpace max="32767" attributes="0"/>
+                                      <EmptySpace pref="141" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jLabelKFPlannedStock" min="-2" pref="78" max="-2" attributes="0"/>
@@ -603,7 +603,7 @@
                                               <Component id="jTextFieldKFE7PlannedStock" alignment="1" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <EmptySpace max="32767" attributes="0"/>
+                                      <EmptySpace pref="143" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jTextFieldKFP1StockEndOfPeriod" alignment="1" min="-2" pref="50" max="-2" attributes="0"/>
                                           <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
@@ -629,7 +629,7 @@
                                           </Group>
                                           <Component id="jLabelKFStockEndOfPeriod" alignment="1" min="-2" pref="80" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="346" max="32767" attributes="0"/>
+                                      <EmptySpace pref="142" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jTextFieldKFP1OrdersInQueque" alignment="1" min="-2" pref="48" max="-2" attributes="0"/>
                                           <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
@@ -655,7 +655,7 @@
                                           </Group>
                                           <Component id="jLabelKFOrdersInQueue" alignment="1" min="-2" pref="80" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="346" max="32767" attributes="0"/>
+                                      <EmptySpace pref="142" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="1" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" attributes="0">
@@ -686,7 +686,7 @@
                                           </Group>
                                           <Component id="jLabelKFWorkInProgress" min="-2" pref="65" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace max="32767" attributes="0"/>
+                                      <EmptySpace pref="141" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jLabelKFProductionOrders" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="jTextFieldKFP1ProductionOrders" alignment="1" min="-2" pref="50" max="-2" attributes="0"/>
@@ -2328,7 +2328,7 @@
                                               <Component id="jLabelDFSalesOrders" min="-2" pref="80" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <EmptySpace max="32767" attributes="0"/>
+                                      <EmptySpace pref="141" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jLabelDFPlannedStock" min="-2" pref="78" max="-2" attributes="0"/>
@@ -2356,7 +2356,7 @@
                                               <Component id="jTextFieldDFE8PlannedStock" alignment="1" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <EmptySpace max="32767" attributes="0"/>
+                                      <EmptySpace pref="143" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jTextFieldDFP2StockEndOfPeriod" alignment="1" min="-2" pref="50" max="-2" attributes="0"/>
                                           <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
@@ -2382,7 +2382,7 @@
                                           </Group>
                                           <Component id="jLabelDFStockEndOfPeriod" alignment="1" min="-2" pref="80" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="346" max="32767" attributes="0"/>
+                                      <EmptySpace pref="142" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jTextFieldDFP2OrdersInQueque" alignment="1" min="-2" pref="48" max="-2" attributes="0"/>
                                           <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
@@ -2408,7 +2408,7 @@
                                           </Group>
                                           <Component id="jLabelDFOrdersInQueue" alignment="1" min="-2" pref="80" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="346" max="32767" attributes="0"/>
+                                      <EmptySpace pref="142" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="1" attributes="0">
                                           <Group type="103" alignment="1" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="0" attributes="0">
@@ -2439,7 +2439,7 @@
                                           </Group>
                                           <Component id="jLabelDFWorkInProgress" alignment="1" min="-2" pref="65" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace max="32767" attributes="0"/>
+                                      <EmptySpace pref="141" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jLabelDFProductionOrders" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="jTextFieldDFP2ProductionOrders" alignment="1" min="-2" pref="50" max="-2" attributes="0"/>
@@ -4092,7 +4092,7 @@
                                               <Component id="jLabelHFSalesOrders" min="-2" pref="80" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <EmptySpace max="32767" attributes="0"/>
+                                      <EmptySpace pref="140" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jLabelHFPlannedStock" min="-2" pref="78" max="-2" attributes="0"/>
@@ -4120,7 +4120,7 @@
                                               <Component id="jTextFieldHFE9PlannedStock" alignment="1" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <EmptySpace pref="473" max="32767" attributes="0"/>
+                                      <EmptySpace pref="143" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jTextFieldHFP3StockEndOfPeriod" alignment="1" min="-2" pref="50" max="-2" attributes="0"/>
                                           <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
@@ -4146,7 +4146,7 @@
                                           </Group>
                                           <Component id="jLabelHFStockEndOfPeriod" alignment="1" min="-2" pref="80" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace max="32767" attributes="0"/>
+                                      <EmptySpace pref="142" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jTextFieldHFP3OrdersInQueque" alignment="1" min="-2" pref="48" max="-2" attributes="0"/>
                                           <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
@@ -4172,7 +4172,7 @@
                                           </Group>
                                           <Component id="jLabelHFOrdersInQueue" alignment="1" min="-2" pref="80" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace max="32767" attributes="0"/>
+                                      <EmptySpace pref="141" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="1" attributes="0">
                                           <Group type="103" alignment="1" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="0" attributes="0">
@@ -4203,7 +4203,7 @@
                                           </Group>
                                           <Component id="jLabelHFWorkInProgress" alignment="1" min="-2" pref="65" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace max="32767" attributes="0"/>
+                                      <EmptySpace pref="143" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jLabelHFProductionOrders" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="jTextFieldHFP3ProductionOrders" alignment="1" min="-2" pref="50" max="-2" attributes="0"/>
@@ -5733,7 +5733,7 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="1551" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="1469" max="32767" attributes="0"/>
                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
@@ -5745,7 +5745,7 @@
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="740" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="723" max="32767" attributes="0"/>
                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
@@ -5841,7 +5841,7 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="1551" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="1469" max="32767" attributes="0"/>
                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
@@ -5853,7 +5853,7 @@
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="740" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="723" max="32767" attributes="0"/>
                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
@@ -6506,9 +6506,6 @@
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="jLabelCostsTitleWarehouse">
                   <Properties>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Tahoma" size="11" style="1"/>
-                    </Property>
                     <Property name="text" type="java.lang.String" value="Warehouse"/>
                   </Properties>
                 </Component>
