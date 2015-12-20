@@ -1552,6 +1552,9 @@
                                 <Property name="horizontalAlignment" type="int" value="4"/>
                                 <Property name="name" type="java.lang.String" value="jTextFieldKFP1PlannedStock" noResource="true"/>
                               </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldKFP1PlannedStockActionPerformed"/>
+                              </Events>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new IntegerField(&quot;&quot;)"/>
                               </AuxValues>
@@ -6236,11 +6239,9 @@
                                   <EmptySpace type="separate" pref="48" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                       <Component id="jLabelSalesQuantity" pref="85" max="32767" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="jTextFieldSalesHQuantity" max="32767" attributes="0"/>
-                                          <Component id="jTextFieldSalesDQuantity" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="jTextFieldSalesKQuantity" alignment="0" pref="85" max="32767" attributes="0"/>
-                                      </Group>
+                                      <Component id="jTextFieldSalesHQuantity" max="32767" attributes="0"/>
+                                      <Component id="jTextFieldSalesDQuantity" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jTextFieldSalesKQuantity" alignment="0" pref="85" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace pref="38" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="1" max="-2" attributes="0">

@@ -72,8 +72,7 @@ public class ExtendedArticle extends Article implements Comparable<ExtendedArtic
         this.stockChange = 0;
         this.newStock = super.amount;
         this.newStockValue = super.stockvalue;
-        this.safetyStock = super.amount;
-        //remove 100 value in release
+        this.safetyStock = 0;
         this.plannedProductionAmount = 0;
         this.additionalAmount = 0;
         this.additionalAmountInWork = 0;

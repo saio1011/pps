@@ -550,6 +550,7 @@ public class SharedInstance {
             if (incoming != null) {
                 change += incoming.getAmount();
             }
+            System.out.println(change + " + " + (article.getSafetyStock() - article.getAmount()));
             //Zuwachs dazurechnen
             change += (article.getSafetyStock() - article.getAmount());
 
@@ -558,11 +559,13 @@ public class SharedInstance {
             article.setNewStockValue(article.getPrice() * article.getNewStock());
 
             double stockChangePct = 0.0;
-            stockChangePct = (double) article.getAmount() / article.getNewStock();
+            stockChangePct = (double) article.getNewStock() / ((article.getAmount() > 0)? article.getAmount() : 1);
             if (stockChangePct < 1) {
-                article.setStockChangePct(((double) 1 - stockChangePct) * 100);
+                article.setStockChangePct(((double) 1 - stockChangePct) * -100);
             } else if (stockChangePct > 1) {
-                article.setStockChangePct((stockChangePct - 1) * -100);
+                article.setStockChangePct((stockChangePct - 1) * 100);
+            } else {
+                article.setStockChangePct(-100); 
             }
 
             this.setExtendedArticleForId(article.getId(), article);
