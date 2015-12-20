@@ -2041,6 +2041,7 @@
                                 <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                   <Dimension value="[60, 16]"/>
                                 </Property>
+                                <Property name="name" type="java.lang.String" value="jLabelKFE26OrdersInQueque" noResource="true"/>
                                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                   <Dimension value="[60, 16]"/>
                                 </Property>
@@ -2055,6 +2056,7 @@
                                 <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                   <Dimension value="[60, 16]"/>
                                 </Property>
+                                <Property name="name" type="java.lang.String" value="jLabelKFE51OrdersInQueque" noResource="true"/>
                                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                   <Dimension value="[60, 16]"/>
                                 </Property>
@@ -2069,6 +2071,7 @@
                                 <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                   <Dimension value="[60, 16]"/>
                                 </Property>
+                                <Property name="name" type="java.lang.String" value="jLabelKFE16OrdersInQueque" noResource="true"/>
                                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                   <Dimension value="[60, 16]"/>
                                 </Property>
@@ -2083,6 +2086,7 @@
                                 <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                   <Dimension value="[60, 16]"/>
                                 </Property>
+                                <Property name="name" type="java.lang.String" value="jLabelKFE17OrdersInQueque" noResource="true"/>
                                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                   <Dimension value="[60, 16]"/>
                                 </Property>
@@ -2097,6 +2101,7 @@
                                 <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                   <Dimension value="[60, 16]"/>
                                 </Property>
+                                <Property name="name" type="java.lang.String" value="jLabelKFE50OrdersInQueque" noResource="true"/>
                                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                   <Dimension value="[60, 16]"/>
                                 </Property>
@@ -2111,6 +2116,7 @@
                                 <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                   <Dimension value="[60, 16]"/>
                                 </Property>
+                                <Property name="name" type="java.lang.String" value="jLabelKFE4OrdersInQueque" noResource="true"/>
                                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                   <Dimension value="[60, 16]"/>
                                 </Property>
@@ -2125,6 +2131,7 @@
                                 <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                   <Dimension value="[60, 16]"/>
                                 </Property>
+                                <Property name="name" type="java.lang.String" value="jLabelKFE10OrdersInQueque" noResource="true"/>
                                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                   <Dimension value="[60, 16]"/>
                                 </Property>
@@ -2139,6 +2146,7 @@
                                 <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                   <Dimension value="[60, 16]"/>
                                 </Property>
+                                <Property name="name" type="java.lang.String" value="jLabelKFE49OrdersInQueque" noResource="true"/>
                                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                   <Dimension value="[60, 16]"/>
                                 </Property>
@@ -2153,6 +2161,7 @@
                                 <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                   <Dimension value="[60, 16]"/>
                                 </Property>
+                                <Property name="name" type="java.lang.String" value="jLabelKFE7OrdersInQueque" noResource="true"/>
                                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                   <Dimension value="[60, 16]"/>
                                 </Property>
@@ -2167,6 +2176,7 @@
                                 <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                   <Dimension value="[60, 16]"/>
                                 </Property>
+                                <Property name="name" type="java.lang.String" value="jLabelKFE13OrdersInQueque" noResource="true"/>
                                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                   <Dimension value="[60, 16]"/>
                                 </Property>
@@ -2181,6 +2191,7 @@
                                 <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                   <Dimension value="[60, 16]"/>
                                 </Property>
+                                <Property name="name" type="java.lang.String" value="jLabelKFE18OrdersInQueque" noResource="true"/>
                                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                   <Dimension value="[60, 16]"/>
                                 </Property>
