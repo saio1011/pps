@@ -559,6 +559,12 @@ public class MainUI extends javax.swing.JFrame {
         jTableEProdList = new javax.swing.JTable();
         jButtonMoveDown = new javax.swing.JButton();
         jButtonMoveUp = new javax.swing.JButton();
+        jButtonProdListReset = new javax.swing.JButton();
+        jButtonProdListApply = new javax.swing.JButton();
+        jLabelProdListIterationOne = new javax.swing.JLabel();
+        jLabelProdListIterationTwo = new javax.swing.JLabel();
+        jTextFieldProdListIterationOne = new IntegerField("100");
+        jTextFieldProdListIterationTwo = new IntegerField("150");
         jPanelSales = new javax.swing.JPanel();
         jLabelSalesChildren = new javax.swing.JLabel();
         jLabelSalesWomen = new javax.swing.JLabel();
@@ -3296,7 +3302,6 @@ public class MainUI extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jTableWorkloadPlanning.setShowGrid(false);
         jTableWorkloadPlanning.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(jTableWorkloadPlanning);
 
@@ -3473,6 +3478,30 @@ public class MainUI extends javax.swing.JFrame {
             }
         });
 
+        jButtonProdListReset.setText("Reset");
+        jButtonProdListReset.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonProdListResetActionPerformed(evt);
+            }
+        });
+
+        jButtonProdListApply.setText("Apply");
+        jButtonProdListApply.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonProdListApplyActionPerformed(evt);
+            }
+        });
+
+        jLabelProdListIterationOne.setText("Iteration One");
+
+        jLabelProdListIterationTwo.setText("Iteration Two");
+
+        jTextFieldProdListIterationTwo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldProdListIterationTwoActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanelEProdListLayout = new javax.swing.GroupLayout(jPanelEProdList);
         jPanelEProdList.setLayout(jPanelEProdListLayout);
         jPanelEProdListLayout.setHorizontalGroup(
@@ -3481,8 +3510,20 @@ public class MainUI extends javax.swing.JFrame {
                 .addGap(310, 310, 310)
                 .addGroup(jPanelEProdListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButtonMoveDown, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButtonMoveUp, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(1079, Short.MAX_VALUE))
+                    .addComponent(jButtonMoveUp, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonProdListReset, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanelEProdListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButtonProdListApply, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanelEProdListLayout.createSequentialGroup()
+                        .addComponent(jLabelProdListIterationOne, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jTextFieldProdListIterationOne, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanelEProdListLayout.createSequentialGroup()
+                        .addComponent(jLabelProdListIterationTwo, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jTextFieldProdListIterationTwo, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(922, Short.MAX_VALUE))
             .addGroup(jPanelEProdListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelEProdListLayout.createSequentialGroup()
                     .addContainerGap()
@@ -3493,10 +3534,20 @@ public class MainUI extends javax.swing.JFrame {
             jPanelEProdListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelEProdListLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButtonMoveUp)
+                .addGroup(jPanelEProdListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonMoveUp)
+                    .addComponent(jLabelProdListIterationOne)
+                    .addComponent(jTextFieldProdListIterationOne, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButtonMoveDown)
-                .addContainerGap(653, Short.MAX_VALUE))
+                .addGroup(jPanelEProdListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonMoveDown)
+                    .addComponent(jLabelProdListIterationTwo)
+                    .addComponent(jTextFieldProdListIterationTwo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanelEProdListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonProdListReset)
+                    .addComponent(jButtonProdListApply))
+                .addContainerGap(643, Short.MAX_VALUE))
             .addGroup(jPanelEProdListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelEProdListLayout.createSequentialGroup()
                     .addContainerGap()
@@ -4467,7 +4518,7 @@ public class MainUI extends javax.swing.JFrame {
         Map<String, ExtendedArticle> articles = SharedInstance.getInstance().calcNewArticleStockValue();
 
         //production list order
-        List<Production> productionList = SharedInstance.getInstance().calculateProductionList();
+        List<Production> productionList = SharedInstance.getInstance().calculateProductionList(100, 150);
 
         this.reFillWorkloadTable();
         this.reFillPurchasingDisposalTable();
@@ -4559,6 +4610,24 @@ public class MainUI extends javax.swing.JFrame {
         this.importXml();
 
     }//GEN-LAST:event_jButtonImportXMLActionPerformed
+
+    private void jButtonProdListResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonProdListResetActionPerformed
+        SharedInstance.getInstance().resetProductionListCalculated();
+        jTextFieldProdListIterationOne.setText("100");
+        jTextFieldProdListIterationTwo.setText("150");
+        this.reFillEProdList();
+    }//GEN-LAST:event_jButtonProdListResetActionPerformed
+
+    private void jButtonProdListApplyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonProdListApplyActionPerformed
+        long it1 = Long.valueOf(jTextFieldProdListIterationOne.getText());
+        long it2 = Long.valueOf(jTextFieldProdListIterationTwo.getText());
+        SharedInstance.getInstance().calculateProductionList(it1, it2);
+        this.reFillEProdList();
+    }//GEN-LAST:event_jButtonProdListApplyActionPerformed
+
+    private void jTextFieldProdListIterationTwoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldProdListIterationTwoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldProdListIterationTwoActionPerformed
 
     private void loadWelcomeMessage() {
         LoadHelpFile wel = new LoadHelpFile("file/Welcome.txt");
@@ -4706,6 +4775,8 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JButton jButtonImportXML;
     private javax.swing.JButton jButtonMoveDown;
     private javax.swing.JButton jButtonMoveUp;
+    private javax.swing.JButton jButtonProdListApply;
+    private javax.swing.JButton jButtonProdListReset;
     private javax.swing.JButton jButtonSalesReset;
     private javax.swing.JButton jButtonWeiter;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItemBulgarian;
@@ -4870,6 +4941,8 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelPeriodN2PF;
     private javax.swing.JLabel jLabelPeriodN3PF;
     private javax.swing.JLabel jLabelPeriodNPF;
+    private javax.swing.JLabel jLabelProdListIterationOne;
+    private javax.swing.JLabel jLabelProdListIterationTwo;
     private javax.swing.JLabel jLabelSalesChildren;
     private javax.swing.JLabel jLabelSalesMen;
     private javax.swing.JLabel jLabelSalesPenalty;
@@ -5160,6 +5233,8 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldPFPeriodN4DF;
     private javax.swing.JTextField jTextFieldPFPeriodN4HF;
     private javax.swing.JTextField jTextFieldPFPeriodN4KF;
+    private javax.swing.JTextField jTextFieldProdListIterationOne;
+    private javax.swing.JTextField jTextFieldProdListIterationTwo;
     private javax.swing.JTextField jTextFieldSalesDPenalty;
     private javax.swing.JTextField jTextFieldSalesDPrice;
     private javax.swing.JTextField jTextFieldSalesDQuantity;

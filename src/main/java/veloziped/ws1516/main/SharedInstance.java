@@ -78,6 +78,7 @@ public class SharedInstance {
     private List<Item> sellDirect;
     private Map<String, WorkloadResult> workloadResults;
     private List<Production> productionListCalculated;
+    private List<Production> productionListForReset;
     private Locale currentLocale = Locale.getDefault();
 
     private Result result;
@@ -602,10 +603,10 @@ public class SharedInstance {
         2,
         3};
 
-    public List<Production> calculateProductionList() {
+    public List<Production> calculateProductionList(long iterationOne, long iterationTwo) {
         List<Production> pList = new ArrayList<>();
-        int Interation_One = 100;
-        int Interation_Two = 150;
+        long Interation_One = iterationOne;
+        long Interation_Two = iterationTwo;
 
         Cloner cloner = new Cloner();
         Map<String, ExtendedArticle> articles = cloner.deepClone(this.extendedArticles);
@@ -613,10 +614,11 @@ public class SharedInstance {
         for (int i = 0; i < this.productionListOrder.length; i++) {
             ExtendedArticle article = articles.get(String.valueOf(this.productionListOrder[i]));
 
-            int Interation_One_Use = Interation_One;
+            long Interation_One_Use = Interation_One;
 
             if (article.getId() == 16 || article.getId() == 17 || article.getId() == 26) {
-                Interation_One_Use = 150;
+                Interation_One_Use = 10*(Math.round(Interation_One/10));
+                System.out.println(Interation_One_Use);
             }
 
             if (article.getPlannedProductionAmount() > Interation_One_Use) {
@@ -630,17 +632,21 @@ public class SharedInstance {
                 Production prod = new Production();
                 prod.setArticle(article.getId());
                 prod.setQuantity(article.getPlannedProductionAmount());
+                article.setPlannedProductionAmount(0);
                 pList.add(prod);
             }
+            
+            articles.put(String.valueOf(article.getId()), article);
         }
 
         for (int i = 0; i < this.productionListOrder.length; i++) {
             ExtendedArticle article = articles.get(String.valueOf(this.productionListOrder[i]));
 
-            int Interation_Two_Use = Interation_Two;
+            long Interation_Two_Use = Interation_Two;
 
             if (article.getId() == 16 || article.getId() == 17 || article.getId() == 26) {
-                Interation_Two_Use = 220;
+                Interation_Two_Use =  10*(Math.round(Interation_Two/10));
+                System.out.println(Interation_Two_Use);
             }
 
             if (article.getPlannedProductionAmount() > Interation_Two_Use) {
@@ -654,8 +660,11 @@ public class SharedInstance {
                 Production prod = new Production();
                 prod.setArticle(article.getId());
                 prod.setQuantity(article.getPlannedProductionAmount());
+                article.setPlannedProductionAmount(0);
                 pList.add(prod);
             }
+            
+            articles.put(String.valueOf(article.getId()), article);
         }
 
         for (int i = 0; i < this.productionListOrder.length; i++) {
@@ -670,8 +679,13 @@ public class SharedInstance {
         }
 
         this.productionListCalculated = pList;
+        this.productionListForReset = cloner.deepClone(pList);
 
         return this.productionListCalculated;
+    }
+    
+    public void resetProductionListCalculated() {
+        this.calculateProductionList(100, 150);
     }
 
     public static final <T> void swap(T[] a, int i, int j) {
