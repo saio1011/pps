@@ -4126,9 +4126,6 @@ public class MainUI extends javax.swing.JFrame {
         Map<JTextField, String> kfMapFieldsWithKeys = getMapFieldsWithKeys(getKFJTextFields());
         fillTextFileds(kfMapFieldsWithKeys, extArticles);
 
-//        fillPlannedWarehouseStockInHouseProduction(dfMapFieldsWithKeys);
-//        fillPlannedWarehouseStockInHouseProduction(hfMapFieldsWithKeys);
-//        fillPlannedWarehouseStockInHouseProduction(kfMapFieldsWithKeys);
     }
 
     /* public void fillTextFileds(Map<JTextField, String> mapFieldsWithKeys, Map<String, ExtendedArticle> extArticles) {
@@ -4277,13 +4274,13 @@ public class MainUI extends javax.swing.JFrame {
         }
     }
 
-//    private void fillPlannedWarehouseStockInHouseProduction(Map<JTextField, String> mapFieldsWithKeys) {
-//        for (Map.Entry<JTextField, String> entry : mapFieldsWithKeys.entrySet()) {
-//            if (entry.getKey().getName().endsWith("PlannedStock")) {
-//                entry.getKey().setText("50");
-//            }
-//        }
-//    }
+    private void fillPlannedWarehouseStockInHouseProduction(Map<JTextField, String> mapFieldsWithKeys) {
+        for (Map.Entry<JTextField, String> entry : mapFieldsWithKeys.entrySet()) {
+            if (entry.getKey().getName().endsWith("PlannedStock")) {
+                entry.getKey().setText("");
+            }
+        }
+    }
 
     public void setjTextFieldInHouseProductionEnabled(Map<JTextField, String> mapFieldsWithKeys, Boolean value) {
         for (Map.Entry<JTextField, String> entry : mapFieldsWithKeys.entrySet()) {
@@ -4419,6 +4416,15 @@ public class MainUI extends javax.swing.JFrame {
 
         jMenuItemImportFile.setEnabled(true);
         this.setEnabledTabs(false);
+        
+        //reset planned stock to zero
+        // only by back navigation
+        Map<JTextField, String> dfMapFieldsWithKeys = getMapFieldsWithKeys(getDFJTextFields());
+        Map<JTextField, String> hfMapFieldsWithKeys = getMapFieldsWithKeys(getHFJTextFields());
+        Map<JTextField, String> kfMapFieldsWithKeys = getMapFieldsWithKeys(getKFJTextFields());
+        fillPlannedWarehouseStockInHouseProduction(dfMapFieldsWithKeys);
+        fillPlannedWarehouseStockInHouseProduction(hfMapFieldsWithKeys);
+        fillPlannedWarehouseStockInHouseProduction(kfMapFieldsWithKeys);
     }//GEN-LAST:event_jButtonBackToWelcomeActionPerformed
 
     private void jButtonCalculateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCalculateActionPerformed
