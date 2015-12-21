@@ -126,4 +126,8 @@ public class Disposal {
         calculateWaitingLists(SharedInstance.getInstance().getWaitinglistWorkstations().getWorkplace());
         calculateOrdersInWork(SharedInstance.getInstance().getOrdersInWork().getWorkplace());
     }
+
+    public void calculateTimeNeeded() {
+               calculateWaitingLists(SharedInstance.getInstance().getWaitinglistWorkstations().getWorkplace());
+    }
 }

@@ -4244,7 +4244,6 @@ public class MainUI extends javax.swing.JFrame {
         //Vorbelegung Kinderfahrad
         Map<JTextField, String> kfMapFieldsWithKeys = getMapFieldsWithKeys(getKFJTextFields());
         fillTextFileds(kfMapFieldsWithKeys, extArticles);
-
     }
 
     /* public void fillTextFileds(Map<JTextField, String> mapFieldsWithKeys, Map<String, ExtendedArticle> extArticles) {
@@ -4576,7 +4575,11 @@ public class MainUI extends javax.swing.JFrame {
         Map<String, ExtendedWorkplace> extWork = SetupInstance.getInstance()
                 .generateExtendedWorkplaces(SharedInstance.getInstance().getIdleTimeCosts().getWorkplace());
         SharedInstance.getInstance().setExtendedWorkplaces(extWork);
-
+        
+        // hier werden die timeneeded Werten befüllt
+        Disposal disposal = new Disposal();
+        disposal.calculateTimeNeeded();
+        
         //worklaod
         Map<String, WorkloadResult> workloadResults = WorkloadPlanning.getInstance()
                 .calculateWorkload(SharedInstance.getInstance().getExtendedWorkplaces());
@@ -4599,7 +4602,7 @@ public class MainUI extends javax.swing.JFrame {
         plan.setPeriodN3(periodDetailN3);
         plan.setPeriodN4(periodDetailN4);
         SharedInstance.getInstance().setProductionPlan(plan);
-
+        
         //purchasing disposal
         List<Order> newOrders = PurchasingDisposal.getInstance().calculateOrders(
                 SharedInstance.getInstance().getExtendedArticles());
@@ -4620,7 +4623,6 @@ public class MainUI extends javax.swing.JFrame {
         Costs costs = new Costs();
         costs.calculateCosts();
         fillCostsLabelValues(costs);
-
                 
         jLabelCostsTitleLabor.setVisible(false);
         jLabelCostsTitleLeerlauf.setVisible(false);
