@@ -1,0 +1,6 @@
+Bienvenue chez VelozipedPPS,
+
+Merci de bien vouloir importer Result.xml du SC-simulateur et d’entrer 
+les données pronostiques. Veuillez ensuite cliquer sur „Continue“.
+
+En cas de questions, veuillez utiliser la fonction d’aide ou le manuel.
