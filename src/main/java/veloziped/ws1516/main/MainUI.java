@@ -4578,7 +4578,7 @@ public class MainUI extends javax.swing.JFrame {
         
         // hier werden die timeneeded Werten befüllt
         Disposal disposal = new Disposal();
-        disposal.calculateTimeNeeded();
+        disposal.calculateAdditionalAmountAndTime();
         
         //worklaod
         Map<String, WorkloadResult> workloadResults = WorkloadPlanning.getInstance()
