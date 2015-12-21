@@ -87,7 +87,7 @@ public class MainUI extends javax.swing.JFrame {
         this.jPanel2.setVisible(true);
         this.jPanel1.setVisible(false);
         jScrollPane5.setVisible(false);
-        this.loadWelcomeMessage();
+        this.loadWelcomeMessage(Locale.getDefault().getLanguage(), Locale.getDefault().getCountry());
 
         //set Language selected
         this.setSelectedLanguage(Locale.getDefault().getLanguage());
@@ -4381,8 +4381,16 @@ public class MainUI extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jButtonImportXMLActionPerformed
 
-    private void loadWelcomeMessage() {
-        LoadHelpFile wel = new LoadHelpFile("file/Welcome.txt");
+    private void loadWelcomeMessage(String lang, String country) {
+        String file = "file/Welcome.txt";
+        
+        if(lang.equals("en") && country.equals("US")){
+            file = "file/Welcome_en_US.txt";
+        }else if(lang.equals("de") && country.equals("DE")){
+            file = "file/Welcome_de_DE.txt";
+        }
+        
+        LoadHelpFile wel = new LoadHelpFile(file);
         jTextAreaWelcome.setText(wel.toString());
     }
     private void resetDirectSale() {
@@ -4985,6 +4993,8 @@ public class MainUI extends javax.swing.JFrame {
 
     //util methods
     public void changeLanguage(String lang, String country) {
+        this.loadWelcomeMessage(lang, country);
+        
         SharedInstance.getInstance().setCurrentLocale(new Locale(lang, country));
         ResourceBundle i18n = Utils.getResourceBundle(lang, country);
 
