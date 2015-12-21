@@ -122,12 +122,12 @@ public class Costs {
         this.estimatedStockValue = SharedInstance.twoDecimals(this.estimatedStockValue);
 
         if (this.estimatedStockValue > 0) {
-            double stockPct = this.oldStockValue / this.estimatedStockValue;
+            double stockPct = this.estimatedStockValue / this.oldStockValue;
 
             if (stockPct < 1) {
-                this.stockChangePct = SharedInstance.twoDecimals(((double) 1 - stockPct) * 100);
+                this.stockChangePct = SharedInstance.twoDecimals(((double) 1 - stockPct) * -100);
             } else if (stockPct > 1) {
-                this.stockChangePct = SharedInstance.twoDecimals((stockPct - 1) * -100);
+                this.stockChangePct = SharedInstance.twoDecimals((stockPct - 1) * 100);
             }
         }
     }
@@ -156,12 +156,12 @@ public class Costs {
         }
 
         if (this.warehouseHoldingCosts > 0) {
-            double holdingPct = SharedInstance.getInstance().getResult().getGeneral().getStoragecosts().getCurrent() / this.warehouseHoldingCosts;
-
+            double holdingPct =  this.warehouseHoldingCosts / SharedInstance.getInstance().getResult().getGeneral().getStoragecosts().getCurrent();
+            
             if (holdingPct < 1) {
-                this.warehouseHoldingPctChange = SharedInstance.twoDecimals(((double) 1 - holdingPct) * 100);
+                this.warehouseHoldingPctChange = SharedInstance.twoDecimals(((double) 1 - holdingPct) * -100);
             } else if (holdingPct > 1) {
-                this.warehouseHoldingPctChange = SharedInstance.twoDecimals((holdingPct - 1) * -100);
+                this.warehouseHoldingPctChange = SharedInstance.twoDecimals((holdingPct - 1) * 100);
             }
         }
     }

@@ -1,7 +1,96 @@
+Im Folgenden wird eine genaue Beschreibung abgegeben, wie VelozipedPPS zu funktioniert, in welcher Form die Eingabe abläuft, 
+wie die Berechnung stattfindet und wie man anschließend eine Ausgabe erhält, welche zur weiteren Planung benötigt wird.
 
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
+1. Eingabe
+Um eine Berechnung durchzuführen muss zuerst Results.xml der letzten Periode eingelesen werden. 
+Speichern Sie hierzu die Ergebnisse per XML aus SC-Simulator auf Ihrem Computer.
+Durch einen einfachen Klick auf den Button „Import File“ öffnet sich ein Fenster in welchem Sie die von Ihnen gespeicherte Resluts.xml 
+suchen können. Wenn Sie die Results.xml selektiert haben klicken Sie auf den Button „öffnen“ um die Datei in das Tool zu laden.
+
+Nun haben Sie die Ergebnisse der letzten Periode per XML in das Tool geladen und können diese auch an daran erkennen dass automatisch 
+die Namen für die nächsten Perioden ersetzt wurden.
 
 
-TODO write content
+2. Berechnung
+2.1 Prognose
+Nachdem Sie erfolgreich die Ergebnisse der letzten Periode in das Tool geladen haben, kann jetzt mit der eigentlichen Planung und Berechnung 
+für die nächst Periode begonnen werden. Hierzu geben Sie bitte zuerst die Prognosen für die nächsten Perioden in die dafür vorgesehenen Felder 
+unter dem Reiter ein und klicken Sie anschließend auf „Next“ unten rechts. 
+
+2.2 Lagerbestand
+Im nächsten Schritt können Sie nun den gewünschten Lagerbestand, welcher nach der zu planenden Periode erreicht werden soll, auch 
+Sicherheitsbestand genannt, für jedes Erzeugnis bestimmen, indem Sie den entsprechenden Wert in die dazugehörige Zelle unter dem Reiter 
+„Inhouse Production“ eingeben. Unter der „Inhouse Production“ können Sie auch noch zwischen den einzelnen Produkten „Kinderfahrrad“, 
+„Damenfahrrad“ und „Herrenfahrrad“ durchwechseln und die entsprechende Planung betrachten und verändern.
+
+2.3 Calculate
+Nach diesem Schritt klicken Sie bitte auf „calculate“ oben rechts um die Berechnung durchzuführen.
+
+2.4 Kapazitätsplanung
+Nehmen Sie Ihre Kapazitätsplanung unter dem Reiter „Workload Planing“ vor. Für Ihre gewählte Produktion wird bereits die optimale 
+Kapazitätsplanung errechnet und entsprechend angezeigt. Als geplante Rüstvorgänge für die nächste Periode werden die Rüstvorgänge aus 
+der Vorperiode übernommen. Falls Sie jedoch die Anzahl der Rüstvorgänge oder die geplanten Überstunde editieren wollen, 
+klicken Sie doppelt in die entsprechenden Zellen der Spalte „Last Cycle Times“ oder „Needed Capazity“ und passen Sie die Werte an. 
+
+2.5 Bestellungen
+Unter dem Punkt „Purchasing Planning“  finden Sie die aktuellen automatisch generierten Bestellungen die durchgeführt werden müssen. 
+Hier können Sie auch die zu bestellende Menge in der Spalte „Amount“ anpassen.
+
+2.6 Lagerbestand
+Unter dem Reiter „Stock“ finden Sie eine Auflistung Ihres aktuellen Lagerbestands vor.
+
+2.7 Produktionsliste
+Unter dem Reiter „Production List“  finden Sie eine optimierte Version der Produktionsliste, welche sich automatisch aus Ihren Eingabewerten 
+berechnet und sortiert hat. Falls Sie mit der Sortierung nicht zufrieden sind, können Sie die Reihenfolge durch die Buttons „Up“ und „Down“ 
+verschieben. Selektieren Sie hierzu einfach die entsprechende Position die sie verschieben wollen und drücken Sie den entsprechenden Button.
+
+2.8 Direktverkauf
+Im Reiter „Direct Sell“ können Sie noch Ihre Direktverkaufsoptionen verwalten und eintragen.
+
+
+3. Ausgabe
+Um eine XML-Eingabedatei für SC-Simulator zu generieren klicken Sie oben links auf „File“ und dann auf „Export“. 
+Anschließend öffnet sich ein Fenster ähnlich dem Öffnen-Dialog. Wählen Sie hier den Pfad an welcher Stelle Sie die Datei speichern möchten 
+und klicken Sie auf „Öffnen“. Jetzt öffnet sich der entsprechende Ordner, in welcher Ihre gespeicherte XML unter dem Namen „Input“ 
+vorzufinden sein müsste.
+
+
+4. Zusatzfunktionalitäten
+Im Folgenden werden Ihnen einige Zusatzfunktionalitäten erklärt, welche Ihnen VelozipedPPS bieten kann, um Ihre Planung noch besser zu 
+optimieren und an Ihre Wünsche anzupassen.
+
+4.1 Diskontierungsfaktor
+VelozipedPPS bietet die Möglichkeit, dass Bestellungen, welche knapp unter der Diskontmenge liegen, noch um den entsprechenden Fehlbetrag 
+ergänzt werden, um die Diskontmenge zu erreichen und einen entsprechenden Bonus zu erhalten. Die Voreinstellung liegt bei 10%, das bedeutet, 
+falls der Unterschied zwischen Bestellmenge und Diskontmenge weniger als 10% betragen, wird automatisch dieser Fehlbetrag ergänzt. Über das 
+Diskontelement in der oberen rechten Ecke können Sie die Prozentzahl Ihren Wünschen entsprechend justieren.
+
+4.2 Bestellpuffer
+VelozipedPPS bietet die Möglichkeit, die automatisch berechneten Bestellmengen um einen selbstfestgelegten Puffer zu erhöhen, um so auf 
+Prognoseschwankungen reagieren zu können.  Hierzu finden Sie in der oberen rechten Ecke das Pufferelement über welches Sie ganz einfach einen 
+Prozentsatz festlegen, welcher auf die Bestellung noch aufgeschlagen werden soll. 
+
+4.3 Optimistische/Pessimistische Bestellrechnung
+VelozipedPPS bietet die Möglichkeit Lagerzugänge und die Bestellvorgänge sowohl pessimistisch als auch optimistisch zu berechnen.  
+Da Normallieferungen mit einer Schwankung versehen sind und nicht zu 100% zum angegebenen Zeitpunkt ankommen, bietet VelozipedPPS dem Nutzer 
+einmal die Möglichkeit einmal durch die optimistische Bestellrechnung davon auszugehen, dass die Bestellungen früher kommen als gedacht. 
+Dies sich kann bei einer Lageroptimierungsstrategie als nützlich erweisen um den durchschnittlichen Lagerbestand unter der 250.000€ Schwelle 
+für ein zweites Lager zu halten.  
+Alternativ dazu bietet VelozipedPPS dem Nutzer die Möglichkeit der pessimistischen Bestellrechnung. Hierbei wird davon ausgegangen, 
+dass die Lieferzeit immer länger dauert und mit einer Lieferdauer gerechnet, welche zu 93% erreicht wird oder niedriger ist und entsprechend 
+die Bestellungen berechnet. Dies kann sich bei einer risikoscheuen Strategie als nützlich erweisen, um so zu bestellen, dass man gegebenenfalls 
+die Ware früher erhält, aber so gut wie nie später.  
+Um den entsprechenden Modus zu wählen klicken Sie auf „Settings“ und wählen Sie unter „Kalkulation mode“ den gewünschten Modus aus.
+
+4.4 Produktionsprogrammoptimierung
+Zur Optimierung des Produktionsprogramms unterteilt VelozipedPPS große Produktionsaufträge in mehrere kleine und teilt die Reihenfolge passend ein 
+ums so einen besseren Produktionsablauf durch mehrere Zyklen gewährleisten zu können. 
+
+
+5. Support
+Bei Fragen zu VelozipedPPS steht Ihnen das Team gerne jederzeit zur Verfügung. Schreiben Sie uns einfach und bequem eine E-Mail an:
+scma1113@hs-karlsruhe.de; 
+Wehe1013@hs-karlsruhe.de; 
+wuch1013@hs-karlsruhe.de; 
+saio1011@hs-karlsruhe.de; 
+varo1012@hs-karlsruhe.de 

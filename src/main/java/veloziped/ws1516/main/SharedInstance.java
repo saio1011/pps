@@ -78,6 +78,7 @@ public class SharedInstance {
     private List<Item> sellDirect;
     private Map<String, WorkloadResult> workloadResults;
     private List<Production> productionListCalculated;
+    private List<Production> productionListForReset;
     private Locale currentLocale = Locale.getDefault();
 
     private Result result;
@@ -461,16 +462,13 @@ public class SharedInstance {
 
         Item p1 = new Item();
         p1.setArticle(1);
-        p1.setQuantity(0);
-        //p1.setQuantity(this.getArticleForId((long)1).get);
+        p1.setQuantity(this.forecast.getPeriodN1().getProduct1());
         Item p2 = new Item();
         p2.setArticle(2);
-        p2.setQuantity(0);
-        //p2.setQuantity(this.getArticleForId((long)2).get);
+        p2.setQuantity(this.forecast.getPeriodN1().getProduct2());
         Item p3 = new Item();
         p3.setArticle(3);
-        p3.setQuantity(0);
-        //p3.setQuantity(this.getArticleForId((long)3).get);
+        p3.setQuantity(this.forecast.getPeriodN1().getProduct3());
         items.add(p1);
         items.add(p2);
         items.add(p3);
@@ -552,6 +550,7 @@ public class SharedInstance {
             if (incoming != null) {
                 change += incoming.getAmount();
             }
+            System.out.println(change + " + " + (article.getSafetyStock() - article.getAmount()));
             //Zuwachs dazurechnen
             change += (article.getSafetyStock() - article.getAmount());
 
@@ -560,11 +559,13 @@ public class SharedInstance {
             article.setNewStockValue(article.getPrice() * article.getNewStock());
 
             double stockChangePct = 0.0;
-            stockChangePct = (double) article.getAmount() / article.getNewStock();
+            stockChangePct = (double) article.getNewStock() / ((article.getAmount() > 0)? article.getAmount() : 1);
             if (stockChangePct < 1) {
-                article.setStockChangePct(((double) 1 - stockChangePct) * 100);
+                article.setStockChangePct(((double) 1 - stockChangePct) * -100);
             } else if (stockChangePct > 1) {
-                article.setStockChangePct((stockChangePct - 1) * -100);
+                article.setStockChangePct((stockChangePct - 1) * 100);
+            } else {
+                article.setStockChangePct(-100); 
             }
 
             this.setExtendedArticleForId(article.getId(), article);
@@ -592,23 +593,23 @@ public class SharedInstance {
         12,
         29,
         6,
+        16,
+        17,
         50,
         55,
         30,
-        16,
-        17,
+        26,
         51,
         56,
         31,
-        26,
         1,
         2,
         3};
 
-    public List<Production> calculateProductionList() {
+    public List<Production> calculateProductionList(long iterationOne, long iterationTwo) {
         List<Production> pList = new ArrayList<>();
-        int Interation_One = 100;
-        int Interation_Two = 150;
+        long Interation_One = iterationOne;
+        long Interation_Two = iterationTwo;
 
         Cloner cloner = new Cloner();
         Map<String, ExtendedArticle> articles = cloner.deepClone(this.extendedArticles);
@@ -616,10 +617,11 @@ public class SharedInstance {
         for (int i = 0; i < this.productionListOrder.length; i++) {
             ExtendedArticle article = articles.get(String.valueOf(this.productionListOrder[i]));
 
-            int Interation_One_Use = Interation_One;
+            long Interation_One_Use = Interation_One;
 
             if (article.getId() == 16 || article.getId() == 17 || article.getId() == 26) {
-                Interation_One_Use = 150;
+                Interation_One_Use = 10*(Math.round(Interation_One/10));
+                System.out.println(Interation_One_Use);
             }
 
             if (article.getPlannedProductionAmount() > Interation_One_Use) {
@@ -633,17 +635,21 @@ public class SharedInstance {
                 Production prod = new Production();
                 prod.setArticle(article.getId());
                 prod.setQuantity(article.getPlannedProductionAmount());
+                article.setPlannedProductionAmount(0);
                 pList.add(prod);
             }
+            
+            articles.put(String.valueOf(article.getId()), article);
         }
 
         for (int i = 0; i < this.productionListOrder.length; i++) {
             ExtendedArticle article = articles.get(String.valueOf(this.productionListOrder[i]));
 
-            int Interation_Two_Use = Interation_Two;
+            long Interation_Two_Use = Interation_Two;
 
             if (article.getId() == 16 || article.getId() == 17 || article.getId() == 26) {
-                Interation_Two_Use = 220;
+                Interation_Two_Use =  10*(Math.round(Interation_Two/10));
+                System.out.println(Interation_Two_Use);
             }
 
             if (article.getPlannedProductionAmount() > Interation_Two_Use) {
@@ -657,8 +663,11 @@ public class SharedInstance {
                 Production prod = new Production();
                 prod.setArticle(article.getId());
                 prod.setQuantity(article.getPlannedProductionAmount());
+                article.setPlannedProductionAmount(0);
                 pList.add(prod);
             }
+            
+            articles.put(String.valueOf(article.getId()), article);
         }
 
         for (int i = 0; i < this.productionListOrder.length; i++) {
@@ -673,8 +682,13 @@ public class SharedInstance {
         }
 
         this.productionListCalculated = pList;
+        this.productionListForReset = cloner.deepClone(pList);
 
         return this.productionListCalculated;
+    }
+    
+    public void resetProductionListCalculated() {
+        this.calculateProductionList(100, 150);
     }
 
     public static final <T> void swap(T[] a, int i, int j) {
