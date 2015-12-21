@@ -4623,7 +4623,7 @@ public class MainUI extends javax.swing.JFrame {
         Costs costs = new Costs();
         costs.calculateCosts();
         fillCostsLabelValues(costs);
-                
+        
         jLabelCostsTitleLabor.setVisible(false);
         jLabelCostsTitleLeerlauf.setVisible(false);
         jLabelCostsTitleMachine.setVisible(false);
