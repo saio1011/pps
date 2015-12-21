@@ -4710,7 +4710,7 @@ public class MainUI extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jButtonImportXMLActionPerformed
 
-<<<<<<< HEAD
+
     private void loadWelcomeMessage(String lang, String country) {
         String file = "file/Welcome.txt";
         
@@ -4718,10 +4718,14 @@ public class MainUI extends javax.swing.JFrame {
             file = "file/Welcome_en_US.txt";
         }else if(lang.equals("de") && country.equals("DE")){
             file = "file/Welcome_de_DE.txt";
+        }else if(lang.equals("ro") && country.equals("RO")){
+            file = "file/Welcome_ro_RO.txt";
         }
         
         LoadHelpFile wel = new LoadHelpFile(file);
-=======
+        jTextAreaWelcome.setText(wel.toString());
+    }
+
     private void jButtonProdListResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonProdListResetActionPerformed
         SharedInstance.getInstance().resetProductionListCalculated();
         jTextFieldProdListIterationOne.setText("100");
@@ -4748,11 +4752,7 @@ public class MainUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTablePurchasingDispositionIncomingPropertyChange
 
-    private void loadWelcomeMessage() {
-        LoadHelpFile wel = new LoadHelpFile("file/Welcome.txt");
->>>>>>> 26766d2daf7218602a1ae47d110a915bc8c5aa30
-        jTextAreaWelcome.setText(wel.toString());
-    }
+
 
     private void resetDirectSale() {
         jTextFieldSalesDPrice.setText("0");

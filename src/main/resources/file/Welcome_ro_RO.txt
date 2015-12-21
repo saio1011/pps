@@ -1,0 +1,6 @@
+Bine ati venit la VelozipedPPS,
+
+va rugam sa importati fisierul Result.xml de la SC-Simulator si 
+introduceti prognosa dumneavoastra. Apasati apoi "Innainte".
+
+Daca aveti nelamuriri folositi va rugam meniul de ajutor sau manualul.

@@ -1,7 +1,5 @@
-bla bla Willkommen
+Welcome to VelozipedPPS,  
 
-Bitte geben Sie die Prognose ein!
+please import the Result.xml from Sc-Simulator and  insert the forecast data. Afterwords click on „Next“  .
 
-und importieren auch die XML File!!!
-
-US file
+If you got any questions you can use the help function or have a look in the manual
