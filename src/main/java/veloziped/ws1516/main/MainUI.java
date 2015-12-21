@@ -4722,6 +4722,10 @@ public class MainUI extends javax.swing.JFrame {
             file = "file/Welcome_de_DE.txt";
         }else if(lang.equals("ro") && country.equals("RO")){
             file = "file/Welcome_ro_RO.txt";
+        }else if(lang.equals("fr") && country.equals("FR")){
+            file = "file/Welcome_fr_FR.txt";
+        }else if(lang.equals("bg") && country.equals("BG")){
+            file = "file/Welcome_bg_BG.txt";
         }
         
         LoadHelpFile wel = new LoadHelpFile(file);
