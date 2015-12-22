@@ -25,7 +25,10 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
+import veloziped.ws1516.articles.ArticleType;
 import veloziped.ws1516.articles.ExtendedArticle;
+import veloziped.ws1516.disposal.ConsumptionPlan;
+import veloziped.ws1516.disposal.PurchasingDisposal;
 import veloziped.ws1516.generated.Input.Input;
 import veloziped.ws1516.generated.Input.Item;
 import veloziped.ws1516.generated.Input.Orderlist;
@@ -542,6 +545,16 @@ public class SharedInstance {
         futureInwardStockMovement = results.getFutureinwardstockmovement();
 
     }
+    
+    public Order getNewOrderForId(long id) {
+        Order res = null;
+        for(Order order : this.newOrders) {
+            if(order.getArticle() == id) {
+                res = order;
+            }
+        }
+        return res;
+    }
 
     public Map<String, ExtendedArticle> calcNewArticleStockValue() {
         for (ExtendedArticle article : this.extendedArticles.values()) {
@@ -552,7 +565,19 @@ public class SharedInstance {
             }
             System.out.println(change + " + " + (article.getSafetyStock() - article.getAmount()));
             //Zuwachs dazurechnen
+            if(article.getType() == ArticleType.E || article.getType() == ArticleType.P){
             change += (article.getSafetyStock() - article.getAmount());
+            
+             } else {
+            Order newOrder = this.getNewOrderForId(article.getId());
+            ConsumptionPlan plan = PurchasingDisposal.calcConsumption(article);
+                if( ((article.getDeliveryTimeNormalAsPeriods(calculationMode) <= 1 && newOrder != null)
+                        || (newOrder != null && newOrder.getMode() == 5) && article.getDeliveryTimeFastInDays(calculationMode) <= 6)) {
+                    change += newOrder.getAmount() - plan.getN1();
+                } else {
+                    change += plan.getN1();
+                }
+            }
 
             article.setStockChange(change);
             article.setNewStock(article.getAmount() + change);
@@ -565,7 +590,7 @@ public class SharedInstance {
             } else if (stockChangePct > 1) {
                 article.setStockChangePct((stockChangePct - 1) * 100);
             } else {
-                article.setStockChangePct(-100); 
+                article.setStockChangePct(0); 
             }
 
             this.setExtendedArticleForId(article.getId(), article);

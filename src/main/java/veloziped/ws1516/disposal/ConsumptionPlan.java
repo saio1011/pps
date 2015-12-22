@@ -9,7 +9,7 @@ package veloziped.ws1516.disposal;
  *
  * @author Martin
  */
-class ConsumptionPlan {
+public class ConsumptionPlan {
 
     private long n1;
     private long n2;

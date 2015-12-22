@@ -218,7 +218,7 @@ public class PurchasingDisposal {
         }
     }
 
-    private ConsumptionPlan calcConsumption(ExtendedArticle article) {
+    public static ConsumptionPlan calcConsumption(ExtendedArticle article) {
         ProductionPlan plan = SharedInstance.getInstance().getProcudtionPlan();
         if (plan == null) {
             throw new NullPointerException();
