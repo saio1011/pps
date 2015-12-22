@@ -102,6 +102,13 @@ public class Disposal {
     }
 
     private void calculateWaitingLists(List<Workplace> workplaces) {
+        // hier optimieren
+        for (Workplace wp : workplaces) {
+            ExtendedWorkplace eWp = SharedInstance.getInstance().getWorkplaceForId(wp.getId());
+            eWp.setTimeneed(wp.getTimeneed());
+            SharedInstance.getInstance().setExtendedWorkplaceForId(eWp.getId(), eWp);
+        }
+
         for (Workplace wpl : workplaces) {
             if (wpl.getTimeneed() != 0) {
                 List<Waitinglist> waitingLists = wpl.getWaitinglist();
@@ -110,7 +117,11 @@ public class Disposal {
                     if (wp.length != 0) {
                         for (String wpId : wp) {
                             ExtendedWorkplace tmpWp = SharedInstance.getInstance().getWorkplaceForId(Long.parseLong(wpId));
-                            tmpWp.setTimeneed(wpl.getTimeneed());
+                            long tntmp = 0;
+                            if (tmpWp.getTimeneed() != null) {
+                                tntmp = tmpWp.getTimeneed();
+                            }
+                            tmpWp.setTimeneed(wpl.getTimeneed() + tntmp);
                             SharedInstance.getInstance().setExtendedWorkplaceForId(Long.parseLong(wpId), tmpWp);
                         }
                     }

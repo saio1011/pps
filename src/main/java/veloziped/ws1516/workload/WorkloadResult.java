@@ -57,7 +57,12 @@ public class WorkloadResult implements Comparable<WorkloadResult> {
 
         //do not get from workplace because the value is not in there
         Waitinglistworkstations wStations = SharedInstance.getInstance().getWaitinglistWorkstations();
+
         for (Workplace place : wStations.getWorkplace()) {
+            
+            // WP werden aus der SharedInstanz geholt
+            place = SharedInstance.getInstance().getWorkplaceForId(place.getId());
+
             if (place.getId() == this.workplace.getId()) {
                 this.backlogCapacityLastPeriod = place.getTimeneed();
 
